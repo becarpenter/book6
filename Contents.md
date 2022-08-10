@@ -15,6 +15,7 @@ This is a VERY provisional list of contents to start the discussion.
 * Addresses
 * Auto-configuration
 * Managed configuration
+* DNS
 * Routing
 * Transport protocols
 * Extension headers and options
