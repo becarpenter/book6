@@ -13,23 +13,26 @@ This is a VERY provisional list of contents to start the discussion.
 2. IPv6 basic technology
 * Packet format
 * Addresses
+* Layer 2 functions
 * Auto-configuration
 * Managed configuration
 * DNS
 * Routing
 * Transport protocols
 * Extension headers and options
-* Security
 3. Coexistence with legacy IPv4
 * Dual stacks
 * Tunnels
 * Translation
-4. Deployment
+4. Security
+* Layer 2 considerations
+* Filtering 
+5. Deployment
 * Status
 * Deployment by carriers
 * Deployment in the home
 * Deployment in the enterprise
-5. Management and operations
-6. Case studies
-7. Further reading
+6. Management and operations
+7. Case studies
+8. Further reading
 
