@@ -24,6 +24,7 @@ This is a VERY provisional list of contents to start the discussion.
 * Dual stacks
 * Tunnels
 * Translation
+* Obsolete techniques
 4. Security
 * Layer 2 considerations
 * Filtering 
