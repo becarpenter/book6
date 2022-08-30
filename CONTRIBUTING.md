@@ -7,7 +7,7 @@ Contributors will be self-declared practitioners of IPv6. There is no other entr
 
 Contributions (in markdown format) will fit into an agreed table of contents. They will be factual and will teach technical readers about a particular aspect of IPv6. As far as possible, references will be to RFCs and other freely available documents.
 
-Where there are alternatives and choices for people deploying or using IPv6, the choices will be presented objectively, if possible with factual pros and cons. Justified recommendations may be be made (e.g., "X is generally more secure than Y") but strong personal opinions (e.g., "NAT66 is never the right answer") should be avoided.
+Where there are alternatives and choices for people deploying or using IPv6, the choices will be presented objectively, if possible with factual pros and cons. Justified recommendations may be made (e.g., "X is generally more secure than Y") but strong personal opinions (e.g., "NAT66 is never the right answer") should be avoided.
 
 Contributors may edit their own and other contributions. However, significant changes should first be discussed using the issue tracker. That isn't necessary for spelling mistakes, grammar problems, or small nits. GitHub PRs will be used when necessary (i.e., where the changes need review). The goal is to achieve IETF-style rough consensus on the content. A typical tie-breaker argument is "I have deployed this and it works well."
 
