@@ -38,5 +38,5 @@ This is a provisional list of contents to start the discussion. It will change.
 6. Management and operations
 7. Case studies
 
-[8. Further reading](8.%20Further%20reading)
+[8. Further Reading](8.%20Further%20Reading)
 
