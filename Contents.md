@@ -12,7 +12,7 @@ This is a provisional list of contents to start the discussion. It will change.
 * How to keep up to date
 * How to contribute
  
-[2. IPv6 basic technology](2.%20IPv6%20basic%20technology)
+[2. IPv6 Basic Technology](2.%20IPv6%20Basic%20Technology)
 * Packet format
 * Addresses
 * Layer 2 functions
