@@ -22,5 +22,5 @@ or mermaid art
 
 ```mermaid
 flowchart LR
-    A[From A] --> A[To B]
+    A[From A] --> B[To B]
 ```
