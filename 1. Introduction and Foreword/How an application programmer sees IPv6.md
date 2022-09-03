@@ -22,3 +22,6 @@ systems optimally, including the get_address_info() precedence
 table in every host.
 
 This topic is discussed further in [tbd](tbd). 
+
+### [<ins>Previous</ins>](How%20a%20user%20sees%20IPv6.md) [<ins>Next</ins>](How%20a%20network%20operations%20center%20sees%20IPv6.md) [<ins>Chapter Contents</ins>](./1.%20Introduction%20and%20Foreword.md)
+
