@@ -13,8 +13,8 @@ Or
 
 ~~~
 Some ASCII
-              ___    
-     A   |R    |
+                  
+     A   |R)  TTT
     / \  | \   |
 ~~~
 
@@ -24,3 +24,9 @@ or mermaid art
 flowchart LR
     A[From A] --> B[To B]
 ```
+
+SVG art is also possible, but needs a separate SVG file in the same directory, and then code like
+
+~~~
+<img src="./my_diagram.svg">
+~~~
