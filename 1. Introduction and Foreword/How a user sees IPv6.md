@@ -1,4 +1,4 @@
-# How a user sees IPv6
+## How a user sees IPv6
 
 The answer should be: *they don't*. In an ideal world, users would never
 need to be aware of the lower layers of the protocol stack, and they certainly

@@ -1,4 +1,4 @@
-# How to contribute
+## How to contribute
 
 If you find an error or a gap in this book, or a recommendation
 that you disagree with on the basis of practical experience, you

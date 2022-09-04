@@ -1,4 +1,4 @@
-# How to use this book
+## How to use this book
 
 This book is, and we hope always will be, a work in progress. It is intended for people who
 plan, deploy, maintain and operate computer networks using Internet Protocol version 6 (IPv6).

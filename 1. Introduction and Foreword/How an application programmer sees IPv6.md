@@ -1,4 +1,4 @@
-# How an application programmer sees IPv6
+## How an application programmer sees IPv6
 
 In a very theoretical world, an application programmer could rely on
 a DNS lookup to return the best (and only) address of a remote host,

@@ -1,4 +1,4 @@
-# How a network operations center sees IPv6
+## How a network operations center sees IPv6
 
 This is really the topic of this entire book. In the long term,
 we expect that "running an IPv6 network" will be synonymous with

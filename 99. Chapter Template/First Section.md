@@ -31,4 +31,4 @@ SVG art is also possible, but needs a separate SVG file in the same directory, a
 <img src="./my_diagram.svg">
 ~~~
 
-### [<ins>Next</ins>](Another%20Section.md) [<ins>Chapter Contents</ins>](./99.%20Chapter%20Template.md)
+### [<ins>Next</ins>](Another%20Section.md) [<ins>Chapter Contents</ins>](99.%20Chapter%20Template.md)

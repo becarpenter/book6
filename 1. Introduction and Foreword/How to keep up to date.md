@@ -1,4 +1,4 @@
-# How to keep up to date
+## How to keep up to date
 
 The intention is for this book to be kept up to date by
 its user community. However, for the very latest information
