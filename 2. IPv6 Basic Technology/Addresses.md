@@ -134,8 +134,8 @@ Link local addresses (LLAs) do what it says on the can: they are *never* forward
 LLAs are specific to a given interface, and a host with multiple Layer 2 interfaces will have a different address on each one. There's a special notation for this, e.g.:
 
 ~~~
-prefix ------- IID -------
- |    ||                 |
+prefix ------- IID ------- zone
+ |    ||                 | |  |
  fe80::a1b3:6d7a:3f65:dd13%eth0
 
 or
@@ -143,7 +143,7 @@ or
  fe80::a1b3:6d7a:3f65:dd13%7
 ~~~
 
-The first of these would be seen on, say, a Linux host and the second on a Windows host; the character(s) after the '%' sign are the Layer 2 interface's locally defined identifier. (Unfortunately, that makes two 'identifiers' in one address.)
+The first of these would be seen on, say, a Linux host and the second on a Windows host; the character(s) after the '%' sign are the Layer 2 interface's locally defined identifier. Unfortunately, that makes two 'identifiers' in one address. Technically, the second one can be referred to as the 'Zone ID' according to [RFC4007](https://www.rfc-editor.org/info/rfc4007).
 
 ### Embedded IPv4 addresses
 
@@ -169,5 +169,5 @@ an IPv4 address (see [RFC4038](https://www.rfc-editor.org/info/rfc4038).
 TBD
 
 
-### [<ins>Previous</ins>](Packet%20Format.md)[<ins>Next</ins>](Layer%202%20functions.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Packet%20Format.md) [<ins>Next</ins>](Layer%202%20functions.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
 
