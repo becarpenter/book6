@@ -91,7 +91,7 @@ An example:
 
 The 'fd' prefix is enough to identify a ULA. In this example,
 
- - fd63:45eb:dc14:/48 is the so-called ULA prefix.
+ - fd63:45eb:dc14::/48 is the so-called ULA prefix.
  - 0x6345ebdc14 is the locally generated pseudo-random part.
  - fd63:45eb:dc14:1::/64 is the subnet prefix.
 
@@ -159,14 +159,16 @@ It's possible to embed an IPv4 address in an IPv6 address in some circumstances.
 An IPv4-mapped IPv6 address is a way to represent an IPv4 address as if it was an IPv6 address, e.g.
 
 ~~~
-96 bit
-prefix -- IPv4 ---
- |    ||         |
- ffff::192.0.2.123
+ 96 bit
+ prefix -- IPv4 ---
+ |    | |         |
+ ::ffff:192.0.2.123
 ~~~
 
-In particular, this can be used to make the IPv6 socket interface handle
-an IPv4 address (see [RFC4038](https://www.rfc-editor.org/info/rfc4038).
+That is, the prefix at full length would be 0:0:0:0:0:ffff/96.
+
+In particular, this form of address can be used to make the IPv6 socket interface handle
+an IPv4 address (see [RFC4038](https://www.rfc-editor.org/info/rfc4038)).
 
 ### Multicast addresses
 
