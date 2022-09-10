@@ -5,10 +5,10 @@ This is a provisional list of contents to start the discussion. It will change.
 # List of Contents
 
 [1. Introduction](1.%20Introduction%20and%20Foreword)
-* How to use this book (alternative learning paths)
-* View from the Top: How a user sees IPv6
-* View from the Top: How an application programmer sees IPv6
-* View from the NOC: How an operations center sees IPv6
+* How to use this book
+* How a user sees IPv6
+* How an application programmer sees IPv6
+* How an operations center sees IPv6
 * How to keep up to date
 * How to contribute
  
@@ -22,7 +22,7 @@ This is a provisional list of contents to start the discussion. It will change.
 * Routing
 * Transport protocols
 * Extension headers and options
-3. Coexistence with legacy IPv4
+3. Coexistence with Legacy IPv4
 * Dual stacks
 * Tunnels
 * Translation
