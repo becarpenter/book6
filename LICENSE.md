@@ -1,7 +1,7 @@
 # book6
 
-We must agree on a suitable open source license for this project.
+This book is irrevocably open source.
 
-The IETF Trust license for code (Revised BSD License) is definitely unsuitable for a book.
+For text, we apply the Creative Commons Attribution 4.0 license, known as CC BY 4.0. See [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/). This is also the license used by the IETF Trust for text.
 
-For text, the IETF Trust uses the Creative Commons Attribution 4.0 license, known as CC BY 4.0. See [https://creativecommons.org/licenses/by/4.0/](https://creativecommons.org/licenses/by/4.0/). At first sight this looks suitable for our book.
+For any associated code, we preferably apply the Revised BSD License (a.k.a the BSD 3-clause license). This is also the license used by the IETF Trust for code.

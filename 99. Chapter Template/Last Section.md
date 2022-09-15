@@ -1,6 +1,6 @@
 ## Last Section
 
-This is a section. You can write whatever is needed.
+Section text goes here
 
-
-### [<ins>Previous</ins>](Another%20Section.md) [<ins>Chapter Contents</ins>](99.%20Chapter%20Template.md)
+<!-- Link lines generated automatically; do not delete -->
+### [<ins>Previous</ins>](Section%20Template.md) [<ins>Chapter Contents</ins>](99.%20Chapter%20Template.md)
