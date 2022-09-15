@@ -96,6 +96,7 @@ def wf(f,l):
         file.write(line)
     file.close()
     logit("'"+f+"' written")
+    written +=1 
 
 def uncase(l):
     """Return lower case version of a list of strings"""
@@ -146,8 +147,7 @@ printing = False # True for extra diagnostic prints
 base = []        # the base file for each chapter
 base_names = []  # the section names extracted from the base file
 warnings = 0     # counts warnings in the log file
-
-
+written = 0      # counts files written
 
 #Announce
 
@@ -267,12 +267,13 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                     first_namex = contentx
                 last_namex = contentx               
             else:
-                #neither a blank nor a section
+                #not a section
                 if cline[0].isdigit() or cline[0] == "[":
                     #next chapter, restore outer loop index
                     contentx -= 1                    
                 else:
-                    logitw("Unexpected contents entry under '"+dname+"': '"+cline[:-1]+"'")
+                    if cline.strip(" ").strip("\n"):
+                        logitw("Unexpected contents entry under '"+dname+"': '"+cline[:-1]+"'")
                 break
                 
         dprint("Contents", contents_names)
@@ -480,6 +481,11 @@ if warnings:
 else:
     warn = ""
 
+if written:
+    wrote = str(written)+"file(s) written.\n"
+else:
+    wrote = "Clean run.\n"
+
 showinfo(title=T,
-         message = "All files written.\n"+warn+"Check makeBook.log")
+         message = wrote+warn+"Check makeBook.log.")
 
