@@ -8,7 +8,7 @@ This is a provisional list of contents to start the discussion. It will change.
 * How to use this book
 * How a user sees IPv6
 * How an application programmer sees IPv6
-* How an operations center sees IPv6
+* How a network operations center sees IPv6
 * How to keep up to date
 * How to contribute
  
