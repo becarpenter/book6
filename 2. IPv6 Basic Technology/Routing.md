@@ -1,0 +1,6 @@
+## Routing
+
+Section text goes here
+
+<!-- Link lines generated automatically; do not delete -->
+### [<ins>Previous</ins>](DNS.md) [<ins>Next</ins>](Transport%20protocols.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)

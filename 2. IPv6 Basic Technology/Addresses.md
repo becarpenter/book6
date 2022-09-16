@@ -177,5 +177,5 @@ IPv6 multicast address are all under the ff00::/8 prefix, i.e. they start with 0
 All the officially assigned multicast addresses may found at [IANA](https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml#link-local).
 
 
+<!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Packet%20Format.md) [<ins>Next</ins>](Layer%202%20functions.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
-

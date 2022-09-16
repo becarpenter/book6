@@ -10,4 +10,4 @@ the NOC, and the rest of the book covers the details.
 
 Much more, to be drafted by someone who actually runs a NOC...
 
-### [<ins>Previous</ins>](How%20an%20application%20programmer%20sees%20IPv6.md) [<ins>Next</ins>](How%20to%20keep%20up%20to%20date.md) [<ins>Chapter Contents</ins>](./1.%20Introduction%20and%20Foreword.md)
+### [<ins>Previous</ins>](How%20an%20application%20programmer%20sees%20IPv6.md) [<ins>Next</ins>](How%20to%20keep%20up%20to%20date.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)

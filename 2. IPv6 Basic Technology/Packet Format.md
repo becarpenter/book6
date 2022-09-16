@@ -64,5 +64,6 @@ An interesting feature of IPv6 is that extension header types are numbered out o
 
 Extension headers and options are described in more detail in the section [Extension headers and options](Extension-headers-and-options.md). It's also worth noting that Wireshark knows all about IPv6 header formats.
 
-### [<ins>Next</ins>](Addresses.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
 
+<!-- Link lines generated automatically; do not delete -->
+### [<ins>Next</ins>](Addresses.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)

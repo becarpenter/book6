@@ -4,6 +4,8 @@
 """Reconcile book6 chapters with contents, and set up inter-section
 and inter-chapter links as far as possible."""
 
+# Version: 2022-09-16
+
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
 # All rights reserved.
@@ -91,6 +93,7 @@ def rf(f):
 
 def wf(f,l):
     """Write list of strings to file"""
+    global written
     file = open(f, "w",encoding='utf-8')
     for line in l:
         file.write(line)
@@ -212,7 +215,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
     cline = contents[contentx]
     if cline[0] == "[" and cline[1].isdigit():
         # Found a decorated chapter title - extract directory name
-        dname = cline.split("(")[1][:-2].replace("%20"," ")
+        dname = cline.split("(")[1].split("/")[0].replace("%20"," ")
         chapters.append(dname)
         #Need to create directory?
         if not os.path.isdir(dname):
@@ -281,7 +284,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
         if not len(contents_names):
             #Contents empty so far, set pointer for any new contents
             first_namex = savex
-        
+                    
         #Make uncased versions for comparisons    
         u_base_names = uncase(base_names)
         u_contents_names = uncase(contents_names)        
@@ -307,13 +310,13 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                     for ib in range(len(base_names)):
                         if not u_base_names[ib] in u_contents_names:
                             #found missing section - add to contents
-                            contents_names[ib+1:ib+1] = [base_names[ib]]
-                            u_contents_names = uncase(contents_names)
                             if contents_names == []:
                                 ibx = savex+ib
                             else:
                                 ibx = first_namex+ib
-                            contents[ibx:ibx] = ['* '+base_names[ib]+'\n']
+                            contents_names[ib+1:ib+1] = [base_names[ib]]
+                            u_contents_names = uncase(contents_names) 
+                            contents[ibx+1:ibx+1] = ['* '+base_names[ib]+'\n']
                             contentx += 1  #advance outer loop counter
                             contents_changed = True
                             logit("Added '"+base_names[ib]+"' to '"+dname+"' contents")
@@ -469,6 +472,11 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
 ######### Rewrite contents if necessary
 
 if contents_changed:
+    #ensure there is a blank line before each link
+    for i in range(1,len(contents)):
+        if "[" in contents[i]:
+            contents[i] = "\n"+contents[i]
+    #and write it back                   
     wf("Contents.md", contents)
     contents_changed = False             
              
@@ -482,7 +490,7 @@ else:
     warn = ""
 
 if written:
-    wrote = str(written)+"file(s) written.\n"
+    wrote = str(written)+" file(s) written.\n"
 else:
     wrote = "Clean run.\n"
 
