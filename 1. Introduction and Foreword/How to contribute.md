@@ -9,6 +9,8 @@ for details.
 
 You can raise issues through
 the book's [issue tracker](https://github.com/becarpenter/book6/issues).
+General discussions also take place [here on GitHub](https://github.com/becarpenter/book6/discussions).
+
 To become an active contributor
 [check the conditions](https://github.com/becarpenter/book6/blob/main/CONTRIBUTING.md).
 Your contributions will be reviewed by an editorial team.
