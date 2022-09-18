@@ -48,4 +48,5 @@ This is the current list of contents. It will change as the book evolves.
 [99. Chapter Template](99.%20Chapter%20Template/99.%20Chapter%20Template.md)
 * First Section
 * Section Template
+* Markdown Usage
 * Last Section

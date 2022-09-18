@@ -4,7 +4,7 @@
 """Reconcile book6 chapters with contents, and set up inter-section
 and inter-chapter links as far as possible."""
 
-# Version: 2022-09-16
+# Version: 2022-09-18
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -311,7 +311,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                         if not u_base_names[ib] in u_contents_names:
                             #found missing section - add to contents
                             if contents_names == []:
-                                ibx = savex+ib
+                                ibx = savex+1
                             else:
                                 ibx = first_namex+ib
                             contents_names[ib+1:ib+1] = [base_names[ib]]
