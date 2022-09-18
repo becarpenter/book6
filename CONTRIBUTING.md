@@ -10,7 +10,7 @@ Where there are alternatives and choices for people deploying or using IPv6, the
 
 Contributors may edit their own and other contributions. However, significant changes should first be discussed using the issue tracker. That isn't necessary for spelling mistakes, grammar problems, or small nits. GitHub PRs will be used when necessary (i.e., where the changes need review). The goal is to achieve IETF-style rough consensus on the content. A typical tie-breaker argument is "I have deployed this and it works well."
 
-Normal, a contribution will be a complete section. There is a naming convention for files, based on the table of contents, so that we can write a script to generate the whole book from the repo. See the [basic chapter template](99.%20Chapter%20Template) and follow it carefully.
+Normal, a contribution will be a complete section. There is a naming convention for files, based on the table of contents, so that we can write a script to generate the whole book from the repo. See the [basic chapter template](99.%20Chapter%20Template/99.%20Chapter%20Template.md) and follow it carefully.
 That chapter also contains instructions for the use of GitHub markdown.  Please create a separate file for each section within the folder for its chapter. See the chapter template itself for detailed instructions. If you don't follow these instructions, things will get messed up and will need to be sorted out manually.
 
 Note that contributions MUST be original writing unless the contributor has the legal right to submit the material under the agreed license (see [LICENSE.md](LICENSE.md)).
