@@ -15,6 +15,8 @@ That chapter also contains instructions for the use of GitHub markdown.  Please 
 
 Note that contributions MUST be original writing unless the contributor has the legal right to submit the material under the agreed license (see [LICENSE.md](LICENSE.md)).
 
+If we use direct quotations from RFCs they **MUST** be small extracts that can be considered "fair use" as mentioned in relevant [IETF Trust FAQ](https://trustee.ietf.org/about/faq/#reproducing-rfcs) under "Am I allowed to reproduce extracts from RFCs?"
+
 We will appoint two or three people as top-level editors who can declare consensus and approve PRs.
 
 The language is English, preferably US spelling. Please keep sentences reasonably short and simple. Avoid language that might be unclear for someone whose first language is not English. Avoid terminology that is inappropriate in professional writing.
