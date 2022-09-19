@@ -1,0 +1,4 @@
+# .gitignore
+
+# Ignore log file
+makeBook.log
