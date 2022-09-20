@@ -13,9 +13,9 @@ Contributors may edit their own and other contributions. However, significant ch
 Normal, a contribution will be a complete section. There is a naming convention for files, based on the table of contents, so that we can write a script to generate the whole book from the repo. See the [basic chapter template](99.%20Chapter%20Template/99.%20Chapter%20Template.md) and follow it carefully.
 That chapter also contains instructions for the use of GitHub markdown.  Please create a separate file for each section within the folder for its chapter. See the chapter template itself for detailed instructions. If you don't follow these instructions, things will get messed up and will need to be sorted out manually.
 
-Note that contributions MUST be original writing unless the contributor has the legal right to submit the material under the agreed license (see [LICENSE.md](LICENSE.md)).
+Note that contributions **MUST** be original writing unless the contributor has the legal right to submit existing material under the agreed license (see [LICENSE.md](LICENSE.md)).
 
-If we use direct quotations from RFCs they **MUST** be small extracts that can be considered "fair use" as mentioned in relevant [IETF Trust FAQ](https://trustee.ietf.org/about/faq/#reproducing-rfcs) under "Am I allowed to reproduce extracts from RFCs?"
+If we use direct quotations from RFCs they **MUST** be small extracts that can be considered "fair use" as mentioned in the relevant [IETF Trust FAQ](https://trustee.ietf.org/about/faq/#reproducing-rfcs) under "Am I allowed to reproduce extracts from RFCs?"
 
 We will appoint two or three people as top-level editors who can declare consensus and approve PRs.
 
