@@ -15,7 +15,9 @@ That chapter also contains instructions for the use of GitHub markdown.  Please 
 
 Note that contributions **MUST** be original writing unless the contributor has the legal right to submit existing material under the agreed license (see [LICENSE.md](LICENSE.md)).
 
-If we use direct quotations from RFCs they **MUST** be small extracts that can be considered "fair use" as mentioned in the relevant [IETF Trust FAQ](https://trustee.ietf.org/about/faq/#reproducing-rfcs) under "Am I allowed to reproduce extracts from RFCs?"
+If we use direct quotations from RFCs they **MUST** be small extracts that can be considered "fair use" as mentioned in the relevant [IETF Trust FAQ](https://trustee.ietf.org/about/faq/#reproducing-rfcs) under "Am I allowed to reproduce extracts from RFCs?" However, *modified* extracts from RFCs are not allowed.
+
+(For avoidance of doubt, if *you* personally are the copyright holder of original material, *you* may contribute it here under [LICENSE.md](LICENSE.md) even if it has also been contributed to an RFC.)
 
 We will appoint two or three people as top-level editors who can declare consensus and approve PRs.
 
