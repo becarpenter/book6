@@ -29,7 +29,7 @@ The method used by APNIC cannot be fully employed in China, due to local policy 
 An independent Chinese research reports 713 millions measured IPv6 customers as of September 2022,
 against the 220 reported by APNIC.
 If we add the difference between the two statistics to the global count,
-we end up with a Ratio of 43.68% in September 2022, not that far from the "psycological" threshold of 50%.
+we end up with a Ratio of 43.68% in September 2022, not that far from the "psychological" threshold of 50%.
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Next</ins>](Deployment%20by%20carriers.md) [<ins>Chapter Contents</ins>](5.%20Deployment.md)
