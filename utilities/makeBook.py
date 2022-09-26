@@ -4,7 +4,8 @@
 """Reconcile book6 chapters with contents, and set up inter-section
 and inter-chapter links as far as possible."""
 
-# Version: 2022-09-18
+# Version: 2022-09-18 - original
+# Version: 2022-09-26 - added {{{ }}} citations
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -140,7 +141,48 @@ def link_text(prev, nxt, chapter):
     return "###"+part1+part2+" [<ins>Chapter Contents</ins>]("+chapter.replace(" ","%20")+".md)"
 
 link_warn = "<!-- Link lines generated automatically; do not delete -->\n"
-                
+
+def expand_cites():
+    """Look for kramdown-style citations and expand them"""
+    global section, contents, file_names
+    schange = False
+    for i in range(len(section)):
+        line = section[i]
+        if "  {{{" in line:
+            continue        #ignore a line that looks like documentation of {{{ itself        
+        try:
+            while "{{{" in line and "}}}" in line:
+                #found an expandable citation
+                head, body = line.split("{{{", maxsplit=1)
+                cite, tail = body.split("}}}", maxsplit=1)
+                if cite[:3] == "RFC" or cite[:3] == "BCP" or cite[:3] == "STD":
+                    cite = "["+cite+"](https://www.rfc-editor.org/info/"+cite.lower()+")"
+                    line = head + cite + tail
+                    schange = True
+                elif cite[0].isdigit():
+                    #extract chapter number
+                    cnum, sname = cite.split(". ", maxsplit=1)
+                    #derive chapter name
+                    for cline in contents:
+                        if "["+cnum+"." in cline:
+                            chap = cline.split("(")[1].split("/")[0]
+                            cite = "["+cite+"](../"+chap+"/"+sname.replace(" ","%20")+".md)"
+                            line = head + cite + tail
+                            schange = True
+                            break
+                else:
+                    #maybe it's a section name
+                    if cite in file_names:
+                        cite = "["+cite+"]("+cite.replace(" ","%20")+".md)"
+                        line = head + cite + tail
+                        schange = True
+        except:
+            #malformed line, do nothing
+            pass
+        if schange:
+            section[i] = line
+            
+    return schange
 
 ######### Startup
 
@@ -441,7 +483,8 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
         
 
         #Make the link line for each section
-        #and update section file if necessary
+        #and update section file if necessary.
+        #Also expand "kramdown" citations.
         for bx in range(len(base_names)):
             topic = base_names[bx]
             topic_file = sorted_file_names[bx]
@@ -458,15 +501,19 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
             link_line = link_text(previous, nxt, dname)
 
             section = rf(dname+"/"+topic_file+".md")
+            section_changed = expand_cites()
             if "### [<ins>" in section[-1]:
                 #replace existing link line if necessary
                 if section[-1].strip("\n") != link_line:
                     section[-1] = link_line
-                    wf(dname+"/"+topic_file+".md", section)
+                    section_changed = True
             else:
                 #add new link line
                 section.append(link_warn)
                 section.append(link_line)
+                section.changed = True
+                
+            if section_changed:
                 wf(dname+"/"+topic_file+".md", section)
                     
 ######### Rewrite contents if necessary

@@ -4,6 +4,25 @@ The basics of using the GitHub dialect of markdown are [here](https://docs.githu
 
 And don't forget, a separate .md file for each new section in any chapter of the book.
 
+References can be done in basic Markdown form, i.e.:
+
+~~~
+  [text](URL)               to refer to any valid URL
+~~~
+
+but a feature adapted from kramdown is also available, e.g.
+
+~~~
+  {{{RFC8200}}}           to refer to an RFC
+  {{{BCP198}}}            to refer to an IETF Best Current Practice
+  {{{STD86}}}             to refer to an IETF Internet Standard
+  {{{Last Section}}}      to refer to a section in the present chapter
+  {{{2. Addresses}}}      to refer to a section in another chapter                                                (the single space is required) 
+~~~
+
+Such references will be fixed up by the next run of makeBook,
+since they are unknown to GitHub's built-in markdown.
+
 Diagrams can be ASCII art when applicable, e.g.:
 ~~~
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
