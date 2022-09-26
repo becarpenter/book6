@@ -147,6 +147,7 @@ def expand_cites():
     global section, contents, file_names
     schange = False
     for i in range(len(section)):
+        lchange = False
         line = section[i]
         if "  {{{" in line:
             continue        #ignore a line that looks like documentation of {{{ itself        
@@ -158,7 +159,7 @@ def expand_cites():
                 if cite[:3] == "RFC" or cite[:3] == "BCP" or cite[:3] == "STD":
                     cite = "["+cite+"](https://www.rfc-editor.org/info/"+cite.lower()+")"
                     line = head + cite + tail
-                    schange = True
+                    lchange = True
                 elif cite[0].isdigit():
                     #extract chapter number
                     cnum, sname = cite.split(". ", maxsplit=1)
@@ -168,19 +169,20 @@ def expand_cites():
                             chap = cline.split("(")[1].split("/")[0]
                             cite = "["+cite+"](../"+chap+"/"+sname.replace(" ","%20")+".md)"
                             line = head + cite + tail
-                            schange = True
+                            lchange = True
                             break
                 else:
                     #maybe it's a section name
                     if cite in file_names:
                         cite = "["+cite+"]("+cite.replace(" ","%20")+".md)"
                         line = head + cite + tail
-                        schange = True
+                        lchange = True
         except:
             #malformed line, do nothing
             pass
-        if schange:
+        if lchange:
             section[i] = line
+            schange = True
             
     return schange
 
