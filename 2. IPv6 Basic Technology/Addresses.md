@@ -176,6 +176,16 @@ IPv6 multicast address are all under the ff00::/8 prefix, i.e. they start with 0
 
 All the officially assigned multicast addresses may found at [IANA](https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml#link-local).
 
+### Literal addresses in web browsers
+
+Browsers can recognize a literal IPv6 address instead of a host name, but the address must be enclosed in square brackets, e.g.:
+
+~~~
+   https://[2001:db8:4006:80b:a1b3:6d7a:3f65:dd13]
+~~~
+
+Of course, literal addresses should only be used for diagnostic or testing purposes, and will normally be cut-and-pasted rather than being typed in by hand.
+
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Packet%20Format.md) [<ins>Next</ins>](Layer%202%20functions.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
