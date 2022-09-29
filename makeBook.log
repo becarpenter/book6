@@ -1,8 +1,9 @@
-makeBook run at 2022-09-18 14:26:12 UTC+1200
-Running in directory C:\brian\docs\professional\ipv6gen\book6
+makeBook run at 2022-09-29 15:41:45 UTC+1300
+Running in directory C:\brian\bigfiles\repos\book6
 Processing '1. Introduction and Foreword'
 Processing '2. IPv6 Basic Technology'
 Processing '3. Coexistence with Legacy IPv4'
+'3. Coexistence with Legacy IPv4/Obsolete techniques.md' written
 Processing '4. Security'
 Processing '5. Deployment'
 Processing '6. Management and Operations'
