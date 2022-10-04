@@ -6,6 +6,7 @@ and inter-chapter links as far as possible."""
 
 # Version: 2022-09-18 - original
 # Version: 2022-09-26 - added {{{ }}} citations
+# Version: 2022-10-05 - fencepost error when adding section to contents
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -358,13 +359,14 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                                 ibx = savex+1
                             else:
                                 ibx = first_namex+ib
-                            contents_names[ib+1:ib+1] = [base_names[ib]]
+                            contents_names[ib:ib] = [base_names[ib]]
                             u_contents_names = uncase(contents_names) 
-                            contents[ibx+1:ibx+1] = ['* '+base_names[ib]+'\n']
+                            contents[ibx:ibx] = ['* '+base_names[ib]+'\n']
                             contentx += 1  #advance outer loop counter
                             contents_changed = True
                             logit("Added '"+base_names[ib]+"' to '"+dname+"' contents")
                     #base_names and content_names now of equal length
+                    dprint("Contents names again", contents_names)
                     
                             
                 if len(base_names) <= len(contents_names):

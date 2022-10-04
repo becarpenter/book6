@@ -16,6 +16,7 @@ This is the current list of contents. It will change as the book evolves.
 * Packet format
 * Addresses
 * Layer 2 functions
+* Address resolution
 * Auto-configuration
 * Managed configuration
 * DNS
