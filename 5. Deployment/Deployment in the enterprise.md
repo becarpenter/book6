@@ -9,7 +9,9 @@ Domain Name System (DNS) AAAA records, of an IPv6-based mail service and of the 
 their website. The same method can be applied to Chinese [http://218.2.231.237:5001/cgi-bin/generate] and
 Indian [https://cnlabs.in/IPv6_Mon/generate_industry.html] enterprises.
 
-[To be continued]
+DNS has a good support in all cases: more than 50% of the enterprises in the three economies considered have AAAA records,
+a sign that IPv6 support is generally available. The same cannot be said or the other services that have much lower adoption.
+[https://datatracker.ietf.org/doc/draft-ietf-v6ops-ipv6-deployment/] provides more statistics about other more specific industry domains.
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](5.%20Deployment.md)
