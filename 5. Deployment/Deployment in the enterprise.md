@@ -1,6 +1,15 @@
 ## Deployment in the enterprise
 
-Section text goes here
+Measuring the adoption of IPv6 in the enterprise domain is not straightfoward.
+Since it is hard to look at it from the "inside", one of the few currently avaialble approaches 
+is to check the IPv6 readiness from outside the enterprise's network.
+[https://fedv6-deployment.antd.nist.gov/cgi-bin/generate-com] provides a method to infer whether 
+US enterprises support IPv6 by checking its external services, such as the availability of 
+Domain Name System (DNS) AAAA records, of an IPv6-based mail service and of the support of IPv6 on
+their website. The same method can be applied to Chinese [http://218.2.231.237:5001/cgi-bin/generate] and
+Indian [https://cnlabs.in/IPv6_Mon/generate_industry.html] enterprises.
+
+[To be continued]
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](5.%20Deployment.md)
