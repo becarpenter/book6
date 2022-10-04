@@ -1,7 +1,7 @@
 ## Deployment in the enterprise
 
 Measuring the adoption of IPv6 in the enterprise domain is not straightfoward.
-Since it is hard to look at it from the "inside", one of the few currently avaialble approaches 
+Since it is hard to look at it from the network "inside", one of the few currently avaialble approaches 
 is to check the IPv6 readiness from outside the enterprise's network.
 [https://fedv6-deployment.antd.nist.gov/cgi-bin/generate-com] provides a method to infer whether 
 US enterprises support IPv6 by checking its external services, such as the availability of 
