@@ -6,3 +6,5 @@ The intention is a practical introduction to IPv6 for technical people, kept up 
 The book will be available free of charge (and free of advertising) on-line, possibly with an option to obtain a printed copy at cost price.
 
 This GitHub repository is a starting point. It may be replaced by a differently structured repo as the work progresses and we gain experience of how to do it.
+
+You can start reading the book [here](Contents.md).
