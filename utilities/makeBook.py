@@ -7,6 +7,7 @@ and inter-chapter links as far as possible."""
 # Version: 2022-09-18 - original
 # Version: 2022-09-26 - added {{{ }}} citations
 # Version: 2022-10-05 - fencepost error when adding section to contents
+# Version: 2022-10-06 - added citation expansion for chapter base file
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -519,6 +520,11 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                 
             if section_changed:
                 wf(dname+"/"+topic_file+".md", section)
+
+        #Expand citations for chapter base file itself
+        section = rf(dname+"/"+dname+".md")
+        if expand_cites():
+            wf(dname+"/"+dname+".md", section)
                     
 ######### Rewrite contents if necessary
 
