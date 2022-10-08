@@ -7,19 +7,20 @@ interface without further ado. Unfortunately the real world is not
 that simple. Even without considering the version number, there are
 several types of IP address, and a DNS lookup may return a variety
 of addresses. In most cases, applications will use the function
-get_address_info() and get back a list of valid addresses. Which is
+```getaddrinfo()``` ("get address information") to obtain
+a list of valid addresses. Which is
 the best one to use, and should the program try more than one?
 
 We do not go into this subject in detail, because this book is
 not aimed primarily at application programmers. However, operators
 need to be aware that the default behavior of most applications
-is simply to use the *first* address returned by get_address_info().
+is simply to use the *first* address returned by ```getaddrinfo()```.
 Some applications (such as web browsers) may use a smarter approach
-known as "happy eyeballs" by means of a heuristic to detect which
+known as "happy eyeballs" ({{{RFC8305}}}) by means of a heuristic to detect which
 address gives the fastest response. However, operators need to
 understand the various address types in order to configure
-systems optimally, including the get_address_info() precedence
-table in every host.
+systems optimally, including the ```getaddrinfo()``` precedence
+table ({{{RFC6724}}}) in every host.
 
 Address types are discussed further in [2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md).
 
