@@ -52,7 +52,7 @@ The earlier headers have functions including:
 
 - Hop-by-hop options, for packet-level options that should be examined by every node on the path.
 
-- Fragment header, when a packet has been fragmented (which happens only at the source, if the raw packet exceeds the IPv6 minimum MTU of 1280 bytes).
+- Fragment header, when a packet has been fragmented (which happens only at the source, if the raw packet exceeds the known MTU of the transmission path, which is at least the IPv6 minimum MTU of 1280 bytes).
 
 - Destination options, for packet-level options only useful at the destination node.
 
