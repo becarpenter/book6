@@ -1,12 +1,28 @@
 ## Dual stacks
 
-Dual-Stack [RFC4213](https://www.rfc-editor.org/rfc/rfc4213) appears to be currently the most widely deployed IPv6 solution (about 50%, see the statistics reported in [ETSI-IP6-WhitePaper](https://www.etsi.org/images/files/ETSIWhitePapers/etsi_WP35_IPv6_Best_Practices_Benefits_Transition_Challenges_and_the_Way_Forward.pdf)). 
+Dual-Stack was originally described (along with basic tunneling) in [RFC4213](https://www.rfc-editor.org/rfc/rfc4213). It appears to be currently the most widely deployed IPv6 solution (about 50%, see the statistics reported in [ETSI-IP6-WhitePaper](https://www.etsi.org/images/files/ETSIWhitePapers/etsi_WP35_IPv6_Best_Practices_Benefits_Transition_Challenges_and_the_Way_Forward.pdf)).
+
+In a classical dual stack deployment, packets on the link are either native IPv6 or native IPv4. All routers support IPv6 and IPv4 simultaneously, with separate routing tables: this is known as "ships in the night".
+
+~~~
+Ships that pass in the night, and speak [to] each other in passing,
+only a signal shown, and a distant voice in the darkness
+  --  Henry Wadsworth Longfellow, 1863
+~~~
+
+Today, the core of the Internet - all the major international transit providers and all major Internet Exchange Points - support dual stack routing. So do many local ISPs.
+
+Also, all hosts in a dual stack network should support IPv6 and IPv4 simultaneously, with IPv6 preferred. Such a deployment can tolerate the presence of legacy IPv4-only hosts and applications, and can reach external IPv4-only services, with no special arrangements.
    
-With Dual-Stack, IPv6 can be introduced together with other network upgrades and many parts of network management and Information Technology (IT) systems can still work in IPv4. As a matter of fact, IPv4 reachability can be provided for a long time and most Internet Service Providers (ISPs) are leveraging Carrier-Grade NAT (CGN) to extend the life of IPv4.
+With Dual-Stack, IPv6 can be introduced together with other network upgrades and many parts of network management and Information Technology (IT) systems can still work in IPv4. As a matter of fact, IPv4 reachability can be provided for a long time and most Internet Service Providers (ISPs) are leveraging Carrier-Grade NAT (CGN, [BCP127](https://www.rfc-editor.org/info/bcp127)) to extend the life of IPv4. However, large ISPs have discovered the scaling limits and operational costs of CGN.
    
-Although Dual-Stack may provide advantages in the initial phase, it has few disadvantages in the long run, like the duplication of the network resources and states. It also requires more IPv4 addresses, thus increasing both Capital Expenses (CAPEX) and Operating Expenses (OPEX). Indeed, even if private addresses are used with CGN, it is necessary an investment in the CGN systems.
+Although Dual-Stack may provide advantages in the initial phase, it has some disadvantages in the long run, like the duplication of network resources and states. It also requires more IPv4 addresses, thus increasing both Capital Expenses (CAPEX) and Operating Expenses (OPEX). Indeed, even if private addresses are used with CGN, IPv4 addresses for the CGN systems must be paid for by somebody.
    
-For this reason, when IPv6 usage exceeds certain threshold, it may be advantageous to switch to start a transition to a next phase and move to a more advanced IPv6 deployment, also referred to as IPv6-only. As mentioned in [I-D.ietf-v6ops-ipv6-deployment](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ipv6-deployment/) IPv6-only is generally associated with a scope, e.g.  IPv6-only overlay or IPv6-only underlay.
+For this reason, when IPv6 usage exceeds a certain threshold, it may be advantageous to start a transition to a next phase and move to a more advanced IPv6 deployment, also referred to as IPv6-only. To be clear, that does not mean removing access to IPv4-only resources. Some method of access to IPv4 resources must be retained, as the primary network infrastructure is switched from a dual stack. In effect the *application layer* in a host will still see a dual stack environment, even if the packets on the link are no longer either native IPv6 or native IPv4.
+
+*Editorial comment - should the following material be here, or should it be moved to*{{Tunnels}}?
+
+As mentioned in [I-D.ietf-v6ops-ipv6-deployment](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ipv6-deployment/) IPv6-only is generally associated with a scope, e.g. IPv6-only overlay or IPv6-only underlay.
    
 The IPv6-only overlay denotes that the overlay tunnel between the end points of a network domain is based only on IPv6. IPv6-only overlay in fixed network means that the encapsulation is only IPv6 between the interfaces of the Provider Edge (PE) nodes or between the WAN interface of the Customer Edge (CE) node and the Broadband Network Gateway (BNG) interface. 
    
