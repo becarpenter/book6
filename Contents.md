@@ -32,7 +32,7 @@ This is the current list of contents. It will change as the book evolves.
 
 [4. Security](4.%20Security/4.%20Security.md)
 * Layer 2 considerations
-* Filtering 
+* Filtering
 
 [5. Deployment](5.%20Deployment/5.%20Deployment.md)
 * Status

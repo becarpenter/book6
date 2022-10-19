@@ -1,4 +1,4 @@
-## Filtering 
+## Filtering
 
 Section text goes here
 
