@@ -17,6 +17,7 @@ India shows 51% IPv6 adoption. Carriers there also have high IPv6 rate. Bharti, 
 
 Whilst it cannot be gneralized, in countries with lower IPv6 adoption the local carriers also tend to be slower in enabling IPv6.
 For example, European countries such as Spain, Italy and Poland show respectively 4.5%, 7% and 13.5% adoption. 
+Based on APNIC data, exluding the exceptions of Telefonica de España (26%), Vodafone Italy (21%), Wind/3 Italy (22%) and Orange Poland (23%), all the other carries sit quite below the threshold of 20% adoption.
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Status.md) [<ins>Next</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](5.%20Deployment.md)
