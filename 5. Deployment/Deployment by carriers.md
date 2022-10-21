@@ -13,6 +13,7 @@ Not unsurprisingly, the vast majority of carriers worldwide already support IPv6
 As a general rule, the carriers active in those countries with higher IPv6 adoption also show higher levels of IPv6 utilization.
 For example, IPv6 adoption in the United States is 51%. Carriers such as AT&T, Comcast, T-Mobile and Verizon all exceed 70% of IPv6 use in their networks.
 In europe, both Belgium and Germany reach 50% of IPv6 traffic. Proximus, Telenet, DT, Telefonica Germany, Versatel and Vodafone Germany range from 50 % to 70%.
+India shows 51% IPv6 adoption. Carriers there also have high IPv6 rate. Bharti, Reliance Jio and Vodafone India find themselves between 60% and 70%.
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Status.md) [<ins>Next</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](5.%20Deployment.md)
