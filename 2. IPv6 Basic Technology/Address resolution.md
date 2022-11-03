@@ -4,7 +4,7 @@ When an IPv6 node "A" becomes aware of the IPv6 address of another node "B", and
 
 When A has determined that B's address is on-link, and in the process determined which interface that link is connected to, it starts address resolution, also known as neighbor discovery (ND), by multicasting a Neighbor Solicitation message via that interface to the link local all-nodes multicast address, which is ```ff02::1```. Neighbor Solicitation is a specific form of ICMPv6 message; ICMPv6 is defined in [RFC8200](https://www.rfc-editor.org/info/rfc8200). Since this is a link local multicast, such messages never escape the local link.
 
-All IPv6 nodes **MUST** monitor multicasts sent to ```ff02::1```. When B receives the Neighbor Solicitation from A, it replies with a Neighbor Advertisement message, sent unicast to A's link local address. A will then decode that message to obtain B's Layer 2 address (typically an IEEE MAC address), and will record the information in its Neighbor Cache for future use. At that point, A has all the information it needs to send packets to B.
+All IPv6 nodes **MUST** monitor multicasts sent to ```ff02::1```. When B receives the Neighbor Solicitation from A, it replies with a Neighbor Advertisement ICMPv6 message, sent unicast to A's link local address. A will then decode that message to obtain B's Layer 2 address (typically an IEEE MAC address), and will record the information in its Neighbor Cache for future use. At that point, A has all the information it needs to send packets to B.
 
 These are the essentials of address resolution; readers who want more detail should consult [RFC4861](https://www.rfc-editor.org/info/rfc4861).
 
