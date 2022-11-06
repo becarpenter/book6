@@ -7,4 +7,4 @@ The book will be available free of charge (and free of advertising) on-line, pos
 
 This GitHub repository is a starting point. It may be replaced by a differently structured repo as the work progresses and we gain experience of how to do it.
 
-You can start reading the book [here](Contents.md).
+You can start reading the book [here](Contents.md). It is a work in progress, and if you want to contribute, start [here](CONTRIBUTING.md).
