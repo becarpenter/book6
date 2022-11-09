@@ -8,6 +8,8 @@ and inter-chapter links as far as possible."""
 # Version: 2022-09-26 - added {{{ }}} citations
 # Version: 2022-10-05 - fencepost error when adding section to contents
 # Version: 2022-10-06 - added citation expansion for chapter base file
+# Version: 2022-11-09 - allow {{ }} as well as {{{ }}}
+#                     - added citation of I-D. or draft-
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -151,17 +153,30 @@ def expand_cites():
     for i in range(len(section)):
         lchange = False
         line = section[i]
-        if "  {{{" in line:
-            continue        #ignore a line that looks like documentation of {{{ itself        
+        if "  {{" in line:
+            continue        #ignore a line that looks like documentation of {{ or {{{ itself        
         try:
-            while "{{{" in line and "}}}" in line:
+            #allow {{{ or {{
+            line = line.replace("{{{","{{").replace("}}}","}}")
+            while "{{" in line and "}}" in line:
+                #dprint("Citation  in:", line)
                 #found an expandable citation
-                head, body = line.split("{{{", maxsplit=1)
-                cite, tail = body.split("}}}", maxsplit=1)
-                if cite[:3] == "RFC" or cite[:3] == "BCP" or cite[:3] == "STD":
+                head, body = line.split("{{", maxsplit=1)
+                cite, tail = body.split("}}", maxsplit=1)
+                if cite.startswith("RFC") or cite.startswith("BCP") or cite.startswith("STD"):
                     cite = "["+cite+"](https://www.rfc-editor.org/info/"+cite.lower()+")"
                     line = head + cite + tail
                     lchange = True
+                elif cite.startswith("I-D."):
+                    draft_name = "draft-"+cite[4:]
+                    cite = "["+cite+"](https://datatracker.ietf.org/doc/"+draft_name+"/)"
+                    line = head + cite + tail
+                    lchange = True
+                elif cite.startswith("draft-"):
+                    cite = "["+cite+"](https://datatracker.ietf.org/doc/"+cite+"/)"
+                    line = head + cite + tail
+                    lchange = True
+
                 elif cite[0].isdigit():
                     #extract chapter number
                     cnum, sname = cite.split(". ", maxsplit=1)
