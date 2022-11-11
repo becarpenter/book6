@@ -31,7 +31,9 @@ All IPv6 nodes **MUST** support SLAAC as described above, in case they find them
 
 The numerous options allowed in RA messages, and the other ICMPv6 messages used for address resolution and SLAAC, are documented in IANA's [IPv6 Neighbor Discovery Option Formats registry](https://www.iana.org/assignments/icmpv6-parameters/icmpv6-parameters.xhtml#icmpv6-parameters-5).
 
-A simple network can operate with SLAAC as the only way to configure host IPv6 connections. DNS parameters can be configured using RA options (Recursive DNS Server Option and DNS Search List Option) \[[RFC8106](https://www.rfc-editor.org/info/rfc8106)]. More complex configuration can be achieved using DHCPv6, as described in the next section.
+A simple network can operate with SLAAC as the only way to configure host IPv6 connections. DNS parameters can be configured using RA options (Recursive DNS Server Option and DNS Search List Option) \[[RFC8106](https://www.rfc-editor.org/info/rfc8106)]. As noted in the previous section, the dependency of neighbor discovery and SLAAC on link-layer multicast does not scale well, particularly on wireless networks. Also, the ability of SLAAC to assign multiple addresses per host, especially dynamic temporary addresses \[[RFC8981](https://www.rfc-editor.org/info/rfc8981)], can create scaling problems for routers. 
+
+When preferred by an operator, managed configuration, especially for large networks, can be achieved using DHCPv6, as described in the next section.
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Address%20resolution.md) [<ins>Next</ins>](Managed%20configuration.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)

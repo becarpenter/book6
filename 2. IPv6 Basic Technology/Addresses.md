@@ -106,7 +106,7 @@ An important characteristic of routeable IPv6 unicast addresses is that they are
 have all of the following simultaneously:
 
  - A fixed GUA with a DNS entry for it to act as a web server
- - A temporary GUA with a random IID for it to act as a client for remote web access
+ - A temporary GUA with a random IID for it to act as a client for remote web access \[[RFC8981](https://www.rfc-editor.org/info/rfc8981)]
  - A fixed ULA used for transactions within the enterprise
  - A second fixed GUA under a different prefix, with a DNS entry, for backup
 
