@@ -10,6 +10,7 @@ and inter-chapter links as far as possible."""
 # Version: 2022-10-06 - added citation expansion for chapter base file
 # Version: 2022-11-09 - allow {{ }} as well as {{{ }}}
 #                     - added citation of I-D. or draft-
+# Version: 2022-11-15 - check that cited references exist (partial)
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -56,8 +57,8 @@ from tkinter.filedialog import askdirectory
 from tkinter.messagebox import askokcancel, askyesno, showinfo
 
 import time
-
 import os
+import urllib.request
 
 def logit(msg):
     """Add a message to the log file"""
@@ -146,6 +147,34 @@ def link_text(prev, nxt, chapter):
 
 link_warn = "<!-- Link lines generated automatically; do not delete -->\n"
 
+def rfc_ok(s):
+    """Check if an RFC is real"""
+    if s[:3] != "RFC":
+        return True  # not applicable
+    if len(s) < 7:
+        #needs leading zeroes for DOI check
+        s = "RFC" + s[3:].zfill(4)    
+    url = "https://doi.org/10.17487/" + s
+    try:
+        response = urllib.request.urlopen(url).getcode()
+    except:
+        return False  #DOI not assigned, hence no RFC
+    return response==200
+
+def draft_ok(s):
+    """Check if a draft is real"""
+    #dummy for now
+    return True
+
+def url_ok(url):
+    """Check if a URL is OK"""
+    try:
+        response = urllib.request.urlopen(url).getcode()
+    except:
+        return False  #URL doesn't exist
+    return response==200
+    
+
 def expand_cites():
     """Look for kramdown-style citations and expand them"""
     global section, contents, file_names
@@ -164,36 +193,61 @@ def expand_cites():
                 head, body = line.split("{{", maxsplit=1)
                 cite, tail = body.split("}}", maxsplit=1)
                 if cite.startswith("RFC") or cite.startswith("BCP") or cite.startswith("STD"):
+                    if not rfc_ok(cite):
+                        logitw(cite+" not found on line")
                     cite = "["+cite+"](https://www.rfc-editor.org/info/"+cite.lower()+")"
                     line = head + cite + tail
                     lchange = True
                 elif cite.startswith("I-D."):
                     draft_name = "draft-"+cite[4:]
                     cite = "["+cite+"](https://datatracker.ietf.org/doc/"+draft_name+"/)"
+                    if not draft_ok(draft_name):
+                        logitw(draft_name+" not found on line")
                     line = head + cite + tail
                     lchange = True
                 elif cite.startswith("draft-"):
+                    if not draft_ok(cite):
+                        logitw(cite+" not found on line")
                     cite = "["+cite+"](https://datatracker.ietf.org/doc/"+cite+"/)"
                     line = head + cite + tail
                     lchange = True
 
                 elif cite[0].isdigit():
+                    #print("Found chapter?", cite)
                     #extract chapter number
                     cnum, sname = cite.split(". ", maxsplit=1)
                     #derive chapter name
+                    found_c = False
                     for cline in contents:
                         if "["+cnum+"." in cline:
                             chap = cline.split("(")[1].split("/")[0]
-                            cite = "["+cite+"](../"+chap+"/"+sname.replace(" ","%20")+".md)"
+                            url = "../"+chap+"/"+sname.replace(" ","%20")+".md"
+                            if not url_ok(url):
+                                logitw(cite+" not found on line")
+                            cite = "["+cite+"]("+url+")"
+##                            cite = "["+cite+"](../"+chap+"/"+sname.replace(" ","%20")+".md)"
                             line = head + cite + tail
                             lchange = True
+                            found_c = True
                             break
+                    if not found_c:
+                        #Bogus chapter number
+                        line = head + "[" + cite + "]" + tail
+                        lchange = True
+                        logitw(cite+" reference could not be resolved")
+                            
                 else:
                     #maybe it's a section name
+                    #print("Found section?", cite)
                     if cite in file_names:
                         cite = "["+cite+"]("+cite.replace(" ","%20")+".md)"
                         line = head + cite + tail
                         lchange = True
+                    else:
+                        #print("Found nothing")
+                        line = head + "[" + cite + "]" + tail
+                        lchange = True
+                        logitw(cite+" reference could not be resolved")
         except:
             #malformed line, do nothing
             pass
