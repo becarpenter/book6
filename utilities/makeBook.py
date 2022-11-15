@@ -11,6 +11,7 @@ and inter-chapter links as far as possible."""
 # Version: 2022-11-09 - allow {{ }} as well as {{{ }}}
 #                     - added citation of I-D. or draft-
 # Version: 2022-11-15 - check that cited references exist (partial)
+# Version: 2022-11-16 - improved reference checks (but still partial)
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -149,6 +150,9 @@ link_warn = "<!-- Link lines generated automatically; do not delete -->\n"
 
 def rfc_ok(s):
     """Check if an RFC is real"""
+    global rfcs_checkable
+    if not rfcs_checkable:
+        return True  #because we can't check
     if s[:3] != "RFC":
         return True  # not applicable
     if len(s) < 7:
@@ -173,6 +177,13 @@ def url_ok(url):
     except:
         return False  #URL doesn't exist
     return response==200
+
+def file_ok(fn):
+    """Check if a local file is OK"""
+    if fn.startswith("../"):
+        fn = fn.replace("../","")
+    fn = fn.replace("%20"," ")
+    return os.path.exists(fn)
     
 
 def expand_cites():
@@ -221,10 +232,10 @@ def expand_cites():
                     for cline in contents:
                         if "["+cnum+"." in cline:
                             chap = cline.split("(")[1].split("/")[0]
-                            url = "../"+chap+"/"+sname.replace(" ","%20")+".md"
-                            if not url_ok(url):
-                                logitw(cite+" not found on line")
-                            cite = "["+cite+"]("+url+")"
+                            fn = "../"+chap+"/"+sname.replace(" ","%20")+".md"
+                            if not file_ok(fn):
+                                logitw('"'+cite+'" not found')
+                            cite = "["+cite+"]("+fn+")"
 ##                            cite = "["+cite+"](../"+chap+"/"+sname.replace(" ","%20")+".md)"
                             line = head + cite + tail
                             lchange = True
@@ -232,9 +243,9 @@ def expand_cites():
                             break
                     if not found_c:
                         #Bogus chapter number
-                        line = head + "[" + cite + "]" + tail
+                        line = head + "[" + cite + "](TBD)" + tail
                         lchange = True
-                        logitw(cite+" reference could not be resolved")
+                        logitw('"'+cite+'" reference could not be resolved')
                             
                 else:
                     #maybe it's a section name
@@ -245,9 +256,9 @@ def expand_cites():
                         lchange = True
                     else:
                         #print("Found nothing")
-                        line = head + "[" + cite + "]" + tail
+                        line = head + "[" + cite + "](TBD)" + tail
                         lchange = True
-                        logitw(cite+" reference could not be resolved")
+                        logitw('"'+cite+'" reference could not be resolved')
         except:
             #malformed line, do nothing
             pass
@@ -291,6 +302,13 @@ logit("Running in directory "+ os.getcwd())
 
 showinfo(title=T,
          message = "Will read in current contents.\nTouch no files until done!")
+
+#Can we check RFCs?
+
+rfcs_checkable = True
+rfcs_checkable = rfc_ok("RFC8200")
+if not rfcs_checkable:
+    logitw("Cannot check RFC existence on-line")
 
 ######### Read previous contents
 
