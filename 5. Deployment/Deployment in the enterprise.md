@@ -23,5 +23,20 @@ This reflects into the need for training, in particular in the areas of IPv6 sec
 IPv6 troubleshooting. Apart from training, enterprises feel that IPv6 security is of operational concern as well as the 
 conversion of the applications they use in their daily activity to IPv6.
 
+
+* Addressing in the enterprise vertical
+
+How organizations craft their addressing schemes will be varied and will likely be determined by a number of factors. The largest factor that will influence the procurement or otherwise obtaining of address resources will be organizational size. The size of a given organization often (but not always) dictates the criticality of networking resources which includes both physical assets (routers, switches, security appliances) as well as human resources, and the level of skill available either by direct employment or by contacted assistance. Also included in these resources is the logical elements requires for a presence on the global internet in the manner of addressing. Larger or more mature organizations may already posses network resources such as Autonomous System Numbers (ASNs), legacy IP resources, and possibly existing provider independent (PI) IPv6 space. First, it is important to make the distinction of address space types. There are really three different types of address allocations possible, provider independent, provider allocated, and unique local addressing. 
+
+*Define each address type*
+
+Organizations will need to understand the differences as it will be both dictated by resource availability and will inform routing policy and future deployment changes. 
+
+For PI address space based deployments, organizations will need to contract out or have in-house expertise in obtaining address space from a regional internet registry (RIR) that will be determined by the locality of their organization. Further, obtaining PI address space from an RIR means coordinating with their ISP(s) to route the PI space based on some routing policy with upstream provider(s). If an organization is not staffed to or does not have the experience or knowledge on the processes of obtaining address space and routing it globally, it will be required to contract such tasks. In house or contracted It support should understand the intricacies of routing policy of said PI address space in the appropriate routing registries, maintaining best practice filtering (MANRS), and have at least a rudimentary understanding of what operating in the default free zone (DFZ) means. 
+
+If receiving PA from an upstream provider designs such as multihoming is a more involved process that will involve coordination with the upstream transit provider that owns the IP resources. 
+*add more details here*
+Additionally, renumbering is functionally required if said provider is exchanged for another unless NAT is employed as a translation tool obtaining additional address space may require more effort or may not be possible.
+
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](5.%20Deployment.md)
