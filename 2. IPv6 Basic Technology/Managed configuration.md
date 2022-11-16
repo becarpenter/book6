@@ -33,7 +33,7 @@ DHCPv6 options include:
 - IA Prefix Option
 
 Readers who want more details should consult [RFC8415](https://www.rfc-editor.org/info/rfc8415) directly.
-Be warned, this is a very complex RFC of about 150 pages.
+Be warned, this is a very complex RFC of about 150 pages. Also, the full lists of defined messages and options may be found at [IANA](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml), with citations of the relevant RFCs.
 
 A missing DHCPv6 option is DNS server information; this is only available
 via RAs, as mentioned in the previous section. No consensus has
