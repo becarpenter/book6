@@ -13,6 +13,8 @@ only a signal shown, and a distant voice in the darkness
 Today, the core of the Internet - all the major international transit providers and all major Internet Exchange Points - support dual stack routing. So do many local ISPs.
 
 Also, all hosts in a dual stack network should support IPv6 and IPv4 simultaneously, with IPv6 preferred. Such a deployment can tolerate the presence of legacy IPv4-only hosts and applications, and can reach external IPv4-only services, with no special arrangements.
+
+[RFC8305](https://www.rfc-editor.org/info/rfc8305) explains the "Happy Eyeballs" technique for applications seeking to optimize dual-stack performance.
    
 With Dual-Stack, IPv6 can be introduced together with other network upgrades and many parts of network management and Information Technology (IT) systems can still work in IPv4. As a matter of fact, IPv4 reachability can be provided for a long time and most Internet Service Providers (ISPs) are leveraging Carrier-Grade NAT (CGN, [RFC6888](https://www.rfc-editor.org/info/rfc6888)) to extend the life of IPv4. However, large ISPs have discovered the scaling limits and operational costs of CGN.
    
