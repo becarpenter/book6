@@ -14,7 +14,7 @@ The only feasible way to write down 128 bit addresses is in hexadecimal. There's
 6789:abcd:ef01:2345:6789:abcd:ef01:2345
 ~~~
 
-In that example, there are 8 groups of 4 hexadecimal digits, to specify all 128 bits in 16 bit chunks. In conventional hexadecimal notation, that would be 0x6789abcdef0123456789abcdef012345. The colons (':') are there to help the reader.
+In that example, there are 8 groups of 4 hexadecimal digits, to specify all 128 bits in 16 bit chunks. In conventional hexadecimal notation, that would be `0x6789abcdef0123456789abcdef012345`. The colons (':') are there to help the reader.
 
 In each chunk of 16 bits, leading zeros are dropped, so we write:
 ~~~
@@ -49,9 +49,9 @@ https://[2001:db8:4006:80b::200e]
 
 ### Easy addresses
 
-The unspecified IPv6 address is simply zero, represented as '::'.
+The unspecified IPv6 address is simply zero, represented as `::`.
 
-The loopback IPv6 address is 1, represented as '::1'.
+The loopback IPv6 address is 1, represented as `::1`.
 
 ### Routeable unicast addresses
 
@@ -73,7 +73,9 @@ However, that's a bad example because 'cafe' might be guessable. For privacy rea
 
 This replaces a deprecated mechanism of forming the IID based on IEEE MAC addresses. Many legacy products still use that mechanism.
 
-In this example, we used a 64 bit prefix based on the 2001:db8/32 prefix, which is reserved for documentation use, but at present all prefixes [allocated to the Regional Internet Registries](https://www.iana.org/assignments/ipv6-unicast-address-assignments/ipv6-unicast-address-assignments.xhtml) start with a 2. Often such addresses are referred to as GUAs (globally reachable unique addresses).
+In this example, we used a 64 bit prefix based on the `2001:db8::/32` prefix, which is reserved for documentation use, but at present all prefixes [allocated to the Regional Internet Registries](https://www.iana.org/assignments/ipv6-unicast-address-assignments/ipv6-unicast-address-assignments.xhtml) start with a 2. Often such addresses are referred to as GUAs (globally reachable unique addresses).
+
+(Incidentally, `2001:db8::/32` is the full notation for a 32-bit prefix, but sometimes it is written informally as `2001:db8/32`, leaving the reader to insert the missing '::'.)
 
 Another type of routeable unicast address exists, known as Unique Local Addresses (ULA). The benefits of these are
 
@@ -91,15 +93,15 @@ An example:
 
 The 'fd' prefix is enough to identify a ULA. In this example,
 
- - fd63:45eb:dc14::/48 is the so-called ULA prefix.
- - 0x6345ebdc14 is the locally generated pseudo-random part.
- - fd63:45eb:dc14:1::/64 is the subnet prefix.
+ - `fd63:45eb:dc14::/48` is the so-called ULA prefix.
+ - The locally generated pseudo-random part is `0x6345ebdc14`.
+ - `fd63:45eb:dc14:1::/64` is the subnet prefix.
 
-Occasionally people use the prefix fd00::/48 (zero instead of the pseudo-random bits) but this is not recommended. If two such networks are merged, things will break.
+Occasionally people use the prefix `fd00::/48` (zero instead of the pseudo-random bits) but this is not recommended. If two such networks are merged, things will break.
 
 It is slightly confusing that both GUAs and ULAs are architecturally defined as having 'global scope', but ULAs are forbidden *by rule* to be routed globally.
 
-In the preceding examples, the prefix boundary is shown after bit 63, so the subnet prefix is 2001:db8:4006:80b/64 or fd63:45eb:dc14:1/64. This is the normal setting in IPv6:
+In the preceding examples, the prefix boundary is shown after bit 63, so the subnet prefix is `2001:db8:4006:80b/64` or `fd63:45eb:dc14:1/64`. This is the normal setting in IPv6:
 subnets have 64 bit prefixes and 64 bit IIDs. [Automatic address configuration](Auto-configuration.md) depends on this fixed boundary. Links that don't use automatic address configuration are not bound by the /64 rule, but a lot of software and configurations rely on it.
 
 An important characteristic of routeable IPv6 unicast addresses is that they are assigned to interfaces (not whole nodes) and each interface may have several addresses at the same time. For example, a host in an enterprise network could in theory
@@ -134,7 +136,7 @@ prefix ------- IID -------
  fe80::a1b3:6d7a:3f65:dd13
 ~~~
 
-The 'fe80::/64' prefix is enough to identify a link local address.
+The `fe80::/64` prefix is enough to identify a link local address.
 
 Link local addresses (LLAs) do what it says on the can: they are *never* forwarded by a router (but they will be forwarded by a Layer 2 switch). They are essential during the startup phase for address allocation and they are essential for reaching a first-hop router.
 
@@ -165,14 +167,16 @@ An IPv4-mapped IPv6 address is a way to represent an IPv4 address as if it was a
  ::ffff:192.0.2.123
 ~~~
 
-That is, the prefix at full length would be 0:0:0:0:0:ffff/96.
+That is, the prefix at full length would be `0:0:0:0:0:ffff::/96`.
+
+(Note that `::ffff::/96` would be ambiguous. Only one '::' is allowed.)
 
 In particular, this form of address can be used to make the IPv6 socket interface handle
 an IPv4 address (see [RFC4038](https://www.rfc-editor.org/info/rfc4038)).
 
 ### Multicast addresses
 
-IPv6 multicast address are all under the ff00::/8 prefix, i.e. they start with 0xff. The next 8 bits have special meanings, so 112 bits are left to specify a particular multicast group. The special meanings are well explained in Section 2.7 of [RFC4291](http://www.rfc-editor.org/info/rfc4291), so this is not repeated here. Some multicast addresses are predefined; for example ff01::1 is the link-local "all nodes" address that every IPv6 node must listen to, and ff01::2 is the link-local "all routers" address that every IPv6 router must listen to.
+IPv6 multicast address are all under the `ff00::/8` prefix, i.e. they start with 0xff. The next 8 bits have special meanings, so 112 bits are left to specify a particular multicast group. The special meanings are well explained in Section 2.7 of [RFC4291](http://www.rfc-editor.org/info/rfc4291), so this is not repeated here. Some multicast addresses are predefined; for example `ff01::1` is the link-local "all nodes" address that every IPv6 node must listen to, and `ff01::2` is the link-local "all routers" address that every IPv6 router must listen to.
 
 All the officially assigned multicast addresses may found at [IANA](https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml#link-local).
 
