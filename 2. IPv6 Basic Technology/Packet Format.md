@@ -34,9 +34,10 @@ Some notes on these fixed fields:
 
 - Version: is always 6
 
-- Traffic class: six bits of [differentiated services](https://www.rfc-editor.org/info/rfc2474) code point followed by two [ECN](https://www.rfc-editor.org/info/rfc3168) bits.
+- Traffic class: six bits of [differentiated services](https://www.rfc-editor.org/info/rfc2474) code point followed by two [ECN](https://www.rfc-editor.org/info/rfc3168) bits. See [Traffic class and flow label](Traffic%20class%20and%20flow%20label.md).
 
-- Flow label: 20 bits. Should be a pseudo-random value unique to a given traffic flow. See [IPv6 Flow Label Specification](https://www.rfc-editor.org/info/rfc6437), [Using the IPv6 Flow Label for Equal Cost Multipath Routing and Link Aggregation in Tunnels](https://www.rfc-editor.org/info/rfc6438) and [Using the IPv6 Flow Label for Load Balancing in Server Farms](https://www.rfc-editor.org/info/rfc7098).
+- Flow label: 20 bits. Should be a pseudo-random value unique to a given traffic flow.
+See [Traffic class and flow label](Traffic%20class%20and%20flow%20label.md).
 
 - Payload length: Length of the rest of the packet following this IPv6 header, counted in bytes.
 

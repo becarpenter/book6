@@ -23,6 +23,7 @@ This is the current list of contents. It will change as the book evolves.
 * Routing
 * Transport protocols
 * Extension headers and options
+* Traffic class and flow label
 
 [3. Coexistence with Legacy IPv4](3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 * Dual stacks
