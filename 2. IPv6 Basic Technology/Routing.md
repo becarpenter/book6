@@ -1,6 +1,6 @@
 ## Routing
 
-This section is a short introduction to a complex topic. IPv6 packets are routed individually and statelessly, like any datagram protocol. Consecutive packets may follow different routes, may be lost on the way, may arrive out of order, and transit times are variable. In practice, operators attempt to minimize these effects but upper layer protocols cannot rely on this. In some cases, quality of service mechanisms such as differentiated services \[{{2.Traffic class and flow label}}] may help, but packet delivery remains statistical.
+This section is a short introduction to a complex topic. IPv6 packets are routed individually and statelessly, like any datagram protocol. Consecutive packets may follow different routes, may be lost on the way, may arrive out of order, and transit times are variable. In practice, operators attempt to minimize these effects but upper layer protocols cannot rely on this. In some cases, quality of service mechanisms such as differentiated services \[[2. Traffic class and flow label](../2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)] may help, but packet delivery remains statistical.
 
 IPv6 routing in general operates by longest-match, i.e. each router forwards each packet to another router known to handle an address prefix that is the longest one (up to 128 bits) that matches the packet's destination address \[[BCP198](https://www.rfc-editor.org/info/bcp198)]. Routers use various routing protocols among themselves to distribute information about which prefixes they handle. Common routing protocols are:
 
@@ -36,7 +36,7 @@ IPv6 routers can be placed in various categories, each of which requires differe
 
 - Enterprise routers: Internal routers within a large enterprise network.
 
-- Subnet routers: Internal routers that support one or more links connecting end hosts (typically Ethernet or WiFi). Such a router will be the last-hop router for incoming traffic and the first-hop router for outgoing traffic. It must also provide Router Advertisement services for the end hosts, and either SLAAC or DHCPv6 or both.
+- Subnet routers: Internal routers that support one or more links connecting end hosts (typically Ethernet or WiFi). Such a router will be the last-hop router for incoming traffic and the first-hop router for outgoing traffic. It must also provide Router Advertisement services for the end hosts, and either SLAAC or DHCPv6 or both \[See [2. Address resolution](../2.%20IPv6%20Basic%20Technology/Address%20resolution.md) etc.].
 
 - Customer Edge (CE) routers (domestic): These are cheap routers connecting home or small office networks to an ISP. They typically act as subnet routers too, but are unlikely to provide the full set of enterprise CE router services.
 

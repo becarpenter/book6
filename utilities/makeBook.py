@@ -12,6 +12,7 @@ and inter-chapter links as far as possible."""
 #                     - added citation of I-D. or draft-
 # Version: 2022-11-15 - check that cited references exist (partial)
 # Version: 2022-11-16 - improved reference checks (but still partial)
+# Version: 2022-11-18 - small oversight in reference check
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -225,22 +226,22 @@ def expand_cites():
 
                 elif cite[0].isdigit():
                     #print("Found chapter?", cite)
-                    #extract chapter number
-                    cnum, sname = cite.split(". ", maxsplit=1)
-                    #derive chapter name
                     found_c = False
-                    for cline in contents:
-                        if "["+cnum+"." in cline:
-                            chap = cline.split("(")[1].split("/")[0]
-                            fn = "../"+chap+"/"+sname.replace(" ","%20")+".md"
-                            if not file_ok(fn):
-                                logitw('"'+cite+'" not found')
-                            cite = "["+cite+"]("+fn+")"
-##                            cite = "["+cite+"](../"+chap+"/"+sname.replace(" ","%20")+".md)"
-                            line = head + cite + tail
-                            lchange = True
-                            found_c = True
-                            break
+                    #extract chapter number
+                    if ". " in cite:
+                        cnum, sname = cite.split(". ", maxsplit=1)      
+                        #derive chapter name
+                        for cline in contents:
+                            if "["+cnum+"." in cline:
+                                chap = cline.split("(")[1].split("/")[0]
+                                fn = "../"+chap+"/"+sname.replace(" ","%20")+".md"
+                                if not file_ok(fn):
+                                    logitw('"'+cite+'" not found')
+                                cite = "["+cite+"]("+fn+")"
+                                line = head + cite + tail
+                                lchange = True
+                                found_c = True
+                                break
                     if not found_c:
                         #Bogus chapter number
                         line = head + "[" + cite + "](TBD)" + tail
