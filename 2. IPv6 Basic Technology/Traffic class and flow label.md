@@ -4,8 +4,6 @@ The Traffic Class in every IPv6 packet is a byte also known as the Differentiate
 
 ECN is intended for use by transport protocols to support congestion control.
 
-*TBD: ECN deployment and practice?*
-
 The Flow Label is a 20 bit field in every IPv6 packet, although as it name indicates it is only relevant to sustained traffic flows. The sender of a packet should fill it with a pseudo-random non-zero value unique to a given traffic flow, such as a given TCP connection. It can then be used downstream in support of load balancing. By definition, the 20 bits have no semantics, although some deployments are known to have broken this guideline, which would interfere with load balancing. See [IPv6 Flow Label Specification](https://www.rfc-editor.org/info/rfc6437), [Using the IPv6 Flow Label for Equal Cost Multipath Routing and Link Aggregation in Tunnels](https://www.rfc-editor.org/info/rfc6438) and [Using the IPv6 Flow Label for Load Balancing in Server Farms](https://www.rfc-editor.org/info/rfc7098).
 
 <!-- Link lines generated automatically; do not delete -->

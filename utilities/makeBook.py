@@ -13,6 +13,7 @@ and inter-chapter links as far as possible."""
 # Version: 2022-11-15 - check that cited references exist (partial)
 # Version: 2022-11-16 - improved reference checks (but still partial)
 # Version: 2022-11-18 - small oversight in reference check
+# Version: 2022-11-19 - cosmetic
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -302,7 +303,7 @@ logit("Running in directory "+ os.getcwd())
 
 
 showinfo(title=T,
-         message = "Will read in current contents.\nTouch no files until done!")
+         message = "Will read in current contents.\nChecking new references can be slow.\nTouch no files until done!")
 
 #Can we check RFCs?
 
