@@ -14,6 +14,7 @@ and inter-chapter links as far as possible."""
 # Version: 2022-11-16 - improved reference checks (but still partial)
 # Version: 2022-11-18 - small oversight in reference check
 # Version: 2022-11-19 - cosmetic
+# Version: 2022-11-20 - now checks I-D, BCP and STD refs
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -150,28 +151,6 @@ def link_text(prev, nxt, chapter):
 
 link_warn = "<!-- Link lines generated automatically; do not delete -->\n"
 
-def rfc_ok(s):
-    """Check if an RFC is real"""
-    global rfcs_checkable
-    if not rfcs_checkable:
-        return True  #because we can't check
-    if s[:3] != "RFC":
-        return True  # not applicable
-    if len(s) < 7:
-        #needs leading zeroes for DOI check
-        s = "RFC" + s[3:].zfill(4)    
-    url = "https://doi.org/10.17487/" + s
-    try:
-        response = urllib.request.urlopen(url).getcode()
-    except:
-        return False  #DOI not assigned, hence no RFC
-    return response==200
-
-def draft_ok(s):
-    """Check if a draft is real"""
-    #dummy for now
-    return True
-
 def url_ok(url):
     """Check if a URL is OK"""
     try:
@@ -179,6 +158,47 @@ def url_ok(url):
     except:
         return False  #URL doesn't exist
     return response==200
+
+def rfc_ok(s):
+    """Check if an RFC etc. is real"""
+    global rfcs_checkable
+    if not rfcs_checkable:
+        return True  #because we can't check on line right now
+    dprint("Checking", s)
+    if s[:3] == "BCP" or s[:3] == "STD":
+        url = 'https://www.rfc-editor.org/refs/ref-'+s.lower()+'.txt'
+    elif s[:3] == "RFC":
+
+##    #clumsy method dropped...
+##    if len(s) < 7:
+##        #needs leading zeroes for DOI check
+##        s = "RFC" + s[3:].zfill(4)    
+##    url = "https://doi.org/10.17487/" + s
+##    try:
+##        response = urllib.request.urlopen(url).getcode()
+##    except:
+##        return False  #DOI not assigned, hence no RFC
+##    return response==200
+
+        s = s.replace('RFC','RFC.')
+        url = 'https://www.rfc-editor.org/refs/bibxml/reference.'+s+'.xml'
+    else:
+        return(False)  #invalid call
+    return url_ok(url)
+
+def draft_ok(s):
+    """Check if a draft is real"""
+    global drafts_checkable
+    if not drafts_checkable:
+        return True  #because we can't check on line right now
+    dprint("Checking", s)
+    #remove revision number if present
+    if s[-3] == '-' and s[-2].isdigit() and s[-1].isdigit():
+        s = s[:-3]
+    url = 'https://bib.ietf.org/public/rfc/bibxml3/reference.I-D.'+s+'.xml'
+    return url_ok(url)
+
+
 
 def file_ok(fn):
     """Check if a local file is OK"""
@@ -190,7 +210,7 @@ def file_ok(fn):
 
 def expand_cites():
     """Look for kramdown-style citations and expand them"""
-    global section, contents, file_names
+    global section, contents, file_names, topic_file
     schange = False
     for i in range(len(section)):
         lchange = False
@@ -200,6 +220,8 @@ def expand_cites():
         try:
             #allow {{{ or {{
             line = line.replace("{{{","{{").replace("}}}","}}")
+            if line.count("{{") != line.count("}}"):
+                logitw("Malformed reference in "+topic_file)
             while "{{" in line and "}}" in line:
                 #dprint("Citation  in:", line)
                 #found an expandable citation
@@ -212,14 +234,15 @@ def expand_cites():
                     line = head + cite + tail
                     lchange = True
                 elif cite.startswith("I-D."):
-                    draft_name = "draft-"+cite[4:]
-                    cite = "["+cite+"](https://datatracker.ietf.org/doc/"+draft_name+"/)"
+                    draft_name = cite[4:]
+                    cite = "["+cite+"](https://datatracker.ietf.org/doc/draft-"+draft_name+"/)"
                     if not draft_ok(draft_name):
                         logitw(draft_name+" not found on line")
                     line = head + cite + tail
                     lchange = True
                 elif cite.startswith("draft-"):
-                    if not draft_ok(cite):
+                    draft_name = cite[6:]
+                    if not draft_ok(draft_name):
                         logitw(cite+" not found on line")
                     cite = "["+cite+"](https://datatracker.ietf.org/doc/"+cite+"/)"
                     line = head + cite + tail
@@ -311,6 +334,10 @@ rfcs_checkable = True
 rfcs_checkable = rfc_ok("RFC8200")
 if not rfcs_checkable:
     logitw("Cannot check RFC existence on-line")
+
+drafts_checkable = url_ok("https://bib.ietf.org")
+if not drafts_checkable:
+    logitw("Cannot check drafts' existence on-line")
 
 ######### Read previous contents
 
