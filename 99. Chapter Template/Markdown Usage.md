@@ -19,13 +19,13 @@ but a feature adapted from kramdown is also available, e.g.
   {{I-D.ietf-v6ops-xxx}}    to refer to an Internet Draft
   {{draft-ietf-v6ops-xxx}}  the same!
   {{Last Section}}          to refer to a section in the present chapter
-  {{2. Addresses}}          to refer to a section in another chapter                                                                    (the single space is required) 
+  {{2. Addresses}}          to refer to a section in another chapter  (the single space is required) 
 ~~~
 
 Such references will be fixed up by the next run of makeBook,
-since they are unknown to GitHub's built-in markdown. Note that
-there is **no checking** of the RFCs, draft names, etc. Any typos
-will be preserved.
+since they are unknown to GitHub's built-in markdown. There is some
+checking of the RFCs, draft names, etc. (but only when makeBook
+has web access).
 
 Diagrams can be ASCII art when applicable, e.g.:
 ~~~
