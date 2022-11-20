@@ -639,6 +639,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
 
         #Expand citations for chapter base file itself
         section = rf(dname+"/"+dname+".md")
+        topic_file = dname #used by expand_cites()
         if expand_cites():
             wf(dname+"/"+dname+".md", section)
                     
