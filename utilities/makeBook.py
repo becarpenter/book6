@@ -15,6 +15,7 @@ and inter-chapter links as far as possible."""
 # Version: 2022-11-18 - small oversight in reference check
 # Version: 2022-11-19 - cosmetic
 # Version: 2022-11-20 - now checks I-D, BCP and STD refs
+# Version: 2022-11-22 - fix oversight in contents updating
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -646,9 +647,9 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
 ######### Rewrite contents if necessary
 
 if contents_changed:
-    #ensure there is a blank line before each link
+    #ensure there is a blank line before each link or # title
     for i in range(1,len(contents)):
-        if "[" in contents[i]:
+        if contents[i].startswith("[") or contents[i].startswith("#"):
             contents[i] = "\n"+contents[i]
     #and write it back                   
     wf("Contents.md", contents)
