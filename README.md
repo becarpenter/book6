@@ -1,4 +1,5 @@
-# book6
+<img src="./book6logo.png" width="200px" height="auto">
+
 A collaborative IPv6 book.
 
 The intention is a practical introduction to IPv6 for technical people, kept up to date by active practitioners.
