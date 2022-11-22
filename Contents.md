@@ -1,4 +1,5 @@
 # book6: A Collaborative IPv6 Book.
+<img src="./book6logo.png" width="200px" height="auto"/>
 This is the current list of contents. It will change as the book evolves.
 # List of Contents
 
