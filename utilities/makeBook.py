@@ -15,7 +15,7 @@ and inter-chapter links as far as possible."""
 # Version: 2022-11-18 - small oversight in reference check
 # Version: 2022-11-19 - cosmetic
 # Version: 2022-11-20 - now checks I-D, BCP and STD refs
-# Version: 2022-11-22 - fix oversight in contents updating
+# Version: 2022-11-22 - fix oversights/nits in contents updating
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -494,7 +494,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                         if not u_contents_names[ic] in u_base_names:
                             #found missing section - add to base file
                             mdfile = contents_names[ic].replace(" ","%20")+".md"
-                            news = "## ["+contents_names[ic]+"]("+mdfile+")"
+                            news = "\n## ["+contents_names[ic]+"]("+mdfile+")"
                             dprint("New", news, before)
                             #find correct place in base and insert
                             for ib in range(len(base)):
@@ -544,10 +544,10 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                 elif not topic in base_names:
                     #found a new topic
                     logit("New section '"+topic+"' added to base '"+dname+"'")
-                    new_sec = "## ["+topic+"]("+topic+".md)\n"
+                    new_sec = "## ["+topic+"]("+topic.replace(" ","%20")+".md)\n\n"
                     for bx in range(len(base)):
                         if "### [<ins>Back" in base[bx]:
-                            base[bx:bx] = [link_warn, new_sec]
+                            base[bx-1:bx-1] = [new_sec]
                             break
                     base_changed = True
                     logitw("Run makeBook again to update main contents with new section")
@@ -633,7 +633,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                 #add new link line
                 section.append(link_warn)
                 section.append(link_line)
-                section.changed = True
+                section_changed = True
                 
             if section_changed:
                 wf(dname+"/"+topic_file+".md", section)
