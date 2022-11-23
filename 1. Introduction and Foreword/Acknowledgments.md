@@ -10,3 +10,5 @@ Other contributors (mainly via email) include:
 
 (with apologies to those forgotten) 
 
+<!-- Link lines generated automatically; do not delete -->
+### [<ins>Previous</ins>](How%20to%20contribute.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)

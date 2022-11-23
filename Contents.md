@@ -12,6 +12,7 @@ This is the current list of contents. It will change as the book evolves.
 * How a network operations center sees IPv6
 * How to keep up to date
 * How to contribute
+* Acknowledgments
  
 
 [2. IPv6 Basic Technology](2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)

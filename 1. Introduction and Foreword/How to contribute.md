@@ -15,4 +15,4 @@ To become an active contributor
 [check the conditions](https://github.com/becarpenter/book6/blob/main/CONTRIBUTING.md).
 Your contributions will be reviewed by an editorial team.
 
-### [<ins>Previous</ins>](How%20to%20keep%20up%20to%20date.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
+### [<ins>Previous</ins>](How%20to%20keep%20up%20to%20date.md) [<ins>Next</ins>](Acknowledgments.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
