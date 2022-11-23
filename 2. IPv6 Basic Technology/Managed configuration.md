@@ -29,15 +29,21 @@ DHCPv6 options include:
 - Authentication Option
 - Server Unicast Option
 - Status Code Option
+- DNS Recursive Name Server Option
+- Domain Search List Option
 - Identity Association for Prefix Delegation Option
 - IA Prefix Option
 
 Readers who want more details should consult [RFC8415](https://www.rfc-editor.org/info/rfc8415) directly.
 Be warned, this is a very complex RFC of about 150 pages. Also, the full lists of defined messages and options may be found at [IANA](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml), with citations of the relevant RFCs.
 
-A missing DHCPv6 option is DNS server information; this is only available
-via RAs, as mentioned in the previous section. No consensus has
-been reached in the IETF to also supply this information via DHCPv6.
+A missing DHCPv6 option is information about default routers; this is only available
+via RAs, as described in the previous sections. No consensus has
+been reached in the IETF to also supply this information via DHCPv6. In fact,
+DHCPv6 is designed to supplement router advertisement information and is not intended
+to work on a subnet that has no router. Therefore DHCPv6 assigned addresses effectively
+have prefix length /128, and clients need to combine that information with RA information
+to communicate with other on-link hosts.
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Auto-configuration.md) [<ins>Next</ins>](DNS.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
