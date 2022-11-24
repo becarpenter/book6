@@ -192,11 +192,11 @@ Of course, literal addresses should only be used for diagnostic or testing purpo
 
 ### Obsolete address types
 
- - A format known as "Top Level Aggregator (TLA)" was made obsolete by {{RFC3587}}.
+ - A format known as "Top Level Aggregator (TLA)" was made obsolete by [RFC3587](https://www.rfc-editor.org/info/rfc3587).
 
- - A format known as "site-local" addresses was made obsolete by {{RFC3879}}.
+ - A format known as "site-local" addresses was made obsolete by [RFC3879](https://www.rfc-editor.org/info/rfc3879).
 
- - A format known as "IPv4-Compatible IPv6" addresses was made obsolete by {{RFC4291}}.
+ - A format known as "IPv4-Compatible IPv6" addresses was made obsolete by [RFC4291](https://www.rfc-editor.org/info/rfc4291).
 
  - Address prefixes previously allocated for special use are mentioned in the [unicast address registry](https://www.iana.org/assignments/ipv6-unicast-address-assignments/ipv6-unicast-address-assignments.xhtml). 
 
