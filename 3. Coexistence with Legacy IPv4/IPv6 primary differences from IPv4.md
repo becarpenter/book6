@@ -1,12 +1,14 @@
 ## IPv6 primary differences from IPv4
 
-This book intentionally describes IPv6 as the "new normal" IP protocol, but this section mentions the main ways that it differs from IPv4, using terminology from \[[2. IPv6 Basic Technology](../2.%20IPv6%20Basic%20Technology] 
+This book intentionally describes IPv6 as the "new normal" IP protocol, but this section mentions the main ways that it differs from IPv4, using terminology from [2. IPv6 Basic Technology](../2.%20IPv6%20Basic%20Technology).
 
 IPv6 is very similar for transit routing, but has some considerable differences on the first hop for hosts as well as for routers that do more than pure routing.
 
 The primary differences are:
 
-- The first difference is desirable and expected: IPv6 has a four times bigger address size (128 bits against 32 bits). SLAAC is more used on IPv6 than DHCPv6. A SLAAC subnet prefix is 64 bits for historical reasons that are fixed in many standards. 2^64 hosts are of course not possible in one subnet, but the address space is reserved even for a smartphone. Hence, it is disputable what is the effective IPv6 address space. It is bigger than 2^64 bits but the 64 IID bits are utilized for privacy and security, not for addressing *per se*.
+- The first difference is desirable and expected: IPv6 has a four times bigger address size (128 bits against 32 bits).
+
+  SLAAC is more used on IPv6 than DHCPv6. A SLAAC subnet prefix is 64 bits for historical reasons that are fixed in many standards. 2^64 hosts are of course not possible in one subnet, but the address space is reserved even for a smartphone. Hence, it is disputable what is the effective IPv6 address space. It is bigger than 2^64 bits but the 64 IID bits are utilized for privacy and security, not for addressing *per se*.
 
 - NAT44 is a common solution in IPv4 networking.
 
