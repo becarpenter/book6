@@ -15,4 +15,4 @@ Tunneling IPv6 over IPv4, or the converse, remains fundamental to co-existence, 
 * TBD - more to be added here
 
 <!-- Link lines generated automatically; do not delete -->
-### [<ins>Previous</ins>](Translation.md) [<ins>Chapter Contents</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)
+### [<ins>Previous</ins>](Translation.md) [<ins>Next</ins>](IPv6%20primary%20differences%20from%20IPv4.md) [<ins>Chapter Contents</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)

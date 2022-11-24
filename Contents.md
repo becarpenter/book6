@@ -33,6 +33,7 @@ This is the current list of contents. It will change as the book evolves.
 * Tunnels
 * Translation
 * Obsolete techniques
+* IPv6 primary differences from IPv4
 
 [4. Security](4.%20Security/4.%20Security.md)
 * Layer 2 considerations
