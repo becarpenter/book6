@@ -13,7 +13,7 @@ RA messages are quite complex and are defined in detail in [RFC4861](https://www
 As mentioned in [2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md), the interface identifier should be pseudo-random to enhance privacy, except in the case of public servers (thus a certain large company uses identifiers like ```face:b00c:0:25de```). For practical reasons, stable identifiers are often preferred \[[RFC8064](https://www.rfc-editor.org/info/rfc8064)]
 but privacy is better protected by temporary identifiers \[[RFC8981](https://www.rfc-editor.org/info/rfc8981)].
 
-An important step in configuring either a link local address or a routeable address is *Duplicate Address Detection* (DAD). Before a new address is safe to use, the node first sends out a Neighbor Solicitation for this address, as described in the previous section. If it receives a Neighbor Advertisement in reply, there's a duplicate, and the new address must be abandoned.
+An important step in configuring either a link local address or a routeable address is *Duplicate Address Detection* (DAD). Before a new address is safe to use, the node first sends out a Neighbor Solicitation for this address, as described in the previous section. If it receives a Neighbor Advertisement in reply, there's a duplicate, and the new address must be abandoned. The Neighbor Solicitations sent for DAD add to the multicast scaling issues mentioned above.
 
 It's worth underlining a couple of IPv6 features here:
 

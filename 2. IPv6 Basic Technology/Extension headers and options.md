@@ -14,6 +14,8 @@ As explained in [2. Packet Format](../2.%20IPv6%20Basic%20Technology/Packet%20Fo
 
 - Encapsulating security payload, if [IPsec](https://www.rfc-editor.org/info/rfc4303) is in use. This is the defined mechanism for IPv6 security at layer 3.
 
+Both hop-by-hop and destination options include flag bits in the option type for nodes that may not understand the option, telling the node whether to simply ignore the unknown option, or whether to drop the whole packet and possibly send an ICMP response.
+
 There is a recognized operational problem with IPv6 extension headers: while they work well within a limited domain with consistent administration and security rules, they are not reliably transmitted across the open Internet, presumably due to firewall and router filtering rules. [RFC7872](https://www.rfc-editor.org/info/rfc7872) reports on the situation in 2015, and there is ongoing work to update similar measurements. The operational implications are described in [RFC9098](https://www.rfc-editor.org/info/rfc9098) and filtering recommendations are in [RFC9288](https://www.rfc-editor.org/info/rfc9288).
 
 <!-- Link lines generated automatically; do not delete -->

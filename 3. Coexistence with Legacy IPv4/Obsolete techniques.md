@@ -8,6 +8,8 @@ Tunneling IPv6 over IPv4, or the converse, remains fundamental to co-existence, 
 
 * Connection of IPv6 Domains via IPv4 Clouds ("6to4") [RFC3056](https://www.rfc-editor.org/info/rfc3056), [RFC3068](https://www.rfc-editor.org/info/rfc3068). The problems with this are documented in [RFC6343](https://www.rfc-editor.org/info/rfc6343) and it was largely deprecated by [RFC7526](https://www.rfc-editor.org/info/rfc7526).
 
+* 6rd {{RFC5569}}.
+
 * Teredo: Tunneling IPv6 over UDP through Network Address Translations (NATs) [RFC4380](https://www.rfc-editor.org/info/rfc4380).
 
 * TBD - more to be added here

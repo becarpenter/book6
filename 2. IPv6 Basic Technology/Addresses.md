@@ -190,6 +190,15 @@ Browsers can recognize a literal IPv6 address instead of a host name, but the ad
 
 Of course, literal addresses should only be used for diagnostic or testing purposes, and will normally be cut-and-pasted rather than being typed in by hand.
 
+### Obsolete address types
+
+ - A format known as "Top Level Aggregator (TLA)" was made obsolete by {{RFC3587}}.
+
+ - A format known as "site-local" addresses was made obsolete by {{RFC3879}}.
+
+ - A format known as "IPv4-Compatible IPv6" addresses was made obsolete by {{RFC4291}}.
+
+ - Address prefixes previously allocated for special use are mentioned in the [unicast address registry](https://www.iana.org/assignments/ipv6-unicast-address-assignments/ipv6-unicast-address-assignments.xhtml). 
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Packet%20Format.md) [<ins>Next</ins>](Layer%202%20functions.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)

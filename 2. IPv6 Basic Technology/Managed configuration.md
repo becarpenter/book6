@@ -10,6 +10,8 @@ DHCPv6 is defined by [RFC8415](https://www.rfc-editor.org/info/rfc8415). It is c
 
 A notable feature of DHCPv6 is that it can be used *between routers* to assign prefixes dynamically. For example, if a new segment is switched on and its router doesn't have an IPv6 prefix, an infrastructure router "above" it in the topology can assign it one (e.g. a /64 prefix), using the `OPTION_IA_PD` and `OPTION_IAPREFIX` DHCPv6 options (previously defined by RFC3633, but now covered by [Section 6.3 of RFC8415](https://www.rfc-editor.org/rfc/rfc8415.html#section-6.3). This process is known as DHCPv6-PD (for "prefix delegation").
 
+However, the 3GPP specifications for IPv6 usage over cellular mobile systems make both DHCPv6 and DHCPv6-PD optional \[{{RFC7066}}], and experience shows that many common 3GPP implementations do not support them. Thus mobile devices can only rely on RA-based address and prefix mechanisms.
+
 DHCPv6 message types include:
 
 - SOLICIT (discover DHCPv6 servers)

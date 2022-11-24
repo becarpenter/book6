@@ -1,10 +1,12 @@
 ## Acknowledgments
 
 Contributors via GitHub may be identified at [Contributors](https://github.com/becarpenter/book6/graphs/contributors).
-Other contributors (mainly via email) include:
+Other direct and indirect contributors (mainly via email) include:
 
 
 - Tim Chown
+
+- Gert Doering
 
 - Jyrki Soini
 
