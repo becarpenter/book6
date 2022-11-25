@@ -1,13 +1,13 @@
 ## Deployment by carriers
 
 All the organizations providing or using Internet connectivity services have an associated Autonous System Number (ASN).
-APNIC (https://blog.apnic.net/2022/01/06/bgp-in-2021-the-bgp-table/) provides statistics on the evolution of IPv6 support across the ASNs in the world, as observed in the Internet routing tables.
+[APNIC](https://blog.apnic.net/2022/01/06/bgp-in-2021-the-bgp-table/) provides statistics on the evolution of IPv6 support across the ASNs in the world, as observed in the Internet routing tables.
 
 <img src="./Section5_Table2.jpg">
 
 The percentage of IPv6-capable ASNs is growing over the years, which is a ggod sign.
 On the other hand, the table does not allow to understand the degree of adoption across the different industries, that is whether the ASNs are associated to a carrier, a service provider or an entreprise.
-To zoom in at that level, it is necessary to look at more detailed statistics such as those provided by Akamai (https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization) or APNIC (https://stats.labs.apnic.net).
+To zoom in at that level, it is necessary to look at more detailed statistics such as those provided by [Akamai](https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization) or [APNIC](https://stats.labs.apnic.net).
 
 Not unsurprisingly, the vast majority of carriers worldwide already support IPv6. Yet, differences exist.
 As a general rule, the carriers active in those countries with higher IPv6 adoption also show higher levels of IPv6 utilization.
@@ -19,7 +19,7 @@ Whilst it cannot be gneralized, in countries with lower IPv6 adoption the local 
 For example, European countries such as Spain, Italy and Poland show respectively 4.5%, 7% and 13.5% adoption. 
 Based on APNIC data, exluding the exceptions of Telefonica de España (26%), Vodafone Italy (21%), Wind/3 Italy (22%) and Orange Poland (23%), all the other carries sit quite below the threshold of 20% adoption.
 
-Differences also apply between wired and wireless carriers. The latter ones are often more advanced with IPv6. In several cases (https://datatracker.ietf.org/doc/draft-ietf-v6ops-ipv6-deployment/), the reason for them to move to IPv6 depended on the lack of public IPv4 addresses.
+Differences also apply between wired and wireless carriers. The latter ones are often more advanced with IPv6. In several cases [IPv6 Status](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ipv6-deployment/), the reason for them to move to IPv6 depended on the lack of public IPv4 addresses.
 Those carriers have decided to develop strategic plans to enable IPv6-only services, for example through the adoption of transition mechanisms such as 464XLAT (Reliance Jio, T-Mobile), guaranteeing legacy IPv4-as-a-Service support.
 Notable examples of early IPv6 adoption in the wired domain are Comcast in the US and Sky in the UK.
 
