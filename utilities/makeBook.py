@@ -16,6 +16,9 @@ and inter-chapter links as far as possible."""
 # Version: 2022-11-19 - cosmetic
 # Version: 2022-11-20 - now checks I-D, BCP and STD refs
 # Version: 2022-11-22 - fix oversights/nits in contents updating
+# Version: 2022-11-27 - {{ }} now puts [ ] round citation
+#                     - {{{ }}} does not put [ ]
+#                     - fix missing newline when adding new section
 
 ########################################################
 # Copyright (C) 2022 Brian E. Carpenter.                  
@@ -126,14 +129,15 @@ def make_basenames():
     for bline in base:
         if len(bline) < 4:
             continue
-        if bline[0:4] == "## [":
+        bline = bline.strip("\n")
+        if bline.startswith("## ["):
             # existing section reference
             sname,_ = bline.split("[", maxsplit = 1)[1].split("]", maxsplit = 1)
             base_names.append(sname)
-        elif bline[0:2] == "##" and not "###" in bline:
+        elif bline.startswith("##") and not "###" in bline:
             #possible section
             try:
-                _,sname = bline.strip("\n").split(" ", maxsplit=1)
+                _,sname = bline.split(" ", maxsplit=1)
             except:
                 continue
             #treat as new section (will create file later)
@@ -219,8 +223,10 @@ def expand_cites():
         if "  {{" in line:
             continue        #ignore a line that looks like documentation of {{ or {{{ itself        
         try:
-            #allow {{{ or {{
-            line = line.replace("{{{","{{").replace("}}}","}}")
+            #convert {{ }} to \[{{ }}]
+            line = line.replace("{{{","{?x{").replace("}}}","}?y}")
+            line = line.replace("{{","\[{{").replace("}}","}}]")
+            line = line.replace("{?x{","{{").replace("}?y}","}}")
             if line.count("{{") != line.count("}}"):
                 logitw("Malformed reference in "+topic_file)
             while "{{" in line and "}}" in line:
@@ -544,12 +550,13 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                 elif not topic in base_names:
                     #found a new topic
                     logit("New section '"+topic+"' added to base '"+dname+"'")
-                    new_sec = "## ["+topic+"]("+topic.replace(" ","%20")+".md)\n\n"
+                    new_sec = "\n## ["+topic+"]("+topic.replace(" ","%20")+".md)\n"
                     for bx in range(len(base)):
                         if "### [<ins>Back" in base[bx]:
                             base[bx-1:bx-1] = [new_sec]
+                            base_changed = True
                             break
-                    base_changed = True
+                    
                     logitw("Run makeBook again to update main contents with new section")
 
             #Maybe update base_names

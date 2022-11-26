@@ -4,7 +4,7 @@ The basics of using the GitHub dialect of markdown are [here](https://docs.githu
 
 And don't forget, a separate .md file for each new section in any chapter of the book.
 
-References can be done in basic Markdown form, i.e.:
+Web references can be done in basic Markdown form, i.e.:
 
 ~~~
   [text](URL)               to refer to any valid URL
@@ -27,7 +27,14 @@ since they are unknown to GitHub's built-in markdown. There is some
 checking of the RFCs, draft names, etc. (but only when makeBook
 has web access).
 
-Diagrams can be ASCII art when applicable, e.g.:
+Note that references will be surrounded by square brackets thus: \[[RFC8200](https://www.rfc-editor.org/info/rfc8200)]. If you want them without square brackets for grammatical reasons, such as using [RFC8200](https://www.rfc-editor.org/info/rfc8200) as a noun, use *three* curly brackets:
+
+~~~
+  {{{RFC8200}}}
+  {{{2. Addresses}}}
+~~~
+
+Diagrams can be ASCII art when applicable, using ```~~~``` before and after, e.g.:
 ~~~
    +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
    |Version| Traffic Class |           Flow Label                  |
