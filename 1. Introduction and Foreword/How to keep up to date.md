@@ -4,7 +4,7 @@ The intention is for this book to be kept up to date by
 its user community. However, for the very latest information
 on IPv6 operational best practices and protocol details,
 readers may wish to track the discussions in the relevant
-IETF working groups, in particular
+[IETF](https://www.ietf.org) working groups, in particular
 [IPv6 Operations (v6ops)](https://datatracker.ietf.org/wg/v6ops/about/)
 and
 [IPv6 Maintenance (6man)](https://datatracker.ietf.org/wg/6man/about/).
