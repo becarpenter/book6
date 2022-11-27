@@ -73,11 +73,11 @@ However, that's a bad example because 'cafe' might be guessable. For privacy rea
 
 This replaces a deprecated mechanism of forming the IID based on IEEE MAC addresses. Many legacy products still use that mechanism.
 
-In this example, we used a 64 bit prefix based on the `2001:db8::/32` prefix, which is reserved for documentation use, but at present all prefixes [allocated to the Regional Internet Registries](https://www.iana.org/assignments/ipv6-unicast-address-assignments/ipv6-unicast-address-assignments.xhtml) start with a 2. Often such addresses are referred to as GUAs (globally reachable unique addresses).
+In this example, we used a 64 bit prefix based on the `2001:db8::/32` prefix, which is reserved for documentation use, but at present all prefixes [allocated to the Regional Internet Registries](https://www.iana.org/assignments/ipv6-unicast-address-assignments/ipv6-unicast-address-assignments.xhtml) start with a 2. Often such addresses are referred to as GUAs (globally reachable unique addresses). The background to prefix assignment policies by the registries is covered by [BCP157](https://www.rfc-editor.org/info/bcp157).
 
 (Incidentally, `2001:db8::/32` is the full notation for a 32-bit prefix, but sometimes it is written informally as `2001:db8/32`, leaving the reader to insert the missing '::'.)
 
-Another type of routeable unicast address exists, known as Unique Local Addresses (ULA). The benefits of these are
+Another type of routeable unicast address exists, known as Unique Local Addresses (ULA). The benefits of these are:
 
 1. They are self-allocated by a particular network for its own internal use.
 2. They are all under a /48 prefix that includes a locally assigned *pseudo-random* 40 bit part.
@@ -123,8 +123,6 @@ Syntactically, anycast addresses are identical to unicast addresses, so any GUA 
  |                |
  2001:db8:4006:80b::
 ~~~
-
-
 
 ### Link local addresses
 
@@ -190,7 +188,13 @@ Browsers can recognize a literal IPv6 address instead of a host name, but the ad
 
 Of course, literal addresses should only be used for diagnostic or testing purposes, and will normally be cut-and-pasted rather than being typed in by hand.
 
+### Some addresses are special
+
+Special-purpose IPv6 addresses and their registry are described in [RFC6890](https://www.rfc-editor.org/info/rfc6890).
+
 ### Obsolete address types
+
+ -  A mapping of some OSI addresses into IPv6 addresses, and of arbitrary OSI addresses into IPv6 destination options, was made obsolete by [RFC4048](https://www.rfc-editor.org/info/rfc4048).
 
  - A format known as "Top Level Aggregator (TLA)" was made obsolete by [RFC3587](https://www.rfc-editor.org/info/rfc3587).
 
