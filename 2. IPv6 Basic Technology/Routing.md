@@ -46,7 +46,7 @@ IPv6 routers can be placed in various categories, each of which requires differe
 
 - Inter-domain routers connecting ISPs to peer ISPs and/or Internet Exchange Points.
 
-A general comment is that IPv6 prefixes being longer than IPv4 prefixes (up to 64 bits instead of, say, 24 bits), one might expect routing tables to require much more memory space. While this is true, IPv6 was designed for classless route aggregation from the beginning, which generally permits there to be fewer IPv6 prefixes, mitigating the table size issue. Interested readers can find exhaustive data on BGP-4 table sizes at [Geoff Huston's site](https://bgp.potaroo.net/index-bgp.html).
+A general comment is that IPv6 prefixes being longer than IPv4 prefixes (up to 64 bits instead of, say, 24 bits), one might expect routing tables to require much more memory space. While this is true, IPv6 was designed for classless route aggregation from the beginning, which generally permits there to be fewer IPv6 prefixes, mitigating the table size issue. Interested readers can find exhaustive data on BGP-4 table sizes at [Geoff Huston's site](https://bgp.potaroo.net/index-bgp.html). For a deep dive on BGP-4 itself, with much focus on IPv6, see the e-book by Iljitsch van Beijnum: [Internet Routing with BGP](https://www.iljitsch.com/2022/11-18-new-e-book-internet-routing-with-bgp.html) (2022).
 
 
 <!-- Link lines generated automatically; do not delete -->
