@@ -56,7 +56,7 @@ both operationally and financially, is the preferable method for medium to large
 
 
 **Provider Assigned address space**
-Provider Assigned (PA) address space consists of PI address space that is assigned to an upstream provider and sub-delegated to a customer or connector. 
+Provider Assigned (PA) address space consists of PI address space that is assigned to an upstream provider and sub-delegated to a customer or. 
 
 If receiving PA from an upstream provider designs such as multihoming is a more involved process that will involve coordination with the upstream transit provider that owns the IP resources. 
 *add more details here*
