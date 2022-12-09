@@ -19,8 +19,8 @@ Whilst it cannot be gneralized, in countries with lower IPv6 adoption the local 
 For example, European countries such as Spain, Italy and Poland show respectively 4.5%, 7% and 13.5% adoption. 
 Based on APNIC data, exluding the exceptions of Telefonica de España (26%), Vodafone Italy (21%), Wind/3 Italy (22%) and Orange Poland (23%), all the other carries sit quite below the threshold of 20% adoption.
 
-Differences also apply between wired and wireless carriers. The latter ones are often more advanced with IPv6. In several cases [IPv6 Status](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ipv6-deployment/), the reason for them to move to IPv6 depended on the lack of public IPv4 addresses.
-Those carriers have decided to develop strategic plans to enable IPv6-only services, for example through the adoption of transition mechanisms such as 464XLAT (Reliance Jio, T-Mobile), guaranteeing legacy IPv4-as-a-Service support.
+Differences also apply between wired and wireless carriers. The latter are often more advanced with IPv6. In several cases \[future RFC [IPv6 Status](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ipv6-deployment/)\], the reason for them to move to IPv6 depended on the lack of public IPv4 addresses.
+Those carriers have decided to develop strategic plans to enable IPv6-only underlay services, for example through the adoption of translation mechanisms such as 464XLAT (Reliance Jio, T-Mobile), guaranteeing legacy IPv4-as-a-Service support.
 Notable examples of early IPv6 adoption in the wired domain are Comcast in the US and Sky in the UK.
 
 <!-- Link lines generated automatically; do not delete -->

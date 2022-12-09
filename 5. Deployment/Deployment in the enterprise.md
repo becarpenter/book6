@@ -10,7 +10,7 @@ their website. The same method can be applied to [Chinese](http://218.2.231.237:
 [Indian](https://cnlabs.in/IPv6_Mon/generate_industry.html) enterprises.
 
 DNS has a good support in all cases: more than 50% of the enterprises in the three economies considered have AAAA records,
-a sign that IPv6 support is generally available. The same cannot be said or the other services that have much lower adoption.
+a sign that IPv6 support is generally available. The same cannot be said or the other services that have much lower adoption. The future RFC 
 [IPv6 Status](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ipv6-deployment/) provides other statistics about more specific industry domains.
 
 What are the factors hindering the adoption of IPv6 in the enterprise?
