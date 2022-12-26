@@ -1,4 +1,5 @@
 # .gitignore
 
-# Ignore log file
+# Ignore log files
 makeBook.log
+indexBook.log

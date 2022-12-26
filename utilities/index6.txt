@@ -1,0 +1,18 @@
+# book6 index terms
+
+# One line per term to be indexed.
+
+# starts with '#' - comment, ignored
+# blank line - ignored
+# case insensitive
+# terms are terminated by blank or newline
+# abc abcd xyzq - all are indexed as 'abc'
+# 'link local' - treated as a phrase. Use only once per line!
+
+address addresses addressing
+route routes router routers routing routeing
+multicast multicasting
+anycast
+link-local 'link local' link-locals
+'dual stack'
+IID
