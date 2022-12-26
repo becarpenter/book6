@@ -1,5 +1,6 @@
 # book6 Main Index
 <img src="./book6logo.png" width="200px" height="auto"/>
+
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
 [address ●](./1.%20Introduction%20and%20Foreword/How%20a%20user%20sees%20IPv6.md)
