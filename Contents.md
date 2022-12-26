@@ -2,6 +2,8 @@
 <img src="./book6logo.png" width="200px" height="auto"/>
 This is the current list of contents. It will change as the book evolves.
 
+There is also an [index](https://github.com/becarpenter/book6/blob/main/Index.md).
+
 # List of Contents
 
 [1. Introduction](1.%20Introduction%20and%20Foreword/1.%20Introduction%20and%20Foreword.md)
