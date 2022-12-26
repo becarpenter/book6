@@ -1,4 +1,5 @@
 # book6 Main Index
+<img src="./book6logo.png" width="200px" height="auto"/>
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
 [address ●](./1.%20Introduction%20and%20Foreword/How%20a%20user%20sees%20IPv6.md)
@@ -26,11 +27,17 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [anycast ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 
+[arp ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
+[●](./4.%20Security/Layer%202%20considerations.md)
+
 [babel ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
 [bgp ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./4.%20Security/Filtering.md)
 [●](./8.%20Further%20Reading/8.%20Further%20Reading.md)
+
+[broadcast ●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 
 [coexistence ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stacks.md)
@@ -142,4 +149,11 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
+
+[wireless ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
+[●](./4.%20Security/Layer%202%20considerations.md)
+[●](./5.%20Deployment/Deployment%20by%20carriers.md)
 

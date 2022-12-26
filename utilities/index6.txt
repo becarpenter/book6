@@ -28,3 +28,6 @@ SLAAC
 DHCP DHCPv6
 prefix DHCPv6-PD
 IANA
+ARP
+broadcast
+wireless Wi-Fi

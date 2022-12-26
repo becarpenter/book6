@@ -259,10 +259,11 @@ for i in range(len(index)):
         index[i] = index[i].replace(head, '['+blob)
 
 index.insert(0,'# book6 Main Index\n')
-index.insert(1,"This index was created automatically, so it's dumb. ")
-index.insert(2,"It is not case-sensitive. ")
-index.insert(3,'It has links to each section that mentions each keyword.\n')
-index.insert(4,link_warn)     
+index.insert(1,'<img src="./book6logo.png" width="200px" height="auto"/>\n')
+index.insert(2,"This index was created automatically, so it's dumb. ")
+index.insert(3,"It is not case-sensitive. ")
+index.insert(4,'It has links to each section that mentions each keyword.\n')
+index.insert(5,link_warn)     
 wf("Index.md", index)          
            
              
