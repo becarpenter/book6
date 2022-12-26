@@ -1,12 +1,12 @@
 # book6 index terms
 
-# One line per term to be indexed.
+# One line per term to be indexed. No need to alphabetize.
 
-# starts with '#' - comment, ignored
+# line starts with '#' - comment, ignored
 # blank line - ignored
 # case insensitive
 # terms are terminated by blank or newline
-# abc abcd xyzq - all are indexed as 'abc'
+# abcd abcde abcd-e - all are indexed as a single term 'abcd'
 # 'link local' - treated as a phrase. Use only once per line!
 
 address addresses addressing
@@ -18,5 +18,13 @@ link-local 'link local' link-locals
 IID
 IPv4
 coexistence co-existence
-BGP BGP4 BGP-4
+BGP BGP4 BGP-4 IBGP
 OSPF OSPFv3
+IS-IS
+RIPng
+RPL
+Babel
+SLAAC
+DHCP DHCPv6
+prefix DHCPv6-PD
+IANA

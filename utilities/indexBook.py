@@ -164,7 +164,7 @@ def indexable(word):
     return None
 
 link_warn = "<!-- Link lines generated automatically; do not delete -->\n"
-blob = '[●'
+blob = '●'
 
 ######### Startup
 
@@ -253,9 +253,10 @@ for i in range(len(index)):
     head = index[i].split("]")[0]
     if head != same:
         index[i-1] += "\n"
+        index[i] = index[i].replace(head, head+' '+blob)
         same = head
     else:
-        index[i] = index[i].replace(head, blob)
+        index[i] = index[i].replace(head, '['+blob)
 
 index.insert(0,'# book6 Main Index\n')
 index.insert(1,"This index was created automatically, so it's dumb. ")
