@@ -16,3 +16,7 @@ anycast
 link-local 'link local' link-locals
 'dual stack'
 IID
+IPv4
+coexistence co-existence
+BGP BGP4 BGP-4
+OSPF

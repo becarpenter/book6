@@ -4,6 +4,7 @@
 """Build a book6 index"""
 
 # Version: 2022-12-26 - original
+# Version: 2022-12-27 - cosmetic improvements
 
 
 ########################################################
@@ -105,10 +106,15 @@ def uncase(l):
     return u
 
 specials = ('-','$')    #characters allowed in index terms (as well as letters and digits)
+ignores = ('and', 'the', 'but', 'for', 'not', 'are', 'all', 'new', 'was', 'can', 'may', 'one',
+           'two', 'has', 'out', 'use', 'any', 'see', 'now', 'get', 'how', 'its', 'top', 'had',
+           'that', 'then')
 
 def good(word):
     """Is the word useful?"""
-    return len(word)>3 and not word[0].isdigit()
+    if word in ignores:
+        return False
+    return len(word)>2 and not word[0].isdigit()
 
 def exwords(target):
     """Return list of words in a target list of strings"""
@@ -158,6 +164,7 @@ def indexable(word):
     return None
 
 link_warn = "<!-- Link lines generated automatically; do not delete -->\n"
+blob = '[●'
 
 ######### Startup
 
@@ -247,11 +254,14 @@ for i in range(len(index)):
     if head != same:
         index[i-1] += "\n"
         same = head
+    else:
+        index[i] = index[i].replace(head, blob)
 
 index.insert(0,'# book6 Main Index\n')
 index.insert(1,"This index was created automatically, so it's dumb. ")
-index.insert(2,'It has links to each section that mentions each keyword.\n')
-index.insert(3,link_warn)     
+index.insert(2,"It is not case-sensitive. ")
+index.insert(3,'It has links to each section that mentions each keyword.\n')
+index.insert(4,link_warn)     
 wf("Index.md", index)          
            
              
