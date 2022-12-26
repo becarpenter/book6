@@ -11,6 +11,8 @@ You are welcome to obtain a printed copy at cost price, but be aware that the bo
 The [list of contents](https://github.com/becarpenter/book6/blob/main/Contents.md)
 should act as an on-line guide to the topics covered.
 Most readers will probably not read from cover to cover. Design your own path through
-the book. 
+the book.
+
+There is also an [index](https://github.com/becarpenter/book6/blob/main/Index.md).
 
 ### [<ins>Previous</ins>](Foreword.md) [<ins>Next</ins>](How%20a%20user%20sees%20IPv6.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
