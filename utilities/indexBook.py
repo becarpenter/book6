@@ -209,14 +209,15 @@ split_terms = []
 for t in raw_terms:
             
     if t.strip() and not t.strip().startswith("#"):
-        if "'" in t:
+        while "'" in t:
             #hack to combine multi-word terms
-            head, split_term, tail = t.split("'")
-            split_terms.append(split_term)
+            head, split_term, tail = t.split("'", maxsplit=2)
+            split_terms.append(split_term.lower())
             t = head+split_term.replace(" ","$")+tail
         index_terms.append(t.strip())
         
 dprint("Index terms:", index_terms)
+dprint("Split terms:", split_terms)
 
 ######### Create empty index
 index = []

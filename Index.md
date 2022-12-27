@@ -124,6 +124,11 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 
+[MAC address ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+
 [MLD ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 
@@ -167,13 +172,18 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [QUIC ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
+[RA messages ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./2.%20IPv6%20Basic%20Technology/DNS.md)
+[●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+[●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
 [RIPng ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
 [route ●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
 [●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
-[●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 [●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
