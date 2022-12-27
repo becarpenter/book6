@@ -31,7 +31,7 @@ There is also an [index](https://github.com/becarpenter/book6/blob/main/Index.md
 * Traffic class and flow label
 
 [3. Coexistence with Legacy IPv4](3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
-* Dual stacks
+* Dual stack scenarios
 * Tunnels
 * Translation
 * Obsolete techniques

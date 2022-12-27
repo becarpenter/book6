@@ -1,6 +1,10 @@
-## Dual stacks
+## Dual stack scenarios
 
-Dual-Stack was originally described (along with basic tunneling) in [RFC4213](https://www.rfc-editor.org/rfc/rfc4213). It appears to be currently the most widely deployed IPv6 solution (about 50%, see the statistics reported in [ETSI-IP6-WhitePaper](https://www.etsi.org/images/files/ETSIWhitePapers/etsi_WP35_IPv6_Best_Practices_Benefits_Transition_Challenges_and_the_Way_Forward.pdf)).
+We must distinguish the original model of dual stack deployment from the new concept of presenting a dual stack to the upper layer protocols while providing IPv4 as a *service* over an IPv6 infrastructure.
+
+### Original dual stack model
+
+Dual-Stack was originally described (along with basic tunneling) in [RFC4213](https://www.rfc-editor.org/rfc/rfc4213). In 2020, it appeared to be the most widely deployed IPv6 solution (about 50%, see the statistics reported in [ETSI-IP6-WhitePaper](https://www.etsi.org/images/files/ETSIWhitePapers/etsi_WP35_IPv6_Best_Practices_Benefits_Transition_Challenges_and_the_Way_Forward.pdf)).
 
 In a classical dual stack deployment, packets on the link are either native IPv6 or native IPv4. All routers support IPv6 and IPv4 simultaneously, with separate routing tables: this is known as "ships in the night".
 
@@ -12,13 +16,17 @@ only a signal shown, and a distant voice in the darkness
 
 Today, the core of the Internet - all the major international transit providers and all major Internet Exchange Points - support dual stack routing. So do many local ISPs.
 
-Also, all hosts in a dual stack network should support IPv6 and IPv4 simultaneously, with IPv6 preferred. Such a deployment can tolerate the presence of legacy IPv4-only hosts and applications, and can reach external IPv4-only services, with no special arrangements.
+Also, all hosts in a dual stack network should support IPv6 and IPv4 simultaneously, with IPv6 preferred. Such a deployment can tolerate the presence of legacy IPv4-only hosts and applications, and can reach external IPv4-only services, with no special arrangements. An essential part of this model is that applications using the network see a version of the socket API that intrinsically supports both IPv4 and IPv6. Thus, \[[RFC3542](https://www.rfc-editor.org/info/rfc3542)] introduced a dual-stack API, including the important ```getaddrinfo()``` ("get address information") function, which has since been adopted by both POSIX and Windows operating systems. 
 
 [RFC8305](https://www.rfc-editor.org/info/rfc8305) explains the "Happy Eyeballs" technique for applications seeking to optimize dual-stack performance.
    
 With Dual-Stack, IPv6 can be introduced together with other network upgrades and many parts of network management and Information Technology (IT) systems can still work in IPv4. As a matter of fact, IPv4 reachability can be provided for a long time and most Internet Service Providers (ISPs) are leveraging Carrier-Grade NAT (CGN, [RFC6888](https://www.rfc-editor.org/info/rfc6888)) to extend the life of IPv4. However, large ISPs have discovered the scaling limits and operational costs of CGN.
    
-Although Dual-Stack provides advantages in the initial phase of deployment, it has some disadvantages in the long run, like the duplication of network resources and states. It also requires more IPv4 addresses, thus increasing both Capital Expenses (CAPEX) and Operating Expenses (OPEX). To be clear, a network (whether a home network or an office network) can today work very smoothly with every host having both an IPv4 address and an IPv6 address, and using whichever works best for a particular application. However, globally unique IPv4 addresses are now scarce and have signifcant commercial value. Indeed, even if private IPv4 addresses are used with CGN, global IPv4 addresses for the CGN systems must be paid for by somebody.
+Although Dual-Stack provides advantages in the initial phase of deployment, it has some disadvantages in the long run, like the duplication of network resources and states. It also requires more IPv4 addresses, thus increasing both Capital Expenses (CAPEX) and Operating Expenses (OPEX). To be clear, a network (whether a home network or an office network) can today work very smoothly with every host having both an IPv4 address and an IPv6 address, and using whichever works best for a particular application. 
+
+### The need for IPv4 as a service
+
+Globally unique IPv4 addresses are now scarce and have signifcant commercial value. Indeed, even if private IPv4 addresses are used with CGN, global IPv4 addresses for the CGN systems must be paid for by somebody.
    
 For this reason, when IPv6 usage exceeds a certain threshold, it may be advantageous to start a transition to a next phase and move to a more advanced IPv6 deployment, also referred to as IPv6-only. To be clear, that does not mean removing access to IPv4-only resources. Some method of access to IPv4 resources must be retained, as the primary network infrastructure is switched from a dual stack. In effect the *application layer* in a host will still see a dual stack environment, even if the packets on the link are no longer a mixture of native IPv6 and native IPv4.
 

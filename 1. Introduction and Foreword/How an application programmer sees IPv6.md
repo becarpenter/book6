@@ -8,8 +8,8 @@ that simple. Even without considering the version number, there are
 several types of IP address, and a DNS lookup may return a variety
 of addresses. In most cases, applications will use the function
 ```getaddrinfo()``` ("get address information") to obtain
-a list of valid addresses. Which is
-the best one to use, and should the program try more than one?
+a list of valid addresses, typically containing both IPv6 and IPv4
+addresses. Which is the best one to use, and should the program try more than one?
 
 We do not go into this subject in detail, because this book is
 not aimed primarily at application programmers. However, operators
@@ -23,6 +23,7 @@ systems optimally, including the ```getaddrinfo()``` precedence
 table ([RFC6724](https://www.rfc-editor.org/info/rfc6724)) in every host.
 
 Address types are discussed further in [2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md).
+How applications relate to a mixture of IPv4 and IPv6 addresses is also discussed in [3. Dual stack scenarios](../3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md).
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](How%20a%20user%20sees%20IPv6.md) [<ins>Next</ins>](How%20a%20network%20operations%20center%20sees%20IPv6.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)

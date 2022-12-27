@@ -14,7 +14,7 @@ route routes router routers routing routeing
 multicast multicasting
 anycast
 link-local 'link local' link-locals
-'dual stack'
+'dual stack' dual-stack
 IID
 IPv4
 coexistence co-existence
@@ -54,3 +54,5 @@ MPTCP
 NAT
 STUN
 ECN
+CGN
+getaddrinfo
