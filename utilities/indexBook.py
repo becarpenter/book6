@@ -85,7 +85,7 @@ def rf(f):
     file = open(f, "r",encoding='utf-8', errors='replace')
     l = file.readlines()
     file.close()
-    return uncase(l)
+    return l
 
 
 def wf(f,l):
@@ -120,6 +120,7 @@ def exwords(target):
     """Return list of words in a target list of strings"""
     words = []
     for line in target:
+        line = line.lower()
         if line.strip().startswith('<!--') or line.strip().endswith('-->'):
             continue #best effort to remove XML comments
         if line.startswith('## [') or line.startswith('### ['):
@@ -159,7 +160,7 @@ def indexable(word):
     for i in range(len(index_terms)):
         terms = index_terms[i].split(' ')
         for term in terms:
-            if word == term:
+            if word == term.lower():
                 return index_terms[i]
     return None
 
@@ -245,7 +246,7 @@ for path, subdirs, files in os.walk('.'):
                         if not cite in index:
                             index.append(cite)
                 
-index.sort()
+index = sorted(index, key=str.casefold)
 
 same = None
 
