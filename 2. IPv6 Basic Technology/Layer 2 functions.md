@@ -12,7 +12,7 @@ Interestingly, there is *no* IPv6-over-WiFi document; IPv6 relies on WiFi comple
 
 A consequence of the Ethernet legacy frame size of 1500 bytes is that the Internet-wide required minimum transmission unit size (MTU) for IPv6 is set at **1280 bytes** (reduced from 1500 to allow for possible encapsulation overhead). Therefore, *any* IPv6-over-foo mechanism **MUST** provide at least this MTU, and this applies to every adaptation layer.
 
-IPv6 can be transmitted over PPP (Point-to-Point Protocol) links \[[RFC5072](https://www.rfc-editor.org/info/rfc5072), [RFC5172](https://www.rfc-editor.org/info/rfc5172)]. Similarly, it can be transmitted using GRE (Generic Routing Encapsulation, [RFC7676](https://www.rfc-editor.org/info/rfc7676).
+IPv6 can be transmitted over PPP (Point-to-Point Protocol) links \[[RFC5072](https://www.rfc-editor.org/info/rfc5072), [RFC5172](https://www.rfc-editor.org/info/rfc5172)]. Similarly, it can be transmitted using GRE (Generic Routing Encapsulation, [RFC7676](https://www.rfc-editor.org/info/rfc7676)).
 
 IPv6 can also be transmitted over MPLS infrastructure \[[RFC4029](https://www.rfc-editor.org/info/rfc4029)]. This is a complex topic that is hard to summarize. A common solution is to connect IPv6 networks over IPv4 MPLS via IPv6 Provider Edge routers (6PE) \[[RFC4798](https://www.rfc-editor.org/info/rfc4798)]. Interested readers can study a 125 page [NANOG tutorial](https://pc.nanog.org/static/published/meetings/NANOG76/1993/20190612_Agahian_Demystifying_Ipv6_Over_v1.pdf).
 
