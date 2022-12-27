@@ -30,4 +30,27 @@ prefix DHCPv6-PD
 IANA
 ARP
 broadcast
-wireless Wi-Fi
+wireless Wi-Fi WiFi
+GRE
+PPP
+MPLS
+MTU
+Ethertype
+MLD
+'MAC address'
+GUA
+ULA
+PIO
+DAD
+ICMPv6 ICMP
+'RA messages'
+DNS
+UDP
+TCP
+RTP
+QUIC
+SCTP
+MPTCP
+NAT
+STUN
+ECN
