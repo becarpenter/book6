@@ -31,7 +31,7 @@ The third point in the approach above may be implemented based on five technolog
 The following figure illustrates such a scenario.
 <img src="./vasilenko-IPv4aaS.svg" width="auto" height="auto"/>
 
-464XLAN is a popular translation technology now because it has a natural synergy with NAT64 (which is highly desirable by itself) and because it is the only solution supported on mobile devices. The centralized NAT64 engine is called PLAT, it is the same \[[RFC 6146](https://www.rfc-editor.org/info/rfc6146)] as for ordinary NAT64. The client side is called CLAT, it is typically a stateless NAT46 translation \[[RFC 7915](https://www.rfc-editor.org/info/rfc7915)].
+464XLAT is a popular translation technology now because it has a natural synergy with NAT64 (which is highly desirable by itself) and because it is the only solution supported on mobile devices. The centralized NAT64 engine is called PLAT, it is the same \[[RFC 6146](https://www.rfc-editor.org/info/rfc6146)] as for ordinary NAT64. The client side is called CLAT, it is typically a stateless NAT46 translation \[[RFC 7915](https://www.rfc-editor.org/info/rfc7915)].
 
 DS-Lite was the most popular technology for historical reasons.
 

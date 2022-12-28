@@ -5,6 +5,7 @@
 
 # Version: 2022-12-26 - original
 # Version: 2022-12-27 - cosmetic improvements
+# Version: 2022-12-28 - allow keywords starting with digit
 
 
 ########################################################
@@ -114,7 +115,7 @@ def good(word):
     """Is the word useful?"""
     if word in ignores:
         return False
-    return len(word)>2 and not word[0].isdigit()
+    return len(word)>2
 
 def exwords(target):
     """Return list of words in a target list of strings"""

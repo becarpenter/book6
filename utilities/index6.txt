@@ -45,6 +45,7 @@ DAD
 ICMPv6 ICMP
 'RA messages' 'RA message' 'router advertisement' 'router advertisements'
 DNS
+DNS64
 UDP
 TCP
 RTP
@@ -56,3 +57,9 @@ STUN
 ECN
 CGN
 getaddrinfo
+tunnel tunnels
+encapsulation
+NAT64
+NAT66
+NPTv6
+NAT464 464XLAT
