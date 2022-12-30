@@ -1,8 +1,14 @@
 # book6 Main Index
 <img src="./book6logo.png" width="200px" height="auto"/>
 
+Generated at 2022-12-30 14:18:47 UTC+1300
+
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
+[6PE ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
+[6to4 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
 [address ●](./1.%20Introduction%20and%20Foreword/How%20a%20user%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
@@ -48,6 +54,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [coexistence ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [DAD ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
@@ -68,7 +75,12 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 [●](./5.%20Deployment/Deployment%20in%20the%20enterprise.md)
+
+[DS-Lite ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [dual stack ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
@@ -83,6 +95,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [encapsulation ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [Ethertype ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
@@ -92,6 +105,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 
 [GRE ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [GUA ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
@@ -107,6 +121,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [ICMPv6 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 [●](./4.%20Security/Filtering.md)
 
 [IID ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -142,10 +157,14 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 
+[Lw6o4 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
 [MAC address ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+
+[MAP ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 
 [MLD ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
@@ -257,6 +276,8 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 [●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
+[Teredo ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
 [tunnel ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 [●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
@@ -274,6 +295,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [ULA ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 [●](./4.%20Security/Filtering.md)
 
 [wireless ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)

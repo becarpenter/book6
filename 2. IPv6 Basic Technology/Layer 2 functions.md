@@ -14,7 +14,7 @@ A consequence of the Ethernet legacy frame size of 1500 bytes is that the Intern
 
 IPv6 can be transmitted over PPP (Point-to-Point Protocol) links \[[RFC5072](https://www.rfc-editor.org/info/rfc5072), [RFC5172](https://www.rfc-editor.org/info/rfc5172)]. Similarly, it can be transmitted using GRE (Generic Routing Encapsulation, [RFC7676](https://www.rfc-editor.org/info/rfc7676)).
 
-IPv6 can also be transmitted over MPLS infrastructure \[[RFC4029](https://www.rfc-editor.org/info/rfc4029)]. This is a complex topic that is hard to summarize. A common solution is to connect IPv6 networks over IPv4 MPLS via IPv6 Provider Edge routers (6PE) \[[RFC4798](https://www.rfc-editor.org/info/rfc4798)]. Interested readers can study a 125 page [NANOG tutorial](https://pc.nanog.org/static/published/meetings/NANOG76/1993/20190612_Agahian_Demystifying_Ipv6_Over_v1.pdf).
+IPv6 can also be transmitted over MPLS infrastructure \[[RFC4029](https://www.rfc-editor.org/info/rfc4029)]. Further details can be found in \[[3. Tunnels](../3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)].
 
 Mapping IPv6 to mesh networks, which have no native support for multicast and no simple model of a shared link like Ethernet, is rather different. [RFC9119](https://www.rfc-editor.org/info/rfc9119) is relevant here too, and [RFC8376](https://www.rfc-editor.org/info/rfc8376) provides general background on the challenges involved. Operational experience is limited today and best practices are not yet established.
 

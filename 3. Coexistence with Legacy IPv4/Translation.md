@@ -2,49 +2,58 @@
 
 *Editor's comment: this section is under active development...*
 
-*Aide-memoire:*
+When an operator wants to reduce infrastructure costs by running a single protocol, IPv6, instead of a dual stack, the strategic approach is to minimize IPv4 presence in the network. Unfortunately, some resources are available only on IPv4 and some client applications may *require* IPv4. Hence, a pure IPv6-only
+environment is unrealistic for the foreseeable future. In some situations, tunneling (as described above) is sufficient, but in others translation between IPv6 and IPv4 is unavoidable. For example, when providing IPv4 as a Service (IPv4aaS), a typical scenario will:
 
-- NAT64
-    - DNS64
-- 464XLAT
-    - RFC6877 
-    - CLAT
-    - PLAT
-- NPTv6
-- NAT66
+1. Let IPv6 native traffic flow directly between the client and the server,
+2. Translate by centralized NAT64 the traffic of local IPv6 clients to remote IPv4-only servers,
+3. Encapsulate literal IPv4 address requests into IPv6 on the client then decapsulate and translate it on the centralized NAT to access the IPv4 server.
 
-When an operator wants to reduce costs by running a single protocol, IPv6, instead of a dual stack,
-the strategic approach is to minimize IPv4 presence in the network. Unfortunately, some resources are available only on IPv4 and some client applications may *require* IPv4. Hence, a pure IPv6-only
-environment is unrealistic: translation between IPv6 and IPv4, or tunneling, is unavoidable
-for the majority of environments.
+### Terminology
 
-The most popular approach is named IPv4 as a Service (IPv4aaS):
--	Let IPv6 native traffic flow directly between the client and the server,
--	Translate by centralized NAT64 the traffic of local IPv6 clients to remote IPv4-only servers,
--	Encapsulate literal IPv4 address requests into IPv6 on the client then decapsulate and translate it on the centralized NAT to access the IPv4 server.
+- SIIT (Stateless IP/ICMP Translation Algorithm). This is also known simply as "IP/ICMP Translation Algorithm" \[[RFC7915](https://www.rfc-editor.org/info/rfc7915)], \[[RFC6144](https://www.rfc-editor.org/info/rfc6144)]. It translates IPv4 packets to IPv6 format and the opposite. Note that translation is limited to basic functionality, and does not translate any IPv4 options or any IPv6 extension headers except the Fragment Header. Technically the mechanism is stateless (i.e., it relies on no stored information) but in practice it is used as part of stateful mechanisms.
 
-The second point in the approach above evidently needs stateful NAT64 \[[RFC 6146](https://www.rfc-editor.org/info/rfc6146)]. Additionally, the client should be pushed to start such a cross-protocol connection. For this, the client should be misled that the server is available on the IPv6 Internet. DNS64 \[[RFC 6147](https://www.rfc-editor.org/info/rfc6147)] is needed on the ISP side to synthesize the IPv6 address out of IPv4 (just adding the static prefix).
+- NAT64 is SIIT with address translation between IPv6 clients and IPv4 servers.
+    - [RFC6146](https://www.rfc-editor.org/info/rfc6146) defines *stateful* NAT64, which (like IPv4 NAT) includes port translation and supports two-way transport sessions.
+    - DNS64 \[[RFC6147](https://www.rfc-editor.org/info/rfc6147)] supports DNS extensions for clients of stateful NAT64.
 
-The third point in the approach above may be implemented based on five technologies: 464XLAT \[[RFC 6877](https://www.rfc-editor.org/info/rfc6877)], DS-Lite \[[RFC 6333](https://www.rfc-editor.org/info/rfc6333)], lw4o6 \[[RFC 7596](https://www.rfc-editor.org/info/rfc7596)], MAP E/T \[[RFC 7597](https://www.rfc-editor.org/info/rfc7597)], \[[RFC 7599](https://www.rfc-editor.org/info/rfc7599)].
+- 464XLAT (Combination of Stateful and Stateless Translation) \[[RFC6877](https://www.rfc-editor.org/info/rfc6877)] is SIIT plus address translation *from* IPv4 clients to IPv6 transport and *back to* IPv4 servers.
+    - CLAT is the client side translator in 464XLAT.
+    - PLAT is the provider side translator in 464XLAT.
+
+- The final two items have nothing to do with IPv6/IPv4 co-existence but are included here for completeness:
+
+ - NPTv6 (IPv6-to-IPv6 Network Prefix Translation) is an *experimental* technique \[[RFC6296](https://www.rfc-editor.org/info/rfc6296)] whose applicability is debated. In principle it would, for example, allow a site using ULA addresses \[[2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md)] to communicate with global IPv6 addresses, but with some of the disadvantages of classical IPv4 NAT.
+
+ - NAT66 is not defined by the IETF and, given the vast supply of IPv6 addresses, is not generally considered useful enough to overcome its disadvantages, which it shares with classical IPv4 NAT \[[RFC5902](https://www.rfc-editor.org/info/rfc5902)].
+
+### Further details
+
+Point 2 listed above evidently needs stateful NAT64 \[[RFC 6146](https://www.rfc-editor.org/info/rfc6146)]. Additionally, the client must be triggered to start such a cross-protocol connection. For this, the client should be convinced that the server is available on the IPv6 Internet. DNS64 \[[RFC 6147](https://www.rfc-editor.org/info/rfc6147)] is needed on the ISP side to synthesize the IPv6 address out of IPv4 (by adding a particular static prefix). When the client asks for ```www.example.net``` (which only has an A record in the global DNS), DNS64 will synthesize and return an AAAA record.
+
+Point 3 above may be implemented based on five technologies:
+
+- 464XLAT (Combination of Stateful and Stateless Translation) \[[RFC 6877](https://www.rfc-editor.org/info/rfc6877)]
+- DS-Lite (Dual-Stack Lite) \[[RFC 6333](https://www.rfc-editor.org/info/rfc6333)]
+- lw4o6 (Lightweight 4over6) \[[RFC 7596](https://www.rfc-editor.org/info/rfc7596)]
+- MAP E (Mapping of Address and Port with Encapsulation) \[[RFC 7597](https://www.rfc-editor.org/info/rfc7597)]
+- MAP T (Mapping of Address and Port using Translation) \[[RFC 7599](https://www.rfc-editor.org/info/rfc7599)].
+
 [RFC 9313](https://www.rfc-editor.org/info/rfc9313) has a good overview and comparison of these technologies.
 
 The following figure illustrates such a scenario.
 <img src="./vasilenko-IPv4aaS.svg" width="auto" height="auto"/>
 
-464XLAT is a popular translation technology now because it has a natural synergy with NAT64 (which is highly desirable by itself) and because it is the only solution supported on mobile devices. The centralized NAT64 engine is called PLAT, it is the same \[[RFC 6146](https://www.rfc-editor.org/info/rfc6146)] as for ordinary NAT64. The client side is called CLAT, it is typically a stateless NAT46 translation \[[RFC 7915](https://www.rfc-editor.org/info/rfc7915)].
+- 464XLAT is a popular translation technology now because it has a natural synergy with NAT64 (which is highly desirable by itself) and because it is the only solution supported on mobile devices. The centralized NAT64 engine is called PLAT, and is the same \[[RFC 6146](https://www.rfc-editor.org/info/rfc6146)] as for ordinary NAT64. The client side is called CLAT, and is typically a stateless NAT46 translation \[[RFC 7915](https://www.rfc-editor.org/info/rfc7915)].
 
-DS-Lite was the most popular technology for historical reasons.
+- DS-Lite was the most popular technology for a considerable period of time.
 
-Lw6o4 has not gained considerable market adoption.
+- Lw6o4 has not gained significant market adoption.
 
-Technically, MAP-E/T is stateless with many related advantages: no need for logs, possible to implement on routers. But MAP needs rather big IPv4 address space to be reserved for all clients (even disconnected) and MAP is not available by default on the majority of Mobile OSes. As a result, MAP has a small market share.
+- Technically, MAP-E/T is stateless with many related advantages: no need for logs, possible to implement on routers. But MAP needs a rather big IPv4 address space to be reserved for all clients (even when disconnected) and MAP is not available by default on the majority of Mobile OSes. As a result, MAP has a small market share.
 
-Network Prefix Translation (NPT) \[[RFC 6296](https://www.rfc-editor.org/info/rfc6296)] is a special technology available only in IPv6. It exchanges prefixes between “inside” and “outside” of the engine and modifies algorithmically the IID. IID change is implemented to compensate transport layer checksum change that did happen because of the prefix change. Hence, it is transparent for all transport layer protocols.
-The principal difference between NPT and ordinary NAT is that it permits connection initiation in both directions. Albeit, it is not fully transparent for applications that embed IP addresses at high layers (so-called “referrals”). Hence, it may not be considered end-to-end transparent.
+Network Prefix Translation (NPT) \[[RFC 6296](https://www.rfc-editor.org/info/rfc6296)] is a special technology available only in IPv6. It exchanges prefixes between “inside” and “outside” of the translation engine and modifies the IID. The IID is changed so as preserve the transport layer checksum despite the prefix change. Hence, it is transparent for all transport layer protocols. The principal difference between NPT and classical NAT is that it permits connection initiation in both directions. However, it is not fully transparent for applications that embed IP addresses at high layers (so-called “referrals”). Hence, it may not be considered end-to-end transparent.
 
-NAT66 breaks end-to-end transparency which is considered the primary IPv6 technical advantage over IPv4. IAB has thoroughly discussed many NAT66 problems in [RFC 5902](https://www.rfc-editor.org/info/rfc5902) and then decided not to standardize NAT66. It is in general the IETF consensus supported by the majority of members.
-
-*Editorial note: we need to change the language here to avoid controversy.*
 
 
 <!-- Link lines generated automatically; do not delete -->

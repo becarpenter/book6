@@ -6,6 +6,7 @@
 # Version: 2022-12-26 - original
 # Version: 2022-12-27 - cosmetic improvements
 # Version: 2022-12-28 - allow keywords starting with digit
+# Version: 2022-12-30 - include timestaemp
 
 
 ########################################################
@@ -191,8 +192,8 @@ os.chdir(where)
 #Open log file
 
 flog = open("indexBook.log", "w",encoding='utf-8')
-logit("indexBook run at "
-      +time.strftime("%Y-%m-%d %H:%M:%S UTC%z",time.localtime()))
+timestamp = time.strftime("%Y-%m-%d %H:%M:%S UTC%z",time.localtime())
+logit("indexBook run at "+timestamp)
 
 logit("Running in directory "+ os.getcwd())
 
@@ -263,10 +264,11 @@ for i in range(len(index)):
 
 index.insert(0,'# book6 Main Index\n')
 index.insert(1,'<img src="./book6logo.png" width="200px" height="auto"/>\n\n')
-index.insert(2,"This index was created automatically, so it's dumb. ")
-index.insert(3,"It is not case-sensitive. ")
-index.insert(4,'It has links to each section that mentions each keyword.\n')
-index.insert(5,link_warn)     
+index.insert(2,"Generated at "+timestamp+"\n\n")
+index.insert(3,"This index was created automatically, so it's dumb. ")
+index.insert(4,"It is not case-sensitive. ")
+index.insert(5,'It has links to each section that mentions each keyword.\n')
+index.insert(6,link_warn)     
 wf("Index.md", index)          
            
              
