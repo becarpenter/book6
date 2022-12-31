@@ -48,7 +48,7 @@ The following figure illustrates such a scenario.
 
 - Lw6o4 has not gained significant market adoption.
 
-- Technically, MAP-E amd MAP-T are stateless with significant related advantages: no need for logs, possible to implement on routers. But MAP needs a rather big IPv4 address space to be reserved for all clients (even when disconnected) and MAP is not available by default on the majority of Mobile OSes. As a result, MAP has a small market share.
+- Technically, MAP-E and MAP-T are stateless with significant related advantages: no need for logs, possible to implement on routers. But MAP needs a rather big IPv4 address space to be reserved for all clients (even when disconnected) and MAP is not available by default on the majority of Mobile OSes. As a result, MAP has a small market share.
 
 Network Prefix Translation (NPTv6) \[[RFC 6296](https://www.rfc-editor.org/info/rfc6296)] is a special technology available only in IPv6. It exchanges prefixes between “inside” (private network) and “outside” (public network) of the translation engine and modifies the IID. The IID is changed so as preserve the transport layer checksum despite the prefix change. Hence, it is transparent for all transport layer protocols. In principle it would, for example, allow a site using ULA addresses \[[2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md)] to communicate with global IPv6 addresses, but with some of the disadvantages of classical IPv4 NAT. The principal difference between NPTv6 and classical NAT is that it permits connection initiation in both directions. However, it is not fully transparent for applications that embed IP addresses at high layers (so-called “referrals”). Hence, it cannot be considered end-to-end transparent.
 
