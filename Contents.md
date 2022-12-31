@@ -1,7 +1,6 @@
 # book6: A Collaborative IPv6 Book.
 <img src="./book6logo.png" width="200px" height="auto"/>
 This is the current list of contents. It will change as the book evolves.
-
 There is also an [index](https://github.com/becarpenter/book6/blob/main/Index.md).
 
 # List of Contents
@@ -48,6 +47,12 @@ There is also an [index](https://github.com/becarpenter/book6/blob/main/Index.md
 * Deployment in the enterprise
 
 [6. Management and Operations](6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
+* Address planning and management
+* Remote configuration
+* Benchmarking and monitoring
+* Routing operation
+* Security operation
+* Multi-prefix operation
 
 [7. Case Studies](7.%20Case%20Studies/7.%20Case%20Studies.md)
 

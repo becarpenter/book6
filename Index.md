@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" width="200px" height="auto"/>
 
-Generated at 2022-12-30 14:18:47 UTC+1300
+Generated at 2022-12-31 15:24:21 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
@@ -31,6 +31,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./5.%20Deployment/Deployment%20by%20carriers.md)
 [●](./5.%20Deployment/Deployment%20in%20the%20enterprise.md)
+[●](./6.%20Management%20and%20Operations/Address%20planning%20and%20management.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
 
 [anycast ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -253,6 +254,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./5.%20Deployment/Deployment%20by%20carriers.md)
 [●](./5.%20Deployment/Deployment%20in%20the%20enterprise.md)
+[●](./6.%20Management%20and%20Operations/Routing%20operation.md)
 [●](./8.%20Further%20Reading/8.%20Further%20Reading.md)
 
 [RPL ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
