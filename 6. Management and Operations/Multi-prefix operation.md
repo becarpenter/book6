@@ -8,8 +8,8 @@ Here is an illustrative example. Suppose provider X has obtained the prefix ```2
 
 (To make the example more legible, we have not used randomized IID values.)
 
-*Intend to insert diagram here*
-
+The following diagram shows the example:
+<img src="./multiPrefix.svg">
 If, for some reason, there is more than one subnet router on the subnet, the host can be informed which one to use as suggested in [RFC8028](https://www.rfc-editor.org/info/rfc8028).
 
 In normal circumstances, it isn't hard to configure routing so that traffic from ```2001:db8:abcd:0101::abc1``` exits the site towards ISP X, and traffic from ```2001:db8:b123:0101::def2``` exits towards ISP Y. A suitable source routing rule in the subnet router will do it. But what happens if the link to ISP X goes down? Presumably the reason for having two ISP connections is precisely for backup.
