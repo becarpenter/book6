@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" width="200px" height="auto"/>
 
-Generated at 2022-12-31 15:24:21 UTC+1300
+Generated at 2023-01-01 15:55:29 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
@@ -32,6 +32,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./5.%20Deployment/Deployment%20by%20carriers.md)
 [●](./5.%20Deployment/Deployment%20in%20the%20enterprise.md)
 [●](./6.%20Management%20and%20Operations/Address%20planning%20and%20management.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
 
 [anycast ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -44,6 +45,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [BGP ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./4.%20Security/Filtering.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./8.%20Further%20Reading/8.%20Further%20Reading.md)
 
 [broadcast ●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
@@ -68,6 +70,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [DNS64 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 
@@ -78,6 +81,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 [●](./5.%20Deployment/Deployment%20in%20the%20enterprise.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [DS-Lite ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
@@ -111,6 +115,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [GUA ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [IANA ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
@@ -128,6 +133,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [IID ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [IPv4 ●](./1.%20Introduction%20and%20Foreword/How%20a%20network%20operations%20center%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
@@ -150,6 +156,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./5.%20Deployment/Deployment%20by%20carriers.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./8.%20Further%20Reading/8.%20Further%20Reading.md)
 
 [IS-IS ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
@@ -157,6 +164,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [link-local ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [Lw6o4 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 
@@ -224,6 +232,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [QUIC ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
@@ -254,6 +263,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./5.%20Deployment/Deployment%20by%20carriers.md)
 [●](./5.%20Deployment/Deployment%20in%20the%20enterprise.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./6.%20Management%20and%20Operations/Routing%20operation.md)
 [●](./8.%20Further%20Reading/8.%20Further%20Reading.md)
 
@@ -270,6 +280,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [STUN ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
@@ -299,6 +310,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 [●](./4.%20Security/Filtering.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [wireless ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
@@ -308,4 +320,5 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./5.%20Deployment/Deployment%20by%20carriers.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
