@@ -42,7 +42,7 @@ Point 3 above may be implemented (in addition to points 1 and 2) by various tech
 [RFC 9313](https://www.rfc-editor.org/info/rfc9313) has a good overview and comparison of these technologies.
 
 The following figure illustrates such a scenario.
-<img src="./vasilenko-IPv4aaS.svg" width="auto" height="auto"/>
+<img src="./vasilenko-IPv4aaS.svg" alt="User devices connected to Internet via IPv6 infrastructure" width="auto" height="auto"/>
 
 - 464XLAT is the widely preferred translation technology now because it has a natural synergy with NAT64 (which is highly desirable by itself) and because it is the only solution supported on mobile devices. The centralized NAT64 engine is called PLAT, and is the same \[[RFC 6146](https://www.rfc-editor.org/info/rfc6146)] as for ordinary NAT64. The client side is called CLAT, and is typically a stateless NAT46 translation \[[RFC 7915](https://www.rfc-editor.org/info/rfc7915)]. A good analysis of deployment considerations is in [RFC8683](https://www.rfc-editor.org/info/rfc8683), from which an operator might conclude *not* to implement DNS64, since IPv4 clients can simply use the normal DNS A records and the IPv4 service as if it was native.
 
