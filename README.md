@@ -1,4 +1,4 @@
-<img src="./book6logo.png" title="book6 logo" width="200px" height="auto">
+<img src="./book6logo.png" alt="book6 logo" width="200px" height="auto">
 
 A collaborative IPv6 book.
 

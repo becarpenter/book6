@@ -3,7 +3,7 @@
 All the organizations providing or using Internet connectivity services have an associated Autonous System Number (ASN).
 [APNIC](https://blog.apnic.net/2022/01/06/bgp-in-2021-the-bgp-table/) provides statistics on the evolution of IPv6 support across the ASNs in the world, as observed in the Internet routing tables.
 
-<img src="./Section5_Table2.jpg" title="Table shows 18% annual IPv6 growth 2018 to 2022">
+<img src="./Section5_Table2.jpg" alt="Table shows 18% annual IPv6 growth 2018 to 2022">
 
 The percentage of IPv6-capable ASNs is growing over the years, which is a good sign.
 On the other hand, the table does not allow to understand the degree of adoption across the different industries, that is whether the ASNs are associated to a carrier, a service provider or an entreprise.

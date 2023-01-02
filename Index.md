@@ -1,5 +1,5 @@
 # book6 Main Index
-<img src="./book6logo.png" title="book6 logo" width="200px" height="auto"/>
+<img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
 Generated at 2023-01-02 10:48:17 UTC+1300
 
