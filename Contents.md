@@ -1,5 +1,5 @@
 # book6: A Collaborative IPv6 Book.
-<img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
+<img src="./book6logo.png" title="book6 logo" width="200px" height="auto"/>
 This is the current list of contents. It will change as the book evolves.
 There is also an [index](https://github.com/becarpenter/book6/blob/main/Index.md).
 

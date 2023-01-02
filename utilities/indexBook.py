@@ -7,7 +7,7 @@
 # Version: 2022-12-27 - cosmetic improvements
 # Version: 2022-12-28 - allow keywords starting with digit
 # Version: 2022-12-30 - include timestamp
-# Version: 2023-01-02 - added alt text to logo
+# Version: 2023-01-02 - added title text to logo
 
 
 ########################################################
@@ -264,7 +264,7 @@ for i in range(len(index)):
         index[i] = index[i].replace(head, '['+blob)
 
 index.insert(0,'# book6 Main Index\n')
-index.insert(1,'<img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>\n\n')
+index.insert(1,'<img src="./book6logo.png" title="book6 logo" width="200px" height="auto"/>\n\n')
 index.insert(2,"Generated at "+timestamp+"\n\n")
 index.insert(3,"This index was created automatically, so it's dumb. ")
 index.insert(4,"It is not case-sensitive. ")

@@ -18,7 +18,7 @@ provides data measuring the number of hits to their content delivery platform.
 We have selected this latter statistic, as it comes from a Regional Internet Registry (RIR)
 to show the number of the Internet IPv6 users compared with the total Internet population (in million, see next table).
 
-<img src="./Section5_Table1.jpg" alt="Table shows 25% annual IPv6 growth 2018 to 2022">
+<img src="./Section5_Table1.jpg" title="Table shows 25% annual IPv6 growth 2018 to 2022">
 
 A third of the Internet population actually employs IPv6.
 It is also interesting to look at the growth curve. The main indicator here is
