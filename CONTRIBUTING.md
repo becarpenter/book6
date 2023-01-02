@@ -17,10 +17,10 @@ Note that contributions **MUST** be original writing unless the contributor has 
 
 If we use direct quotations from RFCs they **MUST** be small extracts that can be considered "fair use" as mentioned in the relevant [IETF Trust FAQ](https://trustee.ietf.org/about/faq/#reproducing-rfcs) under "Am I allowed to reproduce extracts from RFCs?" However, *modified* extracts from RFCs are not allowed.
 
-(For avoidance of doubt, if *you* personally are the copyright holder of original material, *you* may contribute it here under [LICENSE.md](LICENSE.md) even if it has also been contributed to an RFC.)
+(For avoidance of doubt, if *you* personally are the copyright holder of original material, *you* may contribute it here and modify it under [LICENSE.md](LICENSE.md) even if it has also been contributed to an RFC.)
 
 We will appoint two or three people as top-level editors who can declare consensus and approve PRs.
 
-The language is English, preferably US spelling. Please keep sentences reasonably short and simple. Avoid language that might be unclear for someone whose first language is not English. Avoid terminology that is inappropriate in professional writing. In case of doubt, please consider the [NIST guidance on inclusive language](https://doi.org/10.6028/NIST.IR.8366).
+The language is English, preferably US spelling. Please keep sentences reasonably short and simple. Avoid language that might be unclear for someone whose first language is not English. Avoid terminology that is inappropriate in professional writing. In case of doubt, please consider the [NIST guidance on inclusive language](https://doi.org/10.6028/NIST.IR.8366). If adding diagrams, please consider accessibility by the visually impaired and ensure that alternative text is provided.
 
 Any translation into other languages must be under the same open source license as the original version and must be available free of charge.
