@@ -18,6 +18,7 @@ environment is unrealistic for the foreseeable future. In some situations, tunne
 - 464XLAT (Combination of Stateful and Stateless Translation) \[[RFC6877](https://www.rfc-editor.org/info/rfc6877)] is SIIT plus address translation *from* IPv4 clients to IPv6 transport and *back to* IPv4 servers.
     - CLAT is the client side translator in 464XLAT.
     - PLAT is the provider side translator in 464XLAT.
+    - This is the only well-defined model of NAT464.
 
 - The final two items have nothing to do with IPv6/IPv4 co-existence but are included here for completeness:
 

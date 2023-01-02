@@ -8,6 +8,7 @@
 # Version: 2022-12-28 - allow keywords starting with digit
 # Version: 2022-12-30 - include timestamp
 # Version: 2023-01-02 - added alt text to logo
+# Version: 2023-01-03 - added Contents link at end of index
 
 
 ########################################################
@@ -269,7 +270,8 @@ index.insert(2,"Generated at "+timestamp+"\n\n")
 index.insert(3,"This index was created automatically, so it's dumb. ")
 index.insert(4,"It is not case-sensitive. ")
 index.insert(5,'It has links to each section that mentions each keyword.\n')
-index.insert(6,link_warn)     
+index.insert(6,link_warn)
+index.append("\n### [<ins>Back to main Contents</ins>](Contents.md)")
 wf("Index.md", index)          
            
              
