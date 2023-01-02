@@ -39,6 +39,7 @@ There is also an [index](https://github.com/becarpenter/book6/blob/main/Index.md
 [4. Security](4.%20Security/4.%20Security.md)
 * Layer 2 considerations
 * Filtering
+* Topology hiding
 
 [5. Deployment](5.%20Deployment/5.%20Deployment.md)
 * Status

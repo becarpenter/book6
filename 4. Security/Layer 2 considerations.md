@@ -21,7 +21,7 @@ At the same time, the IPv6 link address space is huge (2^64) by default. Hence, 
 ND heavily relies on multicast which may create problems in the wireless environment. See [2. Address resolution](../2.%20IPv6%20Basic%20Technology/Address%20resolution.md) and [Multicast efficiency]( https://datatracker.ietf.org/doc/html/draft-vyncke-6man-mcast-not-efficient-01). ND DoS activity may be effective for that reason but the attacker should be local to the link. Hence, perimeter security may help.
 The multicast storm is less of a problem in a wireline environment because of MLD snooping typically implemented on the link ([RFC 4541](https://www.rfc-editor.org/info/rfc4541)).
 
-IPv6 has a new feature that improves privacy. It is normal for an IPv6 host to have many IP addresses for the same interface. Some IP addresses may be used temporarily ([RFC 8981](https://www.rfc-editor.org/info/rfc8981)) which creates a challenge for intermediate Internet nodes to trace user activity.
+IPv6 has a new feature that improves privacy. It is normal for an IPv6 host to have many IP addresses for the same interface, often with unpredictable (pseudo-random) IID values. Some IP addresses may be used temporarily ([RFC 8981](https://www.rfc-editor.org/info/rfc8981)) which creates a challenge for intermediate Internet nodes to trace suspicious user activity, for the same reason that it protects privacy.
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Next</ins>](Filtering.md) [<ins>Chapter Contents</ins>](4.%20Security.md)
