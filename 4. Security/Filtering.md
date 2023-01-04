@@ -36,4 +36,4 @@ Filtering ND messages on the link is discussed in [<ins>Address resolution<ins>]
 There is a risk for IPv4-only networks caused by IPv6 preference programmed into hosts. The activation of IPv6 by a malicious node could create security problems. [Security Implications of IPv6 on IPv4 Networks](https://www.rfc-editor.org/info/rfc7123) discusses what is important to block in this scenario. These are primarily different tunneling protocols that might help to bypass perimeter security, and rogue DHCP or Router code for a man-in-the-middle attack.
 
 <!-- Link lines generated automatically; do not delete -->
-### [<ins>Previous</ins>](Layer%202%20considerations.md) [<ins>Next</ins>](Topology%20hiding.md) [<ins>Chapter Contents</ins>](4.%20Security.md)
+### [<ins>Previous</ins>](Layer%202%20considerations.md) [<ins>Next</ins>](Topology%20obfuscation.md) [<ins>Chapter Contents</ins>](4.%20Security.md)
