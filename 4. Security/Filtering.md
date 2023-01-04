@@ -31,7 +31,7 @@ Security devices and destination nodes should check that the first fragment shou
 
 [Filtering recommendations for packets with extension headers](https://www.rfc-editor.org/info/rfc9288) is oriented for the transit case where excessive filtering is common. This RFC motivates what particular EHs to permit, drop, reject (with ICMP), rate-limit, or ignore. It is important to mention that these additional actions are recommended in addition to the basic rule of [RFC 7045](https://www.rfc-editor.org/info/rfc7045) to allow by default the transmission of all extension headers in transit.
 
-Filtering ND messages on the link is discussed in [<ins>Address resolution<ins>](../4.%20Security/Layer%202%20considerations.md).
+Filtering ND messages on the link is discussed in [<ins>Address resolution<ins>](../2.%20IPv6%20Basic%20Technology/Address%20resolution.md).
 
 There is a risk for IPv4-only networks caused by IPv6 preference programmed into hosts. The activation of IPv6 by a malicious node could create security problems. [Security Implications of IPv6 on IPv4 Networks](https://www.rfc-editor.org/info/rfc7123) discusses what is important to block in this scenario. These are primarily different tunneling protocols that might help to bypass perimeter security, and rogue DHCP or Router code for a man-in-the-middle attack.
 
