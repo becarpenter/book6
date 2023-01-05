@@ -264,7 +264,7 @@ for path, subdirs, files in os.walk('.'):
                         if not cite in index:
                             index.append(cite)
                     if w.startswith('rfc') or w.startswith('bcp') or w.startswith('std'):
-                        if len(w) < 7 and not w.isalpha():
+                        if len(w) < 8 and not w.isalpha():
                             cite = '['+w.upper()+']('+url+')\n'
                             if not cite in citex:
                                 citex.append(cite)

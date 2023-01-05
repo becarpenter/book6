@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-01-05 15:00:18 UTC+1300
+Generated at 2023-01-05 15:04:03 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->

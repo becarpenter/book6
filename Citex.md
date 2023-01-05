@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-01-05 15:00:18 UTC+1300
+Generated at 2023-01-05 15:04:03 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -22,9 +22,331 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [BCP91 ●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 
+[RFC1918 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
+[RFC2080 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC2081 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC2464 ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+
+[RFC2474 ●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
+[●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+[●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC2529 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC2545 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC3053 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC3056 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC3068 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC3089 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC3168 ●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
+[●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+[●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC3261 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC3542 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+
+[RFC3550 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC3587 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+
+[RFC3596 ●](./2.%20IPv6%20Basic%20Technology/DNS.md)
+
+[RFC3633 ●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+
+[RFC3756 ●](./4.%20Security/Layer%202%20considerations.md)
+
+[RFC3810 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+
+[RFC3828 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC3879 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+
+[RFC3971 ●](./4.%20Security/4.%20Security.md)
+[●](./4.%20Security/Layer%202%20considerations.md)
+
+[RFC4007 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+
+[RFC4029 ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
+[RFC4038 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+
+[RFC4048 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+
+[RFC4193 ●](./4.%20Security/Filtering.md)
+
+[RFC4213 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
+[RFC4271 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC4291 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./4.%20Security/Filtering.md)
+
+[RFC4301 ●](./4.%20Security/4.%20Security.md)
+
+[RFC4303 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
+
+[RFC4380 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC4456 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC4541 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./4.%20Security/Layer%202%20considerations.md)
+
+[RFC4594 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+
+[RFC4641 ●](./4.%20Security/Filtering.md)
+
+[RFC4760 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC4798 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
+[RFC4861 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+
+[RFC4862 ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+
+[RFC4864 ●](./4.%20Security/Topology%20obfuscation.md)
+
+[RFC4890 ●](./4.%20Security/Filtering.md)
+
+[RFC4960 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC5072 ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+
+[RFC5082 ●](./4.%20Security/Filtering.md)
+
+[RFC5127 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+
+[RFC5172 ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+
+[RFC5214 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC5308 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC5340 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC5569 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC5635 ●](./4.%20Security/Filtering.md)
+
+[RFC5757 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+
+[RFC5865 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+
+[RFC5902 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
+[RFC5942 ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+
+[RFC5952 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+
+[RFC6085 ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+
+[RFC6105 ●](./4.%20Security/Layer%202%20considerations.md)
+
+[RFC6144 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
+[RFC6146 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
+[RFC6147 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
+[RFC6180 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
+
+[RFC6192 ●](./4.%20Security/Filtering.md)
+
+[RFC6264 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
+[RFC6296 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./4.%20Security/4.%20Security.md)
+
+[RFC6333 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
+[RFC6343 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC6437 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+
+[RFC6438 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+
+[RFC6550 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC6583 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./4.%20Security/Layer%202%20considerations.md)
+
+[RFC6620 ●](./4.%20Security/Layer%202%20considerations.md)
+
+[RFC6636 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+
+[RFC6666 ●](./4.%20Security/Filtering.md)
+
+[RFC6724 ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
+[●](./2.%20IPv6%20Basic%20Technology/DNS.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+
+[RFC6751 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC6775 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+
+[RFC6877 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
+[RFC6888 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+
+[RFC6890 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./4.%20Security/Filtering.md)
+
+[RFC6936 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC6950 ●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+
+[RFC7045 ●](./4.%20Security/Filtering.md)
+
+[RFC7066 ●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+
+[RFC7084 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC7098 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+[●](./4.%20Security/Topology%20obfuscation.md)
+
+[RFC7112 ●](./4.%20Security/Layer%202%20considerations.md)
+
+[RFC7113 ●](./4.%20Security/Layer%202%20considerations.md)
+
+[RFC7123 ●](./4.%20Security/Filtering.md)
+
+[RFC7439 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
+[RFC7454 ●](./4.%20Security/Filtering.md)
+
+[RFC7526 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
+[RFC7527 ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+
+[RFC7552 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
+[RFC7596 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
+[RFC7597 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
+[RFC7599 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
+[RFC7610 ●](./4.%20Security/Layer%202%20considerations.md)
+
+[RFC7676 ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
 [RFC768 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
+[RFC7690 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+
+[RFC7775 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC7849 ●](./4.%20Security/Layer%202%20considerations.md)
+
+[RFC7872 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+
+[RFC7915 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
 [RFC791 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+
+[RFC8028 ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+
+[RFC8064 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+
+[RFC8100 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+
+[RFC8106 ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+
+[RFC8200 ●](./1.%20Introduction%20and%20Foreword/How%20to%20keep%20up%20to%20date.md)
+[●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
+[●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
+[●](./4.%20Security/Filtering.md)
+[●](./8.%20Further%20Reading/8.%20Further%20Reading.md)
+[●](./99.%20Chapter%20Template/Markdown%20Usage.md)
+
+[RFC8210 ●](./4.%20Security/Filtering.md)
+
+[RFC8304 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC8305 ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./5.%20Deployment/Deployment%20in%20the%20home.md)
+
+[RFC8376 ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+
+[RFC8415 ●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+
+[RFC8501 ●](./2.%20IPv6%20Basic%20Technology/DNS.md)
+
+[RFC8505 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+
+[RFC8622 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+
+[RFC8683 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
+[RFC8684 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC8754 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+
+[RFC8837 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+
+[RFC8899 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+
+[RFC8928 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+
+[RFC8929 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+
+[RFC8966 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC8981 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./4.%20Security/Layer%202%20considerations.md)
+[●](./4.%20Security/Topology%20obfuscation.md)
+[●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+
+[RFC9000 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC9008 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC9010 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC9098 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+
+[RFC9099 ●](./4.%20Security/4.%20Security.md)
+
+[RFC9119 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+
+[RFC9131 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+
+[RFC9288 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[●](./4.%20Security/Filtering.md)
+
+[RFC9313 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 
 [STD7 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
