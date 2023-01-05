@@ -9,6 +9,7 @@
 # Version: 2022-12-30 - include timestamp
 # Version: 2023-01-02 - added alt text to logo
 # Version: 2023-01-03 - added Contents link at end of index
+# Version: 2023-01-05 - added citation index
 
 
 ########################################################
@@ -168,6 +169,20 @@ def indexable(word):
                 return index_terms[i]
     return None
 
+def packx(index):
+    """Sort and pack an index"""
+    index = sorted(index, key=str.casefold)
+    same = None
+    for i in range(len(index)):
+        head = index[i].split("]")[0]
+        if head != same:
+            index[i-1] += "\n"
+            index[i] = index[i].replace(head, head+' '+blob)
+            same = head
+        else:
+            index[i] = index[i].replace(head, '['+blob)
+    return index
+
 link_warn = "<!-- Link lines generated automatically; do not delete -->\n"
 blob = '●'
 
@@ -223,14 +238,12 @@ for t in raw_terms:
 dprint("Index terms:", index_terms)
 dprint("Split terms:", split_terms)
 
-######### Create empty index
+######### Create empty index and citation index
+
 index = []
-
-
-
+citex = []
 
 ######### Scan all .md files in subdirectories
-
 
 for path, subdirs, files in os.walk('.'):
     path = path.replace('\\','/')
@@ -241,28 +254,22 @@ for path, subdirs, files in os.walk('.'):
                 dprint("Processing file", fn)
                 target = rf(path+'/'+fn)
                 words = exwords(target)
+                url = (path+'/'+fn).replace(' ','%20')
                 for w in words:
                     wx = indexable(w)
                     if wx:
                         ##dprint(wx, '===', w)
                         term = wx.split()[0].replace('$',' ')
-                        url = (path+'/'+fn).replace(' ','%20')
                         cite = '['+term+']('+url+')\n'
                         if not cite in index:
                             index.append(cite)
-                
-index = sorted(index, key=str.casefold)
+                    if w.startswith('rfc') or w.startswith('bcp') or w.startswith('std'):
+                        if len(w) < 7 and not w.isalpha():
+                            cite = '['+w.upper()+']('+url+')\n'
+                            if not cite in citex:
+                                citex.append(cite)
 
-same = None
-
-for i in range(len(index)):
-    head = index[i].split("]")[0]
-    if head != same:
-        index[i-1] += "\n"
-        index[i] = index[i].replace(head, head+' '+blob)
-        same = head
-    else:
-        index[i] = index[i].replace(head, '['+blob)
+index = packx(index)
 
 index.insert(0,'# book6 Main Index\n')
 index.insert(1,'<img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>\n\n')
@@ -272,7 +279,18 @@ index.insert(4,"It is not case-sensitive. ")
 index.insert(5,'It has links to each section that mentions each keyword.\n')
 index.insert(6,link_warn)
 index.append("\n### [<ins>Back to main Contents</ins>](Contents.md)")
-wf("Index.md", index)          
+wf("Index.md", index)
+
+citex = packx(citex)
+
+citex.insert(0,'# book6 Citation Index\n')
+citex.insert(1,'<img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>\n\n')
+citex.insert(2,"Generated at "+timestamp+"\n\n")
+citex.insert(3,"This index was created automatically, so it's dumb. ")
+citex.insert(4,'It has links to each section that mentions each citation.\n')
+citex.insert(5,link_warn)
+citex.append("\n### [<ins>Back to main Contents</ins>](Contents.md)")
+wf("Citex.md", citex)
            
              
 ######### Close log and exit
