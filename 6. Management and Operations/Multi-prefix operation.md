@@ -12,7 +12,7 @@ The following diagram shows the example:
 <img src="./multiPrefix.svg" alt="Routers and routing clouds as described above">
 If, for some reason, there is more than one subnet router on the subnet, the host can be informed which one to use as suggested in [RFC8028](https://www.rfc-editor.org/info/rfc8028).
 
-In normal circumstances, it isn't hard to configure routing so that traffic from ```2001:db8:abcd:0101::abc1``` exits the site towards ISP X, and traffic from ```2001:db8:b123:0101::def2``` exits towards ISP Y. Suitable source routing rules in the subnet router and the rest of the enterprise routing cloud will do it. Such source routing rules typically have to be set up as routing policies, including the relevant source prefixes, configured on each router using a proprietary mechanism.
+For this to work as intended, it is necessary to configure routing so that traffic from ```2001:db8:abcd:0101::abc1``` exits the site towards ISP X, and traffic from ```2001:db8:b123:0101::def2``` exits towards ISP Y. Suitable source routing rules in the subnet router and the rest of the enterprise routing cloud will do it. Such source routing rules typically have to be set up as routing policies, including the relevant source prefixes, configured on each router by a proprietary mechanism.
 
 But what happens if the link to ISP X goes down? Presumably the reason for having two ISP connections is precisely for backup.
 
