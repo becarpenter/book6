@@ -49,6 +49,8 @@ See [Traffic class and flow label](Traffic%20class%20and%20flow%20label.md).
 
 The "next headers" are an important aspect of the design. After the fixed header just defined, there are one or more additional headers chained together. The best description is probably in [the standard itself](https://www.rfc-editor.org/info/rfc8200), so we only give a summary here. Every header format has a known length, and includes a "next header" field identifying the next header (d'oh). The last header in a packet is usually a TCP or UDP header containing the actual payload. The last header naturally has a "next header" field, but it contains the magic number 59, which means "no next header", and terminates the chain.
 
+(The standard seems to allow a packet which has 59 as the initial "Next header" and therefore no extension headers and no payload. There is no reason to lose sleep over this.)
+
 The earlier headers have functions including:
 
 - Hop-by-hop options, for packet-level options that should be examined by every node on the path.
