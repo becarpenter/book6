@@ -18,6 +18,8 @@ But what happens if the link to ISP X goes down? Presumably the reason for havin
 
 We can configure low priority (high metric) routes between the two exit routers, such that when one ISP link is down, traffic is redirected to the other. However, this may fail if the backup ISP applies ingress filtering \[[BCP84](https://www.rfc-editor.org/info/bcp84)], so the enterprise needs to arrange for its ISPs to accept mutual backup traffic.
 
+If these steps (source routing *and* backup routes *and* filtering exceptions) are not taken, a failure of one of the two ISP connections will cause the failure of all user sessions using that ISP's PA prefix.
+
 This whole topic is discussed in more depth in [RFC8678](https://www.rfc-editor.org/info/rfc8678).
 
 The need for complex configuration is why many enterprises have not opted for multi-prefix PA-based multihoming. Instead, they have paid to obtain provider-independent (PI) IPv6 prefixes, typically /48 in length, from an Internet registry. However, this is expected to be problematic in the long term, since every such enterprise adds to the size of the Internet-wide BGP-4 routing table. This may be viable for a few thousand enterprises, but not for millions, i.e. not for small businesses or even home offices that might benefit from multihoming.
