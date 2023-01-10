@@ -19,9 +19,11 @@ and inter-chapter links as far as possible."""
 # Version: 2022-11-27 - {{ }} now puts [ ] round citation
 #                     - {{{ }}} does not put [ ]
 #                     - fix missing newline when adding new section
+# Version: 2023-01-10 - fix bug when adding new chapter name to Contents.md
+#                     - enormous simplification of Contents creation
 
 ########################################################
-# Copyright (C) 2022 Brian E. Carpenter.                  
+# Copyright (C) 2022-2023 Brian E. Carpenter.                  
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with
@@ -173,18 +175,6 @@ def rfc_ok(s):
     if s[:3] == "BCP" or s[:3] == "STD":
         url = 'https://www.rfc-editor.org/refs/ref-'+s.lower()+'.txt'
     elif s[:3] == "RFC":
-
-##    #clumsy method dropped...
-##    if len(s) < 7:
-##        #needs leading zeroes for DOI check
-##        s = "RFC" + s[3:].zfill(4)    
-##    url = "https://doi.org/10.17487/" + s
-##    try:
-##        response = urllib.request.urlopen(url).getcode()
-##    except:
-##        return False  #DOI not assigned, hence no RFC
-##    return response==200
-
         s = s.replace('RFC','RFC.')
         url = 'https://www.rfc-editor.org/refs/bibxml/reference.'+s+'.xml'
     else:
@@ -277,7 +267,7 @@ def expand_cites():
                         #Bogus chapter number
                         line = head + "[" + cite + "](TBD)" + tail
                         lchange = True
-                        logitw('"'+cite+'" reference could not be resolved')
+                        logitw('"'+cite+'" reference could not be resolved.')
                             
                 else:
                     #maybe it's a section name
@@ -290,7 +280,7 @@ def expand_cites():
                         #print("Found nothing")
                         line = head + "[" + cite + "](TBD)" + tail
                         lchange = True
-                        logitw('"'+cite+'" reference could not be resolved')
+                        logitw('"'+cite+'" reference could not be resolved.')
         except:
             #malformed line, do nothing
             pass
@@ -352,8 +342,6 @@ contents = rf("Contents.md")
 
 ######### Scan contents and decorate any plain chapter headings
 
-contents_changed = False
-
 #Get rid of blank lines in the working copy
 contents[:] = (l for l in contents if l != "\n")
 
@@ -368,10 +356,9 @@ for i in range(len(contents)):
             if not askokcancel(title=T,        
                    message = "Suspect chapter title: "+l+"\nOK to continue?"):
                 crash(l+": bad chapter title, abandoned make")
-        l = "["+l+"]("+l.replace(" ","%20")+")\n"
+        url_frag = l.replace(" ","%20")
+        l = "["+l+"]("+url_frag+"/"+url_frag+".md)\n"
         contents[i] = l
-        contents_changed = True
-
         
 ######### Scan contents and create any missing directories,
 ######### build chapter list, extract sections lists
@@ -413,7 +400,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
         
         #extract section names from base file
         make_basenames()
-                        
+                                
         #extract section names for existing files
         file_names = []
         
@@ -424,108 +411,26 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                     file_names.append(fname[:-3])
         dprint("Files", file_names)
                 
-        #extract section names from Contents.md
-        contents_names = []
-        first_namex = None
-        savex = contentx  #in case no contents provided
+        #replace section names in Contents.md
+        #(it doesn't matter whether they've changed, the list will
+        # end up current)
+        
         #N.B. loop within loop on contents list
-        while contentx < len(contents)-1:
-            contentx +=1
+        contentx +=1
+        while contentx < len(contents):          
             cline = contents[contentx]
-            if " " in cline and cline[0] == "*":
-                #found a section name
-                contents_names.append(cline.split(" ", maxsplit=1)[1][:-1])
-                if not first_namex:
-                    first_namex = contentx
-                last_namex = contentx               
+            if contents[contentx].startswith("* "):
+                #found a section name to remove
+                del contents[contentx]
             else:
-                #not a section
-                if cline[0].isdigit() or cline[0] == "[":
-                    #next chapter, restore outer loop index
-                    contentx -= 1                    
-                else:
-                    if cline.strip(" ").strip("\n"):
-                        logitw("Unexpected contents entry under '"+dname+"': '"+cline[:-1]+"'")
                 break
-                
-        dprint("Contents", contents_names)
-
-        if not len(contents_names):
-            #Contents empty so far, set pointer for any new contents
-            first_namex = savex
-                    
-        #Make uncased versions for comparisons    
-        u_base_names = uncase(base_names)
-        u_contents_names = uncase(contents_names)        
-
-        if u_base_names != u_contents_names:
-            #Reconciliation needed. Both names and order
-            #should be the same. Priority to the base names.
-            logit("Reconciling base and contents for '"+dname+"'")
-          
-            if set(u_base_names) == set(u_contents_names):
-                #The discrepancy is that the contents names are out of order
-                logitw("Contents for '"+dname+"' re-ordered")
-                contents_names = base_names
-                #now update section list in contents file
-                contents_slice = []
-                for i in range(len(contents_names)):
-                    contents_slice.append('* ' + contents_names[i] + "\n")
-                contents[first_namex:last_namex+1] = contents_slice
-                contents_changed = True
-            else:
-                if len(base_names) >= len(contents_names):
-                    #section(s) missing from contents?
-                    for ib in range(len(base_names)):
-                        if not u_base_names[ib] in u_contents_names:
-                            #found missing section - add to contents
-                            if contents_names == []:
-                                ibx = savex+1
-                            else:
-                                ibx = first_namex+ib
-                            contents_names[ib:ib] = [base_names[ib]]
-                            u_contents_names = uncase(contents_names) 
-                            contents[ibx:ibx] = ['* '+base_names[ib]+'\n']
-                            contentx += 1  #advance outer loop counter
-                            contents_changed = True
-                            logit("Added '"+base_names[ib]+"' to '"+dname+"' contents")
-                    #base_names and content_names now of equal length
-                    dprint("Contents names again", contents_names)
-                    
-                            
-                if len(base_names) <= len(contents_names):
-                    #section(s) missing from base?
-                    before = ""
-                    for ic in range(len(contents_names)):
-                        if not u_contents_names[ic] in u_base_names:
-                            #found missing section - add to base file
-                            mdfile = contents_names[ic].replace(" ","%20")+".md"
-                            news = "\n## ["+contents_names[ic]+"]("+mdfile+")"
-                            dprint("New", news, before)
-                            #find correct place in base and insert
-                            for ib in range(len(base)):
-                                u_base = uncase(base)
-                                if "<!--" in base[ib]:
-                                    continue
-                                if "### [<ins>Back" in base[ib]:
-                                    #we're at the end already - stick it in
-                                    base[ib:ib] = [news+"\n"]
-                                    break                                    
-                                if not "##" in base[ib]:
-                                    if ib == len(base)-1:
-                                        #last line, nothing found
-                                        base[ib+1:ib+1] = [news+"\n"]
-                                        break
-                                    else:
-                                        continue
-                                if "## ["+before+"]" in u_base[ib]:
-                                    base[ib+1:ib+1] = [news+"\n"]
-                                    break
-                            logit("Added '"+contents_names[ic]+"' to '"+dname+"' base file")
-                            #dprint(base)
-                            base_changed = True
-                        before = contents_names[ic].lower()
-
+        #old sections have gone, contentx points where the
+        #new sections belong
+        for sname in base_names:
+            contents[contentx:contentx] = ["* "+sname+"\n"]
+            contentx += 1
+        contentx -= 1 #so that the outer loop search doesn't skip a line
+            
         #Maybe update base_names
         if base_changed:
             make_basenames()                           
@@ -651,16 +556,15 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
         if expand_cites():
             wf(dname+"/"+dname+".md", section)
                     
-######### Rewrite contents if necessary
+######### Rewrite contents
 
-if contents_changed:
-    #ensure there is a blank line before each link or # title
-    for i in range(1,len(contents)):
-        if contents[i].startswith("[") or contents[i].startswith("#"):
-            contents[i] = "\n"+contents[i]
-    #and write it back                   
-    wf("Contents.md", contents)
-    contents_changed = False             
+#ensure there is a blank line before each link or # title
+for i in range(1,len(contents)):
+    if contents[i].startswith("[") or contents[i].startswith("#"):
+        contents[i] = "\n"+contents[i]
+#and write it back                   
+wf("Contents.md", contents)
+        
              
 ######### Close log and exit
     

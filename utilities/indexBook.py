@@ -10,6 +10,7 @@
 # Version: 2023-01-02 - added alt text to logo
 # Version: 2023-01-03 - added Contents link at end of index
 # Version: 2023-01-05 - added citation index
+# Version: 2023-01-10 - added warnings of invalid internal citations
 
 
 ########################################################
@@ -91,6 +92,13 @@ def rf(f):
     l = file.readlines()
     file.close()
     return l
+
+def file_ok(fn):
+    """Check if a local file is OK"""
+    if fn.startswith("../"):
+        fn = fn.replace("../","")
+    fn = fn.replace("%20"," ")
+    return os.path.exists(fn)
 
 
 def wf(f,l):
@@ -253,6 +261,7 @@ for path, subdirs, files in os.walk('.'):
             if fn.endswith('.md'):
                 dprint("Processing file", fn)
                 target = rf(path+'/'+fn)
+                #first scan for indexable words and citations
                 words = exwords(target)
                 url = (path+'/'+fn).replace(' ','%20')
                 for w in words:
@@ -268,6 +277,18 @@ for path, subdirs, files in os.walk('.'):
                             cite = '['+w.upper()+']('+url+')\n'
                             if not cite in citex:
                                 citex.append(cite)
+                #now scan for invalid internal citations
+                #and report errors
+                for line in target:
+                    #look for internal link pattern like
+                    #[2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md)
+                    if "](TBD)" in line:
+                        logitw("Undefined TBD reference in '"+path[2:]+'/'+fn+"'.")
+                    while "](../" in line:
+                        _, line = line.split("](../", maxsplit=1)
+                        f_cited, line = line.split(")", maxsplit=1)
+                        if not file_ok(f_cited):
+                            logitw("Invalid reference to '"+f_cited.replace("%20", " ")+"' in '"+path[2:]+'/'+fn+"'.")
 
 index = packx(index)
 
