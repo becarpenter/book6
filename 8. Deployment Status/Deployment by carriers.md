@@ -24,4 +24,4 @@ Those carriers have decided to develop strategic plans to enable IPv6-only under
 Notable examples of early IPv6 adoption in the wired domain are Comcast in the US and Sky in the UK.
 
 <!-- Link lines generated automatically; do not delete -->
-### [<ins>Previous</ins>](Status.md) [<ins>Next</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](5.%20Deployment.md)
+### [<ins>Previous</ins>](Status.md) [<ins>Next</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](8.%20Deployment%20Status.md)

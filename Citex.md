@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-01-09 09:04:56 UTC+1300
+Generated at 2023-01-11 14:24:59 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -12,7 +12,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
 
 [BCP220 ●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
-[●](./8.%20Further%20Reading/8.%20Further%20Reading.md)
+[●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
 
 [BCP230 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 
@@ -282,8 +282,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
+[●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
 [●](./4.%20Security/Filtering.md)
-[●](./8.%20Further%20Reading/8.%20Further%20Reading.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
 
 [RFC8210 ●](./4.%20Security/Filtering.md)
@@ -292,7 +292,7 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8305 ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./5.%20Deployment/Deployment%20in%20the%20home.md)
+[●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
 [RFC8376 ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 

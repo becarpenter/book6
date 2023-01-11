@@ -1,7 +1,6 @@
 # book6: A Collaborative IPv6 Book.
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 This is the current list of contents. It will change as the book evolves.
-
 There is also an [index](https://github.com/becarpenter/book6/blob/main/Index.md),
 and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 
@@ -19,7 +18,7 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
  
 
 [2. IPv6 Basic Technology](2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
-* Packet format
+* Packet Format
 * Addresses
 * Layer 2 functions
 * Address resolution
@@ -43,11 +42,7 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 * Filtering
 * Topology obfuscation
 
-[5. Deployment](5.%20Deployment/5.%20Deployment.md)
-* Status
-* Deployment by carriers
-* Deployment in the home
-* Deployment in the enterprise
+[5. Network Design](5.%20Network%20Design/5.%20Network%20Design.md)
 
 [6. Management and Operations](6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
 * Address planning and management
@@ -59,7 +54,13 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 
 [7. Case Studies](7.%20Case%20Studies/7.%20Case%20Studies.md)
 
-[8. Further Reading](8.%20Further%20Reading/8.%20Further%20Reading.md)
+[8. Deployment Status](8.%20Deployment%20Status/8.%20Deployment%20Status.md)
+* Status
+* Deployment by carriers
+* Deployment in the home
+* Deployment in the enterprise
+
+[20. Further Reading](20.%20Further%20Reading/20.%20Further%20Reading.md)
 
 [99. Chapter Template](99.%20Chapter%20Template/99.%20Chapter%20Template.md)
 * First Section

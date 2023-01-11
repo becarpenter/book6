@@ -9,4 +9,4 @@ As a result, things are fairly simple. Devices such as PCs and printers can comm
 The situation becomes more complicated when various home automation devices are considered, especially if it becomes desirable to split the home network into separate subnets. Such networks need to be essentially self-configuring and self-managing, as do "Internet of Things" networks. These complex topics are out of scope for this book.
 
 <!-- Link lines generated automatically; do not delete -->
-### [<ins>Previous</ins>](Deployment%20by%20carriers.md) [<ins>Next</ins>](Deployment%20in%20the%20enterprise.md) [<ins>Chapter Contents</ins>](5.%20Deployment.md)
+### [<ins>Previous</ins>](Deployment%20by%20carriers.md) [<ins>Next</ins>](Deployment%20in%20the%20enterprise.md) [<ins>Chapter Contents</ins>](8.%20Deployment%20Status.md)

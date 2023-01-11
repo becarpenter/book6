@@ -63,4 +63,4 @@ If receiving PA from an upstream provider designs such as multihoming is a more 
 Additionally, renumbering is functionally required if said provider is exchanged for another unless NAT is employed as a translation tool obtaining additional address space may require more effort or may not be possible.
 
 <!-- Link lines generated automatically; do not delete -->
-### [<ins>Previous</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](5.%20Deployment.md)
+### [<ins>Previous</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](8.%20Deployment%20Status.md)
