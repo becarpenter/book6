@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-01-11 14:24:59 UTC+1300
+Generated at 2023-01-13 11:04:28 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
@@ -139,6 +139,10 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+
+[happy eyeballs ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
 [IANA ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
