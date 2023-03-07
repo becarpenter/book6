@@ -33,7 +33,7 @@ as well as human resources, and the level of skill available either by direct em
 is the logical elements requires for a presence on the global internet in the manner of addressing. Larger or more mature organizations may already 
 posses network resources such as Autonomous System Numbers (ASNs), legacy IP resources, and possibly existing provider independent (PI) IPv6 space. 
 First, it is important to make the distinction of address space types. There are really three different types of address allocations possible, provider 
-independent, provider allocated, and unique local addressing {{{2. Addresses}}}. 
+independent, provider allocated, and unique local addressing [2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md). 
 
 Organizations will need to understand the differences as it will be both dictated by resource availability and will inform routing policy and future deployment changes. 
 
@@ -58,7 +58,7 @@ both operationally and financially, is the preferable method for medium to large
 Provider Assigned (PA) address space consists of address space that is assigned to a specific upstream provider and sub-delegated to a customer. 
 
 If receiving PA from an upstream provider designs such as multihoming is a more involved process that will involve coordination with the upstream transit provider that owns the IP resources. 
-(See {{6. Multi-prefix operation}} for some discussion of multihoming.)
+(See \[[6. Multi-prefix operation](../6.%20Management%20and%20Operations/Multi-prefix%20operation.md)] for some discussion of multihoming.)
 Additionally, renumbering is functionally required if said provider is exchanged for another unless NAT is employed as a translation tool. Obtaining additional address space may require more effort and expense, or may not be possible.
 
 <!-- Link lines generated automatically; do not delete -->
