@@ -33,7 +33,7 @@ as well as human resources, and the level of skill available either by direct em
 is the logical elements requires for a presence on the global internet in the manner of addressing. Larger or more mature organizations may already 
 posses network resources such as Autonomous System Numbers (ASNs), legacy IP resources, and possibly existing provider independent (PI) IPv6 space. 
 First, it is important to make the distinction of address space types. There are really three different types of address allocations possible, provider 
-independent, provider allocated, and unique local addressing [2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md). 
+independent, provider allocated, and unique local addressing \[[2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md)\]. 
 
 Organizations will need to understand the differences as it will be both dictated by resource availability and will inform routing policy and future deployment changes. 
 
