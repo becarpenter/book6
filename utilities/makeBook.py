@@ -559,9 +559,13 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
 ######### Rewrite contents
 
 #ensure there is a blank line before each link or # title
+#and that logo is followed by blank line
 for i in range(1,len(contents)):
     if contents[i].startswith("[") or contents[i].startswith("#"):
         contents[i] = "\n"+contents[i]
+    elif contents[i].startswith("<img src="):
+        contents[i] += "\n"
+    
 #and write it back                   
 wf("Contents.md", contents)
         
