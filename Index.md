@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-01-13 11:04:28 UTC+1300
+Generated at 2023-03-07 13:47:56 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
@@ -226,6 +226,9 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
+
+[multihoming ●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 
 [NAT464 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 

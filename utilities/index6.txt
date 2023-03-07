@@ -74,4 +74,5 @@ Teredo
 'differentiated services' diffserv
 firewall firewalls
 'happy eyeballs'
+multihoming multi-homing MHMP
 
