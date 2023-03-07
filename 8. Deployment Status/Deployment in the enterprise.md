@@ -24,7 +24,7 @@ IPv6 troubleshooting. Apart from training, enterprises feel that IPv6 security i
 conversion of the applications they use in their daily activity to IPv6.
 
 
-* Addressing in the enterprise vertical
+### Addressing in the enterprise
 
 How organizations craft their addressing schemes will be varied and will likely be determined by a number of factors. The largest factor 
 that will influence the procurement or otherwise obtaining of address resources will be organizational size. The size of a given organization 
@@ -33,14 +33,13 @@ as well as human resources, and the level of skill available either by direct em
 is the logical elements requires for a presence on the global internet in the manner of addressing. Larger or more mature organizations may already 
 posses network resources such as Autonomous System Numbers (ASNs), legacy IP resources, and possibly existing provider independent (PI) IPv6 space. 
 First, it is important to make the distinction of address space types. There are really three different types of address allocations possible, provider 
-independent, provider allocated, and unique local addressing. 
-
-*Define each address type*
+independent, provider allocated, and unique local addressing {{{2. Addresses}}}. 
 
 Organizations will need to understand the differences as it will be both dictated by resource availability and will inform routing policy and future deployment changes. 
 
 **Provider Independent address space**
-Provider Independent address space consists of address resources obtained directly from a regional internet registry (RIR). These address resources are allocated to a requesting entity 
+
+Provider Independent (PI) address space consists of address resources obtained directly from a regional internet registry (RIR). These address resources are allocated to a requesting entity 
 after a formal request process that entails a light justification process and an annual fee collection. The addressing is allocated to the requesting entity and, within the scope of the global
 internet best practices, can be used however the assigned entity sees fit. 
 
@@ -54,13 +53,13 @@ and maintaining internet route registry (IRR) data, implementing Resource Public
 means. In general, maintaining PI address space offers the most flexibility and stability due to the portable nature of the resources, and although it does have a higher startup cost 
 both operationally and financially, is the preferable method for medium to large enterprises.  
 
-
 **Provider Assigned address space**
-Provider Assigned (PA) address space consists of PI address space that is assigned to an upstream provider and sub-delegated to a customer or. 
+
+Provider Assigned (PA) address space consists of address space that is assigned to a specific upstream provider and sub-delegated to a customer. 
 
 If receiving PA from an upstream provider designs such as multihoming is a more involved process that will involve coordination with the upstream transit provider that owns the IP resources. 
-*add more details here*
-Additionally, renumbering is functionally required if said provider is exchanged for another unless NAT is employed as a translation tool obtaining additional address space may require more effort or may not be possible.
+(See {{6. Multi-prefix operation}} for some discussion of multihoming.)
+Additionally, renumbering is functionally required if said provider is exchanged for another unless NAT is employed as a translation tool. Obtaining additional address space may require more effort and expense, or may not be possible.
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](8.%20Deployment%20Status.md)
