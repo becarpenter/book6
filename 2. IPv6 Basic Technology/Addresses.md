@@ -176,7 +176,7 @@ an IPv4 address (see [RFC4038](https://www.rfc-editor.org/info/rfc4038)).
 
 ### Multicast addresses
 
-IPv6 multicast address are all under the `ff00::/8` prefix, i.e. they start with 0xff. The next 8 bits have special meanings, so 112 bits are left to specify a particular multicast group. The special meanings are well explained in Section 2.7 of [RFC4291](http://www.rfc-editor.org/info/rfc4291), so this is not repeated here. Some multicast addresses are predefined; for example `ff01::1` is the link-local "all nodes" address that every IPv6 node must listen to, and `ff01::2` is the link-local "all routers" address that every IPv6 router must listen to.
+IPv6 multicast address are all under the `ff00::/8` prefix, i.e. they start with 0xff. The next 8 bits have special meanings, so 112 bits are left to specify a particular multicast group. The special meanings are well explained in Section 2.7 of [RFC4291](http://www.rfc-editor.org/info/rfc4291), so this is not repeated here. Some multicast addresses are predefined; for example `ff02::1` is the link-local "all nodes" address that every IPv6 node must listen to, and `ff02::2` is the link-local "all routers" address that every IPv6 router must listen to.
 
 All the officially assigned multicast addresses may found at [IANA](https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml#link-local).
 
