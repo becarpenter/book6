@@ -32,7 +32,7 @@ IPv6 routing in general operates by longest-match, i.e. each router forwards eac
 
 IPv6 routers can be placed in various categories, each of which requires different features to be active:
 
-- Customer Edge (CE) routers (enterprise): These are routers that connect an enterprise network to one or more ISPs \[[RFC7084](https://www.rfc-editor.org/info/rfc7084)].
+- Customer Edge (CE) routers (enterprise): These are routers that connect an enterprise network to one or more ISPs \[[RFC7084](https://www.rfc-editor.org/info/rfc7084)], \[[RFC9096](https://www.rfc-editor.org/info/rfc9096)].
 
 - Enterprise routers: Internal routers within a large enterprise network.
 
