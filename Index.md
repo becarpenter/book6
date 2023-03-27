@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-03-07 14:14:47 UTC+1300
+Generated at 2023-03-27 14:16:25 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
@@ -49,7 +49,8 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [Babel ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
-[BGP ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+[BGP ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
 [●](./4.%20Security/Filtering.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -91,6 +92,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
@@ -298,6 +300,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./6.%20Management%20and%20Operations/Routing%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)

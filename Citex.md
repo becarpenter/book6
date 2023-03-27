@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-03-07 14:14:47 UTC+1300
+Generated at 2023-03-27 14:16:25 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -333,6 +333,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9008 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
 [RFC9010 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC9096 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
 [RFC9098 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 
