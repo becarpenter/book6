@@ -14,7 +14,7 @@ Some optimizations have been defined, such as Gratuitous Neighbor Discovery \[[R
 
 Operational issues with neighbor discovery and wireless multicast have been analyzed in the past ([RFC6583](https://www.rfc-editor.org/info/rfc6583), [RFC6636](https://www.rfc-editor.org/info/rfc6636), [RFC9119](https://www.rfc-editor.org/info/rfc9119)), but it remains the case that very large WiFi networks (such as the IETF builds several times a year for its plenary meetings) are subject to significant multicast overloads. In practice, this causes the WiFi switches to arbitrarily throttle the rate of multicasting, so neighbor discovery proceeds very slowly. It is **strongly** recommended to limit the size of wireless subnets as much as practicable.
 
-A summary of the issues and complications of neighbor discovery on wireless networks in general (not just WiFi) can be found in [this draft](https://datatracker.ietf.org/doc/draft-thubert-6man-ipv6-over-wireless/).
+A summary of the issues and complications of neighbor discovery on wireless networks in general (not just WiFi) can be found in [this draft](https://datatracker.ietf.org/doc/draft-ietf-6man-ipv6-over-wireless/).
 
 Considerable work has been done to alleviate these problems in the case of Low-Power Wireless Personal Area Networks (6LoWPANs, using the IEEE 802.15.4 standard). Relevant RFCs include [RFC6775](https://www.rfc-editor.org/info/rfc6775), [RFC8505](https://www.rfc-editor.org/info/rfc8505), [RFC8928](https://www.rfc-editor.org/info/rfc8928) and [RFC8929](https://www.rfc-editor.org/info/rfc8929). These improvements might be applied more generally in future.
 
