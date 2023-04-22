@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-03-27 14:16:25 UTC+1300
+Generated at 2023-04-22 14:21:09 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -351,6 +351,10 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9313 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+
+[RFC9386 ●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
+[●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
+[●](./8.%20Deployment%20Status/Status.md)
 
 [STD7 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 

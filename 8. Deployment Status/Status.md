@@ -3,7 +3,7 @@
 When speaking of IPv6, a question immediately comes up: 
 "How many people do use IPv6 on the Internet?".
 Answering this question is fundamental to get an immediate understanding
-of the real adoption of IPv6.
+of the real adoption of IPv6. A recent overview is presented in [RFC9386](https://www.rfc-editor.org/info/rfc9386).
 
 The count of the IPv6 users is monitored by several organizations.
 For example, both [Facebook](https://www.facebook.com/ipv6/?tab=ipv6_total_adoption)
