@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-05-07 09:51:52 UTC+1200
+Generated at 2023-05-19 13:35:59 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -359,7 +359,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [STD7 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
-[STD86 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[STD86 ●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
+[●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
 
 [STD87 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
