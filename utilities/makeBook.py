@@ -21,6 +21,7 @@ and inter-chapter links as far as possible."""
 #                     - fix missing newline when adding new section
 # Version: 2023-01-10 - fix bug when adding new chapter name to Contents.md
 #                     - enormous simplification of Contents creation
+# Version: 2023-05-20 - skip on-line check for RFC bibliography
 
 ########################################################
 # Copyright (C) 2022-2023 Brian E. Carpenter.                  
@@ -225,8 +226,9 @@ def expand_cites():
                 head, body = line.split("{{", maxsplit=1)
                 cite, tail = body.split("}}", maxsplit=1)
                 if cite.startswith("RFC") or cite.startswith("BCP") or cite.startswith("STD"):
-                    if not rfc_ok(cite):
-                        logitw(cite+" not found on line")
+                    if topic_file != "RFC bibliography":
+                        if not rfc_ok(cite):
+                            logitw(cite+" not found on line")
                     cite = "["+cite+"](https://www.rfc-editor.org/info/"+cite.lower()+")"
                     line = head + cite + tail
                     lchange = True
