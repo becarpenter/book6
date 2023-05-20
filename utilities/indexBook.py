@@ -11,6 +11,7 @@
 # Version: 2023-01-03 - added Contents link at end of index
 # Version: 2023-01-05 - added citation index
 # Version: 2023-01-10 - added warnings of invalid internal citations
+# Version: 2023-05-20 - exclude RFC bibliography from indexing
 
 
 ########################################################
@@ -258,7 +259,7 @@ for path, subdirs, files in os.walk('.'):
     if path.startswith('./') and path[2].isdigit():
         dprint("Processing directory", path)
         for fn in files:
-            if fn.endswith('.md'):
+            if fn.endswith('.md') and not "RFC bibliography" in fn:
                 dprint("Processing file", fn)
                 target = rf(path+'/'+fn)
                 #first scan for indexable words and citations

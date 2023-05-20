@@ -1,0 +1,412 @@
+## RFC bibliography
+
+This section is a machine-generated list of all current RFCs that mention IPv6 in their title. Obsolete RFCs are not included. Be *cautious* about old Informational or Experimental RFCs - they may be misleading as well as out of date.
+
+__Standards Track__
+
+{{{RFC2080}}}: RIPng for IPv6
+{{{RFC2428}}}: FTP Extensions for IPv6 and NATs
+{{{RFC2464}}}: Transmission of IPv6 Packets over Ethernet Networks
+{{{RFC2467}}}: Transmission of IPv6 Packets over FDDI Networks
+{{{RFC2470}}}: Transmission of IPv6 Packets over Token Ring Networks
+{{{RFC2473}}}: Generic Packet Tunneling in IPv6 Specification
+{{{RFC2474}}}: Definition of the Differentiated Services Field (DS Field) in the IPv4 and IPv6 Headers
+{{{RFC2491}}}: IPv6 over Non-Broadcast Multiple Access (NBMA) networks
+{{{RFC2492}}}: IPv6 over ATM Networks
+{{{RFC2497}}}: Transmission of IPv6 Packets over ARCnet Networks
+{{{RFC2526}}}: Reserved IPv6 Subnet Anycast Addresses
+{{{RFC2529}}}: Transmission of IPv6 over IPv4 Domains without Explicit Tunnels
+{{{RFC2545}}}: Use of BGP-4 Multiprotocol Extensions for IPv6 Inter-Domain Routing
+{{{RFC2590}}}: Transmission of IPv6 Packets over Frame Relay Networks Specification
+{{{RFC2675}}}: IPv6 Jumbograms
+{{{RFC2710}}}: Multicast Listener Discovery (MLD) for IPv6
+{{{RFC2711}}}: IPv6 Router Alert Option
+{{{RFC2894}}}: Router Renumbering for IPv6
+{{{RFC3056}}}: Connection of IPv6 Domains via IPv4 Clouds
+{{{RFC3111}}}: Service Location Protocol Modifications for IPv6
+{{{RFC3122}}}: Extensions to IPv6 Neighbor Discovery for Inverse Discovery Specification
+{{{RFC3146}}}: Transmission of IPv6 Packets over IEEE 1394 Networks
+{{{RFC3162}}}: RADIUS and IPv6
+{{{RFC3175}}}: Aggregation of RSVP for IPv4 and IPv6 Reservations
+{{{RFC3226}}}: DNSSEC and IPv6 A6 aware server/resolver message size requirements
+{{{RFC3306}}}: Unicast-Prefix-based IPv6 Multicast Addresses
+{{{RFC3307}}}: Allocation Guidelines for IPv6 Multicast Addresses
+{{{RFC3595}}}: Textual Conventions for IPv6 Flow Label
+{{{RFC3646}}}: DNS Configuration options for Dynamic Host Configuration Protocol for IPv6 (DHCPv6)
+{{{RFC3776}}}: Using IPsec to Protect Mobile IPv6 Signaling Between Mobile Nodes and Home Agents
+{{{RFC3810}}}: Multicast Listener Discovery Version 2 (MLDv2) for IPv6
+{{{RFC3898}}}: Network Information Service (NIS) Configuration Options for Dynamic Host Configuration Protocol for IPv6 (DHCPv6)
+{{{RFC3956}}}: Embedding the Rendezvous Point (RP) Address in an IPv6 Multicast Address
+{{{RFC4007}}}: IPv6 Scoped Address Architecture
+{{{RFC4193}}}: Unique Local IPv6 Unicast Addresses
+{{{RFC4213}}}: Basic Transition Mechanisms for IPv6 Hosts and Routers
+{{{RFC4283}}}: Mobile Node Identifier Option for Mobile IPv6 (MIPv6)
+{{{RFC4295}}}: Mobile IPv6 Management Information Base
+{{{RFC4311}}}: IPv6 Host-to-Router Load Sharing
+{{{RFC4338}}}: Transmission of IPv6, IPv4, and Address Resolution Protocol (ARP) Packets over Fibre Channel
+{{{RFC4380}}}: Teredo: Tunneling IPv6 over UDP through Network Address Translations (NATs)
+{{{RFC4429}}}: Optimistic Duplicate Address Detection (DAD) for IPv6
+{{{RFC4443}}}: Internet Control Message Protocol (ICMPv6) for the Internet Protocol Version 6 (IPv6) Specification
+{{{RFC4449}}}: Securing Mobile IPv6 Route Optimization Using a Static Shared Key
+{{{RFC4489}}}: A Method for Generating Link-Scoped IPv6 Multicast Addresses
+{{{RFC4580}}}: Dynamic Host Configuration Protocol for IPv6 (DHCPv6) Relay Agent Subscriber-ID Option
+{{{RFC4649}}}: Dynamic Host Configuration Protocol for IPv6 (DHCPv6) Relay Agent Remote-ID Option
+{{{RFC4659}}}: BGP-MPLS IP Virtual Private Network (VPN) Extension for IPv6 VPN
+{{{RFC4668}}}: RADIUS Authentication Client MIB for IPv6
+{{{RFC4669}}}: RADIUS Authentication Server MIB for IPv6
+{{{RFC4704}}}: The Dynamic Host Configuration Protocol for IPv6 (DHCPv6) Client Fully Qualified Domain Name (FQDN) Option
+{{{RFC4727}}}: Experimental Values In IPv4, IPv6, ICMPv4, ICMPv6, UDP, and TCP Headers
+{{{RFC4798}}}: Connecting IPv6 Islands over IPv4 MPLS Using IPv6 Provider Edge Routers (6PE)
+{{{RFC4818}}}: RADIUS Delegated-IPv6-Prefix Attribute
+{{{RFC4861}}}: Neighbor Discovery for IP version 6 (IPv6)
+{{{RFC4862}}}: IPv6 Stateless Address Autoconfiguration
+{{{RFC4866}}}: Enhanced Route Optimization for Mobile IPv6
+{{{RFC4877}}}: Mobile IPv6 Operation with IKEv2 and the Revised IPsec Architecture
+{{{RFC4944}}}: Transmission of IPv6 Packets over IEEE 802.15.4 Networks
+{{{RFC5026}}}: Mobile IPv6 Bootstrapping in Split Scenario
+{{{RFC5094}}}: Mobile IPv6 Vendor Specific Option
+{{{RFC5095}}}: Deprecation of Type 0 Routing Headers in IPv6
+{{{RFC5096}}}: Mobile IPv6 Experimental Messages
+{{{RFC5121}}}: Transmission of IPv6 via the IPv6 Convergence Sublayer over IEEE 802.16 Networks
+{{{RFC5172}}}: Negotiation for IPv6 Datagram Compression Using IPv6 Control Protocol
+{{{RFC5175}}}: IPv6 Router Advertisement Flags Option
+{{{RFC5213}}}: Proxy Mobile IPv6
+{{{RFC5269}}}: Distributing a Symmetric Fast Mobile IPv6 (FMIPv6) Handover Key Using SEcure Neighbor Discovery (SEND)
+{{{RFC5308}}}: Routing IPv6 with IS-IS
+{{{RFC5340}}}: OSPF for IPv6
+{{{RFC5350}}}: IANA Considerations for the IPv4 and IPv6 Router Alert Options
+{{{RFC5380}}}: Hierarchical Mobile IPv6 (HMIPv6) Mobility Management
+{{{RFC5447}}}: Diameter Mobile IPv6: Support for Network Access Server to Diameter Server Interaction
+{{{RFC5453}}}: Reserved IPv6 Interface Identifiers
+{{{RFC5533}}}: Shim6: Level 3 Multihoming Shim Protocol for IPv6
+{{{RFC5534}}}: Failure Detection and Locator Pair Exploration Protocol for IPv6 Multihoming
+{{{RFC5555}}}: Mobile IPv6 Support for Dual Stack Hosts and Routers
+{{{RFC5568}}}: Mobile IPv6 Fast Handovers
+{{{RFC5701}}}: IPv6 Address Specific BGP Extended Community Attribute
+{{{RFC5722}}}: Handling of Overlapping IPv6 Fragments
+{{{RFC5778}}}: Diameter Mobile IPv6: Support for Home Agent to Diameter Server Interaction
+{{{RFC5779}}}: Diameter Proxy Mobile IPv6: Mobile Access Gateway and Local Mobility Anchor Interaction with Diameter Server
+{{{RFC5798}}}: Virtual Router Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6
+{{{RFC5844}}}: IPv4 Support for Proxy Mobile IPv6
+{{{RFC5845}}}: Generic Routing Encapsulation (GRE) Key Option for Proxy Mobile IPv6
+{{{RFC5846}}}: Binding Revocation for IPv6 Mobility
+{{{RFC5847}}}: Heartbeat Mechanism for Proxy Mobile IPv6
+{{{RFC5871}}}: IANA Allocation Guidelines for the IPv6 Routing Header
+{{{RFC5881}}}: Bidirectional Forwarding Detection (BFD) for IPv4 and IPv6 (Single Hop)
+{{{RFC5942}}}: IPv6 Subnet Model: The Relationship between Links and Subnet Prefixes
+{{{RFC5949}}}: Fast Handovers for Proxy Mobile IPv6
+{{{RFC5952}}}: A Recommendation for IPv6 Address Text Representation
+{{{RFC5954}}}: Essential Correction for IPv6 ABNF and URI Comparison in RFC 3261
+{{{RFC5969}}}: IPv6 Rapid Deployment on IPv4 Infrastructures (6rd) -- Protocol Specification
+{{{RFC6052}}}: IPv6 Addressing of IPv4/IPv6 Translators
+{{{RFC6059}}}: Simple Procedures for Detecting Network Attachment in IPv6
+{{{RFC6085}}}: Address Mapping of IPv6 Multicast Packets on Ethernet
+{{{RFC6089}}}: Flow Bindings in Mobile IPv6 and Network Mobility (NEMO) Basic Support
+{{{RFC6119}}}: IPv6 Traffic Engineering in IS-IS
+{{{RFC6146}}}: Stateful NAT64: Network Address and Protocol Translation from IPv6 Clients to IPv4 Servers
+{{{RFC6147}}}: DNS64: DNS Extensions for Network Address Translation from IPv6 Clients to IPv4 Servers
+{{{RFC6157}}}: IPv6 Transition in the Session Initiation Protocol (SIP)
+{{{RFC6164}}}: Using 127-Bit IPv6 Prefixes on Inter-Router Links
+{{{RFC6275}}}: Mobility Support in IPv6
+{{{RFC6282}}}: Compression Format for IPv6 Datagrams over IEEE 802.15.4-Based Networks
+{{{RFC6334}}}: Dynamic Host Configuration Protocol for IPv6 (DHCPv6) Option for Dual-Stack Lite
+{{{RFC6384}}}: An FTP Application Layer Gateway (ALG) for IPv6-to-IPv4 Translation
+{{{RFC6437}}}: IPv6 Flow Label Specification
+{{{RFC6438}}}: Using the IPv6 Flow Label for Equal Cost Multipath Routing and Link Aggregation in Tunnels
+{{{RFC6463}}}: Runtime Local Mobility Anchor (LMA) Assignment Support for Proxy Mobile IPv6
+{{{RFC6475}}}: Proxy Mobile IPv6 Management Information Base
+{{{RFC6515}}}: IPv4 and IPv6 Infrastructure Addresses in BGP Updates for Multicast VPN
+{{{RFC6516}}}: IPv6 Multicast VPN (MVPN) Support Using PIM Control Plane and Selective Provider Multicast Service Interface (S-PMSI) Join Messages
+{{{RFC6543}}}: Reserved IPv6 Interface Identifier for Proxy Mobile IPv6
+{{{RFC6550}}}: RPL: IPv6 Routing Protocol for Low-Power and Lossy Networks
+{{{RFC6554}}}: An IPv6 Routing Header for Source Routes with the Routing Protocol for Low-Power and Lossy Networks (RPL)
+{{{RFC6564}}}: A Uniform Format for IPv6 Extension Headers
+{{{RFC6572}}}: RADIUS Support for Proxy Mobile IPv6
+{{{RFC6602}}}: Bulk Binding Update Support for Proxy Mobile IPv6
+{{{RFC6610}}}: DHCP Options for Home Information Discovery in Mobile IPv6 (MIPv6)
+{{{RFC6611}}}: Mobile IPv6 (MIPv6) Bootstrapping for the Integrated Scenario
+{{{RFC6620}}}: FCFS SAVI: First-Come, First-Served Source Address Validation Improvement for Locally Assigned IPv6 Addresses
+{{{RFC6705}}}: Localized Routing for Proxy Mobile IPv6
+{{{RFC6724}}}: Default Address Selection for Internet Protocol Version 6 (IPv6)
+{{{RFC6757}}}: Access Network Identifier (ANI) Option for Proxy Mobile IPv6
+{{{RFC6775}}}: Neighbor Discovery Optimization for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)
+{{{RFC6874}}}: Representing IPv6 Zone Identifiers in Address Literals and Uniform Resource Identifiers
+{{{RFC6909}}}: IPv4 Traffic Offload Selector Option for Proxy Mobile IPv6
+{{{RFC6911}}}: RADIUS Attributes for IPv6 Access Networks
+{{{RFC6930}}}: RADIUS Attribute for IPv6 Rapid Deployment on IPv4 Infrastructures (6rd)
+{{{RFC6935}}}: IPv6 and UDP Checksums for Tunneled Packets
+{{{RFC6936}}}: Applicability Statement for the Use of IPv6 UDP Datagrams with Zero Checksums
+{{{RFC6946}}}: Processing of IPv6 "Atomic" Fragments
+{{{RFC6980}}}: Security Implications of IPv6 Fragmentation with IPv6 Neighbor Discovery
+{{{RFC7045}}}: Transmission and Processing of IPv6 Extension Headers
+{{{RFC7050}}}: Discovery of the IPv6 Prefix Used for IPv6 Address Synthesis
+{{{RFC7077}}}: Update Notifications for Proxy Mobile IPv6
+{{{RFC7112}}}: Implications of Oversized IPv6 Header Chains
+{{{RFC7136}}}: Significance of IPv6 Interface Identifiers
+{{{RFC7148}}}: Prefix Delegation Support for Proxy Mobile IPv6
+{{{RFC7156}}}: Diameter Support for Proxy Mobile IPv6 Localized Routing
+{{{RFC7217}}}: A Method for Generating Semantically Opaque Interface Identifiers with IPv6 Stateless Address Autoconfiguration (SLAAC)
+{{{RFC7222}}}: Quality-of-Service Option for Proxy Mobile IPv6
+{{{RFC7225}}}: Discovering NAT64 IPv6 Prefixes Using the Port Control Protocol (PCP)
+{{{RFC7343}}}: An IPv6 Prefix for Overlay Routable Cryptographic Hash Identifiers Version 2 (ORCHIDv2)
+{{{RFC7346}}}: IPv6 Multicast Address Scopes
+{{{RFC7371}}}: Updates to the IPv6 Multicast Addressing Architecture
+{{{RFC7388}}}: Definition of Managed Objects for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)
+{{{RFC7389}}}: Separation of Control and User Plane for Proxy Mobile IPv6
+{{{RFC7400}}}: 6LoWPAN-GHC: Generic Header Compression for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)
+{{{RFC7428}}}: Transmission of IPv6 Packets over ITU-T G.9959 Networks
+{{{RFC7506}}}: IPv6 Router Alert Option for MPLS Operations, Administration, and Maintenance (OAM)
+{{{RFC7552}}}: Updates to LDP for IPv6
+{{{RFC7563}}}: Extensions to the Proxy Mobile IPv6 (PMIPv6) Access Network Identifier Option
+{{{RFC7668}}}: IPv6 over BLUETOOTH(R) Low Energy
+{{{RFC7676}}}: IPv6 Support for Generic Routing Encapsulation (GRE)
+{{{RFC7678}}}: Attribute-Value Pairs for Provisioning Customer Equipment Supporting IPv4-Over-IPv6 Transitional Solutions
+{{{RFC7775}}}: IS-IS Route Preference for Extended IP and IPv6 Reachability
+{{{RFC7794}}}: IS-IS Prefix Attributes for Extended IPv4 and IPv6 Reachability
+{{{RFC7864}}}: Proxy Mobile IPv6 Extensions to Support Flow Mobility
+{{{RFC7881}}}: Seamless Bidirectional Forwarding Detection (S-BFD) for IPv4, IPv6, and MPLS
+{{{RFC7949}}}: OSPFv3 over IPv4 for IPv6 Transition
+{{{RFC8025}}}: IPv6 over Low-Power Wireless Personal Area Network (6LoWPAN) Paging Dispatch
+{{{RFC8026}}}: Unified IPv4-in-IPv6 Softwire Customer Premises Equipment (CPE): A DHCPv6-Based Prioritization Mechanism
+{{{RFC8064}}}: Recommendation on Stable IPv6 Interface Identifiers
+{{{RFC8066}}}: IPv6 over Low-Power Wireless Personal Area Network (6LoWPAN) ESC Dispatch Code Points and Guidelines
+{{{RFC8105}}}: Transmission of IPv6 Packets over Digital Enhanced Cordless Telecommunications (DECT) Ultra Low Energy (ULE)
+{{{RFC8106}}}: IPv6 Router Advertisement Options for DNS Configuration
+{{{RFC8114}}}: Delivery of IPv4 Multicast Services to IPv4 Clients over an IPv6 Multicast Network
+{{{RFC8115}}}: DHCPv6 Option for IPv4-Embedded Multicast and Unicast IPv6 Prefixes
+{{{RFC8138}}}: IPv6 over Low-Power Wireless Personal Area Network (6LoWPAN) Routing Header
+{{{RFC8159}}}: Keyed IPv6 Tunnel
+{{{RFC8163}}}: Transmission of IPv6 over Master-Slave/Token-Passing (MS/TP) Networks
+{{{RFC8191}}}: Home Network Prefix Renumbering in Proxy Mobile IPv6 (PMIPv6)
+{{{RFC8200}}}: Internet Protocol, Version 6 (IPv6) Specification
+{{{RFC8215}}}: Local-Use IPv4/IPv6 Translation Prefix
+{{{RFC8250}}}: IPv6 Performance and Diagnostic Metrics (PDM) Destination Option
+{{{RFC8371}}}: Mobile Node Identifier Types for MIPv6
+{{{RFC8415}}}: Dynamic Host Configuration Protocol for IPv6 (DHCPv6)
+{{{RFC8425}}}: IANA Considerations for IPv6 Neighbor Discovery Prefix Information Option Flags
+{{{RFC8505}}}: Registration Extensions for IPv6 over Low-Power Wireless Personal Area Network (6LoWPAN) Neighbor Discovery
+{{{RFC8638}}}: IPv4 Multicast over an IPv6 Multicast in Softwire Mesh Networks
+{{{RFC8676}}}: YANG Modules for IPv4-in-IPv6 Address plus Port (A+P) Softwires
+{{{RFC8691}}}: Basic Support for IPv6 Networks Operating Outside the Context of a Basic Service Set over IEEE Std 802.11
+{{{RFC8754}}}: IPv6 Segment Routing Header (SRH)
+{{{RFC8925}}}: IPv6-Only Preferred Option for DHCPv4
+{{{RFC8929}}}: IPv6 Backbone Router
+{{{RFC8930}}}: On Forwarding 6LoWPAN Fragments over a Multi-Hop IPv6 Network
+{{{RFC8931}}}: IPv6 over Low-Power Wireless Personal Area Network (6LoWPAN) Selective Fragment Recovery
+{{{RFC8950}}}: Advertising IPv4 Network Layer Reachability Information (NLRI) with an IPv6 Next Hop
+{{{RFC8956}}}: Dissemination of Flow Specification Rules for IPv6
+{{{RFC8981}}}: Temporary Address Extensions for Stateless Address Autoconfiguration in IPv6
+{{{RFC8983}}}: Internet Key Exchange Protocol Version 2 (IKEv2) Notification Status Types for IPv4/IPv6 Coexistence
+{{{RFC8986}}}: Segment Routing over IPv6 (SRv6) Network Programming
+{{{RFC9008}}}: Using RPI Option Type, Routing Header for Source Routes, and IPv6-in-IPv6 Encapsulation in the RPL Data Plane
+{{{RFC9034}}}: Packet Delivery Deadline Time in the Routing Header for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)
+{{{RFC9159}}}: IPv6 Mesh over BLUETOOTH(R) Low Energy Using the Internet Protocol Support Profile (IPSP)
+{{{RFC9164}}}: Concise Binary Object Representation (CBOR) Tags for IPv4 and IPv6 Addresses and Prefixes
+{{{RFC9252}}}: BGP Overlay Services Based on Segment Routing over IPv6 (SRv6)
+{{{RFC9259}}}: Operations, Administration, and Maintenance (OAM) in Segment Routing over IPv6 (SRv6)
+{{{RFC9343}}}: IPv6 Application of the Alternate-Marking Method
+{{{RFC9352}}}: IS-IS Extensions to Support Segment Routing over the IPv6 Data Plane
+{{{RFC9354}}}: Transmission of IPv6 Packets over Power Line Communication (PLC) Networks
+
+
+__Best Current Practice__
+
+{{{RFC3901}}}: DNS IPv6 Transport Operational Guidelines
+{{{RFC5855}}}: Nameservers for IPv4 and IPv6 Reverse Zones
+{{{RFC6177}}}: IPv6 Address Assignment to End Sites
+{{{RFC6540}}}: IPv6 Support Required for All IP-Capable Nodes
+{{{RFC7608}}}: IPv6 Prefix Length Recommendation for Forwarding
+{{{RFC8180}}}: Minimal IPv6 over the TSCH Mode of IEEE 802.15.4e (6TiSCH) Configuration
+{{{RFC8421}}}: Guidelines for Multihomed and IPv4/IPv6 Dual-Stack Interactive Connectivity Establishment (ICE)
+{{{RFC8504}}}: IPv6 Node Requirements
+{{{RFC9096}}}: Improving the Reaction of Customer Edge Routers to IPv6 Renumbering Events
+
+__Informational__
+
+{{{RFC1809}}}: Using the Flow Label Field in IPv6
+{{{RFC1881}}}: IPv6 Address Allocation Management
+{{{RFC1887}}}: An Architecture for IPv6 Unicast Address Allocation
+{{{RFC1924}}}: A Compact Representation of IPv6 Addresses
+{{{RFC2185}}}: Routing Aspects of IPv6 Transition
+{{{RFC2375}}}: IPv6 Multicast Address Assignments
+{{{RFC2928}}}: Initial IPv6 Sub-TLA ID Assignments
+{{{RFC3053}}}: IPv6 Tunnel Broker
+{{{RFC3089}}}: A SOCKS-based IPv6/IPv4 Gateway Mechanism
+{{{RFC3142}}}: An IPv6-to-IPv4 Transport Relay Translator
+{{{RFC3178}}}: IPv6 Multihoming Support at Site Exit Routers
+{{{RFC3314}}}: Recommendations for IPv6 in Third Generation Partnership Project (3GPP) Standards
+{{{RFC3363}}}: Representing Internet Protocol version 6 (IPv6) Addresses in the Domain Name System (DNS)
+{{{RFC3364}}}: Tradeoffs in Domain Name System (DNS) Support for Internet Protocol version 6 (IPv6)
+{{{RFC3493}}}: Basic Socket Interface Extensions for IPv6
+{{{RFC3531}}}: A Flexible Method for Managing the Assignment of Bits of an IPv6 Address Block
+{{{RFC3542}}}: Advanced Sockets Application Program Interface (API) for IPv6
+{{{RFC3582}}}: Goals for IPv6 Site-Multihoming Architectures
+{{{RFC3587}}}: IPv6 Global Unicast Address Format
+{{{RFC3701}}}: 6bone (IPv6 Testing Address Allocation) Phaseout
+{{{RFC3750}}}: Unmanaged Networks IPv6 Transition Scenarios
+{{{RFC3756}}}: IPv6 Neighbor Discovery (ND) Trust Models and Threats
+{{{RFC3769}}}: Requirements for IPv6 Prefix Delegation
+{{{RFC3849}}}: IPv6 Address Prefix Reserved for Documentation
+{{{RFC3904}}}: Evaluation of IPv6 Transition Mechanisms for Unmanaged Networks
+{{{RFC3919}}}: Remote Network Monitoring (RMON) Protocol Identifiers for IPv6 and Multi Protocol Label Switching (MPLS)
+{{{RFC4029}}}: Scenarios and Analysis for Introducing IPv6 into ISP Networks
+{{{RFC4038}}}: Application Aspects of IPv6 Transition
+{{{RFC4057}}}: IPv6 Enterprise Network Scenarios
+{{{RFC4074}}}: Common Misbehavior Against DNS Queries for IPv6 Addresses
+{{{RFC4076}}}: Renumbering Requirements for Stateless Dynamic Host Configuration Protocol for IPv6 (DHCPv6)
+{{{RFC4135}}}: Goals of Detecting Network Attachment in IPv6
+{{{RFC4147}}}: Proposed Changes to the Format of the IANA IPv6 Registry
+{{{RFC4177}}}: Architectural Approaches to Multi-homing for IPv6
+{{{RFC4192}}}: Procedures for Renumbering an IPv6 Network without a Flag Day
+{{{RFC4215}}}: Analysis on IPv6 Transition in Third Generation Partnership Project (3GPP) Networks
+{{{RFC4218}}}: Threats Relating to IPv6 Multihoming Solutions
+{{{RFC4219}}}: Things Multihoming in IPv6 (MULTI6) Developers Should Think About
+{{{RFC4241}}}: A Model of IPv6/IPv4 Dual Stack Internet Access Service
+{{{RFC4260}}}: Mobile IPv6 Fast Handovers for 802.11 Networks
+{{{RFC4285}}}: Authentication Protocol for Mobile IPv6
+{{{RFC4339}}}: IPv6 Host Configuration of DNS Server Information Approaches
+{{{RFC4472}}}: Operational Considerations and Issues with IPv6 DNS
+{{{RFC4477}}}: Dynamic Host Configuration Protocol (DHCP): IPv4 and IPv6 Dual-Stack Issues
+{{{RFC4487}}}: Mobile IPv6 and Firewalls: Problem Statement
+{{{RFC4554}}}: Use of VLANs for IPv4-IPv6 Coexistence in Enterprise Networks
+{{{RFC4584}}}: Extension to Sockets API for Mobile IPv6
+{{{RFC4640}}}: Problem Statement for bootstrapping Mobile IPv6 (MIPv6)
+{{{RFC4651}}}: A Taxonomy and Analysis of Enhancements to Mobile IPv6 Route Optimization
+{{{RFC4670}}}: RADIUS Accounting Client MIB for IPv6
+{{{RFC4671}}}: RADIUS Accounting Server MIB for IPv6
+{{{RFC4692}}}: Considerations on the IPv6 Host Density Metric
+{{{RFC4779}}}: ISP IPv6 Deployment Scenarios in Broadband Access Networks
+{{{RFC4852}}}: IPv6 Enterprise Network Analysis - IP Layer 3 Focus
+{{{RFC4864}}}: Local Network Protection for IPv6
+{{{RFC4882}}}: IP Address Location Privacy and Mobile IPv6: Problem Statement
+{{{RFC4891}}}: Using IPsec to Secure IPv6-in-IPv4 Tunnels
+{{{RFC4919}}}: IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs): Overview, Assumptions, Problem Statement, and Goals
+{{{RFC4942}}}: IPv6 Transition/Co-existence Security Considerations
+{{{RFC4943}}}: IPv6 Neighbor Discovery On-Link Assumption Considered Harmful
+{{{RFC4968}}}: Analysis of IPv6 Link Models for 802.16 Based Networks
+{{{RFC5014}}}: IPv6 Socket API for Source Address Selection
+{{{RFC5118}}}: Session Initiation Protocol (SIP) Torture Test Messages for Internet Protocol Version 6 (IPv6)
+{{{RFC5149}}}: Service Selection for Mobile IPv6
+{{{RFC5180}}}: IPv6 Benchmarking Methodology for Network Interconnect Devices
+{{{RFC5181}}}: IPv6 Deployment Scenarios in 802.16 Networks
+{{{RFC5270}}}: Mobile IPv6 Fast Handovers over IEEE 802.16e Networks
+{{{RFC5271}}}: Mobile IPv6 Fast Handovers for 3G CDMA Networks
+{{{RFC5375}}}: IPv6 Unicast Address Assignment Considerations
+{{{RFC5419}}}: Why the Authentication Data Suboption is Needed for Mobile IPv6 (MIPv6)
+{{{RFC5569}}}: IPv6 Rapid Deployment on IPv4 Infrastructures (6rd)
+{{{RFC5570}}}: Common Architecture Label IPv6 Security Option (CALIPSO)
+{{{RFC5637}}}: Authentication, Authorization, and Accounting (AAA) Goals for Mobile IPv6
+{{{RFC5757}}}: Multicast Mobility in Mobile IP Version 6 (MIPv6): Problem Statement and Brief Survey
+{{{RFC5902}}}: IAB Thoughts on IPv6 Network Address Translation
+{{{RFC5963}}}: IPv6 Deployment in Internet Exchange Points (IXPs)
+{{{RFC6018}}}: IPv4 and IPv6 Greynets
+{{{RFC6092}}}: Recommended Simple Security Capabilities in Customer Premises Equipment (CPE) for Providing Residential IPv6 Internet Service
+{{{RFC6097}}}: Local Mobility Anchor (LMA) Discovery for Proxy Mobile IPv6
+{{{RFC6104}}}: Rogue IPv6 Router Advertisement Problem Statement
+{{{RFC6105}}}: IPv6 Router Advertisement Guard
+{{{RFC6127}}}: IPv4 Run-Out and IPv4-IPv6 Co-Existence Scenarios
+{{{RFC6144}}}: Framework for IPv4/IPv6 Translation
+{{{RFC6180}}}: Guidelines for Using IPv6 Transition Mechanisms during IPv6 Deployment
+{{{RFC6214}}}: Adaptation of RFC 1149 for IPv6
+{{{RFC6219}}}: The China Education and Research Network (CERNET) IVI Translation Design and Deployment for the IPv4/IPv6 Coexistence and Transition
+{{{RFC6224}}}: Base Deployment for Multicast Listener Support in Proxy Mobile IPv6 (PMIPv6) Domains
+{{{RFC6264}}}: An Incremental Carrier-Grade NAT (CGN) for IPv6 Transition
+{{{RFC6279}}}: Proxy Mobile IPv6 (PMIPv6) Localized Routing Problem Statement
+{{{RFC6294}}}: Survey of Proposed Use Cases for the IPv6 Flow Label
+{{{RFC6324}}}: Routing Loop Attack Using IPv6 Automatic Tunnels: Problem Statement and Proposed Mitigations
+{{{RFC6342}}}: Mobile Networks Considerations for IPv6 Deployment
+{{{RFC6436}}}: Rationale for Update to the IPv6 Flow Label Specification
+{{{RFC6459}}}: IPv6 in 3rd Generation Partnership Project (3GPP) Evolved Packet System (EPS)
+{{{RFC6568}}}: Design and Application Spaces for IPv6 over Low-Power Wireless Personal Area Networks (6LoWPANs)
+{{{RFC6586}}}: Experiences from an IPv6-Only Network
+{{{RFC6589}}}: Considerations for Transitioning Content to IPv6
+{{{RFC6606}}}: Problem Statement and Requirements for IPv6 over Low-Power Wireless Personal Area Network (6LoWPAN) Routing
+{{{RFC6612}}}: Interactions between Proxy Mobile IPv6 (PMIPv6) and Mobile IPv6 (MIPv6): Scenarios and Related Issues
+{{{RFC6629}}}: Considerations on the Application of the Level 3 Multihoming Shim Protocol for IPv6 (Shim6)
+{{{RFC6654}}}: Gateway-Initiated IPv6 Rapid Deployment on IPv4 Infrastructures (GI 6rd)
+{{{RFC6666}}}: A Discard Prefix for IPv6
+{{{RFC6782}}}: Wireline Incremental IPv6
+{{{RFC6866}}}: Problem Statement for Renumbering IPv6 Hosts with Static Addresses in Enterprise Networks
+{{{RFC6879}}}: IPv6 Enterprise Network Renumbering Scenarios, Considerations, and Methods
+{{{RFC6883}}}: IPv6 Guidance for Internet Content Providers and Application Service Providers
+{{{RFC6948}}}: Some Measurements on World IPv6 Day from an End-User Perspective
+{{{RFC6964}}}: Operational Guidance for IPv6 Deployment in IPv4 Sites Using the Intra-Site Automatic Tunnel Addressing Protocol (ISATAP)
+{{{RFC6992}}}: Routing for IPv4-Embedded IPv6 Packets
+{{{RFC7010}}}: IPv6 Site Renumbering Gap Analysis
+{{{RFC7040}}}: Public IPv4-over-IPv6 Access Network
+{{{RFC7059}}}: A Comparison of IPv6-over-IPv4 Tunnel Mechanisms
+{{{RFC7066}}}: IPv6 for Third Generation Partnership Project (3GPP) Cellular Hosts
+{{{RFC7084}}}: Basic Requirements for IPv6 Customer Edge Routers
+{{{RFC7098}}}: Using the IPv6 Flow Label for Load Balancing in Server Farms
+{{{RFC7113}}}: Implementation Advice for IPv6 Router Advertisement Guard (RA-Guard)
+{{{RFC7123}}}: Security Implications of IPv6 on IPv4 Networks
+{{{RFC7157}}}: IPv6 Multihoming without Network Address Translation
+{{{RFC7278}}}: Extending an IPv6 /64 Prefix from a Third Generation Partnership Project (3GPP) Mobile Interface to a LAN Link
+{{{RFC7368}}}: IPv6 Home Networking Architecture Principles
+{{{RFC7381}}}: Enterprise IPv6 Deployment Guidelines
+{{{RFC7404}}}: Using Only Link-Local Addressing inside an IPv6 Network
+{{{RFC7421}}}: Analysis of the 64-bit Boundary in IPv6 Addressing
+{{{RFC7439}}}: Gap Analysis for Operating IPv6-Only MPLS Networks
+{{{RFC7445}}}: Analysis of Failure Cases in IPv6 Roaming Scenarios
+{{{RFC7511}}}: Scenic Routing for IPv6
+{{{RFC7561}}}: Mapping Quality of Service (QoS) Procedures of Proxy Mobile IPv6 (PMIPv6) and WLAN
+{{{RFC7707}}}: Network Reconnaissance in IPv6 Networks
+{{{RFC7721}}}: Security and Privacy Considerations for IPv6 Address Generation Mechanisms
+{{{RFC7755}}}: SIIT-DC: Stateless IP/ICMP Translation for IPv6 Data Center Environments
+{{{RFC7756}}}: Stateless IP/ICMP Translation for IPv6 Internet Data Center Environments (SIIT-DC): Dual Translation Mode
+{{{RFC7849}}}: An IPv6 Profile for 3GPP Mobile Devices
+{{{RFC7872}}}: Observations on the Dropping of Packets with IPv6 Extension Headers in the Real World
+{{{RFC7943}}}: A Method for Generating Semantically Opaque Interface Identifiers (IIDs) with the Dynamic Host Configuration Protocol for IPv6 (DHCPv6)
+{{{RFC7973}}}: Assignment of an Ethertype for IPv6 with Low-Power Wireless Personal Area Network (LoWPAN) Encapsulation
+{{{RFC8021}}}: Generation of IPv6 Atomic Fragments Considered Harmful
+{{{RFC8043}}}: Source-Address-Dependent Routing and Source Address Selection for IPv6 Hosts: Overview of the Problem Space
+{{{RFC8065}}}: Privacy Considerations for IPv6 Adaptation-Layer Mechanisms
+{{{RFC8096}}}: The IPv6-Specific MIB Modules Are Obsolete
+{{{RFC8136}}}: Additional Transition Functionality for IPv6
+{{{RFC8219}}}: Benchmarking Methodology for IPv6 Transition Technologies
+{{{RFC8273}}}: Unique IPv6 Prefix per Host
+{{{RFC8354}}}: Use Cases for IPv6 Source Packet Routing in Networking (SPRING)
+{{{RFC8369}}}: Internationalizing IPv6 Using 128-Bit Unicode
+{{{RFC8468}}}: IPv4, IPv6, and IPv4-IPv6 Coexistence: Updates for the IP Performance Metrics (IPPM) Framework
+{{{RFC8501}}}: Reverse DNS in IPv6 for Internet Service Providers
+{{{RFC8585}}}: Requirements for IPv6 Customer Edge Routers to Support IPv4-as-a-Service
+{{{RFC8678}}}: Enterprise Multihoming using Provider-Assigned IPv6 Addresses without Network Prefix Translation: Requirements and Solutions
+{{{RFC8978}}}: Reaction of IPv6 Stateless Address Autoconfiguration (SLAAC) to Flash-Renumbering Events
+{{{RFC8992}}}: Autonomic IPv6 Edge Prefix Management in Large-Scale Networks
+{{{RFC9030}}}: An Architecture for IPv6 over the Time-Slotted Channel Hopping Mode of IEEE 802.15.4 (6TiSCH)
+{{{RFC9098}}}: Operational Implications of IPv6 Packets with Extension Headers
+{{{RFC9099}}}: Operational Security Considerations for IPv6 Networks
+{{{RFC9288}}}: Recommendations on the Filtering of IPv6 Packets Containing IPv6 Extension Headers at Transit Routers
+{{{RFC9313}}}: Pros and Cons of IPv6 Transition Technologies for IPv4-as-a-Service (IPv4aaS)
+{{{RFC9365}}}: IPv6 Wireless Access in Vehicular Environments (IPWAVE): Problem Statement and Use Cases
+{{{RFC9386}}}: IPv6 Deployment Status
+
+__Experimental__
+
+{{{RFC4620}}}: IPv6 Node Information Queries
+{{{RFC5514}}}: IPv6 over Social Networks
+{{{RFC5572}}}: IPv6 Tunnel Broker with the Tunnel Setup Protocol (TSP)
+{{{RFC5726}}}: Mobile IPv6 Location Privacy Solutions
+{{{RFC5739}}}: IPv6 Configuration in Internet Key Exchange Protocol Version 2 (IKEv2)
+{{{RFC6058}}}: Transient Binding for Proxy Mobile IPv6
+{{{RFC6296}}}: IPv6-to-IPv6 Network Prefix Translation
+{{{RFC6618}}}: Mobile IPv6 Security Framework Using Transport Layer Security for Communication between the Mobile Node and Home Agent
+{{{RFC6743}}}: ICMP Locator Update Message for the Identifier-Locator Network Protocol for IPv6 (ILNPv6)
+{{{RFC6744}}}: IPv6 Nonce Destination Option for the Identifier-Locator Network Protocol for IPv6 (ILNPv6)
+{{{RFC6751}}}: Native IPv6 behind IPv4-to-IPv4 NAT Customer Premises Equipment (6a44)
+{{{RFC7028}}}: Multicast Mobility Routing Optimizations for Proxy Mobile IPv6
+{{{RFC7109}}}: Flow Bindings Initiated by Home Agents for Mobile IPv6
+{{{RFC7161}}}: Proxy Mobile IPv6 (PMIPv6) Multicast Handover Optimization by the Subscription Information Acquisition through the LMA (SIAL)
+{{{RFC7287}}}: Mobile Multicast Sender Support in Proxy Mobile IPv6 (PMIPv6) Domains
+{{{RFC7411}}}: Multicast Listener Extensions for Mobile IPv6 (MIPv6) and Proxy Mobile IPv6 (PMIPv6) Fast Handovers
+{{{RFC7417}}}: Extensions to Generic Aggregate RSVP for IPv4 and IPv6 Reservations over Pre-Congestion Notification (PCN) Domains
+{{{RFC7600}}}: IPv4 Residual Deployment via IPv6 - A Stateless Solution (4rd)
+{{{RFC7837}}}: IPv6 Destination Option for Congestion Exposure (ConEx)
+{{{RFC8135}}}: Complex Addressing in IPv6
+{{{RFC8885}}}: Proxy Mobile IPv6 Extensions for Distributed Mobility Management
+{{{RFC9229}}}: IPv4 Routes with an IPv6 Next Hop in the Babel Routing Protocol
+{{{RFC9268}}}: IPv6 Minimum Path MTU Hop-by-Hop Option
+
+
+<!-- Link lines generated automatically; do not delete -->
+### [<ins>Chapter Contents</ins>](20.%20Further%20Reading.md)
