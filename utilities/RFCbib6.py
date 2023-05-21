@@ -3,7 +3,7 @@
 
 """Build IPv6 RFC bibliography"""
 
-# Version: 2023-05-21 - original
+# Version: 2023-05-23 - original
 
 
 ########################################################
@@ -181,7 +181,16 @@ showinfo(title=T,
 try:
     whole = rf("C:/brian/docs/IETF stuff/rfc/rfc-index.xml")
 except:
-    crash("rfc-index.xml not found")
+    try:
+        if askyesno(title=T, message = "OK to download RFC index?/n(15 MB temp file)"):
+            import urllib.request
+            urllib.request.urlretrieve("http://www.rfc-editor.org/rfc/rfc-index.xml", "tempRx.xml")
+            whole = rf("tempRx.xml")
+            os.remove("tempRx.xml")
+        else:
+            crash("Cannot run without RFC index")
+    except:
+        crash("rfc-index.xml not found")
     
 timestamp = time.strftime("%Y-%m-%d %H:%M:%S UTC%z",time.localtime())
 
