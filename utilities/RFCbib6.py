@@ -178,8 +178,11 @@ logit("Running in directory "+ os.getcwd())
 
 showinfo(title=T,
          message = "Will read complete RFC bibliography.\nTouch no files until done!")
-
-whole = rf("C:/brian/docs/IETF stuff/rfc/rfc-index.xml")
+try:
+    whole = rf("C:/brian/docs/IETF stuff/rfc/rfc-index.xml")
+except:
+    crash("rfc-index.xml not found")
+    
 timestamp = time.strftime("%Y-%m-%d %H:%M:%S UTC%z",time.localtime())
 
 for line in whole:
