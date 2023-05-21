@@ -1,6 +1,10 @@
 ## RFC bibliography
 
-This section is a machine-generated list of all current RFCs that mention IPv6 in their title. Obsolete RFCs are not included. Be *cautious* about old Informational or Experimental RFCs - they may be misleading as well as out of date.
+This section is a machine-generated list of all current RFCs that mention
+IPv6 in their title. Obsolete RFCs are not included. Be *cautious* about old
+Informational or Experimental RFCs - they may be misleading as well as out of date.
+
+RFCbib6 run at 2023-05-21 14:22:57 UTC+1200
 
 __Standards Track__
 
@@ -208,7 +212,6 @@ __Standards Track__
 - [RFC9352](https://www.rfc-editor.org/info/rfc9352): IS-IS Extensions to Support Segment Routing over the IPv6 Data Plane
 - [RFC9354](https://www.rfc-editor.org/info/rfc9354): Transmission of IPv6 Packets over Power Line Communication (PLC) Networks
 
-
 __Best Current Practice__
 
 - [RFC3901](https://www.rfc-editor.org/info/rfc3901): DNS IPv6 Transport Operational Guidelines
@@ -406,7 +409,6 @@ __Experimental__
 - [RFC8885](https://www.rfc-editor.org/info/rfc8885): Proxy Mobile IPv6 Extensions for Distributed Mobility Management
 - [RFC9229](https://www.rfc-editor.org/info/rfc9229): IPv4 Routes with an IPv6 Next Hop in the Babel Routing Protocol
 - [RFC9268](https://www.rfc-editor.org/info/rfc9268): IPv6 Minimum Path MTU Hop-by-Hop Option
-
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Chapter Contents</ins>](20.%20Further%20Reading.md)
