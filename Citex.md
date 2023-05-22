@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-05-19 13:35:59 UTC+1200
+Generated at 2023-05-22 15:04:09 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -10,6 +10,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [BCP198 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
+
+[BCP202 ●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 
 [BCP220 ●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
@@ -258,6 +260,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC7775 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
+[RFC781 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+
 [RFC7849 ●](./4.%20Security/Layer%202%20considerations.md)
 
 [RFC7872 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
@@ -295,6 +299,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
 [RFC8376 ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+[●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 
 [RFC8415 ●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 
@@ -310,11 +315,19 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8684 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
+[RFC8724 ●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
+
 [RFC8754 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+
+[RFC8781 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 
 [RFC8837 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 
+[RFC8880 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+
 [RFC8899 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+
+[RFC8925 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 
 [RFC8928 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 

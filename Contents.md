@@ -52,6 +52,7 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 * Routing operation
 * Security operation
 * Multi-prefix operation
+* Energy consumption
 
 [7. Case Studies](7.%20Case%20Studies/7.%20Case%20Studies.md)
 
