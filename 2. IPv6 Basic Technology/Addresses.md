@@ -2,44 +2,51 @@
 
 A 128 bit address is big enough that, assuming the adoption of wise allocation policies, IPv6 will never run out of addresses. However, the reason for choosing 128 rather than 64 was not just that: it was also to allow for some intrinsic structure to addresses, as described below. On the other hand, a *fundamental* property of IPv6 unicast routing is that it is [based on all 128 bits](http://www.rfc-editor.org/info/bcp198), regardless of any internal structure. In other words, a unicast routing prefix is anywhere between 1 and 128 bits long. There is more about [routing](Routing.md) below.
 
-The IPv6 addressing architecture is defined by [RFC4291](http://www.rfc-editor.org/info/rfc4291), which has not been fundamentally revised since 2006, although there are a number of RFCs that partially update it. 
+The IPv6 addressing architecture is defined by [RFC4291](http://www.rfc-editor.org/info/rfc4291), which has not been fundamentally revised since 2006, although there are a number of RFCs that partially update it.
 
 ### Notation
 
 We'll first introduce the notation for writing down IPv6 addresses, and then use that notation to explain the main features.
 
-The only feasible way to write down 128 bit addresses is in hexadecimal. There's no doubt this is less convenient than the decimal notation used for IPv4, but that's unavoidable. Despite what you may see in older RFCs, [the recommendation today](https://www.rfc-editor.org/info/rfc5952) is to use lower-case letters for hexadecimal. Thus a basic example of the notation is:
+The only feasible way to write down 128 bit addresses is in hexadecimal. There's
+no doubt this is less convenient than the decimal notation used for IPv4, but
+that's unavoidable. Despite what you may see in older RFCs, [the recommendation
+by RFC5952 today](https://www.rfc-editor.org/info/rfc5952) is to use lower-case letters for hexadecimal. Thus a basic example of the notation is:
 
 ~~~
-6789:abcd:ef01:2345:6789:abcd:ef01:2345
+2001:0db8:ef01:2345:6789:abcd:ef01:2345
 ~~~
 
-In that example, there are 8 groups of 4 hexadecimal digits, to specify all 128 bits in 16 bit chunks. In conventional hexadecimal notation, that would be `0x6789abcdef0123456789abcdef012345`. The colons (':') are there to help the reader.
+In that example, there are 8 groups of 4 hexadecimal digits, to specify all 128
+bits in 16 bit chunks. In conventional hexadecimal notation, that would be
+`0x20010db8ef0123456789abcdef012345`. The colons (':') are there to help the reader.
 
 In each chunk of 16 bits, leading zeros are dropped, so we write:
 ~~~
-6789:abcd:ef01:45:6789:abcd:ef01:2345
+2001:db8:ef01:45:6789:abcd:ef01:2345
 ~~~
 
 **not**:
 
 ~~~
-6789:abcd:ef01:0045:6789:abcd:ef01:2345
+2001:0db8:ef01:0045:6789:abcd:ef01:2345
 ~~~
 
 There is often a run of zero bytes in an IPv6 address. One such run can be replaced by a double colon ('::') so that we write:
 
 ~~~
-6789:abcd::6789:abcd:ef01:2345
+2001:db8::6789:abcd:ef01:2345
 ~~~
 
 **not**:
 
 ~~~
-6789:abcd:0:0:6789:abcd:ef01:2345
+2001:db8:0:0:6789:abcd:ef01:2345
 ~~~
 
-The idea is that IPv6 addresses should be cut-and-pasted in almost all cases. If you ever do have to enter one manually, a great deal of care is needed.
+The idea is that IPv6 addresses should be cut-and-pasted in almost all cases. If
+you ever do have to enter one manually, a great deal of care is needed. Note
+that not all implementations will follow RFC9592.
 
 The choice of ':' as the separator is annoying in one particular case - when including an IPv6 address in a Web URL, where a colon has another meaning. That's why IPv6 addresses in URLs are in square brackets like this:
 
@@ -204,7 +211,7 @@ Special-purpose IPv6 addresses and their registry are described in [RFC6890](htt
 
  - A format known as "IPv4-Compatible IPv6" addresses was made obsolete by [RFC4291](https://www.rfc-editor.org/info/rfc4291).
 
- - Address prefixes previously allocated for special use are mentioned in the [unicast address registry](https://www.iana.org/assignments/ipv6-unicast-address-assignments/ipv6-unicast-address-assignments.xhtml). 
+ - Address prefixes previously allocated for special use are mentioned in the [unicast address registry](https://www.iana.org/assignments/ipv6-unicast-address-assignments/ipv6-unicast-address-assignments.xhtml).
 
 <!-- Link lines generated automatically; do not delete -->
 ### [<ins>Previous</ins>](Packet%20Format.md) [<ins>Next</ins>](Layer%202%20functions.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
