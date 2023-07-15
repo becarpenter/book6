@@ -60,7 +60,9 @@ https://[2001:db8:4006:80b::200e]:443
 
 The unspecified IPv6 address is simply zero, represented as `::`.
 
-The loopback IPv6 address is 1, represented as `::1`.
+The loopback IPv6 address is 1, represented as `::1`. Note that IPv6 only has
+one looback address whereas IPv4 has `127.0.0.0/8` reserved for looback
+addressing.
 
 ### Routeable unicast addresses
 
