@@ -48,10 +48,12 @@ The idea is that IPv6 addresses should be cut-and-pasted in almost all cases. If
 you ever do have to enter one manually, a great deal of care is needed. Note
 that not all implementations will follow RFC9592.
 
-The choice of ':' as the separator is annoying in one particular case - when including an IPv6 address in a Web URL, where a colon has another meaning. That's why IPv6 addresses in URLs are in square brackets like this:
+The choice of ':' as the separator is annoying in one particular case - when
+including an IPv6 address in a (Web) URL, where a colon has another meaning and
+works as a separator between address and port. That's why IPv6 addresses in URLs are in square brackets like this:
 
 ~~~
-https://[2001:db8:4006:80b::200e]
+https://[2001:db8:4006:80b::200e]:443
 ~~~
 
 ### Easy addresses
