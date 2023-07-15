@@ -123,6 +123,10 @@ have all of the following simultaneously:
  - A fixed ULA used for transactions within the enterprise
  - A second fixed GUA under a different prefix, with a DNS entry, for backup
 
+You may see multiple temporary GUA addresses with random IID when you have some
+long-running TCP sessions e.g. ssh and your OS created new addresses while the
+session(s) where up and running.
+
 However, making the last two settings work smoothly can be challenging and is discussed in [6. Multi-prefix operation](../6.%20Management%20and%20Operations/Multi-prefix%20operation.md).
 
 ### Anycast addresses
