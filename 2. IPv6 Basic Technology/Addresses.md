@@ -81,8 +81,8 @@ https://[2001:db8:4006:80b::200e]:443
 The unspecified IPv6 address is simply zero, represented as `::`.
 
 The loopback IPv6 address is 1, represented as `::1`. Note that IPv6
-only has one looback address whereas IPv4 has `127.0.0.0/8` reserved for
-looback addressing.
+only has one loopback address whereas IPv4 has `127.0.0.0/8` reserved for
+loopback addressing.
 
 ### Routeable unicast addresses
 
@@ -192,11 +192,11 @@ simultaneously:
   backup
 
 You may see multiple temporary GUA addresses with random IID when you
-have some long-running TCP sessions e.g. ssh and your OS created new
-addresses while the session(s) where up and running.
+have some long-running TCP sessions, e.g. ssh, and your system created new
+addresses while the session(s) were up and running.
 
-However, making the last two settings work smoothly can be challenging
-and is discussed in
+However, making the last two settings (GUA plus ULA, or two GUA prefixes)
+work smoothly can be challenging and is discussed in
 [6. Multi-prefix operation](../6.%20Management%20and%20Operations/Multi-prefix%20operation.md).
 
 ### Anycast addresses
