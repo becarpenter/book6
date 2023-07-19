@@ -62,7 +62,7 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 * Deployment in the home
 * Deployment in the enterprise
 
-[9. Troubleshooting](9.%20Troubleshooting.md)
+[9. Troubleshooting](9.%20Troubleshooting/9.%20Troubleshooting.md)
 
 [20. Further Reading](20.%20Further%20Reading/20.%20Further%20Reading.md)
 * RFC bibliography
