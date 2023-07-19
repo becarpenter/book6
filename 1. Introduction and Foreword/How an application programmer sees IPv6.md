@@ -27,20 +27,20 @@ When developing IPv6 enabled applications, keep in mind that IPv6
 addresses are longer and look different than IPv4 addresses. This may
 sound obvious, but the past has shown that these are two of the most
 common problems, especially when you store IPv6 addresses in a database
-or have an existing input field in your application that is too small. Also,
-regular expressions for validating IP addresses are different. As you
-will learn later in this book there are different types of IPv6
+or have an existing input field in your application that is too small.
+Also, regular expressions for validating IP addresses are different. As
+you will learn later in this book there are different types of IPv6
 addresses and several ways to write them. Make sure your application
 does only accept the correct type of addresses and is also not too
 strict and only accepts one format. Users want to use copy-and-paste or
 automation and the input format of an IP address may not always be what
 your application expects. Always remember: "Be conservative in what you
 do, be liberal in what you accept from others". And it's probably always
-a good idea not to reinvent the wheel but use library functions that your
-programming language of choice provides, e.g. the `ipaddress` module for
-Python. And please don't hard-code IP addresses of any kind in your
-code. Always make them configurable and if possible use FQDNs (DNS
-names) instead of IP addresses.
+a good idea not to reinvent the wheel but use library functions that
+your programming language of choice provides, e.g. the `ipaddress`
+module for Python. And please don't hard-code IP addresses of any kind
+in your code. Always make them configurable and if possible use FQDNs
+(DNS names) instead of IP addresses.
 
 Address types are discussed further in
 [2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md). How

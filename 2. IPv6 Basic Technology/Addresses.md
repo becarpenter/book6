@@ -64,8 +64,8 @@ be replaced by a double colon ('::') so that we write:
 
 The idea is that IPv6 addresses should be cut-and-pasted in almost all
 cases. If you ever do have to enter one manually, a great deal of care
-is needed. Note that not all implementations will strictly follow RFC9592,
-and older documentation often uses uppercase hexadecimal.
+is needed. Note that not all implementations will strictly follow
+RFC9592, and older documentation often uses uppercase hexadecimal.
 
 The choice of ':' as the separator is annoying in one particular case -
 when including an IPv6 address in a (Web) URL, where a colon has another
@@ -81,8 +81,8 @@ https://[2001:db8:4006:80b::200e]:443
 The unspecified IPv6 address is simply zero, represented as `::`.
 
 The loopback IPv6 address is 1, represented as `::1`. Note that IPv6
-only has one loopback address whereas IPv4 has `127.0.0.0/8` reserved for
-loopback addressing.
+only has one loopback address whereas IPv4 has `127.0.0.0/8` reserved
+for loopback addressing.
 
 ### Routeable unicast addresses
 
@@ -192,11 +192,11 @@ simultaneously:
   backup
 
 You may see multiple temporary GUA addresses with random IID when you
-have some long-running TCP sessions, e.g. ssh, and your system created new
-addresses while the session(s) were up and running.
+have some long-running TCP sessions, e.g. ssh, and your system created
+new addresses while the session(s) were up and running.
 
-However, making the last two settings (GUA plus ULA, or two GUA prefixes)
-work smoothly can be challenging and is discussed in
+However, making the last two settings (GUA plus ULA, or two GUA
+prefixes) work smoothly can be challenging and is discussed in
 [6. Multi-prefix operation](../6.%20Management%20and%20Operations/Multi-prefix%20operation.md).
 
 ### Anycast addresses
