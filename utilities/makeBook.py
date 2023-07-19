@@ -22,6 +22,9 @@ and inter-chapter links as far as possible."""
 # Version: 2023-01-10 - fix bug when adding new chapter name to Contents.md
 #                     - enormous simplification of Contents creation
 # Version: 2023-05-20 - skip on-line check for RFC bibliography
+# Version: 2023-07-18 - apply mdformat to changed files
+#                     - add global mdformat option
+#                     - add mitigations for SSL certs for URL checking
 
 ########################################################
 # Copyright (C) 2022-2023 Brian E. Carpenter.                  
@@ -70,7 +73,15 @@ from tkinter.messagebox import askokcancel, askyesno, showinfo
 import time
 import os
 import urllib.request
+import ssl
+import certifi
 
+try:
+    import mdformat
+    formatter = True
+except:
+    formatter = False
+    
 def logit(msg):
     """Add a message to the log file"""
     global flog, printing
@@ -116,6 +127,9 @@ def wf(f,l):
         file.write(line)
     file.close()
     logit("'"+f+"' written")
+    if formatter and f.endswith(".md"):
+        mdformat.file(f, options={"wrap":72})
+        logit("'"+f+"' md formatted")
     written +=1 
 
 def uncase(l):
@@ -161,10 +175,13 @@ link_warn = "<!-- Link lines generated automatically; do not delete -->\n"
 
 def url_ok(url):
     """Check if a URL is OK"""
+    global headers, context
+    request = urllib.request.Request(url, headers=headers)
     try:
-        response = urllib.request.urlopen(url).getcode()
-    except:
-        return False  #URL doesn't exist
+        response = urllib.request.urlopen(request, context=context, timeout=30).getcode()
+    except Exception as E:
+        #logitw(url+": "+str(E))    
+        return False  #URL doesn't work
     return response==200
 
 def rfc_ok(s):
@@ -174,13 +191,14 @@ def rfc_ok(s):
         return True  #because we can't check on line right now
     dprint("Checking", s)
     if s[:3] == "BCP" or s[:3] == "STD":
-        url = 'https://www.rfc-editor.org/refs/ref-'+s.lower()+'.txt'
-    elif s[:3] == "RFC":
-        s = s.replace('RFC','RFC.')
-        url = 'https://www.rfc-editor.org/refs/bibxml/reference.'+s+'.xml'
+        url = 'https://www.rfc-editor.org/refs/ref-'+s.lower()+'.txt' 
+    elif s[:3] == "RFC":       
+        s = "RFC."+s[3:].zfill(4)
+        url = 'https://bib.ietf.org/public/rfc/bibxml/reference.'+s+'.xml'
     else:
         return(False)  #invalid call
     return url_ok(url)
+
 
 def draft_ok(s):
     """Check if a draft is real"""
@@ -302,6 +320,18 @@ base_names = []  # the section names extracted from the base file
 warnings = 0     # counts warnings in the log file
 written = 0      # counts files written
 
+#Horrible hack to avoid spurious 403 errors on redirected URLs
+# - we pretend to be a browser. Thank you StackOverflow!
+
+headers = {}
+_s = 'Mozilla/5.0 (X11; Linux i686) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.27 Safari/537.17'
+headers['User-Agent'] = _s
+
+#Ensure certificates available. Again, thank you StackOverflow!
+
+#print("CA file", certifi.where())
+context = ssl.create_default_context(cafile=certifi.where())
+
 #Announce
 
 Tk().withdraw() # we don't want a full GUI
@@ -323,6 +353,15 @@ logit("makeBook run at "
 
 logit("Running in directory "+ os.getcwd())
 
+if not formatter:
+    logitw("No markdown formatting (mdformat not imported)")
+else:
+    formatting = askyesno(title=T,
+                    message = "Rarely needed option!\nRun md formatter on all files?",
+                    default='no')
+if formatting:
+    logit("User requested mdformat on all files.")
+
 
 showinfo(title=T,
          message = "Will read in current contents.\nChecking new references can be slow.\nTouch no files until done!")
@@ -337,6 +376,15 @@ if not rfcs_checkable:
 drafts_checkable = url_ok("https://bib.ietf.org")
 if not drafts_checkable:
     logitw("Cannot check drafts' existence on-line")
+
+### For testing on-line existence checks
+##print("RFC8200:",rfc_ok("RFC8200"))
+##print("RFC9999:",rfc_ok("RFC9999"))
+##print("BCP97:",rfc_ok("BCP97"))
+##print("BCP9876:",rfc_ok("BCP9876"))
+##print("STD24:",rfc_ok("STD24"))
+##print("STD9875:",rfc_ok("STD9875"))
+      
 
 ######### Read previous contents
 
@@ -491,7 +539,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                     file_names.append(topic)
                     u_file_names = uncase(file_names)
               
-        if base_changed:
+        if base_changed or formatting :
             wf(dname+"/"+dname+".md", base)
 
         #Now fixup link lines in section files. The only safe way
@@ -549,13 +597,13 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                 section.append(link_line)
                 section_changed = True
                 
-            if section_changed:
+            if section_changed or formatting:
                 wf(dname+"/"+topic_file+".md", section)
 
         #Expand citations for chapter base file itself
         section = rf(dname+"/"+dname+".md")
         topic_file = dname #used by expand_cites()
-        if expand_cites():
+        if expand_cites() or formatting:
             wf(dname+"/"+dname+".md", section)
                     
 ######### Rewrite contents
