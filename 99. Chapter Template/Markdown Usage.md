@@ -8,7 +8,12 @@ formatting.
 And don't forget, a separate .md file for each new section in any
 chapter of the book.
 
-Web references can be done in basic Markdown form, i.e.:
+For some markdown editing tools, flowed text with no line breaks
+is a nuisance. Preferably, wrap the text at ~72 characters.
+makeBook will do this whenever it needs to write a file back,
+using the `mdformat` tool.
+
+Web references can be done in basic markdown form, i.e.:
 
 ```
   [text](URL)               to refer to any valid URL
