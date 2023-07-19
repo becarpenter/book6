@@ -3,4 +3,5 @@
 Section text goes here
 
 <!-- Link lines generated automatically; do not delete -->
-### [<ins>Next</ins>](Section%20Template.md) [<ins>Chapter Contents</ins>](99.%20Chapter%20Template.md)
+
+### [<ins>Previous</ins>](Advanced%20Troubleshooting.md) [<ins>Chapter Contents</ins>](9.%20Troubleshooting.md)

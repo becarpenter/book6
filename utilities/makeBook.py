@@ -22,7 +22,7 @@ and inter-chapter links as far as possible."""
 # Version: 2023-01-10 - fix bug when adding new chapter name to Contents.md
 #                     - enormous simplification of Contents creation
 # Version: 2023-05-20 - skip on-line check for RFC bibliography
-# Version: 2023-07-18 - apply mdformat to changed files
+# Version: 2023-07-19 - apply mdformat to changed files
 #                     - add global mdformat option
 #                     - add mitigations for SSL certs for URL checking
 
@@ -119,7 +119,7 @@ def rf(f):
     return l
 
 
-def wf(f,l):
+def wf(f,l, mdf = True):
     """Write list of strings to file"""
     global written
     file = open(f, "w",encoding='utf-8')
@@ -127,7 +127,7 @@ def wf(f,l):
         file.write(line)
     file.close()
     logit("'"+f+"' written")
-    if formatter and f.endswith(".md"):
+    if mdf and formatter and f.endswith(".md"):
         mdformat.file(f, options={"wrap":72})
         logit("'"+f+"' md formatted")
     written +=1 
@@ -617,7 +617,7 @@ for i in range(1,len(contents)):
         contents[i] += "\n"
     
 #and write it back                   
-wf("Contents.md", contents)
+wf("Contents.md", contents, mdf=False)
         
              
 ######### Close log and exit
