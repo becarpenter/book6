@@ -44,9 +44,10 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 * Topology obfuscation
 
 [5. Network Design](5.%20Network%20Design/5.%20Network%20Design.md)
+* Address Planning
 
 [6. Management and Operations](6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
-* Address planning and management
+* Address and Prefix Management
 * Remote configuration
 * Benchmarking and monitoring
 * Routing operation
