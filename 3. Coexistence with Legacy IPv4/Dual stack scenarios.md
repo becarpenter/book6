@@ -63,19 +63,20 @@ a particular application.
 ### IPv6-Mostly Networks
 
 With the standardization of
-[RFC8925](https://datatracker.ietf.org/doc/rfc8925/) there now exists a
+[RFC8925](https://www.rfc-editor.org/info/rfc8925/) 
+("IPv6-Only Preferred Option for DHCPv4") there now exists a
 supportable, standard mechanism for gracefully migrating off of legacy
 IP while preserving access for systems and network stacks that either do
-not support IPv6 or only support dual-stack (i.e. systems that do not
-support 464XLAT by enabling a CLAT client automatically, or are
+not support IPv6 or only support classical dual-stack. (Such systems do
+not automatically support the 464XLAT technique described below, or are
 otherwise unable to operate without legacy IPv4 for application or
-internal operating system requrements). What IPv6-mostly provides is a
+internal operating system requirements). What IPv6-mostly provides is a
 low risk mode of converting legacy IPv4 or existing dual stack networks
 to IPv6-only in a very measured manner. By leveraging the
 IPv6-only-preferred option for legacy IPv4 (DHCP option 108) an operator
 is able to signal via a network protocol that is likely already in use
-(DHCPv4) that the network is able to support IPv6-only mechanisms if the
-host is capable of utilizing them. Conversely, if a device does not
+(DHCP for IPv4) that the network is able to support IPv6-only mechanisms
+if the host is capable of utilizing them. Conversely, if a device does not
 implement and understand DHCP option 108, they happily move on with a
 dual-stack IPv4/IPv6 experience, again, with no user intervention.
 
@@ -100,12 +101,11 @@ This controlled and deliberate migration allows the operating system to
 decide how much or how little it can support without needed input from
 the user, making the network fit the capabilities of the host, thus
 lowering the risk of incompatibility (and lowering the rate of problem
-reports). Like most existing IPv6-only networks, IPv6-mostly will still
-require a PLAT / NAT64 system as well as a DNS64 service in order to
-communicate with legacy IP resources. Additionally, the use of pref64
-[RFC781](https://datatracker.ietf.org/doc/html/rfc8781) or
-[RFC8880](https://datatracker.ietf.org/doc/html/rfc8880) is also
-required for activation of the full suite of capabilities.
+reports). Like most existing IPv6-only networks, IPv6-mostly will 
+nevertheless require packet and DNS translation services (discussed
+later) as well as knowledge of the IPv6 prefix used for translation
+(also discussed later). With these features suppported, hosts
+on an IPv6-mostly network will have a full suite of capabilities.
 
 ### The need for IPv4 as a service
 
@@ -161,13 +161,13 @@ started this process, as in the case of
 and
 [EE](https://indico.uknof.org.uk/event/38/contributions/489/attachments/612/736/Nick_Heatley_EE_IPv6_UKNOF_20170119.pdf).
 
-[RFC9313](https://www.rfc-editor.org/rfc/rfc9313) compares the merits of
+[RFC9313](https://www.rfc-editor.org/info/rfc9313) compares the merits of
 the most common IPv6 transition solutions, i.e. 464XLAT
-\[[RFC6877](https://www.rfc-editor.org/rfc/rfc6877)\], DS-lite
-\[[RFC6333](https://www.rfc-editor.org/rfc/rfc6333)\], Lightweight
-4over6 (lw4o6) \[[RFC7596](https://www.rfc-editor.org/rfc/rfc7596)\],
-MAP-E \[[RFC7597](https://www.rfc-editor.org/rfc/rfc7597)\], and MAP-T
-\[[RFC7599](https://www.rfc-editor.org/rfc/rfc7599)\].
+\[[RFC6877](https://www.rfc-editor.org/info/rfc6877)\], DS-lite
+\[[RFC6333](https://www.rfc-editor.org/info/rfc6333)\], Lightweight
+4over6 (lw4o6) \[[RFC7596](https://www.rfc-editor.org/info/rfc7596)\],
+MAP-E \[[RFC7597](https://www.rfc-editor.org/info/rfc7597)\], and MAP-T
+\[[RFC7599](https://www.rfc-editor.org/infoc/rfc7599)\].
 
 A framework for carriers is proposed in a current draft
 \[[draft-ietf-v6ops-framework-md-ipv6only-underlay](https://datatracker.ietf.org/doc/draft-ietf-v6ops-framework-md-ipv6only-underlay/)\].
