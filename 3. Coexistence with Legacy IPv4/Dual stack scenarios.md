@@ -57,7 +57,7 @@ devices do exist, e.g.
 [Thread](https://www.threadgroup.org/What-is-Thread/Overview) devices,
 and more are to be expected in future. This situation requires a
 translation mechanism, such as NAT64 + DNS64 (see
-\[[Translation](Translation.md)\], which will allow IPv6 only devices,
+\[[Translation](Translation.md)\]), which will allow IPv6 only devices,
 on a dual stack network, to access IPv4 hosts. Typically, dual stack
 clients on the same network will also use NAT64 (instead of
 [RFC1918](https://www.rfc-editor.org/info/rfc1918) addresses and NAT44)
