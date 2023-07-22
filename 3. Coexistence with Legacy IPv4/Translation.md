@@ -39,11 +39,16 @@ typical scenario will:
     and supports two-way transport sessions.
   - DNS64 \[[RFC6147](https://www.rfc-editor.org/info/rfc6147)\]
     supports DNS extensions for clients of stateful NAT64.
+  - PREF64 refers to the IPv6 prefix used "outside" the NAT64
+    translator. [RFC8781](https://www.rfc-editor.org/info/rfc8781)
+    and [RFC8880](https://www.rfc-editor.org/info/rfc8880)
+    are mechanisms by which a host can learn the PREF64 in use.
 
 - 464XLAT (Combination of Stateful and Stateless Translation)
   \[[RFC6877](https://www.rfc-editor.org/info/rfc6877)\] is SIIT plus
   address translation *from* IPv4 clients to IPv6 transport and *back
-  to* IPv4 servers.
+  to* IPv4 servers. This is used for IPv4 traffic to cross an
+  IPv6-only network.
 
   - CLAT is the client side translator in 464XLAT.
   - PLAT is the provider side translator in 464XLAT.
