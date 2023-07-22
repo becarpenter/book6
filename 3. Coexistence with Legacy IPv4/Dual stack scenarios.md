@@ -102,10 +102,11 @@ decide how much or how little it can support without needed input from
 the user, making the network fit the capabilities of the host, thus
 lowering the risk of incompatibility (and lowering the rate of problem
 reports). Like most existing IPv6-only networks, IPv6-mostly will 
-nevertheless require packet and DNS translation services (discussed
-later) as well as knowledge of the IPv6 prefix used for translation
-(also discussed later). With these features suppported, hosts
-on an IPv6-mostly network will have a full suite of capabilities.
+nevertheless require packet and DNS translation services ([discussed
+later](Translation.md)) as well as knowledge of the IPv6 prefix used
+for translation ([ditto](Translation.md)). With these features
+suppported, hosts on an IPv6-mostly network will have a full suite
+of capabilities.
 
 ### The need for IPv4 as a service
 
