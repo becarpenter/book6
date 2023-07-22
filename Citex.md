@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-07-20 15:17:12 UTC+1200
+Generated at 2023-07-23 09:08:27 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -24,7 +24,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [BCP91 ●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 
-[RFC1918 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+[RFC1918 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [RFC2080 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
@@ -260,8 +261,6 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC7775 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
-[RFC781 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-
 [RFC7849 ●](./4.%20Security/Layer%202%20considerations.md)
 
 [RFC7872 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
@@ -319,11 +318,11 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8754 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 
-[RFC8781 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[RFC8781 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 
 [RFC8837 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 
-[RFC8880 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[RFC8880 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 
 [RFC8899 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 
