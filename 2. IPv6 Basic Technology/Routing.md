@@ -42,7 +42,7 @@ about which prefixes they handle. Common routing protocols are:
 
 *Between carrier (ISP) networks (inter-domain routing):*
 
-- Border Gateway Protocol 4 (BGP-4)
+- Border Gateway Protocol 4 (BGP-4) in its multiprotocol form
   \[[RFC2545](https://www.rfc-editor.org/info/rfc2545),
   [RFC4271](https://www.rfc-editor.org/info/rfc4271),
   [RFC4760](https://www.rfc-editor.org/info/rfc4760)\]. Autonomous
@@ -101,6 +101,14 @@ For a deep dive on BGP-4 itself, with much focus on IPv6, see the e-book
 by Iljitsch van Beijnum:
 [Internet Routing with BGP](https://www.iljitsch.com/2022/11-18-new-e-book-internet-routing-with-bgp.html)
 (2022).
+
+Finally, as explained in
+[3. Dual stack scenarios](../3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md),
+IPv6 routing generally works independently of IPv4 routing, which was
+indeed a fundamental design choice. However, if necessary, encapsulated
+IPv4 traffic can be carried over an IPv6-only path. To enable this,
+multiprotocol BGP-4 has provision to advertise IPv4 reachability over an
+IPv6-only path \[[RFC8950](https://www.rfc-editor.org/info/rfc8950)\].
 
 <!-- Link lines generated automatically; do not delete -->
 
