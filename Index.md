@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-07-23 09:08:27 UTC+1200
+Generated at 2023-07-23 14:07:05 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
@@ -99,6 +99,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
 [●](./6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
+[●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
@@ -130,6 +131,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [firewall ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 
 [flow label ●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
@@ -193,6 +195,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
