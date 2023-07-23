@@ -40,8 +40,9 @@ detail should consult
 This mechanism works well on a small scale, and it was designed with
 full knowledge of the "ARP storms" experienced on large bridged
 Ethernets running IPv4. However, it can cause significant multicast
-overloads on large bridged WiFi networks. Multicast is badly supported
-by large WiFi networks, as discussed in
+overloads on large bridged WiFi networks, and is made worse by the
+need for duplicate address detection (DAD) described in the next section.
+Multicast is badly supported by large WiFi networks, as discussed in
 [RFC9119](https://www.rfc-editor.org/info/rfc9119) and in Section 4.2.1
 of [RFC5757](https://www.rfc-editor.org/info/rfc5757). As an absolute
 minimum, the WiFi infrastructure switches in a large network need to
