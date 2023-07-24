@@ -30,6 +30,11 @@ about which prefixes they handle. Common routing protocols are:
   [RFC2081](https://www.rfc-editor.org/info/rfc2081)\] is defined but
   seems to be little used.
 
+*Small enterprise and home networks*
+
+- The Babel Routing Protocol
+  \[[RFC8966](https://www.rfc-editor.org/info/rfc8966)\].
+
 *Inside carrier (ISP) networks or very large enterprise networks:*
 
 - IBGP (internal use of BGP-4) optimized by route reflection
