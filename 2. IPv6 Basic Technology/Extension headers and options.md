@@ -52,7 +52,8 @@ Here are some notes on the most common ones:
 
 - Encapsulating security payload, if
   [IPsec](https://www.rfc-editor.org/info/rfc4303) is in use. This is
-  the defined mechanism for IPv6 security at layer 3.
+  the defined mechanism for IPv6 security at layer 3.  This is probably the most widely used
+  IPv6 extension header.
 
 Both hop-by-hop and destination options include flag bits in the option
 type for nodes that may not understand the option, telling the node
