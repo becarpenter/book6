@@ -4,6 +4,7 @@
 """Build IPv6 RFC bibliography"""
 
 # Version: 2023-05-23 - original
+# Version: 2023-07-29 - check age of index
 
 
 ########################################################
@@ -179,7 +180,10 @@ logit("Running in directory "+ os.getcwd())
 showinfo(title=T,
          message = "Will read complete RFC bibliography.\nTouch no files until done!")
 try:
-    whole = rf("C:/brian/docs/IETF stuff/rfc/rfc-index.xml")
+    path = "C:/brian/docs/IETF stuff/rfc/rfc-index.xml"
+    if time.time()-os.path.getmtime(path) > 60*60*24*30:
+        logitw("rfc-index.xml is >30 days old")
+    whole = rf(path)
 except:
     try:
         if askyesno(title=T, message = "OK to download RFC index?/n(15 MB temp file)"):

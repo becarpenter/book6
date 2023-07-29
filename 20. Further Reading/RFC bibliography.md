@@ -5,7 +5,7 @@ mention IPv6 in their title. Obsolete RFCs are not included. Be
 *cautious* about old Informational or Experimental RFCs - they may be
 misleading as well as out of date.
 
-RFCbib6 run at 2023-07-23 14:06:13 UTC+1200
+RFCbib6 run at 2023-07-29 17:10:18 UTC+1200
 
 __Standards Track__
 
@@ -440,6 +440,8 @@ __Standards Track__
   to Support Segment Routing over the IPv6 Data Plane
 - [RFC9354](https://www.rfc-editor.org/info/rfc9354): Transmission of
   IPv6 Packets over Power Line Communication (PLC) Networks
+- [RFC9428](https://www.rfc-editor.org/info/rfc9428): Transmission of
+  IPv6 Packets over Near Field Communication
 
 __Best Current Practice__
 
@@ -804,6 +806,8 @@ __Informational__
   Cases
 - [RFC9386](https://www.rfc-editor.org/info/rfc9386): IPv6 Deployment
   Status
+- [RFC9433](https://www.rfc-editor.org/info/rfc9433): Segment Routing
+  over IPv6 for the Mobile User Plane
 
 __Experimental__
 
