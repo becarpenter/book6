@@ -19,6 +19,11 @@ platform.
 [APNIC](https://stats.labs.apnic.net/ipv6) quantifies the use of IPv6 by
 means of a script that runs on Internet browsers.
 
+Some statistics on DNS records and reachability for top web sites
+may be found at
+[Dan Wing's site](https://www.employees.org/~dwing/aaaa-stats/).
+These data suggest 29% IPv6 penetration by July 2023.
+
 At the time of writing, there are large discrepancies between data from these and
 other sources. In fact there is no well-defined metric for "how many IPv6 users
 exist" or "how much IPv6 traffic exists". To take one example, Google
