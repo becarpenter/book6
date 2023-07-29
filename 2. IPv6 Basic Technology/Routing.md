@@ -100,7 +100,9 @@ A general comment is that IPv6 prefixes being longer than IPv4 prefixes
 tables to require much more memory space. While this is true, IPv6 was
 designed for classless route aggregation from the beginning, which
 generally permits there to be fewer IPv6 prefixes, mitigating the table
-size issue. Interested readers can find exhaustive data on BGP-4 table
+size issue. (Nevertheless, the BGP-4 table for IPv6 continues to grow,
+as discussed in [this CCR paper](https://dl.acm.org/doi/10.1145/3477482.3477490).)
+Interested readers can find exhaustive data on BGP-4 table
 sizes at [Geoff Huston's site](https://bgp.potaroo.net/index-bgp.html).
 For a deep dive on BGP-4 itself, with much focus on IPv6, see the e-book
 by Iljitsch van Beijnum:
