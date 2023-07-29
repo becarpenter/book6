@@ -21,8 +21,8 @@ means of a script that runs on Internet browsers.
 
 At the time of writing, there are large discrepancies between data from these and
 other sources. In fact there is no well-defined metric for "how many IPv6 users
-exist" or "how much IPv6 traffic exists". To take one example, the Google data
-estimate the fraction of Google "hits" that use IPv6, yet Google is very little
+exist" or "how much IPv6 traffic exists". To take one example, Google
+estimates the fraction of Google "hits" that use IPv6, yet Google is very little
 used in China so these data cannot represent the true world-wide situation.
 Estimates posted to the IETF by Geoff Huston in July 2023 suggest that Google
 observes a 7% adoption rate in China, while the APNIC measurement reports 30%.
