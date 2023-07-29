@@ -47,6 +47,14 @@ concern:
 - Considerations for Reverse DNS in IPv6 for Internet Service Providers
   are documented in [RFC8501](https://www.rfc-editor.org/info/rfc8501).
 
+- It is not unknown for some sites to register IPv4-mapped IPv6 addresses,
+  e.g. `::ffff:198.51.100.99`, with AAAA records. While this seems
+  to work in most cases, it is inappropriate if the host in question has
+  a valid IPv6 address, and pointless otherwise.
+
+Some statistics on AAAA records and reachability may be found at
+[Dan Wing's site](https://www.employees.org/~dwing/aaaa-stats/).
+
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Previous</ins>](Managed%20configuration.md) [<ins>Next</ins>](Routing.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
