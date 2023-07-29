@@ -6,7 +6,7 @@ get an immediate understanding of the real adoption of IPv6. A recent
 overview is presented in
 [RFC9386](https://www.rfc-editor.org/info/rfc9386).
 
-The count of the IPv6 users is monitored by several organizations. For
+A count of IPv6 users is monitored by various organizations. For
 example, both
 [Facebook](https://www.facebook.com/ipv6/?tab=ipv6_total_adoption) and
 [Google](https://www.google.com/intl/en/ipv6/statistics.html) provide
@@ -19,14 +19,22 @@ platform.
 [APNIC](https://stats.labs.apnic.net/ipv6) quantifies the use of IPv6 by
 means of a script that runs on Internet browsers.
 
-We have selected this latter statistic, as it comes from a Regional
+At the time of writing, there are large discrepancies between data from these and
+other sources. In fact there is no well-defined metric for "how many IPv6 users
+exist" or "how much IPv6 traffic exists". To take one example, the Google data
+estimate the fraction of Google "hits" that use IPv6, yet Google is very little
+used in China so these data cannot represent the true world-wide situation.
+Estimates posted to the IETF by Geoff Huston in July 2023 suggest that Google
+observes a 7% adoption rate in China, while the APNIC measurement reports 30%.
+
+We show here the APNIC presentation of results, as it comes from a Regional
 Internet Registry (RIR) to show the number of the Internet IPv6 users
 compared with the total Internet population (in million, see next
 table).
 
 <img src="./Section5_Table1.jpg" alt="Table shows 25% annual IPv6 growth 2018 to 2022">
 
-A third of the Internet population actually employs IPv6. It is also
+A third of the Internet population apparently employs IPv6. It is also
 interesting to look at the growth curve. The main indicator here is the
 Compound Annual Growth Rate (CAGR), which shows a two-digit growth
 across the 5-year period 2018-2022.
