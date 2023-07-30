@@ -5,7 +5,7 @@ mention IPv6 in their title. Obsolete RFCs are not included. Be
 *cautious* about old Informational or Experimental RFCs - they may be
 misleading as well as out of date.
 
-RFCbib6 run at 2023-07-29 17:10:18 UTC+1200
+RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 
 __Standards Track__
 
@@ -62,6 +62,9 @@ __Standards Track__
   Guidelines for IPv6 Multicast Addresses
 - [RFC3595](https://www.rfc-editor.org/info/rfc3595): Textual
   Conventions for IPv6 Flow Label
+- [RFC3596](https://www.rfc-editor.org/info/rfc3596)
+  ([STD88](https://www.rfc-editor.org/info/std88)): DNS Extensions to
+  Support IP Version 6
 - [RFC3646](https://www.rfc-editor.org/info/rfc3646): DNS Configuration
   options for Dynamic Host Configuration Protocol for IPv6 (DHCPv6)
 - [RFC3776](https://www.rfc-editor.org/info/rfc3776): Using IPsec to
@@ -81,6 +84,8 @@ __Standards Track__
   Mechanisms for IPv6 Hosts and Routers
 - [RFC4283](https://www.rfc-editor.org/info/rfc4283): Mobile Node
   Identifier Option for Mobile IPv6 (MIPv6)
+- [RFC4291](https://www.rfc-editor.org/info/rfc4291): IP Version 6
+  Addressing Architecture
 - [RFC4295](https://www.rfc-editor.org/info/rfc4295): Mobile IPv6
   Management Information Base
 - [RFC4311](https://www.rfc-editor.org/info/rfc4311): IPv6
@@ -92,7 +97,8 @@ __Standards Track__
   IPv6 over UDP through Network Address Translations (NATs)
 - [RFC4429](https://www.rfc-editor.org/info/rfc4429): Optimistic
   Duplicate Address Detection (DAD) for IPv6
-- [RFC4443](https://www.rfc-editor.org/info/rfc4443): Internet Control
+- [RFC4443](https://www.rfc-editor.org/info/rfc4443)
+  ([STD89](https://www.rfc-editor.org/info/std89)): Internet Control
   Message Protocol (ICMPv6) for the Internet Protocol Version 6 (IPv6)
   Specification
 - [RFC4449](https://www.rfc-editor.org/info/rfc4449): Securing Mobile
@@ -131,6 +137,8 @@ __Standards Track__
   IPv6 Packets over IEEE 802.15.4 Networks
 - [RFC5026](https://www.rfc-editor.org/info/rfc5026): Mobile IPv6
   Bootstrapping in Split Scenario
+- [RFC5072](https://www.rfc-editor.org/info/rfc5072): IP Version 6 over
+  PPP
 - [RFC5094](https://www.rfc-editor.org/info/rfc5094): Mobile IPv6 Vendor
   Specific Option
 - [RFC5095](https://www.rfc-editor.org/info/rfc5095): Deprecation of
@@ -372,7 +380,8 @@ __Standards Track__
   IPv6 over Master-Slave/Token-Passing (MS/TP) Networks
 - [RFC8191](https://www.rfc-editor.org/info/rfc8191): Home Network
   Prefix Renumbering in Proxy Mobile IPv6 (PMIPv6)
-- [RFC8200](https://www.rfc-editor.org/info/rfc8200): Internet Protocol,
+- [RFC8200](https://www.rfc-editor.org/info/rfc8200)
+  ([STD86](https://www.rfc-editor.org/info/std86)): Internet Protocol,
   Version 6 (IPv6) Specification
 - [RFC8215](https://www.rfc-editor.org/info/rfc8215): Local-Use
   IPv4/IPv6 Translation Prefix
@@ -445,24 +454,33 @@ __Standards Track__
 
 __Best Current Practice__
 
-- [RFC3901](https://www.rfc-editor.org/info/rfc3901): DNS IPv6 Transport
+- [RFC3901](https://www.rfc-editor.org/info/rfc3901)
+  ([BCP91](https://www.rfc-editor.org/info/bcp91)): DNS IPv6 Transport
   Operational Guidelines
-- [RFC5855](https://www.rfc-editor.org/info/rfc5855): Nameservers for
+- [RFC5855](https://www.rfc-editor.org/info/rfc5855)
+  ([BCP155](https://www.rfc-editor.org/info/bcp155)): Nameservers for
   IPv4 and IPv6 Reverse Zones
-- [RFC6177](https://www.rfc-editor.org/info/rfc6177): IPv6 Address
+- [RFC6177](https://www.rfc-editor.org/info/rfc6177)
+  ([BCP157](https://www.rfc-editor.org/info/bcp157)): IPv6 Address
   Assignment to End Sites
-- [RFC6540](https://www.rfc-editor.org/info/rfc6540): IPv6 Support
+- [RFC6540](https://www.rfc-editor.org/info/rfc6540)
+  ([BCP177](https://www.rfc-editor.org/info/bcp177)): IPv6 Support
   Required for All IP-Capable Nodes
-- [RFC7608](https://www.rfc-editor.org/info/rfc7608): IPv6 Prefix Length
+- [RFC7608](https://www.rfc-editor.org/info/rfc7608)
+  ([BCP198](https://www.rfc-editor.org/info/bcp198)): IPv6 Prefix Length
   Recommendation for Forwarding
-- [RFC8180](https://www.rfc-editor.org/info/rfc8180): Minimal IPv6 over
+- [RFC8180](https://www.rfc-editor.org/info/rfc8180)
+  ([BCP210](https://www.rfc-editor.org/info/bcp210)): Minimal IPv6 over
   the TSCH Mode of IEEE 802.15.4e (6TiSCH) Configuration
-- [RFC8421](https://www.rfc-editor.org/info/rfc8421): Guidelines for
+- [RFC8421](https://www.rfc-editor.org/info/rfc8421)
+  ([BCP217](https://www.rfc-editor.org/info/bcp217)): Guidelines for
   Multihomed and IPv4/IPv6 Dual-Stack Interactive Connectivity
   Establishment (ICE)
-- [RFC8504](https://www.rfc-editor.org/info/rfc8504): IPv6 Node
+- [RFC8504](https://www.rfc-editor.org/info/rfc8504)
+  ([BCP220](https://www.rfc-editor.org/info/bcp220)): IPv6 Node
   Requirements
-- [RFC9096](https://www.rfc-editor.org/info/rfc9096): Improving the
+- [RFC9096](https://www.rfc-editor.org/info/rfc9096)
+  ([BCP234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
 __Informational__
@@ -546,6 +564,8 @@ __Informational__
   to IPv6 Multihoming Solutions
 - [RFC4219](https://www.rfc-editor.org/info/rfc4219): Things Multihoming
   in IPv6 (MULTI6) Developers Should Think About
+- [RFC4225](https://www.rfc-editor.org/info/rfc4225): Mobile IP Version
+  6 Route Optimization Security Design Background
 - [RFC4241](https://www.rfc-editor.org/info/rfc4241): A Model of
   IPv6/IPv4 Dual Stack Internet Access Service
 - [RFC4260](https://www.rfc-editor.org/info/rfc4260): Mobile IPv6 Fast
