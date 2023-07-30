@@ -5,6 +5,7 @@
 
 # Version: 2023-05-23 - original
 # Version: 2023-07-29 - check age of index
+# Version: 2023-07-31 - added STD/BCP numbers; caught more RFCs 
 
 
 ########################################################
@@ -124,13 +125,23 @@ def interesting(block):
         return False
     elif "<obsoleted-by>" in block:
         return False
-    elif "IPv6" in title(block):
+    elif "IPv6" in title(block) or "IP Version 6" in title(block):
         #print(block)
         status = field("current-status", block)
+        if "is-also" in block:
+            also,_ = field("is-also", block).split("<doc-id>")[1].split("</")
+            if also.startswith("BCP0"):
+                also = "BCP"+also[3:].lstrip("0")
+            elif also.startswith("STD0"):
+                also = "STD"+also[3:].lstrip("0")
+            also = " ({{{"+also+"}}})"
+        else:
+            also = ""
+        #print(also)
         if "STANDARD" in status:
-            stds.append("- {{{"+doc_id(block)+"}}}: "+title(block))
+            stds.append("- {{{"+doc_id(block)+"}}}"+also+": "+title(block))
         elif status == "BEST CURRENT PRACTICE":
-            bcps.append("- {{{"+doc_id(block)+"}}}: "+title(block))
+            bcps.append("- {{{"+doc_id(block)+"}}}"+also+": "+title(block))
         elif status =="INFORMATIONAL":
             infos.append("- {{{"+doc_id(block)+"}}}: "+title(block))
         elif status == "EXPERIMENTAL":
