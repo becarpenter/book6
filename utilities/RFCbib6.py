@@ -5,7 +5,8 @@
 
 # Version: 2023-05-23 - original
 # Version: 2023-07-29 - check age of index
-# Version: 2023-07-31 - added STD/BCP numbers; caught more RFCs 
+# Version: 2023-07-31 - added STD/BCP numbers;
+#                       caught more RFCs; cosmetics
 
 
 ########################################################
@@ -230,16 +231,17 @@ if len(stds)+len(bcps)+len(infos)+len(exps) != count:
 
 md = ["## RFC bibliography","",
       """This section is a machine-generated list of all current RFCs that mention
-IPv6 in their title. Obsolete RFCs are not included. Be *cautious* about old
+IPv6 in their title. Obsolete RFCs are not included. There are subsections for
+Standards, BCPs, Informational and Experimental RFCs. Be *cautious* about old
 Informational or Experimental RFCs - they may be misleading as well as out of date."""]
 md += ["","RFCbib6 run at "+timestamp]
-md += ["","__Standards Track__",""]
+md += ["","### Standards Track",""]
 md += stds
-md += ["", "__Best Current Practice__", ""]
+md += ["", "### Best Current Practice", ""]
 md += bcps
-md += ["", "__Informational__", ""]
+md += ["", "### Informational", ""]
 md += infos
-md += ["", "__Experimental__", ""]
+md += ["", "### Experimental", ""]
 md += exps
 md += ["", "<!-- Link lines generated automatically; do not delete -->",
        "### [<ins>Chapter Contents</ins>](20.%20Further%20Reading.md)"]
