@@ -7,7 +7,7 @@ misleading as well as out of date.
 
 RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 
-__Standards Track__
+### Standards Track
 
 - [RFC2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions for
@@ -452,7 +452,7 @@ __Standards Track__
 - [RFC9428](https://www.rfc-editor.org/info/rfc9428): Transmission of
   IPv6 Packets over Near Field Communication
 
-__Best Current Practice__
+### Best Current Practice
 
 - [RFC3901](https://www.rfc-editor.org/info/rfc3901)
   ([BCP91](https://www.rfc-editor.org/info/bcp91)): DNS IPv6 Transport
@@ -483,7 +483,7 @@ __Best Current Practice__
   ([BCP234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
-__Informational__
+### Informational
 
 - [RFC1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -829,7 +829,7 @@ __Informational__
 - [RFC9433](https://www.rfc-editor.org/info/rfc9433): Segment Routing
   over IPv6 for the Mobile User Plane
 
-__Experimental__
+### Experimental
 
 - [RFC4620](https://www.rfc-editor.org/info/rfc4620): IPv6 Node
   Information Queries
