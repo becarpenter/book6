@@ -7,7 +7,8 @@
 # Version: 2023-07-29 - check age of index
 # Version: 2023-07-31 - added STD/BCP numbers;
 #                       caught more RFCs; cosmetics
-# Version: 2023-08-01 - catch by WG acronym
+# Version: 2023-08-01 - catch by WG acronym;
+#                       display counts
 
 ########################################################
 # Copyright (C) 2023 Brian E. Carpenter.                  
@@ -236,14 +237,14 @@ mention IPv6 in their title or come from the major IPv6 working groups.
 Obsolete RFCs are not included. There are subsections for Standards, BCPs, 
 Informational and Experimental RFCs. Be *cautious* about old Informational
 or Experimental RFCs - they may be misleading as well as out of date."""]
-md += ["","RFCbib6 run at "+timestamp]
-md += ["","### Standards Track",""]
+md += ["","RFCbib6 run at "+timestamp+" ("+str(count)+" RFCs found)"]
+md += ["","### Standards Track ("+str(len(stds))+" RFCs)",""]
 md += stds
-md += ["", "### Best Current Practice", ""]
+md += ["", "### Best Current Practice ("+str(len(bcps))+" RFCs)", ""]
 md += bcps
-md += ["", "### Informational", ""]
+md += ["", "### Informational ("+str(len(infos))+" RFCs)", ""]
 md += infos
-md += ["", "### Experimental", ""]
+md += ["", "### Experimental ("+str(len(exps))+" RFCs)", ""]
 md += exps
 md += ["", "<!-- Link lines generated automatically; do not delete -->",
        "### [<ins>Chapter Contents</ins>](20.%20Further%20Reading.md)"]

@@ -7,9 +7,9 @@ BCPs, Informational and Experimental RFCs. Be *cautious* about old
 Informational or Experimental RFCs - they may be misleading as well as
 out of date.
 
-RFCbib6 run at 2023-08-01 15:16:15 UTC+1200
+RFCbib6 run at 2023-08-01 17:28:34 UTC+1200 (442 RFCs found)
 
-### Standards Track
+### Standards Track (224 RFCs)
 
 - [RFC2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions for
@@ -491,7 +491,7 @@ RFCbib6 run at 2023-08-01 15:16:15 UTC+1200
 - [RFC9428](https://www.rfc-editor.org/info/rfc9428): Transmission of
   IPv6 Packets over Near Field Communication
 
-### Best Current Practice
+### Best Current Practice (12 RFCs)
 
 - [RFC3901](https://www.rfc-editor.org/info/rfc3901)
   ([BCP91](https://www.rfc-editor.org/info/bcp91)): DNS IPv6 Transport
@@ -531,7 +531,7 @@ RFCbib6 run at 2023-08-01 15:16:15 UTC+1200
   ([BCP234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
-### Informational
+### Informational (183 RFCs)
 
 - [RFC1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -936,7 +936,7 @@ RFCbib6 run at 2023-08-01 15:16:15 UTC+1200
 - [RFC9433](https://www.rfc-editor.org/info/rfc9433): Segment Routing
   over IPv6 for the Mobile User Plane
 
-### Experimental
+### Experimental (23 RFCs)
 
 - [RFC4620](https://www.rfc-editor.org/info/rfc4620): IPv6 Node
   Information Queries
