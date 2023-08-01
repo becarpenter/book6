@@ -7,7 +7,7 @@
 # Version: 2023-07-29 - check age of index
 # Version: 2023-07-31 - added STD/BCP numbers;
 #                       caught more RFCs; cosmetics
-
+# Version: 2023-08-01 - catch by WG acronym
 
 ########################################################
 # Copyright (C) 2023 Brian E. Carpenter.                  
@@ -102,9 +102,11 @@ def wf(f,l):
 
 def field(fname, block):
     """Extract named field from XML block"""
-    _,temp = block.split("<"+fname+">", maxsplit=1)
-    result,_ = temp.split("</"+fname+">", maxsplit=1)
-    return result
+    if fname in block:
+        _,temp = block.split("<"+fname+">", maxsplit=1)
+        result,_ = temp.split("</"+fname+">", maxsplit=1)
+        return result
+    return ""
     
 
 def title(block):
@@ -113,20 +115,18 @@ def title(block):
 
 def doc_id(block):
     """Extract doc-id from XML block"""
-    return field("doc-id", block)
-    
+    return field("doc-id", block)  
 
 def interesting(block):
     """Save interesting RFC data from XML block"""
     global stds, bcps, infos, exps
-    
     if "UNKNOWN" in block:
         return None
     elif "<current-status>HISTORIC" in block:
         return False
     elif "<obsoleted-by>" in block:
         return False
-    elif "IPv6" in title(block) or "IP Version 6" in title(block):
+    elif "IPv6" in title(block) or "IP Version 6" in title(block) or (field("wg_acronym", block) in wgs):
         #print(block)
         status = field("current-status", block)
         if "is-also" in block:
@@ -166,6 +166,7 @@ infos= []
 exps = []
 printing = False # True for extra diagnostic prints
 warnings = 0
+wgs = ["6man","v6ops"]
 
 #Announce
 
@@ -230,10 +231,11 @@ if len(stds)+len(bcps)+len(infos)+len(exps) != count:
     logitw("Warning: count mismatch")
 
 md = ["## RFC bibliography","",
-      """This section is a machine-generated list of all current RFCs that mention
-IPv6 in their title. Obsolete RFCs are not included. There are subsections for
-Standards, BCPs, Informational and Experimental RFCs. Be *cautious* about old
-Informational or Experimental RFCs - they may be misleading as well as out of date."""]
+      """This section is a machine-generated list of all current RFCs that
+mention IPv6 in their title or come from the major IPv6 working groups.
+Obsolete RFCs are not included. There are subsections for Standards, BCPs, 
+Informational and Experimental RFCs. Be *cautious* about old Informational
+or Experimental RFCs - they may be misleading as well as out of date."""]
 md += ["","RFCbib6 run at "+timestamp]
 md += ["","### Standards Track",""]
 md += stds

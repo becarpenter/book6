@@ -1,11 +1,13 @@
 ## RFC bibliography
 
 This section is a machine-generated list of all current RFCs that
-mention IPv6 in their title. Obsolete RFCs are not included. Be
-*cautious* about old Informational or Experimental RFCs - they may be
-misleading as well as out of date.
+mention IPv6 in their title or come from the major IPv6 working groups.
+Obsolete RFCs are not included. There are subsections for Standards,
+BCPs, Informational and Experimental RFCs. Be *cautious* about old
+Informational or Experimental RFCs - they may be misleading as well as
+out of date.
 
-RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
+RFCbib6 run at 2023-08-01 15:16:15 UTC+1200
 
 ### Standards Track
 
@@ -253,6 +255,9 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   Interface Identifier for Proxy Mobile IPv6
 - [RFC6550](https://www.rfc-editor.org/info/rfc6550): RPL: IPv6 Routing
   Protocol for Low-Power and Lossy Networks
+- [RFC6553](https://www.rfc-editor.org/info/rfc6553): The Routing
+  Protocol for Low-Power and Lossy Networks (RPL) Option for Carrying
+  RPL Information in Data-Plane Datagrams
 - [RFC6554](https://www.rfc-editor.org/info/rfc6554): An IPv6 Routing
   Header for Source Routes with the Routing Protocol for Low-Power and
   Lossy Networks (RPL)
@@ -278,6 +283,10 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 - [RFC6775](https://www.rfc-editor.org/info/rfc6775): Neighbor Discovery
   Optimization for IPv6 over Low-Power Wireless Personal Area Networks
   (6LoWPANs)
+- [RFC6788](https://www.rfc-editor.org/info/rfc6788): The
+  Line-Identification Option
+- [RFC6791](https://www.rfc-editor.org/info/rfc6791): Stateless Source
+  Address Mapping for ICMPv6 Packets
 - [RFC6874](https://www.rfc-editor.org/info/rfc6874): Representing IPv6
   Zone Identifiers in Address Literals and Uniform Resource Identifiers
 - [RFC6909](https://www.rfc-editor.org/info/rfc6909): IPv4 Traffic
@@ -292,14 +301,20 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   Statement for the Use of IPv6 UDP Datagrams with Zero Checksums
 - [RFC6946](https://www.rfc-editor.org/info/rfc6946): Processing of IPv6
   "Atomic" Fragments
+- [RFC6957](https://www.rfc-editor.org/info/rfc6957): Duplicate Address
+  Detection Proxy
 - [RFC6980](https://www.rfc-editor.org/info/rfc6980): Security
   Implications of IPv6 Fragmentation with IPv6 Neighbor Discovery
 - [RFC7045](https://www.rfc-editor.org/info/rfc7045): Transmission and
   Processing of IPv6 Extension Headers
+- [RFC7048](https://www.rfc-editor.org/info/rfc7048): Neighbor
+  Unreachability Detection Is Too Impatient
 - [RFC7050](https://www.rfc-editor.org/info/rfc7050): Discovery of the
   IPv6 Prefix Used for IPv6 Address Synthesis
 - [RFC7077](https://www.rfc-editor.org/info/rfc7077): Update
   Notifications for Proxy Mobile IPv6
+- [RFC7078](https://www.rfc-editor.org/info/rfc7078): Distributing
+  Address Selection Policy Using DHCPv6
 - [RFC7112](https://www.rfc-editor.org/info/rfc7112): Implications of
   Oversized IPv6 Header Chains
 - [RFC7136](https://www.rfc-editor.org/info/rfc7136): Significance of
@@ -315,6 +330,8 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   Option for Proxy Mobile IPv6
 - [RFC7225](https://www.rfc-editor.org/info/rfc7225): Discovering NAT64
   IPv6 Prefixes Using the Port Control Protocol (PCP)
+- [RFC7335](https://www.rfc-editor.org/info/rfc7335): IPv4 Service
+  Continuity Prefix
 - [RFC7343](https://www.rfc-editor.org/info/rfc7343): An IPv6 Prefix for
   Overlay Routable Cryptographic Hash Identifiers Version 2 (ORCHIDv2)
 - [RFC7346](https://www.rfc-editor.org/info/rfc7346): IPv6 Multicast
@@ -333,8 +350,12 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   IPv6 Packets over ITU-T G.9959 Networks
 - [RFC7506](https://www.rfc-editor.org/info/rfc7506): IPv6 Router Alert
   Option for MPLS Operations, Administration, and Maintenance (OAM)
+- [RFC7527](https://www.rfc-editor.org/info/rfc7527): Enhanced Duplicate
+  Address Detection
 - [RFC7552](https://www.rfc-editor.org/info/rfc7552): Updates to LDP for
   IPv6
+- [RFC7559](https://www.rfc-editor.org/info/rfc7559): Packet-Loss
+  Resiliency for Router Solicitations
 - [RFC7563](https://www.rfc-editor.org/info/rfc7563): Extensions to the
   Proxy Mobile IPv6 (PMIPv6) Access Network Identifier Option
 - [RFC7668](https://www.rfc-editor.org/info/rfc7668): IPv6 over
@@ -344,6 +365,8 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 - [RFC7678](https://www.rfc-editor.org/info/rfc7678): Attribute-Value
   Pairs for Provisioning Customer Equipment Supporting IPv4-Over-IPv6
   Transitional Solutions
+- [RFC7757](https://www.rfc-editor.org/info/rfc7757): Explicit Address
+  Mappings for Stateless IP/ICMP Translation
 - [RFC7775](https://www.rfc-editor.org/info/rfc7775): IS-IS Route
   Preference for Extended IP and IPv6 Reachability
 - [RFC7794](https://www.rfc-editor.org/info/rfc7794): IS-IS Prefix
@@ -359,6 +382,8 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 - [RFC8026](https://www.rfc-editor.org/info/rfc8026): Unified
   IPv4-in-IPv6 Softwire Customer Premises Equipment (CPE): A
   DHCPv6-Based Prioritization Mechanism
+- [RFC8028](https://www.rfc-editor.org/info/rfc8028): First-Hop Router
+  Selection by Hosts in a Multi-Prefix Network
 - [RFC8064](https://www.rfc-editor.org/info/rfc8064): Recommendation on
   Stable IPv6 Interface Identifiers
 - [RFC8066](https://www.rfc-editor.org/info/rfc8066): IPv6 over
@@ -383,10 +408,17 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 - [RFC8200](https://www.rfc-editor.org/info/rfc8200)
   ([STD86](https://www.rfc-editor.org/info/std86)): Internet Protocol,
   Version 6 (IPv6) Specification
+- [RFC8201](https://www.rfc-editor.org/info/rfc8201)
+  ([STD87](https://www.rfc-editor.org/info/std87)): Path MTU Discovery
+  for IP version 6
 - [RFC8215](https://www.rfc-editor.org/info/rfc8215): Local-Use
   IPv4/IPv6 Translation Prefix
 - [RFC8250](https://www.rfc-editor.org/info/rfc8250): IPv6 Performance
   and Diagnostic Metrics (PDM) Destination Option
+- [RFC8305](https://www.rfc-editor.org/info/rfc8305): Happy Eyeballs
+  Version 2: Better Connectivity Using Concurrency
+- [RFC8319](https://www.rfc-editor.org/info/rfc8319): Support for
+  Adjustable Maximum Router Lifetimes per Link
 - [RFC8371](https://www.rfc-editor.org/info/rfc8371): Mobile Node
   Identifier Types for MIPv6
 - [RFC8415](https://www.rfc-editor.org/info/rfc8415): Dynamic Host
@@ -406,6 +438,10 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   over IEEE Std 802.11
 - [RFC8754](https://www.rfc-editor.org/info/rfc8754): IPv6 Segment
   Routing Header (SRH)
+- [RFC8781](https://www.rfc-editor.org/info/rfc8781): Discovering PREF64
+  in Router Advertisements
+- [RFC8883](https://www.rfc-editor.org/info/rfc8883): ICMPv6 Errors for
+  Discarding Packets Due to Processing Limits
 - [RFC8925](https://www.rfc-editor.org/info/rfc8925): IPv6-Only
   Preferred Option for DHCPv4
 - [RFC8929](https://www.rfc-editor.org/info/rfc8929): IPv6 Backbone
@@ -432,6 +468,9 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 - [RFC9034](https://www.rfc-editor.org/info/rfc9034): Packet Delivery
   Deadline Time in the Routing Header for IPv6 over Low-Power Wireless
   Personal Area Networks (6LoWPANs)
+- [RFC9131](https://www.rfc-editor.org/info/rfc9131): Gratuitous
+  Neighbor Discovery: Creating Neighbor Cache Entries on First-Hop
+  Routers
 - [RFC9159](https://www.rfc-editor.org/info/rfc9159): IPv6 Mesh over
   BLUETOOTH(R) Low Energy Using the Internet Protocol Support Profile
   (IPSP)
@@ -466,9 +505,18 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 - [RFC6540](https://www.rfc-editor.org/info/rfc6540)
   ([BCP177](https://www.rfc-editor.org/info/bcp177)): IPv6 Support
   Required for All IP-Capable Nodes
+- [RFC7526](https://www.rfc-editor.org/info/rfc7526)
+  ([BCP196](https://www.rfc-editor.org/info/bcp196)): Deprecating the
+  Anycast Prefix for 6to4 Relay Routers
 - [RFC7608](https://www.rfc-editor.org/info/rfc7608)
   ([BCP198](https://www.rfc-editor.org/info/bcp198)): IPv6 Prefix Length
   Recommendation for Forwarding
+- [RFC7772](https://www.rfc-editor.org/info/rfc7772)
+  ([BCP202](https://www.rfc-editor.org/info/bcp202)): Reducing Energy
+  Consumption of Router Advertisements
+- [RFC7934](https://www.rfc-editor.org/info/rfc7934)
+  ([BCP204](https://www.rfc-editor.org/info/bcp204)): Host Address
+  Availability Recommendations
 - [RFC8180](https://www.rfc-editor.org/info/rfc8180)
   ([BCP210](https://www.rfc-editor.org/info/bcp210)): Minimal IPv6 over
   the TSCH Mode of IEEE 802.15.4e (6TiSCH) Configuration
@@ -520,6 +568,8 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   for Managing the Assignment of Bits of an IPv6 Address Block
 - [RFC3542](https://www.rfc-editor.org/info/rfc3542): Advanced Sockets
   Application Program Interface (API) for IPv6
+- [RFC3574](https://www.rfc-editor.org/info/rfc3574): Transition
+  Scenarios for 3GPP Networks
 - [RFC3582](https://www.rfc-editor.org/info/rfc3582): Goals for IPv6
   Site-Multihoming Architectures
 - [RFC3587](https://www.rfc-editor.org/info/rfc3587): IPv6 Global
@@ -532,6 +582,30 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   Discovery (ND) Trust Models and Threats
 - [RFC3769](https://www.rfc-editor.org/info/rfc3769): Requirements for
   IPv6 Prefix Delegation
+- [RFC3789](https://www.rfc-editor.org/info/rfc3789): Introduction to
+  the Survey of IPv4 Addresses in Currently Deployed IETF Standards
+  Track and Experimental Documents
+- [RFC3790](https://www.rfc-editor.org/info/rfc3790): Survey of IPv4
+  Addresses in Currently Deployed IETF Internet Area Standards Track and
+  Experimental Documents
+- [RFC3791](https://www.rfc-editor.org/info/rfc3791): Survey of IPv4
+  Addresses in Currently Deployed IETF Routing Area Standards Track and
+  Experimental Documents
+- [RFC3792](https://www.rfc-editor.org/info/rfc3792): Survey of IPv4
+  Addresses in Currently Deployed IETF Security Area Standards Track and
+  Experimental Documents
+- [RFC3793](https://www.rfc-editor.org/info/rfc3793): Survey of IPv4
+  Addresses in Currently Deployed IETF Sub-IP Area Standards Track and
+  Experimental Documents
+- [RFC3794](https://www.rfc-editor.org/info/rfc3794): Survey of IPv4
+  Addresses in Currently Deployed IETF Transport Area Standards Track
+  and Experimental Documents
+- [RFC3795](https://www.rfc-editor.org/info/rfc3795): Survey of IPv4
+  Addresses in Currently Deployed IETF Application Area Standards Track
+  and Experimental Documents
+- [RFC3796](https://www.rfc-editor.org/info/rfc3796): Survey of IPv4
+  Addresses in Currently Deployed IETF Operations & Management Area
+  Standards Track and Experimental Documents
 - [RFC3849](https://www.rfc-editor.org/info/rfc3849): IPv6 Address
   Prefix Reserved for Documentation
 - [RFC3904](https://www.rfc-editor.org/info/rfc3904): Evaluation of IPv6
@@ -539,6 +613,8 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 - [RFC3919](https://www.rfc-editor.org/info/rfc3919): Remote Network
   Monitoring (RMON) Protocol Identifiers for IPv6 and Multi Protocol
   Label Switching (MPLS)
+- [RFC3964](https://www.rfc-editor.org/info/rfc3964): Security
+  Considerations for 6to4
 - [RFC4029](https://www.rfc-editor.org/info/rfc4029): Scenarios and
   Analysis for Introducing IPv6 into ISP Networks
 - [RFC4038](https://www.rfc-editor.org/info/rfc4038): Application
@@ -602,6 +678,8 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   Protection for IPv6
 - [RFC4882](https://www.rfc-editor.org/info/rfc4882): IP Address
   Location Privacy and Mobile IPv6: Problem Statement
+- [RFC4890](https://www.rfc-editor.org/info/rfc4890): Recommendations
+  for Filtering ICMPv6 Messages in Firewalls
 - [RFC4891](https://www.rfc-editor.org/info/rfc4891): Using IPsec to
   Secure IPv6-in-IPv4 Tunnels
 - [RFC4919](https://www.rfc-editor.org/info/rfc4919): IPv6 over
@@ -611,6 +689,9 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   Transition/Co-existence Security Considerations
 - [RFC4943](https://www.rfc-editor.org/info/rfc4943): IPv6 Neighbor
   Discovery On-Link Assumption Considered Harmful
+- [RFC4966](https://www.rfc-editor.org/info/rfc4966): Reasons to Move
+  the Network Address Translator - Protocol Translator (NAT-PT) to
+  Historic Status
 - [RFC4968](https://www.rfc-editor.org/info/rfc4968): Analysis of IPv6
   Link Models for 802.16 Based Networks
 - [RFC5014](https://www.rfc-editor.org/info/rfc5014): IPv6 Socket API
@@ -624,6 +705,11 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   Methodology for Network Interconnect Devices
 - [RFC5181](https://www.rfc-editor.org/info/rfc5181): IPv6 Deployment
   Scenarios in 802.16 Networks
+- [RFC5220](https://www.rfc-editor.org/info/rfc5220): Problem Statement
+  for Default Address Selection in Multi-Prefix Environments:
+  Operational Issues of RFC 3484 Default Rules
+- [RFC5221](https://www.rfc-editor.org/info/rfc5221): Requirements for
+  Address Selection Mechanisms
 - [RFC5270](https://www.rfc-editor.org/info/rfc5270): Mobile IPv6 Fast
   Handovers over IEEE 802.16e Networks
 - [RFC5271](https://www.rfc-editor.org/info/rfc5271): Mobile IPv6 Fast
@@ -659,6 +745,8 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   IPv4-IPv6 Co-Existence Scenarios
 - [RFC6144](https://www.rfc-editor.org/info/rfc6144): Framework for
   IPv4/IPv6 Translation
+- [RFC6169](https://www.rfc-editor.org/info/rfc6169): Security Concerns
+  with IP Tunneling
 - [RFC6180](https://www.rfc-editor.org/info/rfc6180): Guidelines for
   Using IPv6 Transition Mechanisms during IPv6 Deployment
 - [RFC6214](https://www.rfc-editor.org/info/rfc6214): Adaptation of RFC
@@ -679,13 +767,19 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   Mitigations
 - [RFC6342](https://www.rfc-editor.org/info/rfc6342): Mobile Networks
   Considerations for IPv6 Deployment
+- [RFC6343](https://www.rfc-editor.org/info/rfc6343): Advisory
+  Guidelines for 6to4 Deployment
 - [RFC6436](https://www.rfc-editor.org/info/rfc6436): Rationale for
   Update to the IPv6 Flow Label Specification
 - [RFC6459](https://www.rfc-editor.org/info/rfc6459): IPv6 in 3rd
   Generation Partnership Project (3GPP) Evolved Packet System (EPS)
+- [RFC6547](https://www.rfc-editor.org/info/rfc6547): RFC 3627 to
+  Historic Status
 - [RFC6568](https://www.rfc-editor.org/info/rfc6568): Design and
   Application Spaces for IPv6 over Low-Power Wireless Personal Area
   Networks (6LoWPANs)
+- [RFC6583](https://www.rfc-editor.org/info/rfc6583): Operational
+  Neighbor Discovery Problems
 - [RFC6586](https://www.rfc-editor.org/info/rfc6586): Experiences from
   an IPv6-Only Network
 - [RFC6589](https://www.rfc-editor.org/info/rfc6589): Considerations for
@@ -708,6 +802,8 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 - [RFC6866](https://www.rfc-editor.org/info/rfc6866): Problem Statement
   for Renumbering IPv6 Hosts with Static Addresses in Enterprise
   Networks
+- [RFC6877](https://www.rfc-editor.org/info/rfc6877): 464XLAT:
+  Combination of Stateful and Stateless Translation
 - [RFC6879](https://www.rfc-editor.org/info/rfc6879): IPv6 Enterprise
   Network Renumbering Scenarios, Considerations, and Methods
 - [RFC6883](https://www.rfc-editor.org/info/rfc6883): IPv6 Guidance for
@@ -737,6 +833,8 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   Implications of IPv6 on IPv4 Networks
 - [RFC7157](https://www.rfc-editor.org/info/rfc7157): IPv6 Multihoming
   without Network Address Translation
+- [RFC7269](https://www.rfc-editor.org/info/rfc7269): NAT64 Deployment
+  Options and Experience
 - [RFC7278](https://www.rfc-editor.org/info/rfc7278): Extending an IPv6
   /64 Prefix from a Third Generation Partnership Project (3GPP) Mobile
   Interface to a LAN Link
@@ -756,10 +854,14 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
   IPv6
 - [RFC7561](https://www.rfc-editor.org/info/rfc7561): Mapping Quality of
   Service (QoS) Procedures of Proxy Mobile IPv6 (PMIPv6) and WLAN
+- [RFC7690](https://www.rfc-editor.org/info/rfc7690): Close Encounters
+  of the ICMP Type 2 Kind (Near Misses with ICMPv6 Packet Too Big (PTB))
 - [RFC7707](https://www.rfc-editor.org/info/rfc7707): Network
   Reconnaissance in IPv6 Networks
 - [RFC7721](https://www.rfc-editor.org/info/rfc7721): Security and
   Privacy Considerations for IPv6 Address Generation Mechanisms
+- [RFC7739](https://www.rfc-editor.org/info/rfc7739): Security
+  Implications of Predictable Fragment Identification Values
 - [RFC7755](https://www.rfc-editor.org/info/rfc7755): SIIT-DC: Stateless
   IP/ICMP Translation for IPv6 Data Center Environments
 - [RFC7756](https://www.rfc-editor.org/info/rfc7756): Stateless IP/ICMP
@@ -797,6 +899,8 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 - [RFC8468](https://www.rfc-editor.org/info/rfc8468): IPv4, IPv6, and
   IPv4-IPv6 Coexistence: Updates for the IP Performance Metrics (IPPM)
   Framework
+- [RFC8475](https://www.rfc-editor.org/info/rfc8475): Using Conditional
+  Router Advertisements for Enterprise Multihoming
 - [RFC8501](https://www.rfc-editor.org/info/rfc8501): Reverse DNS in
   IPv6 for Internet Service Providers
 - [RFC8585](https://www.rfc-editor.org/info/rfc8585): Requirements for
@@ -804,6 +908,9 @@ RFCbib6 run at 2023-07-31 11:36:34 UTC+1200
 - [RFC8678](https://www.rfc-editor.org/info/rfc8678): Enterprise
   Multihoming using Provider-Assigned IPv6 Addresses without Network
   Prefix Translation: Requirements and Solutions
+- [RFC8683](https://www.rfc-editor.org/info/rfc8683): Additional
+  Deployment Guidelines for NAT64/464XLAT in Operator and Enterprise
+  Networks
 - [RFC8978](https://www.rfc-editor.org/info/rfc8978): Reaction of IPv6
   Stateless Address Autoconfiguration (SLAAC) to Flash-Renumbering
   Events
