@@ -14,4 +14,4 @@ Other direct and indirect contributors (mainly via email) include:
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](How%20to%20contribute.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
+### [<ins>Previous</ins>](How%20to%20contribute.md) [<ins>Next</ins>](What%20about%20IPv5.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)

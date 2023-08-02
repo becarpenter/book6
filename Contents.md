@@ -16,6 +16,7 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 * How to keep up to date
 * How to contribute
 * Acknowledgments
+* What about IPv5
  
 
 [2. IPv6 Basic Technology](2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
@@ -54,6 +55,7 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 * Security operation
 * Multi-prefix operation
 * Energy consumption
+* Basic Windows commands
 
 [7. Case Studies](7.%20Case%20Studies/7.%20Case%20Studies.md)
 
