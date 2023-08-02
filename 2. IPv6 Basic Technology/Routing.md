@@ -69,6 +69,7 @@ different features to be active:
 - Customer Edge (CE) routers (enterprise): These are routers that
   connect an enterprise network to one or more ISPs
   \[[RFC7084](https://www.rfc-editor.org/info/rfc7084)\],
+  {{RFC8585}},
   \[[RFC9096](https://www.rfc-editor.org/info/rfc9096)\].
 
 - Enterprise routers: Internal routers within a large enterprise
