@@ -25,6 +25,7 @@ and inter-chapter links as far as possible."""
 # Version: 2023-07-19 - apply mdformat to changed files
 #                     - add global mdformat option
 #                     - add mitigations for SSL certs for URL checking
+# Version: 2023-08-03 - correctly ignore ``` blocks
 
 ########################################################
 # Copyright (C) 2022-2023 Brian E. Carpenter.                  
@@ -226,11 +227,17 @@ def expand_cites():
     """Look for kramdown-style citations and expand them"""
     global section, contents, file_names, topic_file
     schange = False
+    inlit = False
     for i in range(len(section)):
         lchange = False
         line = section[i]
-        if "  {{" in line:
-            continue        #ignore a line that looks like documentation of {{ or {{{ itself        
+        if not inlit and line.startswith("```"):
+            inlit = True    #start of literal text - ignore
+            continue
+        if inlit:
+            if line.startswith("```"):
+                inlit = False   #end of literal text - stop ignoring
+            continue
         try:
             #convert {{ }} to \[{{ }}]
             line = line.replace("{{{","{?x{").replace("}}}","}?y}")
