@@ -108,6 +108,9 @@ computers configured with default settings from
 [RFC6724](https://www.rfc-editor.org/info/rfc6724) will not prefer ULAs
 over IPv4 addresses
 \[[draft-ietf-v6ops-ula](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ula/)\].
+A partial work-around for this problem is for a host to have two AAAA records
+in DNS, e.g. `www.example.com` for its GUA and `w3.example.com` for its ULA,
+the latter only being present in local split-horizon DNS.
 
 <!-- Link lines generated automatically; do not delete -->
 
