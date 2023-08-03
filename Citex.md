@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-07-24 09:35:52 UTC+1200
+Generated at 2023-08-03 14:28:14 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -23,6 +23,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [BCP84 ●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [BCP91 ●](./2.%20IPv6%20Basic%20Technology/DNS.md)
+
+[RFC1819 ●](./1.%20Introduction%20and%20Foreword/What%20about%20IPv5.md)
 
 [RFC1918 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
@@ -190,6 +192,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6583 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 
+[RFC6598 ●](./5.%20Network%20Design/Address%20Planning.md)
+
 [RFC6620 ●](./4.%20Security/Layer%202%20considerations.md)
 
 [RFC6636 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
@@ -301,10 +305,14 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 
 [RFC8415 ●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+[●](./5.%20Network%20Design/Address%20Planning.md)
 
 [RFC8501 ●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 
 [RFC8505 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+
+[RFC8585 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 
 [RFC8622 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 

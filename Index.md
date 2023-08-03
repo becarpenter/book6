@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-07-24 09:35:52 UTC+1200
+Generated at 2023-08-03 14:28:14 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
@@ -70,7 +70,8 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 
-[DAD ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[DAD ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 
 [DHCP ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
@@ -81,6 +82,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
+[●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [differentiated services ●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
@@ -103,6 +105,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+[●](./8.%20Deployment%20Status/Status.md)
 
 [DS-Lite ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
@@ -150,6 +153,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [happy eyeballs ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
@@ -176,6 +180,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [IPv4 ●](./1.%20Introduction%20and%20Foreword/How%20a%20network%20operations%20center%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
+[●](./1.%20Introduction%20and%20Foreword/What%20about%20IPv5.md)
 [●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
@@ -196,6 +201,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -259,6 +265,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 
 [NPTv6 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
@@ -282,6 +289,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
@@ -314,6 +322,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -339,7 +348,8 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [STUN ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
-[TCP ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[TCP ●](./1.%20Introduction%20and%20Foreword/What%20about%20IPv5.md)
+[●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
@@ -376,6 +386,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
+[●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)

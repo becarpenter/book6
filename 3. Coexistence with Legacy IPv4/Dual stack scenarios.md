@@ -186,11 +186,12 @@ MAP-E \[[RFC7597](https://www.rfc-editor.org/info/rfc7597)\], and MAP-T
 
 A framework for carriers is proposed in a current draft
 \[[draft-ietf-v6ops-framework-md-ipv6only-underlay](https://datatracker.ietf.org/doc/draft-ietf-v6ops-framework-md-ipv6only-underlay/)\].
-Customer edge routers need to support {{{RFC8585}}}.
-The reader will notice that the solutions most commonly adopted today,
-such as this one, exploit both the use of tunnels (IPv4 carried over
-IPv6) and translation (IPv4 re-encoded as IPv6). The following two
-sections separate out these two techniques.
+Customer edge routers need to support
+[RFC8585](https://www.rfc-editor.org/info/rfc8585). The reader will
+notice that the solutions most commonly adopted today, such as this one,
+exploit both the use of tunnels (IPv4 carried over IPv6) and translation
+(IPv4 re-encoded as IPv6). The following two sections separate out these
+two techniques.
 
 <!-- Link lines generated automatically; do not delete -->
 
