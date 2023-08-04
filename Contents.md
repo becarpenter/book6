@@ -16,7 +16,7 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 * How to keep up to date
 * How to contribute
 * Acknowledgments
-* What about IPv5
+* Why version 6
  
 
 [2. IPv6 Basic Technology](2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)

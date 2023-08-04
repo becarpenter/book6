@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-08-03 14:28:14 UTC+1200
+Generated at 2023-08-04 16:52:46 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
@@ -15,6 +15,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [address ●](./1.%20Introduction%20and%20Foreword/How%20a%20user%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
+[●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
 [●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
 [●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -159,7 +160,8 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [happy eyeballs ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
-[IANA ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[IANA ●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
+[●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
@@ -180,7 +182,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [IPv4 ●](./1.%20Introduction%20and%20Foreword/How%20a%20network%20operations%20center%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
-[●](./1.%20Introduction%20and%20Foreword/What%20about%20IPv5.md)
+[●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
 [●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
@@ -302,7 +304,8 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [RIPng ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
-[route ●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
+[route ●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
+[●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
 [●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
@@ -348,7 +351,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [STUN ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
-[TCP ●](./1.%20Introduction%20and%20Foreword/What%20about%20IPv5.md)
+[TCP ●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
