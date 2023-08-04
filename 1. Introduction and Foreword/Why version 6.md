@@ -1,7 +1,6 @@
 ## Why version 6
 
 This section is mainly historical.
-
 Cutting a long story short, IPv6 was designed in the early 1990s because
 people knew that IPv4 was destined to run out of addresses. But why is
 the version number 6?
@@ -9,17 +8,11 @@ the version number 6?
 Some people ask why IPv4 went to version 6, leaping the next number.
 This was _not_ related to the programmer's superstition where odd
 numbers should be beta releases.
-
 Maybe we should start by asking why IPv4 was version 4. Stated simply,
 that was because version 0 was never used, and versions 1 through 3 were
 were assigned during the evolution from ARPANET to TCP/IP. So version 4
 was the next number available for use in
 [RFC791](https://www.rfc-editor.org/info/rfc791).
-
-Actually, version 5 was assigned for something called Internet Stream
-Protocol Version 2
-\[[RFC1819](https://www.rfc-editor.org/info/rfc1819)\] which never made
-it.
 
 So why not IPv5? The answer is quite simple. The number 5 in the version
 field of the IP header was already assigned for what was called the
