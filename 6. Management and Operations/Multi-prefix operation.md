@@ -108,6 +108,10 @@ computers configured with default settings from
 [RFC6724](https://www.rfc-editor.org/info/rfc6724) will not prefer ULAs
 over IPv4 addresses
 \[[draft-ietf-v6ops-ula](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ula/)\].
+A site using DHCPv6 can change the default settings via
+[RFC7078](https://www.rfc-editor.org/info/rfc7078),
+but unfortunately this is not widely implemented.
+
 A partial work-around for this problem is for a host to have two AAAA records
 in DNS, e.g. `www.example.com` for its GUA and `w3.example.com` for its ULA,
 the latter only being present in local split-horizon DNS.
