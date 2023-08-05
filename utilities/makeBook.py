@@ -26,6 +26,8 @@ and inter-chapter links as far as possible."""
 #                     - add global mdformat option
 #                     - add mitigations for SSL certs for URL checking
 # Version: 2023-08-03 - correctly ignore ``` blocks
+# Version: 2023-08-05 - (useful comment added)
+
 
 ########################################################
 # Copyright (C) 2022-2023 Brian E. Carpenter.                  
@@ -76,6 +78,9 @@ import os
 import urllib.request
 import ssl
 import certifi
+
+# This needs:
+# pip install mdformat-gfm mdformat-frontmatter mdformat-footnote
 
 try:
     import mdformat
