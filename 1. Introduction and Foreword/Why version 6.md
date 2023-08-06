@@ -9,7 +9,7 @@ Some people ask why IPv4 went to version 6, leaping the next number.
 This was _not_ related to the programmer's superstition where odd
 numbers should be beta releases.
 Maybe we should start by asking why IPv4 was version 4. Stated simply,
-that was because version 0 was never used, and versions 1 through 3 were
+that was because version 0 was never used, and versions 1 through 3
 were assigned during the evolution from ARPANET to TCP/IP. So version 4
 was the next number available for use in
 [RFC791](https://www.rfc-editor.org/info/rfc791).
@@ -74,7 +74,7 @@ assigned in "protocol numbers":
 
 ST protocols never left an experimental phase, but for live experiments
 on the early Internet, its own version number was needed. While (as far
-as we know) there is no ST in used anywhere in the Internet today, its
+as we know) there is no ST in use anywhere in the Internet today, its
 version number is still assigned, so it would not make sense for the
 __next generation IP__ to carry that number, so it was “skipped”. The
 number 6 would only appear a few years later in an “Assigned numbers”
@@ -99,22 +99,23 @@ Decimal   Keyword    Version                            References
 ```
 
 Note that IANA had assigned numbers 6 through 9 for the then
-“competitors” of what became IPv6. Number 7 was reserved for TP/IX
-\[[RFC1475](https://www.rfc-editor.org/info/rfc1475)\], as they expected
-ST version 2 would use number 6, which did not happen. _Brian: really? I
-never heard that._ But unexpectedly, an "IPv7" proposal was announced
-during IETF meeting in Kobe, Japan, 1992, by IAB members. There was no
+“competitors” of what became IPv6. Number 7 was chosen for TP/IX
+\[[RFC1475](https://www.rfc-editor.org/info/rfc1475)\], as its designer
+expected ST version 2 would use number 6, which did not happen.
+But unexpectedly, a different "IPv7" proposal was announced
+during the Internet Society's INET conference in Kobe, Japan,
+in June 1992, by IAB members. There was no
 consensus among IETF engineers at that time about the new protocol, and
 some IAB members proposed using ISO/OSI's CLNP - designating it as IPv7
-despite the IANA assignment. This caused some discomfort in the Internet
+without a formal IANA assignment. This caused some discomfort in the Internet
 community and became known in technical circles as the “Kobe incident”.
 Numbers 8 and 9 were used by proposals that came to be merged into
 IPv6's ultimate design. As the lowest number available after 4, and
-already used in by same author's SIP, number 6 was kept for the first
+already used by the same author's SIP, number 6 was kept for the first
 official specification in
 [RFC1883](https://www.rfc-editor.org/info/rfc1883). Therefore, do not
-expect IP versions 7 or 8 in the future, nor even 9 that belongs to a
-April fool's day joke
+expect IP versions 7 or 8 in the future, nor even 9 that also belongs
+to an April fool's day joke
 \[[RFC1606](https://www.rfc-editor.org/info/rfc1606)\].
 
 <!-- Link lines generated automatically; do not delete -->
