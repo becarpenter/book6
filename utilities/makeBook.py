@@ -26,8 +26,7 @@ and inter-chapter links as far as possible."""
 #                     - add global mdformat option
 #                     - add mitigations for SSL certs for URL checking
 # Version: 2023-08-03 - correctly ignore ``` blocks
-# Version: 2023-08-05 - (useful comment added)
-
+# Version: 2023-08-10 - changed to use RFC index for existence checking
 
 ########################################################
 # Copyright (C) 2022-2023 Brian E. Carpenter.                  
@@ -78,9 +77,7 @@ import os
 import urllib.request
 import ssl
 import certifi
-
-# This needs:
-# pip install mdformat-gfm mdformat-frontmatter mdformat-footnote
+import requests
 
 try:
     import mdformat
@@ -196,15 +193,20 @@ def rfc_ok(s):
     if not rfcs_checkable:
         return True  #because we can't check on line right now
     dprint("Checking", s)
-    if s[:3] == "BCP" or s[:3] == "STD":
-        url = 'https://www.rfc-editor.org/refs/ref-'+s.lower()+'.txt' 
-    elif s[:3] == "RFC":       
-        s = "RFC."+s[3:].zfill(4)
-        url = 'https://bib.ietf.org/public/rfc/bibxml/reference.'+s+'.xml'
+    if s[:3] == "BCP":
+        found = [i for i in whole if "<bcp-entry><doc-id>BCP"+s[3:].zfill(4)+"</doc-id>" in i]
+        #print(found)
+        return(bool(found))
+    elif s[:3] == "STD":
+        found = [i for i in whole if "<std-entry><doc-id>STD"+s[3:].zfill(4)+"</doc-id>" in i]
+        #print(found)
+        return(bool(found))
+    elif s[:3] == "RFC":
+        found = [i for i in whole if "<rfc-entry><doc-id>RFC"+s[3:].zfill(4)+"</doc-id>" in i]
+        #print(found)
+        return(bool(found)) 
     else:
         return(False)  #invalid call
-    return url_ok(url)
-
 
 def draft_ok(s):
     """Check if a draft is real"""
@@ -376,13 +378,32 @@ if formatting:
 
 
 showinfo(title=T,
-         message = "Will read in current contents.\nChecking new references can be slow.\nTouch no files until done!")
+         message = "Will read in current contents and RFC index.\nTouch no files until done!")
 
 #Can we check RFCs?
-
+fp = "rfc-index.xml"
 rfcs_checkable = True
-rfcs_checkable = rfc_ok("RFC8200")
-if not rfcs_checkable:
+if (not os.path.exists(fp)) or (time.time()-os.path.getmtime(fp) > 60*60*24*30):
+    #need fresh copy of index
+    try:
+        if askyesno(title=T, message = "OK to download RFC index?\n(15 MB file)"):
+            response = requests.get("https://www.rfc-editor.org/rfc/rfc-index.xml")
+            open(fp, "wb").write(response.content)
+            logit("Downloaded and cached RFC index")
+        else:
+            rfcs_checkable = False
+    except Exception as E:
+        logitw("Cannot get RFC index: "+str(E))
+        rfcs_checkable = False
+if rfcs_checkable:
+    whole = rf(fp)
+    for i in range(len(whole)):
+        l = whole[i]
+        # hack to make subsequent search more efficient
+        if "<bcp-entry>" in l or "<rfc-entry>" in l or "<std-entry>" in l:
+            whole[i] = l.strip() + whole[i+1].strip() + "\n"
+            whole[i+1] = "\n"
+else:
     logitw("Cannot check RFC existence on-line")
 
 drafts_checkable = url_ok("https://bib.ietf.org")
@@ -391,7 +412,9 @@ if not drafts_checkable:
 
 ### For testing on-line existence checks
 ##print("RFC8200:",rfc_ok("RFC8200"))
+##print("RFC711:",rfc_ok("RFC711"))
 ##print("RFC9999:",rfc_ok("RFC9999"))
+##print("RFC12345:",rfc_ok("RFC12345"))
 ##print("BCP97:",rfc_ok("BCP97"))
 ##print("BCP9876:",rfc_ok("BCP9876"))
 ##print("STD24:",rfc_ok("STD24"))

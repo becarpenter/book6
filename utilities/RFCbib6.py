@@ -9,6 +9,7 @@
 #                       caught more RFCs; cosmetics
 # Version: 2023-08-01 - catch by WG acronym;
 #                       display counts
+# Version: 2023-08-10 - download & cache xml index
 
 ########################################################
 # Copyright (C) 2023 Brian E. Carpenter.                  
@@ -56,6 +57,7 @@ from tkinter.messagebox import askokcancel, askyesno, showinfo
 
 import time
 import os
+import requests
 
 def logit(msg):
     """Add a message to the log file"""
@@ -192,24 +194,23 @@ logit("Running in directory "+ os.getcwd())
 
 
 showinfo(title=T,
-         message = "Will read complete RFC bibliography.\nTouch no files until done!")
-try:
-    path = "C:/brian/docs/IETF stuff/rfc/rfc-index.xml"
-    if time.time()-os.path.getmtime(path) > 60*60*24*30:
-        logitw("rfc-index.xml is >30 days old")
-    whole = rf(path)
-except:
+         message = "Will read complete RFC index.\nTouch no files until done!")
+
+fp = "rfc-index.xml"
+if (not os.path.exists(fp)) or (time.time()-os.path.getmtime(fp) > 60*60*24*30):
+    #need fresh copy of index
     try:
-        if askyesno(title=T, message = "OK to download RFC index?/n(15 MB temp file)"):
-            import urllib.request
-            urllib.request.urlretrieve("http://www.rfc-editor.org/rfc/rfc-index.xml", "tempRx.xml")
-            whole = rf("tempRx.xml")
-            os.remove("tempRx.xml")
+        if askyesno(title=T, message = "OK to download RFC index?\n(15 MB file)"):
+            response = requests.get("https://www.rfc-editor.org/rfc/rfc-index.xml")
+            open(fp, "wb").write(response.content)
+            logit("Downloaded and cached RFC index")
         else:
-            crash("Cannot run without RFC index")
-    except:
-        crash("rfc-index.xml not found")
-    
+            raise Exception("Invalid choice")
+    except Exception as E:
+        logitw(str(E))
+        crash("Cannot run without RFC index")
+whole = rf(fp)
+  
 timestamp = time.strftime("%Y-%m-%d %H:%M:%S UTC%z",time.localtime())
 
 for line in whole:

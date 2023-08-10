@@ -4,3 +4,6 @@
 makeBook.log
 indexBook.log
 RFCbib6.log
+
+# Ignore RFC index
+rfc-index.xml
