@@ -52,6 +52,12 @@ concern:
   to work in most cases, it is inappropriate if the host in question has
   a valid IPv6 address, and pointless otherwise.
 
+- Certain IPv6 address types should __never__ be visible in global DNS: ULAs
+  (starting with `fdxx:` or even `fcxx:`) or link-local (starting with
+  `fe80::`). Beware that automated mechanisms like Active Directory might
+  add ULAs to global DNS by default. Of course, it is OK to
+  include ULAs in _local_ DNS if a split DNS configuration is used.
+
 Some statistics on AAAA records and reachability may be found at
 [Dan Wing's site](https://www.employees.org/~dwing/aaaa-stats/).
 
