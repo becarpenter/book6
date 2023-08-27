@@ -17,4 +17,8 @@ correct and up to date. It's also important that configuration tools are
 designed to avoid or minimize any need for users to enter IPv6 addresses
 by hand.
 
+P.S. In case you're wondering whether you can in fact use IPv6 right now,
+try <a href="https://ipv6test.google.com/" target="_blank">https://ipv6test.google.com/</a>.
+GitHub, where this book is hosted, supports IPv6 for many things, but not everything.
+
 ### [<ins>Previous</ins>](How%20to%20use%20this%20book.md) [<ins>Next</ins>](How%20an%20application%20programmer%20sees%20IPv6.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
