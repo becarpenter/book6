@@ -8,6 +8,8 @@ Other direct and indirect contributors (mainly via email) include:
 
 - Gert Doering
 
+- Gábor Lencse
+
 - Jyrki Soini
 
 (with apologies to those forgotten)

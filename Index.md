@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-08-04 16:52:46 UTC+1200
+Generated at 2023-09-05 14:08:50 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
@@ -180,6 +180,11 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
+[IPv4 as a Service ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+
 [IPv4 ●](./1.%20Introduction%20and%20Foreword/How%20a%20network%20operations%20center%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
@@ -215,6 +220,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [link-local ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 [●](./4.%20Security/Filtering.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)

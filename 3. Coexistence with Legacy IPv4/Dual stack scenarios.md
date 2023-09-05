@@ -192,6 +192,8 @@ notice that the solutions most commonly adopted today, such as this one,
 exploit both the use of tunnels (IPv4 carried over IPv6) and translation
 (IPv4 re-encoded as IPv6). The following two sections separate out these
 two techniques.
+[3. Translation](../3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)\]
+also gives more detail on IPv4aaS.
 
 <!-- Link lines generated automatically; do not delete -->
 

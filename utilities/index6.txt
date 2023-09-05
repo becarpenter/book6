@@ -75,4 +75,5 @@ Teredo
 firewall firewalls
 'happy eyeballs'
 multihoming multi-homing MHMP
+'IPv4 as a Service' IPv4aaS
 

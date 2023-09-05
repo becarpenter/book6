@@ -6,8 +6,8 @@ is to minimize IPv4 presence in the network. Unfortunately, some
 resources are available only on IPv4 and some client applications may
 *require* IPv4. Hence, a pure IPv6-only environment is unrealistic for
 the foreseeable future. In some situations, tunneling (as described
-above) is sufficient, but in others translation between IPv6 and IPv4 is
-unavoidable. For example, when providing IPv4 as a Service (IPv4aaS), a
+above) is sufficient, but typically translation between IPv6 and IPv4 is
+unavoidable. Especially, when providing IPv4 as a Service (IPv4aaS), a
 typical scenario will:
 
 1. Let IPv6 native traffic flow directly between the client and the
@@ -17,6 +17,9 @@ typical scenario will:
 1. Encapsulate literal IPv4 address requests into IPv6 on the client
    then decapsulate and translate it on the centralized NAT to access
    the IPv4 server.
+
+Because of this, it is essentially impossible to separate the discussion
+of translation techniques from the discussion of IPv4 as a service.
 
 ### Terminology
 
@@ -31,11 +34,11 @@ typical scenario will:
   information) but in practice it is used as part of stateful
   mechanisms.
 
-- NAT64 is SIIT with address translation between IPv6 clients and IPv4
-  servers.
+- NAT64 refers to address translation between IPv6 clients and IPv4
+  servers, using the SIIT mechanism.
 
   - [RFC6146](https://www.rfc-editor.org/info/rfc6146) defines
-    *stateful* NAT64, which (like IPv4 NAT) includes port translation
+    _stateful_ NAT64, which (like IPv4 NAT) includes port translation
     and supports two-way transport sessions.
   - DNS64 \[[RFC6147](https://www.rfc-editor.org/info/rfc6147)\]
     supports DNS extensions for clients of stateful NAT64.
@@ -50,9 +53,9 @@ typical scenario will:
   to* IPv4 servers. This is used for IPv4 traffic to cross an
   IPv6-only network.
 
-  - CLAT is the client side translator in 464XLAT.
-  - PLAT is the provider side translator in 464XLAT.
-  - This is the only well-defined model of NAT464.
+  - CLAT is the client side translator in 464XLAT. It implements stateless NAT46 (SIIT) translation.
+  - PLAT is the provider side translator in 464XLAT. It is nothing else than a stateful NAT64 gateway.
+  - This is the only well-defined model for NAT464 translation.
 
 - The final two items have nothing to do with IPv6/IPv4 co-existence but
   are included here for completeness:
@@ -66,7 +69,7 @@ typical scenario will:
     disadvantages, which it shares with classical IPv4 NAT
     \[[RFC5902](https://www.rfc-editor.org/info/rfc5902)\].
 
-### Further details
+### Further details of IPv4 as a service
 
 Point 2 listed above evidently needs stateful NAT64
 \[[RFC 6146](https://www.rfc-editor.org/info/rfc6146)\].
@@ -126,6 +129,8 @@ The following figure illustrates such a scenario.
   clients (even when disconnected) and MAP is not available by default
   on the majority of Mobile OSes. As a result, MAP has a small market
   share.
+
+### Further details of NPTv6
 
 Network Prefix Translation (NPTv6)
 \[[RFC 6296](https://www.rfc-editor.org/info/rfc6296)\] is a special
