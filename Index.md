@@ -1,12 +1,12 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-09-05 14:08:50 UTC+1200
+Generated at 2023-09-05 14:33:47 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 <!-- Link lines generated automatically; do not delete -->
 [464XLAT ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 
 [6PE ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
@@ -29,7 +29,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Filtering.md)
@@ -67,7 +67,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [coexistence ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 
@@ -92,7 +92,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
 [DNS64 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [DNS ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -100,7 +100,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
 [●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -109,7 +109,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./8.%20Deployment%20Status/Status.md)
 
 [DS-Lite ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [dual stack ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
@@ -117,7 +117,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
@@ -128,7 +128,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 
 [encapsulation ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [Ethertype ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
@@ -171,18 +171,18 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [ICMPv6 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/Filtering.md)
 
 [IID ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [IPv4 as a Service ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
 [IPv4 ●](./1.%20Introduction%20and%20Foreword/How%20a%20network%20operations%20center%20sees%20IPv6.md)
@@ -202,7 +202,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Filtering.md)
@@ -226,12 +226,12 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
-[Lw6o4 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[Lw6o4 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [MAC address ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 
-[MAP ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[MAP ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [MLD ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
@@ -257,26 +257,26 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [multihoming ●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 
-[NAT464 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[NAT464 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [NAT64 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [NAT66 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/4.%20Security.md)
 
 [NAT ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 
-[NPTv6 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[NPTv6 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/4.%20Security.md)
 
 [OSPF ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
@@ -291,7 +291,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Filtering.md)
@@ -326,7 +326,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
@@ -383,7 +383,7 @@ This index was created automatically, so it's dumb. It is not case-sensitive. It
 [ULA ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)

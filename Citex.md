@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-09-05 14:08:50 UTC+1200
+Generated at 2023-09-05 14:33:47 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -161,7 +161,7 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC5865 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 
-[RFC5902 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[RFC5902 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC5942 ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 
@@ -171,11 +171,11 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC6105 ●](./4.%20Security/Layer%202%20considerations.md)
 
-[RFC6144 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[RFC6144 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
-[RFC6146 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[RFC6146 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
-[RFC6147 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[RFC6147 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC6180 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 
@@ -184,11 +184,11 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6264 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
-[RFC6296 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[RFC6296 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/4.%20Security.md)
 
 [RFC6333 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [RFC6343 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
@@ -219,7 +219,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6775 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 
 [RFC6877 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC6888 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 
@@ -258,13 +258,13 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC7552 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [RFC7596 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC7597 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC7599 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC7610 ●](./4.%20Security/Layer%202%20considerations.md)
 
@@ -283,7 +283,7 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC7872 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 
-[RFC7915 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[RFC7915 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC791 ●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
 [●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
@@ -333,7 +333,7 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8678 ●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
-[RFC8683 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[RFC8683 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC8684 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
@@ -341,11 +341,11 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8754 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 
-[RFC8781 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[RFC8781 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC8837 ●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 
-[RFC8880 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[RFC8880 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC8899 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 
@@ -387,7 +387,7 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC9313 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
-[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC9386 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)

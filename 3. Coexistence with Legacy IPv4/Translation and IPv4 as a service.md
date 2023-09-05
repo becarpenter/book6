@@ -1,4 +1,4 @@
-## Translation
+## Translation and IPv4 as a service
 
 When an operator wants to reduce infrastructure costs by running a
 single protocol, IPv6, instead of a dual stack, the strategic approach

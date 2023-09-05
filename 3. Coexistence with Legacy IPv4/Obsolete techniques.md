@@ -11,9 +11,9 @@ Tunneling IPv6 over IPv4, or the converse, remains fundamental to
 co-existence, although various specific tunnel mechanisms are listed
 below as obsolete.
 
-Note that three such mechanisms (6to4, Teredo and ISATAP)
-have left behind them some operational security risks related to
-IPv4 protocol type 41, as described in
+Note that three such mechanisms (6to4, Teredo and ISATAP) have left
+behind them some operational security risks related to IPv4 protocol
+type 41, as described in
 [Plight at the End of the Tunnel - Legacy IPv6 Transition Mechanisms in the Wild](https://doi.org/10.1007/978-3-030-72582-2_23),
 preprint [here](https://dataplane.org/jtk/publications/kgkp-pam-21.pdf).
 
@@ -48,4 +48,4 @@ preprint [here](https://dataplane.org/jtk/publications/kgkp-pam-21.pdf).
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Translation.md) [<ins>Next</ins>](IPv6%20primary%20differences%20from%20IPv4.md) [<ins>Chapter Contents</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)
+### [<ins>Previous</ins>](Translation%20and%20IPv4%20as%20a%20service.md) [<ins>Next</ins>](IPv6%20primary%20differences%20from%20IPv4.md) [<ins>Chapter Contents</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)

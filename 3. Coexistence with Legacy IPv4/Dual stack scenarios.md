@@ -57,7 +57,7 @@ devices do exist, e.g.
 [Thread](https://www.threadgroup.org/What-is-Thread/Overview) devices,
 and more are to be expected in future. This situation requires a
 translation mechanism, such as NAT64 + DNS64 (see
-\[[Translation](Translation.md)\]), which will allow IPv6 only devices,
+\[[Translation and IPv4 as a service](Translation%20and%20IPv4%20as%20a%20service.md)\]), which will allow IPv6 only devices,
 on a dual stack network, to access IPv4 hosts. Typically, dual stack
 clients on the same network will also use NAT64 (instead of
 [RFC1918](https://www.rfc-editor.org/info/rfc1918) addresses and NAT44)
@@ -117,8 +117,8 @@ the user, making the network fit the capabilities of the host, thus
 lowering the risk of incompatibility (and lowering the rate of problem
 reports). Like most existing IPv6-only networks, IPv6-mostly will
 nevertheless require packet and DNS translation services
-([discussed later](Translation.md)) as well as knowledge of the IPv6
-prefix used for translation ([ditto](Translation.md)). With these
+([discussed later](Translation%20and%20IPv4%20as%20a%20service.md)) as well as knowledge of the IPv6
+prefix used for translation ([ditto](Translation%20and%20IPv4%20as%20a%20service.md)). With these
 features suppported, hosts on an IPv6-mostly network will have a full
 suite of capabilities.
 
@@ -153,7 +153,7 @@ least between the interfaces of the Provider Edge (PE) nodes and
 Customer Edge (CE) node (or the Broadband Network Gateway (BNG)). As
 further mentioned in [Tunnels](Tunnels.md), tunneling provides a way to
 use an existing IPv4 infrastructure to carry IPv6 traffic. There are
-also translation options described in [Translation](Translation.md).
+also translation options described in [Translation and IPv4 as a service](Translation%20and%20IPv4%20as%20a%20service.md).
 This approach with IPv6-only overlay helps to maintain compatibility
 with the existing base of IPv4, but it is not a long-term solution
 
@@ -192,7 +192,7 @@ notice that the solutions most commonly adopted today, such as this one,
 exploit both the use of tunnels (IPv4 carried over IPv6) and translation
 (IPv4 re-encoded as IPv6). The following two sections separate out these
 two techniques.
-[3. Translation](../3.%20Coexistence%20with%20Legacy%20IPv4/Translation.md)\]
+[3. Translation](../3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)\]
 also gives more detail on IPv4aaS.
 
 <!-- Link lines generated automatically; do not delete -->

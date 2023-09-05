@@ -35,7 +35,7 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 [3. Coexistence with Legacy IPv4](3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 * Dual stack scenarios
 * Tunnels
-* Translation
+* Translation and IPv4 as a service
 * Obsolete techniques
 * IPv6 primary differences from IPv4
 
