@@ -24,4 +24,4 @@ Compression and Fragmentation (SCHC)
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Multi-prefix%20operation.md) [<ins>Next</ins>](Basic%20Windows%20commands.md) [<ins>Chapter Contents</ins>](6.%20Management%20and%20Operations.md)
+### [<ins>Previous</ins>](Multihoming.md) [<ins>Next</ins>](Basic%20Windows%20commands.md) [<ins>Chapter Contents</ins>](6.%20Management%20and%20Operations.md)

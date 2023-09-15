@@ -109,13 +109,13 @@ computers configured with default settings from
 over IPv4 addresses
 \[[draft-ietf-v6ops-ula](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ula/)\].
 A site using DHCPv6 can change the default settings via
-[RFC7078](https://www.rfc-editor.org/info/rfc7078),
-but unfortunately this is not widely implemented.
+[RFC7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately
+this is not widely implemented.
 
-A partial work-around for this problem is for a host to have two AAAA records
-in DNS, e.g. `www.example.com` for its GUA and `w3.example.com` for its ULA,
-the latter only being present in local split-horizon DNS.
+A partial work-around for this problem is for a host to have two AAAA
+records in DNS, e.g. `www.example.com` for its GUA and `w3.example.com`
+for its ULA, the latter only being present in local split-horizon DNS.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Security%20operation.md) [<ins>Next</ins>](Energy%20consumption.md) [<ins>Chapter Contents</ins>](6.%20Management%20and%20Operations.md)
+### [<ins>Previous</ins>](Security%20operation.md) [<ins>Next</ins>](Multihoming.md) [<ins>Chapter Contents</ins>](6.%20Management%20and%20Operations.md)
