@@ -130,6 +130,16 @@ The following figure illustrates such a scenario.
   on the majority of Mobile OSes. As a result, MAP has a small market
   share.
 
+### IPv4 as a service for mobile devices
+
+The diagram above covers IPv4aaS for a network. A special case is
+IPv4aaS for a mobile device, especially when the device
+has only been provided with a single /64 prefix, as is the case
+in most 3GPP deployments. In this case, 464XLAT is the only
+available solution, and as described in Section 6.3 of
+[RFC 6877](https://www.rfc-editor.org/info/rfc6877),
+the CLAT will use a specific address from that /64 prefix.
+
 ### Further details of NPTv6
 
 Network Prefix Translation (NPTv6)
