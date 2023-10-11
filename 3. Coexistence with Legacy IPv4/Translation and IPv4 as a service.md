@@ -163,13 +163,14 @@ As stated above, NPTv6 is outlined in \[[RFC 6296](https://www.rfc-editor.org/in
 however, although there is significant commercial support, it should be noted that the 
 RFC is experimental as of the time of this writing, so it is not considered standards track. 
 
-While there is some controversy regarding breaking end-to-end address transparency in IPv6, 
+It goes without saying that NPTv6 is _never_ justified by a shortage of IPv6 addresses.
+Nevertheless, while there is controversy about breaking end-to-end address transparency in IPv6, 
 there are valid use cases for such architectures, and breaking the end-to-end model is more
 of an unfortunate side effect than a feature of such tools. Some details on the "breakage"
 caused by NPTv6, and a comparison with classical NAT, are given in
 [Section 5 of RFC 6296](https://www.rfc-editor.org/rfc/rfc6296.html#section-5).
 
-In large scale deployments, wide area architectures, NPTv6 does enable some compelling use cases which enable diversity in security platforms like such as stateful unified threat management devices (UTMs) which are positioned in geographically and layer 3 topologically diverse locations, but have the requirement of redundancy of layer 3 addressing so as to not create  symmetry of flows. that is to say, allowing NPTv6 to perform re-mapping of addressing allows for inspection engines to maintain the flow symmetry that is required for their stateful deep packet inspection engines to do their jobs, as asymmetry will cause them to mark all flows as incomplete. 
+In large scale deployments of wide area architectures, NPTv6 does enable some compelling use cases which enable diversity in security platforms such as stateful unified threat management devices (UTMs). These are positioned in geographically and topologically diverse locations, but require flexibility of _external_ layer 3 addressing to support flow identification. Using NPTv6 to perform re-mapping of addressing allows inspection engines to maintain the flow symmetry that is required for stateful deep packet inspection engines to operate, as asymmetry will cause them to mark all flows as incomplete. 
 It is in this model that it can be GUA to GUA, and this is a definite valid, supportable, and definitely production deployed architecture. 
 
 In smaller deployments, NPTv6 can be leveraged to create stable addressing inside a network that may be too small for PI address space, but too large to operate without service provider diversity. In this model, suck as an SD-WAN deployment, a GUA or ULA prefix may be deployed, delegated by a home office, other IT governance body, or a local administrator, and mapped to one or more PA prefixes provided by lower cost commercial internet services. This allows for internal addressing to be stable, while providing a more robust connectivity model, and the ability to more quickly switch providers if required by leveraging dynamic addressing externally mapped to stable addressing internally. This model more closely aligns with the current IPv4 architectures pervasively deployed nearly everywhere with stable internal IPv4 addressing masqueraded to one or more PA addresses provided by an upstream ISP. 
@@ -178,7 +179,8 @@ In smaller deployments, NPTv6 can be leveraged to create stable addressing insid
 
 NAT66 is currently a non-standards based mechanism for statefully translating one or more IPv6 addresses to one or more other IPv6 addresses. When port translation is also provided (as is very common for IPv4 NAT), the term NAPT66 may also be used.
 
-It should be noted well that, like NPTv6, NAT66 or NAPT66 should be used only when necessary or required. Moreover, is is also very important to understand that the intent of these tools is to translate, hence the names. They may play a part in compliance requirements, but they are - at their core - translation tools and not security mechanisms. Address translation is often deployed alongside stateful packet filtering, but the two are, in actuality, exclusive toolkits. That is to say, they are not tied to each other, and should be considered distinct - address translation is not a security tool.  
+It goes without saying that NAT66 is _never_ justified by a general shortage of IPv6 addresses.
+Like NPTv6, NAT66 should be used only when necessary or required. Moreover, is is also very important to understand that the intent of these tools is to translate, hence the names. They may play a part in compliance requirements, but they are - at their core - translation tools and not security mechanisms. Address translation is often deployed alongside stateful packet filtering, but the two are, in actuality, exclusive toolkits. That is to say, they are not tied to each other, and should be considered distinct - address translation is not a security tool.  
 
 <!-- Link lines generated automatically; do not delete -->
 
