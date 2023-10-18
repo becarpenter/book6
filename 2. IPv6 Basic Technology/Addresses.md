@@ -1,7 +1,8 @@
 ## Addresses
 
 A 128 bit address is big enough that, assuming the adoption of wise
-allocation policies, IPv6 will never run out of addresses. However, the
+allocation policies, IPv6 will [never](https://m.xkcd.com/865/)
+run out of addresses. However, the
 reason for choosing 128 rather than 64 was not just that: it was also to
 allow for some intrinsic structure to addresses, as described below. On
 the other hand, a *fundamental* property of IPv6 unicast routing is that
