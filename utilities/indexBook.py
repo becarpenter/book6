@@ -12,6 +12,7 @@
 # Version: 2023-01-05 - added citation index
 # Version: 2023-01-10 - added warnings of invalid internal citations
 # Version: 2023-05-20 - exclude RFC bibliography from indexing
+# Version: 2023-11-01 - enhance index boilerplate
 
 
 ########################################################
