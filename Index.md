@@ -4,6 +4,8 @@
 Generated at 2023-09-05 14:33:47 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
+
+If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
 <!-- Link lines generated automatically; do not delete -->
 [464XLAT ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
