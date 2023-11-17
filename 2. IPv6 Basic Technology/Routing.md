@@ -110,13 +110,17 @@ by Iljitsch van Beijnum:
 [Internet Routing with BGP](https://www.iljitsch.com/2022/11-18-new-e-book-internet-routing-with-bgp.html)
 (2022).
 
-Finally, as explained in
+As explained in
 [3. Dual stack scenarios](../3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md),
 IPv6 routing generally works independently of IPv4 routing, which was
 indeed a fundamental design choice. However, if necessary, encapsulated
 IPv4 traffic can be carried over an IPv6-only path. To enable this,
 multiprotocol BGP-4 has provision to advertise IPv4 reachability over an
 IPv6-only path \[[RFC8950](https://www.rfc-editor.org/info/rfc8950)\].
+
+Finally, IPv6 allows routing headers, interpreted by intermediate nodes
+along a packet's path. These are briefly explained in
+[Extension headers and options](Extension%20headers%20and%20options.md).
 
 <!-- Link lines generated automatically; do not delete -->
 
