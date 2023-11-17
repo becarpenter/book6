@@ -48,7 +48,9 @@ Here are some notes on the most common ones:
 - Routing header, if non-standard routing is required. There are various
   [routing header types](https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-2).
   An important current one is the Segment Routing Header (type 4,
-  [RFC8754](https://www.rfc-editor.org/info/rfc8754)).
+  [RFC8754](https://www.rfc-editor.org/info/rfc8754)). A router that acts
+  as an intermediate destination and therefore processes routing headers is
+  known as an 'intermediate node' in [STD86](https://www.rfc-editor.org/info/std86).
 
 - Encapsulating security payload, if
   [IPsec](https://www.rfc-editor.org/info/rfc4303) is in use. This is
