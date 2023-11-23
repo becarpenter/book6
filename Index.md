@@ -1,10 +1,9 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-09-05 14:33:47 UTC+1200
+Generated at 2023-11-23 16:26:28 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
-
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
 <!-- Link lines generated automatically; do not delete -->
 [464XLAT ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
@@ -41,6 +40,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
@@ -59,6 +59,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
 [●](./4.%20Security/Filtering.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [broadcast ●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 
@@ -155,6 +156,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [GUA ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -214,6 +216,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
@@ -257,6 +260,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 
 [multihoming ●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 
 [NAT464 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
@@ -302,6 +306,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [QUIC ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
@@ -337,6 +342,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 [●](./6.%20Management%20and%20Operations/Routing%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
