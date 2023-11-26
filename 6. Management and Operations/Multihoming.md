@@ -3,9 +3,10 @@
 Multihoming means configuring a site in such a way that it is connected
 via more than one link to the Internet, preferably via different ISPs,
 usually to provide redundancy in case of failures. The phrase
-"multihoming with multiple providers" (MHMP) is sometimes used. The
-previous section describes the problems with achieving MHMP using
-multiple address prefixes. This section describes practical techniques
+"multihoming with multiple providers" (MHMP) is sometimes used.
+[<ins>The previous section</ins>](Multi-prefix%20operation.md)
+describes the problems in achieving MHMP using
+multiple address prefixes. This section discusses practical techniques
 for site multihoming.
 
 Note that the term "multihoming" is sometimes used to describe a
@@ -51,12 +52,21 @@ about 200,000 routes. There are estimated to be 32 million small
 businesses in the USA alone, and 200 million in the world. If every
 small business had its own PI prefix, the Internet would stop working.
 
-Therefore, except for some thousands of large enterprises, any viable
-solution for multihoming must be based on PA addresses.
+Therefore, except for some thousands of large enterprises, a viable
+solution for multihoming must be based on PA addresses. As shown
+in [<ins>the previous section</ins>](Multi-prefix%20operation.md),
+operating with more than one PA prefix at the same time is currently
+impractical, especially if transport session survivability is required.
 
 _Work in progress, to be continued..._
 
-RFC 7157
+<!-- RFC 7157
+(SHIM6)
+HE
+TAPS
+MPTCP
+multi-path QUIC
+NPTv6 -->
 
 <!-- Link lines generated automatically; do not delete -->
 
