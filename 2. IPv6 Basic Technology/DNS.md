@@ -58,6 +58,10 @@ concern:
   add ULAs to global DNS by default. Of course, it is OK to
   include ULAs in _local_ DNS if a split DNS configuration is used.
 
+    _Note:_ Some AAAA records for ULA addresses do exist in the DNS, and
+    are not a security risk, but they may cause unexpected failures from
+    a user's standpoint.
+
 Some statistics on AAAA records and reachability may be found at
 [Dan Wing's site](https://www.employees.org/~dwing/aaaa-stats/).
 
