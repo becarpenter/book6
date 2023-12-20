@@ -77,7 +77,7 @@ a particular application.
 ### IPv6-Mostly Networks
 
 With the standardization of
-[RFC8925](https://www.rfc-editor.org/info/rfc8925/) ("IPv6-Only
+[RFC8925](https://www.rfc-editor.org/info/rfc8925) ("IPv6-Only
 Preferred Option for DHCPv4") there now exists a supportable, standard
 mechanism for gracefully migrating off of legacy IP while preserving
 access for systems and network stacks that either do not support IPv6 or
