@@ -111,8 +111,20 @@ systems add support for DHCP option 108, reliance on legacy IPv4
 naturally becomes smaller and smaller until it can eventually be
 disabled or is diminished enough that it can be removed.
 
-This controlled and deliberate migration allows the operating system to
-decide how much or how little it can support without needed input from
+One operational glitch has been observed in this scenario. If a host
+that supports DHCP option 108 has any kind of misconfiguration that
+prevents IPv6 from working properly, it can enter a state where it
+disables IPv4 but has no IPv6 connectivity either. For example, if
+a host's intrinsic firewall is configured to block incoming ICMPv6
+and IPv6 packets, yet the host respects option 108, it will fail
+to connect to either version of IP when it encounters an IPv6-mostly
+network. This misconfiguration has been observed in laptop computers
+with a mandatory corporate security configuration, when they roam to
+an IPv6-mostly network outside the corporate network.
+
+Apart from this problem, controlled and deliberate migration
+via IPv6-mostly allows the operating system to
+decide how much or how little it can support without needing input from
 the user, making the network fit the capabilities of the host, thus
 lowering the risk of incompatibility (and lowering the rate of problem
 reports). Like most existing IPv6-only networks, IPv6-mostly will
