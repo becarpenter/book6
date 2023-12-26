@@ -67,7 +67,10 @@ of translation techniques from the discussion of IPv4 as a service.
   - NAT66 is not defined by the IETF and, given the vast supply of IPv6
     addresses, is not generally considered useful enough to overcome its
     disadvantages, which it shares with classical IPv4 NAT
-    \[[RFC5902](https://www.rfc-editor.org/info/rfc5902)\].
+    \[[RFC5902](https://www.rfc-editor.org/info/rfc5902)\]. Like IPv4 NAT,
+    it may be implemented with support of port translation (i.e., NAPT66),
+    but as there is no shortage of IPv6 addresses, port translation
+    is unnecessary.
 
 ### Further details of IPv4 as a service
 

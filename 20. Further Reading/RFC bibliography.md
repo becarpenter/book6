@@ -7,9 +7,9 @@ BCPs, Informational and Experimental RFCs. Be *cautious* about old
 Informational or Experimental RFCs - they may be misleading as well as
 out of date.
 
-RFCbib6 run at 2023-11-23 16:26:56 UTC+1300 (445 RFCs found)
+RFCbib6 run at 2023-12-26 16:38:56 UTC+1300 (447 RFCs found)
 
-### Standards Track (226 RFCs)
+### Standards Track (228 RFCs)
 
 - [RFC2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions for
@@ -494,6 +494,11 @@ RFCbib6 run at 2023-11-23 16:26:56 UTC+1300 (445 RFCs found)
   In Situ Operations, Administration, and Maintenance (IOAM)
 - [RFC9487](https://www.rfc-editor.org/info/rfc9487): Export of Segment
   Routing over IPv6 Information in IP Flow Information Export (IPFIX)
+- [RFC9513](https://www.rfc-editor.org/info/rfc9513): OSPFv3 Extensions
+  for Segment Routing over IPv6 (SRv6)
+- [RFC9514](https://www.rfc-editor.org/info/rfc9514): Border Gateway
+  Protocol - Link State (BGP-LS) Extensions for Segment Routing over
+  IPv6 (SRv6)
 
 ### Best Current Practice (12 RFCs)
 
