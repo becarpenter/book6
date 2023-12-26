@@ -79,7 +79,7 @@ connect the site to two (or more) ISPs and assign two (or more) PA
 prefixes, and leave client applications to find a working path by trial
 and error. This is essentially a generalization of the Happy Eyeballs
 approach \[[RFC8305](https://www.rfc-editor.org/info/rfc8305)\], but it
-will lead to help desk calls in the case of applications that not
+will lead to help desk calls in the case of applications that are not
 sufficiently resilient. It is clearly not sufficient for a large site,
 especially if it operates servers as well as client hosts.
 
