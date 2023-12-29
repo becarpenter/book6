@@ -157,6 +157,16 @@ premises router requests an entire GUA block. Once it has it, the
 smaller /64 blocks are typically handled as a prefix pool, where each is
 assigned to a internal subnet.
 
+### Other sources of information
+
+Daryll Swer has written an excellent
+[blog](https://www.daryllswer.com/ipv6-architecture-and-subnetting-guide-for-network-engineers-and-operators/)
+that covers subnet and addressing design (also available from
+[APNIC](https://blog.apnic.net/2023/04/04/ipv6-architecture-and-subnetting-guide-for-network-engineers-and-operators/).
+
+Although quite old, the following book may be helpful:
+[IPv6 Address Planning](https://www.oreilly.com/library/view/ipv6-address-planning/9781491908211/) by Tom Coffeen.
+
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Chapter Contents</ins>](5.%20Network%20Design.md)
