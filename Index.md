@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-12-26 16:39:31 UTC+1300
+Generated at 2023-12-30 15:29:42 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -142,6 +142,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
 [●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [flow label ●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
@@ -381,6 +382,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 [●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [Teredo ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
@@ -406,6 +408,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [wireless ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)

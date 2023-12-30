@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-12-26 16:39:31 UTC+1300
+Generated at 2023-12-30 15:29:42 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -253,6 +253,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC7123 ●](./4.%20Security/Filtering.md)
 
+[RFC7157 ●](./6.%20Management%20and%20Operations/Multihoming.md)
+
 [RFC7439 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [RFC7454 ●](./4.%20Security/Filtering.md)
@@ -345,6 +347,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC8683 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC8684 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [RFC8724 ●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 

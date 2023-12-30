@@ -18,7 +18,11 @@ In 2003, the IETF established goals for site multihoming
 main goals were: redundancy, load sharing, performance, policy control,
 simplicity, and transport session survivability. Without describing all
 the efforts made since then, it is clear that a solution that satisfies
-all these goals simultaneously has been difficult to find.
+all these goals simultaneously has been difficult to find. A more recent
+overview can be found in
+[RFC7157](https://www.rfc-editor.org/info/rfc7157).
+
+### Large sites
 
 Today, the most practical approach for a large site, or for a large
 enterprise network distributed over multiple physical sites, is to
@@ -52,10 +56,12 @@ businesses in the USA alone, and 200 million in the world. If every
 small business suddenly had its own PI prefix, the Internet would stop
 working.
 
-Therefore, except for some thousands of large enterprises, a viable
-solution for multihoming of small or medium enterprises must be based on
-PA addresses, if it is to be used by millions of sites. However, as
-shown in [<ins>the previous section</ins>](Multi-prefix%20operation.md),
+### Small or medium sites
+
+Except for some thousands of large enterprises, a viable solution for
+multihoming of small or medium enterprises must be based on PA
+addresses, if it is to be used by millions of sites. However, as shown
+in [<ins>the previous section</ins>](Multi-prefix%20operation.md),
 operating with more than one PA prefix at the same time is currently
 impractical, especially if transport session survivability is required.
 
@@ -103,17 +109,45 @@ change. However, servers will be announced to the outside world via DNS
 using their translated PA addresses.
 
 This method is known to have been successfully tested, although not
-recommended by the IETF.
+recommended by the IETF. It should be noted, however, that NPTv6 does
+not share all the disadvantages of IPv4 NAT. As discussed in RFC 6296,
 
-_Work in progress, to be continued..._
+- NPTv6 does not need to translate port numbers, and it is
+  checksum-neutral, so the transport layer is effectively unaffected.
 
-<!-- RFC 7157
-(SHIM6)
-HE
-TAPS
-MPTCP
-multi-path QUIC
-NPTv6 -->
+- Translation is stateless, so matters such as asymmetric routing, load
+  sharing, and router fail-over are not affected.
+
+- Filtering of unwanted traffic requires an adequate firewall, but this
+  is true for any serious IPv6 (or IPv4) deployment.
+
+- Topology hiding, which is sometimes cited as an argument for NAT, is
+  discussed in
+  \[[4. Topology obfuscation](../4.%20Security/Topology%20obfuscation.md)\].
+  NPTv6 does indeed largely obfuscate local topology. For example (again
+  following RFC 6296), a host whose actual address is
+  `fd01:0203:0405:0001::1234` might appear on the Internet as
+  `2001:db8:0001:d550::1234`. An attacker that does not know the site's
+  ULA prefix (`fd01:0203:0405::/48`) cannot reverse the translation and
+  deduce the actual subnet prefix.
+
+Of course, NPTv6 retains some of the disadvantages of NAT: all of the
+problems that directly follow from having different IP addresses at the
+two ends of a connection. Any site running NPTv6 must either deal with
+these problems, or avoid any affected applications. Section 5 of
+[RFC6296](https://www.rfc-editor.org/info/rfc6296) discusses this in
+detail.
+
+### Transport layer solutions
+
+Another possible approach to site multihoming is to treat it as a
+transport layer problem. If a transport protocol is agile enough to use
+multiple paths (i.e., multiple source/destination address pairs),
+failures at the network layer can be hidden. Multipath TCP (MPTCP,
+\[[RFC8684](https://www.rfc-editor.org/info/rfc8684)\]) is defined but
+not widely available. A multipath version of QUIC is under discussion,
+as is a versatile API for the transport layer that would support
+multipath solutions. Discussion continues in the IETF.
 
 <!-- Link lines generated automatically; do not delete -->
 
