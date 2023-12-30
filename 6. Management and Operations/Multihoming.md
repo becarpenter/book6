@@ -97,7 +97,7 @@ translation, known as NPTv6
 In this model, a translator is placed at the site exit router towards
 each ISP. Outgoing and incoming packets are translated to and from
 appropriate PA addresses. The routeable prefix part of each address is
-changed, as are some bits in the IID, in a way that avoids transport
+changed, and possibly some bits in the IID, in a way that avoids transport
 checksum errors. This translation is stateless and reversible, so causes
 much less difficulty than traditional NAT; no port translation is
 needed.
