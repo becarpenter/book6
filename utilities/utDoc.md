@@ -10,11 +10,11 @@ chapter.
 
 __makeBook__'s functions include:
 
- - Update the global contents (`Contents.md`) to reflect the actual chapter contents.
+ - Update the global contents (_Contents.md_) to reflect the actual chapter contents.
 
- - Update the individual chapter files (`./ChapterName/ChapterName.md`) to correspond to the global contents.
+ - Update the individual chapter files (_./ChapterName/ChapterName.md_) to correspond to the global contents.
 
- - Create any missing section files (`./ChapterName/SectionName.md`).
+ - Create any missing section files (_./ChapterName/SectionName.md_).
 
  - Reconcile discrepancies between the global contents, the chapter
 contents, and the actual section files. (Not all discrepancies can
@@ -62,28 +62,28 @@ names to the main contents.
 
 7. For each chapter:
 
-7.1 If there is a remaining discrepancy between
+  * 7.1 If there is a remaining discrepancy between
 the list of sections in the main contents and the section
 files actually present, log a warning that __makeBook__ must
 be run again to resolve it. Also log a warning if there is
 an uppercase/lowercase discrepancy (which really needs
 manual fixing).
 
-7.2 Create and initialize any missing section files.
+  * 7.2 Create and initialize any missing section files.
 
-7.3 If anything in the chapter file has changed during
+  * 7.3 If anything in the chapter file has changed during
 steps 7.1 and 7.2 , write it back.
 
-7.4 For each section in the chapter:
+  * 7.4 For each section in the chapter:  
 
-7.4.1 Read in the markdown file, update internal links
+    * 7.4.1 Read in the markdown file, update internal links
 if necessary, expand any `{{ }}` or `{{{ }}}` citations
 as markdown links (but log a warning if this fails).
 
-7.4.2. If anything in the section file has changed during
+    * 7.4.2. If anything in the section file has changed during
 step 7.4.1, write it back.
 
-7.5. Read in the chapter markdown file (again),
+  * 7.5. Read in the chapter markdown file (again),
 expand any `{{ }}` or `{{{ }}}` citations as markdown links
 (but log a warning if this fails), and write it back
 if necessary.
