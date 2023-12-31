@@ -95,14 +95,48 @@ _expand_cites()_ which is straightforward but tedious
 to describe.
 
 __makeBook__ issues warnings to standard output but also
-to the file _makeBook.log_ in the main book directory.
+to the file _makeBook.log_ in the main book6 directory.
 This log should always be checked after a run!
 
 
-### makeIndex
+### indexBook
 
-TBD
+This program is applied to the entire book6 directory. It reads
+each section file in each chapter, and if one of the index terms
+in file _./utilities/index6.txt_ is present, an index entry is
+created or extended, pointing to the section. 
+
+Index terms are not case-sensitive, and each term can appear
+in several variants. The details of that are given in
+_index.txt_ itself, but for example the line
+~~~
+link-local 'link local' link-locals
+~~~
+means that all three terms will be indexed under `link-local`.
+
+The program also builds a citation index, showing which RFCs
+are indexed by which sections.
+
+At the end, the collated and sorted results are written to _./Index.md_
+and _./Citex.md`_
+
+__indexBook__ issues warnings to standard output but also
+to the file _indexBook.log_ in the main book6 directory.
+This log should always be checked after a run!
 
 ### RFCbib6
 
-TBD
+This program creates a list of all current RFCs that
+mention IPv6 in their title or come from the major IPv6 working groups.
+Obsolete RFCs are not included. There are subsections for Standards, BCPs, 
+Informational and Experimental RFCs. It does this by processing a recent
+copy of the RFC index (in XML format) according to the above criteria.
+The result is stored as a book6 chapter in
+_./20. Further Reading/RFC bibliography.md_.
+
+__RFCbib6__ issues warnings to standard output but also
+to the file _RFCbib6.log_ in the main book6 directory.
+This log should always be checked after a run!
+
+It's best to run __makeBook__ afterwards. (Note that _RFC bibliography.md_
+is ignored by __indexBook__, to avoid noise in the citation index.)
