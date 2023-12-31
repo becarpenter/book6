@@ -49,7 +49,7 @@ index, this checking is impossible and it logs a warning.
 
 3. Determine whether automatic checking of I-D existence is
 possible. If __makeBook__ cannot access the current I-D index,
-this checking is impossible and book6 logs a warning.
+this checking is impossible and it logs a warning.
 
 4. Read in the existing main contents (_Contents.md_).
 
