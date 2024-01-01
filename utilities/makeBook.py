@@ -27,9 +27,10 @@ and inter-chapter links as far as possible."""
 #                     - add mitigations for SSL certs for URL checking
 # Version: 2023-08-03 - correctly ignore ``` blocks
 # Version: 2023-08-10 - changed to use RFC index for existence checking
+# Version: 2024-01-01 - changed default text for empty sections
 
 ########################################################
-# Copyright (C) 2022-2023 Brian E. Carpenter.                  
+# Copyright (C) 2022-2024 Brian E. Carpenter.                  
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with
@@ -333,6 +334,7 @@ base = []        # the base file for each chapter
 base_names = []  # the section names extracted from the base file
 warnings = 0     # counts warnings in the log file
 written = 0      # counts files written
+default_text = "If you know what should be written here, please write it! [How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)"
 
 #Horrible hack to avoid spurious 403 errors on redirected URLs
 # - we pretend to be a browser. Thank you StackOverflow!
@@ -466,6 +468,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
             base = []
             base.append("# "+dname+"\n\n")
             base.append("General introduction to this chapter.\n\n")
+            base.append(default_text+"\n\n")
             base.append("<!-- ## Name (add plain section names like that) -->\n\n")
             base.append(link_warn)
             base.append("### [<ins>Back to main Contents</ins>](../Contents.md)\n")
@@ -560,7 +563,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                     #There is no file, make it
                     new_md = []
                     new_md.append('## '+topic+"\n\n")
-                    new_md.append("Section text goes here\n\n")
+                    new_md.append(default_text+"\n\n")
                     new_md.append(link_warn)
                     new_md.append(link_text("PREVIOUS","NEXT",dname))
                     wf(dname+"/"+topic+".md", new_md)
