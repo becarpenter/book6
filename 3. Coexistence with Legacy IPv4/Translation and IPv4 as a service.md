@@ -162,6 +162,12 @@ permits connection initiation in both directions.
 However, it is not fully transparent for applications that
 embed IP addresses at high layers (so-called “referrals”). Hence, it
 cannot be considered end-to-end transparent. 
+
+A particular difficulty is that SIP (Session Initiation Protocol for
+IP telephony) will not work behind NPTv6 without
+the support of a proxy mechanism 
+\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)].
+
 As stated above, NPTv6 is outlined in \[[RFC 6296](https://www.rfc-editor.org/info/rfc6296)\]; 
 however, although there is significant commercial support, it should be noted that the 
 RFC is experimental as of the time of this writing, so it is not considered standards track. 
