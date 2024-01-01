@@ -65,6 +65,10 @@ to access IPv4 only hosts, but they are using NAT either way. See this
 helpful
 [blog article](https://sgryphon.gamertheory.net/2022/12/14/running-nat64-in-a-dual-stack-network/).
 
+A specific issue is that SIP (Session Initiation Protocol for IP telephony)
+will not work without provision for IPv6/IPv4 coexistence
+\[[RFC6157](https://www.rfc-editor.org/info/rfc6157)].
+
 Although Dual-Stack provides advantages in the initial phase of
 deployment, it has some disadvantages in the long run, like the
 duplication of network resources and states. It also requires more IPv4
