@@ -8,9 +8,11 @@ usually to provide redundancy in case of failures. The phrase
 the problems in achieving MHMP using multiple address prefixes. This
 section discusses practical techniques for site multihoming.
 
-Domestic or small office installations are out of scope for this topic. They
-will rarely be connected permanently to more than one ISP, and therefore cannot
-expect smooth failover. 
+Domestic or very small office installations are out of scope for this topic. They
+are rarely connected permanently to more than one ISP, and therefore cannot
+expect smooth failover. They might have an alternative connection
+(e.g., a wireless hot spot instead of a terrestrial connection) but the
+changeover would amount to a network restart and would likely be manual.
 
 Note that the term "multihoming" is sometimes used to describe a
 configuration _inside_ a site network where a node is connected to more
@@ -55,7 +57,7 @@ management by skilled technicians. Secondly, the wide area BGP-4 routing
 system is widely considered unable to cope with the millions of PI
 prefixes that would ensue if a majority of small and medium enterprises
 adopted this solution. In November 2023, the global BGP-4 system carried
-about 200,000 routes. There are estimated to be 32 million small
+about 200,000 IPv6 routes. There are estimated to be 32 million small
 businesses in the USA alone, and 200 million in the world. If every
 small business suddenly had its own PI prefix, the Internet would stop
 working.
