@@ -79,7 +79,8 @@ version number is still assigned, so it would not make sense for the
 __next generation IP__ to carry that number, so it was “skipped”. The
 number 6 would only appear a few years later in an “Assigned numbers”
 update \[[RFC1700](https://www.rfc-editor.org/info/rfc1700)\], then
-named as "Simple Internet Protocol" (SIP).
+named as "Simple Internet Protocol" (SIP). This acronym has
+been recycled for the Session Initiation Protocol.
 
 ```
 Assigned Internet Version Numbers
