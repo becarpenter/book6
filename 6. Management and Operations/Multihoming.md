@@ -8,6 +8,10 @@ usually to provide redundancy in case of failures. The phrase
 the problems in achieving MHMP using multiple address prefixes. This
 section discusses practical techniques for site multihoming.
 
+Domestic or small office installations are out of scope for this topic. They
+will rarely be connected permanently to more than one ISP, and therefore cannot
+expect smooth failover. 
+
 Note that the term "multihoming" is sometimes used to describe a
 configuration _inside_ a site network where a node is connected to more
 than one internal router to provide redundancy. That complicates site
@@ -133,10 +137,16 @@ not share all the disadvantages of IPv4 NAT. As discussed in RFC 6296,
 
 Of course, NPTv6 retains some of the disadvantages of NAT: all of the
 problems that directly follow from having different IP addresses at the
-two ends of a connection. Any site running NPTv6 must either deal with
-these problems, or avoid any affected applications. Section 5 of
-[RFC6296](https://www.rfc-editor.org/info/rfc6296) discusses this in
-detail.
+two ends of a connection. Section 5 of
+[RFC6296](https://www.rfc-editor.org/info/rfc6296) discusses this.
+Any site running NPTv6 must either deal with
+these problems, or avoid any affected applications. In particular,
+SIP (Session Initiation Protocol for IP telephony) will not work without
+the support of a proxy mechanism 
+\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)]
+as well as provision for IPv6/IPv4 coexistence
+\[[RFC6157](https://www.rfc-editor.org/info/rfc6157)].
+This limits the applicability of NPTv6.
 
 ### Transport layer solutions
 
