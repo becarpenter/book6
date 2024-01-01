@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-12-30 15:29:42 UTC+1300
+Generated at 2024-01-02 11:30:02 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -182,6 +182,9 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC6147 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
+[RFC6157 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
+
 [RFC6180 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 
 [RFC6192 ●](./4.%20Security/Filtering.md)
@@ -191,6 +194,9 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC6296 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/4.%20Security.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
+
+[RFC6314 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [RFC6333 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)

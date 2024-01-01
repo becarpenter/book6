@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2023-12-30 15:29:42 UTC+1300
+Generated at 2024-01-02 11:30:02 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -36,6 +36,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
@@ -72,7 +73,9 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [DAD ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
@@ -123,6 +126,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
@@ -141,6 +145,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
 
@@ -193,6 +198,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [IPv4 as a Service ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
@@ -219,6 +225,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
@@ -313,6 +320,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -349,6 +357,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
@@ -364,6 +373,12 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [RTP ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
 [SCTP ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[SIP ●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
+[●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [SLAAC ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
@@ -419,6 +434,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
