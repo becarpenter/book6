@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-01-02 11:30:02 UTC+1300
+Generated at 2024-01-04 14:45:26 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -135,6 +135,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 
 [RFC4862 ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
 [RFC4864 ●](./4.%20Security/Topology%20obfuscation.md)
 
@@ -381,6 +382,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [RFC9000 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)

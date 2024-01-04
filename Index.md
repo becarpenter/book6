@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-01-02 11:30:02 UTC+1300
+Generated at 2024-01-04 14:45:26 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -90,6 +90,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
+[●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [differentiated services ●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
@@ -127,6 +128,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./5.%20Network%20Design/5.%20Network%20Design.md)
+[●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
@@ -146,6 +148,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
 [●](./5.%20Network%20Design/5.%20Network%20Design.md)
+[●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
 
@@ -227,6 +230,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Topology%20obfuscation.md)
 [●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
+[●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -249,6 +253,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [MAC address ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
 [MAP ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
@@ -360,6 +365,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
+[●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
@@ -387,6 +393,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
+[●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [STUN ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
@@ -433,6 +440,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
+[●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
