@@ -78,4 +78,6 @@ multihoming multi-homing MHMP
 'IPv4 as a Service' IPv4aaS
 Ethertype
 SIP
+BYOD 'bring your own'
+IPAM "IP address management"
 

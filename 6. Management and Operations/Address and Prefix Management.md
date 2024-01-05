@@ -13,15 +13,21 @@ Three main cases can be distinguished:
    network elements, including customer gateways, according to a
    predefined plan as discussed in
    \[[5. Address Planning](../5.%20Network%20Design/Address%20Planning.md)\].
+   DHCPv6 Prefix Delegation `OPTION_IA_PD` may be used to assign
+   prefixes to routers, even if DHCPv6 is not used for address
+   assignment
+   \[[2. Managed configuration](../2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)\].
 
 1. Managed enterprise networks will prepare an addressing and subnet
    plan that meets their specific requirements. To take a very simple
    example, an enterprise given a /48 prefix by its ISP might assign a
    /56 to each branch office and then assign /64 subnets as needed
    within each branch. The decision must then be taken whether to deploy
-   SLAAC throughout the network, or to use DHCPv6 for address
-   assignment. This choice has implications for both trouble-shooting
-   and security incident management.
+   SLAAC throughout the network, or to use DHCPv6 `OPTION_IA_NA`for
+   address assignment
+   \[[2. Managed configuration](../2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)\].
+   This choice has implications for both trouble-shooting and security
+   incident management.
 
 When a help-desk call or a security alert concerns a specific IPv6
 address, the responder needs to know which computer and which user are
@@ -38,17 +44,25 @@ This is volatile information, especially if IPv6 temporary addresses
 addresses
 \[[draft-ietf-madinas-mac-address-randomization](https://datatracker.ietf.org/doc/draft-ietf-madinas-mac-address-randomization/)\]
 are in use. A supplementary mechanism is needed to extract and log this
-information at a suitable frequency.
+information at a suitable frequency. An alternative would be to
+continuously monitor neighbor discovery traffic and extract and log the
+same information. It has also been observed that monitoring DAD
+(duplicate address detection) traffic will work, as described in
+[this blog](https://weberblog.net/monitoring-mac-ipv6-address-bindings/).
+All these solutions have unpleasant scaling properties for a large
+enterprise.
 
 In the case of DHCPv6, the IPv6-MAC address correspondence is embedded
 in the DHCP server configuration. In the simplest approach, MAC
 addresses are pre-registered and neither temporary IPv6 addresses nor
-variable MAC addresses are supported.
+variable MAC addresses are supported. However, this exposes the network
+to attack, since it is trivial to forge a MAC address with most modern
+equipment.
 
-In either case, MAC addresses could be authenticated by IEEE 802.1X
-access control, and this would provide a robust link between the MAC
-address and the human user whose credentials were used for
-authentication.
+With either SLAAC or DHCPv6, the user of an unknown MAC addresses can be
+authenticated by IEEE 802.1X access control, and this would provide a
+robust link between the MAC address in use and the human user whose
+credentials were used for authentication.
 
 An additional factor is that one widely used host operating system,
 Android, does not currently support host address assignment via DHCPv6.
@@ -65,6 +79,11 @@ DHCPv6, in conjunction with their choice of IPAM (IP Address Management)
 solution if applicable. An important question is whether tools exist to
 meet the help desk and security needs described above _for the specific
 vendor equipment and software in use_.
+
+This book does not recommend specific products. However, it is to be
+noted that an [open source solution](https://www.isc.org/kea/) does
+exist that supports DHCPv6-based address management including dynamic
+DNS.
 
 <!-- Link lines generated automatically; do not delete -->
 
