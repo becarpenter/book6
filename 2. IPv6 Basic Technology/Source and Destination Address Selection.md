@@ -20,7 +20,7 @@ required to further evaluate and the traffic in question is sourced from
 the address specified by the given application.
 
 In cases where there is no specificity by a given application, the
-operating system will evaluate the available addresses of both IPv4 ad
+operating system will evaluate the available addresses of both IPv4 and
 IPv6 address families and sort them according to a set of rules,
 returning the top address from its evaluated list based on the pair of
 source address and destination addresses, often shortened to "SA/DA" for
@@ -40,7 +40,7 @@ following order:
 The default sorting behavior is generally defined by the following
 table:
 
-`````{
+```
 Prefix                            Prec   Label      
 ::1/128                           50     0    
 ::/0                              40     1  
@@ -51,24 +51,24 @@ fc00::/7                           3    13
 ::/96                              1     3       
 fec0::/16                          1    11        
 3ffe::/16                          1    12        
-}```
+```
 
 
 In the vast majority of use cases, this default table is unchanged and consistent. However, on platforms such as Linux and Microsoft Windows, it is possible to adjust this table to create desired behavior, up to and including creating address pairings, adjusted preferences, and unique traffic SA/DA characteristics.
 
 ### Destination address selection
 
-Destination address selection is somewhat complex, and it should be understood that it is configurable and may be somewhat inconsistent based on the implementation of a given IPv6 network stack and the age of the operating system. At the time of this writing there are still operating systems that employ aspects of or full implementations of RFC3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted by [RFC6724](https://www.rfc-editor.org/info/rfc6724) in 2012.  To understand source address selection, one can reference the file /etc/gai.conf in a modern linux system as it has the most succinct example of the rules governing the process.
+Destination address selection is somewhat complex, and it should be understood that it is configurable and may be somewhat inconsistent based on the implementation of a given IPv6 network stack and the age of the operating system. At the time of this writing there are still operating systems that employ aspects of or full implementations of [RFC3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted by [RFC6724](https://www.rfc-editor.org/info/rfc6724) in 2012.  To understand source address selection, one can reference the file _/etc/gai.conf_ in a modern Linux system as it has the most succinct example of the rules governing the process.
 
 ### ULA considerations
 
-In default situations where both IPv4 and ULA are present, IPv4 will be the preferred protocol. This is often counter to general understanding of how IPv6 behavior works in a dual staked environment and can be observed in the aforementioned gai.conf file with the following line:
+In default situations where both IPv4 and ULA are present, IPv4 will be the preferred protocol. This is often counter to general understanding of how IPv6 behavior works in a dual stacked environment and can be observed in the aforementioned _gai.conf_ file with the following line:
 
-```{
+```
 Prefix                            Prec   Label      
 ...
-::ffff:0.0.0.0/96                 35     4   
-}```
+::ffff:0.0.0.0/96                 35     4
+```
 
 This is the IPv6 conversion of IPv4 address space. Because this block of addresses has a higher preference value than ULA addressing, it will be preferred by default by the operating system and application due to its preference value.  
 
@@ -84,15 +84,15 @@ Using a vanilla linux system the following changes can be made using the ip comm
 
 For example: 
 
-```{
+```
 sudo ip addrlabel add prefix fd68:1e02:dc1a:9:ba27:ebff:fe84:781c/128 label 97
 sudo ip addrlabel add prefix 2001:db8:4009:81c::200e/128 label 97
-}```
+```
 
 
 Yields: 
 
-```{
+```
 user@v6host:~$ sudo ip addrlabel list
 prefix 2001:db8:4009:81c::200e/128 label 97
 prefix fd68:1e02:dc1a:9:ba27:ebff:fe84:781c/128 label 97
@@ -106,15 +106,11 @@ prefix 2002::/16 label 2
 prefix fec0::/10 label 11
 prefix fc00::/7 label 5
 prefix ::/0 label 1
-}```
+```
 
 ### Source address selection
 
 In practice, source address selection is difficult to configure outside of link local, GUA, and ULA default preferences, and varies by host and application implementations. It is possible to create address pairings using the IPv6 address label mechanisms, however. 
-<!-- Link lines generated automatically; do not delete -->
-### [<ins>Previous</ins>](Traffic%20class%20and%20flow%20label.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)````
-`````
-
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Previous</ins>](Traffic%20class%20and%20flow%20label.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
