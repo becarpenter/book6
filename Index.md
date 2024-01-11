@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-01-06 11:12:28 UTC+1300
+Generated at 2024-01-11 14:38:47 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -26,6 +26,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
@@ -170,6 +171,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [GUA ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
@@ -221,6 +223,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 [●](./2.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 [●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
@@ -250,6 +253,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
+[●](./2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 [●](./4.%20Security/Filtering.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -323,6 +327,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
@@ -431,6 +436,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [ULA ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
+[●](./2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/Filtering.md)

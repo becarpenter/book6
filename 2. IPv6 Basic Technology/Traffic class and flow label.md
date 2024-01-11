@@ -34,4 +34,4 @@ and
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Extension%20headers%20and%20options.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Extension%20headers%20and%20options.md) [<ins>Next</ins>](Source%20and%20Destination%20Address%20Selection.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)

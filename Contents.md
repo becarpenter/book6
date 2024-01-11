@@ -31,6 +31,7 @@ and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
 * Transport protocols
 * Extension headers and options
 * Traffic class and flow label
+* Source and Destination Address Selection
 
 [3. Coexistence with Legacy IPv4](3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 * Dual stack scenarios
