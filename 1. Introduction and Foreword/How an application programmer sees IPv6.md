@@ -43,7 +43,10 @@ in your code. Always make them configurable and if possible use FQDNs
 (DNS names) instead of IP addresses.
 
 Address types are discussed further in
-[2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md). How
+[2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md). 
+Address _selection_ is discussed
+[here](../2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md).
+How
 applications relate to a mixture of IPv4 and IPv6 addresses is also
 discussed in
 [3. Dual stack scenarios](../3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md).
