@@ -1,12 +1,17 @@
 ## Acknowledgments
 
+Currently the editorial committee includes Nick Buraglio and Brian Carpenter.
+
 Contributors via GitHub may be identified at
 [Contributors](https://github.com/becarpenter/book6/graphs/contributors).
-Other direct and indirect contributors (mainly via email) include:
+
+Other direct and indirect contributors, either of text or very helpful comments (mainly via email), include:
 
 - Tim Chown
 
 - Gert Doering
+
+- John Klensin
 
 - Gábor Lencse
 
