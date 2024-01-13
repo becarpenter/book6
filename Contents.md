@@ -2,8 +2,8 @@
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
 This is the current list of contents. It will change as the book evolves.
-There is also an [index](https://github.com/becarpenter/book6/blob/main/Index.md),
-and a [citation index](https://github.com/becarpenter/book6/blob/main/Citex.md).
+There is also an [index](./Index.md),
+and a [citation index](./Citex.md).
 
 # List of Contents
 
