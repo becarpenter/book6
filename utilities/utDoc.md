@@ -140,3 +140,27 @@ This log should always be checked after a run!
 
 It's best to run __makeBook__ afterwards. (Note that _RFC bibliography.md_
 is ignored by __indexBook__, to avoid noise in the citation index.)
+
+### bakebook
+
+This program concatenates the whole book into a single "baked"
+markdown file (called _baked.md_). This isn't intended for users,
+but as an intermediate step on the way to a PDF version of
+book6.
+
+Its main job, apart from concatenating all relevant .md files,
+is to fix up internal references to match the way GitHub
+creates anchors for chapter and section titles in `## Title`
+format. The code is very ad hoc and has to special-case
+a few details.
+
+The title page is at _Title.md_ and is augmented during
+baking by adding a timestamp.
+
+Ome gotcha is that all graphics files (`.svg, .png, .jpg`)
+needed to be copied into the main directory. Another gotcha
+is that section names need to be unique book-wide.
+
+A current weakness is that where a page break is needed,
+this is signaled by a comment line: `<!-- page break -->`.
+
