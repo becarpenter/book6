@@ -12,13 +12,13 @@ You are welcome to make a printed copy at your own expense, but be aware
 that the book will evolve constantly.
 
 The
-[list of contents](https://github.com/becarpenter/book6/blob/main/Contents.md)
+[list of contents](../Contents.md)
 should act as an on-line guide to the topics covered. Most readers will
 probably not read from cover to cover. Design your own path through the
 book.
 
 There is also an
-[index](https://github.com/becarpenter/book6/blob/main/Index.md).
+[index](../Index.md).
 
 A little tip: For some reason, GitHub doesn't support automatically opening a
 link in a new browser tab or window, so clicking on links will always take you to
