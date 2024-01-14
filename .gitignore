@@ -2,6 +2,7 @@
 
 # Ignore log files
 makeBook.log
+bakeBook.log
 indexBook.log
 RFCbib6.log
 
