@@ -4,6 +4,9 @@
 """Bake book6 into a single markdown file"""
 
 # Version: 2024-01-14 - original
+# Version: 2024-01-17 - case error in index citations
+#                     - fixed missing special cases for citations
+#                     - replace blobs with pilcrows for latex
 
 
 ########################################################
@@ -115,6 +118,9 @@ def fix_section(raw):
     """Change citations throughout a section"""
     new = []
     for line in raw:
+        #latex doesn't like the blob character
+        if '●' in line:
+            line=line.replace('●','¶')
         if "](" in line:
             outline = ""
             while "](" in line:
@@ -134,6 +140,12 @@ def fix_section(raw):
                 if target == "contents":
                     #Special case
                     target = "list-of-contents"
+                if target == "index":
+                    #Special case
+                    target = "book6-main-index"
+                if target == "citex":
+                    #Special case
+                    target = "book6-citation-index"
                 outline += head + "](#" + target +")"
             outline += line
         else:
@@ -225,16 +237,7 @@ for line in contents:
 # Pre-bake contents
 
 contents = fix_section(contents)
-
-# Special case for links to indexes
-
-for i in range(len(contents)):
-    line = contents[i]
-    if "(#index)" in line:
-        contents[i] = line.replace("(#index)", "(#book6-Main-Index)")
-    elif "(#citex)" in line:
-        contents[i] = line.replace("(#citex)", "(#book6-Citation-Index)")
-        
+      
 baked += contents
 
 ######### Main text

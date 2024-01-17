@@ -16,14 +16,24 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-01-14 15:44:57 UTC+1300
+
+
+
+
+
+
+
+
+
+
+Version captured at 2024-01-17 14:20:55 UTC+1300
 <!-- page break -->
 # book6: A Collaborative IPv6 Book.
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
 This is the current list of contents. It will change as the book evolves.
-There is also an [index](#book6-Main-Index),
-and a [citation index](#book6-Citation-Index).
+There is also an [index](#book6-main-index),
+and a [citation index](#book6-citation-index).
 
 # List of Contents
 
@@ -151,7 +161,7 @@ probably not read from cover to cover. Design your own path through the
 book.
 
 There is also an
-[index](#index).
+[index](#book6-main-index).
 
 A little tip: For some reason, GitHub doesn't support automatically opening a
 link in a new browser tab or window, so clicking on links will always take you to
@@ -5181,8 +5191,9 @@ RFCbib6 run at 2023-12-30 15:29:10 UTC+1300 (447 RFCs found)
 This chapter shows how to write a new chapter. It is intentionally
 listed in the contents of the book itself, and is intended to be a
 living chapter of a living book. You should also check
-[CONTRIBUTING](#contributing) and [LICENSE](#license) before
-contributing.
+[CONTRIBUTING](https://github.com/becarpenter/book6/blob/main/CONTRIBUTING.md) 
+and [LICENSE](https://github.com/becarpenter/book6/blob/main/LICENSE.md)
+before contributing.
 
 The second section in this chapter shows how to write a new section.
 
@@ -5273,7 +5284,8 @@ So, to repeat: add a new ## item to the chapter introduction, and
 makeBook will create the necessary .md file. Add a new .md file to the
 chapter directory, and makeBook will add it to the chapter contents.
 
-_Pro tip:_ Adding a new chapter, renaming or deleting a section or chapter, or moving a section from one chapter to another, etc., are not automated at present and may require a good deal of manual work. For that, see the [special instructions](#chapterreorg).
+_Pro tip:_ Adding a new chapter, renaming or deleting a section or chapter, or moving a section from one chapter to another, etc., are not automated at present and may require a good deal of manual work. For that, see the
+[special instructions](https://github.com/becarpenter/book6/blob/main/utilities/chapterReorg.md).
 
 [First Section](#first-section)
 
@@ -5415,457 +5427,457 @@ Generated at 2024-01-11 14:38:47 UTC+1300
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
 <!-- Link lines generated automatically; do not delete -->
-[464XLAT ●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-[●](#deployment-by-carriers)
-
-[6PE ●](#tunnels)
-
-[6to4 ●](#obsolete-techniques)
-
-[address ●](#how-a-user-sees-ipv6)
-[●](#how-an-application-programmer-sees-ipv6)
-[●](#why-version-6)
-[●](#ipv6-basic-technology)
-[●](#address-resolution)
-[●](#addresses)
-[●](#auto-configuration)
-[●](#dns)
-[●](#layer-2-functions)
-[●](#managed-configuration)
-[●](#packet-format)
-[●](#routing)
-[●](#source-and-destination-address-selection)
-[●](#coexistence-with-legacy-ipv4)
-[●](#dual-stack-scenarios)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#obsolete-techniques)
-[●](#translation-and-ipv4-as-a-service)
-[●](#tunnels)
-[●](#security)
-[●](#filtering)
-[●](#layer-2-considerations)
-[●](#topology-obfuscation)
-[●](#network-design)
-[●](#address-planning)
-[●](#address-and-prefix-management)
-[●](#energy-consumption)
-[●](#multi-prefix-operation)
-[●](#multihoming)
-[●](#deployment-by-carriers)
-[●](#deployment-in-the-enterprise)
-[●](#deployment-in-the-home)
-[●](#markdown-usage)
-
-[anycast ●](#addresses)
-
-[ARP ●](#address-resolution)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#layer-2-considerations)
-
-[Babel ●](#routing)
-
-[BGP ●](#addresses)
-[●](#routing)
-[●](#further-reading)
-[●](#filtering)
-[●](#multi-prefix-operation)
-[●](#multihoming)
-
-[broadcast ●](#ipv6-primary-differences-from-ipv4)
-
-[BYOD ●](#address-and-prefix-management)
-
-[CGN ●](#dual-stack-scenarios)
-[●](#obsolete-techniques)
-[●](#tunnels)
-
-[coexistence ●](#coexistence-with-legacy-ipv4)
-[●](#dual-stack-scenarios)
-[●](#obsolete-techniques)
-[●](#translation-and-ipv4-as-a-service)
-[●](#tunnels)
-[●](#network-design)
-[●](#energy-consumption)
-[●](#multihoming)
-
-[DAD ●](#address-resolution)
-[●](#auto-configuration)
-[●](#layer-2-considerations)
-[●](#address-and-prefix-management)
-
-[DHCP ●](#auto-configuration)
-[●](#dns)
-[●](#managed-configuration)
-[●](#routing)
-[●](#dual-stack-scenarios)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#filtering)
-[●](#layer-2-considerations)
-[●](#address-planning)
-[●](#address-and-prefix-management)
-[●](#multi-prefix-operation)
-
-[differentiated services ●](#packet-format)
-[●](#routing)
-[●](#traffic-class-and-flow-label)
-[●](#transport-protocols)
-
-[DNS64 ●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-
-[DNS ●](#how-an-application-programmer-sees-ipv6)
-[●](#addresses)
-[●](#auto-configuration)
-[●](#dns)
-[●](#managed-configuration)
-[●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-[●](#management-and-operations)
-[●](#address-and-prefix-management)
-[●](#benchmarking-and-monitoring)
-[●](#multi-prefix-operation)
-[●](#multihoming)
-[●](#deployment-in-the-enterprise)
-[●](#deployment-in-the-home)
-[●](#status)
-
-[DS-Lite ●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-[●](#tunnels)
-
-[dual stack ●](#how-an-application-programmer-sees-ipv6)
-[●](#routing)
-[●](#transport-protocols)
-[●](#coexistence-with-legacy-ipv4)
-[●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-[●](#tunnels)
-[●](#network-design)
-[●](#address-and-prefix-management)
-[●](#energy-consumption)
-[●](#deployment-in-the-home)
-
-[ECN ●](#packet-format)
-[●](#traffic-class-and-flow-label)
-[●](#transport-protocols)
-
-[encapsulation ●](#layer-2-functions)
-[●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-[●](#tunnels)
-
-[Ethertype ●](#layer-2-functions)
-
-[firewall ●](#extension-headers-and-options)
-[●](#dual-stack-scenarios)
-[●](#security)
-[●](#topology-obfuscation)
-[●](#network-design)
-[●](#address-and-prefix-management)
-[●](#benchmarking-and-monitoring)
-[●](#multihoming)
-
-[flow label ●](#packet-format)
-[●](#routing)
-[●](#traffic-class-and-flow-label)
-[●](#markdown-usage)
-
-[getaddrinfo ●](#how-an-application-programmer-sees-ipv6)
-[●](#dns)
-[●](#dual-stack-scenarios)
-
-[GRE ●](#layer-2-functions)
-[●](#tunnels)
-
-[GUA ●](#addresses)
-[●](#auto-configuration)
-[●](#source-and-destination-address-selection)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#translation-and-ipv4-as-a-service)
-[●](#topology-obfuscation)
-[●](#address-planning)
-[●](#multi-prefix-operation)
-
-[happy eyeballs ●](#how-an-application-programmer-sees-ipv6)
-[●](#multihoming)
-[●](#deployment-in-the-home)
-
-[IANA ●](#why-version-6)
-[●](#addresses)
-[●](#auto-configuration)
-[●](#extension-headers-and-options)
-[●](#managed-configuration)
-[●](#packet-format)
-[●](#filtering)
-
-[ICMPv6 ●](#address-resolution)
-[●](#auto-configuration)
-[●](#extension-headers-and-options)
-[●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-[●](#filtering)
-
-[IID ●](#addresses)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#translation-and-ipv4-as-a-service)
-[●](#layer-2-considerations)
-[●](#multi-prefix-operation)
-[●](#multihoming)
-
-[IPAM ●](#address-and-prefix-management)
-
-[IPv4 as a Service ●](#coexistence-with-legacy-ipv4)
-[●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-[●](#network-design)
-[●](#multihoming)
-[●](#deployment-in-the-home)
-
-[IPv4 ●](#how-a-network-operations-center-sees-ipv6)
-[●](#how-an-application-programmer-sees-ipv6)
-[●](#why-version-6)
-[●](#address-resolution)
-[●](#addresses)
-[●](#dns)
-[●](#extension-headers-and-options)
-[●](#layer-2-functions)
-[●](#managed-configuration)
-[●](#routing)
-[●](#source-and-destination-address-selection)
-[●](#traffic-class-and-flow-label)
-[●](#transport-protocols)
-[●](#further-reading)
-[●](#coexistence-with-legacy-ipv4)
-[●](#dual-stack-scenarios)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#obsolete-techniques)
-[●](#translation-and-ipv4-as-a-service)
-[●](#tunnels)
-[●](#security)
-[●](#filtering)
-[●](#layer-2-considerations)
-[●](#topology-obfuscation)
-[●](#network-design)
-[●](#address-planning)
-[●](#address-and-prefix-management)
-[●](#benchmarking-and-monitoring)
-[●](#energy-consumption)
-[●](#multi-prefix-operation)
-[●](#multihoming)
-[●](#deployment-by-carriers)
-[●](#deployment-in-the-home)
-
-[IS-IS ●](#routing)
-
-[link-local ●](#address-resolution)
-[●](#addresses)
-[●](#auto-configuration)
-[●](#dns)
-[●](#source-and-destination-address-selection)
-[●](#filtering)
-[●](#energy-consumption)
-[●](#multi-prefix-operation)
-[●](#deployment-in-the-home)
-
-[Lw6o4 ●](#translation-and-ipv4-as-a-service)
-
-[MAC address ●](#address-resolution)
-[●](#addresses)
-[●](#address-and-prefix-management)
-
-[MAP ●](#translation-and-ipv4-as-a-service)
-
-[MLD ●](#address-resolution)
-[●](#layer-2-considerations)
-
-[MPLS ●](#layer-2-functions)
-[●](#tunnels)
-
-[MPTCP ●](#transport-protocols)
-[●](#multihoming)
-
-[MTU ●](#extension-headers-and-options)
-[●](#layer-2-functions)
-[●](#packet-format)
-
-[multicast ●](#address-resolution)
-[●](#addresses)
-[●](#auto-configuration)
-[●](#layer-2-functions)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#filtering)
-[●](#layer-2-considerations)
-[●](#energy-consumption)
-
-[multihoming ●](#multi-prefix-operation)
-[●](#multihoming)
-[●](#deployment-in-the-enterprise)
-
-[NAT464 ●](#translation-and-ipv4-as-a-service)
-
-[NAT64 ●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-
-[NAT66 ●](#ipv6-primary-differences-from-ipv4)
-[●](#translation-and-ipv4-as-a-service)
-[●](#security)
-
-[NAT ●](#transport-protocols)
-[●](#dual-stack-scenarios)
-[●](#obsolete-techniques)
-[●](#translation-and-ipv4-as-a-service)
-[●](#tunnels)
-[●](#security)
-[●](#topology-obfuscation)
-[●](#address-planning)
-[●](#multihoming)
-[●](#deployment-in-the-enterprise)
-
-[NPTv6 ●](#translation-and-ipv4-as-a-service)
-[●](#security)
-[●](#multihoming)
-
-[OSPF ●](#routing)
-
-[PIO ●](#auto-configuration)
-
-[PPP ●](#layer-2-functions)
-
-[prefix ●](#addresses)
-[●](#auto-configuration)
-[●](#managed-configuration)
-[●](#routing)
-[●](#source-and-destination-address-selection)
-[●](#dual-stack-scenarios)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#translation-and-ipv4-as-a-service)
-[●](#tunnels)
-[●](#security)
-[●](#filtering)
-[●](#layer-2-considerations)
-[●](#topology-obfuscation)
-[●](#network-design)
-[●](#address-planning)
-[●](#address-and-prefix-management)
-[●](#multi-prefix-operation)
-[●](#multihoming)
-
-[QUIC ●](#transport-protocols)
-[●](#multihoming)
-
-[RA messages ●](#address-resolution)
-[●](#auto-configuration)
-[●](#managed-configuration)
-[●](#routing)
-
-[RIPng ●](#routing)
-
-[route ●](#why-version-6)
-[●](#ipv6-basic-technology)
-[●](#address-resolution)
-[●](#addresses)
-[●](#auto-configuration)
-[●](#dns)
-[●](#extension-headers-and-options)
-[●](#layer-2-functions)
-[●](#managed-configuration)
-[●](#packet-format)
-[●](#routing)
-[●](#traffic-class-and-flow-label)
-[●](#further-reading)
-[●](#coexistence-with-legacy-ipv4)
-[●](#dual-stack-scenarios)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#translation-and-ipv4-as-a-service)
-[●](#tunnels)
-[●](#filtering)
-[●](#layer-2-considerations)
-[●](#topology-obfuscation)
-[●](#network-design)
-[●](#address-planning)
-[●](#management-and-operations)
-[●](#address-and-prefix-management)
-[●](#energy-consumption)
-[●](#multi-prefix-operation)
-[●](#multihoming)
-[●](#routing-operation)
-[●](#deployment-by-carriers)
-[●](#deployment-in-the-enterprise)
-[●](#deployment-in-the-home)
-
-[RPL ●](#routing)
-
-[RTP ●](#transport-protocols)
-
-[SCTP ●](#transport-protocols)
-
-[SIP ●](#why-version-6)
-[●](#transport-protocols)
-[●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-[●](#multihoming)
-
-[SLAAC ●](#auto-configuration)
-[●](#managed-configuration)
-[●](#routing)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#security)
-[●](#filtering)
-[●](#layer-2-considerations)
-[●](#address-and-prefix-management)
-[●](#multi-prefix-operation)
-
-[STUN ●](#transport-protocols)
-
-[TCP ●](#why-version-6)
-[●](#addresses)
-[●](#extension-headers-and-options)
-[●](#packet-format)
-[●](#traffic-class-and-flow-label)
-[●](#transport-protocols)
-[●](#multihoming)
-
-[Teredo ●](#obsolete-techniques)
-
-[tunnel ●](#layer-2-functions)
-[●](#traffic-class-and-flow-label)
-[●](#coexistence-with-legacy-ipv4)
-[●](#dual-stack-scenarios)
-[●](#obsolete-techniques)
-[●](#tunnels)
-[●](#layer-2-considerations)
-
-[UDP ●](#extension-headers-and-options)
-[●](#managed-configuration)
-[●](#packet-format)
-[●](#transport-protocols)
-[●](#obsolete-techniques)
-
-[ULA ●](#addresses)
-[●](#auto-configuration)
-[●](#dns)
-[●](#source-and-destination-address-selection)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#translation-and-ipv4-as-a-service)
-[●](#filtering)
-[●](#topology-obfuscation)
-[●](#multi-prefix-operation)
-[●](#multihoming)
-
-[wireless ●](#address-resolution)
-[●](#auto-configuration)
-[●](#layer-2-functions)
-[●](#managed-configuration)
-[●](#routing)
-[●](#ipv6-primary-differences-from-ipv4)
-[●](#layer-2-considerations)
-[●](#address-planning)
-[●](#address-and-prefix-management)
-[●](#multi-prefix-operation)
-[●](#multihoming)
-[●](#deployment-by-carriers)
-[●](#deployment-in-the-home)
+[464XLAT ¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#deployment-by-carriers)
+
+[6PE ¶](#tunnels)
+
+[6to4 ¶](#obsolete-techniques)
+
+[address ¶](#how-a-user-sees-ipv6)
+[¶](#how-an-application-programmer-sees-ipv6)
+[¶](#why-version-6)
+[¶](#ipv6-basic-technology)
+[¶](#address-resolution)
+[¶](#addresses)
+[¶](#auto-configuration)
+[¶](#dns)
+[¶](#layer-2-functions)
+[¶](#managed-configuration)
+[¶](#packet-format)
+[¶](#routing)
+[¶](#source-and-destination-address-selection)
+[¶](#coexistence-with-legacy-ipv4)
+[¶](#dual-stack-scenarios)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#obsolete-techniques)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
+[¶](#security)
+[¶](#filtering)
+[¶](#layer-2-considerations)
+[¶](#topology-obfuscation)
+[¶](#network-design)
+[¶](#address-planning)
+[¶](#address-and-prefix-management)
+[¶](#energy-consumption)
+[¶](#multi-prefix-operation)
+[¶](#multihoming)
+[¶](#deployment-by-carriers)
+[¶](#deployment-in-the-enterprise)
+[¶](#deployment-in-the-home)
+[¶](#markdown-usage)
+
+[anycast ¶](#addresses)
+
+[ARP ¶](#address-resolution)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#layer-2-considerations)
+
+[Babel ¶](#routing)
+
+[BGP ¶](#addresses)
+[¶](#routing)
+[¶](#further-reading)
+[¶](#filtering)
+[¶](#multi-prefix-operation)
+[¶](#multihoming)
+
+[broadcast ¶](#ipv6-primary-differences-from-ipv4)
+
+[BYOD ¶](#address-and-prefix-management)
+
+[CGN ¶](#dual-stack-scenarios)
+[¶](#obsolete-techniques)
+[¶](#tunnels)
+
+[coexistence ¶](#coexistence-with-legacy-ipv4)
+[¶](#dual-stack-scenarios)
+[¶](#obsolete-techniques)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
+[¶](#network-design)
+[¶](#energy-consumption)
+[¶](#multihoming)
+
+[DAD ¶](#address-resolution)
+[¶](#auto-configuration)
+[¶](#layer-2-considerations)
+[¶](#address-and-prefix-management)
+
+[DHCP ¶](#auto-configuration)
+[¶](#dns)
+[¶](#managed-configuration)
+[¶](#routing)
+[¶](#dual-stack-scenarios)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#filtering)
+[¶](#layer-2-considerations)
+[¶](#address-planning)
+[¶](#address-and-prefix-management)
+[¶](#multi-prefix-operation)
+
+[differentiated services ¶](#packet-format)
+[¶](#routing)
+[¶](#traffic-class-and-flow-label)
+[¶](#transport-protocols)
+
+[DNS64 ¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+
+[DNS ¶](#how-an-application-programmer-sees-ipv6)
+[¶](#addresses)
+[¶](#auto-configuration)
+[¶](#dns)
+[¶](#managed-configuration)
+[¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#management-and-operations)
+[¶](#address-and-prefix-management)
+[¶](#benchmarking-and-monitoring)
+[¶](#multi-prefix-operation)
+[¶](#multihoming)
+[¶](#deployment-in-the-enterprise)
+[¶](#deployment-in-the-home)
+[¶](#status)
+
+[DS-Lite ¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
+
+[dual stack ¶](#how-an-application-programmer-sees-ipv6)
+[¶](#routing)
+[¶](#transport-protocols)
+[¶](#coexistence-with-legacy-ipv4)
+[¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
+[¶](#network-design)
+[¶](#address-and-prefix-management)
+[¶](#energy-consumption)
+[¶](#deployment-in-the-home)
+
+[ECN ¶](#packet-format)
+[¶](#traffic-class-and-flow-label)
+[¶](#transport-protocols)
+
+[encapsulation ¶](#layer-2-functions)
+[¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
+
+[Ethertype ¶](#layer-2-functions)
+
+[firewall ¶](#extension-headers-and-options)
+[¶](#dual-stack-scenarios)
+[¶](#security)
+[¶](#topology-obfuscation)
+[¶](#network-design)
+[¶](#address-and-prefix-management)
+[¶](#benchmarking-and-monitoring)
+[¶](#multihoming)
+
+[flow label ¶](#packet-format)
+[¶](#routing)
+[¶](#traffic-class-and-flow-label)
+[¶](#markdown-usage)
+
+[getaddrinfo ¶](#how-an-application-programmer-sees-ipv6)
+[¶](#dns)
+[¶](#dual-stack-scenarios)
+
+[GRE ¶](#layer-2-functions)
+[¶](#tunnels)
+
+[GUA ¶](#addresses)
+[¶](#auto-configuration)
+[¶](#source-and-destination-address-selection)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#topology-obfuscation)
+[¶](#address-planning)
+[¶](#multi-prefix-operation)
+
+[happy eyeballs ¶](#how-an-application-programmer-sees-ipv6)
+[¶](#multihoming)
+[¶](#deployment-in-the-home)
+
+[IANA ¶](#why-version-6)
+[¶](#addresses)
+[¶](#auto-configuration)
+[¶](#extension-headers-and-options)
+[¶](#managed-configuration)
+[¶](#packet-format)
+[¶](#filtering)
+
+[ICMPv6 ¶](#address-resolution)
+[¶](#auto-configuration)
+[¶](#extension-headers-and-options)
+[¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#filtering)
+
+[IID ¶](#addresses)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#layer-2-considerations)
+[¶](#multi-prefix-operation)
+[¶](#multihoming)
+
+[IPAM ¶](#address-and-prefix-management)
+
+[IPv4 as a Service ¶](#coexistence-with-legacy-ipv4)
+[¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#network-design)
+[¶](#multihoming)
+[¶](#deployment-in-the-home)
+
+[IPv4 ¶](#how-a-network-operations-center-sees-ipv6)
+[¶](#how-an-application-programmer-sees-ipv6)
+[¶](#why-version-6)
+[¶](#address-resolution)
+[¶](#addresses)
+[¶](#dns)
+[¶](#extension-headers-and-options)
+[¶](#layer-2-functions)
+[¶](#managed-configuration)
+[¶](#routing)
+[¶](#source-and-destination-address-selection)
+[¶](#traffic-class-and-flow-label)
+[¶](#transport-protocols)
+[¶](#further-reading)
+[¶](#coexistence-with-legacy-ipv4)
+[¶](#dual-stack-scenarios)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#obsolete-techniques)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
+[¶](#security)
+[¶](#filtering)
+[¶](#layer-2-considerations)
+[¶](#topology-obfuscation)
+[¶](#network-design)
+[¶](#address-planning)
+[¶](#address-and-prefix-management)
+[¶](#benchmarking-and-monitoring)
+[¶](#energy-consumption)
+[¶](#multi-prefix-operation)
+[¶](#multihoming)
+[¶](#deployment-by-carriers)
+[¶](#deployment-in-the-home)
+
+[IS-IS ¶](#routing)
+
+[link-local ¶](#address-resolution)
+[¶](#addresses)
+[¶](#auto-configuration)
+[¶](#dns)
+[¶](#source-and-destination-address-selection)
+[¶](#filtering)
+[¶](#energy-consumption)
+[¶](#multi-prefix-operation)
+[¶](#deployment-in-the-home)
+
+[Lw6o4 ¶](#translation-and-ipv4-as-a-service)
+
+[MAC address ¶](#address-resolution)
+[¶](#addresses)
+[¶](#address-and-prefix-management)
+
+[MAP ¶](#translation-and-ipv4-as-a-service)
+
+[MLD ¶](#address-resolution)
+[¶](#layer-2-considerations)
+
+[MPLS ¶](#layer-2-functions)
+[¶](#tunnels)
+
+[MPTCP ¶](#transport-protocols)
+[¶](#multihoming)
+
+[MTU ¶](#extension-headers-and-options)
+[¶](#layer-2-functions)
+[¶](#packet-format)
+
+[multicast ¶](#address-resolution)
+[¶](#addresses)
+[¶](#auto-configuration)
+[¶](#layer-2-functions)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#filtering)
+[¶](#layer-2-considerations)
+[¶](#energy-consumption)
+
+[multihoming ¶](#multi-prefix-operation)
+[¶](#multihoming)
+[¶](#deployment-in-the-enterprise)
+
+[NAT464 ¶](#translation-and-ipv4-as-a-service)
+
+[NAT64 ¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+
+[NAT66 ¶](#ipv6-primary-differences-from-ipv4)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#security)
+
+[NAT ¶](#transport-protocols)
+[¶](#dual-stack-scenarios)
+[¶](#obsolete-techniques)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
+[¶](#security)
+[¶](#topology-obfuscation)
+[¶](#address-planning)
+[¶](#multihoming)
+[¶](#deployment-in-the-enterprise)
+
+[NPTv6 ¶](#translation-and-ipv4-as-a-service)
+[¶](#security)
+[¶](#multihoming)
+
+[OSPF ¶](#routing)
+
+[PIO ¶](#auto-configuration)
+
+[PPP ¶](#layer-2-functions)
+
+[prefix ¶](#addresses)
+[¶](#auto-configuration)
+[¶](#managed-configuration)
+[¶](#routing)
+[¶](#source-and-destination-address-selection)
+[¶](#dual-stack-scenarios)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
+[¶](#security)
+[¶](#filtering)
+[¶](#layer-2-considerations)
+[¶](#topology-obfuscation)
+[¶](#network-design)
+[¶](#address-planning)
+[¶](#address-and-prefix-management)
+[¶](#multi-prefix-operation)
+[¶](#multihoming)
+
+[QUIC ¶](#transport-protocols)
+[¶](#multihoming)
+
+[RA messages ¶](#address-resolution)
+[¶](#auto-configuration)
+[¶](#managed-configuration)
+[¶](#routing)
+
+[RIPng ¶](#routing)
+
+[route ¶](#why-version-6)
+[¶](#ipv6-basic-technology)
+[¶](#address-resolution)
+[¶](#addresses)
+[¶](#auto-configuration)
+[¶](#dns)
+[¶](#extension-headers-and-options)
+[¶](#layer-2-functions)
+[¶](#managed-configuration)
+[¶](#packet-format)
+[¶](#routing)
+[¶](#traffic-class-and-flow-label)
+[¶](#further-reading)
+[¶](#coexistence-with-legacy-ipv4)
+[¶](#dual-stack-scenarios)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
+[¶](#filtering)
+[¶](#layer-2-considerations)
+[¶](#topology-obfuscation)
+[¶](#network-design)
+[¶](#address-planning)
+[¶](#management-and-operations)
+[¶](#address-and-prefix-management)
+[¶](#energy-consumption)
+[¶](#multi-prefix-operation)
+[¶](#multihoming)
+[¶](#routing-operation)
+[¶](#deployment-by-carriers)
+[¶](#deployment-in-the-enterprise)
+[¶](#deployment-in-the-home)
+
+[RPL ¶](#routing)
+
+[RTP ¶](#transport-protocols)
+
+[SCTP ¶](#transport-protocols)
+
+[SIP ¶](#why-version-6)
+[¶](#transport-protocols)
+[¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#multihoming)
+
+[SLAAC ¶](#auto-configuration)
+[¶](#managed-configuration)
+[¶](#routing)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#security)
+[¶](#filtering)
+[¶](#layer-2-considerations)
+[¶](#address-and-prefix-management)
+[¶](#multi-prefix-operation)
+
+[STUN ¶](#transport-protocols)
+
+[TCP ¶](#why-version-6)
+[¶](#addresses)
+[¶](#extension-headers-and-options)
+[¶](#packet-format)
+[¶](#traffic-class-and-flow-label)
+[¶](#transport-protocols)
+[¶](#multihoming)
+
+[Teredo ¶](#obsolete-techniques)
+
+[tunnel ¶](#layer-2-functions)
+[¶](#traffic-class-and-flow-label)
+[¶](#coexistence-with-legacy-ipv4)
+[¶](#dual-stack-scenarios)
+[¶](#obsolete-techniques)
+[¶](#tunnels)
+[¶](#layer-2-considerations)
+
+[UDP ¶](#extension-headers-and-options)
+[¶](#managed-configuration)
+[¶](#packet-format)
+[¶](#transport-protocols)
+[¶](#obsolete-techniques)
+
+[ULA ¶](#addresses)
+[¶](#auto-configuration)
+[¶](#dns)
+[¶](#source-and-destination-address-selection)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#filtering)
+[¶](#topology-obfuscation)
+[¶](#multi-prefix-operation)
+[¶](#multihoming)
+
+[wireless ¶](#address-resolution)
+[¶](#auto-configuration)
+[¶](#layer-2-functions)
+[¶](#managed-configuration)
+[¶](#routing)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#layer-2-considerations)
+[¶](#address-planning)
+[¶](#address-and-prefix-management)
+[¶](#multi-prefix-operation)
+[¶](#multihoming)
+[¶](#deployment-by-carriers)
+[¶](#deployment-in-the-home)
 
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)<!-- page break -->
@@ -5876,427 +5888,427 @@ Generated at 2024-01-11 14:38:47 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
-[BCP157 ●](#addresses)
+[BCP157 ¶](#addresses)
 
-[BCP198 ●](#addresses)
-[●](#routing)
-[●](#markdown-usage)
+[BCP198 ¶](#addresses)
+[¶](#routing)
+[¶](#markdown-usage)
 
-[BCP202 ●](#energy-consumption)
+[BCP202 ¶](#energy-consumption)
 
-[BCP220 ●](#ipv6-basic-technology)
-[●](#further-reading)
+[BCP220 ¶](#ipv6-basic-technology)
+[¶](#further-reading)
 
-[BCP230 ●](#extension-headers-and-options)
+[BCP230 ¶](#extension-headers-and-options)
 
-[BCP38 ●](#filtering)
+[BCP38 ¶](#filtering)
 
-[BCP84 ●](#multi-prefix-operation)
+[BCP84 ¶](#multi-prefix-operation)
 
-[BCP91 ●](#dns)
+[BCP91 ¶](#dns)
 
-[RFC1190 ●](#why-version-6)
+[RFC1190 ¶](#why-version-6)
 
-[RFC1475 ●](#why-version-6)
+[RFC1475 ¶](#why-version-6)
 
-[RFC1606 ●](#why-version-6)
+[RFC1606 ¶](#why-version-6)
 
-[RFC1700 ●](#why-version-6)
+[RFC1700 ¶](#why-version-6)
 
-[RFC1819 ●](#why-version-6)
+[RFC1819 ¶](#why-version-6)
 
-[RFC1883 ●](#why-version-6)
+[RFC1883 ¶](#why-version-6)
 
-[RFC1918 ●](#dual-stack-scenarios)
-[●](#tunnels)
+[RFC1918 ¶](#dual-stack-scenarios)
+[¶](#tunnels)
 
-[RFC2080 ●](#routing)
+[RFC2080 ¶](#routing)
 
-[RFC2081 ●](#routing)
+[RFC2081 ¶](#routing)
 
-[RFC2464 ●](#layer-2-functions)
+[RFC2464 ¶](#layer-2-functions)
 
-[RFC2474 ●](#packet-format)
-[●](#traffic-class-and-flow-label)
-[●](#transport-protocols)
+[RFC2474 ¶](#packet-format)
+[¶](#traffic-class-and-flow-label)
+[¶](#transport-protocols)
 
-[RFC2529 ●](#obsolete-techniques)
+[RFC2529 ¶](#obsolete-techniques)
 
-[RFC2545 ●](#routing)
+[RFC2545 ¶](#routing)
 
-[RFC3053 ●](#obsolete-techniques)
+[RFC3053 ¶](#obsolete-techniques)
 
-[RFC3056 ●](#obsolete-techniques)
+[RFC3056 ¶](#obsolete-techniques)
 
-[RFC3068 ●](#obsolete-techniques)
+[RFC3068 ¶](#obsolete-techniques)
 
-[RFC3089 ●](#obsolete-techniques)
+[RFC3089 ¶](#obsolete-techniques)
 
-[RFC3168 ●](#packet-format)
-[●](#traffic-class-and-flow-label)
-[●](#transport-protocols)
+[RFC3168 ¶](#packet-format)
+[¶](#traffic-class-and-flow-label)
+[¶](#transport-protocols)
 
-[RFC3261 ●](#transport-protocols)
+[RFC3261 ¶](#transport-protocols)
 
-[RFC3484 ●](#source-and-destination-address-selection)
+[RFC3484 ¶](#source-and-destination-address-selection)
 
-[RFC3542 ●](#dual-stack-scenarios)
+[RFC3542 ¶](#dual-stack-scenarios)
 
-[RFC3550 ●](#transport-protocols)
+[RFC3550 ¶](#transport-protocols)
 
-[RFC3582 ●](#multihoming)
+[RFC3582 ¶](#multihoming)
 
-[RFC3587 ●](#addresses)
+[RFC3587 ¶](#addresses)
 
-[RFC3596 ●](#dns)
+[RFC3596 ¶](#dns)
 
-[RFC3633 ●](#managed-configuration)
+[RFC3633 ¶](#managed-configuration)
 
-[RFC3756 ●](#layer-2-considerations)
+[RFC3756 ¶](#layer-2-considerations)
 
-[RFC3810 ●](#address-resolution)
+[RFC3810 ¶](#address-resolution)
 
-[RFC3828 ●](#transport-protocols)
+[RFC3828 ¶](#transport-protocols)
 
-[RFC3879 ●](#addresses)
+[RFC3879 ¶](#addresses)
 
-[RFC3971 ●](#security)
-[●](#layer-2-considerations)
+[RFC3971 ¶](#security)
+[¶](#layer-2-considerations)
 
-[RFC4007 ●](#addresses)
+[RFC4007 ¶](#addresses)
 
-[RFC4029 ●](#layer-2-functions)
-[●](#tunnels)
+[RFC4029 ¶](#layer-2-functions)
+[¶](#tunnels)
 
-[RFC4038 ●](#addresses)
+[RFC4038 ¶](#addresses)
 
-[RFC4048 ●](#addresses)
+[RFC4048 ¶](#addresses)
 
-[RFC4193 ●](#filtering)
-[●](#multihoming)
+[RFC4193 ¶](#filtering)
+[¶](#multihoming)
 
-[RFC4213 ●](#dual-stack-scenarios)
-[●](#tunnels)
+[RFC4213 ¶](#dual-stack-scenarios)
+[¶](#tunnels)
 
-[RFC4271 ●](#routing)
+[RFC4271 ¶](#routing)
 
-[RFC4291 ●](#address-resolution)
-[●](#addresses)
-[●](#filtering)
+[RFC4291 ¶](#address-resolution)
+[¶](#addresses)
+[¶](#filtering)
 
-[RFC4301 ●](#security)
+[RFC4301 ¶](#security)
 
-[RFC4303 ●](#extension-headers-and-options)
-[●](#packet-format)
+[RFC4303 ¶](#extension-headers-and-options)
+[¶](#packet-format)
 
-[RFC4380 ●](#obsolete-techniques)
+[RFC4380 ¶](#obsolete-techniques)
 
-[RFC4456 ●](#routing)
+[RFC4456 ¶](#routing)
 
-[RFC4541 ●](#address-resolution)
-[●](#layer-2-considerations)
+[RFC4541 ¶](#address-resolution)
+[¶](#layer-2-considerations)
 
-[RFC4594 ●](#traffic-class-and-flow-label)
+[RFC4594 ¶](#traffic-class-and-flow-label)
 
-[RFC4641 ●](#filtering)
+[RFC4641 ¶](#filtering)
 
-[RFC4760 ●](#routing)
+[RFC4760 ¶](#routing)
 
-[RFC4798 ●](#tunnels)
+[RFC4798 ¶](#tunnels)
 
-[RFC4861 ●](#address-resolution)
-[●](#auto-configuration)
+[RFC4861 ¶](#address-resolution)
+[¶](#auto-configuration)
 
-[RFC4862 ●](#auto-configuration)
-[●](#address-and-prefix-management)
+[RFC4862 ¶](#auto-configuration)
+[¶](#address-and-prefix-management)
 
-[RFC4864 ●](#topology-obfuscation)
+[RFC4864 ¶](#topology-obfuscation)
 
-[RFC4890 ●](#filtering)
+[RFC4890 ¶](#filtering)
 
-[RFC4960 ●](#transport-protocols)
+[RFC4960 ¶](#transport-protocols)
 
-[RFC5072 ●](#layer-2-functions)
+[RFC5072 ¶](#layer-2-functions)
 
-[RFC5082 ●](#filtering)
+[RFC5082 ¶](#filtering)
 
-[RFC5127 ●](#traffic-class-and-flow-label)
+[RFC5127 ¶](#traffic-class-and-flow-label)
 
-[RFC5172 ●](#layer-2-functions)
+[RFC5172 ¶](#layer-2-functions)
 
-[RFC5214 ●](#obsolete-techniques)
+[RFC5214 ¶](#obsolete-techniques)
 
-[RFC5308 ●](#routing)
+[RFC5308 ¶](#routing)
 
-[RFC5340 ●](#routing)
+[RFC5340 ¶](#routing)
 
-[RFC5533 ●](#multihoming)
+[RFC5533 ¶](#multihoming)
 
-[RFC5569 ●](#obsolete-techniques)
+[RFC5569 ¶](#obsolete-techniques)
 
-[RFC5635 ●](#filtering)
+[RFC5635 ¶](#filtering)
 
-[RFC5757 ●](#address-resolution)
+[RFC5757 ¶](#address-resolution)
 
-[RFC5865 ●](#traffic-class-and-flow-label)
+[RFC5865 ¶](#traffic-class-and-flow-label)
 
-[RFC5902 ●](#translation-and-ipv4-as-a-service)
+[RFC5902 ¶](#translation-and-ipv4-as-a-service)
 
-[RFC5942 ●](#auto-configuration)
+[RFC5942 ¶](#auto-configuration)
 
-[RFC5952 ●](#addresses)
+[RFC5952 ¶](#addresses)
 
-[RFC6085 ●](#layer-2-functions)
+[RFC6085 ¶](#layer-2-functions)
 
-[RFC6105 ●](#layer-2-considerations)
+[RFC6105 ¶](#layer-2-considerations)
 
-[RFC6144 ●](#translation-and-ipv4-as-a-service)
+[RFC6144 ¶](#translation-and-ipv4-as-a-service)
 
-[RFC6146 ●](#translation-and-ipv4-as-a-service)
+[RFC6146 ¶](#translation-and-ipv4-as-a-service)
 
-[RFC6147 ●](#translation-and-ipv4-as-a-service)
+[RFC6147 ¶](#translation-and-ipv4-as-a-service)
 
-[RFC6157 ●](#dual-stack-scenarios)
-[●](#multihoming)
+[RFC6157 ¶](#dual-stack-scenarios)
+[¶](#multihoming)
 
-[RFC6180 ●](#coexistence-with-legacy-ipv4)
+[RFC6180 ¶](#coexistence-with-legacy-ipv4)
 
-[RFC6192 ●](#filtering)
+[RFC6192 ¶](#filtering)
 
-[RFC6264 ●](#obsolete-techniques)
-[●](#tunnels)
+[RFC6264 ¶](#obsolete-techniques)
+[¶](#tunnels)
 
-[RFC6296 ●](#translation-and-ipv4-as-a-service)
-[●](#security)
-[●](#multihoming)
+[RFC6296 ¶](#translation-and-ipv4-as-a-service)
+[¶](#security)
+[¶](#multihoming)
 
-[RFC6314 ●](#translation-and-ipv4-as-a-service)
-[●](#multihoming)
+[RFC6314 ¶](#translation-and-ipv4-as-a-service)
+[¶](#multihoming)
 
-[RFC6333 ●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
-[●](#tunnels)
+[RFC6333 ¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
 
-[RFC6343 ●](#obsolete-techniques)
+[RFC6343 ¶](#obsolete-techniques)
 
-[RFC6437 ●](#traffic-class-and-flow-label)
+[RFC6437 ¶](#traffic-class-and-flow-label)
 
-[RFC6438 ●](#traffic-class-and-flow-label)
+[RFC6438 ¶](#traffic-class-and-flow-label)
 
-[RFC6550 ●](#routing)
+[RFC6550 ¶](#routing)
 
-[RFC6583 ●](#address-resolution)
-[●](#layer-2-considerations)
+[RFC6583 ¶](#address-resolution)
+[¶](#layer-2-considerations)
 
-[RFC6598 ●](#address-planning)
+[RFC6598 ¶](#address-planning)
 
-[RFC6620 ●](#layer-2-considerations)
+[RFC6620 ¶](#layer-2-considerations)
 
-[RFC6636 ●](#address-resolution)
+[RFC6636 ¶](#address-resolution)
 
-[RFC6666 ●](#filtering)
+[RFC6666 ¶](#filtering)
 
-[RFC6724 ●](#how-an-application-programmer-sees-ipv6)
-[●](#dns)
-[●](#source-and-destination-address-selection)
-[●](#multi-prefix-operation)
+[RFC6724 ¶](#how-an-application-programmer-sees-ipv6)
+[¶](#dns)
+[¶](#source-and-destination-address-selection)
+[¶](#multi-prefix-operation)
 
-[RFC6751 ●](#obsolete-techniques)
+[RFC6751 ¶](#obsolete-techniques)
 
-[RFC6775 ●](#address-resolution)
+[RFC6775 ¶](#address-resolution)
 
-[RFC6877 ●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
+[RFC6877 ¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
 
-[RFC6888 ●](#dual-stack-scenarios)
+[RFC6888 ¶](#dual-stack-scenarios)
 
-[RFC6890 ●](#addresses)
-[●](#filtering)
+[RFC6890 ¶](#addresses)
+[¶](#filtering)
 
-[RFC6936 ●](#transport-protocols)
+[RFC6936 ¶](#transport-protocols)
 
-[RFC6950 ●](#multi-prefix-operation)
+[RFC6950 ¶](#multi-prefix-operation)
 
-[RFC7045 ●](#filtering)
+[RFC7045 ¶](#filtering)
 
-[RFC7066 ●](#managed-configuration)
+[RFC7066 ¶](#managed-configuration)
 
-[RFC7078 ●](#multi-prefix-operation)
+[RFC7078 ¶](#multi-prefix-operation)
 
-[RFC7084 ●](#routing)
+[RFC7084 ¶](#routing)
 
-[RFC7098 ●](#traffic-class-and-flow-label)
-[●](#topology-obfuscation)
+[RFC7098 ¶](#traffic-class-and-flow-label)
+[¶](#topology-obfuscation)
 
-[RFC7112 ●](#layer-2-considerations)
+[RFC7112 ¶](#layer-2-considerations)
 
-[RFC7113 ●](#layer-2-considerations)
+[RFC7113 ¶](#layer-2-considerations)
 
-[RFC7123 ●](#filtering)
+[RFC7123 ¶](#filtering)
 
-[RFC7157 ●](#multihoming)
+[RFC7157 ¶](#multihoming)
 
-[RFC7439 ●](#tunnels)
+[RFC7439 ¶](#tunnels)
 
-[RFC7454 ●](#filtering)
+[RFC7454 ¶](#filtering)
 
-[RFC7526 ●](#obsolete-techniques)
+[RFC7526 ¶](#obsolete-techniques)
 
-[RFC7527 ●](#auto-configuration)
+[RFC7527 ¶](#auto-configuration)
 
-[RFC7552 ●](#tunnels)
+[RFC7552 ¶](#tunnels)
 
-[RFC7556 ●](#multihoming)
+[RFC7556 ¶](#multihoming)
 
-[RFC7596 ●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
+[RFC7596 ¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
 
-[RFC7597 ●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
+[RFC7597 ¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
 
-[RFC7599 ●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
+[RFC7599 ¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
 
-[RFC7610 ●](#layer-2-considerations)
+[RFC7610 ¶](#layer-2-considerations)
 
-[RFC762 ●](#why-version-6)
+[RFC762 ¶](#why-version-6)
 
-[RFC7676 ●](#layer-2-functions)
-[●](#tunnels)
+[RFC7676 ¶](#layer-2-functions)
+[¶](#tunnels)
 
-[RFC768 ●](#transport-protocols)
+[RFC768 ¶](#transport-protocols)
 
-[RFC7690 ●](#extension-headers-and-options)
+[RFC7690 ¶](#extension-headers-and-options)
 
-[RFC7775 ●](#routing)
+[RFC7775 ¶](#routing)
 
-[RFC7849 ●](#layer-2-considerations)
+[RFC7849 ¶](#layer-2-considerations)
 
-[RFC7872 ●](#extension-headers-and-options)
+[RFC7872 ¶](#extension-headers-and-options)
 
-[RFC7915 ●](#translation-and-ipv4-as-a-service)
+[RFC7915 ¶](#translation-and-ipv4-as-a-service)
 
-[RFC791 ●](#why-version-6)
-[●](#traffic-class-and-flow-label)
+[RFC791 ¶](#why-version-6)
+[¶](#traffic-class-and-flow-label)
 
-[RFC8028 ●](#auto-configuration)
-[●](#multi-prefix-operation)
+[RFC8028 ¶](#auto-configuration)
+[¶](#multi-prefix-operation)
 
-[RFC8064 ●](#addresses)
-[●](#auto-configuration)
-[●](#layer-2-functions)
+[RFC8064 ¶](#addresses)
+[¶](#auto-configuration)
+[¶](#layer-2-functions)
 
-[RFC8100 ●](#traffic-class-and-flow-label)
+[RFC8100 ¶](#traffic-class-and-flow-label)
 
-[RFC8106 ●](#auto-configuration)
+[RFC8106 ¶](#auto-configuration)
 
-[RFC8200 ●](#how-to-keep-up-to-date)
-[●](#ipv6-basic-technology)
-[●](#address-resolution)
-[●](#extension-headers-and-options)
-[●](#packet-format)
-[●](#further-reading)
-[●](#filtering)
-[●](#markdown-usage)
+[RFC8200 ¶](#how-to-keep-up-to-date)
+[¶](#ipv6-basic-technology)
+[¶](#address-resolution)
+[¶](#extension-headers-and-options)
+[¶](#packet-format)
+[¶](#further-reading)
+[¶](#filtering)
+[¶](#markdown-usage)
 
-[RFC8210 ●](#filtering)
+[RFC8210 ¶](#filtering)
 
-[RFC8304 ●](#transport-protocols)
+[RFC8304 ¶](#transport-protocols)
 
-[RFC8305 ●](#how-an-application-programmer-sees-ipv6)
-[●](#dual-stack-scenarios)
-[●](#multihoming)
-[●](#deployment-in-the-home)
+[RFC8305 ¶](#how-an-application-programmer-sees-ipv6)
+[¶](#dual-stack-scenarios)
+[¶](#multihoming)
+[¶](#deployment-in-the-home)
 
-[RFC8376 ●](#layer-2-functions)
-[●](#energy-consumption)
+[RFC8376 ¶](#layer-2-functions)
+[¶](#energy-consumption)
 
-[RFC8415 ●](#managed-configuration)
-[●](#address-planning)
+[RFC8415 ¶](#managed-configuration)
+[¶](#address-planning)
 
-[RFC8501 ●](#dns)
+[RFC8501 ¶](#dns)
 
-[RFC8505 ●](#address-resolution)
+[RFC8505 ¶](#address-resolution)
 
-[RFC8585 ●](#routing)
-[●](#dual-stack-scenarios)
+[RFC8585 ¶](#routing)
+[¶](#dual-stack-scenarios)
 
-[RFC8622 ●](#traffic-class-and-flow-label)
+[RFC8622 ¶](#traffic-class-and-flow-label)
 
-[RFC8678 ●](#multi-prefix-operation)
+[RFC8678 ¶](#multi-prefix-operation)
 
-[RFC8683 ●](#translation-and-ipv4-as-a-service)
+[RFC8683 ¶](#translation-and-ipv4-as-a-service)
 
-[RFC8684 ●](#transport-protocols)
-[●](#multihoming)
+[RFC8684 ¶](#transport-protocols)
+[¶](#multihoming)
 
-[RFC8724 ●](#energy-consumption)
+[RFC8724 ¶](#energy-consumption)
 
-[RFC8754 ●](#extension-headers-and-options)
+[RFC8754 ¶](#extension-headers-and-options)
 
-[RFC8781 ●](#translation-and-ipv4-as-a-service)
+[RFC8781 ¶](#translation-and-ipv4-as-a-service)
 
-[RFC8837 ●](#traffic-class-and-flow-label)
+[RFC8837 ¶](#traffic-class-and-flow-label)
 
-[RFC8880 ●](#translation-and-ipv4-as-a-service)
+[RFC8880 ¶](#translation-and-ipv4-as-a-service)
 
-[RFC8899 ●](#extension-headers-and-options)
+[RFC8899 ¶](#extension-headers-and-options)
 
-[RFC8925 ●](#dual-stack-scenarios)
+[RFC8925 ¶](#dual-stack-scenarios)
 
-[RFC8928 ●](#address-resolution)
+[RFC8928 ¶](#address-resolution)
 
-[RFC8929 ●](#address-resolution)
+[RFC8929 ¶](#address-resolution)
 
-[RFC8950 ●](#routing)
+[RFC8950 ¶](#routing)
 
-[RFC8966 ●](#routing)
+[RFC8966 ¶](#routing)
 
-[RFC8981 ●](#addresses)
-[●](#auto-configuration)
-[●](#layer-2-considerations)
-[●](#topology-obfuscation)
-[●](#address-and-prefix-management)
-[●](#multi-prefix-operation)
+[RFC8981 ¶](#addresses)
+[¶](#auto-configuration)
+[¶](#layer-2-considerations)
+[¶](#topology-obfuscation)
+[¶](#address-and-prefix-management)
+[¶](#multi-prefix-operation)
 
-[RFC9000 ●](#transport-protocols)
+[RFC9000 ¶](#transport-protocols)
 
-[RFC9008 ●](#routing)
+[RFC9008 ¶](#routing)
 
-[RFC9010 ●](#routing)
+[RFC9010 ¶](#routing)
 
-[RFC9096 ●](#routing)
+[RFC9096 ¶](#routing)
 
-[RFC9098 ●](#extension-headers-and-options)
+[RFC9098 ¶](#extension-headers-and-options)
 
-[RFC9099 ●](#security)
+[RFC9099 ¶](#security)
 
-[RFC9119 ●](#address-resolution)
-[●](#layer-2-functions)
+[RFC9119 ¶](#address-resolution)
+[¶](#layer-2-functions)
 
-[RFC9131 ●](#address-resolution)
+[RFC9131 ¶](#address-resolution)
 
-[RFC9288 ●](#extension-headers-and-options)
-[●](#filtering)
+[RFC9288 ¶](#extension-headers-and-options)
+[¶](#filtering)
 
-[RFC9313 ●](#coexistence-with-legacy-ipv4)
-[●](#dual-stack-scenarios)
-[●](#translation-and-ipv4-as-a-service)
+[RFC9313 ¶](#coexistence-with-legacy-ipv4)
+[¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
 
-[RFC9386 ●](#dual-stack-scenarios)
-[●](#deployment-by-carriers)
-[●](#deployment-in-the-enterprise)
-[●](#status)
+[RFC9386 ¶](#dual-stack-scenarios)
+[¶](#deployment-by-carriers)
+[¶](#deployment-in-the-enterprise)
+[¶](#status)
 
-[RFC9592 ●](#addresses)
+[RFC9592 ¶](#addresses)
 
-[STD7 ●](#transport-protocols)
+[STD7 ¶](#transport-protocols)
 
-[STD86 ●](#ipv6-basic-technology)
-[●](#extension-headers-and-options)
-[●](#markdown-usage)
+[STD86 ¶](#ipv6-basic-technology)
+[¶](#extension-headers-and-options)
+[¶](#markdown-usage)
 
-[STD87 ●](#extension-headers-and-options)
+[STD87 ¶](#extension-headers-and-options)
 
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)<!-- page break -->
