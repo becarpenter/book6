@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-01-17 14:20:55 UTC+1300
+Version captured at 2024-01-18 10:41:42 UTC+1300
 <!-- page break -->
 # book6: A Collaborative IPv6 Book.
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
@@ -5241,9 +5241,9 @@ the file names. So here is the template for the list of sections after
 inserting links:
 
 ```
-  ## [First Section](#first-section)
-  ## [Section Template](#section-template)
-  ## [Last Section](#last-section)
+  ## [First Section](First%20Section.md)
+  ## [Section Template](Section%20Template.md)
+  ## [Last Section](Last%20Section.md)
 ```
 
 That's a bit complicated, and since file names are case-sensitive,
@@ -5333,7 +5333,7 @@ using the `mdformat` tool.
 Web references can be done in basic markdown form, i.e.:
 
 ```
-  [text](#url)               to refer to any valid URL
+  [text](URL)               to refer to any valid URL
 ```
 
 but a feature adapted from kramdown is also available, e.g.

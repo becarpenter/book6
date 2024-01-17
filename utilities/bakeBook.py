@@ -7,7 +7,7 @@
 # Version: 2024-01-17 - case error in index citations
 #                     - fixed missing special cases for citations
 #                     - replace blobs with pilcrows for latex
-
+# Version: 2024-01-18 - skip code blocks when fixing citations
 
 ########################################################
 # Copyright (C) 2022-2023 Brian E. Carpenter.                  
@@ -117,10 +117,22 @@ def uncase(l):
 def fix_section(raw):
     """Change citations throughout a section"""
     new = []
+    skipping = False
     for line in raw:
         #latex doesn't like the blob character
         if '●' in line:
-            line=line.replace('●','¶')
+            line=line.replace('●','¶')    
+        if line.startswith("```") or line.startswith("~~~"):
+            if skipping:
+                #already in a code block, back to normal processing
+                skipping = False
+            else:
+                #entering a code block
+                skipping = True
+        if skipping:
+            #skip processing to avoid damaging example citations 
+            new.append(line)
+            continue
         if "](" in line:
             outline = ""
             while "](" in line:
