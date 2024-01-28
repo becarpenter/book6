@@ -8,9 +8,10 @@
 #                     - fixed missing special cases for citations
 #                     - replace blobs with pilcrows for latex
 # Version: 2024-01-18 - skip code blocks when fixing citations
+# Version: 2024-01-29 - use dedicated pdf directory
 
 ########################################################
-# Copyright (C) 2022-2023 Brian E. Carpenter.                  
+# Copyright (C) 2024 Brian E. Carpenter.                  
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with
@@ -265,7 +266,7 @@ baked += fix_section(rf("Citex.md"))
 
 ######### Write the baked file
 
-wf("baked.md", baked)
+wf("pdf/baked.md", baked)
 
 ######### Close log and exit
     

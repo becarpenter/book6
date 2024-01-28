@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-01-18 10:41:42 UTC+1300
+Version captured at 2024-01-29 09:56:33 UTC+1300
 <!-- page break -->
 # book6: A Collaborative IPv6 Book.
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
