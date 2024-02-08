@@ -11,6 +11,8 @@ Other direct and indirect contributors, either of text or very helpful comments 
 
 - Gert Doering
 
+- David Farmer
+
 - John Klensin
 
 - Gábor Lencse
