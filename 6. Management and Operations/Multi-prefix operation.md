@@ -76,6 +76,10 @@ under a failing PA prefix. This will happen unless the host is somehow
 caused to deprecate such source addresses, so that the algorithm of
 [RFC6724](https://www.rfc-editor.org/info/rfc6724) will not select them.
 
+An additional technique that has been suggested is for a site to deploy
+_conditional_ router advertisements
+\[[RFC8475](https://www.rfc-editor.org/info/rfc8475)\].
+
 This whole topic is discussed in more depth in
 [RFC8678](https://www.rfc-editor.org/info/rfc8678).
 
