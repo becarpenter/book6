@@ -42,6 +42,11 @@ select at least two ISPs to provide redundant connectivity to the
 Internet, and arrange for both of them to advertise a BGP-4 route to
 that prefix.
 
+A /48 prefix provides the theoretical capacity for more than 65 thousand
+subnets. However, extremely large enterprises can obtain prefixes shorter
+than /48 from one of the address registries, if they provide an adequate
+technical justification.
+
 Internal routing must be arranged to direct traffic as required, using
 routing metrics that favor one ISP or another, or spread the load, as
 desired. When the egress to a particular ISP fails, backup routes to an
