@@ -60,6 +60,7 @@ and a [citation index](./Citex.md).
 * Basic Windows commands
 
 [7. Case Studies](7.%20Case%20Studies/7.%20Case%20Studies.md)
+* CERN and the LHC
 
 [8. Deployment Status](8.%20Deployment%20Status/8.%20Deployment%20Status.md)
 * Status
