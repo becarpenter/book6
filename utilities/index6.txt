@@ -80,4 +80,6 @@ Ethertype
 SIP
 BYOD 'bring your own'
 IPAM "IP address management"
+IPv6-only "IPv6 only"
+IPv6-mostly "IPv6 mostly"
 
