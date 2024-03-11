@@ -7,7 +7,7 @@
 # case insensitive
 # terms are terminated by blank or newline
 # abcd abcde abcd-e - all are indexed as a single term 'abcd'
-# 'link local' - treated as a phrase.
+# 'link local' - treated as a phrase. (N.B. not " ")
 
 address addresses addressing
 route routes router routers routing routeing
@@ -79,7 +79,7 @@ multihoming multi-homing MHMP
 Ethertype
 SIP
 BYOD 'bring your own'
-IPAM "IP address management"
-IPv6-only "IPv6 only"
-IPv6-mostly "IPv6 mostly"
+IPAM 'IP address management'
+IPv6-only 'IPv6 only'
+IPv6-mostly 'IPv6 mostly'
 
