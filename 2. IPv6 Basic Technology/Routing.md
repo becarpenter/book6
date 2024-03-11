@@ -64,7 +64,7 @@ about which prefixes they handle. Common routing protocols are:
   \[[RFC8966](https://www.rfc-editor.org/info/rfc8966)\].
 
 IPv6 routers can be placed in various categories, each of which requires
-different features to be active:
+different features to be active. These categories may overlap:
 
 - Customer Edge (CE) routers (enterprise): These are routers that
   connect an enterprise network to one or more ISPs
@@ -86,7 +86,8 @@ different features to be active:
 - Customer Edge (CE) routers (domestic): These are cheap routers
   connecting home or small office networks to an ISP. They typically act
   as subnet routers too, but are unlikely to provide the full set of
-  enterprise CE router services.
+  enterprise CE router services. They need little or no configuration
+  for basic operation.
 
 - Provider Edge routers. These are routers within ISP networks that
   directly connect to CE routers.
