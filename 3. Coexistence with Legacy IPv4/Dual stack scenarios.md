@@ -138,6 +138,8 @@ prefix used for translation ([ditto](Translation%20and%20IPv4%20as%20a%20service
 features suppported, hosts on an IPv6-mostly network will have a full
 suite of capabilities.
 
+There is a great deployment report on IPv6-mostly [at a large conference](https://nsrc.org/blog/apricot-ipv6-only).
+
 ### The need for IPv4 as a service
 
 Globally unique IPv4 addresses are now scarce and have significant
