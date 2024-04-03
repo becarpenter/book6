@@ -10,6 +10,7 @@
 # Version: 2024-01-18 - skip code blocks when fixing citations
 # Version: 2024-01-29 - use dedicated pdf directory
 # Version: 2024-04-02 - copy image files to pdf directory
+# Version: 2024-04-04 - change image citations to suit pandoc
 
 ########################################################
 # Copyright (C) 2024 Brian E. Carpenter.                  
@@ -118,7 +119,7 @@ def uncase(l):
     return u
 
 def fix_section(raw):
-    """Change citations throughout a section"""
+    """Change citations and images throughout a section"""
     new = []
     skipping = False
     for line in raw:
@@ -137,6 +138,7 @@ def fix_section(raw):
             new.append(line)
             continue
         if "](" in line:
+            #need to reformat citation
             outline = ""
             while "](" in line:
                 head, line = line.split("](", maxsplit=1)
@@ -163,6 +165,25 @@ def fix_section(raw):
                     target = "book6-citation-index"
                 outline += head + "](#" + target +")"
             outline += line
+        elif "<img src=" in line:
+            #need to munge image reference (lazy, only handles the first one)
+            head, tail = line.split("<img src=", maxsplit=1)
+            #print(head, tail)
+            try:
+                img, tail = tail.split("/>", maxsplit=1)
+            except:
+                img, tail = tail.split(">", maxsplit=1)
+            img = img.replace("'", '"')  #normalise string delimiters to "
+            imgfile, imgalt = img[1:].split('"', maxsplit=1)
+            imgfile = imgfile.replace("./", "")  #normalise image file name
+            # extract alternative text
+            try:
+                _, imgalt = imgalt.split('alt="', maxsplit=1)
+                imgalt, _ = imgalt.split('"', maxsplit=1)
+            except:
+                imgalt = "No description available"
+            #build image citation
+            outline = head+'![x]('+imgfile+' "'+imgalt+'")'+tail         
         else:
             outline = line
         #Avoid unwanted anchors

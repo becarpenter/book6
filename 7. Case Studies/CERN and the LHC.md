@@ -1,7 +1,9 @@
 ## CERN and the LHC
 
 The [CERN laboratory](https://www.cern.ch) and the [Worldwide LHC Computing Grid (WLCG)](https://home.cern/science/computing/grid) are large users of IPv6 for massive data transfers.
-Some recent statistics are shown here:<img src="./CERN-IPv6-Feb24.png" alt="Graph showing 644 Gb/s"> 
+Some recent statistics are shown here:
+
+<img src="./CERN-IPv6-Feb24.png" alt="Graph showing 644 Gb/s"> 
 
 (Image from the February 2024 data challenge at CERN.)
 

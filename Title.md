@@ -1,5 +1,5 @@
 # book6
-<img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
+![](book6logo.png "book6 logo")
 
 <ins>A collaborative IPv6 book.<ins>
 
