@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-01-29 09:56:33 UTC+1300
+Version captured at 2024-04-03 13:53:33 UTC+1300
 <!-- page break -->
 # book6: A Collaborative IPv6 Book.
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
@@ -90,6 +90,7 @@ and a [citation index](#book6-citation-index).
 * Basic Windows commands
 
 [7. Case Studies](#case-studies)
+* CERN and the LHC
 
 [8. Deployment Status](#deployment-status)
 * Status
@@ -348,6 +349,8 @@ Other direct and indirect contributors, either of text or very helpful comments 
 - Tim Chown
 
 - Gert Doering
+
+- David Farmer
 
 - John Klensin
 
@@ -1519,7 +1522,7 @@ about which prefixes they handle. Common routing protocols are:
   \[[RFC8966](https://www.rfc-editor.org/info/rfc8966)\].
 
 IPv6 routers can be placed in various categories, each of which requires
-different features to be active:
+different features to be active. These categories may overlap:
 
 - Customer Edge (CE) routers (enterprise): These are routers that
   connect an enterprise network to one or more ISPs
@@ -1541,7 +1544,8 @@ different features to be active:
 - Customer Edge (CE) routers (domestic): These are cheap routers
   connecting home or small office networks to an ISP. They typically act
   as subnet routers too, but are unlikely to provide the full set of
-  enterprise CE router services.
+  enterprise CE router services. They need little or no configuration
+  for basic operation.
 
 - Provider Edge routers. These are routers within ISP networks that
   directly connect to CE routers.
@@ -2132,6 +2136,8 @@ nevertheless require packet and DNS translation services
 prefix used for translation ([ditto](#translation-and-ipv4-as-a-service)). With these
 features suppported, hosts on an IPv6-mostly network will have a full
 suite of capabilities.
+
+There is a great deployment report on IPv6-mostly [at a large conference](https://nsrc.org/blog/apricot-ipv6-only).
 
 ### The need for IPv4 as a service
 
@@ -3460,6 +3466,10 @@ under a failing PA prefix. This will happen unless the host is somehow
 caused to deprecate such source addresses, so that the algorithm of
 [RFC6724](https://www.rfc-editor.org/info/rfc6724) will not select them.
 
+An additional technique that has been suggested is for a site to deploy
+_conditional_ router advertisements
+\[[RFC8475](https://www.rfc-editor.org/info/rfc8475)\].
+
 This whole topic is discussed in more depth in
 [RFC8678](https://www.rfc-editor.org/info/rfc8678).
 
@@ -3547,6 +3557,11 @@ internal use, or IPv4 addresses, or both. The enterprise will then
 select at least two ISPs to provide redundant connectivity to the
 Internet, and arrange for both of them to advertise a BGP-4 route to
 that prefix.
+
+A /48 prefix provides the theoretical capacity for more than 65 thousand
+subnets. However, extremely large enterprises can obtain prefixes shorter
+than /48 from one of the address registries, if they provide an adequate
+technical justification.
 
 Internal routing must be arranged to direct traffic as required, using
 routing metrics that favor one ISP or another, or spread the load, as
@@ -3721,21 +3736,39 @@ A good set of existing case studies from ARIN members can be found in
 Here is a Malaysian case study via
 [APNIC](https://blog.apnic.net/2023/03/17/telekom-malaysias-ipv6-readiness-journey/).
 
-This is an __open invitation__ to contribute a case study for this chapter.
-If you have deployed an IPv6 network, please write a short section
-with emphasis on what major choices you made, what worked well, and
-what problems you encountered. Even a summary in one paragraph would be helpful.
-Large and small enterprise networks, and large or small carrier networks,
-are all of interest. It isn't necessary to identify the particular network,
-if you prefer to keep that private. 
+Here is a deployment case [at a large conference](https://nsrc.org/blog/apricot-ipv6-only).
 
-If you have already published such a description, just a pointer will be fine.
+This is an __open invitation__ to contribute a case study for this
+chapter. If you have deployed an IPv6 network, please write a short
+section with emphasis on what major choices you made, what worked well,
+and what problems you encountered. Even a summary in one paragraph would
+be helpful. Large and small enterprise networks, and large or small
+carrier networks, are all of interest. It isn't necessary to identify
+the particular network, if you prefer to keep that private.
 
-[How to contribute](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)  
+If you have already published such a description, just a pointer will be
+fine.
+
+[How to contribute](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)
+
+[CERN and the LHC](#cern-and-the-lhc)
 
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
+<!-- page break -->
+## CERN and the LHC
+
+The [CERN laboratory](https://www.cern.ch) and the [Worldwide LHC Computing Grid (WLCG)](https://home.cern/science/computing/grid) are large users of IPv6 for massive data transfers.
+Some recent statistics are shown here:<img src="./CERN-IPv6-Feb24.png" alt="Graph showing 644 Gb/s"> 
+
+(Image from the February 2024 data challenge at CERN.)
+
+The CERN site itself operates a classical IPv4 and IPv6 dual stack, and uses DHCPv6 for IPv6 address assignment.
+
+<!-- Link lines generated automatically; do not delete -->
+
+### [<ins>Chapter Contents</ins>](#case-studies)
 <!-- page break -->
 # Deployment Status
 
@@ -4070,26 +4103,30 @@ consensus in the IETF and is a definitive specification. However, that
 doesn't override "Obsoleted by" or "Updated by".
 
 If it's marked "Informational", "Experimental", or "Historic", those
-words mean exactly what they say.
+words mean exactly what they say. Some of these RFCs don't even come
+from the IETF; they may come from the IAB (Internet Architecture Board),
+the IRTF (Internet Research Task Force) or elswehere.
 
 Any RFC may be marked as having *errata*, the Latin word for errors.
 Check them! Often they are trivial, but sometimes they are important.
 
 Here's an attempt to explain this with a diagram:
 
-```mermaid
+<!-- mermaid
 flowchart LR
-    R[RFC x] --> I[Info page]
-    I --> O[Obsoleted by RFC y] --> GT[Go to RFC y] --> R
-    I --> H[Historic] --> IG[Ignore]
-    I --> U[Updated by RFC z] --> AS[Also see RFC z] --> R
-    I --> C[RFC is current]
-    C --> ER[Has errata] --> V[View errata] --> C
-    C --> F[Informational] --> J[Apply judgment]
-    C --> E[Experimental] --> J 
-    C --> S[Standard] --> L[Follow specification]
-    C --> B[BCP] --> L
-```
+    R[RFC x] - -> I[Info page]
+    I - -> O[Obsoleted by RFC y] - -> GT[Go to RFC y] - -> R
+    I - -> H[Historic] - -> IG[Ignore]
+    I - -> U[Updated by RFC z] - -> AS[Also see RFC z] - -> R
+    I - -> C[RFC is current]
+    C - -> ER[Has errata] - -> V[View errata] - -> C
+    C - -> F[Informational] - -> J[Apply judgment]
+    C - -> E[Experimental] - -> J 
+    C - -> S[Standard] - -> L[Follow specification]
+    C - -> B[BCP] - -> L
+-->
+
+<img src="./rfc-diagram.svg" width=800 alt="Diagram of RFC status">
 
 An important RFC is the latest version of
 [IPv6 Node Requirements](https://www.rfc-editor.org/info/bcp220), which
@@ -4121,16 +4158,17 @@ and should be read with caution. The definitive source of information
 about I-Ds is the [IETF data tracker](https://datatracker.ietf.org/).
 
 All I-Ds are open to comment and contain contact information. Feel free
-to email their authors or the relevant mailing list.
-
-```mermaid
+to email their authors or the relevant mailing list. This diagram gives an overview:
+<!-- mermaid
 flowchart LR
-    D[draft-*] --> IETF[draft-ietf-*] --> WG[In progress in IETF WG] --> J[Apply judgment]
-    D --> IRTF[draft-irtf-*] --> RG[Internet Research Task Force] --> J
-    D --> IAB[draft-iab-*] --> B[Internet Architecture Board] --> J
-    D --> EDIT[draft-editorial-*] --> E[RFC Series WG] --> J
-    D --> X[draft-xyz-*] --> P[Personal work] --> J
-```
+    D[draft-*] - -> IETF[draft-ietf-*] - -> WG[In progress in IETF WG] - -> J[Apply judgment]
+    D - -> IRTF[draft-irtf-*] - -> RG[Internet Research Task Force] - -> J
+    D - -> IAB[draft-iab-*] - -> B[Internet Architecture Board] - -> J
+    D - -> EDIT[draft-editorial-*] - -> E[RFC Series WG] - -> J
+    D - -> X[draft-xyz-*] - -> P[Personal work] - -> J
+-->
+
+<img src="./id-diagram.svg" width=800 alt="Diagram of I-D status">
 
 There are also numerous books, book chapters, and other documents about
 IPv6. However, any source that is more than one or two years old is
@@ -4187,7 +4225,7 @@ BCPs, Informational and Experimental RFCs. Be *cautious* about old
 Informational or Experimental RFCs - they may be misleading as well as
 out of date.
 
-RFCbib6 run at 2023-12-30 15:29:10 UTC+1300 (447 RFCs found)
+RFCbib6 run at 2024-01-31 09:42:27 UTC+1300 (447 RFCs found)
 
 ### Standards Track (228 RFCs)
 
@@ -5375,9 +5413,12 @@ e.g.:
    |                              etc.                             |
 ```
 
-The
-[*mermaid* tool](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
-can be used for flow charts and state diagrams, e.g.:
+More complex diagrams may be included using SVG generated by a
+separate drawing tool such as [*mermaid*](https://mermaid.live)
+or [*dia*](http://dia-installer.de/),
+with the SVG file also stored here on GitHub, e.g.:
+
+Source of *mermaid* diagram:
 
 ````
 ```mermaid
@@ -5386,14 +5427,17 @@ flowchart LR
 ```
 ````
 
-```mermaid
-flowchart LR
-    S[Start here] --> E[End here]
+Embedded in markdown as an SVG file generated by [*mermaid.live*](https://mermaid.live):
+
+```
+<img src="./example1.svg" width=250 alt="Start here, end here">
 ```
 
-Other types of diagrams could be included using SVG generated by a
-separate drawing tool such as *dia*, with the SVG file also stored here
-on GitHub, e.g.:
+Displayed thus:
+
+<img src="./example1.svg" width=250 alt="Start here, end here">
+
+Example generated with *dia*:
 
 ```
 <img src="./diag.svg" alt="Disk feeding tape">
@@ -5402,6 +5446,9 @@ on GitHub, e.g.:
 <img src="./diag.svg" alt="Disk feeding tape">
 
 Please add alternate text to help people with visual difficulties.
+
+*Note:* Direct use of *mermaid* in markdown source is not recommended,
+as it causes difficulty when generating a PDF version of book6.
 
 Existing diagrams in PNG or JPG format can be inserted in the same way,
 although SVG has the advantage of being a text format "under the
@@ -5422,7 +5469,7 @@ Section text goes here
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-01-11 14:38:47 UTC+1300
+Generated at 2024-02-25 14:10:55 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -5464,6 +5511,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#energy-consumption)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#cern-and-the-lhc)
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-enterprise)
 [¶](#deployment-in-the-home)
@@ -5517,6 +5565,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#address-planning)
 [¶](#address-and-prefix-management)
 [¶](#multi-prefix-operation)
+[¶](#cern-and-the-lhc)
 
 [differentiated services ¶](#packet-format)
 [¶](#routing)
@@ -5556,6 +5605,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#network-design)
 [¶](#address-and-prefix-management)
 [¶](#energy-consumption)
+[¶](#cern-and-the-lhc)
 [¶](#deployment-in-the-home)
 
 [ECN ¶](#packet-format)
@@ -5665,8 +5715,19 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#energy-consumption)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#cern-and-the-lhc)
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-home)
+
+[IPv6-mostly ¶](#dual-stack-scenarios)
+
+[IPv6-only ¶](#routing)
+[¶](#source-and-destination-address-selection)
+[¶](#coexistence-with-legacy-ipv4)
+[¶](#dual-stack-scenarios)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#tunnels)
+[¶](#deployment-by-carriers)
 
 [IS-IS ¶](#routing)
 
@@ -5770,6 +5831,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#auto-configuration)
 [¶](#managed-configuration)
 [¶](#routing)
+[¶](#multi-prefix-operation)
 
 [RIPng ¶](#routing)
 
@@ -5884,7 +5946,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-01-11 14:38:47 UTC+1300
+Generated at 2024-02-25 14:10:55 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6225,6 +6287,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8415 ¶](#managed-configuration)
 [¶](#address-planning)
+
+[RFC8475 ¶](#multi-prefix-operation)
 
 [RFC8501 ¶](#dns)
 

@@ -9,6 +9,7 @@
 #                     - replace blobs with pilcrows for latex
 # Version: 2024-01-18 - skip code blocks when fixing citations
 # Version: 2024-01-29 - use dedicated pdf directory
+# Version: 2024-04-02 - copy image files to pdf directory
 
 ########################################################
 # Copyright (C) 2024 Brian E. Carpenter.                  
@@ -56,6 +57,7 @@ from tkinter.messagebox import askokcancel, askyesno, showinfo
 
 import time
 import os
+import shutil
 
 def logit(msg):
     """Add a message to the log file"""
@@ -171,7 +173,12 @@ def fix_section(raw):
     new.append(page_break)
     return(new)
 
-
+def imgcopy(dirname):
+    """Duplicate any image files in the pdf directory"""
+    for f in os.listdir(dirname):
+        ftype = os.path.splitext(f)[1]
+        if ftype in [".svg", ".jpg", ".jpeg", ".png"]:
+            shutil.copy(dirname+"/"+f, "pdf/"+f)
 
 page_break = '<!-- page break -->\n'
 
@@ -226,7 +233,7 @@ del title
 
 contents = rf("Contents.md")
 
-# Make list of section files to be baked
+# Make list of section files to be baked, copy image files
 
 preamble = True
 fns = []
@@ -242,6 +249,7 @@ for line in contents:
         _, tail = line.split("](")
         dirname, filename = tail.split("/")
         dirname = dirname.replace("%20", " ")
+        imgcopy(dirname) #copy any image files
         filename = filename.replace("%20", " ").replace(")", "").replace("\n", "")
     elif line.startswith("*"):
         filename = line.replace("* ", "").replace("%20", " ").replace("\n", "") + ".md"
