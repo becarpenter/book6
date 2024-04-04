@@ -166,7 +166,8 @@ def fix_section(raw):
                 outline += head + "](#" + target +")"
             outline += line
         elif "<img src=" in line:
-            #need to munge image reference (lazy, only handles the first one)
+            #need to munge image reference for pandoc
+            #(lazy, only handles the first one)
             head, tail = line.split("<img src=", maxsplit=1)
             #print(head, tail)
             try:
@@ -182,8 +183,9 @@ def fix_section(raw):
                 imgalt, _ = imgalt.split('"', maxsplit=1)
             except:
                 imgalt = "No description available"
-            #build image citation
-            outline = head+'![x]('+imgfile+' "'+imgalt+'")'+tail         
+            #build image citation as pandoc likes it.
+            #the newlines avoid a layout mess
+            outline = head+'\n\n![x]('+imgfile+' "'+imgalt+'")'+tail         
         else:
             outline = line
         #Avoid unwanted anchors
