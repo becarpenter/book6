@@ -43,6 +43,7 @@ values.)
 
 The following diagram shows the example:
 <img src="./multiPrefix.png" alt="Routers and routing clouds as described above">
+
 If, for some reason, there is more than one subnet router on the subnet,
 the host can be informed which one to use as suggested in
 [RFC8028](https://www.rfc-editor.org/info/rfc8028).
