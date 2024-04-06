@@ -42,7 +42,7 @@ addresses `2001:db8:abcd:0101::abc1` and `2001:db8:b123:0101::def2`.
 values.)
 
 The following diagram shows the example:
-<img src="./multiPrefix.svg" alt="Routers and routing clouds as described above">
+<img src="./multiPrefix.png" alt="Routers and routing clouds as described above">
 If, for some reason, there is more than one subnet router on the subnet,
 the host can be informed which one to use as suggested in
 [RFC8028](https://www.rfc-editor.org/info/rfc8028).

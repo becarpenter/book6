@@ -105,7 +105,7 @@ various technologies:
 and comparison of these technologies.
 
 The following figure illustrates such a scenario.
-<img src="./vasilenko-IPv4aaS.svg" alt="User devices connected to Internet via IPv6 infrastructure" width="auto" height="auto"/>
+<img src="./vasilenko-IPv4aaS.png" alt="User devices connected to Internet via IPv6 infrastructure" width="auto" height="auto"/>
 
 - 464XLAT is the widely preferred translation technology now because it
   has a natural synergy with NAT64 (which is highly desirable by itself)
