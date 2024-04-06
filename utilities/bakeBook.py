@@ -11,6 +11,7 @@
 # Version: 2024-01-29 - use dedicated pdf directory
 # Version: 2024-04-02 - copy image files to pdf directory
 # Version: 2024-04-04 - change image citations to suit pandoc
+# Version: 2024-04-07 - deprecate SVG to suit pandoc
 
 ########################################################
 # Copyright (C) 2024 Brian E. Carpenter.                  
@@ -200,7 +201,9 @@ def imgcopy(dirname):
     """Duplicate any image files in the pdf directory"""
     for f in os.listdir(dirname):
         ftype = os.path.splitext(f)[1]
-        if ftype in [".svg", ".jpg", ".jpeg", ".png"]:
+        if ftype == ".svg":
+            logitw("SVG image found, probable pandoc failure")
+        if ftype in [".svg", ".jpg", ".jpeg", ".png", ".gif"]:
             shutil.copy(dirname+"/"+f, "pdf/"+f)
 
 page_break = '<!-- page break -->\n'
