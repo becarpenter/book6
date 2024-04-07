@@ -12,6 +12,7 @@
 # Version: 2024-04-02 - copy image files to pdf directory
 # Version: 2024-04-04 - change image citations to suit pandoc
 # Version: 2024-04-07 - deprecate SVG to suit pandoc
+#                     - added pagebreak hack
 
 ########################################################
 # Copyright (C) 2024 Brian E. Carpenter.                  
@@ -206,7 +207,7 @@ def imgcopy(dirname):
         if ftype in [".svg", ".jpg", ".jpeg", ".png", ".gif"]:
             shutil.copy(dirname+"/"+f, "pdf/"+f)
 
-page_break = '<!-- page break -->\n'
+page_break = '\nbackslashpagebreak\n'
 
 ######### Startup
 
