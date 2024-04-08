@@ -13,6 +13,7 @@
 # Version: 2024-04-04 - change image citations to suit pandoc
 # Version: 2024-04-07 - deprecate SVG to suit pandoc
 #                     - added pagebreak hack
+# Version: 2024-04-08 - cosmetic fix
 
 ########################################################
 # Copyright (C) 2024 Brian E. Carpenter.                  
@@ -194,6 +195,9 @@ def fix_section(raw):
         if outline.startswith("## ["):
             #Assume this is a chapter contents item
             outline = outline[3:]
+        #Cosmetic fix for links in PDF
+        if "<ins>Chapter Contents</ins>" in outline:
+            outline = outline.replace("<ins>Chapter Contents</ins>", "<ins>Top</ins>")
         new.append(outline)
     new.append(page_break)
     return(new)

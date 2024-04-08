@@ -26,8 +26,9 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-04-07 11:12:40 UTC+1200
-<!-- page break -->
+Version captured at 2024-04-08 16:07:29 UTC+1200
+
+backslashpagebreak
 # book6: A Collaborative IPv6 Book.
 
 
@@ -112,7 +113,8 @@ and a [citation index](#book6-citation-index).
 * Section Template
 * Markdown Usage
 * Last Section
-<!-- page break -->
+
+backslashpagebreak
 # Introduction and Foreword
 
 [Foreword](#foreword)
@@ -134,7 +136,8 @@ and a [citation index](#book6-citation-index).
 [Why version 6](#why-version-6)
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## Foreword
 
 This book is written and maintained by a team of volunteers, who are all
@@ -142,8 +145,9 @@ actively involved as users or providers of IPv6 services. It is their
 hope that the book will be useful and up to date as IPv6 usage in the
 Internet continues to grow.
 
-### [<ins>Next</ins>](#how-to-use-this-book) [<ins>Chapter Contents</ins>](#introduction-and-foreword)
-<!-- page break -->
+### [<ins>Next</ins>](#how-to-use-this-book) [<ins>Top</ins>](#introduction-and-foreword)
+
+backslashpagebreak
 ## How to use this book
 
 This book is, and we hope always will be, a work in progress. It is
@@ -171,8 +175,9 @@ link in a new browser tab or window, so clicking on links will always take you t
 a new page. To avoid this, with most browsers you can use CTRL+click (on Windows
 and Linux) or CMD+click (on MacOS).
 
-### [<ins>Previous</ins>](#foreword) [<ins>Next</ins>](#how-a-user-sees-ipv6) [<ins>Chapter Contents</ins>](#introduction-and-foreword)
-<!-- page break -->
+### [<ins>Previous</ins>](#foreword) [<ins>Next</ins>](#how-a-user-sees-ipv6) [<ins>Top</ins>](#introduction-and-foreword)
+
+backslashpagebreak
 ## How a user sees IPv6
 
 The answer should be: *they don't*. In an ideal world, users would never
@@ -196,8 +201,9 @@ P.S. In case you're wondering whether you can in fact use IPv6 right now,
 try https://ipv6test.google.com/.
 GitHub, where this book is hosted, supports IPv6 for many things, but not everything.
 
-### [<ins>Previous</ins>](#how-to-use-this-book) [<ins>Next</ins>](#how-an-application-programmer-sees-ipv6) [<ins>Chapter Contents</ins>](#introduction-and-foreword)
-<!-- page break -->
+### [<ins>Previous</ins>](#how-to-use-this-book) [<ins>Next</ins>](#how-an-application-programmer-sees-ipv6) [<ins>Top</ins>](#introduction-and-foreword)
+
+backslashpagebreak
 ## How an application programmer sees IPv6
 
 In a very theoretical world, an application programmer could rely on a
@@ -253,8 +259,9 @@ discussed in
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#how-a-user-sees-ipv6) [<ins>Next</ins>](#how-a-network-operations-center-sees-ipv6) [<ins>Chapter Contents</ins>](#introduction-and-foreword)
-<!-- page break -->
+### [<ins>Previous</ins>](#how-a-user-sees-ipv6) [<ins>Next</ins>](#how-a-network-operations-center-sees-ipv6) [<ins>Top</ins>](#introduction-and-foreword)
+
+backslashpagebreak
 ## How a network operations center sees IPv6
 
 This is really the topic of this entire book. In the long term, we
@@ -287,8 +294,9 @@ The
 [7. Case Studies](#case-studies)
 will also be relevant to NOCs.
 
-### [<ins>Previous</ins>](#how-an-application-programmer-sees-ipv6) [<ins>Next</ins>](#how-to-keep-up-to-date) [<ins>Chapter Contents</ins>](#introduction-and-foreword)
-<!-- page break -->
+### [<ins>Previous</ins>](#how-an-application-programmer-sees-ipv6) [<ins>Next</ins>](#how-to-keep-up-to-date) [<ins>Top</ins>](#introduction-and-foreword)
+
+backslashpagebreak
 ## How to keep up to date
 
 The intention is for this book to be kept up to date by its user
@@ -317,8 +325,9 @@ Also see the
 [Further Reading](#further-reading)
 chapter for more explanation about RFCs and for other resources.
 
-### [<ins>Previous</ins>](#how-a-network-operations-center-sees-ipv6) [<ins>Next</ins>](#how-to-contribute) [<ins>Chapter Contents</ins>](#introduction-and-foreword)
-<!-- page break -->
+### [<ins>Previous</ins>](#how-a-network-operations-center-sees-ipv6) [<ins>Next</ins>](#how-to-contribute) [<ins>Top</ins>](#introduction-and-foreword)
+
+backslashpagebreak
 ## How to contribute
 
 If you find an error or a gap in this book, or a recommendation that you
@@ -337,8 +346,9 @@ To become an active contributor
 and [instructions](https://github.com/becarpenter/book6/blob/main/99.%20Chapter%20Template/99.%20Chapter%20Template.md). Then submit GitHub PRs.
 Your contributions will be reviewed by an editorial team.
 
-### [<ins>Previous</ins>](#how-to-keep-up-to-date) [<ins>Next</ins>](#acknowledgments) [<ins>Chapter Contents</ins>](#introduction-and-foreword)
-<!-- page break -->
+### [<ins>Previous</ins>](#how-to-keep-up-to-date) [<ins>Next</ins>](#acknowledgments) [<ins>Top</ins>](#introduction-and-foreword)
+
+backslashpagebreak
 ## Acknowledgments
 
 Currently the editorial committee includes Nick Buraglio and Brian Carpenter.
@@ -364,8 +374,9 @@ Other direct and indirect contributors, either of text or very helpful comments 
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#how-to-contribute) [<ins>Next</ins>](#why-version-6) [<ins>Chapter Contents</ins>](#introduction-and-foreword)
-<!-- page break -->
+### [<ins>Previous</ins>](#how-to-contribute) [<ins>Next</ins>](#why-version-6) [<ins>Top</ins>](#introduction-and-foreword)
+
+backslashpagebreak
 ## Why version 6
 
 This section is mainly historical.
@@ -489,8 +500,9 @@ to an April fool's day joke
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#acknowledgments) [<ins>Chapter Contents</ins>](#introduction-and-foreword)
-<!-- page break -->
+### [<ins>Previous</ins>](#acknowledgments) [<ins>Top</ins>](#introduction-and-foreword)
+
+backslashpagebreak
 # IPv6 Basic Technology
 
 The main standard for IPv6 is
@@ -545,7 +557,8 @@ auto-configuration, so the reader is advised to read in sequence.
 [Source and Destination Address Selection](#source-and-destination-address-selection)
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## Packet Format
 
 IPv6 packets are transmitted independently of each other even if they
@@ -651,8 +664,9 @@ also worth noting that Wireshark knows all about IPv6 header formats.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](#addresses) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Next</ins>](#addresses) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## Addresses
 
 A 128 bit address is big enough that, assuming the adoption of wise
@@ -988,8 +1002,9 @@ never appear on the real Internet.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#packet-format) [<ins>Next</ins>](#layer-2-functions) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#packet-format) [<ins>Next</ins>](#layer-2-functions) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## Layer 2 functions
 
 Every IPv6 packet has to be wrapped in a Layer 2 packet (or frame) for
@@ -1055,8 +1070,9 @@ today and best practices are not yet established.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#addresses) [<ins>Next</ins>](#address-resolution) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#addresses) [<ins>Next</ins>](#address-resolution) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## Address resolution
 
 When an IPv6 node "A" becomes aware of the IPv6 address of another node
@@ -1147,8 +1163,9 @@ might be applied more generally in future.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#layer-2-functions) [<ins>Next</ins>](#auto-configuration) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#layer-2-functions) [<ins>Next</ins>](#auto-configuration) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## Auto-configuration
 
 One design goal for IPv6 was that it could be used "out of the box" in
@@ -1288,8 +1305,9 @@ section.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#address-resolution) [<ins>Next</ins>](#managed-configuration) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#address-resolution) [<ins>Next</ins>](#managed-configuration) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## Managed configuration
 
 Host addresses and other IPv6 parameters can be configured using the
@@ -1385,8 +1403,9 @@ information to communicate with other on-link hosts.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#auto-configuration) [<ins>Next</ins>](#dns) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#auto-configuration) [<ins>Next</ins>](#dns) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## DNS
 
 We assume that the reader has a good general understanding of the Domain
@@ -1456,8 +1475,9 @@ Some statistics on AAAA records and reachability may be found at
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#managed-configuration) [<ins>Next</ins>](#routing) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#managed-configuration) [<ins>Next</ins>](#routing) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## Routing
 
 This section is a short introduction to a complex topic. IPv6 packets
@@ -1585,8 +1605,9 @@ along a packet's path. These are briefly explained in
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#dns) [<ins>Next</ins>](#transport-protocols) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#dns) [<ins>Next</ins>](#transport-protocols) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## Transport protocols
 
 Applications can readily be updated to work in dual stack mode, because
@@ -1632,8 +1653,9 @@ same applies to ECN (Explicit Congestion Notification
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#routing) [<ins>Next</ins>](#extension-headers-and-options) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#routing) [<ins>Next</ins>](#extension-headers-and-options) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## Extension headers and options
 
 As explained in
@@ -1711,8 +1733,9 @@ recommendations are in
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#transport-protocols) [<ins>Next</ins>](#traffic-class-and-flow-label) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#transport-protocols) [<ins>Next</ins>](#traffic-class-and-flow-label) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## Traffic class and flow label
 
 The Traffic Class in every IPv6 packet is a byte also known as the
@@ -1749,8 +1772,9 @@ and
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#extension-headers-and-options) [<ins>Next</ins>](#source-and-destination-address-selection) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#extension-headers-and-options) [<ins>Next</ins>](#source-and-destination-address-selection) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 ## Source and Destination address selection
 
 As described in
@@ -1866,8 +1890,9 @@ prefix ::/0 label 1
 In practice, source address selection is difficult to configure outside of link local, GUA, and ULA default preferences, and varies by host and application implementations. It is possible to create address pairings using the IPv6 address label mechanisms, however. 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#traffic-class-and-flow-label) [<ins>Chapter Contents</ins>](#ipv6-basic-technology)
-<!-- page break -->
+### [<ins>Previous</ins>](#traffic-class-and-flow-label) [<ins>Top</ins>](#ipv6-basic-technology)
+
+backslashpagebreak
 # Coexistence with Legacy IPv4
 
 The notion of a utopian IPv6-only world is a noble goal. However, as
@@ -1998,7 +2023,8 @@ is out of scope.
 [IPv6 primary differences from IPv4](#ipv6-primary-differences-from-ipv4)
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## Dual stack scenarios
 
 We must distinguish the original model of dual stack deployment from the
@@ -2216,8 +2242,9 @@ also gives more detail on IPv4aaS.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](#tunnels) [<ins>Chapter Contents</ins>](#coexistence-with-legacy-ipv4)
-<!-- page break -->
+### [<ins>Next</ins>](#tunnels) [<ins>Top</ins>](#coexistence-with-legacy-ipv4)
+
+backslashpagebreak
 ## Tunnels
 
 At its simplest, two IPv6 hosts or networks can be joined together via
@@ -2268,8 +2295,9 @@ gaps. Interested readers can study a 125 page
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#dual-stack-scenarios) [<ins>Next</ins>](#translation-and-ipv4-as-a-service) [<ins>Chapter Contents</ins>](#coexistence-with-legacy-ipv4)
-<!-- page break -->
+### [<ins>Previous</ins>](#dual-stack-scenarios) [<ins>Next</ins>](#translation-and-ipv4-as-a-service) [<ins>Top</ins>](#coexistence-with-legacy-ipv4)
+
+backslashpagebreak
 ## Translation and IPv4 as a service
 
 When an operator wants to reduce infrastructure costs by running a
@@ -2467,8 +2495,9 @@ Like NPTv6, NAT66 should be used only when necessary or required. Moreover, is i
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#tunnels) [<ins>Next</ins>](#obsolete-techniques) [<ins>Chapter Contents</ins>](#coexistence-with-legacy-ipv4)
-<!-- page break -->
+### [<ins>Previous</ins>](#tunnels) [<ins>Next</ins>](#obsolete-techniques) [<ins>Top</ins>](#coexistence-with-legacy-ipv4)
+
+backslashpagebreak
 ## Obsolete techniques
 
 As IPv6 has matured and people have gained operational experience,
@@ -2519,8 +2548,9 @@ preprint [here](https://dataplane.org/jtk/publications/kgkp-pam-21.pdf).
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#translation-and-ipv4-as-a-service) [<ins>Next</ins>](#ipv6-primary-differences-from-ipv4) [<ins>Chapter Contents</ins>](#coexistence-with-legacy-ipv4)
-<!-- page break -->
+### [<ins>Previous</ins>](#translation-and-ipv4-as-a-service) [<ins>Next</ins>](#ipv6-primary-differences-from-ipv4) [<ins>Top</ins>](#coexistence-with-legacy-ipv4)
+
+backslashpagebreak
 ## IPv6 primary differences from IPv4
 
 This book intentionally describes IPv6 as the "new normal" IP protocol,
@@ -2596,8 +2626,9 @@ probably smaller.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#obsolete-techniques) [<ins>Chapter Contents</ins>](#coexistence-with-legacy-ipv4)
-<!-- page break -->
+### [<ins>Previous</ins>](#obsolete-techniques) [<ins>Top</ins>](#coexistence-with-legacy-ipv4)
+
+backslashpagebreak
 # Security
 
 Security has ever-growing importance in general and the IP protocol has
@@ -2653,7 +2684,8 @@ aspects.
 [Topology obfuscation](#topology-obfuscation)
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## Layer 2 considerations
 
 IPv6 is comparatively flexible at the link layer. Flexibility typically
@@ -2743,8 +2775,9 @@ user activity, for the same reason that it protects privacy.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](#filtering) [<ins>Chapter Contents</ins>](#security)
-<!-- page break -->
+### [<ins>Next</ins>](#filtering) [<ins>Top</ins>](#security)
+
+backslashpagebreak
 ## Filtering
 
 Filtering is a big part of safe Internet connection. IPv6 filtering in
@@ -2848,8 +2881,9 @@ man-in-the-middle attack.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#layer-2-considerations) [<ins>Next</ins>](#topology-obfuscation) [<ins>Chapter Contents</ins>](#security)
-<!-- page break -->
+### [<ins>Previous</ins>](#layer-2-considerations) [<ins>Next</ins>](#topology-obfuscation) [<ins>Top</ins>](#security)
+
+backslashpagebreak
 ## Topology obfuscation
 
 There are various operational contexts in which an operator needs to
@@ -2912,8 +2946,9 @@ prefix use is frequently employed.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#filtering) [<ins>Chapter Contents</ins>](#security)
-<!-- page break -->
+### [<ins>Previous</ins>](#filtering) [<ins>Top</ins>](#security)
+
+backslashpagebreak
 # Network Design
 
 A first very general remark is that since IPv6 is a datagram protocol,
@@ -2967,7 +3002,8 @@ combined with subnet design.
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## Address Planning
 
 As you would expect, in IPv6 networks all nodes may have globally unique
@@ -3139,8 +3175,9 @@ Although quite old, the following book may be helpful:
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Chapter Contents</ins>](#network-design)
-<!-- page break -->
+### [<ins>Top</ins>](#network-design)
+
+backslashpagebreak
 # Management and Operations
 
 *This chapter is at an early stage and is expected to grow dynamically
@@ -3238,7 +3275,8 @@ carrier, enterprise and data center scenarios.
 [Basic Windows commands](#basic-windows-commands)
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## Address and Prefix Management
 
 Three main cases can be distinguished:
@@ -3328,16 +3366,18 @@ DNS.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](#remote-configuration) [<ins>Chapter Contents</ins>](#management-and-operations)
-<!-- page break -->
+### [<ins>Next</ins>](#remote-configuration) [<ins>Top</ins>](#management-and-operations)
+
+backslashpagebreak
 ## Remote configuration
 
 Section text goes here
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#address-and-prefix-management) [<ins>Next</ins>](#benchmarking-and-monitoring) [<ins>Chapter Contents</ins>](#management-and-operations)
-<!-- page break -->
+### [<ins>Previous</ins>](#address-and-prefix-management) [<ins>Next</ins>](#benchmarking-and-monitoring) [<ins>Top</ins>](#management-and-operations)
+
+backslashpagebreak
 ## Benchmarking and monitoring
 
 Tody, IPv6 monitoring is often forgotten, ignored or done from the wrong
@@ -3374,24 +3414,27 @@ processes. It may also be an oportunity to implement more automation.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#remote-configuration) [<ins>Next</ins>](#routing-operation) [<ins>Chapter Contents</ins>](#management-and-operations)
-<!-- page break -->
+### [<ins>Previous</ins>](#remote-configuration) [<ins>Next</ins>](#routing-operation) [<ins>Top</ins>](#management-and-operations)
+
+backslashpagebreak
 ## Routing operation
 
 Section text goes here
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#benchmarking-and-monitoring) [<ins>Next</ins>](#security-operation) [<ins>Chapter Contents</ins>](#management-and-operations)
-<!-- page break -->
+### [<ins>Previous</ins>](#benchmarking-and-monitoring) [<ins>Next</ins>](#security-operation) [<ins>Top</ins>](#management-and-operations)
+
+backslashpagebreak
 ## Security operation
 
 Section text goes here
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#routing-operation) [<ins>Next</ins>](#multi-prefix-operation) [<ins>Chapter Contents</ins>](#management-and-operations)
-<!-- page break -->
+### [<ins>Previous</ins>](#routing-operation) [<ins>Next</ins>](#multi-prefix-operation) [<ins>Top</ins>](#management-and-operations)
+
+backslashpagebreak
 ## Multi-prefix operation
 
 As mentioned in
@@ -3519,8 +3562,9 @@ for its ULA, the latter only being present in local split-horizon DNS.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#security-operation) [<ins>Next</ins>](#multihoming) [<ins>Chapter Contents</ins>](#management-and-operations)
-<!-- page break -->
+### [<ins>Previous</ins>](#security-operation) [<ins>Next</ins>](#multihoming) [<ins>Top</ins>](#management-and-operations)
+
+backslashpagebreak
 ## Multihoming
 
 Multihoming means configuring a site in such a way that it is connected
@@ -3691,8 +3735,9 @@ multipath solutions. Discussion continues in the IETF.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#multi-prefix-operation) [<ins>Next</ins>](#energy-consumption) [<ins>Chapter Contents</ins>](#management-and-operations)
-<!-- page break -->
+### [<ins>Previous</ins>](#multi-prefix-operation) [<ins>Next</ins>](#energy-consumption) [<ins>Top</ins>](#management-and-operations)
+
+backslashpagebreak
 ## Energy consumption
 
 There is no firm evidence whether IPv6 has net energy consumption
@@ -3719,8 +3764,9 @@ Compression and Fragmentation (SCHC)
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#multihoming) [<ins>Next</ins>](#basic-windows-commands) [<ins>Chapter Contents</ins>](#management-and-operations)
-<!-- page break -->
+### [<ins>Previous</ins>](#multihoming) [<ins>Next</ins>](#basic-windows-commands) [<ins>Top</ins>](#management-and-operations)
+
+backslashpagebreak
 ## Basic Windows commands
 
 The section text goes here, all in Markdown. Don't try to insert or
@@ -3729,8 +3775,9 @@ later.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#energy-consumption) [<ins>Chapter Contents</ins>](#management-and-operations)
-<!-- page break -->
+### [<ins>Previous</ins>](#energy-consumption) [<ins>Top</ins>](#management-and-operations)
+
+backslashpagebreak
 # Case Studies
 
 This chapter will contain a variety of short case studies, based on real
@@ -3763,7 +3810,8 @@ fine.
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## CERN and the LHC
 
 The [CERN laboratory](https://www.cern.ch) and the [Worldwide LHC Computing Grid (WLCG)](https://home.cern/science/computing/grid) are large users of IPv6 for massive data transfers.
@@ -3779,8 +3827,9 @@ The CERN site itself operates a classical IPv4 and IPv6 dual stack, and uses DHC
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Chapter Contents</ins>](#case-studies)
-<!-- page break -->
+### [<ins>Top</ins>](#case-studies)
+
+backslashpagebreak
 # Deployment Status
 
 <!-- Link lines generated automatically; do not delete -->
@@ -3794,7 +3843,8 @@ The CERN site itself operates a classical IPv4 and IPv6 dual stack, and uses DHC
 [Deployment in the enterprise](#deployment-in-the-enterprise)
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## Status
 
 When speaking of IPv6, a question immediately comes up: "How many people
@@ -3854,8 +3904,9 @@ September 2022, not that far from the "psychological" threshold of 50%.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](#deployment-by-carriers) [<ins>Chapter Contents</ins>](#deployment-status)
-<!-- page break -->
+### [<ins>Next</ins>](#deployment-by-carriers) [<ins>Top</ins>](#deployment-status)
+
+backslashpagebreak
 ## Deployment by carriers
 
 All the organizations providing or using Internet connectivity services
@@ -3910,8 +3961,9 @@ UK.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#status) [<ins>Next</ins>](#deployment-in-the-home) [<ins>Chapter Contents</ins>](#deployment-status)
-<!-- page break -->
+### [<ins>Previous</ins>](#status) [<ins>Next</ins>](#deployment-in-the-home) [<ins>Top</ins>](#deployment-status)
+
+backslashpagebreak
 ## Deployment in the home
 
 It is hard to estimate what fraction of home users have IPv6
@@ -3951,8 +4003,9 @@ These complex topics are out of scope for this book.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#deployment-by-carriers) [<ins>Next</ins>](#deployment-in-the-enterprise) [<ins>Chapter Contents</ins>](#deployment-status)
-<!-- page break -->
+### [<ins>Previous</ins>](#deployment-by-carriers) [<ins>Next</ins>](#deployment-in-the-enterprise) [<ins>Top</ins>](#deployment-status)
+
+backslashpagebreak
 ## Deployment in the enterprise
 
 Measuring the adoption of IPv6 in the enterprise domain is not
@@ -4058,8 +4111,9 @@ space may require more effort and expense, or may not be possible.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#deployment-in-the-home) [<ins>Chapter Contents</ins>](#deployment-status)
-<!-- page break -->
+### [<ins>Previous</ins>](#deployment-in-the-home) [<ins>Top</ins>](#deployment-status)
+
+backslashpagebreak
 # Troubleshooting
 
 If you know what should be written here, please write it! [How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute) 
@@ -4071,23 +4125,26 @@ If you know what should be written here, please write it! [How to contribute.](h
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## Advanced Troubleshooting
 
 If you know what should be written here, please write it! [How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute) 
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](#tools) [<ins>Chapter Contents</ins>](#troubleshooting)
-<!-- page break -->
+### [<ins>Next</ins>](#tools) [<ins>Top</ins>](#troubleshooting)
+
+backslashpagebreak
 ## Tools
 
 If you know what should be written here, please write it! [How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#advanced-troubleshooting) [<ins>Chapter Contents</ins>](#troubleshooting)
-<!-- page break -->
+### [<ins>Previous</ins>](#advanced-troubleshooting) [<ins>Top</ins>](#troubleshooting)
+
+backslashpagebreak
 # Further Reading
 
 There are massive amounts of information about IPv6 "out there" on the
@@ -4234,7 +4291,8 @@ deployment options. Here are some starting points:
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## RFC bibliography
 
 This section is a machine-generated list of all current RFCs that
@@ -5241,8 +5299,9 @@ RFCbib6 run at 2024-01-31 09:42:27 UTC+1300 (447 RFCs found)
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Chapter Contents</ins>](#further-reading)
-<!-- page break -->
+### [<ins>Top</ins>](#further-reading)
+
+backslashpagebreak
 # Chapter Template
 
 This chapter shows how to write a new chapter. It is intentionally
@@ -5353,15 +5412,17 @@ _Pro tip:_ Adding a new chapter, renaming or deleting a section or chapter, or m
 [Last Section](#last-section)
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
-<!-- page break -->
+
+backslashpagebreak
 ## First Section
 
 Section text goes here
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](#section-template) [<ins>Chapter Contents</ins>](#chapter-template)
-<!-- page break -->
+### [<ins>Next</ins>](#section-template) [<ins>Top</ins>](#chapter-template)
+
+backslashpagebreak
 ## Section Template
 
 The section text goes here, all in Markdown. Don't try to insert or
@@ -5370,8 +5431,9 @@ later.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#first-section) [<ins>Next</ins>](#markdown-usage) [<ins>Chapter Contents</ins>](#chapter-template)
-<!-- page break -->
+### [<ins>Previous</ins>](#first-section) [<ins>Next</ins>](#markdown-usage) [<ins>Top</ins>](#chapter-template)
+
+backslashpagebreak
 ## Markdown Usage
 
 The basics of using the GitHub dialect of markdown are
@@ -5481,16 +5543,18 @@ Existing diagrams in JPG format can be inserted in the same way.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#section-template) [<ins>Next</ins>](#last-section) [<ins>Chapter Contents</ins>](#chapter-template)
-<!-- page break -->
+### [<ins>Previous</ins>](#section-template) [<ins>Next</ins>](#last-section) [<ins>Top</ins>](#chapter-template)
+
+backslashpagebreak
 ## Last Section
 
 Section text goes here
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#markdown-usage) [<ins>Chapter Contents</ins>](#chapter-template)
-<!-- page break -->
+### [<ins>Previous</ins>](#markdown-usage) [<ins>Top</ins>](#chapter-template)
+
+backslashpagebreak
 # book6 Main Index
 
 
@@ -5969,7 +6033,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-in-the-home)
 
 
-### [<ins>Back to main Contents</ins>](#list-of-contents)<!-- page break -->
+### [<ins>Back to main Contents</ins>](#list-of-contents)
+backslashpagebreak
 # book6 Citation Index
 
 
@@ -6404,4 +6469,5 @@ This index was created automatically, so it's dumb. It has links to each section
 [STD87 ¶](#extension-headers-and-options)
 
 
-### [<ins>Back to main Contents</ins>](#list-of-contents)<!-- page break -->
+### [<ins>Back to main Contents</ins>](#list-of-contents)
+backslashpagebreak

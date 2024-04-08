@@ -157,10 +157,12 @@ a few details.
 The title page is at _Title.md_ and is augmented during
 baking by adding a timestamp.
 
-Ome gotcha is that all graphics files (`.svg, .png, .jpg`)
+Ome gotcha is that all graphics files (`.png, .jpg`, etc.)
 needed to be copied into the main directory. Another gotcha
 is that section names need to be unique book-wide.
 
 A current weakness is that where a page break is needed,
-this is signaled by a comment line: `<!-- page break -->`.
+this is signaled by a dummy line: `backslashpagebreak`.
+
+Further info in the `pdf` directory.
 
