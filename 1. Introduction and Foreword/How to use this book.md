@@ -20,9 +20,10 @@ book.
 There is also an
 [index](../Index.md).
 
-A little tip: For some reason, GitHub doesn't support automatically opening a
-link in a new browser tab or window, so clicking on links will always take you to
-a new page. To avoid this, with most browsers you can use CTRL+click (on Windows
-and Linux) or CMD+click (on MacOS).
+A little tip if you are reading this on GitHub: For some reason, GitHub doesn't
+support automatically opening a link in a new browser tab or window, so clicking
+on links will always take you away from the current page.
+To avoid this, with most browsers you can use CTRL+click (on Windows
+and Linux) or CMD+click (on MacOS) to open a new tab.
 
 ### [<ins>Previous</ins>](Foreword.md) [<ins>Next</ins>](How%20a%20user%20sees%20IPv6.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
