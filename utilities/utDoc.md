@@ -141,7 +141,7 @@ This log should always be checked after a run!
 It's best to run __makeBook__ afterwards. (Note that _RFC bibliography.md_
 is ignored by __indexBook__, to avoid noise in the citation index.)
 
-### bakebook
+### bakeBook
 
 This program concatenates the whole book into a single "baked"
 markdown file (called _baked.md_). This isn't intended for users,
@@ -157,12 +157,14 @@ a few details.
 The title page is at _Title.md_ and is augmented during
 baking by adding a timestamp.
 
-Ome gotcha is that all graphics files (`.png, .jpg`, etc.)
-needed to be copied into the main directory. Another gotcha
-is that section names need to be unique book-wide.
+One gotcha is that all graphics files (`.png, .jpg`, etc.)
+needed to be copied into the main directory, and their names
+must be unique book-wide. Another gotcha
+is that section names must also be unique book-wide.
 
-A current weakness is that where a page break is needed,
+A necessary hack is that where a page break is needed,
 this is signaled by a dummy line: `backslashpagebreak`.
+This is converted later to a genuine pagebreak.
 
-Further info in the `pdf` directory.
+Further info is in the `pdf` directory.
 
