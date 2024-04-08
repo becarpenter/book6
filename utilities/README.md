@@ -8,4 +8,7 @@ it unless you know what you're doing. Similarly, [indexBook](./indexBook.py) upd
 (based on index terms in [index6.txt](./index6.txt)) and [RFCbib6.py](./RFCbib6.py) rebuilds
 the RFC citation index.
 
-These utilities will be documented in [utDoc.md](./utDoc.md).
+[bakeBook](./bakeBook.py) "bakes" all the sections of book6 into a single markdown file, used
+to generate a PDF version of the book.
+
+These utilities are documented in [utDoc.md](./utDoc.md).
