@@ -48,7 +48,7 @@ assigned to identify its packets. Ever since then, the number 5 was
 reserved for ST in the IP version field (layer 3) and protocol number
 (layer 4) field. The idea is that routers could differentiate packets or
 that IPv4 packets could carry encapsulated ST packets, where the number
-5 would show up as a upper layer protocol. Since
+5 would show up as an upper layer protocol. Since
 [RFC762](https://www.rfc-editor.org/info/rfc762) we can see number 5
 assigned in "protocol numbers":
 

@@ -31,8 +31,8 @@ or have an existing input field in your application that is too small.
 Also, regular expressions for validating IP addresses are different. As
 you will learn later in this book there are different types of IPv6
 addresses and several ways to write them. Make sure your application
-does only accept the correct type of addresses and is also not too
-strict and only accepts one format. Users want to use copy-and-paste or
+only accepts the correct type of addresses and is also not too strict
+by only accepting one format. Users want to use copy-and-paste or
 automation and the input format of an IP address may not always be what
 your application expects. Always remember: "Be conservative in what you
 do, be liberal in what you accept from others". And it's probably always

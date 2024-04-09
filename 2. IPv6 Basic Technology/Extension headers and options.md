@@ -67,7 +67,7 @@ while they work well within a limited domain with consistent
 administration and security rules, they are not reliably transmitted
 across the open Internet, presumably due to firewall and router
 filtering rules. [RFC7872](https://www.rfc-editor.org/info/rfc7872)
-reports on the situation in 2015, and there is ongoing work to update
+reported on the situation in 2015, and there is ongoing work to update
 similar measurements. The operational implications are described in
 [RFC9098](https://www.rfc-editor.org/info/rfc9098) and filtering
 recommendations are in
