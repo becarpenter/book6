@@ -116,7 +116,7 @@ As explained in
 IPv6 routing generally works independently of IPv4 routing, which was
 indeed a fundamental design choice. However, if necessary, encapsulated
 IPv4 traffic can be carried over an IPv6-only path. To enable this,
-multiprotocol BGP-4 has provision to advertise IPv4 reachability over an
+multiprotocol BGP-4 has provisions to advertise IPv4 reachability over an
 IPv6-only path \[[RFC8950](https://www.rfc-editor.org/info/rfc8950)\].
 
 Finally, IPv6 allows routing headers, interpreted by intermediate nodes

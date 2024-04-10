@@ -110,7 +110,7 @@ that it will be re-enabled. Additionally, this allows for an operator to
 slowly migrate off of legacy IPv4 at the pace of the evolution of the
 operating systems within their operational domain and allows for the
 coexistence of a wide variety of hosts on a given network segment:
-IPv4-only hosts, IPv6-only hosts, and dual-stacked hosts.As operating
+IPv4-only hosts, IPv6-only hosts, and dual-stacked hosts. As operating
 systems add support for DHCP option 108, reliance on legacy IPv4
 naturally becomes smaller and smaller until it can eventually be
 disabled or is diminished enough that it can be removed.
@@ -148,7 +148,7 @@ CGN, global IPv4 addresses for the CGN systems must be paid for by
 somebody.
 
 For this reason, when IPv6 usage exceeds a certain threshold, it may be
-advantageous to start a transition to a next phase and move to a more
+advantageous to start a transition to the next phase and move to a more
 advanced IPv6 deployment, also referred to as IPv6-only. To be clear,
 that does not mean removing access to IPv4-only resources. Some method
 of access to IPv4 resources must be retained, as the primary network
@@ -210,7 +210,7 @@ notice that the solutions most commonly adopted today, such as this one,
 exploit both the use of tunnels (IPv4 carried over IPv6) and translation
 (IPv4 re-encoded as IPv6). The following two sections separate out these
 two techniques.
-[3. Translation](../3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)\]
+\[[3. Translation](../3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)\]
 also gives more detail on IPv4aaS.
 
 <!-- Link lines generated automatically; do not delete -->

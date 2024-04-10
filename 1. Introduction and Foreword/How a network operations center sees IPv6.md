@@ -9,7 +9,7 @@ of
 This section gives an overview of how IPv6 looks when viewed from the
 NOC, and the rest of the book covers the details.
 
-IPv6 is at its roots not fundamentally different from IPv4 - just
+IPv6 is, at its roots, not fundamentally different from IPv4 - just
 different in almost every detail. So the _nature_ of NOC design
 and operation is not changed by IPv6, but existing operations
 and management tools need to be updated. For example, any 

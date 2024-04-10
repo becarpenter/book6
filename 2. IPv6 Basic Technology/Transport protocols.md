@@ -1,7 +1,7 @@
 ## Transport protocols
 
 Applications can readily be updated to work in dual stack mode, because
-the transport layer is very little affected by IPv6. Therefore, IPv6
+the transport layer is affected very little by IPv6. Therefore, IPv6
 supports all the common transport protocols:
 
 - UDP. There is no separate specification for UDP over IPv6;
@@ -29,7 +29,7 @@ supports all the common transport protocols:
 - MPTCP fully supports IPv6
   \[[RFC8684](https://www.rfc-editor.org/info/rfc8684)\].
 
-Also, the secure transports TLS, DTLS and SSH all work normally with
+Also, the secure transports TLS, DTLS and SSL all work normally with
 IPv6. So does SIP (Session Initiation Protocol
 \[[RFC3261](https://www.rfc-editor.org/info/rfc3261)\]), which does not
 require NAT traversal support (STUN) in the case of IPv6.

@@ -68,9 +68,9 @@ cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
 RFC9592, and older documentation often uses uppercase hexadecimal.
 
-The choice of ':' as the separator is annoying in one particular case -
-when including an IPv6 address in a (Web) URL, where a colon has another
-meaning and works as a separator between address and port. That's why
+The choice of ':' as the separator is annoying in one particular aspect -
+where a colon has another meaning and works as a separator between
+address and port. This is quite common in (Web) URLs, that's why
 IPv6 addresses in URLs are in square brackets like this:
 
 ```
@@ -171,13 +171,14 @@ It is slightly confusing that both GUAs and ULAs are architecturally
 defined as having 'global scope', but ULAs are forbidden *by rule* to be
 routed globally.
 
-In the preceding examples, the prefix boundary is shown after bit 63, so
-the subnet prefix is `2001:db8:4006:80b/64` or `fd63:45eb:dc14:1/64`.
-This is the normal setting in IPv6: subnets have 64 bit prefixes and 64
-bit IIDs. [Automatic address configuration](Auto-configuration.md)
-depends on this fixed boundary. Links that don't use automatic address
-configuration are not bound by the /64 rule, but a lot of software and
-configurations rely on it.
+In the preceding examples, the prefix boundary is shown after bit 63
+(counting from zero), so the subnet prefix is `2001:db8:4006:80b/64` or
+`fd63:45eb:dc14:1/64`. This is the normal setting in IPv6: subnets have
+64 bit prefixes and 64 bit IIDs.
+[Automatic address configuration](Auto-configuration.md) depends on this
+fixed boundary. Links that don't use automatic address configuration are
+not bound by the /64 rule, but a lot of software and configurations rely
+on it.
 
 An important characteristic of routeable IPv6 unicast addresses is that
 they are assigned to interfaces (not whole nodes) and each interface may
@@ -254,7 +255,8 @@ referred to as the 'Zone ID' according to
 ### Embedded IPv4 addresses
 
 It's possible to embed an IPv4 address in an IPv6 address in some
-circumstances. Here we'll just give the notation - the usage belongs in
+circumstances. Here we'll just give the notation - the usage is
+discussed in
 [Chapter 3](https://github.com/becarpenter/book6/tree/main/3.%20Coexistence%20with%20legacy%20IPv4).
 
 An IPv4-mapped IPv6 address is a way to represent an IPv4 address as if

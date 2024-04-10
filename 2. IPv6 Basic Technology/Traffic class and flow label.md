@@ -20,8 +20,8 @@ practice.
 ECN is intended for use by transport protocols to support congestion
 control.
 
-The Flow Label is a 20 bit field in every IPv6 packet, although as it
-name indicates it is only relevant to sustained traffic flows. The
+The Flow Label is a 20 bit field in every IPv6 packet, although as its
+name indicates, it is only relevant to sustained traffic flows. The
 sender of a packet should fill it with a pseudo-random non-zero value
 unique to a given traffic flow, such as a given TCP connection. It can
 then be used downstream in support of load balancing. By definition, the
