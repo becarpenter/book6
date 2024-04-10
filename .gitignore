@@ -1,10 +1,11 @@
 # .gitignore
 
-# Ignore log files
+# Ignore log files etc
 makeBook.log
 bakeBook.log
 indexBook.log
 RFCbib6.log
+pdf/baked.aux
 
 # Ignore RFC index
 rfc-index.xml

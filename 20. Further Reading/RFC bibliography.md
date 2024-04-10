@@ -7,7 +7,7 @@ BCPs, Informational and Experimental RFCs. Be *cautious* about old
 Informational or Experimental RFCs - they may be misleading as well as
 out of date.
 
-RFCbib6 run at 2024-01-31 09:42:27 UTC+1300 (447 RFCs found)
+RFCbib6 run at 2024-04-11 11:09:10 UTC+1200 (447 RFCs found)
 
 ### Standards Track (228 RFCs)
 

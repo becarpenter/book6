@@ -154,6 +154,10 @@ creates anchors for chapter and section titles in `## Title`
 format. The code is very ad hoc and has to special-case
 a few details.
 
+After _baked.md_ is written, the code attempts to complete
+the conversion to _baked.pdf_, via _pandoc_ and _pdflatex_. If this
+fails, the manual process is explained in the `pdf` directory. 
+
 The title page is at _Title.md_ and is augmented during
 baking by adding a timestamp.
 

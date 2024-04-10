@@ -14,6 +14,7 @@
 # Version: 2024-04-07 - deprecate SVG to suit pandoc
 #                     - added pagebreak hack
 # Version: 2024-04-08 - cosmetic fix
+# Version: 2024-04-11 - attempt PDF conversion
 
 ########################################################
 # Copyright (C) 2024 Brian E. Carpenter.                  
@@ -61,6 +62,7 @@ from tkinter.messagebox import askokcancel, askyesno, showinfo
 
 import time
 import os
+import subprocess
 import shutil
 
 def logit(msg):
@@ -96,14 +98,6 @@ def rf(f):
     file.close()
     return l
 
-def file_ok(fn):
-    """Check if a local file is OK"""
-    if fn.startswith("../"):
-        fn = fn.replace("../","")
-    fn = fn.replace("%20"," ")
-    return os.path.exists(fn)
-
-
 def wf(f,l):
     """Write list of strings to file"""
     global written
@@ -112,6 +106,16 @@ def wf(f,l):
         file.write(line)
     file.close()
     logit("'"+f+"' written")
+
+def cmd(command):
+    """Execute system command"""
+    do_cmd = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    _out, _err = do_cmd.communicate()
+    if _err:
+        logitw(_err.decode('utf-8').strip())
+##    if _out:
+##        _out = _out.decode('utf-8').strip()
+##        print(_out)
  
 
 def uncase(l):
@@ -306,6 +310,33 @@ baked += fix_section(rf("Citex.md"))
 ######### Write the baked file
 
 wf("pdf/baked.md", baked)
+
+######### Attempt PDF conversion
+logit("Attempting PDF conversion (slow)")
+try:
+
+    # Call pandoc to make LaTeX file
+    cmd("pandoc pdf/baked.md -f gfm -t latex -s -o pdf/baked.tex -V colorlinks=true")
+
+    # Fix up LaTeX
+    latex = rf("pdf/baked.tex")
+    for i in range(len(latex)):
+        if "backslashpagebreak" in latex[i]:
+            latex[i] = "\\pagebreak\n"
+    wf("pdf/baked.tex", latex)
+
+    # Convert LaTeX to PDF
+    # Must switch to PDF directory
+    os.chdir("pdf")
+    cmd("pdflatex baked.tex")
+    # 2nd run to fix citations
+    cmd("pdflatex baked.tex")
+    logit("Exiting PDF conversion - check baked.pdf")
+    
+except Exception as e:
+    logitw("PDF conversion failure: "+str(e))
+    logitw("Manual PDF conversion needed.")
+
 
 ######### Close log and exit
     

@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-04-08 16:07:29 UTC+1200
+Version captured at 2024-04-11 11:10:01 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -170,10 +170,11 @@ book.
 There is also an
 [index](#book6-main-index).
 
-A little tip: For some reason, GitHub doesn't support automatically opening a
-link in a new browser tab or window, so clicking on links will always take you to
-a new page. To avoid this, with most browsers you can use CTRL+click (on Windows
-and Linux) or CMD+click (on MacOS).
+A little tip if you are reading this on GitHub: For some reason, GitHub doesn't
+support automatically opening a link in a new browser tab or window, so clicking
+on links will always take you away from the current page.
+To avoid this, with most browsers you can use CTRL+click (on Windows
+and Linux) or CMD+click (on MacOS) to open a new tab.
 
 ### [<ins>Previous</ins>](#foreword) [<ins>Next</ins>](#how-a-user-sees-ipv6) [<ins>Top</ins>](#introduction-and-foreword)
 
@@ -237,8 +238,8 @@ or have an existing input field in your application that is too small.
 Also, regular expressions for validating IP addresses are different. As
 you will learn later in this book there are different types of IPv6
 addresses and several ways to write them. Make sure your application
-does only accept the correct type of addresses and is also not too
-strict and only accepts one format. Users want to use copy-and-paste or
+only accepts the correct type of addresses and is also not too strict
+by only accepting one format. Users want to use copy-and-paste or
 automation and the input format of an IP address may not always be what
 your application expects. Always remember: "Be conservative in what you
 do, be liberal in what you accept from others". And it's probably always
@@ -273,7 +274,7 @@ of
 This section gives an overview of how IPv6 looks when viewed from the
 NOC, and the rest of the book covers the details.
 
-IPv6 is at its roots not fundamentally different from IPv4 - just
+IPv6 is, at its roots, not fundamentally different from IPv4 - just
 different in almost every detail. So the _nature_ of NOC design
 and operation is not changed by IPv6, but existing operations
 and management tools need to be updated. For example, any 
@@ -427,7 +428,7 @@ assigned to identify its packets. Ever since then, the number 5 was
 reserved for ST in the IP version field (layer 3) and protocol number
 (layer 4) field. The idea is that routers could differentiate packets or
 that IPv4 packets could carry encapsulated ST packets, where the number
-5 would show up as a upper layer protocol. Since
+5 would show up as an upper layer protocol. Since
 [RFC762](https://www.rfc-editor.org/info/rfc762) we can see number 5
 assigned in "protocol numbers":
 
@@ -598,8 +599,8 @@ Some notes on these fixed fields:
 - Version: is always 6
 
 - Traffic class: six bits of
-  [differentiated services](https://www.rfc-editor.org/info/rfc2474)
-  code point followed by two
+  [differentiated services code point](https://www.rfc-editor.org/info/rfc2474)
+  (DSCP) followed by two
   [ECN](https://www.rfc-editor.org/info/rfc3168) bits. See
   [Traffic class and flow label](#traffic-class-and-flow-label).
 
@@ -612,8 +613,8 @@ Some notes on these fixed fields:
 
 - Next header: an integer defining the type of the following header.
 
-- Hop limit: counts down at each routing hop. Packet discarded when it
-  hits zero.
+- Hop limit: counts down at each routing hop. The packet is discarded when
+  it hits zero.
 
 - Addresses: 128 bits; see below.
 
@@ -737,9 +738,9 @@ cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
 RFC9592, and older documentation often uses uppercase hexadecimal.
 
-The choice of ':' as the separator is annoying in one particular case -
-when including an IPv6 address in a (Web) URL, where a colon has another
-meaning and works as a separator between address and port. That's why
+The choice of ':' as the separator is annoying in one particular aspect -
+where a colon has another meaning and works as a separator between
+address and port. This is quite common in (Web) URLs, that's why
 IPv6 addresses in URLs are in square brackets like this:
 
 ```
@@ -840,13 +841,14 @@ It is slightly confusing that both GUAs and ULAs are architecturally
 defined as having 'global scope', but ULAs are forbidden *by rule* to be
 routed globally.
 
-In the preceding examples, the prefix boundary is shown after bit 63, so
-the subnet prefix is `2001:db8:4006:80b/64` or `fd63:45eb:dc14:1/64`.
-This is the normal setting in IPv6: subnets have 64 bit prefixes and 64
-bit IIDs. [Automatic address configuration](#auto-configuration)
-depends on this fixed boundary. Links that don't use automatic address
-configuration are not bound by the /64 rule, but a lot of software and
-configurations rely on it.
+In the preceding examples, the prefix boundary is shown after bit 63
+(counting from zero), so the subnet prefix is `2001:db8:4006:80b/64` or
+`fd63:45eb:dc14:1/64`. This is the normal setting in IPv6: subnets have
+64 bit prefixes and 64 bit IIDs.
+[Automatic address configuration](#auto-configuration) depends on this
+fixed boundary. Links that don't use automatic address configuration are
+not bound by the /64 rule, but a lot of software and configurations rely
+on it.
 
 An important characteristic of routeable IPv6 unicast addresses is that
 they are assigned to interfaces (not whole nodes) and each interface may
@@ -923,7 +925,8 @@ referred to as the 'Zone ID' according to
 ### Embedded IPv4 addresses
 
 It's possible to embed an IPv4 address in an IPv6 address in some
-circumstances. Here we'll just give the notation - the usage belongs in
+circumstances. Here we'll just give the notation - the usage is
+discussed in
 [Chapter 3](https://github.com/becarpenter/book6/tree/main/3.%20Coexistence%20with%20legacy%20IPv4).
 
 An IPv4-mapped IPv6 address is a way to represent an IPv4 address as if
@@ -1596,7 +1599,7 @@ As explained in
 IPv6 routing generally works independently of IPv4 routing, which was
 indeed a fundamental design choice. However, if necessary, encapsulated
 IPv4 traffic can be carried over an IPv6-only path. To enable this,
-multiprotocol BGP-4 has provision to advertise IPv4 reachability over an
+multiprotocol BGP-4 has provisions to advertise IPv4 reachability over an
 IPv6-only path \[[RFC8950](https://www.rfc-editor.org/info/rfc8950)\].
 
 Finally, IPv6 allows routing headers, interpreted by intermediate nodes
@@ -1611,7 +1614,7 @@ backslashpagebreak
 ## Transport protocols
 
 Applications can readily be updated to work in dual stack mode, because
-the transport layer is very little affected by IPv6. Therefore, IPv6
+the transport layer is affected very little by IPv6. Therefore, IPv6
 supports all the common transport protocols:
 
 - UDP. There is no separate specification for UDP over IPv6;
@@ -1639,7 +1642,7 @@ supports all the common transport protocols:
 - MPTCP fully supports IPv6
   \[[RFC8684](https://www.rfc-editor.org/info/rfc8684)\].
 
-Also, the secure transports TLS, DTLS and SSH all work normally with
+Also, the secure transports TLS, DTLS and SSL all work normally with
 IPv6. So does SIP (Session Initiation Protocol
 \[[RFC3261](https://www.rfc-editor.org/info/rfc3261)\]), which does not
 require NAT traversal support (STUN) in the case of IPv6.
@@ -1725,7 +1728,7 @@ while they work well within a limited domain with consistent
 administration and security rules, they are not reliably transmitted
 across the open Internet, presumably due to firewall and router
 filtering rules. [RFC7872](https://www.rfc-editor.org/info/rfc7872)
-reports on the situation in 2015, and there is ongoing work to update
+reported on the situation in 2015, and there is ongoing work to update
 similar measurements. The operational implications are described in
 [RFC9098](https://www.rfc-editor.org/info/rfc9098) and filtering
 recommendations are in
@@ -1758,8 +1761,8 @@ practice.
 ECN is intended for use by transport protocols to support congestion
 control.
 
-The Flow Label is a 20 bit field in every IPv6 packet, although as it
-name indicates it is only relevant to sustained traffic flows. The
+The Flow Label is a 20 bit field in every IPv6 packet, although as its
+name indicates, it is only relevant to sustained traffic flows. The
 sender of a packet should fill it with a pseudo-random non-zero value
 unique to a given traffic flow, such as a given TCP connection. It can
 then be used downstream in support of load balancing. By definition, the
@@ -1918,9 +1921,7 @@ mathematical impossibility. IPv4 contains no provision for any address
 length other than 32 bits. Stretching the address length by only one
 bit, let alone by 32 or more bits, would completely break all existing
 IPv4 implementations. Therefore, __backwards compatibility at the IP
-packet level was impossible, so was not a design goal.__ The only
-solution was a new version number, and in 1994, the next free number
-was 6. (IPv5 was a failed experiment.)
+packet level was impossible, so was not a design goal.__
 
 Given that fundamental incompatibility, the designers of IPv6 decided to
 meet a number of requirements that IPv4 could never satisfy. As a result,
@@ -2006,7 +2007,7 @@ IPv6-only enclaves can only be part of the whole Internet if
 they support at least one coexistence mechanism. Theoretically,
 such an enclave could be connected to the Internet by an
 application layer gateway, but we do not describe this further.
-An IPv6 network where there is no coexistence mechanism whatever
+An IPv6 network where there is no coexistence mechanism whatsoever
 is out of scope.
 
 
@@ -2137,7 +2138,7 @@ that it will be re-enabled. Additionally, this allows for an operator to
 slowly migrate off of legacy IPv4 at the pace of the evolution of the
 operating systems within their operational domain and allows for the
 coexistence of a wide variety of hosts on a given network segment:
-IPv4-only hosts, IPv6-only hosts, and dual-stacked hosts.As operating
+IPv4-only hosts, IPv6-only hosts, and dual-stacked hosts. As operating
 systems add support for DHCP option 108, reliance on legacy IPv4
 naturally becomes smaller and smaller until it can eventually be
 disabled or is diminished enough that it can be removed.
@@ -2175,7 +2176,7 @@ CGN, global IPv4 addresses for the CGN systems must be paid for by
 somebody.
 
 For this reason, when IPv6 usage exceeds a certain threshold, it may be
-advantageous to start a transition to a next phase and move to a more
+advantageous to start a transition to the next phase and move to a more
 advanced IPv6 deployment, also referred to as IPv6-only. To be clear,
 that does not mean removing access to IPv4-only resources. Some method
 of access to IPv4 resources must be retained, as the primary network
@@ -2237,7 +2238,7 @@ notice that the solutions most commonly adopted today, such as this one,
 exploit both the use of tunnels (IPv4 carried over IPv6) and translation
 (IPv4 re-encoded as IPv6). The following two sections separate out these
 two techniques.
-[3. Translation](#translation-and-ipv4-as-a-service)\]
+\[[3. Translation](#translation-and-ipv4-as-a-service)\]
 also gives more detail on IPv4aaS.
 
 <!-- Link lines generated automatically; do not delete -->
@@ -2482,9 +2483,9 @@ caused by NPTv6, and a comparison with classical NAT, are given in
 [Section 5 of RFC 6296](https://www.rfc-editor.org/rfc/rfc6296.html#section-5).
 
 In large scale deployments of wide area architectures, NPTv6 does enable some compelling use cases which enable diversity in security platforms such as stateful unified threat management devices (UTMs). These are positioned in geographically and topologically diverse locations, but require flexibility of _external_ layer 3 addressing to support flow identification. Using NPTv6 to perform re-mapping of addressing allows inspection engines to maintain the flow symmetry that is required for stateful deep packet inspection engines to operate, as asymmetry will cause them to mark all flows as incomplete. 
-It is in this model that it can be GUA to GUA, and this is a definite valid, supportable, and definitely production deployed architecture. 
+It is in this model that it can be GUA to GUA, and this is a valid, supportable, and definitely production deployed architecture. 
 
-In smaller deployments, NPTv6 can be leveraged to create stable addressing inside a network that may be too small for PI address space, but too large to operate without service provider diversity. In this model, suck as an SD-WAN deployment, a GUA or ULA prefix may be deployed, delegated by a home office, other IT governance body, or a local administrator, and mapped to one or more PA prefixes provided by lower cost commercial internet services. This allows for internal addressing to be stable, while providing a more robust connectivity model, and the ability to more quickly switch providers if required by leveraging dynamic addressing externally mapped to stable addressing internally. This model more closely aligns with the current IPv4 architectures pervasively deployed nearly everywhere with stable internal IPv4 addressing masqueraded to one or more PA addresses provided by an upstream ISP. 
+In smaller deployments, NPTv6 can be leveraged to create stable addressing inside a network that may be too small for PI address space, but too large to operate without service provider diversity. In this model, such as an SD-WAN deployment, a GUA or ULA prefix may be deployed, delegated by a home office, other IT governance body, or a local administrator, and mapped to one or more PA prefixes provided by lower cost commercial internet services. This allows for internal addressing to be stable, while providing a more robust connectivity model, and the ability to more quickly switch providers if required by leveraging dynamic addressing externally mapped to stable addressing internally. This model more closely aligns with the current IPv4 architectures pervasively deployed nearly everywhere with stable internal IPv4 addressing masqueraded to one or more PA addresses provided by an upstream ISP. 
 
 ### Further details on NAT66
 
@@ -4302,7 +4303,7 @@ BCPs, Informational and Experimental RFCs. Be *cautious* about old
 Informational or Experimental RFCs - they may be misleading as well as
 out of date.
 
-RFCbib6 run at 2024-01-31 09:42:27 UTC+1300 (447 RFCs found)
+RFCbib6 run at 2024-04-11 11:09:10 UTC+1200 (447 RFCs found)
 
 ### Standards Track (228 RFCs)
 
@@ -5560,7 +5561,7 @@ backslashpagebreak
 
 ![x](book6logo.png "book6 logo")
 
-Generated at 2024-02-25 14:10:55 UTC+1300
+Generated at 2024-04-11 11:08:47 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6040,7 +6041,7 @@ backslashpagebreak
 
 ![x](book6logo.png "book6 logo")
 
-Generated at 2024-02-25 14:10:55 UTC+1300
+Generated at 2024-04-11 11:08:47 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
