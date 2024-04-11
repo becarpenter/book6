@@ -67,7 +67,7 @@ helpful
 
 A specific issue is that SIP (Session Initiation Protocol for IP telephony)
 will not work without provision for IPv6/IPv4 coexistence
-\[[RFC6157](https://www.rfc-editor.org/info/rfc6157)].
+\[[RFC6157](https://www.rfc-editor.org/info/rfc6157)\].
 
 Although Dual-Stack provides advantages in the initial phase of
 deployment, it has some disadvantages in the long run, like the
