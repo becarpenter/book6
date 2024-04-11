@@ -25,8 +25,8 @@ of translation techniques from the discussion of IPv4 as a service.
 
 - SIIT (Stateless IP/ICMP Translation Algorithm). This is also known
   simply as "IP/ICMP Translation Algorithm"
-  \[[RFC7915](https://www.rfc-editor.org/info/rfc7915)\],
-  \[[RFC6144](https://www.rfc-editor.org/info/rfc6144)\]. It translates
+  \[[RFC7915](https://www.rfc-editor.org/info/rfc7915),
+  [RFC6144](https://www.rfc-editor.org/info/rfc6144)\]. It translates
   IPv4 packets to IPv6 format and the opposite. Note that translation is
   limited to basic functionality, and does not translate any IPv4
   options or any IPv6 extension headers except the Fragment Header.
@@ -75,12 +75,12 @@ of translation techniques from the discussion of IPv4 as a service.
 ### Further details of IPv4 as a service
 
 Point 2 listed above evidently needs stateful NAT64
-\[[RFC 6146](https://www.rfc-editor.org/info/rfc6146)\].
+\[[RFC6146](https://www.rfc-editor.org/info/rfc6146)\].
 
 Additionally, the client could be triggered to start a cross-protocol
 connection. For this, the client should be told that the server is
 available on the IPv6 Internet. DNS64
-\[[RFC 6147](https://www.rfc-editor.org/info/rfc6147)\] can do this on
+\[[RFC6147](https://www.rfc-editor.org/info/rfc6147)\] can do this on
 the ISP side. It can synthesize an IPv6 address from an IPv4 address, by
 adding a particular static prefix. When the client asks for
 `www.example.net` (which only has an A record in the global DNS), DNS64
@@ -91,17 +91,17 @@ Point 3 above may be implemented (in addition to points 1 and 2) by
 various technologies:
 
 - 464XLAT (Combination of Stateful and Stateless Translation)
-  \[[RFC 6877](https://www.rfc-editor.org/info/rfc6877)\]
+  \[[RFC6877](https://www.rfc-editor.org/info/rfc6877)\]
 - DS-Lite (Dual-Stack Lite)
-  \[[RFC 6333](https://www.rfc-editor.org/info/rfc6333)\]
+  \[[RFC6333](https://www.rfc-editor.org/info/rfc6333)\]
 - lw4o6 (Lightweight 4over6)
-  \[[RFC 7596](https://www.rfc-editor.org/info/rfc7596)\]
+  \[[RFC7596](https://www.rfc-editor.org/info/rfc7596)\]
 - MAP E (Mapping of Address and Port with Encapsulation)
-  \[[RFC 7597](https://www.rfc-editor.org/info/rfc7597)\]
+  \[[RFC7597](https://www.rfc-editor.org/info/rfc7597)\]
 - MAP T (Mapping of Address and Port using Translation)
-  \[[RFC 7599](https://www.rfc-editor.org/info/rfc7599)\].
+  \[[RFC7599](https://www.rfc-editor.org/info/rfc7599)\].
 
-[RFC 9313](https://www.rfc-editor.org/info/rfc9313) has a good overview
+[RFC9313](https://www.rfc-editor.org/info/rfc9313) has a good overview
 and comparison of these technologies.
 
 The following figure illustrates such a scenario.
@@ -111,10 +111,10 @@ The following figure illustrates such a scenario.
   has a natural synergy with NAT64 (which is highly desirable by itself)
   and because it is the only solution supported on mobile devices. The
   centralized NAT64 engine is called PLAT, and is the same
-  \[[RFC 6146](https://www.rfc-editor.org/info/rfc6146)\] as for
+  \[[RFC6146](https://www.rfc-editor.org/info/rfc6146)\] as for
   ordinary NAT64. The client side is called CLAT, and is typically a
   stateless NAT46 translation
-  \[[RFC 7915](https://www.rfc-editor.org/info/rfc7915)\]. A good
+  \[[RFC7915](https://www.rfc-editor.org/info/rfc7915)\]. A good
   analysis of deployment considerations is in
   [RFC8683](https://www.rfc-editor.org/info/rfc8683), from which an
   operator might conclude *not* to implement DNS64, since IPv4 clients
@@ -140,13 +140,13 @@ IPv4aaS for a mobile device, especially when the device
 has only been provided with a single /64 prefix, as is the case
 in most 3GPP deployments. In this case, 464XLAT is the only
 available solution, and as described in Section 6.3 of
-[RFC 6877](https://www.rfc-editor.org/info/rfc6877),
+[RFC6877](https://www.rfc-editor.org/info/rfc6877),
 the CLAT will use a specific address from that /64 prefix.
 
 ### Further details of NPTv6
 
 Network Prefix Translation (NPTv6)
-\[[RFC 6296](https://www.rfc-editor.org/info/rfc6296)\] is a special
+\[[RFC6296](https://www.rfc-editor.org/info/rfc6296)\] is a special
 technology available only in IPv6. It exchanges prefixes between
 “inside” (private network) and “outside” (public network) of the
 translation engine and modifies the IID. The IID is changed so as
@@ -166,9 +166,9 @@ cannot be considered end-to-end transparent.
 A particular difficulty is that SIP (Session Initiation Protocol for
 IP telephony) will not work behind NPTv6 without
 the support of a proxy mechanism 
-\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)].
+\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)\].
 
-As stated above, NPTv6 is outlined in \[[RFC 6296](https://www.rfc-editor.org/info/rfc6296)\]; 
+As stated above, NPTv6 is outlined in \[[RFC6296](https://www.rfc-editor.org/info/rfc6296)\]; 
 however, although there is significant commercial support, it should be noted that the 
 RFC is experimental as of the time of this writing, so it is not considered standards track. 
 
