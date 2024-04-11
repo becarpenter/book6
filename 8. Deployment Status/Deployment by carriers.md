@@ -9,7 +9,7 @@ the world, as observed in the Internet routing tables.
 <img src="./Section5_Table2.jpg" alt="Table shows 18% annual IPv6 growth 2018 to 2022">
 
 The percentage of IPv6-capable ASNs is growing over the years, which is
-a good sign. On the other hand, the table does not allow to understand
+a good sign. On the other hand, the table does not distinguish
 the degree of adoption across the different industries, that is whether
 the ASNs are associated to a carrier, a service provider or an
 entreprise. To zoom in at that level, it is necessary to look at more
@@ -26,7 +26,7 @@ Comcast, T-Mobile and Verizon all exceed 70% of IPv6 use in their
 networks. In Europe, both Belgium and Germany reach 50% of IPv6 traffic.
 Proximus, Telenet, DT, Telefonica Germany, Versatel and Vodafone Germany
 range from 50% to 70%. India shows 51% IPv6 adoption. Carriers there
-also have high IPv6 rate. Bharti, Reliance Jio and Vodafone India find
+also have a high IPv6 rate. Bharti, Reliance Jio and Vodafone India find
 themselves between 60% and 70%.
 
 Whilst it cannot be gneralized, in countries with lower IPv6 adoption
