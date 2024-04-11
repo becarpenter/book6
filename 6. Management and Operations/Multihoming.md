@@ -101,7 +101,7 @@ sufficiently resilient. It is clearly not sufficient for a large site,
 especially if it operates servers as well as client hosts.
 
 An approach that should avoid some of these help desk calls, but is not
-currently favored by the IETF, is to used dynamic network prefix
+currently favored by the IETF, is to use dynamic network prefix
 translation, known as NPTv6
 \[[RFC6296](https://www.rfc-editor.org/info/rfc6296)\],
 \[[3. Translation and IPv4 as a service](../3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)\].
