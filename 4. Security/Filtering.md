@@ -59,7 +59,7 @@ borders:
 - LLA should be not forwarded outside of the link according to
   [IPv6 Addressing Architecture](https://www.rfc-editor.org/info/rfc4291),
 - ULA should be filtered at organization borders according to
-  [RFC 4193](https://www.rfc-editor.org/info/rfc4193),
+  [RFC4193](https://www.rfc-editor.org/info/rfc4193),
 - Multicast addresses have 5 defined scopes (Interface, Link, Admin,
   Site, and Organization) according to
   [IPv6 Addressing Architecture](https://www.rfc-editor.org/info/rfc4291)
@@ -77,14 +77,14 @@ what should be dropped or permitted.
 Security devices and destination nodes should check that the first
 fragment should have all headers (including the transport layer) and
 fragments should not have an overlap according to
-[RFC 8200](https://www.rfc-editor.org/info/rfc8200).
+[RFC8200](https://www.rfc-editor.org/info/rfc8200).
 
 [Filtering recommendations for packets with extension headers](https://www.rfc-editor.org/info/rfc9288)
 is oriented for the transit case where excessive filtering is common.
 This RFC motivates what particular EHs to permit, drop, reject (with
 ICMP), rate-limit, or ignore. It is important to mention that these
 additional actions are recommended in addition to the basic rule of
-[RFC 7045](https://www.rfc-editor.org/info/rfc7045) to allow by default
+[RFC7045](https://www.rfc-editor.org/info/rfc7045) to allow by default
 the transmission of all extension headers in transit.
 
 Limiting ND messages on the link is discussed in
