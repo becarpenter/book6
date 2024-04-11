@@ -150,9 +150,9 @@ Any site running NPTv6 must either deal with
 these problems, or avoid any affected applications. In particular,
 SIP (Session Initiation Protocol for IP telephony) will not work without
 the support of a proxy mechanism 
-\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)]
+\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)\]
 as well as provision for IPv6/IPv4 coexistence
-\[[RFC6157](https://www.rfc-editor.org/info/rfc6157)].
+\[[RFC6157](https://www.rfc-editor.org/info/rfc6157)\].
 This limits the applicability of NPTv6.
 
 ### Transport layer solutions
