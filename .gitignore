@@ -6,6 +6,7 @@ bakeBook.log
 indexBook.log
 RFCbib6.log
 pdf/baked.aux
+pdf/baked.log
 
 # Ignore RFC index
 rfc-index.xml
