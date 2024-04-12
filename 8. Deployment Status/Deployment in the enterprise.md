@@ -7,14 +7,14 @@ IPv6 readiness from outside the enterprise's network.
 [NIST](https://fedv6-deployment.antd.nist.gov/cgi-bin/generate-com)
 provides a method to infer whether US enterprises support IPv6 by
 checking its external services, such as the availability of Domain Name
-System (DNS) AAAA records, of an IPv6-based mail service and of the
+System (DNS) AAAA records, an IPv6-based mail service, or the
 support of IPv6 on their website. The same method can be applied to
 [Chinese](http://218.2.231.237:5001/cgi-bin/generate) and
 [Indian](https://cnlabs.in/IPv6_Mon/generate_industry.html) enterprises.
 
 DNS has a good support in all cases: more than 50% of the enterprises in
 the three economies considered have AAAA records, a sign that IPv6
-support is generally available. The same cannot be said or the other
+support is generally available. The same cannot be said of the other
 services that have much lower adoption.
 \[[RFC9386](https://www.rfc-editor.org/info/rfc9386)\] provides other
 statistics about more specific industry domains.
@@ -41,8 +41,8 @@ resources will be organizational size. The size of a given organization
 often (but not always) dictates the criticality of networking resources
 which includes both physical assets (routers, switches, security
 appliances) as well as human resources, and the level of skill available
-either by direct employment or by contacted assistance. Also included in
-these resources is the logical elements requires for a presence on the
+either by direct employment or by contracted assistance. Also included in
+these resources is the logical elements required for a presence on the
 global internet in the manner of addressing. Larger or more mature
 organizations may already posses network resources such as Autonomous
 System Numbers (ASNs), legacy IP resources, and possibly existing
@@ -92,7 +92,7 @@ Provider Assigned (PA) address space consists of address space that is
 assigned to a specific upstream provider and sub-delegated to a
 customer.
 
-If receiving PA from an upstream provider designs such as multihoming is
+If receiving PA from an upstream provider, designs such as multihoming is
 a more involved process that will involve coordination with the upstream
 transit provider that owns the IP resources. (See
 \[[6. Multi-prefix operation](../6.%20Management%20and%20Operations/Multi-prefix%20operation.md)\]
