@@ -28,6 +28,7 @@ and inter-chapter links as far as possible."""
 # Version: 2023-08-03 - correctly ignore ``` blocks
 # Version: 2023-08-10 - changed to use RFC index for existence checking
 # Version: 2024-01-01 - changed default text for empty sections
+# Version: 2024-04-12 - improved optics of RFC citations
 
 ########################################################
 # Copyright (C) 2022-2024 Brian E. Carpenter.                  
@@ -239,6 +240,7 @@ def expand_cites():
     for i in range(len(section)):
         lchange = False
         line = section[i]
+        newcite = False
         if not inlit and line.startswith("```"):
             inlit = True    #start of literal text - ignore
             continue
@@ -246,10 +248,10 @@ def expand_cites():
             if line.startswith("```"):
                 inlit = False   #end of literal text - stop ignoring
             continue
-        try:
-            #convert {{ }} to \[{{ }}]
+        try:           
+            #convert {{ }} to \[{{ }}\]
             line = line.replace("{{{","{?x{").replace("}}}","}?y}")
-            line = line.replace("{{","\[{{").replace("}}","}}]")
+            line = line.replace("{{","\[{{").replace("}}","}}\]")
             line = line.replace("{?x{","{{").replace("}?y}","}}")
             if line.count("{{") != line.count("}}"):
                 logitw("Malformed reference in "+topic_file)
@@ -257,12 +259,17 @@ def expand_cites():
                 #dprint("Citation  in:", line)
                 #found an expandable citation
                 head, body = line.split("{{", maxsplit=1)
+                bracketed = head.endswith("\[")
+                newcite = True
                 cite, tail = body.split("}}", maxsplit=1)
                 if cite.startswith("RFC") or cite.startswith("BCP") or cite.startswith("STD"):
                     if topic_file != "RFC bibliography":
                         if not rfc_ok(cite):
                             logitw(cite+" not found on line")
                     cite = "["+cite+"](https://www.rfc-editor.org/info/"+cite.lower()+")"
+                    if not bracketed:
+                        #citation in noun form
+                        cite = cite.replace("RFC", "RFC ").replace("BCP", "BCP ").replace("STD", "STD ")
                     line = head + cite + tail
                     lchange = True
                 elif cite.startswith("I-D."):
@@ -319,6 +326,15 @@ def expand_cites():
         except:
             #malformed line, do nothing
             pass
+        
+        #string bracketed citations together
+        if newcite and ")\]" in line:
+            line = line.replace(")\]\[", "), ")
+            line = line.replace(")\] \[", "), ")
+            line = line.replace(")\], \[", "), ")
+            line = line.replace(")\],\[", "), ")
+            lchange = True
+        
         if lchange:
             section[i] = line
             schange = True
