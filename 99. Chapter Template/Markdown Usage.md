@@ -34,7 +34,7 @@ Such references will be fixed up by the next run of makeBook, since they
 are unknown to GitHub's built-in markdown. There is some checking of the
 RFCs, draft names, etc. (but only when makeBook has web access).
 
-Note 1: References will be surrounded by square brackets thus:
+*Note 1:* References will be surrounded by square brackets thus:
 \[[RFC8200](https://www.rfc-editor.org/info/rfc8200)\]. If you want them
 without square brackets for grammatical reasons, such as using
 [RFC 8200](https://www.rfc-editor.org/info/rfc8200) as a noun, use
@@ -45,7 +45,7 @@ without square brackets for grammatical reasons, such as using
   {{{2. Addresses}}}
 ```
 
-Note 2: If you string several references together, e.g.,
+*Note 2:* If you string several references together, e.g.,
 
 ```
   {{RFC4291}}{{RFC8200}}
@@ -102,10 +102,10 @@ Example generated with *dia*:
 
 Please add alternate text to help people with visual difficulties.
 
-*Note 1:* Direct use of *mermaid* in markdown source is not recommended,
+*Note 3:* Direct use of *mermaid* in markdown source is not recommended,
 as it causes difficulty when generating a PDF version of book6.
 
-*Note 2:* Earlier versions of this section recommended SVG format. This
+*Note 4:* Earlier versions of this section recommended SVG format. This
 has been removed since SVG causes difficulty when generating a PDF
 version of book6.
 
