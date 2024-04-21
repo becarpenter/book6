@@ -12,7 +12,10 @@ Maybe we should start by asking why IPv4 was version 4. Stated simply,
 that was because version 0 was never used, and versions 1 through 3
 were assigned during the evolution from ARPANET to TCP/IP. So version 4
 was the next number available for use in
-[RFC791](https://www.rfc-editor.org/info/rfc791).
+[RFC791](https://www.rfc-editor.org/info/rfc791). A rather more subtle
+explanation is given by the late Danny Cohen, one of the pioneers involved,
+at 38 minutes and 26 seconds into the video
+[A Brief Prehistory of Voice over IP](http://www.securitytube.net/video/1978).
 
 So why not IPv5? The answer is quite simple. The number 5 in the version
 field of the IP header was already assigned for what was called the
