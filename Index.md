@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-04-11 11:08:47 UTC+1200
+Generated at 2024-04-25 10:21:50 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -209,6 +209,10 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [IPAM ●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
+[IPsec ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
+[●](./4.%20Security/4.%20Security.md)
+
 [IPv4 as a Service ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
@@ -250,6 +254,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./7.%20Case%20Studies/CERN%20and%20the%20LHC.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+[●](./8.%20Deployment%20Status/Status.md)
 
 [IPv6-mostly ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 
@@ -269,6 +274,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 [●](./2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 [●](./4.%20Security/Filtering.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
@@ -332,6 +338,13 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [OSPF ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[performance ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
+[●](./4.%20Security/Filtering.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
+[●](./6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
+[●](./6.%20Management%20and%20Operations/Multihoming.md)
 
 [PIO ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 
@@ -466,6 +479,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
+[●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)

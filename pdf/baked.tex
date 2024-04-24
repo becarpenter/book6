@@ -89,7 +89,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2024-04-11 11:10:01 UTC+1200
+Version captured at 2024-04-25 10:22:25 UTC+1200
 
 \pagebreak
 
@@ -575,7 +575,11 @@ start by asking why IPv4 was version 4. Stated simply, that was because
 version 0 was never used, and versions 1 through 3 were assigned during
 the evolution from ARPANET to TCP/IP. So version 4 was the next number
 available for use in
-\href{https://www.rfc-editor.org/info/rfc791}{RFC791}.
+\href{https://www.rfc-editor.org/info/rfc791}{RFC791}. A rather more
+subtle explanation is given by the late Danny Cohen, one of the pioneers
+involved, at 38 minutes and 26 seconds into the video
+\href{http://www.securitytube.net/video/1978}{A Brief Prehistory of
+Voice over IP}.
 
 So why not IPv5? The answer is quite simple. The number 5 in the version
 field of the IP header was already assigned for what was called the
@@ -693,7 +697,7 @@ belongs to an April fool\textquotesingle s day joke
 \section{IPv6 Basic Technology}\label{ipv6-basic-technology}
 
 The main standard for IPv6 is
-\href{https://www.rfc-editor.org/info/std86}{STD86}, currently defined
+\href{https://www.rfc-editor.org/info/std86}{STD 86}, currently defined
 by \href{https://www.rfc-editor.org/info/rfc8200}{RFC 8200}. Many other
 relevant RFCs are cited in
 \href{https://www.rfc-editor.org/info/bcp220}{IPv6 node requirements
@@ -1863,9 +1867,9 @@ different features to be active. These categories may overlap:
 \item
   Customer Edge (CE) routers (enterprise): These are routers that
   connect an enterprise network to one or more ISPs
-  {[}\href{https://www.rfc-editor.org/info/rfc7084}{RFC7084}{]},
-  {[}\href{https://www.rfc-editor.org/info/rfc8585}{RFC8585}{]},
-  {[}\href{https://www.rfc-editor.org/info/rfc9096}{RFC9096}{]}.
+  {[}\href{https://www.rfc-editor.org/info/rfc7084}{RFC7084},
+  \href{https://www.rfc-editor.org/info/rfc8585}{RFC8585},
+  \href{https://www.rfc-editor.org/info/rfc9096}{RFC9096}{]}.
 \item
   Enterprise routers: Internal routers within a large enterprise
   network.
@@ -2755,8 +2759,8 @@ of translation techniques from the discussion of IPv4 as a service.
 \item
   SIIT (Stateless IP/ICMP Translation Algorithm). This is also known
   simply as "IP/ICMP Translation Algorithm"
-  {[}\href{https://www.rfc-editor.org/info/rfc7915}{RFC7915}{]},
-  {[}\href{https://www.rfc-editor.org/info/rfc6144}{RFC6144}{]}. It
+  {[}\href{https://www.rfc-editor.org/info/rfc7915}{RFC7915},
+  \href{https://www.rfc-editor.org/info/rfc6144}{RFC6144}{]}. It
   translates IPv4 packets to IPv6 format and the opposite. Note that
   translation is limited to basic functionality, and does not translate
   any IPv4 options or any IPv6 extension headers except the Fragment
@@ -2825,12 +2829,12 @@ of translation techniques from the discussion of IPv4 as a service.
 service}\label{further-details-of-ipv4-as-a-service}
 
 Point 2 listed above evidently needs stateful NAT64
-{[}\href{https://www.rfc-editor.org/info/rfc6146}{RFC 6146}{]}.
+{[}\href{https://www.rfc-editor.org/info/rfc6146}{RFC6146}{]}.
 
 Additionally, the client could be triggered to start a cross-protocol
 connection. For this, the client should be told that the server is
 available on the IPv6 Internet. DNS64
-{[}\href{https://www.rfc-editor.org/info/rfc6147}{RFC 6147}{]} can do
+{[}\href{https://www.rfc-editor.org/info/rfc6147}{RFC6147}{]} can do
 this on the ISP side. It can synthesize an IPv6 address from an IPv4
 address, by adding a particular static prefix. When the client asks for
 \texttt{www.example.net} (which only has an A record in the global DNS),
@@ -2845,19 +2849,19 @@ various technologies:
 \tightlist
 \item
   464XLAT (Combination of Stateful and Stateless Translation)
-  {[}\href{https://www.rfc-editor.org/info/rfc6877}{RFC 6877}{]}
+  {[}\href{https://www.rfc-editor.org/info/rfc6877}{RFC6877}{]}
 \item
   DS-Lite (Dual-Stack Lite)
-  {[}\href{https://www.rfc-editor.org/info/rfc6333}{RFC 6333}{]}
+  {[}\href{https://www.rfc-editor.org/info/rfc6333}{RFC6333}{]}
 \item
   lw4o6 (Lightweight 4over6)
-  {[}\href{https://www.rfc-editor.org/info/rfc7596}{RFC 7596}{]}
+  {[}\href{https://www.rfc-editor.org/info/rfc7596}{RFC7596}{]}
 \item
   MAP E (Mapping of Address and Port with Encapsulation)
-  {[}\href{https://www.rfc-editor.org/info/rfc7597}{RFC 7597}{]}
+  {[}\href{https://www.rfc-editor.org/info/rfc7597}{RFC7597}{]}
 \item
   MAP T (Mapping of Address and Port using Translation)
-  {[}\href{https://www.rfc-editor.org/info/rfc7599}{RFC 7599}{]}.
+  {[}\href{https://www.rfc-editor.org/info/rfc7599}{RFC7599}{]}.
 \end{itemize}
 
 \href{https://www.rfc-editor.org/info/rfc9313}{RFC 9313} has a good
@@ -2873,13 +2877,13 @@ The following figure illustrates such a scenario.
   has a natural synergy with NAT64 (which is highly desirable by itself)
   and because it is the only solution supported on mobile devices. The
   centralized NAT64 engine is called PLAT, and is the same
-  {[}\href{https://www.rfc-editor.org/info/rfc6146}{RFC 6146}{]} as for
+  {[}\href{https://www.rfc-editor.org/info/rfc6146}{RFC6146}{]} as for
   ordinary NAT64. The client side is called CLAT, and is typically a
   stateless NAT46 translation
-  {[}\href{https://www.rfc-editor.org/info/rfc7915}{RFC 7915}{]}. A good
+  {[}\href{https://www.rfc-editor.org/info/rfc7915}{RFC7915}{]}. A good
   analysis of deployment considerations is in
-  \href{https://www.rfc-editor.org/info/rfc8683}{RFC8683}, from which an
-  operator might conclude \emph{not} to implement DNS64, since IPv4
+  \href{https://www.rfc-editor.org/info/rfc8683}{RFC 8683}, from which
+  an operator might conclude \emph{not} to implement DNS64, since IPv4
   clients can simply use the normal DNS A records and the IPv4 service
   as if it was native.
 \item
@@ -2910,7 +2914,7 @@ use a specific address from that /64 prefix.
 \subsubsection{Further details of NPTv6}\label{further-details-of-nptv6}
 
 Network Prefix Translation (NPTv6)
-{[}\href{https://www.rfc-editor.org/info/rfc6296}{RFC 6296}{]} is a
+{[}\href{https://www.rfc-editor.org/info/rfc6296}{RFC6296}{]} is a
 special technology available only in IPv6. It exchanges prefixes between
 ``inside'' (private network) and ``outside'' (public network) of the
 translation engine and modifies the IID. The IID is changed so as
@@ -2931,7 +2935,7 @@ telephony) will not work behind NPTv6 without the support of a proxy
 mechanism {[}\href{https://www.rfc-editor.org/info/rfc6314}{RFC6314}{]}.
 
 As stated above, NPTv6 is outlined in
-{[}\href{https://www.rfc-editor.org/info/rfc6296}{RFC 6296}{]}; however,
+\href{https://www.rfc-editor.org/info/rfc6296}{RFC 6296}; however,
 although there is significant commercial support, it should be noted
 that the RFC is experimental as of the time of this writing, so it is
 not considered standards track.
@@ -3132,6 +3136,18 @@ The primary differences are:
 
 The list above is not comprehensive, but the other differences are
 probably smaller.
+
+An obvious question is: With all these differences, what is the
+difference in performance between IPv6 and IPv4? There is no simple
+answer to this question. Since the IPv6 packet header is 20 bytes larger
+than for IPv4, the raw payload throughput of a link carrying full sized
+IPv6 packets is slightly less than for IPv4 (about 1.3\% less for 1500
+byte packets). However, many other factors come into play and
+measurements often show better end-to-end performance for IPv6. For
+example, in most countries
+\href{https://www.google.com/intl/en/ipv6/statistics.html\#tab=per-country-ipv6-adoption}{Google
+statistics} show lower latency (transit time) for IPv6. The safest
+summary is that there is no significant performance difference.
 
 \subsubsection{\texorpdfstring{\hyperref[obsolete-techniques]{Previous}
 \hyperref[coexistence-with-legacy-ipv4]{Top}}{Previous Top}}\label{previous-top-2}
@@ -3529,6 +3545,15 @@ approach will vary.
   {[}\hyperref[translation-and-ipv4-as-a-service]{3. Translation and
   IPv4 as a service}{]}. The NOC must be designed from the start based
   on IPv6, with the ability to manage IPv4 as a service.
+\item
+  A specific difference between a retrofit design and a greenfield
+  design is that an existing IPv4 network almost inevitably has subnets
+  limited to 256 or fewer hosts, often as few as 64. Since the normal
+  subnet prefix in IPv6 is a /64, there is no such limitation in a
+  greenfield deployment of IPv6. However, for practical reasons such as
+  the rate of link-local multicasts, very large subnets should be
+  avoided. As noted elswehere {[}\hyperref[address-resolution]{2.
+  Address resolution}{]} this applies particularly to wireless networks.
 \end{itemize}
 
 This chapter continues with a discussion of address planning, inevitably
@@ -4437,11 +4462,16 @@ A count of IPv6 users is monitored by various organizations. For
 example, both
 \href{https://www.facebook.com/ipv6/?tab=ipv6_total_adoption}{Facebook}
 and \href{https://www.google.com/intl/en/ipv6/statistics.html}{Google}
-provide statistics on the users that access their services over IPv6.
+provide statistics on the users that access their services over IPv6. A
+very informative blog was posted in 2023 by
+\href{https://blog.cloudflare.com/ipv6-from-dns-pov}{Cloudflare},
+showing that humans use IPv6 a lot more than bots, which seem to prefer
+IPv4. At the end of 2023, Google and Cloudflare roughly agreed on 46\%
+adoption by worldwide users.
 
 \href{https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization}{Akamai}
 provides data measuring the number of hits to their content delivery
-platform.
+platform. For example, they showed 72\% adoption in India in early 2024.
 
 \href{https://stats.labs.apnic.net/ipv6}{APNIC} quantifies the use of
 IPv6 by means of a script that runs on Internet browsers.
@@ -4476,11 +4506,11 @@ There is a caveat, though, we may want to consider. The method used by
 APNIC cannot be fully employed in China, due to local policy filtering
 traffic from abroad. An independent
 \href{https://www.china-ipv6.cn/\#/activeconnect/simpleInfo}{Chinese
-research} reports 713 millions measured IPv6 customers as of September
-2022, against the 220 reported by APNIC. If we add the difference
-between the two statistics to the global count, we end up with a Ratio
-of 43.68\% in September 2022, not that far from the "psychological"
-threshold of 50\%.
+research} reports 713 million measured IPv6 customers as of September
+2022, against the 220 million reported by APNIC. If we add the
+difference between the two statistics to the global count, we end up
+with a Ratio of 43.68\% in September 2022, not that far from the
+"psychological" threshold of 50\%.
 
 \subsubsection{\texorpdfstring{\hyperref[deployment-by-carriers]{Next}
 \hyperref[deployment-status]{Top}}{Next Top}}\label{next-top-5}
@@ -4498,11 +4528,11 @@ the world, as observed in the Internet routing tables.
 \includegraphics{Section5_Table2.jpg}
 
 The percentage of IPv6-capable ASNs is growing over the years, which is
-a good sign. On the other hand, the table does not allow to understand
-the degree of adoption across the different industries, that is whether
-the ASNs are associated to a carrier, a service provider or an
-entreprise. To zoom in at that level, it is necessary to look at more
-detailed statistics such as those provided by
+a good sign. On the other hand, the table does not distinguish the
+degree of adoption across the different industries, that is whether the
+ASNs are associated to a carrier, a service provider or an entreprise.
+To zoom in at that level, it is necessary to look at more detailed
+statistics such as those provided by
 \href{https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization}{Akamai}
 or \href{https://stats.labs.apnic.net}{APNIC}.
 
@@ -4515,8 +4545,8 @@ Comcast, T-Mobile and Verizon all exceed 70\% of IPv6 use in their
 networks. In Europe, both Belgium and Germany reach 50\% of IPv6
 traffic. Proximus, Telenet, DT, Telefonica Germany, Versatel and
 Vodafone Germany range from 50\% to 70\%. India shows 51\% IPv6
-adoption. Carriers there also have high IPv6 rate. Bharti, Reliance Jio
-and Vodafone India find themselves between 60\% and 70\%.
+adoption. Carriers there also have a high IPv6 rate. Bharti, Reliance
+Jio and Vodafone India find themselves between 60\% and 70\%.
 
 Whilst it cannot be gneralized, in countries with lower IPv6 adoption
 the local carriers also tend to be slower in enabling IPv6. For example,
@@ -4596,15 +4626,15 @@ IPv6 readiness from outside the enterprise\textquotesingle s network.
 \href{https://fedv6-deployment.antd.nist.gov/cgi-bin/generate-com}{NIST}
 provides a method to infer whether US enterprises support IPv6 by
 checking its external services, such as the availability of Domain Name
-System (DNS) AAAA records, of an IPv6-based mail service and of the
-support of IPv6 on their website. The same method can be applied to
+System (DNS) AAAA records, an IPv6-based mail service, or the support of
+IPv6 on their website. The same method can be applied to
 \href{http://218.2.231.237:5001/cgi-bin/generate}{Chinese} and
 \href{https://cnlabs.in/IPv6_Mon/generate_industry.html}{Indian}
 enterprises.
 
 DNS has a good support in all cases: more than 50\% of the enterprises
 in the three economies considered have AAAA records, a sign that IPv6
-support is generally available. The same cannot be said or the other
+support is generally available. The same cannot be said of the other
 services that have much lower adoption.
 {[}\href{https://www.rfc-editor.org/info/rfc9386}{RFC9386}{]} provides
 other statistics about more specific industry domains.
@@ -4633,9 +4663,9 @@ resources will be organizational size. The size of a given organization
 often (but not always) dictates the criticality of networking resources
 which includes both physical assets (routers, switches, security
 appliances) as well as human resources, and the level of skill available
-either by direct employment or by contacted assistance. Also included in
-these resources is the logical elements requires for a presence on the
-global internet in the manner of addressing. Larger or more mature
+either by direct employment or by contracted assistance. Also included
+in these resources is the logical elements required for a presence on
+the global internet in the manner of addressing. Larger or more mature
 organizations may already posses network resources such as Autonomous
 System Numbers (ASNs), legacy IP resources, and possibly existing
 provider independent (PI) IPv6 space. First, it is important to make the
@@ -4684,9 +4714,9 @@ Provider Assigned (PA) address space consists of address space that is
 assigned to a specific upstream provider and sub-delegated to a
 customer.
 
-If receiving PA from an upstream provider designs such as multihoming is
-a more involved process that will involve coordination with the upstream
-transit provider that owns the IP resources. (See
+If receiving PA from an upstream provider, designs such as multihoming
+is a more involved process that will involve coordination with the
+upstream transit provider that owns the IP resources. (See
 {[}\hyperref[multi-prefix-operation]{6. Multi-prefix operation}{]} for
 some discussion of multihoming.) Additionally, renumbering is
 functionally required if said provider is exchanged for another unless
@@ -4793,12 +4823,13 @@ In a few cases in this book, we refer to unapproved drafts (usually
 known as Internet-Drafts or I-Ds). Officially, it is inappropriate to
 use I-Ds as reference material. While sometimes very useful and
 up-to-date, such drafts do not have the same status as RFCs and should
-not be relied on as stable documents. They have not been thoroughly
-reviewed, they may be wrong, and there is a high probability that they
-will never be published as an RFC. A draft whose file name starts
-"draft-ietf-" has been adopted by an IETF working group, so it has
-passed a preliminary review, but it is still a draft, it may still be
-wrong, and may never become an RFC.
+not be relied on as stable documents
+{[}\href{https://datatracker.ietf.org/doc/draft-wkumari-not-a-draft/}{draft-wkumari-not-a-draft}{]}.
+They have not been thoroughly reviewed, they may be wrong, and there is
+a high probability that they will never be published as an RFC. A draft
+whose file name starts "draft-ietf-" has been adopted by an IETF working
+group, so it has passed a preliminary review, but it is still a draft,
+it may still be wrong, and may never become an RFC.
 
 Drafts whose names do \emph{not} start "draft-ietf-" are named according
 to an agreed
@@ -6543,16 +6574,26 @@ are unknown to GitHub\textquotesingle s built-in markdown. There is some
 checking of the RFCs, draft names, etc. (but only when makeBook has web
 access).
 
-Note that references will be surrounded by square brackets thus:
+\emph{Note 1:} References will be surrounded by square brackets thus:
 {[}\href{https://www.rfc-editor.org/info/rfc8200}{RFC8200}{]}. If you
 want them without square brackets for grammatical reasons, such as using
-\href{https://www.rfc-editor.org/info/rfc8200}{RFC8200} as a noun, use
+\href{https://www.rfc-editor.org/info/rfc8200}{RFC 8200} as a noun, use
 \emph{three} curly brackets:
 
 \begin{verbatim}
   {{{RFC8200}}}
   {{{2. Addresses}}}
 \end{verbatim}
+
+\emph{Note 2:} If you string several references together, e.g.,
+
+\begin{verbatim}
+  {{RFC4291}}{{RFC8200}}
+\end{verbatim}
+
+they will be shown in a single pair of square brackets with commas:
+{[}\href{https://www.rfc-editor.org/info/rfc4291}{RFC4291},
+\href{https://www.rfc-editor.org/info/rfc8200}{RFC8200}{]}.
 
 Diagrams can be ASCII art when applicable, using
 \texttt{\textasciitilde{}\textasciitilde{}\textasciitilde{}} before and
@@ -6602,11 +6643,11 @@ Example generated with \emph{dia}:
 
 Please add alternate text to help people with visual difficulties.
 
-\emph{Note 1:} Direct use of \emph{mermaid} in markdown source is not
+\emph{Note 3:} Direct use of \emph{mermaid} in markdown source is not
 recommended, as it causes difficulty when generating a PDF version of
 book6.
 
-\emph{Note 2:} Earlier versions of this section recommended SVG format.
+\emph{Note 4:} Earlier versions of this section recommended SVG format.
 This has been removed since SVG causes difficulty when generating a PDF
 version of book6.
 
@@ -6631,7 +6672,7 @@ Section text goes here
 
 \includegraphics{book6logo.png}
 
-Generated at 2024-04-11 11:08:47 UTC+1200
+Generated at 2024-04-25 10:21:50 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -6790,6 +6831,9 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[address-and-prefix-management]{IPAM ¶}
 
+\hyperref[extension-headers-and-options]{IPsec ¶}
+\hyperref[packet-format]{¶} \hyperref[security]{¶}
+
 \hyperref[coexistence-with-legacy-ipv4]{IPv4 as a Service ¶}
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶}
@@ -6819,7 +6863,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[energy-consumption]{¶} \hyperref[multi-prefix-operation]{¶}
 \hyperref[multihoming]{¶} \hyperref[cern-and-the-lhc]{¶}
 \hyperref[deployment-by-carriers]{¶}
-\hyperref[deployment-in-the-home]{¶}
+\hyperref[deployment-in-the-home]{¶} \hyperref[status]{¶}
 
 \hyperref[dual-stack-scenarios]{IPv6-mostly ¶}
 
@@ -6835,8 +6879,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[address-resolution]{link-local ¶} \hyperref[addresses]{¶}
 \hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
-\hyperref[filtering]{¶} \hyperref[energy-consumption]{¶}
-\hyperref[multi-prefix-operation]{¶}
+\hyperref[filtering]{¶} \hyperref[network-design]{¶}
+\hyperref[energy-consumption]{¶} \hyperref[multi-prefix-operation]{¶}
 \hyperref[deployment-in-the-home]{¶}
 
 \hyperref[translation-and-ipv4-as-a-service]{Lw6o4 ¶}
@@ -6883,6 +6927,11 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[security]{¶} \hyperref[multihoming]{¶}
 
 \hyperref[routing]{OSPF ¶}
+
+\hyperref[dual-stack-scenarios]{performance ¶}
+\hyperref[ipv6-primary-differences-from-ipv4]{¶} \hyperref[filtering]{¶}
+\hyperref[network-design]{¶} \hyperref[management-and-operations]{¶}
+\hyperref[multihoming]{¶}
 
 \hyperref[auto-configuration]{PIO ¶}
 
@@ -6977,7 +7026,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[auto-configuration]{¶} \hyperref[layer-2-functions]{¶}
 \hyperref[managed-configuration]{¶} \hyperref[routing]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
-\hyperref[layer-2-considerations]{¶} \hyperref[address-planning]{¶}
+\hyperref[layer-2-considerations]{¶} \hyperref[network-design]{¶}
+\hyperref[address-planning]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
 \hyperref[deployment-by-carriers]{¶}
@@ -6992,7 +7042,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-11}
 
 \includegraphics{book6logo.png}
 
-Generated at 2024-04-11 11:08:47 UTC+1200
+Generated at 2024-04-25 10:21:50 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -7095,7 +7145,7 @@ has links to each section that mentions each citation.
 \hyperref[routing]{RFC4271 ¶}
 
 \hyperref[address-resolution]{RFC4291 ¶} \hyperref[addresses]{¶}
-\hyperref[filtering]{¶}
+\hyperref[filtering]{¶} \hyperref[markdown-usage]{¶}
 
 \hyperref[security]{RFC4301 ¶}
 
