@@ -10,11 +10,16 @@ A count of IPv6 users is monitored by various organizations. For
 example, both
 [Facebook](https://www.facebook.com/ipv6/?tab=ipv6_total_adoption) and
 [Google](https://www.google.com/intl/en/ipv6/statistics.html) provide
-statistics on the users that access their services over IPv6.
+statistics on the users that access their services over IPv6. A very
+informative blog was posted in 2023 by
+[Cloudflare](https://blog.cloudflare.com/ipv6-from-dns-pov),
+showing that humans use IPv6 a lot more than bots, which seem
+to prefer IPv4. At the end of 2023, Google and Cloudflare roughly
+agreed on 46% adoption by worldwide users.
 
 [Akamai](https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization)
 provides data measuring the number of hits to their content delivery
-platform.
+platform. For example, they showed 72% adoption in India in early 2024.
 
 [APNIC](https://stats.labs.apnic.net/ipv6) quantifies the use of IPv6 by
 means of a script that runs on Internet browsers.
