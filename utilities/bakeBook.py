@@ -15,6 +15,7 @@
 #                     - added pagebreak hack
 # Version: 2024-04-08 - cosmetic fix
 # Version: 2024-04-11 - attempt PDF conversion
+# Version: 2024-04-28 - handle directory on command line
 
 ########################################################
 # Copyright (C) 2024 Brian E. Carpenter.                  
@@ -62,8 +63,17 @@ from tkinter.messagebox import askokcancel, askyesno, showinfo
 
 import time
 import os
+import sys
 import subprocess
 import shutil
+
+def show(msg):
+    """Show a message"""
+    global T, cmd_line
+    if cmd_line:
+        print(msg)
+    else:
+        showinfo(title=T, message = msg)
 
 def logit(msg):
     """Add a message to the log file"""
@@ -224,19 +234,26 @@ page_break = '\nbackslashpagebreak\n'
 printing = False # True for extra diagnostic prints
 warnings = 0
 
+cmd_line = False
+if len(sys.argv) > 1:
+    #user provided directory name?
+    if os.path.isdir(sys.argv[1]):
+        #assume user has provided directory
+        #and set all options to defaults
+        os.chdir(sys.argv[1])
+        cmd_line = True
+
 #Announce
+if not cmd_line:
+    Tk().withdraw() # we don't want a full GUI
 
-Tk().withdraw() # we don't want a full GUI
+    T = "Book baker."
 
-T = "Book baker."
+    printing = askyesno(title=T,
+                        message = "Diagnostic printing?")
 
-printing = askyesno(title=T,
-                    message = "Diagnostic printing?")
-
-where = askdirectory(title = "Select main book directory")
+    os.chdir(askdirectory(title = "Select main book directory"))
                    
-os.chdir(where)
-
 #Open log file
 
 flog = open("bakeBook.log", "w",encoding='utf-8')
@@ -246,8 +263,7 @@ logit("bakeBook run at "+timestamp)
 logit("Running in directory "+ os.getcwd())
 
 
-showinfo(title=T,
-         message = "Will read current book6 text.\nTouch no files until done!")
+show("Will read current book6 text.\nTouch no files until done!")
 
 
 ######### Create empty output
@@ -347,8 +363,7 @@ if warnings:
 else:
     warn = ""
 
-showinfo(title=T,
-         message = warn+"Check bakeBook.log.")
+show(warn+"Check bakeBook.log.")
 
              
 

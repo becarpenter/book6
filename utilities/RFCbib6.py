@@ -10,9 +10,11 @@
 # Version: 2023-08-01 - catch by WG acronym;
 #                       display counts
 # Version: 2023-08-10 - download & cache xml index
+# Version: 2024-04-28 - handle directory on command line;
+#                       catch DHCPv6
 
 ########################################################
-# Copyright (C) 2023 Brian E. Carpenter.                  
+# Copyright (C) 2023-24 Brian E. Carpenter.                  
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with
@@ -57,7 +59,16 @@ from tkinter.messagebox import askokcancel, askyesno, showinfo
 
 import time
 import os
+import sys
 import requests
+
+def show(msg):
+    """Show a message"""
+    global T, cmd_line
+    if cmd_line:
+        print(msg)
+    else:
+        showinfo(title=T, message = msg)
 
 def logit(msg):
     """Add a message to the log file"""
@@ -129,7 +140,8 @@ def interesting(block):
         return False
     elif "<obsoleted-by>" in block:
         return False
-    elif "IPv6" in title(block) or "IP Version 6" in title(block) or (field("wg_acronym", block) in wgs):
+    elif ("IPv6" in title(block) or "IP Version 6" in title(block) or "DHCPv6" in title(block)
+          or (field("wg_acronym", block) in wgs)):
         #print(block)
         status = field("current-status", block)
         if "is-also" in block:
@@ -171,18 +183,29 @@ printing = False # True for extra diagnostic prints
 warnings = 0
 wgs = ["6man","v6ops"]
 
+#Has the user supplied a directory on the command line?
+
+cmd_line = False
+if len(sys.argv) > 1:
+    #user provided directory name?
+    if os.path.isdir(sys.argv[1]):
+        #assume user has provided directory
+        #and set all options to defaults
+        os.chdir(sys.argv[1])
+        cmd_line = True
+
 #Announce
+if not cmd_line:
+    Tk().withdraw() # we don't want a full GUI
 
-Tk().withdraw() # we don't want a full GUI
+    T = "IPv6 RFC bibliography maker."
 
-T = "IPv6 RFC bibliography maker."
+    printing = askyesno(title=T,
+                        message = "Diagnostic printing?")
 
-printing = askyesno(title=T,
-                    message = "Diagnostic printing?")
-
-where = askdirectory(title = "Select main book directory")
+    os.chdir(askdirectory(title = "Select main book directory"))
                    
-os.chdir(where)
+
 
 #Open log file
 
@@ -193,14 +216,13 @@ logit("RFCbib6 run at "+timestamp)
 logit("Running in directory "+ os.getcwd())
 
 
-showinfo(title=T,
-         message = "Will read complete RFC index.\nTouch no files until done!")
+show("Will read complete RFC index.\nTouch no files until done!")
 
 fp = "rfc-index.xml"
 if (not os.path.exists(fp)) or (time.time()-os.path.getmtime(fp) > 60*60*24*30):
     #need fresh copy of index
     try:
-        if askyesno(title=T, message = "OK to download RFC index?\n(15 MB file)"):
+        if cmd_line or askyesno(title=T, message = "OK to download RFC index?\n(15 MB file)"):
             response = requests.get("https://www.rfc-editor.org/rfc/rfc-index.xml")
             open(fp, "wb").write(response.content)
             logit("Downloaded and cached RFC index")
@@ -234,7 +256,7 @@ if len(stds)+len(bcps)+len(infos)+len(exps) != count:
 
 md = ["## RFC bibliography","",
       """This section is a machine-generated list of all current RFCs that
-mention IPv6 in their title or come from the major IPv6 working groups.
+mention IPv6 or DHCPv6 in their title or come from the major IPv6 working groups.
 Obsolete RFCs are not included. There are subsections for Standards, BCPs, 
 Informational and Experimental RFCs. Be *cautious* about old Informational
 or Experimental RFCs - they may be misleading as well as out of date."""]
@@ -261,8 +283,7 @@ if warnings:
 else:
     warn = ""
 
-showinfo(title=T,
-         message = warn+"Check RFCbib6.log, then run makeBook.")
+show(warn+"Check RFCbib6.log, then run makeBook.")
     
 
     

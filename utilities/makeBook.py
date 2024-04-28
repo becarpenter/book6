@@ -29,6 +29,7 @@ and inter-chapter links as far as possible."""
 # Version: 2023-08-10 - changed to use RFC index for existence checking
 # Version: 2024-01-01 - changed default text for empty sections
 # Version: 2024-04-12 - improved optics of RFC citations
+# Version: 2024-04-28 - handle directory on command line
 
 ########################################################
 # Copyright (C) 2022-2024 Brian E. Carpenter.                  
@@ -75,6 +76,7 @@ from tkinter.filedialog import askdirectory
 from tkinter.messagebox import askokcancel, askyesno, showinfo
 
 import time
+import sys
 import os
 import urllib.request
 import ssl
@@ -86,7 +88,15 @@ try:
     formatter = True
 except:
     formatter = False
-    
+
+def show(msg):
+    """Show a message"""
+    global T, cmd_line
+    if cmd_line:
+        print(msg)
+    else:
+        showinfo(title=T, message = msg)
+   
 def logit(msg):
     """Add a message to the log file"""
     global flog, printing
@@ -364,19 +374,29 @@ headers['User-Agent'] = _s
 #print("CA file", certifi.where())
 context = ssl.create_default_context(cafile=certifi.where())
 
+
+#Has the user supplied a directory on the command line?
+
+cmd_line = False
+if len(sys.argv) > 1:
+    #user provided directory name?
+    if os.path.isdir(sys.argv[1]):
+        #assume user has provided directory
+        #and set all options to defaults
+        os.chdir(sys.argv[1])
+        cmd_line = True
+
 #Announce
+if not cmd_line:
+    Tk().withdraw() # we don't want a full GUI
 
-Tk().withdraw() # we don't want a full GUI
+    T = "Book reconciler and link maker."
 
-T = "Book reconciler and link maker."
+    printing = askyesno(title=T,
+                        message = "Diagnostic printing?")
 
-printing = askyesno(title=T,
-                    message = "Diagnostic printing?")
-
-where = askdirectory(title = "Select main book directory")
+    os.chdir(askdirectory(title = "Select main book directory"))
                    
-os.chdir(where)
-
 #Open log file
 
 flog = open("makeBook.log", "w",encoding='utf-8')
@@ -388,15 +408,16 @@ logit("Running in directory "+ os.getcwd())
 if not formatter:
     logitw("No markdown formatting (mdformat not imported)")
 else:
-    formatting = askyesno(title=T,
-                    message = "Rarely needed option!\nRun md formatter on all files?",
-                    default='no')
+    if cmd_line:
+        formatting = False
+    else:
+        formatting = askyesno(title=T,
+                        message = "Rarely needed option!\nRun md formatter on all files?",
+                        default='no')
 if formatting:
     logit("User requested mdformat on all files.")
 
-
-showinfo(title=T,
-         message = "Will read in current contents and RFC index.\nTouch no files until done!")
+show("Will read in current contents and RFC index.\nTouch no files until done!")
 
 #Can we check RFCs?
 fp = "rfc-index.xml"
@@ -404,7 +425,7 @@ rfcs_checkable = True
 if (not os.path.exists(fp)) or (time.time()-os.path.getmtime(fp) > 60*60*24*30):
     #need fresh copy of index
     try:
-        if askyesno(title=T, message = "OK to download RFC index?\n(15 MB file)"):
+        if cmd_line or askyesno(title=T, message = "OK to download RFC index?\n(15 MB file)"):
             response = requests.get("https://www.rfc-editor.org/rfc/rfc-index.xml")
             open(fp, "wb").write(response.content)
             logit("Downloaded and cached RFC index")
@@ -688,6 +709,5 @@ if written:
 else:
     wrote = "Clean run.\n"
 
-showinfo(title=T,
-         message = wrote+warn+"Check makeBook.log.")
+show(wrote+warn+"Check makeBook.log.")
 

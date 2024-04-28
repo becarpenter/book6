@@ -13,6 +13,7 @@
 # Version: 2023-01-10 - added warnings of invalid internal citations
 # Version: 2023-05-20 - exclude RFC bibliography from indexing
 # Version: 2023-11-01 - enhance index boilerplate
+# Version: 2024-04-28 - handle directory on command line
 
 
 ########################################################
@@ -61,6 +62,15 @@ from tkinter.messagebox import askokcancel, askyesno, showinfo
 
 import time
 import os
+import sys
+
+def show(msg):
+    """Show a message"""
+    global T, cmd_line
+    if cmd_line:
+        print(msg)
+    else:
+        showinfo(title=T, message = msg)
 
 def logit(msg):
     """Add a message to the log file"""
@@ -203,18 +213,28 @@ blob = '●'
 printing = False # True for extra diagnostic prints
 warnings = 0
 
+#Has the user supplied a directory on the command line?
+
+cmd_line = False
+if len(sys.argv) > 1:
+    #user provided directory name?
+    if os.path.isdir(sys.argv[1]):
+        #assume user has provided directory
+        #and set all options to defaults
+        os.chdir(sys.argv[1])
+        cmd_line = True
+
 #Announce
+if not cmd_line:
+    Tk().withdraw() # we don't want a full GUI
 
-Tk().withdraw() # we don't want a full GUI
+    T = "Book index maker."
 
-T = "Book index maker."
+    printing = askyesno(title=T,
+                        message = "Diagnostic printing?")
 
-printing = askyesno(title=T,
-                    message = "Diagnostic printing?")
+    os.chdir(askdirectory(title = "Select main book directory"))
 
-where = askdirectory(title = "Select main book directory")
-                   
-os.chdir(where)
 
 #Open log file
 
@@ -225,8 +245,7 @@ logit("indexBook run at "+timestamp)
 logit("Running in directory "+ os.getcwd())
 
 
-showinfo(title=T,
-         message = "Will read indexing terms and current book6 text.\nTouch no files until done!")
+show("Will read indexing terms and current book6 text.\nTouch no files until done!")
 
 
 
@@ -326,6 +345,5 @@ if warnings:
 else:
     warn = ""
 
-showinfo(title=T,
-         message = warn+"Check indexBook.log.")
+show(warn+"Check indexBook.log.")
 
