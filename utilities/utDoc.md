@@ -1,5 +1,21 @@
 ## The book6 utilities
 
+### Usage note
+
+All the utilities are written in Python 3 and should work on most common
+operating systems (but have mainly been tested on Windows 10). They mainly
+use `tkinter` to provide a nice user interface with options. If invoked on
+the command line with the book6 directory path as a parameter, they will
+run with default options. For example:
+```
+python3 makeBook.py
+```
+will get you a GUI, but
+```
+python3 makeBook.py ~/whatever/book6
+```
+will just run.
+
 ### makeBook
 
 This program is applied to the entire book6 directory
@@ -169,6 +185,8 @@ is that section names must also be unique book-wide.
 A necessary hack is that where a page break is needed,
 this is signaled by a dummy line: `backslashpagebreak`.
 This is converted later to a genuine pagebreak.
+
+Conversion to an eBook format is under investigation.
 
 Further info is in the `pdf` directory.
 
