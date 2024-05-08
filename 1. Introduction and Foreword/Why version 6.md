@@ -9,9 +9,9 @@ Some people ask why IPv4 went to version 6, leaping the next number.
 This was _not_ related to the programmer's superstition where odd
 numbers should be beta releases.
 Maybe we should start by asking why IPv4 was version 4. Stated simply,
-that was because version 0 was never used, and versions 1 through 3
-were assigned during the evolution from ARPANET to TCP/IP. So version 4
-was the next number available for use in
+that was because versions 0 through 3 were assigned in 1977 and 1978
+during the evolution from ARPANET to TCP/IP. So version 4
+was the next number available for use in the final design
 [RFC791](https://www.rfc-editor.org/info/rfc791). A rather more subtle
 explanation is given by the late Danny Cohen, one of the pioneers involved,
 at 38 minutes and 26 seconds into the video
