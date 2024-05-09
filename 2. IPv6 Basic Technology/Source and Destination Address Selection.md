@@ -6,7 +6,7 @@ host will have more than one IPv6 address per interface. Because of the
 presence of multiple addresses in the same address family, there must be
 a process for selecting the source and destination address pair for
 general use. This address selection is described in
-[RFC6724](https://www.rfc-editor.org/info/rfc6724) and further, more
+[RFC 6724](https://www.rfc-editor.org/info/rfc6724) and further, more
 complex topics and scenarios can be found in the
 \[[6. Multi-prefix operation](../6.%20Management%20and%20Operations/Multi-prefix%20operation.md)\]
 section. Address selection is complicated by the flexibility that is
@@ -58,7 +58,11 @@ In the vast majority of use cases, this default table is unchanged and consisten
 
 ### Destination address selection
 
-Destination address selection is somewhat complex, and it should be understood that it is configurable and may be somewhat inconsistent based on the implementation of a given IPv6 network stack and the age of the operating system. At the time of this writing there are still operating systems that employ aspects of or full implementations of [RFC3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted by [RFC6724](https://www.rfc-editor.org/info/rfc6724) in 2012.  To understand source address selection, one can reference the file _/etc/gai.conf_ in a modern Linux system as it has the most succinct example of the rules governing the process.
+Destination address selection is somewhat complex, and it should be understood that it is configurable and may be somewhat inconsistent based on the implementation of a given IPv6 network stack and the age of the operating system. At the time of this writing there are still operating systems that employ aspects of or full implementations of [RFC 3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted by [RFC 6724](https://www.rfc-editor.org/info/rfc6724) in 2012.  To understand source address selection, one can reference the file _/etc/gai.conf_ in a modern Linux system as it has the most succinct example of the rules governing the process.
+
+ A site using DHCPv6 options 84 and 85 can change the default settings for address selection via
+ [RFC 7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately this
+ is not widely implemented.
 
 ### ULA considerations
 
