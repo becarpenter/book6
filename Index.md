@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-04-28 16:17:28 UTC+1200
+Generated at 2024-05-09 17:02:09 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -90,6 +90,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./4.%20Security/Filtering.md)
@@ -198,6 +199,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+[●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Filtering.md)
 
 [IID ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -264,6 +266,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+[●](./4.%20Security/4.%20Security.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 
 [IS-IS ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
