@@ -23,7 +23,7 @@ Three main cases can be distinguished:
    example, an enterprise given a /48 prefix by its ISP might assign a
    /56 to each branch office and then assign /64 subnets as needed
    within each branch. The decision must then be taken whether to deploy
-   SLAAC throughout the network, or to use DHCPv6 `OPTION_IA_NA`for
+   SLAAC throughout the network, or to use DHCPv6 `OPTION_IA_NA` for
    address assignment
    \[[2. Managed configuration](../2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)\].
    This choice has implications for both trouble-shooting and security

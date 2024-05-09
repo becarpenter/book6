@@ -60,8 +60,8 @@ addresses configured on the link even if all ND exchange is monitored by
 the router. Hence, the router needs to request address resolution after
 the first packet of a new session is received from an external source.
 At the same time, the IPv6 link address space is huge (2^64) by default.
-Hence, it is potentially possible to force the router (even from an
-external network) for address resolution a huge number of times. It is
+Hence, it is potentially possible to force the router to perform address
+resolution a huge number of times (even from an external network). It is
 an effective DoS attack that has simple protection measures.
 [RFC 6583](https://www.rfc-editor.org/info/rfc6583) discusses how to
 rate-limit the number of address resolution requests or minimize subnet
@@ -74,7 +74,7 @@ and
 [Multicast efficiency](https://datatracker.ietf.org/doc/draft-vyncke-6man-mcast-not-efficient).
 ND DoS activity may be effective for that reason but the attacker should
 be local to the link. Hence, perimeter security may help. The multicast
-storm is less of a problem in a wireline environment because of MLD
+storm is less of a problem in a wired environment because of MLD
 snooping typically implemented on the link
 ([RFC 4541](https://www.rfc-editor.org/info/rfc4541)).
 

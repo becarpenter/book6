@@ -4,7 +4,7 @@ Filtering is a big part of safe Internet connection. IPv6 filtering in
 general may be easy because of the hierarchical address plan. However,
 each filter almost always consumes four times more resources in
 products. This may affect scalability or performance, if equipment is
-underspecified.
+underprovisioned.
 
 The majority of practices do not change with IPv6 adoption:
 
@@ -26,7 +26,7 @@ The majority of practices do not change with IPv6 adoption:
   \[[RFC6192](https://www.rfc-editor.org/info/rfc6192)\] is universal
   for IPv6 or IPv4.
 - [Remote Triggered Black Hole](https://www.rfc-editor.org/info/rfc5635)
-  is the same for IPv4 and IPv6, excapt that the prefix for IPv6
+  is the same for IPv4 and IPv6, except that the prefix for IPv6
   [100::/64](https://www.rfc-editor.org/info/rfc6666) has been defined
   separately.
 - All IGP protocols should filter announcements for the local link
@@ -45,7 +45,7 @@ there is a desire to filter one subscriber it may be apprpriate to
 filter even shorter prefixes, such as a /56. It is recommended to filter
 /64 initially and then monitor the situation; if the problem persists,
 then filter /60, then /56. /48 is the maximum that may belong to an
-ordinary subscriber, so it cannot make sense to filter shorter prefixes
+ordinary subscriber, so it does not make sense to filter shorter prefixes
 than that to block a single subscriber.
 
 The address plan design of an organization may be different, including

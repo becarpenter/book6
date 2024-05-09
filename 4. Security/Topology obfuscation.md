@@ -47,7 +47,7 @@ significantly out of date.
 Another common architectural scenario entails dis-aggregating a GUA
 allocation, typically an RIR provided address block, and announcing only
 the part of the assignment requiring public access, leaving the prefix
-requiring obfuscation unannounced within the global DFZ. This model
+requiring obfuscation unannounced within the global DFZ (default free zone). This model
 allows for a similar level of topology obscurement without the added
 configuration complexity and potentially inconsistent behavior of ULA or
 address translation. It should be noted, however, that while this design
