@@ -28,8 +28,9 @@ IPv4 addresses, and it is the programmer's job to decide which one to
 use. The order in which addresses are presented to the programmer is
 determined by a local configuration table on the host, in a way
 described by [RFC6724](https://www.rfc-editor.org/info/rfc6724).
-Unfortunately there is no standard mechanism for remote configuration of
-this table. Operators need to be aware of this complexity when
+Unfortunately the standard DHCPv6 mechanism for remote configuration of
+this table \[[RFC7078](https://www.rfc-editor.org/info/rfc7078)\]
+is not widely used. Operators need to be aware of this complexity when
 attempting to cause users to favor IPv6 over IPv4 (or the converse).
 
 Apart from this, in an ideal world DNS for IPv6 should not cause extra
