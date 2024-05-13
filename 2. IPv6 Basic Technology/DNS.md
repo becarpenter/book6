@@ -27,7 +27,7 @@ should no longer be used. They are replaced by `getaddrinfo()` and
 IPv4 addresses, and it is the programmer's job to decide which one to
 use. The order in which addresses are presented to the programmer is
 determined by a local configuration table on the host, in a way
-described by [RFC6724](https://www.rfc-editor.org/info/rfc6724).
+described by [RFC 6724](https://www.rfc-editor.org/info/rfc6724).
 Unfortunately the standard DHCPv6 mechanism for remote configuration of
 this table \[[RFC7078](https://www.rfc-editor.org/info/rfc7078)\]
 is not widely used. Operators need to be aware of this complexity when
@@ -43,10 +43,10 @@ concern:
   Advertisement even if DHCPv6 is in use.
 
 - DNS IPv6 Transport Operational Guidelines are documented in
-  [BCP91](https://www.rfc-editor.org/info/bcp91).
+  [BCP 91](https://www.rfc-editor.org/info/bcp91).
 
 - Considerations for Reverse DNS in IPv6 for Internet Service Providers
-  are documented in [RFC8501](https://www.rfc-editor.org/info/rfc8501).
+  are documented in [RFC 8501](https://www.rfc-editor.org/info/rfc8501).
 
 - It is not unknown for some sites to register IPv4-mapped IPv6 addresses,
   e.g. `::ffff:198.51.100.99`, with AAAA records. While this seems

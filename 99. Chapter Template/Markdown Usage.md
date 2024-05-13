@@ -53,7 +53,7 @@ without square brackets for grammatical reasons, such as using
 
 they will be shown in a single pair of square brackets with commas:
 \[[RFC4291](https://www.rfc-editor.org/info/rfc4291),
-[RFC8200](https://www.rfc-editor.org/info/rfc8200)\].
+[RFC 8200](https://www.rfc-editor.org/info/rfc8200)\].
 
 Diagrams can be ASCII art when applicable, using `~~~` before and after,
 e.g.:

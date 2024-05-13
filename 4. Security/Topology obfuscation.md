@@ -41,7 +41,7 @@ and load balancers will intrinsically hide the core topology from
 attackers.
 
 Other aspects of topology hiding were discussed in
-[RFC4864](https://www.rfc-editor.org/info/rfc4864), but that document is
+[RFC 4864](https://www.rfc-editor.org/info/rfc4864), but that document is
 significantly out of date.
 
 Another common architectural scenario entails dis-aggregating a GUA

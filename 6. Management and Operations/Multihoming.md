@@ -26,7 +26,7 @@ simplicity, and transport session survivability. Without describing all
 the efforts made since then, it is clear that a solution that satisfies
 all these goals simultaneously has been difficult to find. A more recent
 overview can be found in
-[RFC7157](https://www.rfc-editor.org/info/rfc7157).
+[RFC 7157](https://www.rfc-editor.org/info/rfc7157).
 
 ### Large sites
 
@@ -145,7 +145,7 @@ not share all the disadvantages of IPv4 NAT. As discussed in RFC 6296,
 Of course, NPTv6 retains some of the disadvantages of NAT: all of the
 problems that directly follow from having different IP addresses at the
 two ends of a connection. Section 5 of
-[RFC6296](https://www.rfc-editor.org/info/rfc6296) discusses this.
+[RFC 6296](https://www.rfc-editor.org/info/rfc6296) discusses this.
 Any site running NPTv6 must either deal with
 these problems, or avoid any affected applications. In particular,
 SIP (Session Initiation Protocol for IP telephony) will not work without

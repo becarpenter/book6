@@ -46,7 +46,7 @@ The following diagram shows the example:
 
 If, for some reason, there is more than one subnet router on the subnet,
 the host can be informed which one to use as suggested in
-[RFC8028](https://www.rfc-editor.org/info/rfc8028).
+[RFC 8028](https://www.rfc-editor.org/info/rfc8028).
 
 For this to work as intended, it is necessary to configure routing so
 that traffic from `2001:db8:abcd:0101::abc1` exits the site towards ISP
@@ -75,14 +75,14 @@ Even with backup routes in place, there may be a problem if user client
 sessions originating *within* the enterprise use IPv6 source addresses
 under a failing PA prefix. This will happen unless the host is somehow
 caused to deprecate such source addresses, so that the algorithm of
-[RFC6724](https://www.rfc-editor.org/info/rfc6724) will not select them.
+[RFC 6724](https://www.rfc-editor.org/info/rfc6724) will not select them.
 
 An additional technique that has been suggested is for a site to deploy
 _conditional_ router advertisements
 \[[RFC8475](https://www.rfc-editor.org/info/rfc8475)\].
 
 This whole topic is discussed in more depth in
-[RFC8678](https://www.rfc-editor.org/info/rfc8678).
+[RFC 8678](https://www.rfc-editor.org/info/rfc8678).
 
 The need for complex configuration and the resulting failure modes
 explain why many enterprises have not opted for multi-prefix PA-based
@@ -110,11 +110,11 @@ in local split-horizon DNS (Section 4 of
 \[[RFC6950](https://www.rfc-editor.org/info/rfc6950)\]). At the time of
 writing, there is an operational problem in this scenario: host
 computers configured with default settings from
-[RFC6724](https://www.rfc-editor.org/info/rfc6724) will not prefer ULAs
+[RFC 6724](https://www.rfc-editor.org/info/rfc6724) will not prefer ULAs
 over IPv4 addresses
 \[[draft-ietf-v6ops-ula](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ula/)\].
 A site using DHCPv6 can change the default settings via
-[RFC7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately
+[RFC 7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately
 this is not widely implemented.
 
 A partial work-around for this problem is for a host to have two AAAA

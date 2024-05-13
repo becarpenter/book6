@@ -20,7 +20,7 @@ between local nodes, but they are useless *off* the given link and
 should definitely never appear in DNS.
 
 Further details are given in
-[RFC4862](https://www.rfc-editor.org/info/rfc4862). Also, we have
+[RFC 4862](https://www.rfc-editor.org/info/rfc4862). Also, we have
 skipped an important issue that will be discussed later: duplicate
 address detection.
 
@@ -40,7 +40,7 @@ at its link local address. (RA messages are also sent periodically to
 to refresh information in all nodes.)
 
 RA messages are quite complex and are defined in detail in
-[RFC4861](https://www.rfc-editor.org/info/rfc4861). They contain one
+[RFC 4861](https://www.rfc-editor.org/info/rfc4861). They contain one
 Prefix Information Option (PIO) for each routeable IPv6 prefix that they
 can handle. A PIO naturally contains the prefix itself (theoretically of
 any length; in practice normally 64 bits), some lifetime information,
@@ -98,22 +98,22 @@ find themselves on a network where it is the only method of acquiring
 addresses. However, some network operators prefer to manage addressing
 using DHCPv6, as discussed in the next section. There is a global flag
 for this in the RA message format known as the M bit (see
-[RFC4861](https://www.rfc-editor.org/info/rfc4861) for details). If M=1,
+[RFC 4861](https://www.rfc-editor.org/info/rfc4861) for details). If M=1,
 DHCPv6 is in use for address assignment. However, PIOs are still needed
 to allow on-link determination, and link-local addresses are still
 needed.
 
 *More details*: This section and the previous one have summarized a
 complex topic. Apart from the basic specifications
-[RFC4861](https://www.rfc-editor.org/info/rfc4861) and
-[RFC4862](https://www.rfc-editor.org/info/rfc4862), many other RFCs
+[RFC 4861](https://www.rfc-editor.org/info/rfc4861) and
+[RFC 4862](https://www.rfc-editor.org/info/rfc4862), many other RFCs
 exist on this topic, including for example:
 
 - Enhanced Duplicate Address Detection,
-  [RFC7527](https://www.rfc-editor.org/info/rfc7527)
+  [RFC 7527](https://www.rfc-editor.org/info/rfc7527)
 
 - IPv6 Subnet Model: The Relationship between Links and Subnet Prefixes,
-  [RFC5942](https://www.rfc-editor.org/info/rfc5942)
+  [RFC 5942](https://www.rfc-editor.org/info/rfc5942)
 
 The numerous options allowed in RA messages, and the other ICMPv6
 messages used for address resolution and SLAAC, are documented in IANA's

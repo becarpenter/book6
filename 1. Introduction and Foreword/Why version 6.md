@@ -12,7 +12,7 @@ Maybe we should start by asking why IPv4 was version 4. Stated simply,
 that was because versions 0 through 3 were assigned in 1977 and 1978
 during the evolution from ARPANET to TCP/IP. So version 4
 was the next number available for use in the final design
-[RFC791](https://www.rfc-editor.org/info/rfc791). A rather more subtle
+[RFC 791](https://www.rfc-editor.org/info/rfc791). A rather more subtle
 explanation is given by the late Danny Cohen, one of the pioneers involved,
 at 38 minutes and 26 seconds into the video
 [A Brief Prehistory of Voice over IP](http://www.securitytube.net/video/1978).
@@ -26,7 +26,7 @@ that demand quality of service. As IP datagrams are delivered on a “best
 effort” basis, the ST proposals were more like ATM networks, using
 stateful relationships, queuing and much more. Each ST flow would hold
 connection state and dynamic controls to ensure quality of service. As
-we can see in [RFC1190](https://www.rfc-editor.org/info/rfc1190), the ST
+we can see in [RFC 1190](https://www.rfc-editor.org/info/rfc1190), the ST
 header is completely different from IPv4, except for the very first
 field where is the version number 5:
 
@@ -52,7 +52,7 @@ reserved for ST in the IP version field (layer 3) and protocol number
 (layer 4) field. The idea is that routers could differentiate packets or
 that IPv4 packets could carry encapsulated ST packets, where the number
 5 would show up as an upper layer protocol. Since
-[RFC762](https://www.rfc-editor.org/info/rfc762) we can see number 5
+[RFC 762](https://www.rfc-editor.org/info/rfc762) we can see number 5
 assigned in "protocol numbers":
 
 ```
@@ -117,7 +117,7 @@ Numbers 8 and 9 were used by proposals that came to be merged into
 IPv6's ultimate design. As the lowest number available after 4, and
 already used by the same author's SIP, number 6 was kept for the first
 official specification in
-[RFC1883](https://www.rfc-editor.org/info/rfc1883). Therefore, do not
+[RFC 1883](https://www.rfc-editor.org/info/rfc1883). Therefore, do not
 expect IP versions 7 or 8 in the future, nor even 9 that also belongs
 to an April fool's day joke
 \[[RFC1606](https://www.rfc-editor.org/info/rfc1606)\].

@@ -24,10 +24,10 @@ about which prefixes they handle. Common routing protocols are:
   common.
 
 - IS-IS \[[RFC5308](https://www.rfc-editor.org/info/rfc5308),
-  [RFC7775](https://www.rfc-editor.org/info/rfc7775)\].
+  [RFC 7775](https://www.rfc-editor.org/info/rfc7775)\].
 
 - RIPng \[[RFC2080](https://www.rfc-editor.org/info/rfc2080),
-  [RFC2081](https://www.rfc-editor.org/info/rfc2081)\] is defined but
+  [RFC 2081](https://www.rfc-editor.org/info/rfc2081)\] is defined but
   seems to be little used.
 
 *Small enterprise and home networks*
@@ -41,7 +41,7 @@ about which prefixes they handle. Common routing protocols are:
   \[[RFC4456](https://www.rfc-editor.org/info/rfc4456)\].
 
 - IS-IS \[[RFC5308](https://www.rfc-editor.org/info/rfc5308),
-  [RFC7775](https://www.rfc-editor.org/info/rfc7775)\]
+  [RFC 7775](https://www.rfc-editor.org/info/rfc7775)\]
 
 - OSPFv3 \[[RFC5340](https://www.rfc-editor.org/info/rfc5340)\].
 
@@ -49,16 +49,16 @@ about which prefixes they handle. Common routing protocols are:
 
 - Border Gateway Protocol 4 (BGP-4) in its multiprotocol form
   \[[RFC2545](https://www.rfc-editor.org/info/rfc2545),
-  [RFC4271](https://www.rfc-editor.org/info/rfc4271),
-  [RFC4760](https://www.rfc-editor.org/info/rfc4760)\]. Autonomous
+  [RFC 4271](https://www.rfc-editor.org/info/rfc4271),
+  [RFC 4760](https://www.rfc-editor.org/info/rfc4760)\]. Autonomous
   System numbers work the same way for IPv6 and IPv4.
 
 *For emerging mesh networks:*
 
 - RPL (IPv6 Routing Protocol for Low-Power and Lossy Networks)
   \[[RFC6550](https://www.rfc-editor.org/info/rfc6550),
-  [RFC9008](https://www.rfc-editor.org/info/rfc9008),
-  [RFC9010](https://www.rfc-editor.org/info/rfc9010)\].
+  [RFC 9008](https://www.rfc-editor.org/info/rfc9008),
+  [RFC 9010](https://www.rfc-editor.org/info/rfc9010)\].
 
 - The Babel Routing Protocol
   \[[RFC8966](https://www.rfc-editor.org/info/rfc8966)\].
@@ -69,8 +69,8 @@ different features to be active. These categories may overlap:
 - Customer Edge (CE) routers (enterprise): These are routers that
   connect an enterprise network to one or more ISPs
   \[[RFC7084](https://www.rfc-editor.org/info/rfc7084),
-  [RFC8585](https://www.rfc-editor.org/info/rfc8585),
-  [RFC9096](https://www.rfc-editor.org/info/rfc9096)\].
+  [RFC 8585](https://www.rfc-editor.org/info/rfc8585),
+  [RFC 9096](https://www.rfc-editor.org/info/rfc9096)\].
 
 - Enterprise routers: Internal routers within a large enterprise
   network.

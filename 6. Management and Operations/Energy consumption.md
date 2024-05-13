@@ -10,7 +10,7 @@ Equally, there is no evidence whether different co-existence strategies
 (e.g., native dual stack versus IPv4-as-a-service) have significantly
 different energy costs.
 
-[BCP202](https://www.rfc-editor.org/info/bcp202) makes specific
+[BCP 202](https://www.rfc-editor.org/info/bcp202) makes specific
 recommendations on reducing the energy consumption of IPv6 Router
 Advertisements.
 

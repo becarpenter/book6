@@ -21,10 +21,10 @@ point-to-point links) is one that send or receives one complete frame at
 a time with a raw size of at least 1500 bytes and a 48 bit IEEE MAC
 address at Layer 2. It must provide or emulate classical Ethernet
 multicasting. The IPv6 mapping then follows
-[RFC2464](https://www.rfc-editor.org/info/rfc2464) from 1998, except for
+[RFC 2464](https://www.rfc-editor.org/info/rfc2464) from 1998, except for
 some updates to multicast address details in
-[RFC6085](https://www.rfc-editor.org/info/rfc6085) and to the interface
-identifier in [RFC8064](https://www.rfc-editor.org/info/rfc8064). IPv6
+[RFC 6085](https://www.rfc-editor.org/info/rfc6085) and to the interface
+identifier in [RFC 8064](https://www.rfc-editor.org/info/rfc8064). IPv6
 has its own Ethertype field (0x86dd), so that IPv6 and IPv4 packets can
 be distinguished at driver level. Documents similar to RFC 2464 exist
 for several other hardware media and are often known as "IPv6-over-foo"
@@ -33,7 +33,7 @@ documents.
 Interestingly, there is *no* IPv6-over-WiFi document; IPv6 relies on
 WiFi completely emulating Ethernet, including multicast. This has
 consequences for the scaleability of IPv6 over WiFi which are discussed
-in [RFC9119](https://www.rfc-editor.org/info/rfc9119).
+in [RFC 9119](https://www.rfc-editor.org/info/rfc9119).
 
 A consequence of the Ethernet legacy frame size of 1500 bytes is that
 the Internet-wide required minimum transmission unit size (MTU) for IPv6
@@ -44,9 +44,9 @@ layer.
 
 IPv6 can be transmitted over PPP (Point-to-Point Protocol) links
 \[[RFC5072](https://www.rfc-editor.org/info/rfc5072),
-[RFC5172](https://www.rfc-editor.org/info/rfc5172)\]. Similarly, it can
+[RFC 5172](https://www.rfc-editor.org/info/rfc5172)\]. Similarly, it can
 be transmitted using GRE (Generic Routing Encapsulation,
-[RFC7676](https://www.rfc-editor.org/info/rfc7676)).
+[RFC 7676](https://www.rfc-editor.org/info/rfc7676)).
 
 IPv6 can also be transmitted over MPLS infrastructure
 \[[RFC4029](https://www.rfc-editor.org/info/rfc4029)\]. Further details
@@ -55,9 +55,9 @@ can be found in
 
 Mapping IPv6 to mesh networks, which have no native support for
 multicast and no simple model of a shared link like Ethernet, is rather
-different. [RFC9119](https://www.rfc-editor.org/info/rfc9119) is
+different. [RFC 9119](https://www.rfc-editor.org/info/rfc9119) is
 relevant here too, and
-[RFC8376](https://www.rfc-editor.org/info/rfc8376) provides general
+[RFC 8376](https://www.rfc-editor.org/info/rfc8376) provides general
 background on the challenges involved. Operational experience is limited
 today and best practices are not yet established.
 

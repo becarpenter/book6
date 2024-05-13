@@ -16,11 +16,11 @@ primarily at application programmers. However, operators need to be
 aware that the default behavior of most applications is simply to use
 the *first* address returned by `getaddrinfo()`. Some applications (such
 as web browsers) may use a smarter approach known as "happy eyeballs"
-([RFC8305](https://www.rfc-editor.org/info/rfc8305)) by means of a
+([RFC 8305](https://www.rfc-editor.org/info/rfc8305)) by means of a
 heuristic to detect which address gives the fastest response. However,
 operators need to understand the various address types in order to
 configure systems optimally, including the `getaddrinfo()` precedence
-table ([RFC6724](https://www.rfc-editor.org/info/rfc6724)) in every
+table ([RFC 6724](https://www.rfc-editor.org/info/rfc6724)) in every
 host.
 
 When developing IPv6 enabled applications, keep in mind that IPv6

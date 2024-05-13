@@ -3,18 +3,18 @@
 The Traffic Class in every IPv6 packet is a byte also known as the
 Differentiated Services field. It is treated in every respect exactly
 like the same field in every IPv4 packet (originally named the TOS octet
-in [RFC791](https://www.rfc-editor.org/info/rfc791)). It contains six
+in [RFC 791](https://www.rfc-editor.org/info/rfc791)). It contains six
 bits of
 [differentiated services](https://www.rfc-editor.org/info/rfc2474) code
 point followed by two
 [ECN (Explicit Congestion Notification)](https://www.rfc-editor.org/info/rfc3168)
-bits. [RFC8100](https://www.rfc-editor.org/info/rfc8100) gives a good
+bits. [RFC 8100](https://www.rfc-editor.org/info/rfc8100) gives a good
 overview of current differentiated service interconnection practices for
-ISPs. [RFC5127](https://www.rfc-editor.org/info/rfc5127),
-[RFC4594](https://www.rfc-editor.org/info/rfc4594),
-[RFC5865](https://www.rfc-editor.org/info/rfc5865),
-[RFC8622](https://www.rfc-editor.org/info/rfc8622) and
-[RFC8837](https://www.rfc-editor.org/info/rfc8837) also describe current
+ISPs. [RFC 5127](https://www.rfc-editor.org/info/rfc5127),
+[RFC 4594](https://www.rfc-editor.org/info/rfc4594),
+[RFC 5865](https://www.rfc-editor.org/info/rfc5865),
+[RFC 8622](https://www.rfc-editor.org/info/rfc8622) and
+[RFC 8837](https://www.rfc-editor.org/info/rfc8837) also describe current
 practice.
 
 ECN is intended for use by transport protocols to support congestion

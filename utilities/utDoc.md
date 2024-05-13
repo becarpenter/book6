@@ -190,3 +190,9 @@ Conversion to an eBook format is under investigation.
 
 Further info is in the `pdf` directory.
 
+### fixCites
+
+This is a one-off utility that fixes a particular issue in
+the format of RFC citations, to align with the RFC Editor
+style guide. It should never be needed again....
+

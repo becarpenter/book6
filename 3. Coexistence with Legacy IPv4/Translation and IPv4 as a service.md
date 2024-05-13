@@ -26,7 +26,7 @@ of translation techniques from the discussion of IPv4 as a service.
 - SIIT (Stateless IP/ICMP Translation Algorithm). This is also known
   simply as "IP/ICMP Translation Algorithm"
   \[[RFC7915](https://www.rfc-editor.org/info/rfc7915),
-  [RFC6144](https://www.rfc-editor.org/info/rfc6144)\]. It translates
+  [RFC 6144](https://www.rfc-editor.org/info/rfc6144)\]. It translates
   IPv4 packets to IPv6 format and the opposite. Note that translation is
   limited to basic functionality, and does not translate any IPv4
   options or any IPv6 extension headers except the Fragment Header.
@@ -37,14 +37,14 @@ of translation techniques from the discussion of IPv4 as a service.
 - NAT64 refers to address translation between IPv6 clients and IPv4
   servers, using the SIIT mechanism.
 
-  - [RFC6146](https://www.rfc-editor.org/info/rfc6146) defines
+  - [RFC 6146](https://www.rfc-editor.org/info/rfc6146) defines
     _stateful_ NAT64, which (like IPv4 NAT) includes port translation
     and supports two-way transport sessions.
   - DNS64 \[[RFC6147](https://www.rfc-editor.org/info/rfc6147)\]
     supports DNS extensions for clients of stateful NAT64.
   - PREF64 refers to the IPv6 prefix used "outside" the NAT64
-    translator. [RFC8781](https://www.rfc-editor.org/info/rfc8781)
-    and [RFC8880](https://www.rfc-editor.org/info/rfc8880)
+    translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781)
+    and [RFC 8880](https://www.rfc-editor.org/info/rfc8880)
     are mechanisms by which a host can learn the PREF64 in use.
 
 - 464XLAT (Combination of Stateful and Stateless Translation)

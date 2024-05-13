@@ -8,7 +8,7 @@ underspecified.
 
 The majority of practices do not change with IPv6 adoption:
 
-- [BCP38](https://www.rfc-editor.org/info/bcp38) recommends carriers to
+- [BCP 38](https://www.rfc-editor.org/info/bcp38) recommends carriers to
   filter traffic based on *source* addresses on ingress from the client
   to prevent address spoofing. Source addresses in the range delegated
   to this client are allowed; other sources addresses should be filtered
@@ -16,7 +16,7 @@ The majority of practices do not change with IPv6 adoption:
   \[[6. Multi-prefix operation](../6.%20Management%20and%20Operations/Multi-prefix%20operation.md)\]).
   Operators that do not implement BCP38 are condoning address spoofing.
 - "Martian" addresses should be filtered on the perimeter according to
-  [RFC6890](https://www.rfc-editor.org/info/rfc6890). In the case of
+  [RFC 6890](https://www.rfc-editor.org/info/rfc6890). In the case of
   IPv6, this refers to the
   [IANA IPv6 Special-Purpose Address Registry](https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml).
 - Filtering on [BGP Peering](https://www.rfc-editor.org/info/rfc7454)
@@ -30,7 +30,7 @@ The majority of practices do not change with IPv6 adoption:
   [100::/64](https://www.rfc-editor.org/info/rfc6666) has been defined
   separately.
 - All IGP protocols should filter announcements for the local link
-  according to [RFC5082](https://www.rfc-editor.org/info/rfc5082). In
+  according to [RFC 5082](https://www.rfc-editor.org/info/rfc5082). In
   the case of IPv6, this means that announcements are allowed only from
   link-local addresses.
 - [DNSSEC](https://www.rfc-editor.org/info/rfc4641) is recommended,

@@ -28,8 +28,8 @@ preprint [here](https://dataplane.org/jtk/publications/kgkp-pam-21.pdf).
   \[[RFC3056](https://www.rfc-editor.org/info/rfc3056)\]
   \[[RFC3068](https://www.rfc-editor.org/info/rfc3068)\]. The problems
   with this are documented in
-  [RFC6343](https://www.rfc-editor.org/info/rfc6343) and it was largely
-  deprecated by [RFC7526](https://www.rfc-editor.org/info/rfc7526).
+  [RFC 6343](https://www.rfc-editor.org/info/rfc6343) and it was largely
+  deprecated by [RFC 7526](https://www.rfc-editor.org/info/rfc7526).
 
 - Teredo: Tunneling IPv6 over UDP through Network Address Translations
   (NATs) \[[RFC4380](https://www.rfc-editor.org/info/rfc4380)\].

@@ -7,7 +7,7 @@ while providing IPv4 as a *service* over an IPv6 infrastructure.
 ### Original dual stack model
 
 Dual-Stack was originally described (along with basic tunneling) in
-[RFC4213](https://www.rfc-editor.org/rfc/rfc4213). In 2020, it appeared
+[RFC 4213](https://www.rfc-editor.org/rfc/rfc4213). In 2020, it appeared
 to be the most widely deployed IPv6 solution (about 50%, see the
 statistics reported in
 [ETSI-IP6-WhitePaper](https://www.etsi.org/images/files/ETSIWhitePapers/etsi_WP35_IPv6_Best_Practices_Benefits_Transition_Challenges_and_the_Way_Forward.pdf)).
@@ -38,7 +38,7 @@ dual-stack API, including the important `getaddrinfo()` ("get address
 information") function, which has since been adopted by both POSIX and
 Windows operating systems.
 
-[RFC8305](https://www.rfc-editor.org/info/rfc8305) explains the "Happy
+[RFC 8305](https://www.rfc-editor.org/info/rfc8305) explains the "Happy
 Eyeballs" technique for applications seeking to optimize dual-stack
 performance.
 
@@ -47,7 +47,7 @@ upgrades and many parts of network management and Information Technology
 (IT) systems can still work in IPv4. As a matter of fact, IPv4
 reachability can be provided for a long time and most Internet Service
 Providers (ISPs) are leveraging Carrier-Grade NAT (CGN,
-[RFC6888](https://www.rfc-editor.org/info/rfc6888)) to extend the life
+[RFC 6888](https://www.rfc-editor.org/info/rfc6888)) to extend the life
 of IPv4. However, large ISPs have discovered the scaling limits and
 operational costs of CGN.
 
@@ -60,7 +60,7 @@ translation mechanism, such as NAT64 + DNS64 (see
 \[[Translation and IPv4 as a service](Translation%20and%20IPv4%20as%20a%20service.md)\]), which will allow IPv6 only devices,
 on a dual stack network, to access IPv4 hosts. Typically, dual stack
 clients on the same network will also use NAT64 (instead of
-[RFC1918](https://www.rfc-editor.org/info/rfc1918) addresses and NAT44)
+[RFC 1918](https://www.rfc-editor.org/info/rfc1918) addresses and NAT44)
 to access IPv4 only hosts, but they are using NAT either way. See this
 helpful
 [blog article](https://sgryphon.gamertheory.net/2022/12/14/running-nat64-in-a-dual-stack-network/).
@@ -81,7 +81,7 @@ a particular application.
 ### IPv6-Mostly Networks
 
 With the standardization of
-[RFC8925](https://www.rfc-editor.org/info/rfc8925) ("IPv6-Only
+[RFC 8925](https://www.rfc-editor.org/info/rfc8925) ("IPv6-Only
 Preferred Option for DHCPv4") there now exists a supportable, standard
 mechanism for gracefully migrating off of legacy IP while preserving
 access for systems and network stacks that either do not support IPv6 or
@@ -160,7 +160,7 @@ IPv4.
 Such solutions are known as "IPv4 as a Service" (IPv4aaS) and can be
 used to ensure IPv4 support and coexistence when starting the IPv6-only
 transition for the infrastructure. This can be a complex decision. As
-mentioned in [RFC9386](https://www.rfc-editor.org/info/rfc9386),
+mentioned in [RFC 9386](https://www.rfc-editor.org/info/rfc9386),
 IPv6-only is generally associated with a scope, e.g. IPv6-only overlay
 or IPv6-only underlay.
 
@@ -194,7 +194,7 @@ started this process, as in the case of
 and
 [EE](https://indico.uknof.org.uk/event/38/contributions/489/attachments/612/736/Nick_Heatley_EE_IPv6_UKNOF_20170119.pdf).
 
-[RFC9313](https://www.rfc-editor.org/info/rfc9313) compares the merits
+[RFC 9313](https://www.rfc-editor.org/info/rfc9313) compares the merits
 of the most common IPv6 transition solutions, i.e. 464XLAT
 \[[RFC6877](https://www.rfc-editor.org/info/rfc6877)\], DS-lite
 \[[RFC6333](https://www.rfc-editor.org/info/rfc6333)\], Lightweight
@@ -205,7 +205,7 @@ MAP-E \[[RFC7597](https://www.rfc-editor.org/info/rfc7597)\], and MAP-T
 A framework for carriers is proposed in a current draft
 \[[draft-ietf-v6ops-framework-md-ipv6only-underlay](https://datatracker.ietf.org/doc/draft-ietf-v6ops-framework-md-ipv6only-underlay/)\].
 Customer edge routers need to support
-[RFC8585](https://www.rfc-editor.org/info/rfc8585). The reader will
+[RFC 8585](https://www.rfc-editor.org/info/rfc8585). The reader will
 notice that the solutions most commonly adopted today, such as this one,
 exploit both the use of tunnels (IPv4 carried over IPv6) and translation
 (IPv4 re-encoded as IPv6). The following two sections separate out these

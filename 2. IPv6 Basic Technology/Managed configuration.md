@@ -26,7 +26,7 @@ hotels, if they support IPv6 at all, do so via SLAAC. So the domain of
 applicability for DHCPv6 is mainly enterprise networks. They tend to
 prefer managed addresses because of security compliance requirements.
 
-DHCPv6 is defined by [RFC8415](https://www.rfc-editor.org/info/rfc8415).
+DHCPv6 is defined by [RFC 8415](https://www.rfc-editor.org/info/rfc8415).
 It is conceptually similar to DHCP for IPv4, but different in detail.
 When it is in use, each host must contain a DHCPv6 client and either a
 DHCPv6 server or a DHCPv6 relay must be available on the subnet. DHCPv6
@@ -76,7 +76,7 @@ DHCPv6 options include:
 - IA Prefix Option
 
 Readers who want more details should consult
-[RFC8415](https://www.rfc-editor.org/info/rfc8415) directly. Be warned,
+[RFC 8415](https://www.rfc-editor.org/info/rfc8415) directly. Be warned,
 this is a very complex RFC of about 150 pages. Also, the full lists of
 defined messages and options may be found at
 [IANA](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml),

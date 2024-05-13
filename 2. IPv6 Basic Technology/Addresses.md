@@ -12,7 +12,7 @@ prefix is anywhere between 1 and 128 bits long. There is more about
 [routing](Routing.md) below.
 
 The IPv6 addressing architecture is defined by
-[RFC4291](http://www.rfc-editor.org/info/rfc4291), which has not been
+[RFC 4291](http://www.rfc-editor.org/info/rfc4291), which has not been
 fundamentally revised since 2006, although there are a number of RFCs
 that partially update it.
 
@@ -118,7 +118,7 @@ prefixes
 start with a 2. Often such addresses are referred to as GUAs (globally
 reachable unique addresses). The background to prefix assignment
 policies by the registries is covered by
-[BCP157](https://www.rfc-editor.org/info/bcp157).
+[BCP 157](https://www.rfc-editor.org/info/bcp157).
 
 (Incidentally, `2001:db8::/32` is the full notation for a 32-bit prefix,
 but sometimes it is written informally as `2001:db8/32`, leaving the
@@ -250,7 +250,7 @@ a Windows host; the character(s) after the '%' sign are the Layer 2
 interface's locally defined identifier. Unfortunately, that makes two
 'identifiers' in one address. Technically, the second one can be
 referred to as the 'Zone ID' according to
-[RFC4007](https://www.rfc-editor.org/info/rfc4007).
+[RFC 4007](https://www.rfc-editor.org/info/rfc4007).
 
 ### Embedded IPv4 addresses
 
@@ -275,7 +275,7 @@ That is, the prefix at full length would be `0:0:0:0:0:ffff::/96`.
 
 In particular, this form of address can be used to make the IPv6 socket
 interface handle an IPv4 address (see
-[RFC4038](https://www.rfc-editor.org/info/rfc4038)).
+[RFC 4038](https://www.rfc-editor.org/info/rfc4038)).
 
 ### Multicast addresses
 
@@ -283,7 +283,7 @@ IPv6 multicast address are all under the `ff00::/8` prefix, i.e. they
 start with 0xff. The next 8 bits have special meanings, so 112 bits are
 left to specify a particular multicast group. The special meanings are
 well explained in Section 2.7 of
-[RFC4291](http://www.rfc-editor.org/info/rfc4291), so this is not
+[RFC 4291](http://www.rfc-editor.org/info/rfc4291), so this is not
 repeated here. Some multicast addresses are predefined; for example
 `ff02::1` is the link-local "all nodes" address that every IPv6 node
 must listen to, and `ff02::2` is the link-local "all routers" address
@@ -308,7 +308,7 @@ typed in by hand.
 ### Some addresses are special
 
 Special-purpose IPv6 addresses and their registry are described in
-[RFC6890](https://www.rfc-editor.org/info/rfc6890).
+[RFC 6890](https://www.rfc-editor.org/info/rfc6890).
 
 You may have noticed that many examples above use the prefix
 `2001:db8::/32`. That prefix is reserved for documentation and should
@@ -318,16 +318,16 @@ never appear on the real Internet.
 
 - A mapping of some OSI addresses into IPv6 addresses, and of arbitrary
   OSI addresses into IPv6 destination options, was made obsolete by
-  [RFC4048](https://www.rfc-editor.org/info/rfc4048).
+  [RFC 4048](https://www.rfc-editor.org/info/rfc4048).
 
 - A format known as "Top Level Aggregator (TLA)" was made obsolete by
-  [RFC3587](https://www.rfc-editor.org/info/rfc3587).
+  [RFC 3587](https://www.rfc-editor.org/info/rfc3587).
 
 - A format known as "site-local" addresses was made obsolete by
-  [RFC3879](https://www.rfc-editor.org/info/rfc3879).
+  [RFC 3879](https://www.rfc-editor.org/info/rfc3879).
 
 - A format known as "IPv4-Compatible IPv6" addresses was made obsolete
-  by [RFC4291](https://www.rfc-editor.org/info/rfc4291).
+  by [RFC 4291](https://www.rfc-editor.org/info/rfc4291).
 
 - Address prefixes previously allocated for special use are mentioned in
   the
