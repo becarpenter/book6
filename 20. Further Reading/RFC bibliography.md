@@ -7,7 +7,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date.
 
-RFCbib6 run at 2024-04-28 16:15:37 UTC+1200 (486 RFCs found)
+RFCbib6 run at 2024-07-06 08:48:20 UTC+1200 (486 RFCs found)
 
 ### Standards Track (261 RFCs)
 
@@ -201,8 +201,6 @@ RFCbib6 run at 2024-04-28 16:15:37 UTC+1200 (486 RFCs found)
 - [RFC 5779](https://www.rfc-editor.org/info/rfc5779): Diameter Proxy
   Mobile IPv6: Mobile Access Gateway and Local Mobility Anchor
   Interaction with Diameter Server
-- [RFC 5798](https://www.rfc-editor.org/info/rfc5798): Virtual Router
-  Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6
 - [RFC 5844](https://www.rfc-editor.org/info/rfc5844): IPv4 Support for
   Proxy Mobile IPv6
 - [RFC 5845](https://www.rfc-editor.org/info/rfc5845): Generic Routing
@@ -570,6 +568,8 @@ RFCbib6 run at 2024-04-28 16:15:37 UTC+1200 (486 RFCs found)
   IPv6 (SRv6)
 - [RFC 9527](https://www.rfc-editor.org/info/rfc9527): DHCPv6 Options
   for the Homenet Naming Authority
+- [RFC 9568](https://www.rfc-editor.org/info/rfc9568): Virtual Router
+  Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6
 
 ### Best Current Practice (15 RFCs)
 
