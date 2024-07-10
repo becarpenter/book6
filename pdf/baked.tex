@@ -89,7 +89,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2024-04-28 16:18:11 UTC+1200
+Version captured at 2024-07-11 09:46:30 UTC+1200
 
 \pagebreak
 
@@ -395,13 +395,13 @@ primarily at application programmers. However, operators need to be
 aware that the default behavior of most applications is simply to use
 the \emph{first} address returned by \texttt{getaddrinfo()}. Some
 applications (such as web browsers) may use a smarter approach known as
-"happy eyeballs"
-(\href{https://www.rfc-editor.org/info/rfc8305}{RFC8305}) by means of a
-heuristic to detect which address gives the fastest response. However,
-operators need to understand the various address types in order to
-configure systems optimally, including the \texttt{getaddrinfo()}
-precedence table
-(\href{https://www.rfc-editor.org/info/rfc6724}{RFC6724}) in every host.
+"happy eyeballs" (\href{https://www.rfc-editor.org/info/rfc8305}{RFC
+8305}) by means of a heuristic to detect which address gives the fastest
+response. However, operators need to understand the various address
+types in order to configure systems optimally, including the
+\texttt{getaddrinfo()} precedence table
+(\href{https://www.rfc-editor.org/info/rfc6724}{RFC 6724}) in every
+host.
 
 When developing IPv6 enabled applications, keep in mind that IPv6
 addresses are longer and look different than IPv4 addresses. This may
@@ -572,10 +572,10 @@ Some people ask why IPv4 went to version 6, leaping the next number.
 This was \emph{not} related to the programmer\textquotesingle s
 superstition where odd numbers should be beta releases. Maybe we should
 start by asking why IPv4 was version 4. Stated simply, that was because
-version 0 was never used, and versions 1 through 3 were assigned during
-the evolution from ARPANET to TCP/IP. So version 4 was the next number
-available for use in
-\href{https://www.rfc-editor.org/info/rfc791}{RFC791}. A rather more
+versions 0 through 3 were assigned in 1977 and 1978 during the evolution
+from ARPANET to TCP/IP. So version 4 was the next number available for
+use in the final design
+\href{https://www.rfc-editor.org/info/rfc791}{RFC 791}. A rather more
 subtle explanation is given by the late Danny Cohen, one of the pioneers
 involved, at 38 minutes and 26 seconds into the video
 \href{http://www.securitytube.net/video/1978}{A Brief Prehistory of
@@ -591,10 +591,9 @@ that demand quality of service. As IP datagrams are delivered on a
 ``best effort'' basis, the ST proposals were more like ATM networks,
 using stateful relationships, queuing and much more. Each ST flow would
 hold connection state and dynamic controls to ensure quality of service.
-As we can see in
-\href{https://www.rfc-editor.org/info/rfc1190}{RFC1190}, the ST header
-is completely different from IPv4, except for the very first field where
-is the version number 5:
+As we can see in \href{https://www.rfc-editor.org/info/rfc1190}{RFC
+1190}, the ST header is completely different from IPv4, except for the
+very first field where is the version number 5:
 
 \begin{verbatim}
  0                   1                   2                   3
@@ -618,7 +617,7 @@ reserved for ST in the IP version field (layer 3) and protocol number
 (layer 4) field. The idea is that routers could differentiate packets or
 that IPv4 packets could carry encapsulated ST packets, where the number
 5 would show up as an upper layer protocol. Since
-\href{https://www.rfc-editor.org/info/rfc762}{RFC762} we can see number
+\href{https://www.rfc-editor.org/info/rfc762}{RFC 762} we can see number
 5 assigned in "protocol numbers":
 
 \begin{verbatim}
@@ -684,7 +683,7 @@ and became known in technical circles as the ``Kobe incident''. Numbers
 IPv6\textquotesingle s ultimate design. As the lowest number available
 after 4, and already used by the same author\textquotesingle s SIP,
 number 6 was kept for the first official specification in
-\href{https://www.rfc-editor.org/info/rfc1883}{RFC1883}. Therefore, do
+\href{https://www.rfc-editor.org/info/rfc1883}{RFC 1883}. Therefore, do
 not expect IP versions 7 or 8 in the future, nor even 9 that also
 belongs to an April fool\textquotesingle s day joke
 {[}\href{https://www.rfc-editor.org/info/rfc1606}{RFC1606}{]}.
@@ -882,7 +881,7 @@ prefix is anywhere between 1 and 128 bits long. There is more about
 \hyperref[routing]{routing} below.
 
 The IPv6 addressing architecture is defined by
-\href{http://www.rfc-editor.org/info/rfc4291}{RFC4291}, which has not
+\href{http://www.rfc-editor.org/info/rfc4291}{RFC 4291}, which has not
 been fundamentally revised since 2006, although there are a number of
 RFCs that partially update it.
 
@@ -992,7 +991,7 @@ but at present all prefixes
 to the Regional Internet Registries} start with a 2. Often such
 addresses are referred to as GUAs (globally reachable unique addresses).
 The background to prefix assignment policies by the registries is
-covered by \href{https://www.rfc-editor.org/info/bcp157}{BCP157}.
+covered by \href{https://www.rfc-editor.org/info/bcp157}{BCP 157}.
 
 (Incidentally, \texttt{2001:db8::/32} is the full notation for a 32-bit
 prefix, but sometimes it is written informally as \texttt{2001:db8/32},
@@ -1150,7 +1149,7 @@ interface\textquotesingle s locally defined identifier. Unfortunately,
 that makes two \textquotesingle identifiers\textquotesingle{} in one
 address. Technically, the second one can be referred to as the
 \textquotesingle Zone ID\textquotesingle{} according to
-\href{https://www.rfc-editor.org/info/rfc4007}{RFC4007}.
+\href{https://www.rfc-editor.org/info/rfc4007}{RFC 4007}.
 
 \subsubsection{Embedded IPv4 addresses}\label{embedded-ipv4-addresses}
 
@@ -1178,7 +1177,7 @@ That is, the prefix at full length would be
 
 In particular, this form of address can be used to make the IPv6 socket
 interface handle an IPv4 address (see
-\href{https://www.rfc-editor.org/info/rfc4038}{RFC4038}).
+\href{https://www.rfc-editor.org/info/rfc4038}{RFC 4038}).
 
 \subsubsection{Multicast addresses}\label{multicast-addresses}
 
@@ -1186,7 +1185,7 @@ IPv6 multicast address are all under the \texttt{ff00::/8} prefix, i.e.
 they start with 0xff. The next 8 bits have special meanings, so 112 bits
 are left to specify a particular multicast group. The special meanings
 are well explained in Section 2.7 of
-\href{http://www.rfc-editor.org/info/rfc4291}{RFC4291}, so this is not
+\href{http://www.rfc-editor.org/info/rfc4291}{RFC 4291}, so this is not
 repeated here. Some multicast addresses are predefined; for example
 \texttt{ff02::1} is the link-local "all nodes" address that every IPv6
 node must listen to, and \texttt{ff02::2} is the link-local "all
@@ -1213,7 +1212,7 @@ typed in by hand.
 special}\label{some-addresses-are-special}
 
 Special-purpose IPv6 addresses and their registry are described in
-\href{https://www.rfc-editor.org/info/rfc6890}{RFC6890}.
+\href{https://www.rfc-editor.org/info/rfc6890}{RFC 6890}.
 
 You may have noticed that many examples above use the prefix
 \texttt{2001:db8::/32}. That prefix is reserved for documentation and
@@ -1225,16 +1224,16 @@ should never appear on the real Internet.
 \item
   A mapping of some OSI addresses into IPv6 addresses, and of arbitrary
   OSI addresses into IPv6 destination options, was made obsolete by
-  \href{https://www.rfc-editor.org/info/rfc4048}{RFC4048}.
+  \href{https://www.rfc-editor.org/info/rfc4048}{RFC 4048}.
 \item
   A format known as "Top Level Aggregator (TLA)" was made obsolete by
-  \href{https://www.rfc-editor.org/info/rfc3587}{RFC3587}.
+  \href{https://www.rfc-editor.org/info/rfc3587}{RFC 3587}.
 \item
   A format known as "site-local" addresses was made obsolete by
-  \href{https://www.rfc-editor.org/info/rfc3879}{RFC3879}.
+  \href{https://www.rfc-editor.org/info/rfc3879}{RFC 3879}.
 \item
   A format known as "IPv4-Compatible IPv6" addresses was made obsolete
-  by \href{https://www.rfc-editor.org/info/rfc4291}{RFC4291}.
+  by \href{https://www.rfc-editor.org/info/rfc4291}{RFC 4291}.
 \item
   Address prefixes previously allocated for special use are mentioned in
   the
@@ -1275,11 +1274,11 @@ point-to-point links) is one that send or receives one complete frame at
 a time with a raw size of at least 1500 bytes and a 48 bit IEEE MAC
 address at Layer 2. It must provide or emulate classical Ethernet
 multicasting. The IPv6 mapping then follows
-\href{https://www.rfc-editor.org/info/rfc2464}{RFC2464} from 1998,
+\href{https://www.rfc-editor.org/info/rfc2464}{RFC 2464} from 1998,
 except for some updates to multicast address details in
-\href{https://www.rfc-editor.org/info/rfc6085}{RFC6085} and to the
+\href{https://www.rfc-editor.org/info/rfc6085}{RFC 6085} and to the
 interface identifier in
-\href{https://www.rfc-editor.org/info/rfc8064}{RFC8064}. IPv6 has its
+\href{https://www.rfc-editor.org/info/rfc8064}{RFC 8064}. IPv6 has its
 own Ethertype field (0x86dd), so that IPv6 and IPv4 packets can be
 distinguished at driver level. Documents similar to RFC 2464 exist for
 several other hardware media and are often known as "IPv6-over-foo"
@@ -1288,7 +1287,7 @@ documents.
 Interestingly, there is \emph{no} IPv6-over-WiFi document; IPv6 relies
 on WiFi completely emulating Ethernet, including multicast. This has
 consequences for the scaleability of IPv6 over WiFi which are discussed
-in \href{https://www.rfc-editor.org/info/rfc9119}{RFC9119}.
+in \href{https://www.rfc-editor.org/info/rfc9119}{RFC 9119}.
 
 A consequence of the Ethernet legacy frame size of 1500 bytes is that
 the Internet-wide required minimum transmission unit size (MTU) for IPv6
@@ -1299,9 +1298,9 @@ adaptation layer.
 
 IPv6 can be transmitted over PPP (Point-to-Point Protocol) links
 {[}\href{https://www.rfc-editor.org/info/rfc5072}{RFC5072},
-\href{https://www.rfc-editor.org/info/rfc5172}{RFC5172}{]}. Similarly,
+\href{https://www.rfc-editor.org/info/rfc5172}{RFC 5172}{]}. Similarly,
 it can be transmitted using GRE (Generic Routing Encapsulation,
-\href{https://www.rfc-editor.org/info/rfc7676}{RFC7676}).
+\href{https://www.rfc-editor.org/info/rfc7676}{RFC 7676}).
 
 IPv6 can also be transmitted over MPLS infrastructure
 {[}\href{https://www.rfc-editor.org/info/rfc4029}{RFC4029}{]}. Further
@@ -1309,11 +1308,11 @@ details can be found in {[}\hyperref[tunnels]{3. Tunnels}{]}.
 
 Mapping IPv6 to mesh networks, which have no native support for
 multicast and no simple model of a shared link like Ethernet, is rather
-different. \href{https://www.rfc-editor.org/info/rfc9119}{RFC9119} is
+different. \href{https://www.rfc-editor.org/info/rfc9119}{RFC 9119} is
 relevant here too, and
-\href{https://www.rfc-editor.org/info/rfc8376}{RFC8376} provides general
-background on the challenges involved. Operational experience is limited
-today and best practices are not yet established.
+\href{https://www.rfc-editor.org/info/rfc8376}{RFC 8376} provides
+general background on the challenges involved. Operational experience is
+limited today and best practices are not yet established.
 
 \subsubsection{\texorpdfstring{\hyperref[addresses]{Previous}
 \hyperref[address-resolution]{Next}
@@ -1333,7 +1332,7 @@ address of B is a link local address as described in
 on-link. In cases where B has a routeable address, A can determine
 whether it is on-link by consulting information received from Router
 Advertisement (RA) messages. This process is well described in
-\href{https://www.rfc-editor.org/info/rfc4861}{RFC4861}, so is not
+\href{https://www.rfc-editor.org/info/rfc4861}{RFC 4861}, so is not
 repeated here.
 
 When A has determined that B\textquotesingle s address is on-link, and
@@ -1342,11 +1341,11 @@ starts address resolution, also known as neighbor discovery (ND). It
 multicasts a Neighbor Solicitation message via that interface to the
 relevant link local multicast address, which is known as the
 solicited-node multicast address. This is defined in
-\href{https://www.rfc-editor.org/info/rfc4291}{RFC4291}, but explained
-in \href{https://www.rfc-editor.org/info/rfc4861}{RFC4861}. Neighbor
+\href{https://www.rfc-editor.org/info/rfc4291}{RFC 4291}, but explained
+in \href{https://www.rfc-editor.org/info/rfc4861}{RFC 4861}. Neighbor
 Solicitation is a specific form of ICMPv6 message; ICMPv6 is defined in
-\href{https://www.rfc-editor.org/info/rfc8200}{RFC8200}. Since this is a
-link local multicast, such messages never escape the local link.
+\href{https://www.rfc-editor.org/info/rfc8200}{RFC 8200}. Since this is
+a link local multicast, such messages never escape the local link.
 
 All IPv6 nodes \textbf{MUST} monitor multicasts sent to the
 solicited-node multicast address. When B receives the Neighbor
@@ -1358,8 +1357,8 @@ Neighbor Cache for future use. At that point, A has all the information
 it needs to send packets to B.
 
 These are the essentials of address resolution; readers who want more
-detail should consult
-\href{https://www.rfc-editor.org/info/rfc4861}{RFC4861}.
+detail should consult \href{https://www.rfc-editor.org/info/rfc4861}{RFC
+4861}.
 
 This mechanism works well on a small scale, and it was designed with
 full knowledge of the "ARP storms" experienced on large bridged
@@ -1367,15 +1366,15 @@ Ethernets running IPv4. However, it can cause significant multicast
 overloads on large bridged WiFi networks, and is made worse by the need
 for duplicate address detection (DAD) described in the next section.
 Multicast is badly supported by large WiFi networks, as discussed in
-\href{https://www.rfc-editor.org/info/rfc9119}{RFC9119} and in Section
-4.2.1 of \href{https://www.rfc-editor.org/info/rfc5757}{RFC5757}. As an
+\href{https://www.rfc-editor.org/info/rfc9119}{RFC 9119} and in Section
+4.2.1 of \href{https://www.rfc-editor.org/info/rfc5757}{RFC 5757}. As an
 absolute minimum, the WiFi infrastructure switches in a large network
 need to support \emph{MLD snooping} as explained in
-\href{https://www.rfc-editor.org/info/rfc4541}{RFC4541}. "MLD" means
+\href{https://www.rfc-editor.org/info/rfc4541}{RFC 4541}. "MLD" means
 "Multicast Listener Discovery" and is the mechanism used by IPv6 routers
 to identify which nodes require to receive packets sent to a given
 multicast address. Version 2 of MLD is specified by
-\href{https://www.rfc-editor.org/info/rfc3810}{RFC3810}. Of course, all
+\href{https://www.rfc-editor.org/info/rfc3810}{RFC 3810}. Of course, all
 IPv6 nodes must join the \texttt{ff02::1} multicast group, as well as
 the relevant solicited-node multicast group, so MLD snooping does not
 avoid the scaling problem, but at least it suppresses multicasts on WiFi
@@ -1387,15 +1386,15 @@ but further standards work is needed in this area.
 
 Operational issues with neighbor discovery and wireless multicast have
 been analyzed in the past
-(\href{https://www.rfc-editor.org/info/rfc6583}{RFC6583},
-\href{https://www.rfc-editor.org/info/rfc6636}{RFC6636},
-\href{https://www.rfc-editor.org/info/rfc9119}{RFC9119}), but it remains
-the case that very large WiFi networks (such as the IETF builds several
-times a year for its plenary meetings) are subject to significant
-multicast overloads. In practice, this causes the WiFi switches to
-arbitrarily throttle the rate of multicasting, so neighbor discovery
-proceeds very slowly. It is \textbf{strongly} recommended to limit the
-size of wireless subnets as much as practicable.
+(\href{https://www.rfc-editor.org/info/rfc6583}{RFC 6583},
+\href{https://www.rfc-editor.org/info/rfc6636}{RFC 6636},
+\href{https://www.rfc-editor.org/info/rfc9119}{RFC 9119}), but it
+remains the case that very large WiFi networks (such as the IETF builds
+several times a year for its plenary meetings) are subject to
+significant multicast overloads. In practice, this causes the WiFi
+switches to arbitrarily throttle the rate of multicasting, so neighbor
+discovery proceeds very slowly. It is \textbf{strongly} recommended to
+limit the size of wireless subnets as much as practicable.
 
 A summary of the issues and complications of neighbor discovery on
 wireless networks in general (not just WiFi) can be found in
@@ -1405,10 +1404,10 @@ draft}.
 Considerable work has been done to alleviate these problems in the case
 of Low-Power Wireless Personal Area Networks (6LoWPANs, using the IEEE
 802.15.4 standard). Relevant RFCs include
-\href{https://www.rfc-editor.org/info/rfc6775}{RFC6775},
-\href{https://www.rfc-editor.org/info/rfc8505}{RFC8505},
-\href{https://www.rfc-editor.org/info/rfc8928}{RFC8928} and
-\href{https://www.rfc-editor.org/info/rfc8929}{RFC8929}. These
+\href{https://www.rfc-editor.org/info/rfc6775}{RFC 6775},
+\href{https://www.rfc-editor.org/info/rfc8505}{RFC 8505},
+\href{https://www.rfc-editor.org/info/rfc8928}{RFC 8928} and
+\href{https://www.rfc-editor.org/info/rfc8929}{RFC 8929}. These
 improvements might be applied more generally in future.
 
 \subsubsection{\texorpdfstring{\hyperref[layer-2-functions]{Previous}
@@ -1440,7 +1439,7 @@ between local nodes, but they are useless \emph{off} the given link and
 should definitely never appear in DNS.
 
 Further details are given in
-\href{https://www.rfc-editor.org/info/rfc4862}{RFC4862}. Also, we have
+\href{https://www.rfc-editor.org/info/rfc4862}{RFC 4862}. Also, we have
 skipped an important issue that will be discussed later: duplicate
 address detection.
 
@@ -1461,7 +1460,7 @@ to \texttt{ff02::1}, the link local all-nodes multicast address. This is
 important to refresh information in all nodes.)
 
 RA messages are quite complex and are defined in detail in
-\href{https://www.rfc-editor.org/info/rfc4861}{RFC4861}. They contain
+\href{https://www.rfc-editor.org/info/rfc4861}{RFC 4861}. They contain
 one Prefix Information Option (PIO) for each routeable IPv6 prefix that
 they can handle. A PIO naturally contains the prefix itself
 (theoretically of any length; in practice normally 64 bits), some
@@ -1522,24 +1521,24 @@ they find themselves on a network where it is the only method of
 acquiring addresses. However, some network operators prefer to manage
 addressing using DHCPv6, as discussed in the next section. There is a
 global flag for this in the RA message format known as the M bit (see
-\href{https://www.rfc-editor.org/info/rfc4861}{RFC4861} for details). If
-M=1, DHCPv6 is in use for address assignment. However, PIOs are still
+\href{https://www.rfc-editor.org/info/rfc4861}{RFC 4861} for details).
+If M=1, DHCPv6 is in use for address assignment. However, PIOs are still
 needed to allow on-link determination, and link-local addresses are
 still needed.
 
 \emph{More details}: This section and the previous one have summarized a
 complex topic. Apart from the basic specifications
-\href{https://www.rfc-editor.org/info/rfc4861}{RFC4861} and
-\href{https://www.rfc-editor.org/info/rfc4862}{RFC4862}, many other RFCs
-exist on this topic, including for example:
+\href{https://www.rfc-editor.org/info/rfc4861}{RFC 4861} and
+\href{https://www.rfc-editor.org/info/rfc4862}{RFC 4862}, many other
+RFCs exist on this topic, including for example:
 
 \begin{itemize}
 \item
   Enhanced Duplicate Address Detection,
-  \href{https://www.rfc-editor.org/info/rfc7527}{RFC7527}
+  \href{https://www.rfc-editor.org/info/rfc7527}{RFC 7527}
 \item
   IPv6 Subnet Model: The Relationship between Links and Subnet Prefixes,
-  \href{https://www.rfc-editor.org/info/rfc5942}{RFC5942}
+  \href{https://www.rfc-editor.org/info/rfc5942}{RFC 5942}
 \end{itemize}
 
 The numerous options allowed in RA messages, and the other ICMPv6
@@ -1598,13 +1597,13 @@ hotels, if they support IPv6 at all, do so via SLAAC. So the domain of
 applicability for DHCPv6 is mainly enterprise networks. They tend to
 prefer managed addresses because of security compliance requirements.
 
-DHCPv6 is defined by
-\href{https://www.rfc-editor.org/info/rfc8415}{RFC8415}. It is
-conceptually similar to DHCP for IPv4, but different in detail. When it
-is in use, each host must contain a DHCPv6 client and either a DHCPv6
-server or a DHCPv6 relay must be available on the subnet. DHCPv6 can
-provide assigned IPv6 addresses and other parameters, and new options
-can be defined. (All registered DHCP parameters can be found on the
+DHCPv6 is defined by \href{https://www.rfc-editor.org/info/rfc8415}{RFC
+8415}. It is conceptually similar to DHCP for IPv4, but different in
+detail. When it is in use, each host must contain a DHCPv6 client and
+either a DHCPv6 server or a DHCPv6 relay must be available on the
+subnet. DHCPv6 can provide assigned IPv6 addresses and other parameters,
+and new options can be defined. (All registered DHCP parameters can be
+found on the
 \href{https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml\#dhcpv6-parameters-2}{IANA
 site}.) DHCPv6 messages are transmitted over UDP/IPv6 using ports 546
 and 547.
@@ -1676,7 +1675,7 @@ DHCPv6 options include:
 \end{itemize}
 
 Readers who want more details should consult
-\href{https://www.rfc-editor.org/info/rfc8415}{RFC8415} directly. Be
+\href{https://www.rfc-editor.org/info/rfc8415}{RFC 8415} directly. Be
 warned, this is a very complex RFC of about 150 pages. Also, the full
 lists of defined messages and options may be found at
 \href{https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml}{IANA},
@@ -1729,10 +1728,11 @@ programmer with a list of both IPv6 and IPv4 addresses, and it is the
 programmer\textquotesingle s job to decide which one to use. The order
 in which addresses are presented to the programmer is determined by a
 local configuration table on the host, in a way described by
-\href{https://www.rfc-editor.org/info/rfc6724}{RFC6724}. Unfortunately
-there is no standard mechanism for remote configuration of this table.
-Operators need to be aware of this complexity when attempting to cause
-users to favor IPv6 over IPv4 (or the converse).
+\href{https://www.rfc-editor.org/info/rfc6724}{RFC 6724}. Unfortunately
+the standard DHCPv6 mechanism for remote configuration of this table
+{[}\href{https://www.rfc-editor.org/info/rfc7078}{RFC7078}{]} is not
+widely used. Operators need to be aware of this complexity when
+attempting to cause users to favor IPv6 over IPv4 (or the converse).
 
 Apart from this, in an ideal world DNS for IPv6 should not cause extra
 operational issues. However, in practice, there are some matters of
@@ -1745,11 +1745,11 @@ concern:
   Router Advertisement even if DHCPv6 is in use.
 \item
   DNS IPv6 Transport Operational Guidelines are documented in
-  \href{https://www.rfc-editor.org/info/bcp91}{BCP91}.
+  \href{https://www.rfc-editor.org/info/bcp91}{BCP 91}.
 \item
   Considerations for Reverse DNS in IPv6 for Internet Service Providers
-  are documented in
-  \href{https://www.rfc-editor.org/info/rfc8501}{RFC8501}.
+  are documented in \href{https://www.rfc-editor.org/info/rfc8501}{RFC
+  8501}.
 \item
   It is not unknown for some sites to register IPv4-mapped IPv6
   addresses, e.g. \texttt{::ffff:198.51.100.99}, with AAAA records.
@@ -1806,10 +1806,10 @@ about which prefixes they handle. Common routing protocols are:
   is most common.
 \item
   IS-IS {[}\href{https://www.rfc-editor.org/info/rfc5308}{RFC5308},
-  \href{https://www.rfc-editor.org/info/rfc7775}{RFC7775}{]}.
+  \href{https://www.rfc-editor.org/info/rfc7775}{RFC 7775}{]}.
 \item
   RIPng {[}\href{https://www.rfc-editor.org/info/rfc2080}{RFC2080},
-  \href{https://www.rfc-editor.org/info/rfc2081}{RFC2081}{]} is defined
+  \href{https://www.rfc-editor.org/info/rfc2081}{RFC 2081}{]} is defined
   but seems to be little used.
 \end{itemize}
 
@@ -1830,7 +1830,7 @@ about which prefixes they handle. Common routing protocols are:
   {[}\href{https://www.rfc-editor.org/info/rfc4456}{RFC4456}{]}.
 \item
   IS-IS {[}\href{https://www.rfc-editor.org/info/rfc5308}{RFC5308},
-  \href{https://www.rfc-editor.org/info/rfc7775}{RFC7775}{]}
+  \href{https://www.rfc-editor.org/info/rfc7775}{RFC 7775}{]}
 \item
   OSPFv3 {[}\href{https://www.rfc-editor.org/info/rfc5340}{RFC5340}{]}.
 \end{itemize}
@@ -1842,9 +1842,9 @@ about which prefixes they handle. Common routing protocols are:
 \item
   Border Gateway Protocol 4 (BGP-4) in its multiprotocol form
   {[}\href{https://www.rfc-editor.org/info/rfc2545}{RFC2545},
-  \href{https://www.rfc-editor.org/info/rfc4271}{RFC4271},
-  \href{https://www.rfc-editor.org/info/rfc4760}{RFC4760}{]}. Autonomous
-  System numbers work the same way for IPv6 and IPv4.
+  \href{https://www.rfc-editor.org/info/rfc4271}{RFC 4271},
+  \href{https://www.rfc-editor.org/info/rfc4760}{RFC 4760}{]}.
+  Autonomous System numbers work the same way for IPv6 and IPv4.
 \end{itemize}
 
 \emph{For emerging mesh networks:}
@@ -1853,8 +1853,8 @@ about which prefixes they handle. Common routing protocols are:
 \item
   RPL (IPv6 Routing Protocol for Low-Power and Lossy Networks)
   {[}\href{https://www.rfc-editor.org/info/rfc6550}{RFC6550},
-  \href{https://www.rfc-editor.org/info/rfc9008}{RFC9008},
-  \href{https://www.rfc-editor.org/info/rfc9010}{RFC9010}{]}.
+  \href{https://www.rfc-editor.org/info/rfc9008}{RFC 9008},
+  \href{https://www.rfc-editor.org/info/rfc9010}{RFC 9010}{]}.
 \item
   The Babel Routing Protocol
   {[}\href{https://www.rfc-editor.org/info/rfc8966}{RFC8966}{]}.
@@ -1868,8 +1868,8 @@ different features to be active. These categories may overlap:
   Customer Edge (CE) routers (enterprise): These are routers that
   connect an enterprise network to one or more ISPs
   {[}\href{https://www.rfc-editor.org/info/rfc7084}{RFC7084},
-  \href{https://www.rfc-editor.org/info/rfc8585}{RFC8585},
-  \href{https://www.rfc-editor.org/info/rfc9096}{RFC9096}{]}.
+  \href{https://www.rfc-editor.org/info/rfc8585}{RFC 8585},
+  \href{https://www.rfc-editor.org/info/rfc9096}{RFC 9096}{]}.
 \item
   Enterprise routers: Internal routers within a large enterprise
   network.
@@ -1938,14 +1938,14 @@ supports all the common transport protocols:
 \begin{itemize}
 \item
   UDP. There is no separate specification for UDP over IPv6;
-  \href{https://www.rfc-editor.org/info/rfc768}{RFC768} still applies!
+  \href{https://www.rfc-editor.org/info/rfc768}{RFC 768} still applies!
   However, the UDP checksum is mandatory for IPv6 (since the IPv6 header
   itself has no checksum), except as allowed by
-  \href{https://www.rfc-editor.org/info/rfc6936}{RFC6936}.
+  \href{https://www.rfc-editor.org/info/rfc6936}{RFC 6936}.
 \item
   UDP-lite {[}\href{https://www.rfc-editor.org/info/rfc3828}{RFC3828}{]}
   also supports IPv6. There is interesting background on UDP and
-  UDP-lite in \href{https://www.rfc-editor.org/info/rfc8304}{RFC8304}.
+  UDP-lite in \href{https://www.rfc-editor.org/info/rfc8304}{RFC 8304}.
 \item
   TCP. IPv6 support is fully integrated in the latest TCP standard
   {[}\href{https://www.rfc-editor.org/info/std7}{STD7}{]}.
@@ -1970,7 +1970,7 @@ does not require NAT traversal support (STUN) in the case of IPv6.
 
 All quality of service and congestion control considerations should be
 approximately the same for IPv4 and IPv6. This is why
-\href{https://www.rfc-editor.org/info/rfc2474}{RFC2474} defined
+\href{https://www.rfc-editor.org/info/rfc2474}{RFC 2474} defined
 differentiated services identically for both versions of IP, and the
 same applies to ECN (Explicit Congestion Notification
 {[}\href{https://www.rfc-editor.org/info/rfc3168}{RFC3168}{]}).
@@ -1988,7 +1988,7 @@ As explained in \hyperref[packet-format]{2. Packet Format}, every IPv6
 packet may include one or more extension headers before the transport
 layer payload (UDP, TCP, etc.). For the precise rules of how extension
 headers and options are encoded, see
-\href{https://www.rfc-editor.org/info/std86}{STD86}. The current set of
+\href{https://www.rfc-editor.org/info/std86}{STD 86}. The current set of
 standardized extension headers is listed at
 \href{https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml\#extension-header}{IANA}.
 Here are some notes on the most common ones:
@@ -2003,11 +2003,10 @@ Here are some notes on the most common ones:
   intended to warn every router on the path that the packet may need
   special handling. Unfortunately, experience shows that this extension
   header can be problematic, and that many routers do not in fact
-  process it. Indeed,
-  \href{https://www.rfc-editor.org/info/rfc8200}{RFC8200} states that
-  "it is now expected that nodes along a packet\textquotesingle s
-  delivery path only examine and process the Hop-by-Hop Options header
-  if explicitly configured to do so."
+  process it. Indeed, \href{https://www.rfc-editor.org/info/rfc8200}{RFC
+  8200} states that "it is now expected that nodes along a
+  packet\textquotesingle s delivery path only examine and process the
+  Hop-by-Hop Options header if explicitly configured to do so."
 
   Router Alert types have their own registry at
   \href{https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml}{IANA}.
@@ -2018,14 +2017,13 @@ Here are some notes on the most common ones:
   bytes). IPv6 fragmentation is significantly different from IPv4
   fragmentation, which may occur anywhere along the path. The technical
   details are described in
-  \href{https://www.rfc-editor.org/info/std86}{STD86}. Of course,
+  \href{https://www.rfc-editor.org/info/std86}{STD 86}. Of course,
   fragmentation interacts with PMTUD (Path Maximum Transmission Unit
   Determination) so the lazy solution is to never exceed the 1280 byte
-  limit. For PMTUD, see
-  \href{https://www.rfc-editor.org/info/std87}{STD87},
-  \href{https://www.rfc-editor.org/info/rfc8899}{RFC8899}, and (for
-  horror stories)
-  \href{https://www.rfc-editor.org/info/rfc7690}{RFC7690}. Also see "IP
+  limit. For PMTUD, see \href{https://www.rfc-editor.org/info/std87}{STD
+  87}, \href{https://www.rfc-editor.org/info/rfc8899}{RFC 8899}, and
+  (for horror stories)
+  \href{https://www.rfc-editor.org/info/rfc7690}{RFC 7690}. Also see "IP
   Fragmentation Considered Fragile" for operational recommendations
   {[}\href{https://www.rfc-editor.org/info/bcp230}{BCP230}{]}.
 \item
@@ -2036,11 +2034,11 @@ Here are some notes on the most common ones:
   Routing header, if non-standard routing is required. There are various
   \href{https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml\#ipv6-parameters-2}{routing
   header types}. An important current one is the Segment Routing Header
-  (type 4, \href{https://www.rfc-editor.org/info/rfc8754}{RFC8754}). A
+  (type 4, \href{https://www.rfc-editor.org/info/rfc8754}{RFC 8754}). A
   router that acts as an intermediate destination and therefore
   processes routing headers is known as an \textquotesingle intermediate
   node\textquotesingle{} in
-  \href{https://www.rfc-editor.org/info/std86}{STD86}.
+  \href{https://www.rfc-editor.org/info/std86}{STD 86}.
 \item
   Encapsulating security payload, if
   \href{https://www.rfc-editor.org/info/rfc4303}{IPsec} is in use. This
@@ -2057,12 +2055,12 @@ There is a recognized operational problem with IPv6 extension headers:
 while they work well within a limited domain with consistent
 administration and security rules, they are not reliably transmitted
 across the open Internet, presumably due to firewall and router
-filtering rules. \href{https://www.rfc-editor.org/info/rfc7872}{RFC7872}
-reported on the situation in 2015, and there is ongoing work to update
-similar measurements. The operational implications are described in
-\href{https://www.rfc-editor.org/info/rfc9098}{RFC9098} and filtering
-recommendations are in
-\href{https://www.rfc-editor.org/info/rfc9288}{RFC9288}.
+filtering rules. \href{https://www.rfc-editor.org/info/rfc7872}{RFC
+7872} reported on the situation in 2015, and there is ongoing work to
+update similar measurements. The operational implications are described
+in \href{https://www.rfc-editor.org/info/rfc9098}{RFC 9098} and
+filtering recommendations are in
+\href{https://www.rfc-editor.org/info/rfc9288}{RFC 9288}.
 
 \subsubsection{\texorpdfstring{\hyperref[transport-protocols]{Previous}
 \hyperref[traffic-class-and-flow-label]{Next}
@@ -2076,19 +2074,19 @@ label}\label{traffic-class-and-flow-label}
 The Traffic Class in every IPv6 packet is a byte also known as the
 Differentiated Services field. It is treated in every respect exactly
 like the same field in every IPv4 packet (originally named the TOS octet
-in \href{https://www.rfc-editor.org/info/rfc791}{RFC791}). It contains
+in \href{https://www.rfc-editor.org/info/rfc791}{RFC 791}). It contains
 six bits of
 \href{https://www.rfc-editor.org/info/rfc2474}{differentiated services}
 code point followed by two
 \href{https://www.rfc-editor.org/info/rfc3168}{ECN (Explicit Congestion
-Notification)} bits.
-\href{https://www.rfc-editor.org/info/rfc8100}{RFC8100} gives a good
-overview of current differentiated service interconnection practices for
-ISPs. \href{https://www.rfc-editor.org/info/rfc5127}{RFC5127},
-\href{https://www.rfc-editor.org/info/rfc4594}{RFC4594},
-\href{https://www.rfc-editor.org/info/rfc5865}{RFC5865},
-\href{https://www.rfc-editor.org/info/rfc8622}{RFC8622} and
-\href{https://www.rfc-editor.org/info/rfc8837}{RFC8837} also describe
+Notification)} bits. \href{https://www.rfc-editor.org/info/rfc8100}{RFC
+8100} gives a good overview of current differentiated service
+interconnection practices for ISPs.
+\href{https://www.rfc-editor.org/info/rfc5127}{RFC 5127},
+\href{https://www.rfc-editor.org/info/rfc4594}{RFC 4594},
+\href{https://www.rfc-editor.org/info/rfc5865}{RFC 5865},
+\href{https://www.rfc-editor.org/info/rfc8622}{RFC 8622} and
+\href{https://www.rfc-editor.org/info/rfc8837}{RFC 8837} also describe
 current practice.
 
 ECN is intended for use by transport protocols to support congestion
@@ -2121,7 +2119,7 @@ have more than one IPv6 address per interface. Because of the presence
 of multiple addresses in the same address family, there must be a
 process for selecting the source and destination address pair for
 general use. This address selection is described in
-\href{https://www.rfc-editor.org/info/rfc6724}{RFC6724} and further,
+\href{https://www.rfc-editor.org/info/rfc6724}{RFC 6724} and further,
 more complex topics and scenarios can be found in the
 {[}\hyperref[multi-prefix-operation]{6. Multi-prefix operation}{]}
 section. Address selection is complicated by the flexibility that is
@@ -2194,11 +2192,16 @@ understood that it is configurable and may be somewhat inconsistent
 based on the implementation of a given IPv6 network stack and the age of
 the operating system. At the time of this writing there are still
 operating systems that employ aspects of or full implementations of
-\href{https://www.rfc-editor.org/info/rfc3484}{RFC3484}, which was
-obsoleted by \href{https://www.rfc-editor.org/info/rfc6724}{RFC6724} in
+\href{https://www.rfc-editor.org/info/rfc3484}{RFC 3484}, which was
+obsoleted by \href{https://www.rfc-editor.org/info/rfc6724}{RFC 6724} in
 2012. To understand source address selection, one can reference the file
 \emph{/etc/gai.conf} in a modern Linux system as it has the most
 succinct example of the rules governing the process.
+
+A site using DHCPv6 options 84 and 85 can change the default settings
+for address selection via
+\href{https://www.rfc-editor.org/info/rfc7078}{RFC 7078}, but
+unfortunately this is not widely implemented.
 
 \subsubsection{ULA considerations}\label{ula-considerations}
 
@@ -2286,15 +2289,19 @@ with any tectonic change, it happens slowly, and differing elements
 exist simultaneously. As such, expectations should be set that in many
 cases coexistence with legacy IPv4 is the norm, and while it should be
 considered a transitional state, it may exist for extended or indefinite
-periods of time. Reasoning for coexistence will vary and is typically
-only locally relevant to a given environment. It may be due to the
-requirement for legacy hardware with no IPv6 support that requires
-capital expenditure beyond the budget of an organization, such as a
-specialized piece of operational technology, or it may be due to lagging
-compliance regulations that have not tracked current technology
-standards. It may simply be the conclusion from a cost/benefit analysis.
-Regardless, the reasonings are less important than the details necessary
-to support a dual-stacked environment.
+periods of time. Since 2012, the IETF has therefore required all new or
+updated Internet Protocol implementations to support IPv6
+{[}\href{https://www.rfc-editor.org/info/bcp177}{BCP177}{]}.
+
+Reasoning for coexistence will vary and is typically only locally
+relevant to a given environment. It may be due to the requirement for
+legacy hardware with no IPv6 support that requires capital expenditure
+beyond the budget of an organization, such as a specialized piece of
+operational technology, or it may be due to lagging compliance
+regulations that have not tracked current technology standards. It may
+simply be the conclusion from a cost/benefit analysis. Regardless, the
+reasonings are less important than the details necessary to support a
+dual-stacked environment.
 
 Before describing the specific techniques for IPv6/IPv4 coexistence -\/-
 dual stacks, tunnels, and translators -\/- it is useful to answer a
@@ -2333,13 +2340,13 @@ We first give two quite general references for this complex topic:
 \def\labelenumi{\arabic{enumi}.}
 \item
   Although a few years old,
-  \href{https://www.rfc-editor.org/info/rfc6180}{RFC6180} gives useful
+  \href{https://www.rfc-editor.org/info/rfc6180}{RFC 6180} gives useful
   guidelines for deploying various IPv6 transition mechanisms.
 \item
   A common tactic today for operators wishing to simplify their
   infrastructure is to provide IPv4 as a \emph{service} over the top of
   an underlying IPv6 layer. Various ways to achieve this are described
-  in \href{https://www.rfc-editor.org/info/rfc9313}{RFC9313}.
+  in \href{https://www.rfc-editor.org/info/rfc9313}{RFC 9313}.
 \end{enumerate}
 
 As networks migrate away from IPv4 and into an IPv6-only environment,
@@ -2446,7 +2453,7 @@ while providing IPv4 as a \emph{service} over an IPv6 infrastructure.
 model}\label{original-dual-stack-model}
 
 Dual-Stack was originally described (along with basic tunneling) in
-\href{https://www.rfc-editor.org/rfc/rfc4213}{RFC4213}. In 2020, it
+\href{https://www.rfc-editor.org/rfc/rfc4213}{RFC 4213}. In 2020, it
 appeared to be the most widely deployed IPv6 solution (about 50\%, see
 the statistics reported in
 \href{https://www.etsi.org/images/files/ETSIWhitePapers/etsi_WP35_IPv6_Best_Practices_Benefits_Transition_Challenges_and_the_Way_Forward.pdf}{ETSI-IP6-WhitePaper}).
@@ -2477,7 +2484,7 @@ a dual-stack API, including the important \texttt{getaddrinfo()} ("get
 address information") function, which has since been adopted by both
 POSIX and Windows operating systems.
 
-\href{https://www.rfc-editor.org/info/rfc8305}{RFC8305} explains the
+\href{https://www.rfc-editor.org/info/rfc8305}{RFC 8305} explains the
 "Happy Eyeballs" technique for applications seeking to optimize
 dual-stack performance.
 
@@ -2486,7 +2493,7 @@ upgrades and many parts of network management and Information Technology
 (IT) systems can still work in IPv4. As a matter of fact, IPv4
 reachability can be provided for a long time and most Internet Service
 Providers (ISPs) are leveraging Carrier-Grade NAT (CGN,
-\href{https://www.rfc-editor.org/info/rfc6888}{RFC6888}) to extend the
+\href{https://www.rfc-editor.org/info/rfc6888}{RFC 6888}) to extend the
 life of IPv4. However, large ISPs have discovered the scaling limits and
 operational costs of CGN.
 
@@ -2500,7 +2507,7 @@ a translation mechanism, such as NAT64 + DNS64 (see
 a service}{]}), which will allow IPv6 only devices, on a dual stack
 network, to access IPv4 hosts. Typically, dual stack clients on the same
 network will also use NAT64 (instead of
-\href{https://www.rfc-editor.org/info/rfc1918}{RFC1918} addresses and
+\href{https://www.rfc-editor.org/info/rfc1918}{RFC 1918} addresses and
 NAT44) to access IPv4 only hosts, but they are using NAT either way. See
 this helpful
 \href{https://sgryphon.gamertheory.net/2022/12/14/running-nat64-in-a-dual-stack-network/}{blog
@@ -2522,7 +2529,7 @@ a particular application.
 \subsubsection{IPv6-Mostly Networks}\label{ipv6-mostly-networks}
 
 With the standardization of
-\href{https://www.rfc-editor.org/info/rfc8925}{RFC8925} ("IPv6-Only
+\href{https://www.rfc-editor.org/info/rfc8925}{RFC 8925} ("IPv6-Only
 Preferred Option for DHCPv4") there now exists a supportable, standard
 mechanism for gracefully migrating off of legacy IP while preserving
 access for systems and network stacks that either do not support IPv6 or
@@ -2604,7 +2611,7 @@ native IPv6 and native IPv4.
 Such solutions are known as "IPv4 as a Service" (IPv4aaS) and can be
 used to ensure IPv4 support and coexistence when starting the IPv6-only
 transition for the infrastructure. This can be a complex decision. As
-mentioned in \href{https://www.rfc-editor.org/info/rfc9386}{RFC9386},
+mentioned in \href{https://www.rfc-editor.org/info/rfc9386}{RFC 9386},
 IPv6-only is generally associated with a scope, e.g. IPv6-only overlay
 or IPv6-only underlay.
 
@@ -2641,7 +2648,7 @@ US},
 Jio} and
 \href{https://indico.uknof.org.uk/event/38/contributions/489/attachments/612/736/Nick_Heatley_EE_IPv6_UKNOF_20170119.pdf}{EE}.
 
-\href{https://www.rfc-editor.org/info/rfc9313}{RFC9313} compares the
+\href{https://www.rfc-editor.org/info/rfc9313}{RFC 9313} compares the
 merits of the most common IPv6 transition solutions, i.e. 464XLAT
 {[}\href{https://www.rfc-editor.org/info/rfc6877}{RFC6877}{]}, DS-lite
 {[}\href{https://www.rfc-editor.org/info/rfc6333}{RFC6333}{]},
@@ -2653,12 +2660,13 @@ Lightweight 4over6 (lw4o6)
 A framework for carriers is proposed in a current draft
 {[}\href{https://datatracker.ietf.org/doc/draft-ietf-v6ops-framework-md-ipv6only-underlay/}{draft-ietf-v6ops-framework-md-ipv6only-underlay}{]}.
 Customer edge routers need to support
-\href{https://www.rfc-editor.org/info/rfc8585}{RFC8585}. The reader will
-notice that the solutions most commonly adopted today, such as this one,
-exploit both the use of tunnels (IPv4 carried over IPv6) and translation
-(IPv4 re-encoded as IPv6). The following two sections separate out these
-two techniques. {[}\hyperref[translation-and-ipv4-as-a-service]{3.
-Translation}{]} also gives more detail on IPv4aaS.
+\href{https://www.rfc-editor.org/info/rfc8585}{RFC 8585}. The reader
+will notice that the solutions most commonly adopted today, such as this
+one, exploit both the use of tunnels (IPv4 carried over IPv6) and
+translation (IPv4 re-encoded as IPv6). The following two sections
+separate out these two techniques.
+{[}\hyperref[translation-and-ipv4-as-a-service]{3. Translation}{]} also
+gives more detail on IPv4aaS.
 
 \subsubsection{\texorpdfstring{\hyperref[tunnels]{Next}
 \hyperref[coexistence-with-legacy-ipv4]{Top}}{Next Top}}\label{next-top-2}
@@ -2671,7 +2679,7 @@ At its simplest, two IPv6 hosts or networks can be joined together via
 IPv4 with a tunnel, i.e. an arrangement whereby a device at each end
 acts as a tunnel end-point. Typically such a tunnel connects two IPv6
 routers, using a very simple IPv6-in-IPv4 encapsulation described in
-\href{https://www.rfc-editor.org/info/rfc4213}{RFC4213}, with IP
+\href{https://www.rfc-editor.org/info/rfc4213}{RFC 4213}, with IP
 Protocol number 41 to tell IPv4 that the payload is IPv6. Conversely,
 IPv4-in-IPv6 tunnels are also possible, with IPv6 Next Header value 4 to
 tell IPv6 that the payload is IPv4. This would allow an operator to
@@ -2683,7 +2691,7 @@ IPv6 transit being widely available from major ISPs. Tunnels are used in
 other co-existence scenarios, some of which we will now describe.
 
 Early solutions assumed that an ISP\textquotesingle s infrastructure was
-primarily IPv4; \href{https://www.rfc-editor.org/info/rfc6264}{RFC6264}
+primarily IPv4; \href{https://www.rfc-editor.org/info/rfc6264}{RFC 6264}
 is no longer up to date, but it provided background on how IPv6-in-IPv4
 tunnels would be used in such cases. Today, the picture is reversed, and
 the emphasis is on ISP infrastructure which is primarily IPv6.
@@ -2699,7 +2707,7 @@ CGN translates IPv4 traffic to and from a public IPv4 address. Thus, the
 infrastructure between the CGN and the CE router can be pure IPv6.
 
 IPv6 can be tunneled using GRE (Generic Routing Encapsulation,
-\href{https://www.rfc-editor.org/info/rfc7676}{RFC7676}).
+\href{https://www.rfc-editor.org/info/rfc7676}{RFC 7676}).
 
 IPv6 can be tunneled over MPLS
 {[}\href{https://www.rfc-editor.org/info/rfc4029}{RFC4029}{]}; for
@@ -2709,9 +2717,9 @@ Edge Routers (6PE)"
 solution is to connect IPv6 networks over IPv4 MPLS via IPv6 Provider
 Edge routers (6PE)
 {[}\href{https://www.rfc-editor.org/info/rfc4798}{RFC4798}{]}.
-\href{https://www.rfc-editor.org/info/rfc7439}{RFC7439} provided a gap
+\href{https://www.rfc-editor.org/info/rfc7439}{RFC 7439} provided a gap
 analysis for IPv6-only MPLS networks.
-\href{https://www.rfc-editor.org/info/rfc7552}{RFC7552} closed many of
+\href{https://www.rfc-editor.org/info/rfc7552}{RFC 7552} closed many of
 those gaps. Interested readers can study a 125 page
 \href{https://pc.nanog.org/static/published/meetings/NANOG76/1993/20190612_Agahian_Demystifying_Ipv6_Over_v1.pdf}{NANOG
 tutorial}.
@@ -2760,7 +2768,7 @@ of translation techniques from the discussion of IPv4 as a service.
   SIIT (Stateless IP/ICMP Translation Algorithm). This is also known
   simply as "IP/ICMP Translation Algorithm"
   {[}\href{https://www.rfc-editor.org/info/rfc7915}{RFC7915},
-  \href{https://www.rfc-editor.org/info/rfc6144}{RFC6144}{]}. It
+  \href{https://www.rfc-editor.org/info/rfc6144}{RFC 6144}{]}. It
   translates IPv4 packets to IPv6 format and the opposite. Note that
   translation is limited to basic functionality, and does not translate
   any IPv4 options or any IPv6 extension headers except the Fragment
@@ -2774,7 +2782,7 @@ of translation techniques from the discussion of IPv4 as a service.
   \begin{itemize}
   \tightlist
   \item
-    \href{https://www.rfc-editor.org/info/rfc6146}{RFC6146} defines
+    \href{https://www.rfc-editor.org/info/rfc6146}{RFC 6146} defines
     \emph{stateful} NAT64, which (like IPv4 NAT) includes port
     translation and supports two-way transport sessions.
   \item
@@ -2782,8 +2790,8 @@ of translation techniques from the discussion of IPv4 as a service.
     supports DNS extensions for clients of stateful NAT64.
   \item
     PREF64 refers to the IPv6 prefix used "outside" the NAT64
-    translator. \href{https://www.rfc-editor.org/info/rfc8781}{RFC8781}
-    and \href{https://www.rfc-editor.org/info/rfc8880}{RFC8880} are
+    translator. \href{https://www.rfc-editor.org/info/rfc8781}{RFC 8781}
+    and \href{https://www.rfc-editor.org/info/rfc8880}{RFC 8880} are
     mechanisms by which a host can learn the PREF64 in use.
   \end{itemize}
 \item
@@ -3034,9 +3042,9 @@ the Tunnel - Legacy IPv6 Transition Mechanisms in the Wild}, preprint
   {[}\href{https://www.rfc-editor.org/info/rfc3056}{RFC3056}{]}
   {[}\href{https://www.rfc-editor.org/info/rfc3068}{RFC3068}{]}. The
   problems with this are documented in
-  \href{https://www.rfc-editor.org/info/rfc6343}{RFC6343} and it was
+  \href{https://www.rfc-editor.org/info/rfc6343}{RFC 6343} and it was
   largely deprecated by
-  \href{https://www.rfc-editor.org/info/rfc7526}{RFC7526}.
+  \href{https://www.rfc-editor.org/info/rfc7526}{RFC 7526}.
 \item
   Teredo: Tunneling IPv6 over UDP through Network Address Translations
   (NATs) {[}\href{https://www.rfc-editor.org/info/rfc4380}{RFC4380}{]}.
@@ -3169,8 +3177,8 @@ additional security precautions.
 
 Initially, it was expected that end-to-end cryptography (encryption and
 authentication) would be a mandatory part of IPv6 (IPsec,
-\href{https://www.rfc-editor.org/info/rfc4301}{RFC4301} and SEND,
-\href{https://www.rfc-editor.org/info/rfc3971}{RFC3971}). This proved
+\href{https://www.rfc-editor.org/info/rfc4301}{RFC 4301} and SEND,
+\href{https://www.rfc-editor.org/info/rfc3971}{RFC 3971}). This proved
 unrealistic, so cryptography has been accepted as optional at the
 networking layer, exactly as it is for IPv4. At the same time,
 cryptography has become widespread at the transport or application
@@ -3180,18 +3188,27 @@ IPv6 aims at restoring end-to-end connectivity to the networking layer.
 Therefore, IPv6 security in no way relies on the presence of network
 address translation. IPv6 has no standardized NAT66 and even network
 prefix translation (NPTv6,
-\href{https://www.rfc-editor.org/info/rfc6296}{RFC6296}) is little used.
-NAT or NPTv6 provide at best weak security protection at the network
-boundary, so this is not seen as a defect. The normal approach to
-boundary security for IPv6 is a firewall; most firewall products support
-IPv6 as well as IPv4. Topology hiding is addressed in a later section of
-this chapter.
+\href{https://www.rfc-editor.org/info/rfc6296}{RFC 6296}) is little
+used. NAT or NPTv6 provide at best weak security protection at the
+network boundary, so this is not seen as a defect. The normal approach
+to boundary security for IPv6 is a firewall; most firewall products
+support IPv6 as well as IPv4. Topology hiding is addressed in a later
+section of this chapter.
 
 Today, the ``Zero-trust'' approach in security tends to move the stress
 from perimeter protection to the authentication and encryption for all
 traffic (including internal for any perimeter). If this approach
 succeeds, some enterprises may choose to reduce the role of firewalls in
 future. IPv6 is well positioned for this change.
+
+A good design and policy rule to follow is that in a dual-stacked
+deployment, which is by and large the largest percentage of IPv6
+deployments, security policy for IPv4 and IPv6 should match in order to
+ensure consistency of operational and user experience. In an IPv6-only
+deployment, implementation of policy should be derived from overall
+network security policy, taking into account protocol specifications
+that may require adjustments from legacy IP (i.e. differences in ICMP
+handling between IPv4 and IPv6).
 
 There is a good overview of IPv6 security in
 \href{https://www.rfc-editor.org/info/rfc9099}{RFC 9099}. This is a good
@@ -3318,7 +3335,7 @@ The majority of practices do not change with IPv6 adoption:
 \begin{itemize}
 \tightlist
 \item
-  \href{https://www.rfc-editor.org/info/bcp38}{BCP38} recommends
+  \href{https://www.rfc-editor.org/info/bcp38}{BCP 38} recommends
   carriers to filter traffic based on \emph{source} addresses on ingress
   from the client to prevent address spoofing. Source addresses in the
   range delegated to this client are allowed; other sources addresses
@@ -3327,7 +3344,7 @@ The majority of practices do not change with IPv6 adoption:
   Operators that do not implement BCP38 are condoning address spoofing.
 \item
   "Martian" addresses should be filtered on the perimeter according to
-  \href{https://www.rfc-editor.org/info/rfc6890}{RFC6890}. In the case
+  \href{https://www.rfc-editor.org/info/rfc6890}{RFC 6890}. In the case
   of IPv6, this refers to the
   \href{https://www.iana.org/assignments/iana-ipv6-special-registry/iana-ipv6-special-registry.xhtml}{IANA
   IPv6 Special-Purpose Address Registry}.
@@ -3346,7 +3363,7 @@ The majority of practices do not change with IPv6 adoption:
   defined separately.
 \item
   All IGP protocols should filter announcements for the local link
-  according to \href{https://www.rfc-editor.org/info/rfc5082}{RFC5082}.
+  according to \href{https://www.rfc-editor.org/info/rfc5082}{RFC 5082}.
   In the case of IPv6, this means that announcements are allowed only
   from link-local addresses.
 \item
@@ -3479,7 +3496,7 @@ servers and load balancers will intrinsically hide the core topology
 from attackers.
 
 Other aspects of topology hiding were discussed in
-\href{https://www.rfc-editor.org/info/rfc4864}{RFC4864}, but that
+\href{https://www.rfc-editor.org/info/rfc4864}{RFC 4864}, but that
 document is significantly out of date.
 
 Another common architectural scenario entails dis-aggregating a GUA
@@ -3867,7 +3884,7 @@ Three main cases can be distinguished:
 \item
   Unmanaged networks will generally use stateless address
   autoconfiguration (SLAAC,
-  \href{https://www.rfc-editor.org/info/rfc4862}{RFC4862}) within the
+  \href{https://www.rfc-editor.org/info/rfc4862}{RFC 4862}) within the
   subnet prefix(es) assigned to them by a service provider. This is in
   contrast to IPv4 practice, where DHCP is automatically configured in
   most unmanaged networks.
@@ -4076,7 +4093,7 @@ The following diagram shows the example:
 
 If, for some reason, there is more than one subnet router on the subnet,
 the host can be informed which one to use as suggested in
-\href{https://www.rfc-editor.org/info/rfc8028}{RFC8028}.
+\href{https://www.rfc-editor.org/info/rfc8028}{RFC 8028}.
 
 For this to work as intended, it is necessary to configure routing so
 that traffic from \texttt{2001:db8:abcd:0101::abc1} exits the site
@@ -4106,7 +4123,7 @@ Even with backup routes in place, there may be a problem if user client
 sessions originating \emph{within} the enterprise use IPv6 source
 addresses under a failing PA prefix. This will happen unless the host is
 somehow caused to deprecate such source addresses, so that the algorithm
-of \href{https://www.rfc-editor.org/info/rfc6724}{RFC6724} will not
+of \href{https://www.rfc-editor.org/info/rfc6724}{RFC 6724} will not
 select them.
 
 An additional technique that has been suggested is for a site to deploy
@@ -4114,7 +4131,7 @@ An additional technique that has been suggested is for a site to deploy
 {[}\href{https://www.rfc-editor.org/info/rfc8475}{RFC8475}{]}.
 
 This whole topic is discussed in more depth in
-\href{https://www.rfc-editor.org/info/rfc8678}{RFC8678}.
+\href{https://www.rfc-editor.org/info/rfc8678}{RFC 8678}.
 
 The need for complex configuration and the resulting failure modes
 explain why many enterprises have not opted for multi-prefix PA-based
@@ -4142,11 +4159,11 @@ entered in local split-horizon DNS (Section 4 of
 {[}\href{https://www.rfc-editor.org/info/rfc6950}{RFC6950}{]}). At the
 time of writing, there is an operational problem in this scenario: host
 computers configured with default settings from
-\href{https://www.rfc-editor.org/info/rfc6724}{RFC6724} will not prefer
+\href{https://www.rfc-editor.org/info/rfc6724}{RFC 6724} will not prefer
 ULAs over IPv4 addresses
 {[}\href{https://datatracker.ietf.org/doc/draft-ietf-v6ops-ula/}{draft-ietf-v6ops-ula}{]}.
 A site using DHCPv6 can change the default settings via
-\href{https://www.rfc-editor.org/info/rfc7078}{RFC7078}, but
+\href{https://www.rfc-editor.org/info/rfc7078}{RFC 7078}, but
 unfortunately this is not widely implemented.
 
 A partial work-around for this problem is for a host to have two AAAA
@@ -4189,7 +4206,7 @@ policy control, simplicity, and transport session survivability. Without
 describing all the efforts made since then, it is clear that a solution
 that satisfies all these goals simultaneously has been difficult to
 find. A more recent overview can be found in
-\href{https://www.rfc-editor.org/info/rfc7157}{RFC7157}.
+\href{https://www.rfc-editor.org/info/rfc7157}{RFC 7157}.
 
 \subsubsection{Large sites}\label{large-sites}
 
@@ -4312,7 +4329,7 @@ not share all the disadvantages of IPv4 NAT. As discussed in RFC 6296,
 Of course, NPTv6 retains some of the disadvantages of NAT: all of the
 problems that directly follow from having different IP addresses at the
 two ends of a connection. Section 5 of
-\href{https://www.rfc-editor.org/info/rfc6296}{RFC6296} discusses this.
+\href{https://www.rfc-editor.org/info/rfc6296}{RFC 6296} discusses this.
 Any site running NPTv6 must either deal with these problems, or avoid
 any affected applications. In particular, SIP (Session Initiation
 Protocol for IP telephony) will not work without the support of a proxy
@@ -4351,7 +4368,7 @@ Equally, there is no evidence whether different co-existence strategies
 (e.g., native dual stack versus IPv4-as-a-service) have significantly
 different energy costs.
 
-\href{https://www.rfc-editor.org/info/bcp202}{BCP202} makes specific
+\href{https://www.rfc-editor.org/info/bcp202}{BCP 202} makes specific
 recommendations on reducing the energy consumption of IPv6 Router
 Advertisements.
 
@@ -4456,7 +4473,7 @@ When speaking of IPv6, a question immediately comes up: "How many people
 do use IPv6 on the Internet?". Answering this question is fundamental to
 get an immediate understanding of the real adoption of IPv6. A recent
 overview is presented in
-\href{https://www.rfc-editor.org/info/rfc9386}{RFC9386}.
+\href{https://www.rfc-editor.org/info/rfc9386}{RFC 9386}.
 
 A count of IPv6 users is monitored by various organizations. For
 example, both
@@ -4906,7 +4923,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 \emph{cautious} about old Informational or Experimental RFCs - they may
 be misleading as well as out of date.
 
-RFCbib6 run at 2024-04-28 16:15:37 UTC+1200 (486 RFCs found)
+RFCbib6 run at 2024-07-06 08:48:20 UTC+1200 (486 RFCs found)
 
 \subsubsection{Standards Track (261
 RFCs)}\label{standards-track-261-rfcs}
@@ -5204,9 +5221,6 @@ RFCs)}\label{standards-track-261-rfcs}
   \href{https://www.rfc-editor.org/info/rfc5779}{RFC 5779}: Diameter
   Proxy Mobile IPv6: Mobile Access Gateway and Local Mobility Anchor
   Interaction with Diameter Server
-\item
-  \href{https://www.rfc-editor.org/info/rfc5798}{RFC 5798}: Virtual
-  Router Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6
 \item
   \href{https://www.rfc-editor.org/info/rfc5844}{RFC 5844}: IPv4 Support
   for Proxy Mobile IPv6
@@ -5749,6 +5763,9 @@ RFCs)}\label{standards-track-261-rfcs}
 \item
   \href{https://www.rfc-editor.org/info/rfc9527}{RFC 9527}: DHCPv6
   Options for the Homenet Naming Authority
+\item
+  \href{https://www.rfc-editor.org/info/rfc9568}{RFC 9568}: Virtual
+  Router Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6
 \end{itemize}
 
 \subsubsection{Best Current Practice (15
@@ -6722,7 +6739,7 @@ want them without square brackets for grammatical reasons, such as using
 
 they will be shown in a single pair of square brackets with commas:
 {[}\href{https://www.rfc-editor.org/info/rfc4291}{RFC4291},
-\href{https://www.rfc-editor.org/info/rfc8200}{RFC8200}{]}.
+\href{https://www.rfc-editor.org/info/rfc8200}{RFC 8200}{]}.
 
 Diagrams can be ASCII art when applicable, using
 \texttt{\textasciitilde{}\textasciitilde{}\textasciitilde{}} before and
@@ -6801,7 +6818,7 @@ Section text goes here
 
 \includegraphics{book6logo.png}
 
-Generated at 2024-04-28 16:17:28 UTC+1200
+Generated at 2024-07-11 09:45:18 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -6870,6 +6887,7 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[auto-configuration]{DHCP ¶} \hyperref[dns]{¶}
 \hyperref[managed-configuration]{¶} \hyperref[routing]{¶}
+\hyperref[source-and-destination-address-selection]{¶}
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶} \hyperref[filtering]{¶}
 \hyperref[layer-2-considerations]{¶} \hyperref[address-planning]{¶}
@@ -6950,7 +6968,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[address-resolution]{ICMPv6 ¶} \hyperref[auto-configuration]{¶}
 \hyperref[extension-headers-and-options]{¶}
 \hyperref[dual-stack-scenarios]{¶}
-\hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[filtering]{¶}
+\hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[security]{¶}
+\hyperref[filtering]{¶}
 
 \hyperref[addresses]{IID ¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
@@ -7001,7 +7020,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[coexistence-with-legacy-ipv4]{¶}
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
-\hyperref[deployment-by-carriers]{¶}
+\hyperref[security]{¶} \hyperref[deployment-by-carriers]{¶}
 
 \hyperref[routing]{IS-IS ¶}
 
@@ -7171,12 +7190,14 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-11}
 
 \includegraphics{book6logo.png}
 
-Generated at 2024-04-28 16:17:28 UTC+1200
+Generated at 2024-07-11 09:45:18 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
 
 \hyperref[addresses]{BCP157 ¶}
+
+\hyperref[coexistence-with-legacy-ipv4]{BCP177 ¶}
 
 \hyperref[addresses]{BCP198 ¶} \hyperref[routing]{¶}
 \hyperref[markdown-usage]{¶}
@@ -7407,7 +7428,9 @@ has links to each section that mentions each citation.
 
 \hyperref[managed-configuration]{RFC7066 ¶}
 
-\hyperref[multi-prefix-operation]{RFC7078 ¶}
+\hyperref[dns]{RFC7078 ¶}
+\hyperref[source-and-destination-address-selection]{¶}
+\hyperref[multi-prefix-operation]{¶}
 
 \hyperref[routing]{RFC7084 ¶}
 
