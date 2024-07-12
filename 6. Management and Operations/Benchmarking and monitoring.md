@@ -10,7 +10,7 @@ Some examples from experience:
 
 - Web services with AAAA records
   \[[2. DNS](../2.%20IPv6%20Basic%20Technology/DNS.md)\] and proper
-  configuration; monitoring said that everything okay, but users could
+  configuration; monitoring indicated that everything was okay, but users could
   not access the web services via IPv6 from the Internet. Someone forgot
   a firewall rule, and the monitoring system was on the inside of the
   network.
