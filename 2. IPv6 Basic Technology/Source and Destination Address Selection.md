@@ -54,15 +54,24 @@ fec0::/16                          1    11
 ```
 
 
-In the vast majority of use cases, this default table is unchanged and consistent. However, on platforms such as Linux and Microsoft Windows, it is possible to adjust this table to create desired behavior, up to and including creating address pairings, adjusted preferences, and unique traffic SA/DA characteristics.
+
 
 ### Destination address selection
 
-Destination address selection is somewhat complex, and it should be understood that it is configurable and may be somewhat inconsistent based on the implementation of a given IPv6 network stack and the age of the operating system. At the time of this writing there are still operating systems that employ aspects of or full implementations of [RFC 3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted by [RFC 6724](https://www.rfc-editor.org/info/rfc6724) in 2012.  To understand source address selection, one can reference the file _/etc/gai.conf_ in a modern Linux system as it has the most succinct example of the rules governing the process.
+Destination address selection is somewhat complex, and it should be understood that it is configurable and may be somewhat inconsistent based on the implementation of a given IPv6 network stack and the age of the operating system. At the time of this writing there are still operating systems that employ aspects of or full implementations of [RFC 3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted by [RFC 6724](https://www.rfc-editor.org/info/rfc6724) in 2012.  To fully understand address selection, one can reference the file _/etc/gai.conf_ in a modern Linux system as it has the most succinct example of the rules governing the process.
 
- A site using DHCPv6 options 84 and 85 can change the default settings for address selection via
- [RFC 7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately this
- is not widely implemented.
+### Changing address selection policy
+
+In the vast majority of use cases, the default policy table is unchanged and consistent. However, on platforms such as Linux and Microsoft Windows, it is possible to adjust this table to create desired behavior, up to and including creating address pairings, adjusted preferences, and unique traffic SA/DA characteristics.
+
+A site using DHCPv6 options 84 and 85 can change the default settings for address selection via
+[RFC 7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately this
+is not widely implemented.
+In principle this can also be achieved by system commands in each host
+(e.g. _netsh interface ipv6 add prefixpolicy_
+in Windows and  _ip addrlabel add prefix_ in Linux) but this is rarely done.
+The result is that hosts generally apply the default
+policy for their operating system release, even when a different policy would work better.
 
 ### ULA considerations
 
