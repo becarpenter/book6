@@ -89,7 +89,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2024-07-11 09:46:30 UTC+1200
+Version captured at 2024-08-14 15:47:26 UTC+1200
 
 \pagebreak
 
@@ -2178,12 +2178,6 @@ fec0::/16                          1    11
 3ffe::/16                          1    12        
 \end{verbatim}
 
-In the vast majority of use cases, this default table is unchanged and
-consistent. However, on platforms such as Linux and Microsoft Windows,
-it is possible to adjust this table to create desired behavior, up to
-and including creating address pairings, adjusted preferences, and
-unique traffic SA/DA characteristics.
-
 \subsubsection{Destination address
 selection}\label{destination-address-selection}
 
@@ -2194,14 +2188,28 @@ the operating system. At the time of this writing there are still
 operating systems that employ aspects of or full implementations of
 \href{https://www.rfc-editor.org/info/rfc3484}{RFC 3484}, which was
 obsoleted by \href{https://www.rfc-editor.org/info/rfc6724}{RFC 6724} in
-2012. To understand source address selection, one can reference the file
+2012. To fully understand address selection, one can reference the file
 \emph{/etc/gai.conf} in a modern Linux system as it has the most
 succinct example of the rules governing the process.
+
+\subsubsection{Changing address selection
+policy}\label{changing-address-selection-policy}
+
+In the vast majority of use cases, the default policy table is unchanged
+and consistent. However, on platforms such as Linux and Microsoft
+Windows, it is possible to adjust this table to create desired behavior,
+up to and including creating address pairings, adjusted preferences, and
+unique traffic SA/DA characteristics.
 
 A site using DHCPv6 options 84 and 85 can change the default settings
 for address selection via
 \href{https://www.rfc-editor.org/info/rfc7078}{RFC 7078}, but
-unfortunately this is not widely implemented.
+unfortunately this is not widely implemented. In principle this can also
+be achieved by system commands in each host (e.g. \emph{netsh interface
+ipv6 add prefixpolicy} in Windows and \emph{ip addrlabel add prefix} in
+Linux) but this is rarely done. The result is that hosts generally apply
+the default policy for their operating system release, even when a
+different policy would work better.
 
 \subsubsection{ULA considerations}\label{ula-considerations}
 
@@ -4923,10 +4931,10 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 \emph{cautious} about old Informational or Experimental RFCs - they may
 be misleading as well as out of date.
 
-RFCbib6 run at 2024-07-06 08:48:20 UTC+1200 (486 RFCs found)
+RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
 
-\subsubsection{Standards Track (261
-RFCs)}\label{standards-track-261-rfcs}
+\subsubsection{Standards Track (262
+RFCs)}\label{standards-track-262-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -5766,6 +5774,10 @@ RFCs)}\label{standards-track-261-rfcs}
 \item
   \href{https://www.rfc-editor.org/info/rfc9568}{RFC 9568}: Virtual
   Router Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6
+\item
+  \href{https://www.rfc-editor.org/info/rfc9603}{RFC 9603}: Path
+  Computation Element Communication Protocol (PCEP) Extensions for IPv6
+  Segment Routing
 \end{itemize}
 
 \subsubsection{Best Current Practice (15
@@ -6818,7 +6830,7 @@ Section text goes here
 
 \includegraphics{book6logo.png}
 
-Generated at 2024-07-11 09:45:18 UTC+1200
+Generated at 2024-08-14 15:47:03 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7190,7 +7202,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-11}
 
 \includegraphics{book6logo.png}
 
-Generated at 2024-07-11 09:45:18 UTC+1200
+Generated at 2024-08-14 15:47:03 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.

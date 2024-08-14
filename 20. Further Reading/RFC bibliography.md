@@ -7,9 +7,9 @@ for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date.
 
-RFCbib6 run at 2024-07-06 08:48:20 UTC+1200 (486 RFCs found)
+RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
 
-### Standards Track (261 RFCs)
+### Standards Track (262 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -570,6 +570,9 @@ RFCbib6 run at 2024-07-06 08:48:20 UTC+1200 (486 RFCs found)
   for the Homenet Naming Authority
 - [RFC 9568](https://www.rfc-editor.org/info/rfc9568): Virtual Router
   Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6
+- [RFC 9603](https://www.rfc-editor.org/info/rfc9603): Path Computation
+  Element Communication Protocol (PCEP) Extensions for IPv6 Segment
+  Routing
 
 ### Best Current Practice (15 RFCs)
 

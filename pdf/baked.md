@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-07-11 09:46:30 UTC+1200
+Version captured at 2024-08-14 15:47:26 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -1838,15 +1838,24 @@ fec0::/16                          1    11
 ```
 
 
-In the vast majority of use cases, this default table is unchanged and consistent. However, on platforms such as Linux and Microsoft Windows, it is possible to adjust this table to create desired behavior, up to and including creating address pairings, adjusted preferences, and unique traffic SA/DA characteristics.
+
 
 ### Destination address selection
 
-Destination address selection is somewhat complex, and it should be understood that it is configurable and may be somewhat inconsistent based on the implementation of a given IPv6 network stack and the age of the operating system. At the time of this writing there are still operating systems that employ aspects of or full implementations of [RFC 3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted by [RFC 6724](https://www.rfc-editor.org/info/rfc6724) in 2012.  To understand source address selection, one can reference the file _/etc/gai.conf_ in a modern Linux system as it has the most succinct example of the rules governing the process.
+Destination address selection is somewhat complex, and it should be understood that it is configurable and may be somewhat inconsistent based on the implementation of a given IPv6 network stack and the age of the operating system. At the time of this writing there are still operating systems that employ aspects of or full implementations of [RFC 3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted by [RFC 6724](https://www.rfc-editor.org/info/rfc6724) in 2012.  To fully understand address selection, one can reference the file _/etc/gai.conf_ in a modern Linux system as it has the most succinct example of the rules governing the process.
 
- A site using DHCPv6 options 84 and 85 can change the default settings for address selection via
- [RFC 7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately this
- is not widely implemented.
+### Changing address selection policy
+
+In the vast majority of use cases, the default policy table is unchanged and consistent. However, on platforms such as Linux and Microsoft Windows, it is possible to adjust this table to create desired behavior, up to and including creating address pairings, adjusted preferences, and unique traffic SA/DA characteristics.
+
+A site using DHCPv6 options 84 and 85 can change the default settings for address selection via
+[RFC 7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately this
+is not widely implemented.
+In principle this can also be achieved by system commands in each host
+(e.g. _netsh interface ipv6 add prefixpolicy_
+in Windows and  _ip addrlabel add prefix_ in Linux) but this is rarely done.
+The result is that hosts generally apply the default
+policy for their operating system release, even when a different policy would work better.
 
 ### ULA considerations
 
@@ -4352,9 +4361,9 @@ for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date.
 
-RFCbib6 run at 2024-07-06 08:48:20 UTC+1200 (486 RFCs found)
+RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
 
-### Standards Track (261 RFCs)
+### Standards Track (262 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -4915,6 +4924,9 @@ RFCbib6 run at 2024-07-06 08:48:20 UTC+1200 (486 RFCs found)
   for the Homenet Naming Authority
 - [RFC 9568](https://www.rfc-editor.org/info/rfc9568): Virtual Router
   Redundancy Protocol (VRRP) Version 3 for IPv4 and IPv6
+- [RFC 9603](https://www.rfc-editor.org/info/rfc9603): Path Computation
+  Element Communication Protocol (PCEP) Extensions for IPv6 Segment
+  Routing
 
 ### Best Current Practice (15 RFCs)
 
@@ -5708,7 +5720,7 @@ backslashpagebreak
 
 ![x](book6logo.png "book6 logo")
 
-Generated at 2024-07-11 09:45:18 UTC+1200
+Generated at 2024-08-14 15:47:03 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6205,7 +6217,7 @@ backslashpagebreak
 
 ![x](book6logo.png "book6 logo")
 
-Generated at 2024-07-11 09:45:18 UTC+1200
+Generated at 2024-08-14 15:47:03 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
