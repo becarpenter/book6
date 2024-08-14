@@ -1,6 +1,7 @@
 This folder `pdf` is used for generating a complete PDF file of book6 and is not otherwise interesting.
 
-As of 2024-04-11 the contents of this folder are work-in-progress and not aimed at readers.
+The contents of this folder are work-in-progress and not aimed at readers.
+The public PDF version is hosted at https://ipv6textbook.com/.
 
 The image files are duplicated here intentionally.
 
