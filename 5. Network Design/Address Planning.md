@@ -34,7 +34,7 @@ between them to work with. Keep in mind that there is no concern about
 exhaustion of IPv6 addresses(or prefixes), seeing that this single
 assignment for an autonomous system (ISP) gives the equivalent of the
 entire IPv4 Internet address space to work with. And this is not about
-unique addresses, but /64 network prefixes! As am analogy, a /64 prefix
+unique addresses, but /64 network prefixes! As an analogy, a /64 prefix
 would be the equivalent of leasing a public IPv4 address to a single
 network or subscriber. In this way, in IPv6 planning we can favor
 organization and clearer management instead of saving as many addresses
@@ -53,10 +53,16 @@ following example, we will use the technique known as **leftmost**, to
 guarantee a more balanced distribution on all available space. Back to
 the example, consider our 32 bits where we can use the first 4 (one
 "nibble" or hexadecimal character) to assign sixteen regions, as 0 to F,
-resulting on a /36 per region. A region may be a data center,
-geographical area or a branching network. A. Region A - Main Datacenter
-B. Region B - City south C. Region B - City north So the first layer of
-our address plan may look like this:
+resulting in a /36 per region. A region may be a data center,
+geographical area or a branching network.
+
+```
+A. Region A - Main Datacenter
+B. Region B - City south
+C. Region C - City north
+```
+
+So the first layer of our address plan may look like this:
 
 ```
 2001:0db8:0000::/36 - Reserved
@@ -81,7 +87,7 @@ our address plan may look like this:
 assigned prefixes; this breaks the usual recommendation to use
 lowercase.)
 
-Each region have functional divisions that may earn one or more address
+Each region has functional divisions that may earn one or more address
 blocks. Each division could be for instance:
 
 1. Internal infrastructure
