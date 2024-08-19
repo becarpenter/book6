@@ -18,6 +18,8 @@
 # Version: 2024-04-28 - handle directory on command line
 # Version: 2024-08-19 - adjust alt text handling for graphics
 #                     - added EPUB conversion
+# Version: 2024-08-20 - fixed case error in "Title.md" 
+
 
 ########################################################
 # Copyright (C) 2024 Brian E. Carpenter.                  
@@ -98,6 +100,7 @@ def dprint(*msg):
 
 def crash(msg):
     """Log and crash"""
+    global printing
     printing = True
     logit("CRASH "+msg)
     flog.close()
@@ -275,7 +278,7 @@ baked = []
 
 ######### Title page
 
-title = rf("title.md")
+title = rf("Title.md")
 title.append("\nVersion captured at "+timestamp+"\n")
 title.append(page_break)
 baked += title
