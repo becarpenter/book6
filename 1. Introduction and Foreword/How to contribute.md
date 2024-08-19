@@ -16,4 +16,8 @@ To become an active contributor
 and [instructions](https://github.com/becarpenter/book6/blob/main/99.%20Chapter%20Template/99.%20Chapter%20Template.md). Then submit GitHub PRs.
 Your contributions will be reviewed by an editorial team.
 
+There is a short
+[code of conduct](https://github.com/becarpenter/book6/blob/main/CODE_OF_CONDUCT.md)
+for participants.
+
 ### [<ins>Previous</ins>](How%20to%20keep%20up%20to%20date.md) [<ins>Next</ins>](Acknowledgments.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
