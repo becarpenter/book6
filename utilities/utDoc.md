@@ -174,6 +174,9 @@ After _baked.md_ is written, the code attempts to complete
 the conversion to _baked.pdf_, via _pandoc_ and _pdflatex_. If this
 fails, the manual process is explained in the `pdf` directory. 
 
+The code also attempts the conversion to _baked.epub_, an eBook
+format, also via _pandoc_.
+
 The title page is at _Title.md_ and is augmented during
 baking by adding a timestamp.
 
@@ -185,8 +188,6 @@ is that section names must also be unique book-wide.
 A necessary hack is that where a page break is needed,
 this is signaled by a dummy line: `backslashpagebreak`.
 This is converted later to a genuine pagebreak.
-
-Conversion to an eBook format is under investigation.
 
 Further info is in the `pdf` directory.
 

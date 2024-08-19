@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""Bake book6 into a single markdown file"""
+"""Bake book6 into a single markdown file, then PDF and EPUB"""
 
 # Version: 2024-01-14 - original
 # Version: 2024-01-17 - case error in index citations
@@ -16,6 +16,8 @@
 # Version: 2024-04-08 - cosmetic fix
 # Version: 2024-04-11 - attempt PDF conversion
 # Version: 2024-04-28 - handle directory on command line
+# Version: 2024-08-19 - adjust alt text handling for graphics
+#                     - added EPUB conversion
 
 ########################################################
 # Copyright (C) 2024 Brian E. Carpenter.                  
@@ -202,7 +204,8 @@ def fix_section(raw):
                 imgalt = "No description available"
             #build image citation as pandoc likes it.
             #the newlines avoid a layout mess
-            outline = head+'\n\n![x]('+imgfile+' "'+imgalt+'")'+tail         
+            ###outline = head+'\n\n![x]('+imgfile+' "'+imgalt+'")'+tail
+            outline = head+'\n\n!['+imgalt+']('+imgfile+')'+tail
         else:
             outline = line
         #Avoid unwanted anchors
@@ -327,12 +330,12 @@ baked += fix_section(rf("Citex.md"))
 
 wf("pdf/baked.md", baked)
 
-######### Attempt PDF conversion
-logit("Attempting PDF conversion (slow)")
+######### Attempt LaTeX and PDF conversion
+logit("Attempting LaTeX conversion")
 try:
 
     # Call pandoc to make LaTeX file
-    cmd("pandoc pdf/baked.md -f gfm -t latex -s -o pdf/baked.tex -V colorlinks=true")
+    cmd("pandoc pdf/baked.md -f gfm+implicit_figures -t latex -s -o pdf/baked.tex -V colorlinks=true")
 
     # Fix up LaTeX
     latex = rf("pdf/baked.tex")
@@ -342,6 +345,7 @@ try:
     wf("pdf/baked.tex", latex)
 
     # Convert LaTeX to PDF
+    logit("Attempting PDF conversion (slow)")
     # Must switch to PDF directory
     os.chdir("pdf")
     cmd("pdflatex baked.tex")
@@ -353,6 +357,15 @@ except Exception as e:
     logitw("PDF conversion failure: "+str(e))
     logitw("Manual PDF conversion needed.")
 
+######### Attempt EPUB conversion
+logit("Attempting EPUB conversion (slow)")
+try:
+    cmd('pandoc baked.tex -o baked.epub -V colorlinks=true --metadata title="book6"')
+    logit("Exiting EPUB conversion - check baked.epub")
+
+except Exception as e:
+    logitw("EPUB conversion failure: "+str(e))
+    logitw("Manual EPUB conversion needed.")
 
 ######### Close log and exit
     
