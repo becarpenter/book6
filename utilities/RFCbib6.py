@@ -12,6 +12,7 @@
 # Version: 2023-08-10 - download & cache xml index
 # Version: 2024-04-28 - handle directory on command line;
 #                       catch DHCPv6
+# Version: 2024-04-28 - tiny bug in crash()
 
 ########################################################
 # Copyright (C) 2023-24 Brian E. Carpenter.                  
@@ -91,6 +92,7 @@ def dprint(*msg):
 
 def crash(msg):
     """Log and crash"""
+    global printing
     printing = True
     logit("CRASH "+msg)
     flog.close()
