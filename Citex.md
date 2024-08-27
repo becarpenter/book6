@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-08-14 15:47:03 UTC+1200
+Generated at 2024-08-28 11:43:33 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -88,6 +88,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC3810 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 
 [RFC3828 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC3849 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 
 [RFC3879 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 
@@ -425,6 +427,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./8.%20Deployment%20Status/Status.md)
 
 [RFC9592 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+
+[RFC9637 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 
 [STD7 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 

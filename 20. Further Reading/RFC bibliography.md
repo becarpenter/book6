@@ -7,7 +7,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date.
 
-RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
+RFCbib6 run at 2024-08-28 11:44:43 UTC+1200 (489 RFCs found)
 
 ### Standards Track (262 RFCs)
 
@@ -623,7 +623,7 @@ RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
   ([BCP 234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
-### Informational (187 RFCs)
+### Informational (188 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -1037,8 +1037,10 @@ RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
   over IPv6 for the Mobile User Plane
 - [RFC 9453](https://www.rfc-editor.org/info/rfc9453): Applicability and
   Use Cases for IPv6 over Networks of Resource-constrained Nodes (6lo)
+- [RFC 9637](https://www.rfc-editor.org/info/rfc9637): Expanding the
+  IPv6 Documentation Space
 
-### Experimental (23 RFCs)
+### Experimental (24 RFCs)
 
 - [RFC 4620](https://www.rfc-editor.org/info/rfc4620): IPv6 Node
   Information Queries
@@ -1092,6 +1094,8 @@ RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
   an IPv6 Next Hop in the Babel Routing Protocol
 - [RFC 9268](https://www.rfc-editor.org/info/rfc9268): IPv6 Minimum Path
   MTU Hop-by-Hop Option
+- [RFC 9631](https://www.rfc-editor.org/info/rfc9631): The IPv6 Compact
+  Routing Header (CRH)
 
 <!-- Link lines generated automatically; do not delete -->
 

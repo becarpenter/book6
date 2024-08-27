@@ -26,13 +26,13 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-08-14 15:47:26 UTC+1200
+Version captured at 2024-08-28 11:45:47 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
 
 
-![x](book6logo.png "book6 logo")
+![book6 logo](book6logo.png)
 
 This is the current list of contents. It will change as the book evolves.
 There is also an [index](#book6-main-index),
@@ -346,6 +346,10 @@ To become an active contributor
 [check the conditions](https://github.com/becarpenter/book6/blob/main/CONTRIBUTING.md)
 and [instructions](https://github.com/becarpenter/book6/blob/main/99.%20Chapter%20Template/99.%20Chapter%20Template.md). Then submit GitHub PRs.
 Your contributions will be reviewed by an editorial team.
+
+There is a short
+[code of conduct](https://github.com/becarpenter/book6/blob/main/CODE_OF_CONDUCT.md)
+for participants.
 
 ### [<ins>Previous</ins>](#how-to-keep-up-to-date) [<ins>Next</ins>](#acknowledgments) [<ins>Top</ins>](#introduction-and-foreword)
 
@@ -674,12 +678,12 @@ backslashpagebreak
 ## Addresses
 
 A 128 bit address is big enough that, assuming the adoption of wise
-allocation policies, IPv6 will [never](https://m.xkcd.com/865/)
-run out of addresses. However, the
-reason for choosing 128 rather than 64 was not just that: it was also to
-allow for some intrinsic structure to addresses, as described below. On
-the other hand, a *fundamental* property of IPv6 unicast routing is that
-it is [based on all 128 bits](http://www.rfc-editor.org/info/bcp198),
+allocation policies, IPv6 will [never](https://m.xkcd.com/865/) run out
+of addresses. However, the reason for choosing 128 rather than 64 was
+not just that: it was also to allow for some intrinsic structure to
+addresses, as described below. On the other hand, a *fundamental*
+property of IPv6 unicast routing is that it is
+[based on all 128 bits](http://www.rfc-editor.org/info/bcp198),
 regardless of any internal structure. In other words, a unicast routing
 prefix is anywhere between 1 and 128 bits long. There is more about
 [routing](#routing) below.
@@ -741,10 +745,10 @@ cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
 RFC9592, and older documentation often uses uppercase hexadecimal.
 
-The choice of ':' as the separator is annoying in one particular aspect -
-where a colon has another meaning and works as a separator between
-address and port. This is quite common in (Web) URLs, that's why
-IPv6 addresses in URLs are in square brackets like this:
+The choice of ':' as the separator is annoying in one particular aspect
+\- where a colon has another meaning and works as a separator between
+address and port. This is quite common in (Web) URLs, that's why IPv6
+addresses in URLs are in square brackets like this:
 
 ```
 https://[2001:db8:4006:80b::200e]:443
@@ -985,7 +989,10 @@ Special-purpose IPv6 addresses and their registry are described in
 
 You may have noticed that many examples above use the prefix
 `2001:db8::/32`. That prefix is reserved for documentation and should
-never appear on the real Internet.
+never appear on the real Internet
+\[[RFC3849](https://www.rfc-editor.org/info/rfc3849)\]. For documenting
+examples that need a prefix shorter than /32, the prefix `3fff::/20` has
+been reserved \[[RFC9637](https://www.rfc-editor.org/info/rfc9637)\].
 
 ### Obsolete address types
 
@@ -2429,7 +2436,7 @@ and comparison of these technologies.
 The following figure illustrates such a scenario.
 
 
-![x](vasilenko-IPv4aaS.png "User devices connected to Internet via IPv6 infrastructure")
+![User devices connected to Internet via IPv6 infrastructure](vasilenko-IPv4aaS.png)
 
 - 464XLAT is the widely preferred translation technology now because it
   has a natural synergy with NAT64 (which is highly desirable by itself)
@@ -2789,8 +2796,8 @@ addresses configured on the link even if all ND exchange is monitored by
 the router. Hence, the router needs to request address resolution after
 the first packet of a new session is received from an external source.
 At the same time, the IPv6 link address space is huge (2^64) by default.
-Hence, it is potentially possible to force the router (even from an
-external network) for address resolution a huge number of times. It is
+Hence, it is potentially possible to force the router to perform address
+resolution a huge number of times (even from an external network). It is
 an effective DoS attack that has simple protection measures.
 [RFC 6583](https://www.rfc-editor.org/info/rfc6583) discusses how to
 rate-limit the number of address resolution requests or minimize subnet
@@ -2803,7 +2810,7 @@ and
 [Multicast efficiency](https://datatracker.ietf.org/doc/draft-vyncke-6man-mcast-not-efficient).
 ND DoS activity may be effective for that reason but the attacker should
 be local to the link. Hence, perimeter security may help. The multicast
-storm is less of a problem in a wireline environment because of MLD
+storm is less of a problem in a wired environment because of MLD
 snooping typically implemented on the link
 ([RFC 4541](https://www.rfc-editor.org/info/rfc4541)).
 
@@ -2825,7 +2832,7 @@ Filtering is a big part of safe Internet connection. IPv6 filtering in
 general may be easy because of the hierarchical address plan. However,
 each filter almost always consumes four times more resources in
 products. This may affect scalability or performance, if equipment is
-underspecified.
+underprovisioned.
 
 The majority of practices do not change with IPv6 adoption:
 
@@ -2847,7 +2854,7 @@ The majority of practices do not change with IPv6 adoption:
   \[[RFC6192](https://www.rfc-editor.org/info/rfc6192)\] is universal
   for IPv6 or IPv4.
 - [Remote Triggered Black Hole](https://www.rfc-editor.org/info/rfc5635)
-  is the same for IPv4 and IPv6, excapt that the prefix for IPv6
+  is the same for IPv4 and IPv6, except that the prefix for IPv6
   [100::/64](https://www.rfc-editor.org/info/rfc6666) has been defined
   separately.
 - All IGP protocols should filter announcements for the local link
@@ -2866,7 +2873,7 @@ there is a desire to filter one subscriber it may be apprpriate to
 filter even shorter prefixes, such as a /56. It is recommended to filter
 /64 initially and then monitor the situation; if the problem persists,
 then filter /60, then /56. /48 is the maximum that may belong to an
-ordinary subscriber, so it cannot make sense to filter shorter prefixes
+ordinary subscriber, so it does not make sense to filter shorter prefixes
 than that to block a single subscriber.
 
 The address plan design of an organization may be different, including
@@ -2974,7 +2981,7 @@ significantly out of date.
 Another common architectural scenario entails dis-aggregating a GUA
 allocation, typically an RIR provided address block, and announcing only
 the part of the assignment requiring public access, leaving the prefix
-requiring obfuscation unannounced within the global DFZ. This model
+requiring obfuscation unannounced within the global DFZ (default free zone). This model
 allows for a similar level of topology obscurement without the added
 configuration complexity and potentially inconsistent behavior of ULA or
 address translation. It should be noted, however, that while this design
@@ -2998,7 +3005,7 @@ highest level of design decisions are identical to those for IPv4.
 
 There is one constraint that does not apply to IPv6: there is
 effectively no theoretical limit to the number of hosts per subnet.
-(Mathematically, there is a limit of about 18.10<sup>18</sup> nodes on a
+(Mathematically, there is a limit of about 18.10^18 nodes on a
 /64 subnet, but this is of no practical concern.) However, most network
 designers will never place hundreds or thousands of hosts on a single
 subnet, for performance reasons.
@@ -3059,11 +3066,12 @@ backslashpagebreak
 
 As you would expect, in IPv6 networks all nodes may have globally unique
 addresses. All networks will be given at least a /64 global prefix to
-operate. As for carriers, they should deliver a longer prefix to
-subscribers, so that they can have multiple /64 subnets within their
+operate. Carriers should deliver a shorter prefix to their
+subscribers (typically in the range /48 through /56), which allows
+multiple /64 subnets within subscriber
 organizations or home environments. Even a home customer can have a
 public network prefix to be split into smaller networks, which is a
-paradigm shift from “hiding behind NAT" on a few public IPv4 addresses
+paradigm shift from “hiding behind NAT” on a few public IPv4 addresses
 (or even inside `100.64.0.0/10`
 \[[RFC6598](https://www.rfc-editor.org/info/rfc6598)\]).
 
@@ -3091,7 +3099,7 @@ between them to work with. Keep in mind that there is no concern about
 exhaustion of IPv6 addresses(or prefixes), seeing that this single
 assignment for an autonomous system (ISP) gives the equivalent of the
 entire IPv4 Internet address space to work with. And this is not about
-unique addresses, but /64 network prefixes! As am analogy, a /64 prefix
+unique addresses, but /64 network prefixes! As an analogy, a /64 prefix
 would be the equivalent of leasing a public IPv4 address to a single
 network or subscriber. In this way, in IPv6 planning we can favor
 organization and clearer management instead of saving as many addresses
@@ -3110,10 +3118,16 @@ following example, we will use the technique known as **leftmost**, to
 guarantee a more balanced distribution on all available space. Back to
 the example, consider our 32 bits where we can use the first 4 (one
 "nibble" or hexadecimal character) to assign sixteen regions, as 0 to F,
-resulting on a /36 per region. A region may be a data center,
-geographical area or a branching network. A. Region A - Main Datacenter
-B. Region B - City south C. Region B - City north So the first layer of
-our address plan may look like this:
+resulting in a /36 per region. A region may be a data center,
+geographical area or a branching network.
+
+```
+A. Region A - Main Datacenter
+B. Region B - City south
+C. Region C - City north
+```
+
+So the first layer of our address plan may look like this:
 
 ```
 2001:0db8:0000::/36 - Reserved
@@ -3138,7 +3152,7 @@ our address plan may look like this:
 assigned prefixes; this breaks the usual recommendation to use
 lowercase.)
 
-Each region have functional divisions that may earn one or more address
+Each region has functional divisions that may earn one or more address
 blocks. Each division could be for instance:
 
 1. Internal infrastructure
@@ -3353,7 +3367,7 @@ Three main cases can be distinguished:
    example, an enterprise given a /48 prefix by its ISP might assign a
    /56 to each branch office and then assign /64 subnets as needed
    within each branch. The decision must then be taken whether to deploy
-   SLAAC throughout the network, or to use DHCPv6 `OPTION_IA_NA`for
+   SLAAC throughout the network, or to use DHCPv6 `OPTION_IA_NA` for
    address assignment
    \[[2. Managed configuration](#managed-configuration)\].
    This choice has implications for both trouble-shooting and security
@@ -3441,7 +3455,7 @@ Some examples from experience:
 
 - Web services with AAAA records
   \[[2. DNS](#dns)\] and proper
-  configuration; monitoring said that everything okay, but users could
+  configuration; monitoring indicated that everything was okay, but users could
   not access the web services via IPv6 from the Internet. Someone forgot
   a firewall rule, and the monitoring system was on the inside of the
   network.
@@ -3532,7 +3546,7 @@ values.)
 The following diagram shows the example:
 
 
-![x](multiPrefix.png "Routers and routing clouds as described above")
+![Routers and routing clouds as described above](multiPrefix.png)
 
 If, for some reason, there is more than one subnet router on the subnet,
 the host can be informed which one to use as suggested in
@@ -3719,7 +3733,7 @@ sufficiently resilient. It is clearly not sufficient for a large site,
 especially if it operates servers as well as client hosts.
 
 An approach that should avoid some of these help desk calls, but is not
-currently favored by the IETF, is to used dynamic network prefix
+currently favored by the IETF, is to use dynamic network prefix
 translation, known as NPTv6
 \[[RFC6296](https://www.rfc-editor.org/info/rfc6296)\],
 \[[3. Translation and IPv4 as a service](#translation-and-ipv4-as-a-service)\].
@@ -3870,7 +3884,7 @@ Some recent statistics are shown here:
 
 
 
-![x](CERN-IPv6-Feb24.png "Graph showing 644 Gb/s") 
+![Graph showing 644 Gb/s](CERN-IPv6-Feb24.png) 
 
 (Image from the February 2024 data challenge at CERN.)
 
@@ -3942,7 +3956,7 @@ table).
 
 
 
-![x](Section5_Table1.jpg "Table shows 25% annual IPv6 growth 2018 to 2022")
+![Table shows 25% annual IPv6 growth 2018 to 2022](Section5_Table1.jpg)
 
 A third of the Internet population apparently employs IPv6. It is also
 interesting to look at the growth curve. The main indicator here is the
@@ -3973,7 +3987,7 @@ the world, as observed in the Internet routing tables.
 
 
 
-![x](Section5_Table2.jpg "Table shows 18% annual IPv6 growth 2018 to 2022")
+![Table shows 18% annual IPv6 growth 2018 to 2022](Section5_Table2.jpg)
 
 The percentage of IPv6-capable ASNs is growing over the years, which is
 a good sign. On the other hand, the table does not distinguish
@@ -4256,7 +4270,7 @@ flowchart LR
 
 
 
-![x](rfc-diagram.png "Diagram of RFC status")
+![Diagram of RFC status](rfc-diagram.png)
 
 An important RFC is the latest version of
 [IPv6 Node Requirements](https://www.rfc-editor.org/info/bcp220), which
@@ -4303,7 +4317,7 @@ flowchart LR
 
 
 
-![x](id-diagram.png "Diagram of I-D status")
+![Diagram of I-D status](id-diagram.png)
 
 There are also numerous books, book chapters, and other documents about
 IPv6. However, any source that is more than one or two years old is
@@ -4361,7 +4375,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date.
 
-RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
+RFCbib6 run at 2024-08-28 11:44:43 UTC+1200 (489 RFCs found)
 
 ### Standards Track (262 RFCs)
 
@@ -4977,7 +4991,7 @@ RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
   ([BCP 234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
-### Informational (187 RFCs)
+### Informational (188 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -5391,8 +5405,10 @@ RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
   over IPv6 for the Mobile User Plane
 - [RFC 9453](https://www.rfc-editor.org/info/rfc9453): Applicability and
   Use Cases for IPv6 over Networks of Resource-constrained Nodes (6lo)
+- [RFC 9637](https://www.rfc-editor.org/info/rfc9637): Expanding the
+  IPv6 Documentation Space
 
-### Experimental (23 RFCs)
+### Experimental (24 RFCs)
 
 - [RFC 4620](https://www.rfc-editor.org/info/rfc4620): IPv6 Node
   Information Queries
@@ -5446,6 +5462,8 @@ RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
   an IPv6 Next Hop in the Babel Routing Protocol
 - [RFC 9268](https://www.rfc-editor.org/info/rfc9268): IPv6 Minimum Path
   MTU Hop-by-Hop Option
+- [RFC 9631](https://www.rfc-editor.org/info/rfc9631): The IPv6 Compact
+  Routing Header (CRH)
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -5678,7 +5696,7 @@ Displayed thus:
 
 
 
-![x](example1.png "Start here, end here")
+![Start here, end here](example1.png)
 
 Example generated with *dia*:
 
@@ -5688,7 +5706,7 @@ Example generated with *dia*:
 
 
 
-![x](diag.png "Disk feeding tape")
+![Disk feeding tape](diag.png)
 
 Please add alternate text to help people with visual difficulties.
 
@@ -5718,9 +5736,9 @@ backslashpagebreak
 # book6 Main Index
 
 
-![x](book6logo.png "book6 logo")
+![book6 logo](book6logo.png)
 
-Generated at 2024-08-14 15:47:03 UTC+1200
+Generated at 2024-08-28 11:43:33 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6215,9 +6233,9 @@ backslashpagebreak
 # book6 Citation Index
 
 
-![x](book6logo.png "book6 logo")
+![book6 logo](book6logo.png)
 
-Generated at 2024-08-14 15:47:03 UTC+1200
+Generated at 2024-08-28 11:43:33 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6304,6 +6322,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC3810 ¶](#address-resolution)
 
 [RFC3828 ¶](#transport-protocols)
+
+[RFC3849 ¶](#addresses)
 
 [RFC3879 ¶](#addresses)
 
@@ -6641,6 +6661,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [¶](#status)
 
 [RFC9592 ¶](#addresses)
+
+[RFC9637 ¶](#addresses)
 
 [STD7 ¶](#transport-protocols)
 

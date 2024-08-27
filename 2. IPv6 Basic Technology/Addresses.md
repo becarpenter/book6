@@ -1,12 +1,12 @@
 ## Addresses
 
 A 128 bit address is big enough that, assuming the adoption of wise
-allocation policies, IPv6 will [never](https://m.xkcd.com/865/)
-run out of addresses. However, the
-reason for choosing 128 rather than 64 was not just that: it was also to
-allow for some intrinsic structure to addresses, as described below. On
-the other hand, a *fundamental* property of IPv6 unicast routing is that
-it is [based on all 128 bits](http://www.rfc-editor.org/info/bcp198),
+allocation policies, IPv6 will [never](https://m.xkcd.com/865/) run out
+of addresses. However, the reason for choosing 128 rather than 64 was
+not just that: it was also to allow for some intrinsic structure to
+addresses, as described below. On the other hand, a *fundamental*
+property of IPv6 unicast routing is that it is
+[based on all 128 bits](http://www.rfc-editor.org/info/bcp198),
 regardless of any internal structure. In other words, a unicast routing
 prefix is anywhere between 1 and 128 bits long. There is more about
 [routing](Routing.md) below.
@@ -68,10 +68,10 @@ cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
 RFC9592, and older documentation often uses uppercase hexadecimal.
 
-The choice of ':' as the separator is annoying in one particular aspect -
-where a colon has another meaning and works as a separator between
-address and port. This is quite common in (Web) URLs, that's why
-IPv6 addresses in URLs are in square brackets like this:
+The choice of ':' as the separator is annoying in one particular aspect
+\- where a colon has another meaning and works as a separator between
+address and port. This is quite common in (Web) URLs, that's why IPv6
+addresses in URLs are in square brackets like this:
 
 ```
 https://[2001:db8:4006:80b::200e]:443
@@ -312,7 +312,10 @@ Special-purpose IPv6 addresses and their registry are described in
 
 You may have noticed that many examples above use the prefix
 `2001:db8::/32`. That prefix is reserved for documentation and should
-never appear on the real Internet.
+never appear on the real Internet
+\[[RFC3849](https://www.rfc-editor.org/info/rfc3849)\]. For documenting
+examples that need a prefix shorter than /32, the prefix `3fff::/20` has
+been reserved \[[RFC9637](https://www.rfc-editor.org/info/rfc9637)\].
 
 ### Obsolete address types
 

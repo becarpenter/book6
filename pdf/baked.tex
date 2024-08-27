@@ -75,7 +75,11 @@
 
 \section{book6}\label{book6}
 
+\begin{figure}
+\centering
 \includegraphics{book6logo.png}
+\caption{}
+\end{figure}
 
 A collaborative IPv6 book.
 
@@ -89,14 +93,18 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2024-08-14 15:47:26 UTC+1200
+Version captured at 2024-08-28 11:45:47 UTC+1200
 
 \pagebreak
 
 \section{book6: A Collaborative IPv6
 Book.}\label{book6-a-collaborative-ipv6-book}
 
+\begin{figure}
+\centering
 \includegraphics{book6logo.png}
+\caption{book6 logo}
+\end{figure}
 
 This is the current list of contents. It will change as the book
 evolves. There is also an \hyperref[book6-main-index]{index}, and a
@@ -521,6 +529,10 @@ the conditions} and
 \href{https://github.com/becarpenter/book6/blob/main/99.\%20Chapter\%20Template/99.\%20Chapter\%20Template.md}{instructions}.
 Then submit GitHub PRs. Your contributions will be reviewed by an
 editorial team.
+
+There is a short
+\href{https://github.com/becarpenter/book6/blob/main/CODE_OF_CONDUCT.md}{code
+of conduct} for participants.
 
 \subsubsection{\texorpdfstring{\hyperref[how-to-keep-up-to-date]{Previous}
 \hyperref[acknowledgments]{Next}
@@ -1216,7 +1228,11 @@ Special-purpose IPv6 addresses and their registry are described in
 
 You may have noticed that many examples above use the prefix
 \texttt{2001:db8::/32}. That prefix is reserved for documentation and
-should never appear on the real Internet.
+should never appear on the real Internet
+{[}\href{https://www.rfc-editor.org/info/rfc3849}{RFC3849}{]}. For
+documenting examples that need a prefix shorter than /32, the prefix
+\texttt{3fff::/20} has been reserved
+{[}\href{https://www.rfc-editor.org/info/rfc9637}{RFC9637}{]}.
 
 \subsubsection{Obsolete address types}\label{obsolete-address-types}
 
@@ -2885,7 +2901,11 @@ overview and comparison of these technologies.
 
 The following figure illustrates such a scenario.
 
+\begin{figure}
+\centering
 \includegraphics{vasilenko-IPv4aaS.png}
+\caption{User devices connected to Internet via IPv6 infrastructure}
+\end{figure}
 
 \begin{itemize}
 \item
@@ -3301,12 +3321,12 @@ addresses configured on the link even if all ND exchange is monitored by
 the router. Hence, the router needs to request address resolution after
 the first packet of a new session is received from an external source.
 At the same time, the IPv6 link address space is huge (2\^{}64) by
-default. Hence, it is potentially possible to force the router (even
-from an external network) for address resolution a huge number of times.
-It is an effective DoS attack that has simple protection measures.
-\href{https://www.rfc-editor.org/info/rfc6583}{RFC 6583} discusses how
-to rate-limit the number of address resolution requests or minimize
-subnet size.
+default. Hence, it is potentially possible to force the router to
+perform address resolution a huge number of times (even from an external
+network). It is an effective DoS attack that has simple protection
+measures. \href{https://www.rfc-editor.org/info/rfc6583}{RFC 6583}
+discusses how to rate-limit the number of address resolution requests or
+minimize subnet size.
 
 ND heavily relies on multicast which may create problems in the wireless
 environment. See \hyperref[address-resolution]{2. Address resolution}
@@ -3314,7 +3334,7 @@ and
 \href{https://datatracker.ietf.org/doc/draft-vyncke-6man-mcast-not-efficient}{Multicast
 efficiency}. ND DoS activity may be effective for that reason but the
 attacker should be local to the link. Hence, perimeter security may
-help. The multicast storm is less of a problem in a wireline environment
+help. The multicast storm is less of a problem in a wired environment
 because of MLD snooping typically implemented on the link
 (\href{https://www.rfc-editor.org/info/rfc4541}{RFC 4541}).
 
@@ -3336,7 +3356,7 @@ Filtering is a big part of safe Internet connection. IPv6 filtering in
 general may be easy because of the hierarchical address plan. However,
 each filter almost always consumes four times more resources in
 products. This may affect scalability or performance, if equipment is
-underspecified.
+underprovisioned.
 
 The majority of practices do not change with IPv6 adoption:
 
@@ -3366,7 +3386,7 @@ The majority of practices do not change with IPv6 adoption:
   universal for IPv6 or IPv4.
 \item
   \href{https://www.rfc-editor.org/info/rfc5635}{Remote Triggered Black
-  Hole} is the same for IPv4 and IPv6, excapt that the prefix for IPv6
+  Hole} is the same for IPv4 and IPv6, except that the prefix for IPv6
   \href{https://www.rfc-editor.org/info/rfc6666}{100::/64} has been
   defined separately.
 \item
@@ -3388,8 +3408,8 @@ there is a desire to filter one subscriber it may be apprpriate to
 filter even shorter prefixes, such as a /56. It is recommended to filter
 /64 initially and then monitor the situation; if the problem persists,
 then filter /60, then /56. /48 is the maximum that may belong to an
-ordinary subscriber, so it cannot make sense to filter shorter prefixes
-than that to block a single subscriber.
+ordinary subscriber, so it does not make sense to filter shorter
+prefixes than that to block a single subscriber.
 
 The address plan design of an organization may be different, including
 /128 addresses with DHCPv6 configuration, but it is never possible to
@@ -3510,16 +3530,16 @@ document is significantly out of date.
 Another common architectural scenario entails dis-aggregating a GUA
 allocation, typically an RIR provided address block, and announcing only
 the part of the assignment requiring public access, leaving the prefix
-requiring obfuscation unannounced within the global DFZ. This model
-allows for a similar level of topology obscurement without the added
-configuration complexity and potentially inconsistent behavior of ULA or
-address translation. It should be noted, however, that while this design
-model does reduce complexity at the host and network layer, it may add
-minor routing complexity at the border and incur risk of unintentionally
-leaking the GUA prefix that has been earmarked for local-only use. In
-the latter case, use of a "belt and suspenders" implementation of
-creating route policy in addition to access control lists preventing
-prefix use is frequently employed.
+requiring obfuscation unannounced within the global DFZ (default free
+zone). This model allows for a similar level of topology obscurement
+without the added configuration complexity and potentially inconsistent
+behavior of ULA or address translation. It should be noted, however,
+that while this design model does reduce complexity at the host and
+network layer, it may add minor routing complexity at the border and
+incur risk of unintentionally leaking the GUA prefix that has been
+earmarked for local-only use. In the latter case, use of a "belt and
+suspenders" implementation of creating route policy in addition to
+access control lists preventing prefix use is frequently employed.
 
 \subsubsection{\texorpdfstring{\hyperref[filtering]{Previous}
 \hyperref[security]{Top}}{Previous Top}}\label{previous-top-3}
@@ -3534,7 +3554,7 @@ highest level of design decisions are identical to those for IPv4.
 
 There is one constraint that does not apply to IPv6: there is
 effectively no theoretical limit to the number of hosts per subnet.
-(Mathematically, there is a limit of about 18.1018 nodes on a /64
+(Mathematically, there is a limit of about 18.10\^{}18 nodes on a /64
 subnet, but this is of no practical concern.) However, most network
 designers will never place hundreds or thousands of hosts on a single
 subnet, for performance reasons.
@@ -3595,12 +3615,12 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-4}
 
 As you would expect, in IPv6 networks all nodes may have globally unique
 addresses. All networks will be given at least a /64 global prefix to
-operate. As for carriers, they should deliver a longer prefix to
-subscribers, so that they can have multiple /64 subnets within their
-organizations or home environments. Even a home customer can have a
-public network prefix to be split into smaller networks, which is a
-paradigm shift from ``hiding behind NAT" on a few public IPv4 addresses
-(or even inside \texttt{100.64.0.0/10}
+operate. Carriers should deliver a shorter prefix to their subscribers
+(typically in the range /48 through /56), which allows multiple /64
+subnets within subscriber organizations or home environments. Even a
+home customer can have a public network prefix to be split into smaller
+networks, which is a paradigm shift from ``hiding behind NAT'' on a few
+public IPv4 addresses (or even inside \texttt{100.64.0.0/10}
 {[}\href{https://www.rfc-editor.org/info/rfc6598}{RFC6598}{]}).
 
 In IPv6 networks, it is often necessary to manage received prefixes,
@@ -3627,7 +3647,7 @@ between them to work with. Keep in mind that there is no concern about
 exhaustion of IPv6 addresses(or prefixes), seeing that this single
 assignment for an autonomous system (ISP) gives the equivalent of the
 entire IPv4 Internet address space to work with. And this is not about
-unique addresses, but /64 network prefixes! As am analogy, a /64 prefix
+unique addresses, but /64 network prefixes! As an analogy, a /64 prefix
 would be the equivalent of leasing a public IPv4 address to a single
 network or subscriber. In this way, in IPv6 planning we can favor
 organization and clearer management instead of saving as many addresses
@@ -3646,10 +3666,16 @@ following example, we will use the technique known as \textbf{leftmost},
 to guarantee a more balanced distribution on all available space. Back
 to the example, consider our 32 bits where we can use the first 4 (one
 "nibble" or hexadecimal character) to assign sixteen regions, as 0 to F,
-resulting on a /36 per region. A region may be a data center,
-geographical area or a branching network. A. Region A - Main Datacenter
-B. Region B - City south C. Region B - City north So the first layer of
-our address plan may look like this:
+resulting in a /36 per region. A region may be a data center,
+geographical area or a branching network.
+
+\begin{verbatim}
+A. Region A - Main Datacenter
+B. Region B - City south
+C. Region C - City north
+\end{verbatim}
+
+So the first layer of our address plan may look like this:
 
 \begin{verbatim}
 2001:0db8:0000::/36 - Reserved
@@ -3674,7 +3700,7 @@ our address plan may look like this:
 assigned prefixes; this breaks the usual recommendation to use
 lowercase.)
 
-Each region have functional divisions that may earn one or more address
+Each region has functional divisions that may earn one or more address
 blocks. Each division could be for instance:
 
 \begin{enumerate}
@@ -3910,7 +3936,7 @@ Three main cases can be distinguished:
   an enterprise given a /48 prefix by its ISP might assign a /56 to each
   branch office and then assign /64 subnets as needed within each
   branch. The decision must then be taken whether to deploy SLAAC
-  throughout the network, or to use DHCPv6 \texttt{OPTION\_IA\_NA}for
+  throughout the network, or to use DHCPv6 \texttt{OPTION\_IA\_NA} for
   address assignment {[}\hyperref[managed-configuration]{2. Managed
   configuration}{]}. This choice has implications for both
   trouble-shooting and security incident management.
@@ -4001,10 +4027,10 @@ Some examples from experience:
   the network where the monitoring system was located had no IPv6.
 \item
   Web services with AAAA records {[}\hyperref[dns]{2. DNS}{]} and proper
-  configuration; monitoring said that everything okay, but users could
-  not access the web services via IPv6 from the Internet. Someone forgot
-  a firewall rule, and the monitoring system was on the inside of the
-  network.
+  configuration; monitoring indicated that everything was okay, but
+  users could not access the web services via IPv6 from the Internet.
+  Someone forgot a firewall rule, and the monitoring system was on the
+  inside of the network.
 \item
   Mail (SMTP) server with AAAA records. However, IPv6 was disabled (or
   blocked by a firewall) for whatever reason, but nobody removed the
@@ -4097,7 +4123,11 @@ values.)
 
 The following diagram shows the example:
 
+\begin{figure}
+\centering
 \includegraphics{multiPrefix.png}
+\caption{Routers and routing clouds as described above}
+\end{figure}
 
 If, for some reason, there is more than one subnet router on the subnet,
 the host can be informed which one to use as suggested in
@@ -4291,7 +4321,7 @@ not sufficiently resilient. It is clearly not sufficient for a large
 site, especially if it operates servers as well as client hosts.
 
 An approach that should avoid some of these help desk calls, but is not
-currently favored by the IETF, is to used dynamic network prefix
+currently favored by the IETF, is to use dynamic network prefix
 translation, known as NPTv6
 {[}\href{https://www.rfc-editor.org/info/rfc6296}{RFC6296}{]},
 {[}\hyperref[translation-and-ipv4-as-a-service]{3. Translation and IPv4
@@ -4449,7 +4479,11 @@ The \href{https://www.cern.ch}{CERN laboratory} and the
 Grid (WLCG)} are large users of IPv6 for massive data transfers. Some
 recent statistics are shown here:
 
+\begin{figure}
+\centering
 \includegraphics{CERN-IPv6-Feb24.png}
+\caption{Graph showing 644 Gb/s}
+\end{figure}
 
 (Image from the February 2024 data challenge at CERN.)
 
@@ -4520,7 +4554,11 @@ Regional Internet Registry (RIR) to show the number of the Internet IPv6
 users compared with the total Internet population (in million, see next
 table).
 
+\begin{figure}
+\centering
 \includegraphics{Section5_Table1.jpg}
+\caption{Table shows 25\% annual IPv6 growth 2018 to 2022}
+\end{figure}
 
 A third of the Internet population apparently employs IPv6. It is also
 interesting to look at the growth curve. The main indicator here is the
@@ -4550,7 +4588,11 @@ have an associated Autonous System Number (ASN).
 provides statistics on the evolution of IPv6 support across the ASNs in
 the world, as observed in the Internet routing tables.
 
+\begin{figure}
+\centering
 \includegraphics{Section5_Table2.jpg}
+\caption{Table shows 18\% annual IPv6 growth 2018 to 2022}
+\end{figure}
 
 The percentage of IPv6-capable ASNs is growing over the years, which is
 a good sign. On the other hand, the table does not distinguish the
@@ -4831,7 +4873,11 @@ important.
 
 Here\textquotesingle s an attempt to explain this with a diagram:
 
+\begin{figure}
+\centering
 \includegraphics{rfc-diagram.png}
+\caption{Diagram of RFC status}
+\end{figure}
 
 An important RFC is the latest version of
 \href{https://www.rfc-editor.org/info/bcp220}{IPv6 Node Requirements},
@@ -4868,7 +4914,11 @@ All I-Ds are open to comment and contain contact information. Feel free
 to email their authors or the relevant mailing list. This diagram gives
 an overview:
 
+\begin{figure}
+\centering
 \includegraphics{id-diagram.png}
+\caption{Diagram of I-D status}
+\end{figure}
 
 There are also numerous books, book chapters, and other documents about
 IPv6. However, any source that is more than one or two years old is
@@ -4931,7 +4981,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 \emph{cautious} about old Informational or Experimental RFCs - they may
 be misleading as well as out of date.
 
-RFCbib6 run at 2024-08-14 15:40:55 UTC+1200 (487 RFCs found)
+RFCbib6 run at 2024-08-28 11:44:43 UTC+1200 (489 RFCs found)
 
 \subsubsection{Standards Track (262
 RFCs)}\label{standards-track-262-rfcs}
@@ -5848,7 +5898,7 @@ RFCs)}\label{best-current-practice-15-rfcs}
   the Reaction of Customer Edge Routers to IPv6 Renumbering Events
 \end{itemize}
 
-\subsubsection{Informational (187 RFCs)}\label{informational-187-rfcs}
+\subsubsection{Informational (188 RFCs)}\label{informational-188-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -6461,9 +6511,12 @@ RFCs)}\label{best-current-practice-15-rfcs}
   \href{https://www.rfc-editor.org/info/rfc9453}{RFC 9453}:
   Applicability and Use Cases for IPv6 over Networks of
   Resource-constrained Nodes (6lo)
+\item
+  \href{https://www.rfc-editor.org/info/rfc9637}{RFC 9637}: Expanding
+  the IPv6 Documentation Space
 \end{itemize}
 
-\subsubsection{Experimental (23 RFCs)}\label{experimental-23-rfcs}
+\subsubsection{Experimental (24 RFCs)}\label{experimental-24-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -6542,6 +6595,9 @@ RFCs)}\label{best-current-practice-15-rfcs}
 \item
   \href{https://www.rfc-editor.org/info/rfc9268}{RFC 9268}: IPv6 Minimum
   Path MTU Hop-by-Hop Option
+\item
+  \href{https://www.rfc-editor.org/info/rfc9631}{RFC 9631}: The IPv6
+  Compact Routing Header (CRH)
 \end{itemize}
 
 \subsubsection{\texorpdfstring{\hyperref[further-reading]{Top}}{Top}}\label{top-2}
@@ -6789,7 +6845,11 @@ Embedded in markdown as a PNG file generated by
 
 Displayed thus:
 
+\begin{figure}
+\centering
 \includegraphics{example1.png}
+\caption{Start here, end here}
+\end{figure}
 
 Example generated with \emph{dia}:
 
@@ -6797,7 +6857,11 @@ Example generated with \emph{dia}:
 <img src="./diag.png" alt="Disk feeding tape">
 \end{verbatim}
 
+\begin{figure}
+\centering
 \includegraphics{diag.png}
+\caption{Disk feeding tape}
+\end{figure}
 
 Please add alternate text to help people with visual difficulties.
 
@@ -6828,9 +6892,13 @@ Section text goes here
 
 \section{book6 Main Index}\label{book6-main-index}
 
+\begin{figure}
+\centering
 \includegraphics{book6logo.png}
+\caption{book6 logo}
+\end{figure}
 
-Generated at 2024-08-14 15:47:03 UTC+1200
+Generated at 2024-08-28 11:43:33 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7200,9 +7268,13 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-11}
 
 \section{book6 Citation Index}\label{book6-citation-index}
 
+\begin{figure}
+\centering
 \includegraphics{book6logo.png}
+\caption{book6 logo}
+\end{figure}
 
-Generated at 2024-08-14 15:47:03 UTC+1200
+Generated at 2024-08-28 11:43:33 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -7287,6 +7359,8 @@ has links to each section that mentions each citation.
 \hyperref[address-resolution]{RFC3810 ¶}
 
 \hyperref[transport-protocols]{RFC3828 ¶}
+
+\hyperref[addresses]{RFC3849 ¶}
 
 \hyperref[addresses]{RFC3879 ¶}
 
@@ -7599,6 +7673,8 @@ has links to each section that mentions each citation.
 \hyperref[deployment-in-the-enterprise]{¶} \hyperref[status]{¶}
 
 \hyperref[addresses]{RFC9592 ¶}
+
+\hyperref[addresses]{RFC9637 ¶}
 
 \hyperref[transport-protocols]{STD7 ¶}
 
