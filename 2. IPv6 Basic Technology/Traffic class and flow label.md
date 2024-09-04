@@ -14,8 +14,8 @@ ISPs. [RFC 5127](https://www.rfc-editor.org/info/rfc5127),
 [RFC 4594](https://www.rfc-editor.org/info/rfc4594),
 [RFC 5865](https://www.rfc-editor.org/info/rfc5865),
 [RFC 8622](https://www.rfc-editor.org/info/rfc8622) and
-[RFC 8837](https://www.rfc-editor.org/info/rfc8837) also describe current
-practice.
+[RFC 8837](https://www.rfc-editor.org/info/rfc8837) also describe
+current practice.
 
 ECN is intended for use by transport protocols to support congestion
 control.
@@ -34,4 +34,4 @@ and
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Extension%20headers%20and%20options.md) [<ins>Next</ins>](Source%20and%20Destination%20Address%20Selection.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Extension%20headers%20and%20options.md) [<ins>Next</ins>](Source%20and%20Destination%20Address%20Selection.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)

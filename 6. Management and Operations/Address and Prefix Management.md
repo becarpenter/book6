@@ -4,8 +4,8 @@ Three main cases can be distinguished:
 
 1. Unmanaged networks will generally use stateless address
    autoconfiguration (SLAAC,
-   [RFC 4862](https://www.rfc-editor.org/info/rfc4862)) within the subnet
-   prefix(es) assigned to them by a service provider. This is in
+   [RFC 4862](https://www.rfc-editor.org/info/rfc4862)) within the
+   subnet prefix(es) assigned to them by a service provider. This is in
    contrast to IPv4 practice, where DHCP is automatically configured in
    most unmanaged networks.
 
@@ -87,4 +87,4 @@ DNS.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](Remote%20configuration.md) [<ins>Chapter Contents</ins>](6.%20Management%20and%20Operations.md)
+### [<ins>Next</ins>](Remote%20configuration.md) [<ins>Top</ins>](6.%20Management%20and%20Operations.md)

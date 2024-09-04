@@ -31,8 +31,8 @@ or have an existing input field in your application that is too small.
 Also, regular expressions for validating IP addresses are different. As
 you will learn later in this book there are different types of IPv6
 addresses and several ways to write them. Make sure your application
-only accepts the correct type of addresses and is also not too strict
-by only accepting one format. Users want to use copy-and-paste or
+only accepts the correct type of addresses and is also not too strict by
+only accepting one format. Users want to use copy-and-paste or
 automation and the input format of an IP address may not always be what
 your application expects. Always remember: "Be conservative in what you
 do, be liberal in what you accept from others". And it's probably always
@@ -43,14 +43,13 @@ in your code. Always make them configurable and if possible use FQDNs
 (DNS names) instead of IP addresses.
 
 Address types are discussed further in
-[2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md). 
-Address _selection_ is discussed
+[2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md). Address
+_selection_ is discussed
 [here](../2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md).
-How
-applications relate to a mixture of IPv4 and IPv6 addresses is also
+How applications relate to a mixture of IPv4 and IPv6 addresses is also
 discussed in
 [3. Dual stack scenarios](../3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md).
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](How%20a%20user%20sees%20IPv6.md) [<ins>Next</ins>](How%20a%20network%20operations%20center%20sees%20IPv6.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
+### [<ins>Previous</ins>](How%20a%20user%20sees%20IPv6.md) [<ins>Next</ins>](How%20a%20network%20operations%20center%20sees%20IPv6.md) [<ins>Top</ins>](1.%20Introduction%20and%20Foreword.md)

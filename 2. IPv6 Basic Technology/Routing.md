@@ -103,11 +103,12 @@ tables to require much more memory space. While this is true, IPv6 was
 designed for classless route aggregation from the beginning, which
 generally permits there to be fewer IPv6 prefixes, mitigating the table
 size issue. (Nevertheless, the BGP-4 table for IPv6 continues to grow,
-as discussed in [this CCR paper](https://dl.acm.org/doi/10.1145/3477482.3477490).)
-Interested readers can find exhaustive data on BGP-4 table
-sizes at [Geoff Huston's site](https://bgp.potaroo.net/index-bgp.html).
-For a deep dive on BGP-4 itself, with much focus on IPv6, see the e-book
-by Iljitsch van Beijnum:
+as discussed in
+[this CCR paper](https://dl.acm.org/doi/10.1145/3477482.3477490).)
+Interested readers can find exhaustive data on BGP-4 table sizes at
+[Geoff Huston's site](https://bgp.potaroo.net/index-bgp.html). For a
+deep dive on BGP-4 itself, with much focus on IPv6, see the e-book by
+Iljitsch van Beijnum:
 [Internet Routing with BGP](https://www.iljitsch.com/2022/11-18-new-e-book-internet-routing-with-bgp.html)
 (2022).
 
@@ -116,8 +117,9 @@ As explained in
 IPv6 routing generally works independently of IPv4 routing, which was
 indeed a fundamental design choice. However, if necessary, encapsulated
 IPv4 traffic can be carried over an IPv6-only path. To enable this,
-multiprotocol BGP-4 has provisions to advertise IPv4 reachability over an
-IPv6-only path \[[RFC8950](https://www.rfc-editor.org/info/rfc8950)\].
+multiprotocol BGP-4 has provisions to advertise IPv4 reachability over
+an IPv6-only path
+\[[RFC8950](https://www.rfc-editor.org/info/rfc8950)\].
 
 Finally, IPv6 allows routing headers, interpreted by intermediate nodes
 along a packet's path. These are briefly explained in
@@ -125,4 +127,4 @@ along a packet's path. These are briefly explained in
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](DNS.md) [<ins>Next</ins>](Transport%20protocols.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](DNS.md) [<ins>Next</ins>](Transport%20protocols.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)

@@ -8,11 +8,12 @@ usually to provide redundancy in case of failures. The phrase
 the problems in achieving MHMP using multiple address prefixes. This
 section discusses practical techniques for site multihoming.
 
-Domestic or very small office installations are out of scope for this topic. They
-are rarely connected permanently to more than one ISP, and therefore cannot
-expect smooth failover. They might have an alternative connection
-(e.g., a wireless hot spot instead of a terrestrial connection) but the
-changeover would amount to a network restart and would likely be manual.
+Domestic or very small office installations are out of scope for this
+topic. They are rarely connected permanently to more than one ISP, and
+therefore cannot expect smooth failover. They might have an alternative
+connection (e.g., a wireless hot spot instead of a terrestrial
+connection) but the changeover would amount to a network restart and
+would likely be manual.
 
 Note that the term "multihoming" is sometimes used to describe a
 configuration _inside_ a site network where a node is connected to more
@@ -43,9 +44,9 @@ Internet, and arrange for both of them to advertise a BGP-4 route to
 that prefix.
 
 A /48 prefix provides the theoretical capacity for more than 65 thousand
-subnets. However, extremely large enterprises can obtain prefixes shorter
-than /48 from one of the address registries, if they provide an adequate
-technical justification.
+subnets. However, extremely large enterprises can obtain prefixes
+shorter than /48 from one of the address registries, if they provide an
+adequate technical justification.
 
 Internal routing must be arranged to direct traffic as required, using
 routing metrics that favor one ISP or another, or spread the load, as
@@ -108,10 +109,10 @@ translation, known as NPTv6
 In this model, a translator is placed at the site exit router towards
 each ISP. Outgoing and incoming packets are translated to and from
 appropriate PA addresses. The routeable prefix part of each address is
-changed, and possibly some bits in the IID, in a way that avoids transport
-checksum errors. This translation is stateless and reversible, so causes
-much less difficulty than traditional NAT; no port translation is
-needed.
+changed, and possibly some bits in the IID, in a way that avoids
+transport checksum errors. This translation is stateless and reversible,
+so causes much less difficulty than traditional NAT; no port translation
+is needed.
 
 To simplify the translation processs, internal hosts (both clients and
 servers) would be assigned Unique Local Addresses (ULAs)
@@ -145,15 +146,14 @@ not share all the disadvantages of IPv4 NAT. As discussed in RFC 6296,
 Of course, NPTv6 retains some of the disadvantages of NAT: all of the
 problems that directly follow from having different IP addresses at the
 two ends of a connection. Section 5 of
-[RFC 6296](https://www.rfc-editor.org/info/rfc6296) discusses this.
-Any site running NPTv6 must either deal with
-these problems, or avoid any affected applications. In particular,
-SIP (Session Initiation Protocol for IP telephony) will not work without
-the support of a proxy mechanism 
-\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)]
-as well as provision for IPv6/IPv4 coexistence
-\[[RFC6157](https://www.rfc-editor.org/info/rfc6157)].
-This limits the applicability of NPTv6.
+[RFC 6296](https://www.rfc-editor.org/info/rfc6296) discusses this. Any
+site running NPTv6 must either deal with these problems, or avoid any
+affected applications. In particular, SIP (Session Initiation Protocol
+for IP telephony) will not work without the support of a proxy mechanism
+\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)\] as well as
+provision for IPv6/IPv4 coexistence
+\[[RFC6157](https://www.rfc-editor.org/info/rfc6157)\]. This limits the
+applicability of NPTv6.
 
 ### Transport layer solutions
 
@@ -168,4 +168,4 @@ multipath solutions. Discussion continues in the IETF.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Multi-prefix%20operation.md) [<ins>Next</ins>](Energy%20consumption.md) [<ins>Chapter Contents</ins>](6.%20Management%20and%20Operations.md)
+### [<ins>Previous</ins>](Multi-prefix%20operation.md) [<ins>Next</ins>](Energy%20consumption.md) [<ins>Top</ins>](6.%20Management%20and%20Operations.md)

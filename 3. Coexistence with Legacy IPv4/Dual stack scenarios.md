@@ -57,16 +57,17 @@ devices do exist, e.g.
 [Thread](https://www.threadgroup.org/What-is-Thread/Overview) devices,
 and more are to be expected in future. This situation requires a
 translation mechanism, such as NAT64 + DNS64 (see
-\[[Translation and IPv4 as a service](Translation%20and%20IPv4%20as%20a%20service.md)\]), which will allow IPv6 only devices,
-on a dual stack network, to access IPv4 hosts. Typically, dual stack
-clients on the same network will also use NAT64 (instead of
+\[[Translation and IPv4 as a service](Translation%20and%20IPv4%20as%20a%20service.md)\]),
+which will allow IPv6 only devices, on a dual stack network, to access
+IPv4 hosts. Typically, dual stack clients on the same network will also
+use NAT64 (instead of
 [RFC 1918](https://www.rfc-editor.org/info/rfc1918) addresses and NAT44)
 to access IPv4 only hosts, but they are using NAT either way. See this
 helpful
 [blog article](https://sgryphon.gamertheory.net/2022/12/14/running-nat64-in-a-dual-stack-network/).
 
-A specific issue is that SIP (Session Initiation Protocol for IP telephony)
-will not work without provision for IPv6/IPv4 coexistence
+A specific issue is that SIP (Session Initiation Protocol for IP
+telephony) will not work without provision for IPv6/IPv4 coexistence
 \[[RFC6157](https://www.rfc-editor.org/info/rfc6157)\].
 
 Although Dual-Stack provides advantages in the initial phase of
@@ -118,27 +119,29 @@ disabled or is diminished enough that it can be removed.
 One operational glitch has been observed in this scenario. If a host
 that supports DHCP option 108 has any kind of misconfiguration that
 prevents IPv6 from working properly, it can enter a state where it
-disables IPv4 but has no IPv6 connectivity either. For example, if
-a host's intrinsic firewall is configured to block incoming ICMPv6
-and IPv6 packets, yet the host respects option 108, it will fail
-to connect to either version of IP when it encounters an IPv6-mostly
-network. This misconfiguration has been observed in laptop computers
-with a mandatory corporate security configuration, when they roam to
-an IPv6-mostly network outside the corporate network.
+disables IPv4 but has no IPv6 connectivity either. For example, if a
+host's intrinsic firewall is configured to block incoming ICMPv6 and
+IPv6 packets, yet the host respects option 108, it will fail to connect
+to either version of IP when it encounters an IPv6-mostly network. This
+misconfiguration has been observed in laptop computers with a mandatory
+corporate security configuration, when they roam to an IPv6-mostly
+network outside the corporate network.
 
-Apart from this problem, controlled and deliberate migration
-via IPv6-mostly allows the operating system to
-decide how much or how little it can support without needing input from
-the user, making the network fit the capabilities of the host, thus
-lowering the risk of incompatibility (and lowering the rate of problem
-reports). Like most existing IPv6-only networks, IPv6-mostly will
-nevertheless require packet and DNS translation services
-([discussed later](Translation%20and%20IPv4%20as%20a%20service.md)) as well as knowledge of the IPv6
-prefix used for translation ([ditto](Translation%20and%20IPv4%20as%20a%20service.md)). With these
+Apart from this problem, controlled and deliberate migration via
+IPv6-mostly allows the operating system to decide how much or how little
+it can support without needing input from the user, making the network
+fit the capabilities of the host, thus lowering the risk of
+incompatibility (and lowering the rate of problem reports). Like most
+existing IPv6-only networks, IPv6-mostly will nevertheless require
+packet and DNS translation services
+([discussed later](Translation%20and%20IPv4%20as%20a%20service.md)) as
+well as knowledge of the IPv6 prefix used for translation
+([ditto](Translation%20and%20IPv4%20as%20a%20service.md)). With these
 features suppported, hosts on an IPv6-mostly network will have a full
 suite of capabilities.
 
-There is a great deployment report on IPv6-mostly [at a large conference](https://nsrc.org/blog/apricot-ipv6-only).
+There is a great deployment report on IPv6-mostly
+[at a large conference](https://nsrc.org/blog/apricot-ipv6-only).
 
 ### The need for IPv4 as a service
 
@@ -171,7 +174,8 @@ least between the interfaces of the Provider Edge (PE) nodes and
 Customer Edge (CE) node (or the Broadband Network Gateway (BNG)). As
 further mentioned in [Tunnels](Tunnels.md), tunneling provides a way to
 use an existing IPv4 infrastructure to carry IPv6 traffic. There are
-also translation options described in [Translation and IPv4 as a service](Translation%20and%20IPv4%20as%20a%20service.md).
+also translation options described in
+[Translation and IPv4 as a service](Translation%20and%20IPv4%20as%20a%20service.md).
 This approach with IPv6-only overlay helps to maintain compatibility
 with the existing base of IPv4, but it is not a long-term solution
 
@@ -215,4 +219,4 @@ also gives more detail on IPv4aaS.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](Tunnels.md) [<ins>Chapter Contents</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)
+### [<ins>Next</ins>](Tunnels.md) [<ins>Top</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)

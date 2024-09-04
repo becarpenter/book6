@@ -22,8 +22,8 @@ address. This is defined in
 [RFC 4291](https://www.rfc-editor.org/info/rfc4291), but explained in
 [RFC 4861](https://www.rfc-editor.org/info/rfc4861). Neighbor
 Solicitation is a specific form of ICMPv6 message; ICMPv6 is defined in
-[RFC 8200](https://www.rfc-editor.org/info/rfc8200). Since this is a link
-local multicast, such messages never escape the local link.
+[RFC 8200](https://www.rfc-editor.org/info/rfc8200). Since this is a
+link local multicast, such messages never escape the local link.
 
 All IPv6 nodes **MUST** monitor multicasts sent to the solicited-node
 multicast address. When B receives the Neighbor Solicitation from A, it
@@ -40,8 +40,8 @@ detail should consult
 This mechanism works well on a small scale, and it was designed with
 full knowledge of the "ARP storms" experienced on large bridged
 Ethernets running IPv4. However, it can cause significant multicast
-overloads on large bridged WiFi networks, and is made worse by the
-need for duplicate address detection (DAD) described in the next section.
+overloads on large bridged WiFi networks, and is made worse by the need
+for duplicate address detection (DAD) described in the next section.
 Multicast is badly supported by large WiFi networks, as discussed in
 [RFC 9119](https://www.rfc-editor.org/info/rfc9119) and in Section 4.2.1
 of [RFC 5757](https://www.rfc-editor.org/info/rfc5757). As an absolute
@@ -88,4 +88,4 @@ might be applied more generally in future.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Layer%202%20functions.md) [<ins>Next</ins>](Auto-configuration.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Layer%202%20functions.md) [<ins>Next</ins>](Auto-configuration.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)

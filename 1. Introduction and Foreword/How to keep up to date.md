@@ -26,4 +26,4 @@ Also see the
 [Further Reading](../20.%20Further%20Reading/20.%20Further%20Reading.md)
 chapter for more explanation about RFCs and for other resources.
 
-### [<ins>Previous</ins>](How%20a%20network%20operations%20center%20sees%20IPv6.md) [<ins>Next</ins>](How%20to%20contribute.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
+### [<ins>Previous</ins>](How%20a%20network%20operations%20center%20sees%20IPv6.md) [<ins>Next</ins>](How%20to%20contribute.md) [<ins>Top</ins>](1.%20Introduction%20and%20Foreword.md)

@@ -75,7 +75,8 @@ Even with backup routes in place, there may be a problem if user client
 sessions originating *within* the enterprise use IPv6 source addresses
 under a failing PA prefix. This will happen unless the host is somehow
 caused to deprecate such source addresses, so that the algorithm of
-[RFC 6724](https://www.rfc-editor.org/info/rfc6724) will not select them.
+[RFC 6724](https://www.rfc-editor.org/info/rfc6724) will not select
+them.
 
 An additional technique that has been suggested is for a site to deploy
 _conditional_ router advertisements
@@ -123,4 +124,4 @@ for its ULA, the latter only being present in local split-horizon DNS.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Security%20operation.md) [<ins>Next</ins>](Multihoming.md) [<ins>Chapter Contents</ins>](6.%20Management%20and%20Operations.md)
+### [<ins>Previous</ins>](Security%20operation.md) [<ins>Next</ins>](Multihoming.md) [<ins>Top</ins>](6.%20Management%20and%20Operations.md)

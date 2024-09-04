@@ -10,10 +10,10 @@ Some examples from experience:
 
 - Web services with AAAA records
   \[[2. DNS](../2.%20IPv6%20Basic%20Technology/DNS.md)\] and proper
-  configuration; monitoring indicated that everything was okay, but users could
-  not access the web services via IPv6 from the Internet. Someone forgot
-  a firewall rule, and the monitoring system was on the inside of the
-  network.
+  configuration; monitoring indicated that everything was okay, but
+  users could not access the web services via IPv6 from the Internet.
+  Someone forgot a firewall rule, and the monitoring system was on the
+  inside of the network.
 
 - Mail (SMTP) server with AAAA records. However, IPv6 was disabled (or
   blocked by a firewall) for whatever reason, but nobody removed the
@@ -34,4 +34,4 @@ processes. It may also be an oportunity to implement more automation.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Remote%20configuration.md) [<ins>Next</ins>](Routing%20operation.md) [<ins>Chapter Contents</ins>](6.%20Management%20and%20Operations.md)
+### [<ins>Previous</ins>](Remote%20configuration.md) [<ins>Next</ins>](Routing%20operation.md) [<ins>Top</ins>](6.%20Management%20and%20Operations.md)

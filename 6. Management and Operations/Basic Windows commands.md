@@ -6,4 +6,4 @@ later.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Energy%20consumption.md) [<ins>Chapter Contents</ins>](6.%20Management%20and%20Operations.md)
+### [<ins>Previous</ins>](Energy%20consumption.md) [<ins>Next</ins>](../7.%20Case%20Studies/7.%20Case%20Studies.md) [<ins>Top</ins>](6.%20Management%20and%20Operations.md)

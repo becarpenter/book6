@@ -87,4 +87,4 @@ user activity, for the same reason that it protects privacy.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](Filtering.md) [<ins>Chapter Contents</ins>](4.%20Security.md)
+### [<ins>Next</ins>](Filtering.md) [<ins>Top</ins>](4.%20Security.md)

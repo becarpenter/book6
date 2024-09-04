@@ -48,4 +48,4 @@ gaps. Interested readers can study a 125 page
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Dual%20stack%20scenarios.md) [<ins>Next</ins>](Translation%20and%20IPv4%20as%20a%20service.md) [<ins>Chapter Contents</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)
+### [<ins>Previous</ins>](Dual%20stack%20scenarios.md) [<ins>Next</ins>](Translation%20and%20IPv4%20as%20a%20service.md) [<ins>Top</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)

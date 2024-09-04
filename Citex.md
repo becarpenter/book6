@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-08-28 11:43:33 UTC+1200
+Generated at 2024-09-05 11:09:10 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->

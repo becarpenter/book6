@@ -30,6 +30,10 @@ and inter-chapter links as far as possible."""
 # Version: 2024-01-01 - changed default text for empty sections
 # Version: 2024-04-12 - improved optics of RFC citations
 # Version: 2024-04-28 - handle directory on command line
+# Version: 2024-09-25 - insert section links in contents page
+#                     - rename "Chapter Contents" link as "Top"
+#                     - add next chapter links to last sections
+
 
 ########################################################
 # Copyright (C) 2022-2024 Brian E. Carpenter.                  
@@ -184,7 +188,7 @@ def link_text(prev, nxt, chapter):
         part1 = " [<ins>Previous</ins>]("+prev.replace(" ","%20")+".md)"
     if nxt:
         part2 = " [<ins>Next</ins>]("+nxt.replace(" ","%20")+".md)"     
-    return "###"+part1+part2+" [<ins>Chapter Contents</ins>]("+chapter.replace(" ","%20")+".md)"
+    return "###"+part1+part2+" [<ins>Top</ins>]("+chapter.replace(" ","%20")+".md)"
 
 link_warn = "<!-- Link lines generated automatically; do not delete -->\n"
 
@@ -467,7 +471,7 @@ contents = rf("Contents.md")
 ######### Scan contents and decorate any plain chapter headings
 
 #Get rid of blank lines in the working copy
-contents[:] = (l for l in contents if l != "\n")
+contents[:] = (l for l in contents if l.strip(" ") != "\n")
 
 for i in range(len(contents)):
     l = contents[i]
@@ -483,6 +487,10 @@ for i in range(len(contents)):
         url_frag = l.replace(" ","%20")
         l = "["+l+"]("+url_frag+"/"+url_frag+".md)\n"
         contents[i] = l
+    elif l.startswith("* ["):
+        # Found a contents entry with a link; simplify to plain name
+        l, _ = l.split("]", maxsplit=1)
+        contents[i] = l.replace("[", "") + "\n"
         
 ######### Scan contents and create any missing directories,
 ######### build chapter list, extract sections lists
@@ -548,11 +556,23 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                 #found a section name to remove
                 del contents[contentx]
             else:
+                if cline.startswith("[") and cline[1].isdigit():
+                    #this must be the next chapter, we'll need the link later
+                    _, nextch = cline.split("(", maxsplit=1)
+                    nextch = "../" + nextch.replace(".md)\n", "")
+                else:
+                    nextch = None
                 break
         #old sections have gone, contentx points where the
-        #new sections belong
+        #new sections belong.
+
+        #Insert section names and links in contente
         for sname in base_names:
-            contents[contentx:contentx] = ["* "+sname+"\n"]
+            # Note that this assumes no file name case discrepancies
+            link = dname + "/" + sname + ".md)"
+            link = link.replace(" ", "%20")
+            link = "[" + sname + "](" + link
+            contents[contentx:contentx] = ["* " + link + "\n"]
             contentx += 1
         contentx -= 1 #so that the outer loop search doesn't skip a line
             
@@ -654,7 +674,7 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
                 previous = sorted_file_names[bx-1]
             #is there a subsequent topic?
             if bx == len(base_names)-1:
-                nxt = None
+                nxt = nextch #link to next chapter, if available
             else:
                 nxt = sorted_file_names[bx+1] 
             link_line = link_text(previous, nxt, dname)

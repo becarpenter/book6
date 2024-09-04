@@ -71,17 +71,18 @@ The primary differences are:
 The list above is not comprehensive, but the other differences are
 probably smaller.
 
-An obvious question is: With all these differences, what is the difference
-in performance between IPv6 and IPv4? There is no simple answer to this
-question. Since the IPv6 packet header is 20 bytes larger than for IPv4,
-the raw payload throughput of a link carrying full sized IPv6 packets
-is slightly less than for IPv4 (about 1.3% less for 1500 byte packets).
-However, many other factors come into play and measurements
-often show better end-to-end performance for IPv6. For example,
-in most countries [Google statistics](https://www.google.com/intl/en/ipv6/statistics.html#tab=per-country-ipv6-adoption)
-show lower latency (transit time) for IPv6. The safest summary
-is that there is no significant performance difference.
+An obvious question is: With all these differences, what is the
+difference in performance between IPv6 and IPv4? There is no simple
+answer to this question. Since the IPv6 packet header is 20 bytes larger
+than for IPv4, the raw payload throughput of a link carrying full sized
+IPv6 packets is slightly less than for IPv4 (about 1.3% less for 1500
+byte packets). However, many other factors come into play and
+measurements often show better end-to-end performance for IPv6. For
+example, in most countries
+[Google statistics](https://www.google.com/intl/en/ipv6/statistics.html#tab=per-country-ipv6-adoption)
+show lower latency (transit time) for IPv6. The safest summary is that
+there is no significant performance difference.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Obsolete%20techniques.md) [<ins>Chapter Contents</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)
+### [<ins>Previous</ins>](Obsolete%20techniques.md) [<ins>Next</ins>](../4.%20Security/4.%20Security.md) [<ins>Top</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)

@@ -2,13 +2,12 @@
 
 As you would expect, in IPv6 networks all nodes may have globally unique
 addresses. All networks will be given at least a /64 global prefix to
-operate. Carriers should deliver a shorter prefix to their
-subscribers (typically in the range /48 through /56), which allows
-multiple /64 subnets within subscriber
-organizations or home environments. Even a home customer can have a
-public network prefix to be split into smaller networks, which is a
-paradigm shift from “hiding behind NAT” on a few public IPv4 addresses
-(or even inside `100.64.0.0/10`
+operate. Carriers should deliver a shorter prefix to their subscribers
+(typically in the range /48 through /56), which allows multiple /64
+subnets within subscriber organizations or home environments. Even a
+home customer can have a public network prefix to be split into smaller
+networks, which is a paradigm shift from “hiding behind NAT” on a few
+public IPv4 addresses (or even inside `100.64.0.0/10`
 \[[RFC6598](https://www.rfc-editor.org/info/rfc6598)\]).
 
 In IPv6 networks, it is often necessary to manage received prefixes,
@@ -172,8 +171,9 @@ that covers subnet and addressing design (also available from
 [APNIC](https://blog.apnic.net/2023/04/04/ipv6-architecture-and-subnetting-guide-for-network-engineers-and-operators/)).
 
 Although quite old, the following book may be helpful:
-[IPv6 Address Planning](https://www.oreilly.com/library/view/ipv6-address-planning/9781491908211/) by Tom Coffeen.
+[IPv6 Address Planning](https://www.oreilly.com/library/view/ipv6-address-planning/9781491908211/)
+by Tom Coffeen.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Chapter Contents</ins>](5.%20Network%20Design.md)
+### [<ins>Next</ins>](../6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md) [<ins>Top</ins>](5.%20Network%20Design.md)

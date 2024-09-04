@@ -1,20 +1,18 @@
 ## Why version 6
 
-This section is mainly historical.
-Cutting a long story short, IPv6 was designed in the early 1990s because
-people knew that IPv4 was destined to run out of addresses. But why is
-the version number 6?
+This section is mainly historical. Cutting a long story short, IPv6 was
+designed in the early 1990s because people knew that IPv4 was destined
+to run out of addresses. But why is the version number 6?
 
 Some people ask why IPv4 went to version 6, leaping the next number.
 This was _not_ related to the programmer's superstition where odd
-numbers should be beta releases.
-Maybe we should start by asking why IPv4 was version 4. Stated simply,
-that was because versions 0 through 3 were assigned in 1977 and 1978
-during the evolution from ARPANET to TCP/IP. So version 4
-was the next number available for use in the final design
-[RFC 791](https://www.rfc-editor.org/info/rfc791). A rather more subtle
-explanation is given by the late Danny Cohen, one of the pioneers involved,
-at 38 minutes and 26 seconds into the video
+numbers should be beta releases. Maybe we should start by asking why
+IPv4 was version 4. Stated simply, that was because versions 0 through 3
+were assigned in 1977 and 1978 during the evolution from ARPANET to
+TCP/IP. So version 4 was the next number available for use in the final
+design [RFC 791](https://www.rfc-editor.org/info/rfc791). A rather more
+subtle explanation is given by the late Danny Cohen, one of the pioneers
+involved, at 38 minutes and 26 seconds into the video
 [A Brief Prehistory of Voice over IP](http://www.securitytube.net/video/1978).
 
 So why not IPv5? The answer is quite simple. The number 5 in the version
@@ -26,8 +24,8 @@ that demand quality of service. As IP datagrams are delivered on a “best
 effort” basis, the ST proposals were more like ATM networks, using
 stateful relationships, queuing and much more. Each ST flow would hold
 connection state and dynamic controls to ensure quality of service. As
-we can see in [RFC 1190](https://www.rfc-editor.org/info/rfc1190), the ST
-header is completely different from IPv4, except for the very first
+we can see in [RFC 1190](https://www.rfc-editor.org/info/rfc1190), the
+ST header is completely different from IPv4, except for the very first
 field where is the version number 5:
 
 ```
@@ -82,8 +80,8 @@ version number is still assigned, so it would not make sense for the
 __next generation IP__ to carry that number, so it was “skipped”. The
 number 6 would only appear a few years later in an “Assigned numbers”
 update \[[RFC1700](https://www.rfc-editor.org/info/rfc1700)\], then
-named as "Simple Internet Protocol" (SIP). This acronym has
-been recycled for the Session Initiation Protocol.
+named as "Simple Internet Protocol" (SIP). This acronym has been
+recycled for the Session Initiation Protocol.
 
 ```
 Assigned Internet Version Numbers
@@ -105,23 +103,22 @@ Decimal   Keyword    Version                            References
 Note that IANA had assigned numbers 6 through 9 for the then
 “competitors” of what became IPv6. Number 7 was chosen for TP/IX
 \[[RFC1475](https://www.rfc-editor.org/info/rfc1475)\], as its designer
-expected ST version 2 would use number 6, which did not happen.
-But unexpectedly, a different "IPv7" proposal was announced
-during the Internet Society's INET conference in Kobe, Japan,
-in June 1992, by IAB members. There was no
-consensus among IETF engineers at that time about the new protocol, and
-some IAB members proposed using ISO/OSI's CLNP - designating it as IPv7
-without a formal IANA assignment. This caused some discomfort in the Internet
-community and became known in technical circles as the “Kobe incident”.
-Numbers 8 and 9 were used by proposals that came to be merged into
-IPv6's ultimate design. As the lowest number available after 4, and
-already used by the same author's SIP, number 6 was kept for the first
-official specification in
+expected ST version 2 would use number 6, which did not happen. But
+unexpectedly, a different "IPv7" proposal was announced during the
+Internet Society's INET conference in Kobe, Japan, in June 1992, by IAB
+members. There was no consensus among IETF engineers at that time about
+the new protocol, and some IAB members proposed using ISO/OSI's CLNP -
+designating it as IPv7 without a formal IANA assignment. This caused
+some discomfort in the Internet community and became known in technical
+circles as the “Kobe incident”. Numbers 8 and 9 were used by proposals
+that came to be merged into IPv6's ultimate design. As the lowest number
+available after 4, and already used by the same author's SIP, number 6
+was kept for the first official specification in
 [RFC 1883](https://www.rfc-editor.org/info/rfc1883). Therefore, do not
-expect IP versions 7 or 8 in the future, nor even 9 that also belongs
-to an April fool's day joke
+expect IP versions 7 or 8 in the future, nor even 9 that also belongs to
+an April fool's day joke
 \[[RFC1606](https://www.rfc-editor.org/info/rfc1606)\].
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Acknowledgments.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
+### [<ins>Previous</ins>](Acknowledgments.md) [<ins>Next</ins>](../2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md) [<ins>Top</ins>](1.%20Introduction%20and%20Foreword.md)

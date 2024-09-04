@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-08-28 11:45:47 UTC+1200
+Version captured at 2024-09-05 11:09:54 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -41,78 +41,77 @@ and a [citation index](#book6-citation-index).
 # List of Contents
 
 [1. Introduction](#introduction-and-foreword)
-* Foreword
-* How to use this book
-* How a user sees IPv6
-* How an application programmer sees IPv6
-* How a network operations center sees IPv6
-* How to keep up to date
-* How to contribute
-* Acknowledgments
-* Why version 6
- 
+* [Foreword](#foreword)
+* [How to use this book](#how-to-use-this-book)
+* [How a user sees IPv6](#how-a-user-sees-ipv6)
+* [How an application programmer sees IPv6](#how-an-application-programmer-sees-ipv6)
+* [How a network operations center sees IPv6](#how-a-network-operations-center-sees-ipv6)
+* [How to keep up to date](#how-to-keep-up-to-date)
+* [How to contribute](#how-to-contribute)
+* [Acknowledgments](#acknowledgments)
+* [Why version 6](#why-version-6)
 
 [2. IPv6 Basic Technology](#ipv6-basic-technology)
-* Packet Format
-* Addresses
-* Layer 2 functions
-* Address resolution
-* Auto-configuration
-* Managed configuration
-* DNS
-* Routing
-* Transport protocols
-* Extension headers and options
-* Traffic class and flow label
-* Source and Destination Address Selection
+* [Packet Format](#packet-format)
+* [Addresses](#addresses)
+* [Layer 2 functions](#layer-2-functions)
+* [Address resolution](#address-resolution)
+* [Auto-configuration](#auto-configuration)
+* [Managed configuration](#managed-configuration)
+* [DNS](#dns)
+* [Routing](#routing)
+* [Transport protocols](#transport-protocols)
+* [Extension headers and options](#extension-headers-and-options)
+* [Traffic class and flow label](#traffic-class-and-flow-label)
+* [Source and Destination Address Selection](#source-and-destination-address-selection)
 
 [3. Coexistence with Legacy IPv4](#coexistence-with-legacy-ipv4)
-* Dual stack scenarios
-* Tunnels
-* Translation and IPv4 as a service
-* Obsolete techniques
-* IPv6 primary differences from IPv4
+* [Dual stack scenarios](#dual-stack-scenarios)
+* [Tunnels](#tunnels)
+* [Translation and IPv4 as a service](#translation-and-ipv4-as-a-service)
+* [Obsolete techniques](#obsolete-techniques)
+* [IPv6 primary differences from IPv4](#ipv6-primary-differences-from-ipv4)
 
 [4. Security](#security)
-* Layer 2 considerations
-* Filtering
-* Topology obfuscation
+* [Layer 2 considerations](#layer-2-considerations)
+* [Filtering](#filtering)
+* [Topology obfuscation](#topology-obfuscation)
 
 [5. Network Design](#network-design)
-* Address Planning
+* [Address Planning](#address-planning)
 
 [6. Management and Operations](#management-and-operations)
-* Address and Prefix Management
-* Remote configuration
-* Benchmarking and monitoring
-* Routing operation
-* Security operation
-* Multi-prefix operation
-* Multihoming
-* Energy consumption
-* Basic Windows commands
+* [Address and Prefix Management](#address-and-prefix-management)
+* [Remote configuration](#remote-configuration)
+* [Benchmarking and monitoring](#benchmarking-and-monitoring)
+* [Routing operation](#routing-operation)
+* [Security operation](#security-operation)
+* [Multi-prefix operation](#multi-prefix-operation)
+* [Multihoming](#multihoming)
+* [Energy consumption](#energy-consumption)
+* [Basic Windows commands](#basic-windows-commands)
 
 [7. Case Studies](#case-studies)
-* CERN and the LHC
+* [CERN and the LHC](#cern-and-the-lhc)
 
 [8. Deployment Status](#deployment-status)
-* Status
-* Deployment by carriers
-* Deployment in the home
-* Deployment in the enterprise
+* [Status](#status)
+* [Deployment by carriers](#deployment-by-carriers)
+* [Deployment in the home](#deployment-in-the-home)
+* [Deployment in the enterprise](#deployment-in-the-enterprise)
 
 [9. Troubleshooting](#troubleshooting)
-* Advanced Troubleshooting
-* Tools
+* [Advanced Troubleshooting](#advanced-troubleshooting)
+* [Tools](#tools)
 
 [20. Further Reading](#further-reading)
-* RFC bibliography
+* [RFC bibliography](#rfc-bibliography)
 
 [99. Chapter Template](#chapter-template)
-* First Section
-* Section Template
-* Markdown Usage
-* Last Section
+* [First Section](#first-section)
+* [Section Template](#section-template)
+* [Markdown Usage](#markdown-usage)
+* [Last Section](#last-section)
 
 backslashpagebreak
 # Introduction and Foreword
@@ -161,20 +160,17 @@ will likewise be constantly updated. It's issued under an
 You are welcome to make a printed copy at your own expense, but be aware
 that the book will evolve constantly.
 
-The
-[list of contents](#list-of-contents)
-should act as an on-line guide to the topics covered. Most readers will
-probably not read from cover to cover. Design your own path through the
-book.
+The [list of contents](#list-of-contents) should act as an on-line guide to
+the topics covered. Most readers will probably not read from cover to
+cover. Design your own path through the book.
 
-There is also an
-[index](#book6-main-index).
+There is also an [index](#book6-main-index).
 
-A little tip if you are reading this on GitHub: For some reason, GitHub doesn't
-support automatically opening a link in a new browser tab or window, so clicking
-on links will always take you away from the current page.
-To avoid this, with most browsers you can use CTRL+click (on Windows
-and Linux) or CMD+click (on MacOS) to open a new tab.
+A little tip if you are reading this on GitHub: For some reason, GitHub
+doesn't support automatically opening a link in a new browser tab or
+window, so clicking on links will always take you away from the current
+page. To avoid this, with most browsers you can use CTRL+click (on
+Windows and Linux) or CMD+click (on MacOS) to open a new tab.
 
 ### [<ins>Previous</ins>](#foreword) [<ins>Next</ins>](#how-a-user-sees-ipv6) [<ins>Top</ins>](#introduction-and-foreword)
 
@@ -198,9 +194,9 @@ correct and up to date. It's also important that configuration tools are
 designed to avoid or minimize any need for users to enter IPv6 addresses
 by hand.
 
-P.S. In case you're wondering whether you can in fact use IPv6 right now,
-try https://ipv6test.google.com/.
-GitHub, where this book is hosted, supports IPv6 for many things, but not everything.
+P.S. In case you're wondering whether you can in fact use IPv6 right
+now, try https://ipv6test.google.com/. GitHub, where this book is
+hosted, supports IPv6 for many things, but not everything.
 
 ### [<ins>Previous</ins>](#how-to-use-this-book) [<ins>Next</ins>](#how-an-application-programmer-sees-ipv6) [<ins>Top</ins>](#introduction-and-foreword)
 
@@ -238,8 +234,8 @@ or have an existing input field in your application that is too small.
 Also, regular expressions for validating IP addresses are different. As
 you will learn later in this book there are different types of IPv6
 addresses and several ways to write them. Make sure your application
-only accepts the correct type of addresses and is also not too strict
-by only accepting one format. Users want to use copy-and-paste or
+only accepts the correct type of addresses and is also not too strict by
+only accepting one format. Users want to use copy-and-paste or
 automation and the input format of an IP address may not always be what
 your application expects. Always remember: "Be conservative in what you
 do, be liberal in what you accept from others". And it's probably always
@@ -250,11 +246,10 @@ in your code. Always make them configurable and if possible use FQDNs
 (DNS names) instead of IP addresses.
 
 Address types are discussed further in
-[2. Addresses](#addresses). 
-Address _selection_ is discussed
+[2. Addresses](#addresses). Address
+_selection_ is discussed
 [here](#source-and-destination-address-selection).
-How
-applications relate to a mixture of IPv4 and IPv6 addresses is also
+How applications relate to a mixture of IPv4 and IPv6 addresses is also
 discussed in
 [3. Dual stack scenarios](#dual-stack-scenarios).
 
@@ -275,25 +270,23 @@ This section gives an overview of how IPv6 looks when viewed from the
 NOC, and the rest of the book covers the details.
 
 IPv6 is, at its roots, not fundamentally different from IPv4 - just
-different in almost every detail. So the _nature_ of NOC design
-and operation is not changed by IPv6, but existing operations
-and management tools need to be updated. For example, any 
-configuration databases, whether home-grown or purchased,
-must be able to handle IPv6. For operators, there are many
-new details to learn. Also, supporting IPv4 and IPv6
-simultaneously is obviously more complicated than supporting
+different in almost every detail. So the _nature_ of NOC design and
+operation is not changed by IPv6, but existing operations and management
+tools need to be updated. For example, any configuration databases,
+whether home-grown or purchased, must be able to handle IPv6. For
+operators, there are many new details to learn. Also, supporting IPv4
+and IPv6 simultaneously is obviously more complicated than supporting
 only one protocol.
 
 Enterprise networks, carrier networks, and data center networks each
 have their own requirements and challenges, with differing geographical
-spreads, availability requirements, etc. Various chapters of this
-book tackle different aspects of NOC operations:
+spreads, availability requirements, etc. Various chapters of this book
+tackle different aspects of NOC operations:
 [5. Network Design](#network-design),
-[6. Management and Operations](#management-and-operations), 
-[9. Troubleshooting](#troubleshooting).
-The
-[7. Case Studies](#case-studies)
-will also be relevant to NOCs.
+[6. Management and Operations](#management-and-operations),
+[9. Troubleshooting](#troubleshooting). The
+[7. Case Studies](#case-studies) will also
+be relevant to NOCs.
 
 ### [<ins>Previous</ins>](#how-an-application-programmer-sees-ipv6) [<ins>Next</ins>](#how-to-keep-up-to-date) [<ins>Top</ins>](#introduction-and-foreword)
 
@@ -344,8 +337,10 @@ discussions also take place
 
 To become an active contributor
 [check the conditions](https://github.com/becarpenter/book6/blob/main/CONTRIBUTING.md)
-and [instructions](https://github.com/becarpenter/book6/blob/main/99.%20Chapter%20Template/99.%20Chapter%20Template.md). Then submit GitHub PRs.
-Your contributions will be reviewed by an editorial team.
+and
+[instructions](https://github.com/becarpenter/book6/blob/main/99.%20Chapter%20Template/99.%20Chapter%20Template.md).
+Then submit GitHub PRs. Your contributions will be reviewed by an
+editorial team.
 
 There is a short
 [code of conduct](https://github.com/becarpenter/book6/blob/main/CODE_OF_CONDUCT.md)
@@ -356,12 +351,14 @@ for participants.
 backslashpagebreak
 ## Acknowledgments
 
-Currently the editorial committee includes Nick Buraglio and Brian Carpenter.
+Currently the editorial committee includes Nick Buraglio and Brian
+Carpenter.
 
 Contributors via GitHub may be identified at
 [Contributors](https://github.com/becarpenter/book6/graphs/contributors).
 
-Other direct and indirect contributors, either of text or very helpful comments (mainly via email), include:
+Other direct and indirect contributors, either of text or very helpful
+comments (mainly via email), include:
 
 - Tim Chown
 
@@ -384,21 +381,19 @@ Other direct and indirect contributors, either of text or very helpful comments 
 backslashpagebreak
 ## Why version 6
 
-This section is mainly historical.
-Cutting a long story short, IPv6 was designed in the early 1990s because
-people knew that IPv4 was destined to run out of addresses. But why is
-the version number 6?
+This section is mainly historical. Cutting a long story short, IPv6 was
+designed in the early 1990s because people knew that IPv4 was destined
+to run out of addresses. But why is the version number 6?
 
 Some people ask why IPv4 went to version 6, leaping the next number.
 This was _not_ related to the programmer's superstition where odd
-numbers should be beta releases.
-Maybe we should start by asking why IPv4 was version 4. Stated simply,
-that was because versions 0 through 3 were assigned in 1977 and 1978
-during the evolution from ARPANET to TCP/IP. So version 4
-was the next number available for use in the final design
-[RFC 791](https://www.rfc-editor.org/info/rfc791). A rather more subtle
-explanation is given by the late Danny Cohen, one of the pioneers involved,
-at 38 minutes and 26 seconds into the video
+numbers should be beta releases. Maybe we should start by asking why
+IPv4 was version 4. Stated simply, that was because versions 0 through 3
+were assigned in 1977 and 1978 during the evolution from ARPANET to
+TCP/IP. So version 4 was the next number available for use in the final
+design [RFC 791](https://www.rfc-editor.org/info/rfc791). A rather more
+subtle explanation is given by the late Danny Cohen, one of the pioneers
+involved, at 38 minutes and 26 seconds into the video
 [A Brief Prehistory of Voice over IP](http://www.securitytube.net/video/1978).
 
 So why not IPv5? The answer is quite simple. The number 5 in the version
@@ -410,8 +405,8 @@ that demand quality of service. As IP datagrams are delivered on a “best
 effort” basis, the ST proposals were more like ATM networks, using
 stateful relationships, queuing and much more. Each ST flow would hold
 connection state and dynamic controls to ensure quality of service. As
-we can see in [RFC 1190](https://www.rfc-editor.org/info/rfc1190), the ST
-header is completely different from IPv4, except for the very first
+we can see in [RFC 1190](https://www.rfc-editor.org/info/rfc1190), the
+ST header is completely different from IPv4, except for the very first
 field where is the version number 5:
 
 ```
@@ -466,8 +461,8 @@ version number is still assigned, so it would not make sense for the
 __next generation IP__ to carry that number, so it was “skipped”. The
 number 6 would only appear a few years later in an “Assigned numbers”
 update \[[RFC1700](https://www.rfc-editor.org/info/rfc1700)\], then
-named as "Simple Internet Protocol" (SIP). This acronym has
-been recycled for the Session Initiation Protocol.
+named as "Simple Internet Protocol" (SIP). This acronym has been
+recycled for the Session Initiation Protocol.
 
 ```
 Assigned Internet Version Numbers
@@ -489,26 +484,25 @@ Decimal   Keyword    Version                            References
 Note that IANA had assigned numbers 6 through 9 for the then
 “competitors” of what became IPv6. Number 7 was chosen for TP/IX
 \[[RFC1475](https://www.rfc-editor.org/info/rfc1475)\], as its designer
-expected ST version 2 would use number 6, which did not happen.
-But unexpectedly, a different "IPv7" proposal was announced
-during the Internet Society's INET conference in Kobe, Japan,
-in June 1992, by IAB members. There was no
-consensus among IETF engineers at that time about the new protocol, and
-some IAB members proposed using ISO/OSI's CLNP - designating it as IPv7
-without a formal IANA assignment. This caused some discomfort in the Internet
-community and became known in technical circles as the “Kobe incident”.
-Numbers 8 and 9 were used by proposals that came to be merged into
-IPv6's ultimate design. As the lowest number available after 4, and
-already used by the same author's SIP, number 6 was kept for the first
-official specification in
+expected ST version 2 would use number 6, which did not happen. But
+unexpectedly, a different "IPv7" proposal was announced during the
+Internet Society's INET conference in Kobe, Japan, in June 1992, by IAB
+members. There was no consensus among IETF engineers at that time about
+the new protocol, and some IAB members proposed using ISO/OSI's CLNP -
+designating it as IPv7 without a formal IANA assignment. This caused
+some discomfort in the Internet community and became known in technical
+circles as the “Kobe incident”. Numbers 8 and 9 were used by proposals
+that came to be merged into IPv6's ultimate design. As the lowest number
+available after 4, and already used by the same author's SIP, number 6
+was kept for the first official specification in
 [RFC 1883](https://www.rfc-editor.org/info/rfc1883). Therefore, do not
-expect IP versions 7 or 8 in the future, nor even 9 that also belongs
-to an April fool's day joke
+expect IP versions 7 or 8 in the future, nor even 9 that also belongs to
+an April fool's day joke
 \[[RFC1606](https://www.rfc-editor.org/info/rfc1606)\].
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#acknowledgments) [<ins>Top</ins>](#introduction-and-foreword)
+### [<ins>Previous</ins>](#acknowledgments) [<ins>Next</ins>](#ipv6-basic-technology) [<ins>Top</ins>](#introduction-and-foreword)
 
 backslashpagebreak
 # IPv6 Basic Technology
@@ -607,8 +601,8 @@ Some notes on these fixed fields:
 
 - Traffic class: six bits of
   [differentiated services code point](https://www.rfc-editor.org/info/rfc2474)
-  (DSCP) followed by two
-  [ECN](https://www.rfc-editor.org/info/rfc3168) bits. See
+  (DSCP) followed by two [ECN](https://www.rfc-editor.org/info/rfc3168)
+  bits. See
   [Traffic class and flow label](#traffic-class-and-flow-label).
 
 - Flow label: 20 bits. Should be a pseudo-random value unique to a given
@@ -620,8 +614,8 @@ Some notes on these fixed fields:
 
 - Next header: an integer defining the type of the following header.
 
-- Hop limit: counts down at each routing hop. The packet is discarded when
-  it hits zero.
+- Hop limit: counts down at each routing hop. The packet is discarded
+  when it hits zero.
 
 - Addresses: 128 bits; see below.
 
@@ -1041,8 +1035,8 @@ point-to-point links) is one that send or receives one complete frame at
 a time with a raw size of at least 1500 bytes and a 48 bit IEEE MAC
 address at Layer 2. It must provide or emulate classical Ethernet
 multicasting. The IPv6 mapping then follows
-[RFC 2464](https://www.rfc-editor.org/info/rfc2464) from 1998, except for
-some updates to multicast address details in
+[RFC 2464](https://www.rfc-editor.org/info/rfc2464) from 1998, except
+for some updates to multicast address details in
 [RFC 6085](https://www.rfc-editor.org/info/rfc6085) and to the interface
 identifier in [RFC 8064](https://www.rfc-editor.org/info/rfc8064). IPv6
 has its own Ethertype field (0x86dd), so that IPv6 and IPv4 packets can
@@ -1110,8 +1104,8 @@ address. This is defined in
 [RFC 4291](https://www.rfc-editor.org/info/rfc4291), but explained in
 [RFC 4861](https://www.rfc-editor.org/info/rfc4861). Neighbor
 Solicitation is a specific form of ICMPv6 message; ICMPv6 is defined in
-[RFC 8200](https://www.rfc-editor.org/info/rfc8200). Since this is a link
-local multicast, such messages never escape the local link.
+[RFC 8200](https://www.rfc-editor.org/info/rfc8200). Since this is a
+link local multicast, such messages never escape the local link.
 
 All IPv6 nodes **MUST** monitor multicasts sent to the solicited-node
 multicast address. When B receives the Neighbor Solicitation from A, it
@@ -1128,8 +1122,8 @@ detail should consult
 This mechanism works well on a small scale, and it was designed with
 full knowledge of the "ARP storms" experienced on large bridged
 Ethernets running IPv4. However, it can cause significant multicast
-overloads on large bridged WiFi networks, and is made worse by the
-need for duplicate address detection (DAD) described in the next section.
+overloads on large bridged WiFi networks, and is made worse by the need
+for duplicate address detection (DAD) described in the next section.
 Multicast is badly supported by large WiFi networks, as discussed in
 [RFC 9119](https://www.rfc-editor.org/info/rfc9119) and in Section 4.2.1
 of [RFC 5757](https://www.rfc-editor.org/info/rfc5757). As an absolute
@@ -1279,10 +1273,10 @@ find themselves on a network where it is the only method of acquiring
 addresses. However, some network operators prefer to manage addressing
 using DHCPv6, as discussed in the next section. There is a global flag
 for this in the RA message format known as the M bit (see
-[RFC 4861](https://www.rfc-editor.org/info/rfc4861) for details). If M=1,
-DHCPv6 is in use for address assignment. However, PIOs are still needed
-to allow on-link determination, and link-local addresses are still
-needed.
+[RFC 4861](https://www.rfc-editor.org/info/rfc4861) for details). If
+M=1, DHCPv6 is in use for address assignment. However, PIOs are still
+needed to allow on-link determination, and link-local addresses are
+still needed.
 
 *More details*: This section and the previous one have summarized a
 complex topic. Apart from the basic specifications
@@ -1349,13 +1343,13 @@ hotels, if they support IPv6 at all, do so via SLAAC. So the domain of
 applicability for DHCPv6 is mainly enterprise networks. They tend to
 prefer managed addresses because of security compliance requirements.
 
-DHCPv6 is defined by [RFC 8415](https://www.rfc-editor.org/info/rfc8415).
-It is conceptually similar to DHCP for IPv4, but different in detail.
-When it is in use, each host must contain a DHCPv6 client and either a
-DHCPv6 server or a DHCPv6 relay must be available on the subnet. DHCPv6
-can provide assigned IPv6 addresses and other parameters, and new
-options can be defined. (All registered DHCP parameters can be found on
-the
+DHCPv6 is defined by
+[RFC 8415](https://www.rfc-editor.org/info/rfc8415). It is conceptually
+similar to DHCP for IPv4, but different in detail. When it is in use,
+each host must contain a DHCPv6 client and either a DHCPv6 server or a
+DHCPv6 relay must be available on the subnet. DHCPv6 can provide
+assigned IPv6 addresses and other parameters, and new options can be
+defined. (All registered DHCP parameters can be found on the
 [IANA site](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#dhcpv6-parameters-2).)
 DHCPv6 messages are transmitted over UDP/IPv6 using ports 546 and 547.
 
@@ -1450,8 +1444,8 @@ use. The order in which addresses are presented to the programmer is
 determined by a local configuration table on the host, in a way
 described by [RFC 6724](https://www.rfc-editor.org/info/rfc6724).
 Unfortunately the standard DHCPv6 mechanism for remote configuration of
-this table \[[RFC7078](https://www.rfc-editor.org/info/rfc7078)\]
-is not widely used. Operators need to be aware of this complexity when
+this table \[[RFC7078](https://www.rfc-editor.org/info/rfc7078)\] is not
+widely used. Operators need to be aware of this complexity when
 attempting to cause users to favor IPv6 over IPv4 (or the converse).
 
 Apart from this, in an ideal world DNS for IPv6 should not cause extra
@@ -1469,20 +1463,20 @@ concern:
 - Considerations for Reverse DNS in IPv6 for Internet Service Providers
   are documented in [RFC 8501](https://www.rfc-editor.org/info/rfc8501).
 
-- It is not unknown for some sites to register IPv4-mapped IPv6 addresses,
-  e.g. `::ffff:198.51.100.99`, with AAAA records. While this seems
-  to work in most cases, it is inappropriate if the host in question has
-  a valid IPv6 address, and pointless otherwise.
+- It is not unknown for some sites to register IPv4-mapped IPv6
+  addresses, e.g. `::ffff:198.51.100.99`, with AAAA records. While this
+  seems to work in most cases, it is inappropriate if the host in
+  question has a valid IPv6 address, and pointless otherwise.
 
-- Certain IPv6 address types should __never__ be visible in global DNS: ULAs
-  (starting with `fdxx:` or even `fcxx:`) or link-local (starting with
-  `fe80::`). Beware that automated mechanisms like Active Directory might
-  add ULAs to global DNS by default. Of course, it is OK to
+- Certain IPv6 address types should __never__ be visible in global DNS:
+  ULAs (starting with `fdxx:` or even `fcxx:`) or link-local (starting
+  with `fe80::`). Beware that automated mechanisms like Active Directory
+  might add ULAs to global DNS by default. Of course, it is OK to
   include ULAs in _local_ DNS if a split DNS configuration is used.
 
-    _Note:_ Some AAAA records for ULA addresses do exist in the DNS, and
-    are not a security risk, but they may cause unexpected failures from
-    a user's standpoint.
+  _Note:_ Some AAAA records for ULA addresses do exist in the DNS, and
+  are not a security risk, but they may cause unexpected failures from a
+  user's standpoint.
 
 Some statistics on AAAA records and reachability may be found at
 [Dan Wing's site](https://www.employees.org/~dwing/aaaa-stats/).
@@ -1597,11 +1591,12 @@ tables to require much more memory space. While this is true, IPv6 was
 designed for classless route aggregation from the beginning, which
 generally permits there to be fewer IPv6 prefixes, mitigating the table
 size issue. (Nevertheless, the BGP-4 table for IPv6 continues to grow,
-as discussed in [this CCR paper](https://dl.acm.org/doi/10.1145/3477482.3477490).)
-Interested readers can find exhaustive data on BGP-4 table
-sizes at [Geoff Huston's site](https://bgp.potaroo.net/index-bgp.html).
-For a deep dive on BGP-4 itself, with much focus on IPv6, see the e-book
-by Iljitsch van Beijnum:
+as discussed in
+[this CCR paper](https://dl.acm.org/doi/10.1145/3477482.3477490).)
+Interested readers can find exhaustive data on BGP-4 table sizes at
+[Geoff Huston's site](https://bgp.potaroo.net/index-bgp.html). For a
+deep dive on BGP-4 itself, with much focus on IPv6, see the e-book by
+Iljitsch van Beijnum:
 [Internet Routing with BGP](https://www.iljitsch.com/2022/11-18-new-e-book-internet-routing-with-bgp.html)
 (2022).
 
@@ -1610,8 +1605,9 @@ As explained in
 IPv6 routing generally works independently of IPv4 routing, which was
 indeed a fundamental design choice. However, if necessary, encapsulated
 IPv4 traffic can be carried over an IPv6-only path. To enable this,
-multiprotocol BGP-4 has provisions to advertise IPv4 reachability over an
-IPv6-only path \[[RFC8950](https://www.rfc-editor.org/info/rfc8950)\].
+multiprotocol BGP-4 has provisions to advertise IPv4 reachability over
+an IPv6-only path
+\[[RFC8950](https://www.rfc-editor.org/info/rfc8950)\].
 
 Finally, IPv6 allows routing headers, interpreted by intermediate nodes
 along a packet's path. These are briefly explained in
@@ -1690,10 +1686,11 @@ Here are some notes on the most common ones:
   intended to warn every router on the path that the packet may need
   special handling. Unfortunately, experience shows that this extension
   header can be problematic, and that many routers do not in fact
-  process it. Indeed, [RFC 8200](https://www.rfc-editor.org/info/rfc8200)
-  states that "it is now expected that nodes along a packet's delivery
-  path only examine and process the Hop-by-Hop Options header if
-  explicitly configured to do so."
+  process it. Indeed,
+  [RFC 8200](https://www.rfc-editor.org/info/rfc8200) states that "it is
+  now expected that nodes along a packet's delivery path only examine
+  and process the Hop-by-Hop Options header if explicitly configured to
+  do so."
 
   Router Alert types have their own registry at
   [IANA](https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml).
@@ -1720,14 +1717,15 @@ Here are some notes on the most common ones:
 - Routing header, if non-standard routing is required. There are various
   [routing header types](https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-2).
   An important current one is the Segment Routing Header (type 4,
-  [RFC 8754](https://www.rfc-editor.org/info/rfc8754)). A router that acts
-  as an intermediate destination and therefore processes routing headers is
-  known as an 'intermediate node' in [STD 86](https://www.rfc-editor.org/info/std86).
+  [RFC 8754](https://www.rfc-editor.org/info/rfc8754)). A router that
+  acts as an intermediate destination and therefore processes routing
+  headers is known as an 'intermediate node' in
+  [STD 86](https://www.rfc-editor.org/info/std86).
 
 - Encapsulating security payload, if
   [IPsec](https://www.rfc-editor.org/info/rfc4303) is in use. This is
-  the defined mechanism for IPv6 security at layer 3.  This is probably the most widely used
-  IPv6 extension header.
+  the defined mechanism for IPv6 security at layer 3. This is probably
+  the most widely used IPv6 extension header.
 
 Both hop-by-hop and destination options include flag bits in the option
 type for nodes that may not understand the option, telling the node
@@ -1766,8 +1764,8 @@ ISPs. [RFC 5127](https://www.rfc-editor.org/info/rfc5127),
 [RFC 4594](https://www.rfc-editor.org/info/rfc4594),
 [RFC 5865](https://www.rfc-editor.org/info/rfc5865),
 [RFC 8622](https://www.rfc-editor.org/info/rfc8622) and
-[RFC 8837](https://www.rfc-editor.org/info/rfc8837) also describe current
-practice.
+[RFC 8837](https://www.rfc-editor.org/info/rfc8837) also describe
+current practice.
 
 ECN is intended for use by transport protocols to support congestion
 control.
@@ -1844,29 +1842,43 @@ fec0::/16                          1    11
 3ffe::/16                          1    12        
 ```
 
-
-
-
 ### Destination address selection
 
-Destination address selection is somewhat complex, and it should be understood that it is configurable and may be somewhat inconsistent based on the implementation of a given IPv6 network stack and the age of the operating system. At the time of this writing there are still operating systems that employ aspects of or full implementations of [RFC 3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted by [RFC 6724](https://www.rfc-editor.org/info/rfc6724) in 2012.  To fully understand address selection, one can reference the file _/etc/gai.conf_ in a modern Linux system as it has the most succinct example of the rules governing the process.
+Destination address selection is somewhat complex, and it should be
+understood that it is configurable and may be somewhat inconsistent
+based on the implementation of a given IPv6 network stack and the age of
+the operating system. At the time of this writing there are still
+operating systems that employ aspects of or full implementations of
+[RFC 3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted
+by [RFC 6724](https://www.rfc-editor.org/info/rfc6724) in 2012. To fully
+understand address selection, one can reference the file _/etc/gai.conf_
+in a modern Linux system as it has the most succinct example of the
+rules governing the process.
 
 ### Changing address selection policy
 
-In the vast majority of use cases, the default policy table is unchanged and consistent. However, on platforms such as Linux and Microsoft Windows, it is possible to adjust this table to create desired behavior, up to and including creating address pairings, adjusted preferences, and unique traffic SA/DA characteristics.
+In the vast majority of use cases, the default policy table is unchanged
+and consistent. However, on platforms such as Linux and Microsoft
+Windows, it is possible to adjust this table to create desired behavior,
+up to and including creating address pairings, adjusted preferences, and
+unique traffic SA/DA characteristics.
 
-A site using DHCPv6 options 84 and 85 can change the default settings for address selection via
-[RFC 7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately this
-is not widely implemented.
-In principle this can also be achieved by system commands in each host
-(e.g. _netsh interface ipv6 add prefixpolicy_
-in Windows and  _ip addrlabel add prefix_ in Linux) but this is rarely done.
-The result is that hosts generally apply the default
-policy for their operating system release, even when a different policy would work better.
+A site using DHCPv6 options 84 and 85 can change the default settings
+for address selection via
+[RFC 7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately
+this is not widely implemented. In principle this can also be achieved
+by system commands in each host (e.g. _netsh interface ipv6 add
+prefixpolicy_ in Windows and _ip addrlabel add prefix_ in Linux) but
+this is rarely done. The result is that hosts generally apply the
+default policy for their operating system release, even when a different
+policy would work better.
 
 ### ULA considerations
 
-In default situations where both IPv4 and ULA are present, IPv4 will be the preferred protocol. This is often counter to general understanding of how IPv6 behavior works in a dual stacked environment and can be observed in the aforementioned _gai.conf_ file with the following line:
+In default situations where both IPv4 and ULA are present, IPv4 will be
+the preferred protocol. This is often counter to general understanding
+of how IPv6 behavior works in a dual stacked environment and can be
+observed in the aforementioned _gai.conf_ file with the following line:
 
 ```
 Prefix                            Prec   Label      
@@ -1874,27 +1886,40 @@ Prefix                            Prec   Label
 ::ffff:0.0.0.0/96                 35     4
 ```
 
-This is the IPv6 conversion of IPv4 address space. Because this block of addresses has a higher preference value than ULA addressing, it will be preferred by default by the operating system and application due to its preference value.  
+This is the IPv6 conversion of IPv4 address space. Because this block of
+addresses has a higher preference value than ULA addressing, it will be
+preferred by default by the operating system and application due to its
+preference value.
 
-
-[draft-ietf-v6ops-ula](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ula/) described in detail many of the considerations for use of ULA, specifically in a dual stacked environment. It should be noted that in an IPv6-only environment, the address selection process is generally problem free, leveraging the above process. 
-
+[draft-ietf-v6ops-ula](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ula/)
+described in detail many of the considerations for use of ULA,
+specifically in a dual stacked environment. It should be noted that in
+an IPv6-only environment, the address selection process is generally
+problem free, leveraging the above process.
 
 ### Labels
 
-Not to be confused with flow labels, address labels are a powerful and often overlooked tool in the selection process. Address labels allow for prefix or address pairings thus forcing traffic pairs to act in consistent or desirable ways that may differ from default for technical, security, or policy reasons. Taking a basic Linux system and creating an address pair with matching labels will cause the system to act on the labels and generate traffic between the SA/DA pairs as determined by the operator. 
+Not to be confused with flow labels, address labels are a powerful and
+often overlooked tool in the selection process. Address labels allow for
+prefix or address pairings thus forcing traffic pairs to act in
+consistent or desirable ways that may differ from default for technical,
+security, or policy reasons. Taking a basic Linux system and creating an
+address pair with matching labels will cause the system to act on the
+labels and generate traffic between the SA/DA pairs as determined by the
+operator.
 
-Using a vanilla linux system the following changes can be made using the ip command ```{ip addrlabel add prefix <PREFIX> label <LABEL>}``` easily creating a working SA/DA pair.
+Using a vanilla linux system the following changes can be made using the
+ip command `{ip addrlabel add prefix <PREFIX> label <LABEL>}` easily
+creating a working SA/DA pair.
 
-For example: 
+For example:
 
 ```
 sudo ip addrlabel add prefix fd68:1e02:dc1a:9:ba27:ebff:fe84:781c/128 label 97
 sudo ip addrlabel add prefix 2001:db8:4009:81c::200e/128 label 97
 ```
 
-
-Yields: 
+Yields:
 
 ```
 user@v6host:~$ sudo ip addrlabel list
@@ -1914,10 +1939,14 @@ prefix ::/0 label 1
 
 ### Source address selection
 
-In practice, source address selection is difficult to configure outside of link local, GUA, and ULA default preferences, and varies by host and application implementations. It is possible to create address pairings using the IPv6 address label mechanisms, however. 
+In practice, source address selection is difficult to configure outside
+of link local, GUA, and ULA default preferences, and varies by host and
+application implementations. It is possible to create address pairings
+using the IPv6 address label mechanisms, however.
+
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#traffic-class-and-flow-label) [<ins>Top</ins>](#ipv6-basic-technology)
+### [<ins>Previous</ins>](#traffic-class-and-flow-label) [<ins>Next</ins>](#coexistence-with-legacy-ipv4) [<ins>Top</ins>](#ipv6-basic-technology)
 
 backslashpagebreak
 # Coexistence with Legacy IPv4
@@ -2113,16 +2142,17 @@ devices do exist, e.g.
 [Thread](https://www.threadgroup.org/What-is-Thread/Overview) devices,
 and more are to be expected in future. This situation requires a
 translation mechanism, such as NAT64 + DNS64 (see
-\[[Translation and IPv4 as a service](#translation-and-ipv4-as-a-service)\]), which will allow IPv6 only devices,
-on a dual stack network, to access IPv4 hosts. Typically, dual stack
-clients on the same network will also use NAT64 (instead of
+\[[Translation and IPv4 as a service](#translation-and-ipv4-as-a-service)\]),
+which will allow IPv6 only devices, on a dual stack network, to access
+IPv4 hosts. Typically, dual stack clients on the same network will also
+use NAT64 (instead of
 [RFC 1918](https://www.rfc-editor.org/info/rfc1918) addresses and NAT44)
 to access IPv4 only hosts, but they are using NAT either way. See this
 helpful
 [blog article](https://sgryphon.gamertheory.net/2022/12/14/running-nat64-in-a-dual-stack-network/).
 
-A specific issue is that SIP (Session Initiation Protocol for IP telephony)
-will not work without provision for IPv6/IPv4 coexistence
+A specific issue is that SIP (Session Initiation Protocol for IP
+telephony) will not work without provision for IPv6/IPv4 coexistence
 \[[RFC6157](https://www.rfc-editor.org/info/rfc6157)\].
 
 Although Dual-Stack provides advantages in the initial phase of
@@ -2174,27 +2204,29 @@ disabled or is diminished enough that it can be removed.
 One operational glitch has been observed in this scenario. If a host
 that supports DHCP option 108 has any kind of misconfiguration that
 prevents IPv6 from working properly, it can enter a state where it
-disables IPv4 but has no IPv6 connectivity either. For example, if
-a host's intrinsic firewall is configured to block incoming ICMPv6
-and IPv6 packets, yet the host respects option 108, it will fail
-to connect to either version of IP when it encounters an IPv6-mostly
-network. This misconfiguration has been observed in laptop computers
-with a mandatory corporate security configuration, when they roam to
-an IPv6-mostly network outside the corporate network.
+disables IPv4 but has no IPv6 connectivity either. For example, if a
+host's intrinsic firewall is configured to block incoming ICMPv6 and
+IPv6 packets, yet the host respects option 108, it will fail to connect
+to either version of IP when it encounters an IPv6-mostly network. This
+misconfiguration has been observed in laptop computers with a mandatory
+corporate security configuration, when they roam to an IPv6-mostly
+network outside the corporate network.
 
-Apart from this problem, controlled and deliberate migration
-via IPv6-mostly allows the operating system to
-decide how much or how little it can support without needing input from
-the user, making the network fit the capabilities of the host, thus
-lowering the risk of incompatibility (and lowering the rate of problem
-reports). Like most existing IPv6-only networks, IPv6-mostly will
-nevertheless require packet and DNS translation services
-([discussed later](#translation-and-ipv4-as-a-service)) as well as knowledge of the IPv6
-prefix used for translation ([ditto](#translation-and-ipv4-as-a-service)). With these
+Apart from this problem, controlled and deliberate migration via
+IPv6-mostly allows the operating system to decide how much or how little
+it can support without needing input from the user, making the network
+fit the capabilities of the host, thus lowering the risk of
+incompatibility (and lowering the rate of problem reports). Like most
+existing IPv6-only networks, IPv6-mostly will nevertheless require
+packet and DNS translation services
+([discussed later](#translation-and-ipv4-as-a-service)) as
+well as knowledge of the IPv6 prefix used for translation
+([ditto](#translation-and-ipv4-as-a-service)). With these
 features suppported, hosts on an IPv6-mostly network will have a full
 suite of capabilities.
 
-There is a great deployment report on IPv6-mostly [at a large conference](https://nsrc.org/blog/apricot-ipv6-only).
+There is a great deployment report on IPv6-mostly
+[at a large conference](https://nsrc.org/blog/apricot-ipv6-only).
 
 ### The need for IPv4 as a service
 
@@ -2227,7 +2259,8 @@ least between the interfaces of the Provider Edge (PE) nodes and
 Customer Edge (CE) node (or the Broadband Network Gateway (BNG)). As
 further mentioned in [Tunnels](#tunnels), tunneling provides a way to
 use an existing IPv4 infrastructure to carry IPv6 traffic. There are
-also translation options described in [Translation and IPv4 as a service](#translation-and-ipv4-as-a-service).
+also translation options described in
+[Translation and IPv4 as a service](#translation-and-ipv4-as-a-service).
 This approach with IPv6-only overlay helps to maintain compatibility
 with the existing base of IPv4, but it is not a long-term solution
 
@@ -2372,18 +2405,20 @@ of translation techniques from the discussion of IPv4 as a service.
   - DNS64 \[[RFC6147](https://www.rfc-editor.org/info/rfc6147)\]
     supports DNS extensions for clients of stateful NAT64.
   - PREF64 refers to the IPv6 prefix used "outside" the NAT64
-    translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781)
-    and [RFC 8880](https://www.rfc-editor.org/info/rfc8880)
-    are mechanisms by which a host can learn the PREF64 in use.
+    translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781) and
+    [RFC 8880](https://www.rfc-editor.org/info/rfc8880) are mechanisms
+    by which a host can learn the PREF64 in use.
 
 - 464XLAT (Combination of Stateful and Stateless Translation)
   \[[RFC6877](https://www.rfc-editor.org/info/rfc6877)\] is SIIT plus
   address translation *from* IPv4 clients to IPv6 transport and *back
-  to* IPv4 servers. This is used for IPv4 traffic to cross an
-  IPv6-only network.
+  to* IPv4 servers. This is used for IPv4 traffic to cross an IPv6-only
+  network.
 
-  - CLAT is the client side translator in 464XLAT. It implements stateless NAT46 (SIIT) translation.
-  - PLAT is the provider side translator in 464XLAT. It is nothing else than a stateful NAT64 gateway.
+  - CLAT is the client side translator in 464XLAT. It implements
+    stateless NAT46 (SIIT) translation.
+  - PLAT is the provider side translator in 464XLAT. It is nothing else
+    than a stateful NAT64 gateway.
   - This is the only well-defined model for NAT464 translation.
 
 - The final two items have nothing to do with IPv6/IPv4 co-existence but
@@ -2396,10 +2431,10 @@ of translation techniques from the discussion of IPv4 as a service.
   - NAT66 is not defined by the IETF and, given the vast supply of IPv6
     addresses, is not generally considered useful enough to overcome its
     disadvantages, which it shares with classical IPv4 NAT
-    \[[RFC5902](https://www.rfc-editor.org/info/rfc5902)\]. Like IPv4 NAT,
-    it may be implemented with support of port translation (i.e., NAPT66),
-    but as there is no shortage of IPv6 addresses, port translation
-    is unnecessary.
+    \[[RFC5902](https://www.rfc-editor.org/info/rfc5902)\]. Like IPv4
+    NAT, it may be implemented with support of port translation (i.e.,
+    NAPT66), but as there is no shortage of IPv6 addresses, port
+    translation is unnecessary.
 
 ### Further details of IPv4 as a service
 
@@ -2442,9 +2477,9 @@ The following figure illustrates such a scenario.
   has a natural synergy with NAT64 (which is highly desirable by itself)
   and because it is the only solution supported on mobile devices. The
   centralized NAT64 engine is called PLAT, and is the same
-  \[[RFC6146](https://www.rfc-editor.org/info/rfc6146)\] as for
-  ordinary NAT64. The client side is called CLAT, and is typically a
-  stateless NAT46 translation
+  \[[RFC6146](https://www.rfc-editor.org/info/rfc6146)\] as for ordinary
+  NAT64. The client side is called CLAT, and is typically a stateless
+  NAT46 translation
   \[[RFC7915](https://www.rfc-editor.org/info/rfc7915)\]. A good
   analysis of deployment considerations is in
   [RFC 8683](https://www.rfc-editor.org/info/rfc8683), from which an
@@ -2467,12 +2502,12 @@ The following figure illustrates such a scenario.
 ### IPv4 as a service for mobile devices
 
 The diagram above covers IPv4aaS for a network. A special case is
-IPv4aaS for a mobile device, especially when the device
-has only been provided with a single /64 prefix, as is the case
-in most 3GPP deployments. In this case, 464XLAT is the only
-available solution, and as described in Section 6.3 of
-[RFC 6877](https://www.rfc-editor.org/info/rfc6877),
-the CLAT will use a specific address from that /64 prefix.
+IPv4aaS for a mobile device, especially when the device has only been
+provided with a single /64 prefix, as is the case in most 3GPP
+deployments. In this case, 464XLAT is the only available solution, and
+as described in Section 6.3 of
+[RFC 6877](https://www.rfc-editor.org/info/rfc6877), the CLAT will use a
+specific address from that /64 prefix.
 
 ### Further details of NPTv6
 
@@ -2486,41 +2521,77 @@ it is transparent for all transport layer protocols. In principle it
 would, for example, allow a site using ULA addresses
 \[[2. Addresses](#addresses)\] to
 communicate with global IPv6 addresses, but with some of the
-disadvantages of classical IPv4 NAT, sometimes referred to as 1:1 NAT, 
-and not to be confused with masquerading address translation. 
-The principal difference between NPTv6 and classical NAT is that it 
-permits connection initiation in both directions. 
-However, it is not fully transparent for applications that
-embed IP addresses at high layers (so-called “referrals”). Hence, it
-cannot be considered end-to-end transparent. 
+disadvantages of classical IPv4 NAT, sometimes referred to as 1:1 NAT,
+and not to be confused with masquerading address translation. The
+principal difference between NPTv6 and classical NAT is that it permits
+connection initiation in both directions. However, it is not fully
+transparent for applications that embed IP addresses at high layers
+(so-called “referrals”). Hence, it cannot be considered end-to-end
+transparent.
 
-A particular difficulty is that SIP (Session Initiation Protocol for
-IP telephony) will not work behind NPTv6 without
-the support of a proxy mechanism 
-\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)\].
+A particular difficulty is that SIP (Session Initiation Protocol for IP
+telephony) will not work behind NPTv6 without the support of a proxy
+mechanism \[[RFC6314](https://www.rfc-editor.org/info/rfc6314)\].
 
-As stated above, NPTv6 is outlined in [RFC 6296](https://www.rfc-editor.org/info/rfc6296); 
-however, although there is significant commercial support, it should be noted that the 
-RFC is experimental as of the time of this writing, so it is not considered standards track. 
+As stated above, NPTv6 is outlined in
+[RFC 6296](https://www.rfc-editor.org/info/rfc6296); however, although
+there is significant commercial support, it should be noted that the RFC
+is experimental as of the time of this writing, so it is not considered
+standards track.
 
-It goes without saying that NPTv6 is _never_ justified by a shortage of IPv6 addresses.
-Nevertheless, while there is controversy about breaking end-to-end address transparency in IPv6, 
-there are valid use cases for such architectures, and breaking the end-to-end model is more
-of an unfortunate side effect than a feature of such tools. Some details on the "breakage"
-caused by NPTv6, and a comparison with classical NAT, are given in
+It goes without saying that NPTv6 is _never_ justified by a shortage of
+IPv6 addresses. Nevertheless, while there is controversy about breaking
+end-to-end address transparency in IPv6, there are valid use cases for
+such architectures, and breaking the end-to-end model is more of an
+unfortunate side effect than a feature of such tools. Some details on
+the "breakage" caused by NPTv6, and a comparison with classical NAT, are
+given in
 [Section 5 of RFC 6296](https://www.rfc-editor.org/rfc/rfc6296.html#section-5).
 
-In large scale deployments of wide area architectures, NPTv6 does enable some compelling use cases which enable diversity in security platforms such as stateful unified threat management devices (UTMs). These are positioned in geographically and topologically diverse locations, but require flexibility of _external_ layer 3 addressing to support flow identification. Using NPTv6 to perform re-mapping of addressing allows inspection engines to maintain the flow symmetry that is required for stateful deep packet inspection engines to operate, as asymmetry will cause them to mark all flows as incomplete. 
-It is in this model that it can be GUA to GUA, and this is a valid, supportable, and definitely production deployed architecture. 
+In large scale deployments of wide area architectures, NPTv6 does enable
+some compelling use cases which enable diversity in security platforms
+such as stateful unified threat management devices (UTMs). These are
+positioned in geographically and topologically diverse locations, but
+require flexibility of _external_ layer 3 addressing to support flow
+identification. Using NPTv6 to perform re-mapping of addressing allows
+inspection engines to maintain the flow symmetry that is required for
+stateful deep packet inspection engines to operate, as asymmetry will
+cause them to mark all flows as incomplete. It is in this model that it
+can be GUA to GUA, and this is a valid, supportable, and definitely
+production deployed architecture.
 
-In smaller deployments, NPTv6 can be leveraged to create stable addressing inside a network that may be too small for PI address space, but too large to operate without service provider diversity. In this model, such as an SD-WAN deployment, a GUA or ULA prefix may be deployed, delegated by a home office, other IT governance body, or a local administrator, and mapped to one or more PA prefixes provided by lower cost commercial internet services. This allows for internal addressing to be stable, while providing a more robust connectivity model, and the ability to more quickly switch providers if required by leveraging dynamic addressing externally mapped to stable addressing internally. This model more closely aligns with the current IPv4 architectures pervasively deployed nearly everywhere with stable internal IPv4 addressing masqueraded to one or more PA addresses provided by an upstream ISP. 
+In smaller deployments, NPTv6 can be leveraged to create stable
+addressing inside a network that may be too small for PI address space,
+but too large to operate without service provider diversity. In this
+model, such as an SD-WAN deployment, a GUA or ULA prefix may be
+deployed, delegated by a home office, other IT governance body, or a
+local administrator, and mapped to one or more PA prefixes provided by
+lower cost commercial internet services. This allows for internal
+addressing to be stable, while providing a more robust connectivity
+model, and the ability to more quickly switch providers if required by
+leveraging dynamic addressing externally mapped to stable addressing
+internally. This model more closely aligns with the current IPv4
+architectures pervasively deployed nearly everywhere with stable
+internal IPv4 addressing masqueraded to one or more PA addresses
+provided by an upstream ISP.
 
 ### Further details on NAT66
 
-NAT66 is currently a non-standards based mechanism for statefully translating one or more IPv6 addresses to one or more other IPv6 addresses. When port translation is also provided (as is very common for IPv4 NAT), the term NAPT66 may also be used.
+NAT66 is currently a non-standards based mechanism for statefully
+translating one or more IPv6 addresses to one or more other IPv6
+addresses. When port translation is also provided (as is very common for
+IPv4 NAT), the term NAPT66 may also be used.
 
-It goes without saying that NAT66 is _never_ justified by a general shortage of IPv6 addresses.
-Like NPTv6, NAT66 should be used only when necessary or required. Moreover, is is also very important to understand that the intent of these tools is to translate, hence the names. They may play a part in compliance requirements, but they are - at their core - translation tools and not security mechanisms. Address translation is often deployed alongside stateful packet filtering, but the two are, in actuality, exclusive toolkits. That is to say, they are not tied to each other, and should be considered distinct - address translation is not a security tool.  
+It goes without saying that NAT66 is _never_ justified by a general
+shortage of IPv6 addresses. Like NPTv6, NAT66 should be used only when
+necessary or required. Moreover, is is also very important to understand
+that the intent of these tools is to translate, hence the names. They
+may play a part in compliance requirements, but they are - at their core
+\- translation tools and not security mechanisms. Address translation is
+often deployed alongside stateful packet filtering, but the two are, in
+actuality, exclusive toolkits. That is to say, they are not tied to each
+other, and should be considered distinct - address translation is not a
+security tool.
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -2653,20 +2724,21 @@ The primary differences are:
 The list above is not comprehensive, but the other differences are
 probably smaller.
 
-An obvious question is: With all these differences, what is the difference
-in performance between IPv6 and IPv4? There is no simple answer to this
-question. Since the IPv6 packet header is 20 bytes larger than for IPv4,
-the raw payload throughput of a link carrying full sized IPv6 packets
-is slightly less than for IPv4 (about 1.3% less for 1500 byte packets).
-However, many other factors come into play and measurements
-often show better end-to-end performance for IPv6. For example,
-in most countries [Google statistics](https://www.google.com/intl/en/ipv6/statistics.html#tab=per-country-ipv6-adoption)
-show lower latency (transit time) for IPv6. The safest summary
-is that there is no significant performance difference.
+An obvious question is: With all these differences, what is the
+difference in performance between IPv6 and IPv4? There is no simple
+answer to this question. Since the IPv6 packet header is 20 bytes larger
+than for IPv4, the raw payload throughput of a link carrying full sized
+IPv6 packets is slightly less than for IPv4 (about 1.3% less for 1500
+byte packets). However, many other factors come into play and
+measurements often show better end-to-end performance for IPv6. For
+example, in most countries
+[Google statistics](https://www.google.com/intl/en/ipv6/statistics.html#tab=per-country-ipv6-adoption)
+show lower latency (transit time) for IPv6. The safest summary is that
+there is no significant performance difference.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#obsolete-techniques) [<ins>Top</ins>](#coexistence-with-legacy-ipv4)
+### [<ins>Previous</ins>](#obsolete-techniques) [<ins>Next</ins>](#security) [<ins>Top</ins>](#coexistence-with-legacy-ipv4)
 
 backslashpagebreak
 # Security
@@ -2873,8 +2945,8 @@ there is a desire to filter one subscriber it may be apprpriate to
 filter even shorter prefixes, such as a /56. It is recommended to filter
 /64 initially and then monitor the situation; if the problem persists,
 then filter /60, then /56. /48 is the maximum that may belong to an
-ordinary subscriber, so it does not make sense to filter shorter prefixes
-than that to block a single subscriber.
+ordinary subscriber, so it does not make sense to filter shorter
+prefixes than that to block a single subscriber.
 
 The address plan design of an organization may be different, including
 /128 addresses with DHCPv6 configuration, but it is never possible to
@@ -2975,26 +3047,26 @@ and load balancers will intrinsically hide the core topology from
 attackers.
 
 Other aspects of topology hiding were discussed in
-[RFC 4864](https://www.rfc-editor.org/info/rfc4864), but that document is
-significantly out of date.
+[RFC 4864](https://www.rfc-editor.org/info/rfc4864), but that document
+is significantly out of date.
 
 Another common architectural scenario entails dis-aggregating a GUA
 allocation, typically an RIR provided address block, and announcing only
 the part of the assignment requiring public access, leaving the prefix
-requiring obfuscation unannounced within the global DFZ (default free zone). This model
-allows for a similar level of topology obscurement without the added
-configuration complexity and potentially inconsistent behavior of ULA or
-address translation. It should be noted, however, that while this design
-model does reduce complexity at the host and network layer, it may add
-minor routing complexity at the border and incur risk of unintentionally
-leaking the GUA prefix that has been earmarked for local-only use. In
-the latter case, use of a "belt and suspenders" implementation of
-creating route policy in addition to access control lists preventing
-prefix use is frequently employed.
+requiring obfuscation unannounced within the global DFZ (default free
+zone). This model allows for a similar level of topology obscurement
+without the added configuration complexity and potentially inconsistent
+behavior of ULA or address translation. It should be noted, however,
+that while this design model does reduce complexity at the host and
+network layer, it may add minor routing complexity at the border and
+incur risk of unintentionally leaking the GUA prefix that has been
+earmarked for local-only use. In the latter case, use of a "belt and
+suspenders" implementation of creating route policy in addition to
+access control lists preventing prefix use is frequently employed.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#filtering) [<ins>Top</ins>](#security)
+### [<ins>Previous</ins>](#filtering) [<ins>Next</ins>](#network-design) [<ins>Top</ins>](#security)
 
 backslashpagebreak
 # Network Design
@@ -3066,13 +3138,12 @@ backslashpagebreak
 
 As you would expect, in IPv6 networks all nodes may have globally unique
 addresses. All networks will be given at least a /64 global prefix to
-operate. Carriers should deliver a shorter prefix to their
-subscribers (typically in the range /48 through /56), which allows
-multiple /64 subnets within subscriber
-organizations or home environments. Even a home customer can have a
-public network prefix to be split into smaller networks, which is a
-paradigm shift from “hiding behind NAT” on a few public IPv4 addresses
-(or even inside `100.64.0.0/10`
+operate. Carriers should deliver a shorter prefix to their subscribers
+(typically in the range /48 through /56), which allows multiple /64
+subnets within subscriber organizations or home environments. Even a
+home customer can have a public network prefix to be split into smaller
+networks, which is a paradigm shift from “hiding behind NAT” on a few
+public IPv4 addresses (or even inside `100.64.0.0/10`
 \[[RFC6598](https://www.rfc-editor.org/info/rfc6598)\]).
 
 In IPv6 networks, it is often necessary to manage received prefixes,
@@ -3236,11 +3307,12 @@ that covers subnet and addressing design (also available from
 [APNIC](https://blog.apnic.net/2023/04/04/ipv6-architecture-and-subnetting-guide-for-network-engineers-and-operators/)).
 
 Although quite old, the following book may be helpful:
-[IPv6 Address Planning](https://www.oreilly.com/library/view/ipv6-address-planning/9781491908211/) by Tom Coffeen.
+[IPv6 Address Planning](https://www.oreilly.com/library/view/ipv6-address-planning/9781491908211/)
+by Tom Coffeen.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Top</ins>](#network-design)
+### [<ins>Next</ins>](#management-and-operations) [<ins>Top</ins>](#network-design)
 
 backslashpagebreak
 # Management and Operations
@@ -3348,8 +3420,8 @@ Three main cases can be distinguished:
 
 1. Unmanaged networks will generally use stateless address
    autoconfiguration (SLAAC,
-   [RFC 4862](https://www.rfc-editor.org/info/rfc4862)) within the subnet
-   prefix(es) assigned to them by a service provider. This is in
+   [RFC 4862](https://www.rfc-editor.org/info/rfc4862)) within the
+   subnet prefix(es) assigned to them by a service provider. This is in
    contrast to IPv4 practice, where DHCP is automatically configured in
    most unmanaged networks.
 
@@ -3455,10 +3527,10 @@ Some examples from experience:
 
 - Web services with AAAA records
   \[[2. DNS](#dns)\] and proper
-  configuration; monitoring indicated that everything was okay, but users could
-  not access the web services via IPv6 from the Internet. Someone forgot
-  a firewall rule, and the monitoring system was on the inside of the
-  network.
+  configuration; monitoring indicated that everything was okay, but
+  users could not access the web services via IPv6 from the Internet.
+  Someone forgot a firewall rule, and the monitoring system was on the
+  inside of the network.
 
 - Mail (SMTP) server with AAAA records. However, IPv6 was disabled (or
   blocked by a firewall) for whatever reason, but nobody removed the
@@ -3579,7 +3651,8 @@ Even with backup routes in place, there may be a problem if user client
 sessions originating *within* the enterprise use IPv6 source addresses
 under a failing PA prefix. This will happen unless the host is somehow
 caused to deprecate such source addresses, so that the algorithm of
-[RFC 6724](https://www.rfc-editor.org/info/rfc6724) will not select them.
+[RFC 6724](https://www.rfc-editor.org/info/rfc6724) will not select
+them.
 
 An additional technique that has been suggested is for a site to deploy
 _conditional_ router advertisements
@@ -3640,11 +3713,12 @@ usually to provide redundancy in case of failures. The phrase
 the problems in achieving MHMP using multiple address prefixes. This
 section discusses practical techniques for site multihoming.
 
-Domestic or very small office installations are out of scope for this topic. They
-are rarely connected permanently to more than one ISP, and therefore cannot
-expect smooth failover. They might have an alternative connection
-(e.g., a wireless hot spot instead of a terrestrial connection) but the
-changeover would amount to a network restart and would likely be manual.
+Domestic or very small office installations are out of scope for this
+topic. They are rarely connected permanently to more than one ISP, and
+therefore cannot expect smooth failover. They might have an alternative
+connection (e.g., a wireless hot spot instead of a terrestrial
+connection) but the changeover would amount to a network restart and
+would likely be manual.
 
 Note that the term "multihoming" is sometimes used to describe a
 configuration _inside_ a site network where a node is connected to more
@@ -3675,9 +3749,9 @@ Internet, and arrange for both of them to advertise a BGP-4 route to
 that prefix.
 
 A /48 prefix provides the theoretical capacity for more than 65 thousand
-subnets. However, extremely large enterprises can obtain prefixes shorter
-than /48 from one of the address registries, if they provide an adequate
-technical justification.
+subnets. However, extremely large enterprises can obtain prefixes
+shorter than /48 from one of the address registries, if they provide an
+adequate technical justification.
 
 Internal routing must be arranged to direct traffic as required, using
 routing metrics that favor one ISP or another, or spread the load, as
@@ -3740,10 +3814,10 @@ translation, known as NPTv6
 In this model, a translator is placed at the site exit router towards
 each ISP. Outgoing and incoming packets are translated to and from
 appropriate PA addresses. The routeable prefix part of each address is
-changed, and possibly some bits in the IID, in a way that avoids transport
-checksum errors. This translation is stateless and reversible, so causes
-much less difficulty than traditional NAT; no port translation is
-needed.
+changed, and possibly some bits in the IID, in a way that avoids
+transport checksum errors. This translation is stateless and reversible,
+so causes much less difficulty than traditional NAT; no port translation
+is needed.
 
 To simplify the translation processs, internal hosts (both clients and
 servers) would be assigned Unique Local Addresses (ULAs)
@@ -3777,15 +3851,14 @@ not share all the disadvantages of IPv4 NAT. As discussed in RFC 6296,
 Of course, NPTv6 retains some of the disadvantages of NAT: all of the
 problems that directly follow from having different IP addresses at the
 two ends of a connection. Section 5 of
-[RFC 6296](https://www.rfc-editor.org/info/rfc6296) discusses this.
-Any site running NPTv6 must either deal with
-these problems, or avoid any affected applications. In particular,
-SIP (Session Initiation Protocol for IP telephony) will not work without
-the support of a proxy mechanism 
-\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)]
-as well as provision for IPv6/IPv4 coexistence
-\[[RFC6157](https://www.rfc-editor.org/info/rfc6157)].
-This limits the applicability of NPTv6.
+[RFC 6296](https://www.rfc-editor.org/info/rfc6296) discusses this. Any
+site running NPTv6 must either deal with these problems, or avoid any
+affected applications. In particular, SIP (Session Initiation Protocol
+for IP telephony) will not work without the support of a proxy mechanism
+\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)\] as well as
+provision for IPv6/IPv4 coexistence
+\[[RFC6157](https://www.rfc-editor.org/info/rfc6157)\]. This limits the
+applicability of NPTv6.
 
 ### Transport layer solutions
 
@@ -3840,7 +3913,7 @@ later.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#energy-consumption) [<ins>Top</ins>](#management-and-operations)
+### [<ins>Previous</ins>](#energy-consumption) [<ins>Next</ins>](#case-studies) [<ins>Top</ins>](#management-and-operations)
 
 backslashpagebreak
 # Case Studies
@@ -3879,8 +3952,10 @@ fine.
 backslashpagebreak
 ## CERN and the LHC
 
-The [CERN laboratory](https://www.cern.ch) and the [Worldwide LHC Computing Grid (WLCG)](https://home.cern/science/computing/grid) are large users of IPv6 for massive data transfers.
-Some recent statistics are shown here:
+The [CERN laboratory](https://www.cern.ch) and the
+[Worldwide LHC Computing Grid (WLCG)](https://home.cern/science/computing/grid)
+are large users of IPv6 for massive data transfers. Some recent
+statistics are shown here:
 
 
 
@@ -3888,11 +3963,12 @@ Some recent statistics are shown here:
 
 (Image from the February 2024 data challenge at CERN.)
 
-The CERN site itself operates a classical IPv4 and IPv6 dual stack, and uses DHCPv6 for IPv6 address assignment.
+The CERN site itself operates a classical IPv4 and IPv6 dual stack, and
+uses DHCPv6 for IPv6 address assignment.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Top</ins>](#case-studies)
+### [<ins>Next</ins>](#deployment-status) [<ins>Top</ins>](#case-studies)
 
 backslashpagebreak
 # Deployment Status
@@ -3924,10 +4000,10 @@ example, both
 [Google](https://www.google.com/intl/en/ipv6/statistics.html) provide
 statistics on the users that access their services over IPv6. A very
 informative blog was posted in 2023 by
-[Cloudflare](https://blog.cloudflare.com/ipv6-from-dns-pov),
-showing that humans use IPv6 a lot more than bots, which seem
-to prefer IPv4. At the end of 2023, Google and Cloudflare roughly
-agreed on 46% adoption by worldwide users.
+[Cloudflare](https://blog.cloudflare.com/ipv6-from-dns-pov), showing
+that humans use IPv6 a lot more than bots, which seem to prefer IPv4. At
+the end of 2023, Google and Cloudflare roughly agreed on 46% adoption by
+worldwide users.
 
 [Akamai](https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization)
 provides data measuring the number of hits to their content delivery
@@ -3936,22 +4012,23 @@ platform. For example, they showed 72% adoption in India in early 2024.
 [APNIC](https://stats.labs.apnic.net/ipv6) quantifies the use of IPv6 by
 means of a script that runs on Internet browsers.
 
-Some statistics on DNS records and reachability for top web sites
-may be found at
-[Dan Wing's site](https://www.employees.org/~dwing/aaaa-stats/).
-These data suggest 29% IPv6 penetration by July 2023.
+Some statistics on DNS records and reachability for top web sites may be
+found at
+[Dan Wing's site](https://www.employees.org/~dwing/aaaa-stats/). These
+data suggest 29% IPv6 penetration by July 2023.
 
-At the time of writing, there are large discrepancies between data from these and
-other sources. In fact there is no well-defined metric for "how many IPv6 users
-exist" or "how much IPv6 traffic exists". To take one example, Google
-estimates the fraction of Google "hits" that use IPv6, yet Google is very little
-used in China so these data cannot represent the true world-wide situation.
-Estimates posted to the IETF by Geoff Huston in July 2023 suggest that Google
-observes a 7% adoption rate in China, while the APNIC measurement reports 30%.
+At the time of writing, there are large discrepancies between data from
+these and other sources. In fact there is no well-defined metric for
+"how many IPv6 users exist" or "how much IPv6 traffic exists". To take
+one example, Google estimates the fraction of Google "hits" that use
+IPv6, yet Google is very little used in China so these data cannot
+represent the true world-wide situation. Estimates posted to the IETF by
+Geoff Huston in July 2023 suggest that Google observes a 7% adoption
+rate in China, while the APNIC measurement reports 30%.
 
-We show here the APNIC presentation of results, as it comes from a Regional
-Internet Registry (RIR) to show the number of the Internet IPv6 users
-compared with the total Internet population (in million, see next
+We show here the APNIC presentation of results, as it comes from a
+Regional Internet Registry (RIR) to show the number of the Internet IPv6
+users compared with the total Internet population (in million, see next
 table).
 
 
@@ -3968,9 +4045,10 @@ APNIC cannot be fully employed in China, due to local policy filtering
 traffic from abroad. An independent
 [Chinese research](https://www.china-ipv6.cn/#/activeconnect/simpleInfo)
 reports 713 million measured IPv6 customers as of September 2022,
-against the 220 million reported by APNIC. If we add the difference between the
-two statistics to the global count, we end up with a Ratio of 43.68% in
-September 2022, not that far from the "psychological" threshold of 50%.
+against the 220 million reported by APNIC. If we add the difference
+between the two statistics to the global count, we end up with a Ratio
+of 43.68% in September 2022, not that far from the "psychological"
+threshold of 50%.
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -3990,11 +4068,11 @@ the world, as observed in the Internet routing tables.
 ![Table shows 18% annual IPv6 growth 2018 to 2022](Section5_Table2.jpg)
 
 The percentage of IPv6-capable ASNs is growing over the years, which is
-a good sign. On the other hand, the table does not distinguish
-the degree of adoption across the different industries, that is whether
-the ASNs are associated to a carrier, a service provider or an
-entreprise. To zoom in at that level, it is necessary to look at more
-detailed statistics such as those provided by
+a good sign. On the other hand, the table does not distinguish the
+degree of adoption across the different industries, that is whether the
+ASNs are associated to a carrier, a service provider or an entreprise.
+To zoom in at that level, it is necessary to look at more detailed
+statistics such as those provided by
 [Akamai](https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization)
 or [APNIC](https://stats.labs.apnic.net).
 
@@ -4085,8 +4163,8 @@ IPv6 readiness from outside the enterprise's network.
 [NIST](https://fedv6-deployment.antd.nist.gov/cgi-bin/generate-com)
 provides a method to infer whether US enterprises support IPv6 by
 checking its external services, such as the availability of Domain Name
-System (DNS) AAAA records, an IPv6-based mail service, or the
-support of IPv6 on their website. The same method can be applied to
+System (DNS) AAAA records, an IPv6-based mail service, or the support of
+IPv6 on their website. The same method can be applied to
 [Chinese](http://218.2.231.237:5001/cgi-bin/generate) and
 [Indian](https://cnlabs.in/IPv6_Mon/generate_industry.html) enterprises.
 
@@ -4119,9 +4197,9 @@ resources will be organizational size. The size of a given organization
 often (but not always) dictates the criticality of networking resources
 which includes both physical assets (routers, switches, security
 appliances) as well as human resources, and the level of skill available
-either by direct employment or by contracted assistance. Also included in
-these resources is the logical elements required for a presence on the
-global internet in the manner of addressing. Larger or more mature
+either by direct employment or by contracted assistance. Also included
+in these resources is the logical elements required for a presence on
+the global internet in the manner of addressing. Larger or more mature
 organizations may already posses network resources such as Autonomous
 System Numbers (ASNs), legacy IP resources, and possibly existing
 provider independent (PI) IPv6 space. First, it is important to make the
@@ -4170,9 +4248,9 @@ Provider Assigned (PA) address space consists of address space that is
 assigned to a specific upstream provider and sub-delegated to a
 customer.
 
-If receiving PA from an upstream provider, designs such as multihoming is
-a more involved process that will involve coordination with the upstream
-transit provider that owns the IP resources. (See
+If receiving PA from an upstream provider, designs such as multihoming
+is a more involved process that will involve coordination with the
+upstream transit provider that owns the IP resources. (See
 \[[6. Multi-prefix operation](#multi-prefix-operation)\]
 for some discussion of multihoming.) Additionally, renumbering is
 functionally required if said provider is exchanged for another unless
@@ -4181,7 +4259,7 @@ space may require more effort and expense, or may not be possible.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#deployment-in-the-home) [<ins>Top</ins>](#deployment-status)
+### [<ins>Previous</ins>](#deployment-in-the-home) [<ins>Next</ins>](#troubleshooting) [<ins>Top</ins>](#deployment-status)
 
 backslashpagebreak
 # Troubleshooting
@@ -4199,7 +4277,8 @@ If you know what should be written here, please write it! [How to contribute.](h
 backslashpagebreak
 ## Advanced Troubleshooting
 
-If you know what should be written here, please write it! [How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute) 
+If you know what should be written here, please write it!
+[How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -4208,11 +4287,12 @@ If you know what should be written here, please write it! [How to contribute.](h
 backslashpagebreak
 ## Tools
 
-If you know what should be written here, please write it! [How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)
+If you know what should be written here, please write it!
+[How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#advanced-troubleshooting) [<ins>Top</ins>](#troubleshooting)
+### [<ins>Previous</ins>](#advanced-troubleshooting) [<ins>Next</ins>](#further-reading) [<ins>Top</ins>](#troubleshooting)
 
 backslashpagebreak
 # Further Reading
@@ -4375,7 +4455,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date.
 
-RFCbib6 run at 2024-08-28 11:44:43 UTC+1200 (489 RFCs found)
+RFCbib6 run at 2024-09-05 11:08:05 UTC+1200 (489 RFCs found)
 
 ### Standards Track (262 RFCs)
 
@@ -5467,7 +5547,7 @@ RFCbib6 run at 2024-08-28 11:44:43 UTC+1200 (489 RFCs found)
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Top</ins>](#further-reading)
+### [<ins>Next</ins>](#chapter-template) [<ins>Top</ins>](#further-reading)
 
 backslashpagebreak
 # Chapter Template
@@ -5730,7 +5810,7 @@ Section text goes here
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#markdown-usage) [<ins>Top</ins>](#chapter-template)
+### [<ins>Previous</ins>](#markdown-usage) [<ins>Next</ins>](#chapter-template) [<ins>Top</ins>](#chapter-template)
 
 backslashpagebreak
 # book6 Main Index
@@ -5738,7 +5818,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-08-28 11:43:33 UTC+1200
+Generated at 2024-09-05 11:09:10 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6235,7 +6315,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-08-28 11:43:33 UTC+1200
+Generated at 2024-09-05 11:09:10 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->

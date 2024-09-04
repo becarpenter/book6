@@ -29,8 +29,8 @@ use. The order in which addresses are presented to the programmer is
 determined by a local configuration table on the host, in a way
 described by [RFC 6724](https://www.rfc-editor.org/info/rfc6724).
 Unfortunately the standard DHCPv6 mechanism for remote configuration of
-this table \[[RFC7078](https://www.rfc-editor.org/info/rfc7078)\]
-is not widely used. Operators need to be aware of this complexity when
+this table \[[RFC7078](https://www.rfc-editor.org/info/rfc7078)\] is not
+widely used. Operators need to be aware of this complexity when
 attempting to cause users to favor IPv6 over IPv4 (or the converse).
 
 Apart from this, in an ideal world DNS for IPv6 should not cause extra
@@ -48,24 +48,24 @@ concern:
 - Considerations for Reverse DNS in IPv6 for Internet Service Providers
   are documented in [RFC 8501](https://www.rfc-editor.org/info/rfc8501).
 
-- It is not unknown for some sites to register IPv4-mapped IPv6 addresses,
-  e.g. `::ffff:198.51.100.99`, with AAAA records. While this seems
-  to work in most cases, it is inappropriate if the host in question has
-  a valid IPv6 address, and pointless otherwise.
+- It is not unknown for some sites to register IPv4-mapped IPv6
+  addresses, e.g. `::ffff:198.51.100.99`, with AAAA records. While this
+  seems to work in most cases, it is inappropriate if the host in
+  question has a valid IPv6 address, and pointless otherwise.
 
-- Certain IPv6 address types should __never__ be visible in global DNS: ULAs
-  (starting with `fdxx:` or even `fcxx:`) or link-local (starting with
-  `fe80::`). Beware that automated mechanisms like Active Directory might
-  add ULAs to global DNS by default. Of course, it is OK to
+- Certain IPv6 address types should __never__ be visible in global DNS:
+  ULAs (starting with `fdxx:` or even `fcxx:`) or link-local (starting
+  with `fe80::`). Beware that automated mechanisms like Active Directory
+  might add ULAs to global DNS by default. Of course, it is OK to
   include ULAs in _local_ DNS if a split DNS configuration is used.
 
-    _Note:_ Some AAAA records for ULA addresses do exist in the DNS, and
-    are not a security risk, but they may cause unexpected failures from
-    a user's standpoint.
+  _Note:_ Some AAAA records for ULA addresses do exist in the DNS, and
+  are not a security risk, but they may cause unexpected failures from a
+  user's standpoint.
 
 Some statistics on AAAA records and reachability may be found at
 [Dan Wing's site](https://www.employees.org/~dwing/aaaa-stats/).
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Managed%20configuration.md) [<ins>Next</ins>](Routing.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Managed%20configuration.md) [<ins>Next</ins>](Routing.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)

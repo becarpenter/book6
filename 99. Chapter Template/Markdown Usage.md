@@ -113,4 +113,4 @@ Existing diagrams in JPG format can be inserted in the same way.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Section%20Template.md) [<ins>Next</ins>](Last%20Section.md) [<ins>Chapter Contents</ins>](99.%20Chapter%20Template.md)
+### [<ins>Previous</ins>](Section%20Template.md) [<ins>Next</ins>](Last%20Section.md) [<ins>Top</ins>](99.%20Chapter%20Template.md)

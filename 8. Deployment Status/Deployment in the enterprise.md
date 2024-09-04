@@ -7,8 +7,8 @@ IPv6 readiness from outside the enterprise's network.
 [NIST](https://fedv6-deployment.antd.nist.gov/cgi-bin/generate-com)
 provides a method to infer whether US enterprises support IPv6 by
 checking its external services, such as the availability of Domain Name
-System (DNS) AAAA records, an IPv6-based mail service, or the
-support of IPv6 on their website. The same method can be applied to
+System (DNS) AAAA records, an IPv6-based mail service, or the support of
+IPv6 on their website. The same method can be applied to
 [Chinese](http://218.2.231.237:5001/cgi-bin/generate) and
 [Indian](https://cnlabs.in/IPv6_Mon/generate_industry.html) enterprises.
 
@@ -41,9 +41,9 @@ resources will be organizational size. The size of a given organization
 often (but not always) dictates the criticality of networking resources
 which includes both physical assets (routers, switches, security
 appliances) as well as human resources, and the level of skill available
-either by direct employment or by contracted assistance. Also included in
-these resources is the logical elements required for a presence on the
-global internet in the manner of addressing. Larger or more mature
+either by direct employment or by contracted assistance. Also included
+in these resources is the logical elements required for a presence on
+the global internet in the manner of addressing. Larger or more mature
 organizations may already posses network resources such as Autonomous
 System Numbers (ASNs), legacy IP resources, and possibly existing
 provider independent (PI) IPv6 space. First, it is important to make the
@@ -92,9 +92,9 @@ Provider Assigned (PA) address space consists of address space that is
 assigned to a specific upstream provider and sub-delegated to a
 customer.
 
-If receiving PA from an upstream provider, designs such as multihoming is
-a more involved process that will involve coordination with the upstream
-transit provider that owns the IP resources. (See
+If receiving PA from an upstream provider, designs such as multihoming
+is a more involved process that will involve coordination with the
+upstream transit provider that owns the IP resources. (See
 \[[6. Multi-prefix operation](../6.%20Management%20and%20Operations/Multi-prefix%20operation.md)\]
 for some discussion of multihoming.) Additionally, renumbering is
 functionally required if said provider is exchanged for another unless
@@ -103,4 +103,4 @@ space may require more effort and expense, or may not be possible.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](8.%20Deployment%20Status.md)
+### [<ins>Previous</ins>](Deployment%20in%20the%20home.md) [<ins>Next</ins>](../9.%20Troubleshooting/9.%20Troubleshooting.md) [<ins>Top</ins>](8.%20Deployment%20Status.md)

@@ -43,18 +43,20 @@ of translation techniques from the discussion of IPv4 as a service.
   - DNS64 \[[RFC6147](https://www.rfc-editor.org/info/rfc6147)\]
     supports DNS extensions for clients of stateful NAT64.
   - PREF64 refers to the IPv6 prefix used "outside" the NAT64
-    translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781)
-    and [RFC 8880](https://www.rfc-editor.org/info/rfc8880)
-    are mechanisms by which a host can learn the PREF64 in use.
+    translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781) and
+    [RFC 8880](https://www.rfc-editor.org/info/rfc8880) are mechanisms
+    by which a host can learn the PREF64 in use.
 
 - 464XLAT (Combination of Stateful and Stateless Translation)
   \[[RFC6877](https://www.rfc-editor.org/info/rfc6877)\] is SIIT plus
   address translation *from* IPv4 clients to IPv6 transport and *back
-  to* IPv4 servers. This is used for IPv4 traffic to cross an
-  IPv6-only network.
+  to* IPv4 servers. This is used for IPv4 traffic to cross an IPv6-only
+  network.
 
-  - CLAT is the client side translator in 464XLAT. It implements stateless NAT46 (SIIT) translation.
-  - PLAT is the provider side translator in 464XLAT. It is nothing else than a stateful NAT64 gateway.
+  - CLAT is the client side translator in 464XLAT. It implements
+    stateless NAT46 (SIIT) translation.
+  - PLAT is the provider side translator in 464XLAT. It is nothing else
+    than a stateful NAT64 gateway.
   - This is the only well-defined model for NAT464 translation.
 
 - The final two items have nothing to do with IPv6/IPv4 co-existence but
@@ -67,10 +69,10 @@ of translation techniques from the discussion of IPv4 as a service.
   - NAT66 is not defined by the IETF and, given the vast supply of IPv6
     addresses, is not generally considered useful enough to overcome its
     disadvantages, which it shares with classical IPv4 NAT
-    \[[RFC5902](https://www.rfc-editor.org/info/rfc5902)\]. Like IPv4 NAT,
-    it may be implemented with support of port translation (i.e., NAPT66),
-    but as there is no shortage of IPv6 addresses, port translation
-    is unnecessary.
+    \[[RFC5902](https://www.rfc-editor.org/info/rfc5902)\]. Like IPv4
+    NAT, it may be implemented with support of port translation (i.e.,
+    NAPT66), but as there is no shortage of IPv6 addresses, port
+    translation is unnecessary.
 
 ### Further details of IPv4 as a service
 
@@ -111,9 +113,9 @@ The following figure illustrates such a scenario.
   has a natural synergy with NAT64 (which is highly desirable by itself)
   and because it is the only solution supported on mobile devices. The
   centralized NAT64 engine is called PLAT, and is the same
-  \[[RFC6146](https://www.rfc-editor.org/info/rfc6146)\] as for
-  ordinary NAT64. The client side is called CLAT, and is typically a
-  stateless NAT46 translation
+  \[[RFC6146](https://www.rfc-editor.org/info/rfc6146)\] as for ordinary
+  NAT64. The client side is called CLAT, and is typically a stateless
+  NAT46 translation
   \[[RFC7915](https://www.rfc-editor.org/info/rfc7915)\]. A good
   analysis of deployment considerations is in
   [RFC 8683](https://www.rfc-editor.org/info/rfc8683), from which an
@@ -136,12 +138,12 @@ The following figure illustrates such a scenario.
 ### IPv4 as a service for mobile devices
 
 The diagram above covers IPv4aaS for a network. A special case is
-IPv4aaS for a mobile device, especially when the device
-has only been provided with a single /64 prefix, as is the case
-in most 3GPP deployments. In this case, 464XLAT is the only
-available solution, and as described in Section 6.3 of
-[RFC 6877](https://www.rfc-editor.org/info/rfc6877),
-the CLAT will use a specific address from that /64 prefix.
+IPv4aaS for a mobile device, especially when the device has only been
+provided with a single /64 prefix, as is the case in most 3GPP
+deployments. In this case, 464XLAT is the only available solution, and
+as described in Section 6.3 of
+[RFC 6877](https://www.rfc-editor.org/info/rfc6877), the CLAT will use a
+specific address from that /64 prefix.
 
 ### Further details of NPTv6
 
@@ -155,42 +157,78 @@ it is transparent for all transport layer protocols. In principle it
 would, for example, allow a site using ULA addresses
 \[[2. Addresses](../2.%20IPv6%20Basic%20Technology/Addresses.md)\] to
 communicate with global IPv6 addresses, but with some of the
-disadvantages of classical IPv4 NAT, sometimes referred to as 1:1 NAT, 
-and not to be confused with masquerading address translation. 
-The principal difference between NPTv6 and classical NAT is that it 
-permits connection initiation in both directions. 
-However, it is not fully transparent for applications that
-embed IP addresses at high layers (so-called “referrals”). Hence, it
-cannot be considered end-to-end transparent. 
+disadvantages of classical IPv4 NAT, sometimes referred to as 1:1 NAT,
+and not to be confused with masquerading address translation. The
+principal difference between NPTv6 and classical NAT is that it permits
+connection initiation in both directions. However, it is not fully
+transparent for applications that embed IP addresses at high layers
+(so-called “referrals”). Hence, it cannot be considered end-to-end
+transparent.
 
-A particular difficulty is that SIP (Session Initiation Protocol for
-IP telephony) will not work behind NPTv6 without
-the support of a proxy mechanism 
-\[[RFC6314](https://www.rfc-editor.org/info/rfc6314)\].
+A particular difficulty is that SIP (Session Initiation Protocol for IP
+telephony) will not work behind NPTv6 without the support of a proxy
+mechanism \[[RFC6314](https://www.rfc-editor.org/info/rfc6314)\].
 
-As stated above, NPTv6 is outlined in [RFC 6296](https://www.rfc-editor.org/info/rfc6296); 
-however, although there is significant commercial support, it should be noted that the 
-RFC is experimental as of the time of this writing, so it is not considered standards track. 
+As stated above, NPTv6 is outlined in
+[RFC 6296](https://www.rfc-editor.org/info/rfc6296); however, although
+there is significant commercial support, it should be noted that the RFC
+is experimental as of the time of this writing, so it is not considered
+standards track.
 
-It goes without saying that NPTv6 is _never_ justified by a shortage of IPv6 addresses.
-Nevertheless, while there is controversy about breaking end-to-end address transparency in IPv6, 
-there are valid use cases for such architectures, and breaking the end-to-end model is more
-of an unfortunate side effect than a feature of such tools. Some details on the "breakage"
-caused by NPTv6, and a comparison with classical NAT, are given in
+It goes without saying that NPTv6 is _never_ justified by a shortage of
+IPv6 addresses. Nevertheless, while there is controversy about breaking
+end-to-end address transparency in IPv6, there are valid use cases for
+such architectures, and breaking the end-to-end model is more of an
+unfortunate side effect than a feature of such tools. Some details on
+the "breakage" caused by NPTv6, and a comparison with classical NAT, are
+given in
 [Section 5 of RFC 6296](https://www.rfc-editor.org/rfc/rfc6296.html#section-5).
 
-In large scale deployments of wide area architectures, NPTv6 does enable some compelling use cases which enable diversity in security platforms such as stateful unified threat management devices (UTMs). These are positioned in geographically and topologically diverse locations, but require flexibility of _external_ layer 3 addressing to support flow identification. Using NPTv6 to perform re-mapping of addressing allows inspection engines to maintain the flow symmetry that is required for stateful deep packet inspection engines to operate, as asymmetry will cause them to mark all flows as incomplete. 
-It is in this model that it can be GUA to GUA, and this is a valid, supportable, and definitely production deployed architecture. 
+In large scale deployments of wide area architectures, NPTv6 does enable
+some compelling use cases which enable diversity in security platforms
+such as stateful unified threat management devices (UTMs). These are
+positioned in geographically and topologically diverse locations, but
+require flexibility of _external_ layer 3 addressing to support flow
+identification. Using NPTv6 to perform re-mapping of addressing allows
+inspection engines to maintain the flow symmetry that is required for
+stateful deep packet inspection engines to operate, as asymmetry will
+cause them to mark all flows as incomplete. It is in this model that it
+can be GUA to GUA, and this is a valid, supportable, and definitely
+production deployed architecture.
 
-In smaller deployments, NPTv6 can be leveraged to create stable addressing inside a network that may be too small for PI address space, but too large to operate without service provider diversity. In this model, such as an SD-WAN deployment, a GUA or ULA prefix may be deployed, delegated by a home office, other IT governance body, or a local administrator, and mapped to one or more PA prefixes provided by lower cost commercial internet services. This allows for internal addressing to be stable, while providing a more robust connectivity model, and the ability to more quickly switch providers if required by leveraging dynamic addressing externally mapped to stable addressing internally. This model more closely aligns with the current IPv4 architectures pervasively deployed nearly everywhere with stable internal IPv4 addressing masqueraded to one or more PA addresses provided by an upstream ISP. 
+In smaller deployments, NPTv6 can be leveraged to create stable
+addressing inside a network that may be too small for PI address space,
+but too large to operate without service provider diversity. In this
+model, such as an SD-WAN deployment, a GUA or ULA prefix may be
+deployed, delegated by a home office, other IT governance body, or a
+local administrator, and mapped to one or more PA prefixes provided by
+lower cost commercial internet services. This allows for internal
+addressing to be stable, while providing a more robust connectivity
+model, and the ability to more quickly switch providers if required by
+leveraging dynamic addressing externally mapped to stable addressing
+internally. This model more closely aligns with the current IPv4
+architectures pervasively deployed nearly everywhere with stable
+internal IPv4 addressing masqueraded to one or more PA addresses
+provided by an upstream ISP.
 
 ### Further details on NAT66
 
-NAT66 is currently a non-standards based mechanism for statefully translating one or more IPv6 addresses to one or more other IPv6 addresses. When port translation is also provided (as is very common for IPv4 NAT), the term NAPT66 may also be used.
+NAT66 is currently a non-standards based mechanism for statefully
+translating one or more IPv6 addresses to one or more other IPv6
+addresses. When port translation is also provided (as is very common for
+IPv4 NAT), the term NAPT66 may also be used.
 
-It goes without saying that NAT66 is _never_ justified by a general shortage of IPv6 addresses.
-Like NPTv6, NAT66 should be used only when necessary or required. Moreover, is is also very important to understand that the intent of these tools is to translate, hence the names. They may play a part in compliance requirements, but they are - at their core - translation tools and not security mechanisms. Address translation is often deployed alongside stateful packet filtering, but the two are, in actuality, exclusive toolkits. That is to say, they are not tied to each other, and should be considered distinct - address translation is not a security tool.  
+It goes without saying that NAT66 is _never_ justified by a general
+shortage of IPv6 addresses. Like NPTv6, NAT66 should be used only when
+necessary or required. Moreover, is is also very important to understand
+that the intent of these tools is to translate, hence the names. They
+may play a part in compliance requirements, but they are - at their core
+\- translation tools and not security mechanisms. Address translation is
+often deployed alongside stateful packet filtering, but the two are, in
+actuality, exclusive toolkits. That is to say, they are not tied to each
+other, and should be considered distinct - address translation is not a
+security tool.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Tunnels.md) [<ins>Next</ins>](Obsolete%20techniques.md) [<ins>Chapter Contents</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)
+### [<ins>Previous</ins>](Tunnels.md) [<ins>Next</ins>](Obsolete%20techniques.md) [<ins>Top</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)

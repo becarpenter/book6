@@ -26,13 +26,13 @@ hotels, if they support IPv6 at all, do so via SLAAC. So the domain of
 applicability for DHCPv6 is mainly enterprise networks. They tend to
 prefer managed addresses because of security compliance requirements.
 
-DHCPv6 is defined by [RFC 8415](https://www.rfc-editor.org/info/rfc8415).
-It is conceptually similar to DHCP for IPv4, but different in detail.
-When it is in use, each host must contain a DHCPv6 client and either a
-DHCPv6 server or a DHCPv6 relay must be available on the subnet. DHCPv6
-can provide assigned IPv6 addresses and other parameters, and new
-options can be defined. (All registered DHCP parameters can be found on
-the
+DHCPv6 is defined by
+[RFC 8415](https://www.rfc-editor.org/info/rfc8415). It is conceptually
+similar to DHCP for IPv4, but different in detail. When it is in use,
+each host must contain a DHCPv6 client and either a DHCPv6 server or a
+DHCPv6 relay must be available on the subnet. DHCPv6 can provide
+assigned IPv6 addresses and other parameters, and new options can be
+defined. (All registered DHCP parameters can be found on the
 [IANA site](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml#dhcpv6-parameters-2).)
 DHCPv6 messages are transmitted over UDP/IPv6 using ports 546 and 547.
 
@@ -93,4 +93,4 @@ information to communicate with other on-link hosts.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Auto-configuration.md) [<ins>Next</ins>](DNS.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Auto-configuration.md) [<ins>Next</ins>](DNS.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)

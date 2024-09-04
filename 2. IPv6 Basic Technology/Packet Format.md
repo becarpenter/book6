@@ -38,8 +38,8 @@ Some notes on these fixed fields:
 
 - Traffic class: six bits of
   [differentiated services code point](https://www.rfc-editor.org/info/rfc2474)
-  (DSCP) followed by two
-  [ECN](https://www.rfc-editor.org/info/rfc3168) bits. See
+  (DSCP) followed by two [ECN](https://www.rfc-editor.org/info/rfc3168)
+  bits. See
   [Traffic class and flow label](Traffic%20class%20and%20flow%20label.md).
 
 - Flow label: 20 bits. Should be a pseudo-random value unique to a given
@@ -51,8 +51,8 @@ Some notes on these fixed fields:
 
 - Next header: an integer defining the type of the following header.
 
-- Hop limit: counts down at each routing hop. The packet is discarded when
-  it hits zero.
+- Hop limit: counts down at each routing hop. The packet is discarded
+  when it hits zero.
 
 - Addresses: 128 bits; see below.
 
@@ -103,4 +103,4 @@ also worth noting that Wireshark knows all about IPv6 header formats.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](Addresses.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Next</ins>](Addresses.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)

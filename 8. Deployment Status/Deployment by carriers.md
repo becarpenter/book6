@@ -9,11 +9,11 @@ the world, as observed in the Internet routing tables.
 <img src="./Section5_Table2.jpg" alt="Table shows 18% annual IPv6 growth 2018 to 2022">
 
 The percentage of IPv6-capable ASNs is growing over the years, which is
-a good sign. On the other hand, the table does not distinguish
-the degree of adoption across the different industries, that is whether
-the ASNs are associated to a carrier, a service provider or an
-entreprise. To zoom in at that level, it is necessary to look at more
-detailed statistics such as those provided by
+a good sign. On the other hand, the table does not distinguish the
+degree of adoption across the different industries, that is whether the
+ASNs are associated to a carrier, a service provider or an entreprise.
+To zoom in at that level, it is necessary to look at more detailed
+statistics such as those provided by
 [Akamai](https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization)
 or [APNIC](https://stats.labs.apnic.net).
 
@@ -50,4 +50,4 @@ UK.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Status.md) [<ins>Next</ins>](Deployment%20in%20the%20home.md) [<ins>Chapter Contents</ins>](8.%20Deployment%20Status.md)
+### [<ins>Previous</ins>](Status.md) [<ins>Next</ins>](Deployment%20in%20the%20home.md) [<ins>Top</ins>](8.%20Deployment%20Status.md)

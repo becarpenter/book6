@@ -11,19 +11,16 @@ will likewise be constantly updated. It's issued under an
 You are welcome to make a printed copy at your own expense, but be aware
 that the book will evolve constantly.
 
-The
-[list of contents](../Contents.md)
-should act as an on-line guide to the topics covered. Most readers will
-probably not read from cover to cover. Design your own path through the
-book.
+The [list of contents](../Contents.md) should act as an on-line guide to
+the topics covered. Most readers will probably not read from cover to
+cover. Design your own path through the book.
 
-There is also an
-[index](../Index.md).
+There is also an [index](../Index.md).
 
-A little tip if you are reading this on GitHub: For some reason, GitHub doesn't
-support automatically opening a link in a new browser tab or window, so clicking
-on links will always take you away from the current page.
-To avoid this, with most browsers you can use CTRL+click (on Windows
-and Linux) or CMD+click (on MacOS) to open a new tab.
+A little tip if you are reading this on GitHub: For some reason, GitHub
+doesn't support automatically opening a link in a new browser tab or
+window, so clicking on links will always take you away from the current
+page. To avoid this, with most browsers you can use CTRL+click (on
+Windows and Linux) or CMD+click (on MacOS) to open a new tab.
 
-### [<ins>Previous</ins>](Foreword.md) [<ins>Next</ins>](How%20a%20user%20sees%20IPv6.md) [<ins>Chapter Contents</ins>](1.%20Introduction%20and%20Foreword.md)
+### [<ins>Previous</ins>](Foreword.md) [<ins>Next</ins>](How%20a%20user%20sees%20IPv6.md) [<ins>Top</ins>](1.%20Introduction%20and%20Foreword.md)

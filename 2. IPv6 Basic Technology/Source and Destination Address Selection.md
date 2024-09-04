@@ -53,29 +53,43 @@ fec0::/16                          1    11
 3ffe::/16                          1    12        
 ```
 
-
-
-
 ### Destination address selection
 
-Destination address selection is somewhat complex, and it should be understood that it is configurable and may be somewhat inconsistent based on the implementation of a given IPv6 network stack and the age of the operating system. At the time of this writing there are still operating systems that employ aspects of or full implementations of [RFC 3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted by [RFC 6724](https://www.rfc-editor.org/info/rfc6724) in 2012.  To fully understand address selection, one can reference the file _/etc/gai.conf_ in a modern Linux system as it has the most succinct example of the rules governing the process.
+Destination address selection is somewhat complex, and it should be
+understood that it is configurable and may be somewhat inconsistent
+based on the implementation of a given IPv6 network stack and the age of
+the operating system. At the time of this writing there are still
+operating systems that employ aspects of or full implementations of
+[RFC 3484](https://www.rfc-editor.org/info/rfc3484), which was obsoleted
+by [RFC 6724](https://www.rfc-editor.org/info/rfc6724) in 2012. To fully
+understand address selection, one can reference the file _/etc/gai.conf_
+in a modern Linux system as it has the most succinct example of the
+rules governing the process.
 
 ### Changing address selection policy
 
-In the vast majority of use cases, the default policy table is unchanged and consistent. However, on platforms such as Linux and Microsoft Windows, it is possible to adjust this table to create desired behavior, up to and including creating address pairings, adjusted preferences, and unique traffic SA/DA characteristics.
+In the vast majority of use cases, the default policy table is unchanged
+and consistent. However, on platforms such as Linux and Microsoft
+Windows, it is possible to adjust this table to create desired behavior,
+up to and including creating address pairings, adjusted preferences, and
+unique traffic SA/DA characteristics.
 
-A site using DHCPv6 options 84 and 85 can change the default settings for address selection via
-[RFC 7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately this
-is not widely implemented.
-In principle this can also be achieved by system commands in each host
-(e.g. _netsh interface ipv6 add prefixpolicy_
-in Windows and  _ip addrlabel add prefix_ in Linux) but this is rarely done.
-The result is that hosts generally apply the default
-policy for their operating system release, even when a different policy would work better.
+A site using DHCPv6 options 84 and 85 can change the default settings
+for address selection via
+[RFC 7078](https://www.rfc-editor.org/info/rfc7078), but unfortunately
+this is not widely implemented. In principle this can also be achieved
+by system commands in each host (e.g. _netsh interface ipv6 add
+prefixpolicy_ in Windows and _ip addrlabel add prefix_ in Linux) but
+this is rarely done. The result is that hosts generally apply the
+default policy for their operating system release, even when a different
+policy would work better.
 
 ### ULA considerations
 
-In default situations where both IPv4 and ULA are present, IPv4 will be the preferred protocol. This is often counter to general understanding of how IPv6 behavior works in a dual stacked environment and can be observed in the aforementioned _gai.conf_ file with the following line:
+In default situations where both IPv4 and ULA are present, IPv4 will be
+the preferred protocol. This is often counter to general understanding
+of how IPv6 behavior works in a dual stacked environment and can be
+observed in the aforementioned _gai.conf_ file with the following line:
 
 ```
 Prefix                            Prec   Label      
@@ -83,27 +97,40 @@ Prefix                            Prec   Label
 ::ffff:0.0.0.0/96                 35     4
 ```
 
-This is the IPv6 conversion of IPv4 address space. Because this block of addresses has a higher preference value than ULA addressing, it will be preferred by default by the operating system and application due to its preference value.  
+This is the IPv6 conversion of IPv4 address space. Because this block of
+addresses has a higher preference value than ULA addressing, it will be
+preferred by default by the operating system and application due to its
+preference value.
 
-
-[draft-ietf-v6ops-ula](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ula/) described in detail many of the considerations for use of ULA, specifically in a dual stacked environment. It should be noted that in an IPv6-only environment, the address selection process is generally problem free, leveraging the above process. 
-
+[draft-ietf-v6ops-ula](https://datatracker.ietf.org/doc/draft-ietf-v6ops-ula/)
+described in detail many of the considerations for use of ULA,
+specifically in a dual stacked environment. It should be noted that in
+an IPv6-only environment, the address selection process is generally
+problem free, leveraging the above process.
 
 ### Labels
 
-Not to be confused with flow labels, address labels are a powerful and often overlooked tool in the selection process. Address labels allow for prefix or address pairings thus forcing traffic pairs to act in consistent or desirable ways that may differ from default for technical, security, or policy reasons. Taking a basic Linux system and creating an address pair with matching labels will cause the system to act on the labels and generate traffic between the SA/DA pairs as determined by the operator. 
+Not to be confused with flow labels, address labels are a powerful and
+often overlooked tool in the selection process. Address labels allow for
+prefix or address pairings thus forcing traffic pairs to act in
+consistent or desirable ways that may differ from default for technical,
+security, or policy reasons. Taking a basic Linux system and creating an
+address pair with matching labels will cause the system to act on the
+labels and generate traffic between the SA/DA pairs as determined by the
+operator.
 
-Using a vanilla linux system the following changes can be made using the ip command ```{ip addrlabel add prefix <PREFIX> label <LABEL>}``` easily creating a working SA/DA pair.
+Using a vanilla linux system the following changes can be made using the
+ip command `{ip addrlabel add prefix <PREFIX> label <LABEL>}` easily
+creating a working SA/DA pair.
 
-For example: 
+For example:
 
 ```
 sudo ip addrlabel add prefix fd68:1e02:dc1a:9:ba27:ebff:fe84:781c/128 label 97
 sudo ip addrlabel add prefix 2001:db8:4009:81c::200e/128 label 97
 ```
 
-
-Yields: 
+Yields:
 
 ```
 user@v6host:~$ sudo ip addrlabel list
@@ -123,7 +150,11 @@ prefix ::/0 label 1
 
 ### Source address selection
 
-In practice, source address selection is difficult to configure outside of link local, GUA, and ULA default preferences, and varies by host and application implementations. It is possible to create address pairings using the IPv6 address label mechanisms, however. 
+In practice, source address selection is difficult to configure outside
+of link local, GUA, and ULA default preferences, and varies by host and
+application implementations. It is possible to create address pairings
+using the IPv6 address label mechanisms, however.
+
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Traffic%20class%20and%20flow%20label.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Traffic%20class%20and%20flow%20label.md) [<ins>Next</ins>](../3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)

@@ -18,7 +18,8 @@
 # Version: 2024-04-28 - handle directory on command line
 # Version: 2024-08-19 - adjust alt text handling for graphics
 #                     - added EPUB conversion
-# Version: 2024-08-20 - fixed case error in "Title.md" 
+# Version: 2024-08-20 - fixed case error in "Title.md"
+# Version: 2024-09-24 - adapt to Contents.md with embedded links
 
 
 ########################################################
@@ -308,7 +309,12 @@ for line in contents:
         dirname = dirname.replace("%20", " ")
         imgcopy(dirname) #copy any image files
         filename = filename.replace("%20", " ").replace(")", "").replace("\n", "")
+    elif line.startswith("* ["):
+        # strip link
+        filename,_ = line[3:].split("]", maxsplit=1)
+        filename  += ".md"
     elif line.startswith("*"):
+        # old format (plain name)
         filename = line.replace("* ", "").replace("%20", " ").replace("\n", "") + ".md"
     fns.append(dirname+"/"+filename)
         

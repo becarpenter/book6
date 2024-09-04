@@ -21,8 +21,8 @@ point-to-point links) is one that send or receives one complete frame at
 a time with a raw size of at least 1500 bytes and a 48 bit IEEE MAC
 address at Layer 2. It must provide or emulate classical Ethernet
 multicasting. The IPv6 mapping then follows
-[RFC 2464](https://www.rfc-editor.org/info/rfc2464) from 1998, except for
-some updates to multicast address details in
+[RFC 2464](https://www.rfc-editor.org/info/rfc2464) from 1998, except
+for some updates to multicast address details in
 [RFC 6085](https://www.rfc-editor.org/info/rfc6085) and to the interface
 identifier in [RFC 8064](https://www.rfc-editor.org/info/rfc8064). IPv6
 has its own Ethertype field (0x86dd), so that IPv6 and IPv4 packets can
@@ -63,4 +63,4 @@ today and best practices are not yet established.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Addresses.md) [<ins>Next</ins>](Address%20resolution.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Addresses.md) [<ins>Next</ins>](Address%20resolution.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)

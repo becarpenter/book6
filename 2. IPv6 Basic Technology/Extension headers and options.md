@@ -18,10 +18,11 @@ Here are some notes on the most common ones:
   intended to warn every router on the path that the packet may need
   special handling. Unfortunately, experience shows that this extension
   header can be problematic, and that many routers do not in fact
-  process it. Indeed, [RFC 8200](https://www.rfc-editor.org/info/rfc8200)
-  states that "it is now expected that nodes along a packet's delivery
-  path only examine and process the Hop-by-Hop Options header if
-  explicitly configured to do so."
+  process it. Indeed,
+  [RFC 8200](https://www.rfc-editor.org/info/rfc8200) states that "it is
+  now expected that nodes along a packet's delivery path only examine
+  and process the Hop-by-Hop Options header if explicitly configured to
+  do so."
 
   Router Alert types have their own registry at
   [IANA](https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml).
@@ -48,14 +49,15 @@ Here are some notes on the most common ones:
 - Routing header, if non-standard routing is required. There are various
   [routing header types](https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-2).
   An important current one is the Segment Routing Header (type 4,
-  [RFC 8754](https://www.rfc-editor.org/info/rfc8754)). A router that acts
-  as an intermediate destination and therefore processes routing headers is
-  known as an 'intermediate node' in [STD 86](https://www.rfc-editor.org/info/std86).
+  [RFC 8754](https://www.rfc-editor.org/info/rfc8754)). A router that
+  acts as an intermediate destination and therefore processes routing
+  headers is known as an 'intermediate node' in
+  [STD 86](https://www.rfc-editor.org/info/std86).
 
 - Encapsulating security payload, if
   [IPsec](https://www.rfc-editor.org/info/rfc4303) is in use. This is
-  the defined mechanism for IPv6 security at layer 3.  This is probably the most widely used
-  IPv6 extension header.
+  the defined mechanism for IPv6 security at layer 3. This is probably
+  the most widely used IPv6 extension header.
 
 Both hop-by-hop and destination options include flag bits in the option
 type for nodes that may not understand the option, telling the node
@@ -75,4 +77,4 @@ recommendations are in
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Transport%20protocols.md) [<ins>Next</ins>](Traffic%20class%20and%20flow%20label.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Transport%20protocols.md) [<ins>Next</ins>](Traffic%20class%20and%20flow%20label.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)

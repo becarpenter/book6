@@ -41,23 +41,23 @@ and load balancers will intrinsically hide the core topology from
 attackers.
 
 Other aspects of topology hiding were discussed in
-[RFC 4864](https://www.rfc-editor.org/info/rfc4864), but that document is
-significantly out of date.
+[RFC 4864](https://www.rfc-editor.org/info/rfc4864), but that document
+is significantly out of date.
 
 Another common architectural scenario entails dis-aggregating a GUA
 allocation, typically an RIR provided address block, and announcing only
 the part of the assignment requiring public access, leaving the prefix
-requiring obfuscation unannounced within the global DFZ (default free zone). This model
-allows for a similar level of topology obscurement without the added
-configuration complexity and potentially inconsistent behavior of ULA or
-address translation. It should be noted, however, that while this design
-model does reduce complexity at the host and network layer, it may add
-minor routing complexity at the border and incur risk of unintentionally
-leaking the GUA prefix that has been earmarked for local-only use. In
-the latter case, use of a "belt and suspenders" implementation of
-creating route policy in addition to access control lists preventing
-prefix use is frequently employed.
+requiring obfuscation unannounced within the global DFZ (default free
+zone). This model allows for a similar level of topology obscurement
+without the added configuration complexity and potentially inconsistent
+behavior of ULA or address translation. It should be noted, however,
+that while this design model does reduce complexity at the host and
+network layer, it may add minor routing complexity at the border and
+incur risk of unintentionally leaking the GUA prefix that has been
+earmarked for local-only use. In the latter case, use of a "belt and
+suspenders" implementation of creating route policy in addition to
+access control lists preventing prefix use is frequently employed.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Filtering.md) [<ins>Chapter Contents</ins>](4.%20Security.md)
+### [<ins>Previous</ins>](Filtering.md) [<ins>Next</ins>](../5.%20Network%20Design/5.%20Network%20Design.md) [<ins>Top</ins>](4.%20Security.md)

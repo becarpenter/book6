@@ -45,8 +45,8 @@ there is a desire to filter one subscriber it may be apprpriate to
 filter even shorter prefixes, such as a /56. It is recommended to filter
 /64 initially and then monitor the situation; if the problem persists,
 then filter /60, then /56. /48 is the maximum that may belong to an
-ordinary subscriber, so it does not make sense to filter shorter prefixes
-than that to block a single subscriber.
+ordinary subscriber, so it does not make sense to filter shorter
+prefixes than that to block a single subscriber.
 
 The address plan design of an organization may be different, including
 /128 addresses with DHCPv6 configuration, but it is never possible to
@@ -101,4 +101,4 @@ man-in-the-middle attack.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Layer%202%20considerations.md) [<ins>Next</ins>](Topology%20obfuscation.md) [<ins>Chapter Contents</ins>](4.%20Security.md)
+### [<ins>Previous</ins>](Layer%202%20considerations.md) [<ins>Next</ins>](Topology%20obfuscation.md) [<ins>Top</ins>](4.%20Security.md)

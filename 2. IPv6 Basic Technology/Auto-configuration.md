@@ -98,10 +98,10 @@ find themselves on a network where it is the only method of acquiring
 addresses. However, some network operators prefer to manage addressing
 using DHCPv6, as discussed in the next section. There is a global flag
 for this in the RA message format known as the M bit (see
-[RFC 4861](https://www.rfc-editor.org/info/rfc4861) for details). If M=1,
-DHCPv6 is in use for address assignment. However, PIOs are still needed
-to allow on-link determination, and link-local addresses are still
-needed.
+[RFC 4861](https://www.rfc-editor.org/info/rfc4861) for details). If
+M=1, DHCPv6 is in use for address assignment. However, PIOs are still
+needed to allow on-link determination, and link-local addresses are
+still needed.
 
 *More details*: This section and the previous one have summarized a
 complex topic. Apart from the basic specifications
@@ -137,4 +137,4 @@ section.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Address%20resolution.md) [<ins>Next</ins>](Managed%20configuration.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Address%20resolution.md) [<ins>Next</ins>](Managed%20configuration.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)

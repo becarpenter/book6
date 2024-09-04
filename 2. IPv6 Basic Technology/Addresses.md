@@ -338,4 +338,4 @@ been reserved \[[RFC9637](https://www.rfc-editor.org/info/rfc9637)\].
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Packet%20Format.md) [<ins>Next</ins>](Layer%202%20functions.md) [<ins>Chapter Contents</ins>](2.%20IPv6%20Basic%20Technology.md)
+### [<ins>Previous</ins>](Packet%20Format.md) [<ins>Next</ins>](Layer%202%20functions.md) [<ins>Top</ins>](2.%20IPv6%20Basic%20Technology.md)
