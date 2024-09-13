@@ -30,9 +30,10 @@ and inter-chapter links as far as possible."""
 # Version: 2024-01-01 - changed default text for empty sections
 # Version: 2024-04-12 - improved optics of RFC citations
 # Version: 2024-04-28 - handle directory on command line
-# Version: 2024-09-25 - insert section links in contents page
+# Version: 2024-09-05 - insert section links in contents page
 #                     - rename "Chapter Contents" link as "Top"
 #                     - add next chapter links to last sections
+# Version: 2024-09-13 - fix for internal cite of chapter name
 
 
 ########################################################
@@ -311,7 +312,10 @@ def expand_cites():
                         for cline in contents:
                             if "["+cnum+"." in cline:
                                 chap = cline.split("(")[1].split("/")[0]
-                                fn = "../"+chap+"/"+sname.replace(" ","%20")+".md"
+                                if cite == chap.replace("%20"," "):
+                                    fn= "../"+chap+"/"+chap.replace(" ","%20")+".md"
+                                else:
+                                    fn = "../"+chap+"/"+sname.replace(" ","%20")+".md"
                                 if not file_ok(fn):
                                     logitw('"'+cite+'" not found')
                                 cite = "["+cite+"]("+fn+")"
