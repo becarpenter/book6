@@ -11,6 +11,10 @@ regardless of any internal structure. In other words, a unicast routing
 prefix is anywhere between 1 and 128 bits long. There is more about
 [routing](Routing.md) below.
 
+The enormous ammount of IPv6 address space allows a good deal of freedom
+in network design that never existed for IPv4. This is discussed in
+\[[5. Network Design](../5.%20Network%20Design/5.%20Network%20Design.md)\].
+
 The IPv6 addressing architecture is defined by
 [RFC 4291](http://www.rfc-editor.org/info/rfc4291), which has not been
 fundamentally revised since 2006, although there are a number of RFCs
