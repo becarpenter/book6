@@ -2,13 +2,13 @@
 
 ### Fragmentation
 
-As already stated in the
-\[[3. IPv6 primary differences from IPv4](../3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)\],
+As already stated in
+[3. IPv6 primary differences from IPv4](../3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md),
 IPv6 does not allow intermediate routers to fragment packets. Instead,
 IPv6 pushes the responsibility of fragmentation to the source node. If a
 packet exceeds the MTU, it is either fragmented by the sender or
 dropped. This means the sender must use PMTUD
-[RFC7690](https://www.rfc-editor.org/info/rfc7690) to ensure that
+\[[RFC7690](https://www.rfc-editor.org/info/rfc7690)\] to ensure that
 packets are sized appropriately for the smallest MTU along the path. The
 sender fragments packets if necessary before sending them. This require
 additional computation on the sender to fragment packets but there has
@@ -26,7 +26,7 @@ complexity at both the router and the destination where reassembly
 occurs.
 
 IPv6 avoids this fragmentation overhead by relying on PMTUD
-[RFC7690](https://www.rfc-editor.org/info/rfc7690). If a jumbo frame
+\[[RFC7690](https://www.rfc-editor.org/info/rfc7690)\]. If a jumbo frame
 exceeds the MTU of any network hop, the sender is responsible for
 fragmenting it before transmission. However, if properly configured, the
 sender can send larger packets efficiently without fragmentation,
@@ -34,10 +34,10 @@ provided that the entire path supports jumbo frames. Ths allows IPv6 to
 handle larger packets more effectively because the Path MTU Discovery
 mechanism ensures that packets fit within the MTU of every hop along the
 route. This mechanism is defined in
-[RFC8201](https://www.rfc-editor.org/info/rfc8201).
+\[[RFC8201](https://www.rfc-editor.org/info/rfc8201)\].
 
 “Jumbo Payload Option” in IPv6
-[RFC2675](https://www.rfc-editor.org/info/rfc2675) allows packets larger
+\[[RFC2675](https://www.rfc-editor.org/info/rfc2675)\] allows packets larger
 than 65,535 bytes (the maximum payload size for standard IPv6 packets)
 to be transmitted. This option is included in the Hop-by-Hop Options
 header and enables IPv6 to support super jumbo frames efficiently, even
