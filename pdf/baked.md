@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-09-05 11:09:54 UTC+1200
+Version captured at 2024-09-17 09:58:35 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -89,6 +89,7 @@ and a [citation index](#book6-citation-index).
 * [Multi-prefix operation](#multi-prefix-operation)
 * [Multihoming](#multihoming)
 * [Energy consumption](#energy-consumption)
+* [Packet size and Jumbo Frames](#packet-size-and-jumbo-frames)
 * [Basic Windows commands](#basic-windows-commands)
 
 [7. Case Studies](#case-studies)
@@ -681,6 +682,10 @@ property of IPv6 unicast routing is that it is
 regardless of any internal structure. In other words, a unicast routing
 prefix is anywhere between 1 and 128 bits long. There is more about
 [routing](#routing) below.
+
+The enormous amount of IPv6 address space allows a good deal of freedom
+in network design that never existed for IPv4. This is discussed in
+\[[5. Network Design](#network-design)\].
 
 The IPv6 addressing architecture is defined by
 [RFC 4291](http://www.rfc-editor.org/info/rfc4291), which has not been
@@ -3085,9 +3090,15 @@ subnet, for performance reasons.
 A network designer does, however, have more flexibility with IPv6. If an
 enterprise has a /48 prefix, 16 bits are available to identify more than
 65 thousand individual subnets, a luxury for most IPv4 network
-designers.
+designers. But we can go even further: there are deployment models where
+handing out a complete /64 prefix to a single node may be beneficial
+(e.g., if that node may contain a large number of virtual machines).
+Large enterprises, and of course carriers, can simply obtain more
+address space (i.e., a prefix shorter than /48) if they need it.
+In practice, address space should _never_ be a limiting factor
+for IPv6 network design.
 
-Setting these details aside, there is no reason why an IPv6 network will
+Setting these aspects aside, there is no reason why an IPv6 network will
 have a different macroscopic design than an IPv4 network. The detailed
 approach will vary.
 
@@ -3391,6 +3402,8 @@ tools apply to IPv6, and then continues by discussing some specific
 topics where IPv6 presents its own challenges. The emphasis is on
 carrier, enterprise and data center scenarios.
 
+<!-- Link lines generated automatically; do not delete -->
+
 [Address and Prefix Management](#address-and-prefix-management)
 
 [Remote configuration](#remote-configuration)
@@ -3407,7 +3420,7 @@ carrier, enterprise and data center scenarios.
 
 [Energy consumption](#energy-consumption)
 
-<!-- Link lines generated automatically; do not delete -->
+[Packet size and Jumbo Frames](#packet-size-and-jumbo-frames)
 
 [Basic Windows commands](#basic-windows-commands)
 
@@ -3902,7 +3915,61 @@ Compression and Fragmentation (SCHC)
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#multihoming) [<ins>Next</ins>](#basic-windows-commands) [<ins>Top</ins>](#management-and-operations)
+### [<ins>Previous</ins>](#multihoming) [<ins>Next</ins>](#packet-size-and-jumbo-frames) [<ins>Top</ins>](#management-and-operations)
+
+backslashpagebreak
+## Packet size and Jumbo Frames
+
+### Fragmentation
+
+As already stated in the
+\[[3. IPv6 primary differences from IPv4](#ipv6-primary-differences-from-ipv4)\],
+IPv6 does not allow intermediate routers to fragment packets. Instead,
+IPv6 pushes the responsibility of fragmentation to the source node. If a
+packet exceeds the MTU, it is either fragmented by the sender or
+dropped. This means the sender must use PMTUD
+[RFC7690](https://www.rfc-editor.org/info/rfc7690) to ensure that
+packets are sized appropriately for the smallest MTU along the path. The
+sender fragments packets if necessary before sending them. This require
+additional computation on the sender to fragment packets but there has
+been no significant performance implication reported.
+
+### MTU Size and Jumbo Frames
+
+A jumbo frame is an Ethernet frame that is larger than the standard 1500
+bytes, commonly configured to be around 9000 bytes. If a router along
+the path has a smaller MTU when sending jumbo frames in an IPv4 network,
+it will fragment the frame. This can lead to higher fragmentation
+overhead because the larger the original frame, the more fragments it
+must be split into. Additionally, fragmentation adds processing
+complexity at both the router and the destination where reassembly
+occurs.
+
+IPv6 avoids this fragmentation overhead by relying on PMTUD
+[RFC7690](https://www.rfc-editor.org/info/rfc7690). If a jumbo frame
+exceeds the MTU of any network hop, the sender is responsible for
+fragmenting it before transmission. However, if properly configured, the
+sender can send larger packets efficiently without fragmentation,
+provided that the entire path supports jumbo frames. Ths allows IPv6 to
+handle larger packets more effectively because the Path MTU Discovery
+mechanism ensures that packets fit within the MTU of every hop along the
+route. This mechanism is defined in
+[RFC8201](https://www.rfc-editor.org/info/rfc8201).
+
+“Jumbo Payload Option” in IPv6
+[RFC2675](https://www.rfc-editor.org/info/rfc2675) allows packets larger
+than 65,535 bytes (the maximum payload size for standard IPv6 packets)
+to be transmitted. This option is included in the Hop-by-Hop Options
+header and enables IPv6 to support super jumbo frames efficiently, even
+when dealing with extremely large packet sizes. This mechanism
+simplifies the handling of large packets without requiring them to be
+split into smaller fragments. If a network supports large enough MTUs,
+IPv6 can use this option to transmit large frames without intermediate
+fragmentation. However, it is very little used.
+
+<!-- Link lines generated automatically; do not delete -->
+
+### [<ins>Previous</ins>](#energy-consumption) [<ins>Next</ins>](#basic-windows-commands) [<ins>Top</ins>](#management-and-operations)
 
 backslashpagebreak
 ## Basic Windows commands
@@ -3913,7 +3980,7 @@ later.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#energy-consumption) [<ins>Next</ins>](#case-studies) [<ins>Top</ins>](#management-and-operations)
+### [<ins>Previous</ins>](#packet-size-and-jumbo-frames) [<ins>Next</ins>](#case-studies) [<ins>Top</ins>](#management-and-operations)
 
 backslashpagebreak
 # Case Studies
@@ -5818,7 +5885,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-09-05 11:09:10 UTC+1200
+Generated at 2024-09-17 09:58:08 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6070,6 +6137,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#energy-consumption)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#packet-size-and-jumbo-frames)
 [¶](#cern-and-the-lhc)
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-home)
@@ -6087,6 +6155,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-by-carriers)
 
 [IS-IS ¶](#routing)
+
+[Jumbo frames ¶](#packet-size-and-jumbo-frames)
 
 [link-local ¶](#address-resolution)
 [¶](#addresses)
@@ -6119,6 +6189,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [MTU ¶](#extension-headers-and-options)
 [¶](#layer-2-functions)
 [¶](#packet-format)
+[¶](#packet-size-and-jumbo-frames)
 
 [multicast ¶](#address-resolution)
 [¶](#addresses)
@@ -6165,8 +6236,13 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#network-design)
 [¶](#management-and-operations)
 [¶](#multihoming)
+[¶](#packet-size-and-jumbo-frames)
 
 [PIO ¶](#auto-configuration)
+
+[PMTUD ¶](#extension-headers-and-options)
+[¶](#filtering)
+[¶](#packet-size-and-jumbo-frames)
 
 [PPP ¶](#layer-2-functions)
 
@@ -6228,6 +6304,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#energy-consumption)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#packet-size-and-jumbo-frames)
 [¶](#routing-operation)
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-enterprise)
@@ -6315,7 +6392,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-09-05 11:09:10 UTC+1200
+Generated at 2024-09-17 09:58:08 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6368,6 +6445,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC2529 ¶](#obsolete-techniques)
 
 [RFC2545 ¶](#routing)
+
+[RFC2675 ¶](#packet-size-and-jumbo-frames)
 
 [RFC3053 ¶](#obsolete-techniques)
 
@@ -6617,6 +6696,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC768 ¶](#transport-protocols)
 
 [RFC7690 ¶](#extension-headers-and-options)
+[¶](#packet-size-and-jumbo-frames)
 
 [RFC7775 ¶](#routing)
 
@@ -6648,6 +6728,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [¶](#further-reading)
 [¶](#filtering)
 [¶](#markdown-usage)
+
+[RFC8201 ¶](#packet-size-and-jumbo-frames)
 
 [RFC8210 ¶](#filtering)
 

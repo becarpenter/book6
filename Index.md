@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-09-05 11:09:10 UTC+1200
+Generated at 2024-09-17 09:58:08 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -253,6 +253,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
+[●](./6.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 [●](./7.%20Case%20Studies/CERN%20and%20the%20LHC.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
@@ -270,6 +271,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 
 [IS-IS ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[Jumbo frames ●](./6.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
 [link-local ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -302,6 +305,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [MTU ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 [●](./2.%20IPv6%20Basic%20Technology/Packet%20Format.md)
+[●](./6.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
 [multicast ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -348,8 +352,13 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
+[●](./6.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
 [PIO ●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+
+[PMTUD ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[●](./4.%20Security/Filtering.md)
+[●](./6.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
 [PPP ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 
@@ -411,6 +420,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
+[●](./6.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 [●](./6.%20Management%20and%20Operations/Routing%20operation.md)
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)

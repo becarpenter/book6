@@ -2,8 +2,8 @@
 
 ### Fragmentation
 
-As already stated in the [<ins>The previous
-section</ins>](../3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
+As already stated in the
+\[[3. IPv6 primary differences from IPv4](../3.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)\],
 IPv6 does not allow intermediate routers to fragment packets. Instead,
 IPv6 pushes the responsibility of fragmentation to the source node. If a
 packet exceeds the MTU, it is either fragmented by the sender or
@@ -11,8 +11,8 @@ dropped. This means the sender must use PMTUD
 [RFC7690](https://www.rfc-editor.org/info/rfc7690) to ensure that
 packets are sized appropriately for the smallest MTU along the path. The
 sender fragments packets if necessary before sending them. This require
-additional computation on the sender to fragment packet but there has
-been no significant performance implication is reported.
+additional computation on the sender to fragment packets but there has
+been no significant performance implication reported.
 
 ### MTU Size and Jumbo Frames
 
@@ -45,4 +45,8 @@ when dealing with extremely large packet sizes. This mechanism
 simplifies the handling of large packets without requiring them to be
 split into smaller fragments. If a network supports large enough MTUs,
 IPv6 can use this option to transmit large frames without intermediate
-fragmentation.
+fragmentation. However, it is very little used.
+
+<!-- Link lines generated automatically; do not delete -->
+
+### [<ins>Previous</ins>](Energy%20consumption.md) [<ins>Next</ins>](Basic%20Windows%20commands.md) [<ins>Top</ins>](6.%20Management%20and%20Operations.md)

@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-09-05 11:09:10 UTC+1200
+Generated at 2024-09-17 09:58:08 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -54,6 +54,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC2529 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [RFC2545 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+
+[RFC2675 ●](./6.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
 [RFC3053 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
@@ -303,6 +305,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC768 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
 [RFC7690 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[●](./6.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
 [RFC7775 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
@@ -334,6 +337,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
 [●](./4.%20Security/Filtering.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
+
+[RFC8201 ●](./6.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
 [RFC8210 ●](./4.%20Security/Filtering.md)
 

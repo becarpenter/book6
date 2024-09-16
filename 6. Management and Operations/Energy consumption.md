@@ -24,4 +24,4 @@ Compression and Fragmentation (SCHC)
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Multihoming.md) [<ins>Next</ins>](Basic%20Windows%20commands.md) [<ins>Top</ins>](6.%20Management%20and%20Operations.md)
+### [<ins>Previous</ins>](Multihoming.md) [<ins>Next</ins>](Packet%20size%20and%20Jumbo%20Frames.md) [<ins>Top</ins>](6.%20Management%20and%20Operations.md)

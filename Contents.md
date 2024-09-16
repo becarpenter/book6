@@ -56,6 +56,7 @@ and a [citation index](./Citex.md).
 * [Multi-prefix operation](6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 * [Multihoming](6.%20Management%20and%20Operations/Multihoming.md)
 * [Energy consumption](6.%20Management%20and%20Operations/Energy%20consumption.md)
+* [Packet size and Jumbo Frames](6.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 * [Basic Windows commands](6.%20Management%20and%20Operations/Basic%20Windows%20commands.md)
 
 [7. Case Studies](7.%20Case%20Studies/7.%20Case%20Studies.md)

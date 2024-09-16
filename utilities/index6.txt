@@ -84,3 +84,5 @@ IPv6-only 'IPv6 only'
 IPv6-mostly 'IPv6 mostly'
 performance
 IPsec
+PMTUD
+'Jumbo frames'
