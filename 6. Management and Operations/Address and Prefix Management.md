@@ -43,11 +43,13 @@ This is volatile information, especially if IPv6 temporary addresses
 \[[RFC8981](https://www.rfc-editor.org/info/rfc8981)\] or variable MAC
 addresses
 \[[draft-ietf-madinas-mac-address-randomization](https://datatracker.ietf.org/doc/draft-ietf-madinas-mac-address-randomization/)\]
-are in use. A supplementary mechanism is needed to extract and log this
-information at a suitable frequency. An alternative would be to
-continuously monitor neighbor discovery traffic and extract and log the
-same information. It has also been observed that monitoring DAD
-(duplicate address detection) traffic will work, as described in
+are in use. This topic is discussed in section 2.6.1.4 of
+[RFC 9099](https://www.rfc-editor.org/info/rfc9099). A supplementary
+mechanism is needed to extract and log this information at a suitable
+frequency. An alternative would be to continuously monitor neighbor
+discovery traffic and extract and log the same information. It has also
+been observed that monitoring DAD (duplicate address detection) traffic
+will work, as described in
 [this blog](https://weberblog.net/monitoring-mac-ipv6-address-bindings/).
 All these solutions have unpleasant scaling properties for a large
 enterprise.

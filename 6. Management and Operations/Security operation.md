@@ -1,6 +1,7 @@
 ## Security operation
 
-Section text goes here
+A starting point for this topic is
+[RFC 9099](https://www.rfc-editor.org/info/rfc9099).
 
 <!-- Link lines generated automatically; do not delete -->
 

@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-09-17 09:58:35 UTC+1200
+Version captured at 2024-09-18 08:53:05 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -3472,11 +3472,13 @@ This is volatile information, especially if IPv6 temporary addresses
 \[[RFC8981](https://www.rfc-editor.org/info/rfc8981)\] or variable MAC
 addresses
 \[[draft-ietf-madinas-mac-address-randomization](https://datatracker.ietf.org/doc/draft-ietf-madinas-mac-address-randomization/)\]
-are in use. A supplementary mechanism is needed to extract and log this
-information at a suitable frequency. An alternative would be to
-continuously monitor neighbor discovery traffic and extract and log the
-same information. It has also been observed that monitoring DAD
-(duplicate address detection) traffic will work, as described in
+are in use. This topic is discussed in section 2.6.1.4 of
+[RFC 9099](https://www.rfc-editor.org/info/rfc9099). A supplementary
+mechanism is needed to extract and log this information at a suitable
+frequency. An alternative would be to continuously monitor neighbor
+discovery traffic and extract and log the same information. It has also
+been observed that monitoring DAD (duplicate address detection) traffic
+will work, as described in
 [this blog](https://weberblog.net/monitoring-mac-ipv6-address-bindings/).
 All these solutions have unpleasant scaling properties for a large
 enterprise.
@@ -3578,7 +3580,8 @@ Section text goes here
 backslashpagebreak
 ## Security operation
 
-Section text goes here
+A starting point for this topic is
+[RFC 9099](https://www.rfc-editor.org/info/rfc9099).
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -3922,13 +3925,13 @@ backslashpagebreak
 
 ### Fragmentation
 
-As already stated in the
-\[[3. IPv6 primary differences from IPv4](#ipv6-primary-differences-from-ipv4)\],
+As already stated in
+[3. IPv6 primary differences from IPv4](#ipv6-primary-differences-from-ipv4),
 IPv6 does not allow intermediate routers to fragment packets. Instead,
 IPv6 pushes the responsibility of fragmentation to the source node. If a
 packet exceeds the MTU, it is either fragmented by the sender or
 dropped. This means the sender must use PMTUD
-[RFC7690](https://www.rfc-editor.org/info/rfc7690) to ensure that
+\[[RFC7690](https://www.rfc-editor.org/info/rfc7690)\] to ensure that
 packets are sized appropriately for the smallest MTU along the path. The
 sender fragments packets if necessary before sending them. This require
 additional computation on the sender to fragment packets but there has
@@ -3946,7 +3949,7 @@ complexity at both the router and the destination where reassembly
 occurs.
 
 IPv6 avoids this fragmentation overhead by relying on PMTUD
-[RFC7690](https://www.rfc-editor.org/info/rfc7690). If a jumbo frame
+\[[RFC7690](https://www.rfc-editor.org/info/rfc7690)\]. If a jumbo frame
 exceeds the MTU of any network hop, the sender is responsible for
 fragmenting it before transmission. However, if properly configured, the
 sender can send larger packets efficiently without fragmentation,
@@ -3954,10 +3957,10 @@ provided that the entire path supports jumbo frames. Ths allows IPv6 to
 handle larger packets more effectively because the Path MTU Discovery
 mechanism ensures that packets fit within the MTU of every hop along the
 route. This mechanism is defined in
-[RFC8201](https://www.rfc-editor.org/info/rfc8201).
+\[[RFC8201](https://www.rfc-editor.org/info/rfc8201)\].
 
 “Jumbo Payload Option” in IPv6
-[RFC2675](https://www.rfc-editor.org/info/rfc2675) allows packets larger
+\[[RFC2675](https://www.rfc-editor.org/info/rfc2675)\] allows packets larger
 than 65,535 bytes (the maximum payload size for standard IPv6 packets)
 to be transmitted. This option is included in the Hop-by-Hop Options
 header and enables IPv6 to support super jumbo frames efficiently, even
@@ -4522,7 +4525,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date.
 
-RFCbib6 run at 2024-09-05 11:08:05 UTC+1200 (489 RFCs found)
+RFCbib6 run at 2024-09-18 08:51:16 UTC+1200 (489 RFCs found)
 
 ### Standards Track (262 RFCs)
 
@@ -5885,7 +5888,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-09-17 09:58:08 UTC+1200
+Generated at 2024-09-18 08:50:47 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6392,7 +6395,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-09-17 09:58:08 UTC+1200
+Generated at 2024-09-18 08:50:47 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6804,6 +6807,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9098 ¶](#extension-headers-and-options)
 
 [RFC9099 ¶](#security)
+[¶](#address-and-prefix-management)
+[¶](#security-operation)
 
 [RFC9119 ¶](#address-resolution)
 [¶](#layer-2-functions)

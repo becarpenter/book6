@@ -93,7 +93,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2024-09-17 09:58:35 UTC+1200
+Version captured at 2024-09-18 08:53:05 UTC+1200
 
 \pagebreak
 
@@ -3982,11 +3982,13 @@ This is volatile information, especially if IPv6 temporary addresses
 {[}\href{https://www.rfc-editor.org/info/rfc8981}{RFC8981}{]} or
 variable MAC addresses
 {[}\href{https://datatracker.ietf.org/doc/draft-ietf-madinas-mac-address-randomization/}{draft-ietf-madinas-mac-address-randomization}{]}
-are in use. A supplementary mechanism is needed to extract and log this
-information at a suitable frequency. An alternative would be to
-continuously monitor neighbor discovery traffic and extract and log the
-same information. It has also been observed that monitoring DAD
-(duplicate address detection) traffic will work, as described in
+are in use. This topic is discussed in section 2.6.1.4 of
+\href{https://www.rfc-editor.org/info/rfc9099}{RFC 9099}. A
+supplementary mechanism is needed to extract and log this information at
+a suitable frequency. An alternative would be to continuously monitor
+neighbor discovery traffic and extract and log the same information. It
+has also been observed that monitoring DAD (duplicate address detection)
+traffic will work, as described in
 \href{https://weberblog.net/monitoring-mac-ipv6-address-bindings/}{this
 blog}. All these solutions have unpleasant scaling properties for a
 large enterprise.
@@ -4094,7 +4096,8 @@ Section text goes here
 
 \subsection{Security operation}\label{security-operation}
 
-Section text goes here
+A starting point for this topic is
+\href{https://www.rfc-editor.org/info/rfc9099}{RFC 9099}.
 
 \subsubsection{\texorpdfstring{\hyperref[routing-operation]{Previous}
 \hyperref[multi-prefix-operation]{Next}
@@ -4455,17 +4458,17 @@ Frames}\label{packet-size-and-jumbo-frames}
 
 \subsubsection{Fragmentation}\label{fragmentation}
 
-As already stated in the
-{[}\hyperref[ipv6-primary-differences-from-ipv4]{3. IPv6 primary
-differences from IPv4}{]}, IPv6 does not allow intermediate routers to
-fragment packets. Instead, IPv6 pushes the responsibility of
+As already stated in \hyperref[ipv6-primary-differences-from-ipv4]{3.
+IPv6 primary differences from IPv4}, IPv6 does not allow intermediate
+routers to fragment packets. Instead, IPv6 pushes the responsibility of
 fragmentation to the source node. If a packet exceeds the MTU, it is
 either fragmented by the sender or dropped. This means the sender must
-use PMTUD \href{https://www.rfc-editor.org/info/rfc7690}{RFC7690} to
-ensure that packets are sized appropriately for the smallest MTU along
-the path. The sender fragments packets if necessary before sending them.
-This require additional computation on the sender to fragment packets
-but there has been no significant performance implication reported.
+use PMTUD {[}\href{https://www.rfc-editor.org/info/rfc7690}{RFC7690}{]}
+to ensure that packets are sized appropriately for the smallest MTU
+along the path. The sender fragments packets if necessary before sending
+them. This require additional computation on the sender to fragment
+packets but there has been no significant performance implication
+reported.
 
 \subsubsection{MTU Size and Jumbo
 Frames}\label{mtu-size-and-jumbo-frames}
@@ -4480,21 +4483,21 @@ complexity at both the router and the destination where reassembly
 occurs.
 
 IPv6 avoids this fragmentation overhead by relying on PMTUD
-\href{https://www.rfc-editor.org/info/rfc7690}{RFC7690}. If a jumbo
-frame exceeds the MTU of any network hop, the sender is responsible for
-fragmenting it before transmission. However, if properly configured, the
-sender can send larger packets efficiently without fragmentation,
-provided that the entire path supports jumbo frames. Ths allows IPv6 to
-handle larger packets more effectively because the Path MTU Discovery
-mechanism ensures that packets fit within the MTU of every hop along the
-route. This mechanism is defined in
-\href{https://www.rfc-editor.org/info/rfc8201}{RFC8201}.
+{[}\href{https://www.rfc-editor.org/info/rfc7690}{RFC7690}{]}. If a
+jumbo frame exceeds the MTU of any network hop, the sender is
+responsible for fragmenting it before transmission. However, if properly
+configured, the sender can send larger packets efficiently without
+fragmentation, provided that the entire path supports jumbo frames. Ths
+allows IPv6 to handle larger packets more effectively because the Path
+MTU Discovery mechanism ensures that packets fit within the MTU of every
+hop along the route. This mechanism is defined in
+{[}\href{https://www.rfc-editor.org/info/rfc8201}{RFC8201}{]}.
 
 ``Jumbo Payload Option'' in IPv6
-\href{https://www.rfc-editor.org/info/rfc2675}{RFC2675} allows packets
-larger than 65,535 bytes (the maximum payload size for standard IPv6
-packets) to be transmitted. This option is included in the Hop-by-Hop
-Options header and enables IPv6 to support super jumbo frames
+{[}\href{https://www.rfc-editor.org/info/rfc2675}{RFC2675}{]} allows
+packets larger than 65,535 bytes (the maximum payload size for standard
+IPv6 packets) to be transmitted. This option is included in the
+Hop-by-Hop Options header and enables IPv6 to support super jumbo frames
 efficiently, even when dealing with extremely large packet sizes. This
 mechanism simplifies the handling of large packets without requiring
 them to be split into smaller fragments. If a network supports large
@@ -5068,7 +5071,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 \emph{cautious} about old Informational or Experimental RFCs - they may
 be misleading as well as out of date.
 
-RFCbib6 run at 2024-09-05 11:08:05 UTC+1200 (489 RFCs found)
+RFCbib6 run at 2024-09-18 08:51:16 UTC+1200 (489 RFCs found)
 
 \subsubsection{Standards Track (262
 RFCs)}\label{standards-track-262-rfcs}
@@ -6987,7 +6990,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2024-09-17 09:58:08 UTC+1200
+Generated at 2024-09-18 08:50:47 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7369,7 +7372,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-11}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2024-09-17 09:58:08 UTC+1200
+Generated at 2024-09-18 08:50:47 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -7756,6 +7759,8 @@ has links to each section that mentions each citation.
 \hyperref[extension-headers-and-options]{RFC9098 ¶}
 
 \hyperref[security]{RFC9099 ¶}
+\hyperref[address-and-prefix-management]{¶}
+\hyperref[security-operation]{¶}
 
 \hyperref[address-resolution]{RFC9119 ¶} \hyperref[layer-2-functions]{¶}
 
