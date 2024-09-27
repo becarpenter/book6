@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-09-18 08:50:47 UTC+1200
+Generated at 2024-09-27 14:24:56 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -47,6 +47,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+[●](./9.%20Troubleshooting/Tools.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
 
 [anycast ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -258,6 +259,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./8.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 [●](./8.%20Deployment%20Status/Status.md)
+[●](./9.%20Troubleshooting/Tools.md)
 
 [IPv6-mostly ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 

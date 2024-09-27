@@ -33,7 +33,8 @@ infrastructure between the CGN and the CE router can be pure IPv6.
 IPv6 can be tunneled using GRE (Generic Routing Encapsulation,
 [RFC 7676](https://www.rfc-editor.org/info/rfc7676)).
 
-IPv6 can be carried over IPv4-only ISP infrastructure using 6rd {{RFC5969}}.
+IPv6 can be carried over IPv4-only ISP infrastructure using 6rd
+\[[RFC5969](https://www.rfc-editor.org/info/rfc5969)\].
 
 IPv6 can be tunneled over MPLS
 \[[RFC4029](https://www.rfc-editor.org/info/rfc4029)\]; for example, see

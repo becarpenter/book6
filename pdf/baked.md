@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-09-18 08:53:05 UTC+1200
+Version captured at 2024-09-27 14:25:53 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -2347,6 +2347,9 @@ infrastructure between the CGN and the CE router can be pure IPv6.
 IPv6 can be tunneled using GRE (Generic Routing Encapsulation,
 [RFC 7676](https://www.rfc-editor.org/info/rfc7676)).
 
+IPv6 can be carried over IPv4-only ISP infrastructure using 6rd
+\[[RFC5969](https://www.rfc-editor.org/info/rfc5969)\].
+
 IPv6 can be tunneled over MPLS
 \[[RFC4029](https://www.rfc-editor.org/info/rfc4029)\]; for example, see
 "Connecting IPv6 Islands over IPv4 MPLS Using IPv6 Provider Edge Routers
@@ -4357,8 +4360,19 @@ If you know what should be written here, please write it!
 backslashpagebreak
 ## Tools
 
-If you know what should be written here, please write it!
+Basic tools like `ping` and `traceroute` work for both IPv6 and IPv4.
+
+For historic reasons, command-line tools on some operating systems do not support IPv6 but
+instead have an IPv6 counterpart (e.g., `ping6`, `traceroute6`).
+
+Due to IPv6/IPv4 translation, traceroute-like tools and 'what is my IP
+address' tools may show an IPv4 address.
+
+If you know what else should be written here, please write it!
 [How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)
+
+
+
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -5888,7 +5902,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-09-18 08:50:47 UTC+1200
+Generated at 2024-09-27 14:24:56 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -5934,6 +5948,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-enterprise)
 [¶](#deployment-in-the-home)
+[¶](#tools)
 [¶](#markdown-usage)
 
 [anycast ¶](#addresses)
@@ -6145,6 +6160,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-home)
 [¶](#status)
+[¶](#tools)
 
 [IPv6-mostly ¶](#dual-stack-scenarios)
 
@@ -6395,7 +6411,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-09-18 08:50:47 UTC+1200
+Generated at 2024-09-27 14:24:56 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6575,6 +6591,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC5942 ¶](#auto-configuration)
 
 [RFC5952 ¶](#addresses)
+
+[RFC5969 ¶](#tunnels)
 
 [RFC6085 ¶](#layer-2-functions)
 

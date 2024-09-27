@@ -93,7 +93,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2024-09-18 08:53:05 UTC+1200
+Version captured at 2024-09-27 14:25:53 UTC+1200
 
 \pagebreak
 
@@ -2748,6 +2748,9 @@ infrastructure between the CGN and the CE router can be pure IPv6.
 IPv6 can be tunneled using GRE (Generic Routing Encapsulation,
 \href{https://www.rfc-editor.org/info/rfc7676}{RFC 7676}).
 
+IPv6 can be carried over IPv4-only ISP infrastructure using 6rd
+{[}\href{https://www.rfc-editor.org/info/rfc5969}{RFC5969}{]}.
+
 IPv6 can be tunneled over MPLS
 {[}\href{https://www.rfc-editor.org/info/rfc4029}{RFC4029}{]}; for
 example, see "Connecting IPv6 Islands over IPv4 MPLS Using IPv6 Provider
@@ -4912,7 +4915,18 @@ to contribute.}
 
 \subsection{Tools}\label{tools}
 
-If you know what should be written here, please write it!
+Basic tools like \texttt{ping} and \texttt{traceroute} work for both
+IPv6 and IPv4.
+
+For historic reasons, command-line tools on some operating systems do
+not support IPv6 but instead have an IPv6 counterpart (e.g.,
+\texttt{ping6}, \texttt{traceroute6}).
+
+Due to IPv6/IPv4 translation, traceroute-like tools and
+\textquotesingle what is my IP address\textquotesingle{} tools may show
+an IPv4 address.
+
+If you know what else should be written here, please write it!
 \href{https://github.com/becarpenter/book6/blob/main/1.\%20Introduction\%20and\%20Foreword/How\%20to\%20contribute.md\#how-to-contribute}{How
 to contribute.}
 
@@ -6990,7 +7004,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2024-09-18 08:50:47 UTC+1200
+Generated at 2024-09-27 14:24:56 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7026,7 +7040,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[multihoming]{¶} \hyperref[cern-and-the-lhc]{¶}
 \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-enterprise]{¶}
-\hyperref[deployment-in-the-home]{¶} \hyperref[markdown-usage]{¶}
+\hyperref[deployment-in-the-home]{¶} \hyperref[tools]{¶}
+\hyperref[markdown-usage]{¶}
 
 \hyperref[addresses]{anycast ¶}
 
@@ -7184,6 +7199,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[multihoming]{¶} \hyperref[packet-size-and-jumbo-frames]{¶}
 \hyperref[cern-and-the-lhc]{¶} \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[status]{¶}
+\hyperref[tools]{¶}
 
 \hyperref[dual-stack-scenarios]{IPv6-mostly ¶}
 
@@ -7372,7 +7388,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-11}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2024-09-18 08:50:47 UTC+1200
+Generated at 2024-09-27 14:24:56 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -7544,6 +7560,8 @@ has links to each section that mentions each citation.
 \hyperref[auto-configuration]{RFC5942 ¶}
 
 \hyperref[addresses]{RFC5952 ¶}
+
+\hyperref[tunnels]{RFC5969 ¶}
 
 \hyperref[layer-2-functions]{RFC6085 ¶}
 
