@@ -36,7 +36,7 @@ mechanism ensures that packets fit within the MTU of every hop along the
 route. This mechanism is defined in
 \[[RFC8201](https://www.rfc-editor.org/info/rfc8201)\].
 
-“Jumbo Payload Option” in IPv6
+The “Jumbo Payload Option” in IPv6
 \[[RFC2675](https://www.rfc-editor.org/info/rfc2675)\] allows packets larger
 than 65,535 bytes (the maximum payload size for standard IPv6 packets)
 to be transmitted. This option is included in the Hop-by-Hop Options
@@ -45,7 +45,10 @@ when dealing with extremely large packet sizes. This mechanism
 simplifies the handling of large packets without requiring them to be
 split into smaller fragments. If a network supports large enough MTUs,
 IPv6 can use this option to transmit large frames without intermediate
-fragmentation. However, it is very little used.
+fragmentation. However, it is very little used because it needs a layer
+2 technology supporting very big packets. An interesting use case is for
+_internal_ communication in support of segmentation offload, described in
+[this blog entry](https://www.sipanda.io/post/segmentation-offload-and-protocols-let-s-be-friends).
 
 <!-- Link lines generated automatically; do not delete -->
 
