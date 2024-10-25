@@ -19,7 +19,7 @@ is no need to track multiple individual /128 addresses per host.
 
 This approach has other benefits such as better scaling properties for
 neighbor caches, etc., which are discussed in RFC 9663. The latter uses
-standards DHCPv6 Prefix Delegation (DHCPv6-PD)
+standard DHCPv6 Prefix Delegation (DHCPv6-PD)
 \[[RFC8415](https://www.rfc-editor.org/info/rfc8415)\], whereas RFC 8273
 uses specially crafted Router Advertisement messages.
 
