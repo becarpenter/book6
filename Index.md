@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-09-27 14:24:56 UTC+1200
+Generated at 2024-10-26 09:03:48 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -39,6 +39,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Topology%20obfuscation.md)
 [●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
+[●](./5.%20Network%20Design/Prefix%20per%20Host.md)
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -97,6 +98,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Filtering.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
+[●](./5.%20Network%20Design/Prefix%20per%20Host.md)
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./7.%20Case%20Studies/CERN%20and%20the%20LHC.md)
@@ -379,6 +381,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Topology%20obfuscation.md)
 [●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
+[●](./5.%20Network%20Design/Prefix%20per%20Host.md)
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
@@ -390,6 +393,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./5.%20Network%20Design/Prefix%20per%20Host.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [RIPng ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
@@ -496,6 +500,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./5.%20Network%20Design/5.%20Network%20Design.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
+[●](./5.%20Network%20Design/Prefix%20per%20Host.md)
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)

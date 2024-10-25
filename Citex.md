@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-09-27 14:24:56 UTC+1200
+Generated at 2024-10-26 09:03:48 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -344,6 +344,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8210 ●](./4.%20Security/Filtering.md)
 
+[RFC8273 ●](./5.%20Network%20Design/Prefix%20per%20Host.md)
+
 [RFC8304 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
 [RFC8305 ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
@@ -356,6 +358,7 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8415 ●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./5.%20Network%20Design/Address%20Planning.md)
+[●](./5.%20Network%20Design/Prefix%20per%20Host.md)
 
 [RFC8475 ●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
@@ -401,6 +404,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
 [●](./4.%20Security/Topology%20obfuscation.md)
+[●](./5.%20Network%20Design/Prefix%20per%20Host.md)
 [●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
@@ -438,6 +442,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9592 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 
 [RFC9637 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+
+[RFC9663 ●](./5.%20Network%20Design/Prefix%20per%20Host.md)
 
 [STD7 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 

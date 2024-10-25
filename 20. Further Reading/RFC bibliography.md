@@ -7,7 +7,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date.
 
-RFCbib6 run at 2024-09-18 08:51:16 UTC+1200 (489 RFCs found)
+RFCbib6 run at 2024-10-26 09:04:17 UTC+1300 (491 RFCs found)
 
 ### Standards Track (262 RFCs)
 
@@ -623,7 +623,7 @@ RFCbib6 run at 2024-09-18 08:51:16 UTC+1200 (489 RFCs found)
   ([BCP 234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
-### Informational (188 RFCs)
+### Informational (190 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -1037,8 +1037,14 @@ RFCbib6 run at 2024-09-18 08:51:16 UTC+1200 (489 RFCs found)
   over IPv6 for the Mobile User Plane
 - [RFC 9453](https://www.rfc-editor.org/info/rfc9453): Applicability and
   Use Cases for IPv6 over Networks of Resource-constrained Nodes (6lo)
+- [RFC 9602](https://www.rfc-editor.org/info/rfc9602): Segment Routing
+  over IPv6 (SRv6) Segment Identifiers in the IPv6 Addressing
+  Architecture
 - [RFC 9637](https://www.rfc-editor.org/info/rfc9637): Expanding the
   IPv6 Documentation Space
+- [RFC 9663](https://www.rfc-editor.org/info/rfc9663): Using DHCPv6
+  Prefix Delegation (DHCPv6-PD) to Allocate Unique IPv6 Prefixes per
+  Client in Large Broadcast Networks
 
 ### Experimental (24 RFCs)
 

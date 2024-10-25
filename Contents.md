@@ -46,6 +46,7 @@ and a [citation index](./Citex.md).
 
 [5. Network Design](5.%20Network%20Design/5.%20Network%20Design.md)
 * [Address Planning](5.%20Network%20Design/Address%20Planning.md)
+* [Prefix per Host](5.%20Network%20Design/Prefix%20per%20Host.md)
 
 [6. Management and Operations](6.%20Management%20and%20Operations/6.%20Management%20and%20Operations.md)
 * [Address and Prefix Management](6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
