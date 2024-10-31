@@ -22,7 +22,9 @@ Here are some notes on the most common ones:
   [RFC 8200](https://www.rfc-editor.org/info/rfc8200) states that "it is
   now expected that nodes along a packet's delivery path only examine
   and process the Hop-by-Hop Options header if explicitly configured to
-  do so."
+  do so." Some mitigations of this problem are described in
+  [RFC 9673](https://www.rfc-editor.org/info/rfc9673).
+
 
   Router Alert types have their own registry at
   [IANA](https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml).
