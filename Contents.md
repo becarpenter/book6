@@ -73,6 +73,8 @@ and a [citation index](./Citex.md).
 * [Advanced Troubleshooting](9.%20Troubleshooting/Advanced%20Troubleshooting.md)
 * [Tools](9.%20Troubleshooting/Tools.md)
 
+[10. Obsolete Features in IPv6](10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+
 [20. Further Reading](20.%20Further%20Reading/20.%20Further%20Reading.md)
 * [RFC bibliography](20.%20Further%20Reading/RFC%20bibliography.md)
 
