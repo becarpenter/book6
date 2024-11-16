@@ -34,6 +34,7 @@ and inter-chapter links as far as possible."""
 #                     - rename "Chapter Contents" link as "Top"
 #                     - add next chapter links to last sections
 # Version: 2024-09-13 - fix for internal cite of chapter name
+# Version: 2024-11-16 - handle chapter with sections directly embedded
 
 
 ########################################################
@@ -163,7 +164,8 @@ def make_basenames():
     """Make or refresh base names"""
     global base_names, base
     base_names = []
-    for bline in base:
+    for basex in range(len(base)):
+        bline = base[basex]
         if len(bline) < 4:
             continue
         bline = bline.strip("\n")
@@ -171,12 +173,27 @@ def make_basenames():
             # existing section reference
             sname,_ = bline.split("[", maxsplit = 1)[1].split("]", maxsplit = 1)
             base_names.append(sname)
-        elif bline.startswith("##") and not "###" in bline:
-            #possible section
+        elif bline.startswith("## ") and not "###" in bline:
+            # possible new section
+            # look ahead to see if there is embedded content
+            linex = basex + 1
+            content = False
+            try:
+                while not (base[linex].startswith("## ") or base[linex].startswith("### [<ins>Back")):
+                    if base[linex].strip() and not base[linex].startswith("<!--"):
+                        #Some content is there
+                        content = True
+                        break
+                    linex += 1
+                if content:
+                    #embedded section, do not add to base names
+                    continue
+            except:
+                continue  #malformed file
             try:
                 _,sname = bline.split(" ", maxsplit=1)
             except:
-                continue
+                continue  #malformed line
             #treat as new section (will create file later)
             base_names.append(sname)
     dprint("Base names: ", base_names)
