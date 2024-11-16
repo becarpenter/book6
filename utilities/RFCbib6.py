@@ -13,6 +13,7 @@
 # Version: 2024-04-28 - handle directory on command line;
 #                       catch DHCPv6
 # Version: 2024-04-28 - tiny bug in crash()
+# Version: 2024-11-16 - add citation of chapter 10
 
 ########################################################
 # Copyright (C) 2023-24 Brian E. Carpenter.                  
@@ -261,7 +262,8 @@ md = ["## RFC bibliography","",
 mention IPv6 or DHCPv6 in their title or come from the major IPv6 working groups.
 Obsolete RFCs are not included. There are subsections for Standards, BCPs, 
 Informational and Experimental RFCs. Be *cautious* about old Informational
-or Experimental RFCs - they may be misleading as well as out of date."""]
+or Experimental RFCs - they may be misleading as well as out of date. Also see
+[10. Obsolete Features in IPv6](10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)."""]
 md += ["","RFCbib6 run at "+timestamp+" ("+str(count)+" RFCs found)"]
 md += ["","### Standards Track ("+str(len(stds))+" RFCs)",""]
 md += stds

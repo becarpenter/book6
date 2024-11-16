@@ -5,9 +5,10 @@ mention IPv6 or DHCPv6 in their title or come from the major IPv6
 working groups. Obsolete RFCs are not included. There are subsections
 for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
-well as out of date.
+well as out of date. Also see
+[10. Obsolete Features in IPv6](10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
-RFCbib6 run at 2024-10-26 09:04:17 UTC+1300 (491 RFCs found)
+RFCbib6 run at 2024-11-16 16:14:24 UTC+1300 (491 RFCs found)
 
 ### Standards Track (262 RFCs)
 

@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-09-28 08:53:16 UTC+1200
+Version captured at 2024-11-16 16:42:43 UTC+1300
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -79,6 +79,7 @@ and a [citation index](#book6-citation-index).
 
 [5. Network Design](#network-design)
 * [Address Planning](#address-planning)
+* [Prefix per Host](#prefix-per-host)
 
 [6. Management and Operations](#management-and-operations)
 * [Address and Prefix Management](#address-and-prefix-management)
@@ -104,6 +105,8 @@ and a [citation index](#book6-citation-index).
 [9. Troubleshooting](#troubleshooting)
 * [Advanced Troubleshooting](#advanced-troubleshooting)
 * [Tools](#tools)
+
+[10. Obsolete Features in IPv6](#obsolete-features-in-ipv6)
 
 [20. Further Reading](#further-reading)
 * [RFC bibliography](#rfc-bibliography)
@@ -1695,7 +1698,9 @@ Here are some notes on the most common ones:
   [RFC 8200](https://www.rfc-editor.org/info/rfc8200) states that "it is
   now expected that nodes along a packet's delivery path only examine
   and process the Hop-by-Hop Options header if explicitly configured to
-  do so."
+  do so." Some mitigations of this problem are described in
+  [RFC 9673](https://www.rfc-editor.org/info/rfc9673).
+
 
   Router Alert types have their own registry at
   [IANA](https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml).
@@ -3086,8 +3091,8 @@ highest level of design decisions are identical to those for IPv4.
 
 There is one constraint that does not apply to IPv6: there is
 effectively no theoretical limit to the number of hosts per subnet.
-(Mathematically, there is a limit of about 18.10^18 nodes on a
-/64 subnet, but this is of no practical concern.) However, most network
+(Mathematically, there is a limit of about 18.10^18 nodes on a /64
+subnet, but this is of no practical concern.) However, most network
 designers will never place hundreds or thousands of hosts on a single
 subnet, for performance reasons.
 
@@ -3098,9 +3103,9 @@ designers. But we can go even further: there are deployment models where
 handing out a complete /64 prefix to a single node may be beneficial
 (e.g., if that node may contain a large number of virtual machines).
 Large enterprises, and of course carriers, can simply obtain more
-address space (i.e., a prefix shorter than /48) if they need it.
-In practice, address space should _never_ be a limiting factor
-for IPv6 network design.
+address space (i.e., a prefix shorter than /48) if they need it. In
+practice, address space should _never_ be a limiting factor for IPv6
+network design.
 
 Setting these aspects aside, there is no reason why an IPv6 network will
 have a different macroscopic design than an IPv4 network. The detailed
@@ -3127,13 +3132,13 @@ approach will vary.
   The NOC must be designed from the start based on IPv6, with the
   ability to manage IPv4 as a service.
 
-- A specific difference between a retrofit design and a greenfield design
-  is that an existing IPv4 network almost inevitably has subnets limited
-  to 256 or fewer hosts, often as few as 64. Since the normal subnet
-  prefix in IPv6 is a /64, there is no such limitation in a greenfield
-  deployment of IPv6. However, for
-  practical reasons such as the rate of link-local multicasts, very large
-  subnets should be avoided. As noted elswehere
+- A specific difference between a retrofit design and a greenfield
+  design is that an existing IPv4 network almost inevitably has subnets
+  limited to 256 or fewer hosts, often as few as 64. Since the normal
+  subnet prefix in IPv6 is a /64, there is no such limitation in a
+  greenfield deployment of IPv6. However, for practical reasons such as
+  the rate of link-local multicasts, very large subnets should be
+  avoided. As noted elswehere
   \[[2. Address resolution](#address-resolution)\]
   this applies particularly to wireless networks.
 
@@ -3145,6 +3150,8 @@ combined with subnet design.
 <!-- ## Name (add plain section names like that) -->
 
 <!-- Link lines generated automatically; do not delete -->
+
+[Prefix per Host](#prefix-per-host)
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
 
@@ -3327,7 +3334,37 @@ by Tom Coffeen.
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Next</ins>](#management-and-operations) [<ins>Top</ins>](#network-design)
+### [<ins>Next</ins>](#prefix-per-host) [<ins>Top</ins>](#network-design)
+
+backslashpagebreak
+## Prefix per Host
+
+IPv6 nodes very often have multiple valid addresses, for example by
+configuring temporary addresses
+\[[RFC8981](https://www.rfc-editor.org/info/rfc8981)\]. Since IPv6
+address space is not a scarce resource, there are scenarios where
+assigning a complete /64 prefix to an individual host may be
+advantageous. Two mechanisms for this have been defined in
+[RFC 8273](https://www.rfc-editor.org/info/rfc8273) and
+[RFC 9663](https://www.rfc-editor.org/info/rfc9663).
+
+One scenario where such a solution may be useful is a shared-access
+network service where a Layer 2 access network (typically Wi-Fi) is
+shared by multiple visiting subscriber devices. Service providers may
+have a legal or operational requirement to provide isolation between
+connected visitor devices, e.g. to control potential abuse of the shared
+network. Separate prefixes make such isolation much simpler, since there
+is no need to track multiple individual /128 addresses per host.
+
+This approach has other benefits such as better scaling properties for
+neighbor caches, etc., which are discussed in RFC 9663. The latter uses
+standard DHCPv6 Prefix Delegation (DHCPv6-PD)
+\[[RFC8415](https://www.rfc-editor.org/info/rfc8415)\], whereas RFC 8273
+uses specially crafted Router Advertisement messages.
+
+<!-- Link lines generated automatically; do not delete -->
+
+### [<ins>Previous</ins>](#address-planning) [<ins>Next</ins>](#management-and-operations) [<ins>Top</ins>](#network-design)
 
 backslashpagebreak
 # Management and Operations
@@ -3963,7 +4000,7 @@ mechanism ensures that packets fit within the MTU of every hop along the
 route. This mechanism is defined in
 \[[RFC8201](https://www.rfc-editor.org/info/rfc8201)\].
 
-“Jumbo Payload Option” in IPv6
+The “Jumbo Payload Option” in IPv6
 \[[RFC2675](https://www.rfc-editor.org/info/rfc2675)\] allows packets larger
 than 65,535 bytes (the maximum payload size for standard IPv6 packets)
 to be transmitted. This option is included in the Hop-by-Hop Options
@@ -3972,7 +4009,10 @@ when dealing with extremely large packet sizes. This mechanism
 simplifies the handling of large packets without requiring them to be
 split into smaller fragments. If a network supports large enough MTUs,
 IPv6 can use this option to transmit large frames without intermediate
-fragmentation. However, it is very little used.
+fragmentation. However, it is very little used because it needs a layer
+2 technology supporting very big packets. An interesting use case is for
+_internal_ communication in support of segmentation offload, described in
+[this blog entry](https://www.sipanda.io/post/segmentation-offload-and-protocols-let-s-be-friends).
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -4046,6 +4086,16 @@ uses DHCPv6 for IPv6 address assignment.
 
 backslashpagebreak
 # Deployment Status
+
+This chapter outlines information about IPv6 deployments. The picture
+changes daily, so what follows is very likely to be out of date.
+
+For information about product support for IPv6 features, users
+might be interested by the University of New Hampshire
+[InterOperability Laboratory](https://www.iol.unh.edu/testing/ipv6),
+the NIST
+[USGv6 Program](https://www.nist.gov/programs-projects/usgv6-program),
+or the [IPv6 Ready Logo Program](https://www.ipv6ready.org/).
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -4363,8 +4413,9 @@ backslashpagebreak
 
 Basic tools like `ping` and `traceroute` work for both IPv6 and IPv4.
 
-For historic reasons, command-line tools on some operating systems do not support IPv6 but
-instead have an IPv6 counterpart (e.g., `ping6`, `traceroute6`).
+For historic reasons, command-line tools on some operating systems do
+not support IPv6 but instead have an IPv6 counterpart (e.g., `ping6`,
+`traceroute6`).
 
 Due to IPv6/IPv4 translation, traceroute-like tools and 'what is my IP
 address' tools may show an IPv4 address.
@@ -4372,12 +4423,55 @@ address' tools may show an IPv4 address.
 If you know what else should be written here, please write it!
 [How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)
 
+<!-- Link lines generated automatically; do not delete -->
+
+### [<ins>Previous</ins>](#advanced-troubleshooting) [<ins>Next</ins>](#obsolete-features-in-ipv6) [<ins>Top</ins>](#troubleshooting)
+
+backslashpagebreak
+# Obsolete Features in IPv6
+
+This chapter lists a number of IPv6 features that can be considered
+obsolete or unused, even if in some cases the relevant RFCs have not
+been formally obsoleted. Readers are advised to ignore these techniques
+for new deployments, and to consider removing them from existing
+deployments.
+
+## Mobile IPv6
+Mobile IPv6 was a technology that was baked into the IPv6 protocol very early in its development. However based on zero implementations the technology exists only in textbooks and IETF standards. Since there are no current implementations and current standards are extremely stale, Mobile IPv6 is effectvy obsolete and should not be taught in training or mentioned as part of the IPv6 feature set. Below are a listing of those IETF standards:
+
+* [RFC 6275](https://www.rfc-editor.org/rfc/rfc6275.html) - Mobility Support in IPv6 was last updated in 2011. It is the primary standard that covers basic operation, security functions, mobility operations, and packet structure.
+* [RFC 4283](https://www.rfc-editor.org/rfc/rfc4283.html) - Mobile Node Identifier Option for Mobile IPv6 (MIPv6) was last updated in 2005. It primarily covers all the functions of the Mobility Header and it was essential to have a mechanism wherein mobility entities can be identified using other identifiers.
+* [RFC 4285](https://www.rfc-editor.org/rfc/rfc4285.html) - Authentication Protocol for Mobile IPv6 was last updated in 2006. This was the solution for securing the Binding Update and Binding Acknowledgment messages between the Mobile Node and Home Agent using a mobility message authentication option that is included in these messages
+
+## Site-Local Addressing
+Site-Local addressing has an odd place in IPv6. Is was orginally proposed to answer the private IPv6 addressing concern similar to [RFC 1918](https://www.rfc-editor.org/rfc/rfc1918.html). Site-local addressing was orginally defined for its special use in section 2.5.6 of [RFC 3513](https://www.rfc-editor.org/rfc/rfc3513.html#section-2.5.6). Problems arose with their special use based on the following reasons:
+* ambiguity of addresses meaning an address such as `fec0::1` can be present in multiple sites, and the address itself does not contain any indication of the site to which it   belongs.  This creates pain for developers of applications, for the designers of routers and for the network managers.  
+* fuzzy definition of sites because the ambiguity of addressing they can exist accross sites which then creates the requirement to add things like zone identifiers to ID the actual sites. For example, `fec0::1234:5678:9abc%1` for a multihomed node. This management of identifiers has proven hard to understand by developers, and also hard to execute by those developers who understand the concept.
+
+### Deprecated but Not Gone
+These addresses weren't deprecated until [RFC 3879](https://www.rfc-editor.org/rfc/rfc3879) about a year later. However, even with this deprecation, things remain in standards that have caused significant confusion. Since [RFC 4291](https://www.rfc-editor.org/rfc/rfc4291.html#section-2.5.7) talked to this deprecation, it still exists as an item in RFC 4291. 
+* The requirement in RFC 3879 also states that the prefix fec0::/10 "MUST NOT be reassigned for other use except by a future IETF standards action." Given that, it can't be reabsorbed into the IANA Global Unicast address space.
+* It is also listed as a seperate label in the IPv6 Prefix Policy Table outlined in [RFC 6724](https://www.rfc-editor.org/rfc/rfc6724.html) as 11 with a precendence of 1.
+* RFC 3879 also states that "Existing implementations and deployments MAY continue to use this prefix"
+
+All of this adds to confusion for the usage and supportability of Site Local Addressing. Site Local Addressing is effectvy obsolete and should not be taught in training or mentioned as part of the IPv6 feature set.
 
 
+
+## Secure Neighbor Discovery (SeND)
+
+TBD
+
+## Coexistence
+
+Older IPv4/IPv6 coexistence mechanisms are described in
+[3. Obsolete techniques](#obsolete-techniques).
+
+<!-- ## Name (add plain section names like that) -->
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#advanced-troubleshooting) [<ins>Next</ins>](#further-reading) [<ins>Top</ins>](#troubleshooting)
+### [<ins>Back to main Contents</ins>](#list-of-contents)
 
 backslashpagebreak
 # Further Reading
@@ -4538,9 +4632,10 @@ mention IPv6 or DHCPv6 in their title or come from the major IPv6
 working groups. Obsolete RFCs are not included. There are subsections
 for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
-well as out of date.
+well as out of date. Also see
+[10. Obsolete Features in IPv6](#obsolete-features-in-ipv6).
 
-RFCbib6 run at 2024-09-18 08:51:16 UTC+1200 (489 RFCs found)
+RFCbib6 run at 2024-11-16 16:14:24 UTC+1300 (491 RFCs found)
 
 ### Standards Track (262 RFCs)
 
@@ -5156,7 +5251,7 @@ RFCbib6 run at 2024-09-18 08:51:16 UTC+1200 (489 RFCs found)
   ([BCP 234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
-### Informational (188 RFCs)
+### Informational (190 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -5570,8 +5665,14 @@ RFCbib6 run at 2024-09-18 08:51:16 UTC+1200 (489 RFCs found)
   over IPv6 for the Mobile User Plane
 - [RFC 9453](https://www.rfc-editor.org/info/rfc9453): Applicability and
   Use Cases for IPv6 over Networks of Resource-constrained Nodes (6lo)
+- [RFC 9602](https://www.rfc-editor.org/info/rfc9602): Segment Routing
+  over IPv6 (SRv6) Segment Identifiers in the IPv6 Addressing
+  Architecture
 - [RFC 9637](https://www.rfc-editor.org/info/rfc9637): Expanding the
   IPv6 Documentation Space
+- [RFC 9663](https://www.rfc-editor.org/info/rfc9663): Using DHCPv6
+  Prefix Delegation (DHCPv6-PD) to Allocate Unique IPv6 Prefixes per
+  Client in Large Broadcast Networks
 
 ### Experimental (24 RFCs)
 
@@ -5640,7 +5741,7 @@ backslashpagebreak
 This chapter shows how to write a new chapter. It is intentionally
 listed in the contents of the book itself, and is intended to be a
 living chapter of a living book. You should also check
-[CONTRIBUTING](https://github.com/becarpenter/book6/blob/main/CONTRIBUTING.md) 
+[CONTRIBUTING](https://github.com/becarpenter/book6/blob/main/CONTRIBUTING.md)
 and [LICENSE](https://github.com/becarpenter/book6/blob/main/LICENSE.md)
 before contributing.
 
@@ -5650,11 +5751,11 @@ We use the GitHub dialect of Markdown. There is some information about
 this in the [<ins>Markdown Usage</ins>](#markdown-usage) section
 below, including how to include diagrams.
 
-A chapter lives in its own directory, e.g. this chapter lives
-in the directory `99. Chapter Template`. Of course, the spaces
-are part of the directory name and the name is case-sensitive.
-The introduction to the chapter (like this file) is a markdown
-file with the same name again, e.g. `99. Chapter Template.md`.
+A chapter lives in its own directory, e.g. this chapter lives in the
+directory `99. Chapter Template`. Of course, the spaces are part of the
+directory name and the name is case-sensitive. The introduction to the
+chapter (like this file) is a markdown file with the same name again,
+e.g. `99. Chapter Template.md`.
 
 The first line in this file is:
 
@@ -5673,16 +5774,26 @@ write. For example, after the introduction, put:
 
 ```
   ## First Section
-  ## Section Template
+  ## Next Section
   ## Last Section
 ```
 
 Please keep the section names short. They are also used as filenames.
-The text of the section `Section Template` will be in a file called
-`Section Template.md`.
+The text of the section `Next Section` will be in a file called
+`Next Section.md`.
 
 Please do not add text inside or after the list of sections. That will
-confuse everybody.
+confuse things. (However, for a short chapter with short sections,
+this request can be ignored. If you do something like:
+
+```
+  ## Section A
+  A sentence or three.
+  ## Section B
+  A few more sentences.
+```
+
+then separate files for each section are not required.)
 
 Important: Markdown can't handle file names with spaces in them. When
 creating links, we have to replace spaces with %20, or avoid spaces in
@@ -5691,7 +5802,7 @@ inserting links:
 
 ```
   ## [First Section](First%20Section.md)
-  ## [Section Template](Section%20Template.md)
+  ## [Next Section](Next%20Section.md)
   ## [Last Section](Last%20Section.md)
 ```
 
@@ -5733,7 +5844,10 @@ So, to repeat: add a new ## item to the chapter introduction, and
 makeBook will create the necessary .md file. Add a new .md file to the
 chapter directory, and makeBook will add it to the chapter contents.
 
-_Pro tip:_ Adding a new chapter, renaming or deleting a section or chapter, or moving a section from one chapter to another, etc., are not automated at present and may require a good deal of manual work. For that, see the
+_Pro tip:_ Adding a new chapter, renaming or deleting a section or
+chapter, or moving a section from one chapter to another, etc., are not
+automated at present and may require a good deal of manual work. For
+that, see the
 [special instructions](https://github.com/becarpenter/book6/blob/main/utilities/chapterReorg.md).
 
 [First Section](#first-section)
@@ -5903,7 +6017,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-09-27 14:24:56 UTC+1200
+Generated at 2024-11-16 16:17:13 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -5941,6 +6055,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#topology-obfuscation)
 [¶](#network-design)
 [¶](#address-planning)
+[¶](#prefix-per-host)
 [¶](#address-and-prefix-management)
 [¶](#energy-consumption)
 [¶](#multi-prefix-operation)
@@ -5975,7 +6090,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#obsolete-techniques)
 [¶](#tunnels)
 
-[coexistence ¶](#coexistence-with-legacy-ipv4)
+[coexistence ¶](#obsolete-features-in-ipv6)
+[¶](#coexistence-with-legacy-ipv4)
 [¶](#dual-stack-scenarios)
 [¶](#obsolete-techniques)
 [¶](#translation-and-ipv4-as-a-service)
@@ -5999,6 +6115,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#filtering)
 [¶](#layer-2-considerations)
 [¶](#address-planning)
+[¶](#prefix-per-host)
 [¶](#address-and-prefix-management)
 [¶](#multi-prefix-operation)
 [¶](#cern-and-the-lhc)
@@ -6128,6 +6245,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [IPv4 ¶](#how-a-network-operations-center-sees-ipv6)
 [¶](#how-an-application-programmer-sees-ipv6)
 [¶](#why-version-6)
+[¶](#obsolete-features-in-ipv6)
 [¶](#address-resolution)
 [¶](#addresses)
 [¶](#dns)
@@ -6281,6 +6399,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#topology-obfuscation)
 [¶](#network-design)
 [¶](#address-planning)
+[¶](#prefix-per-host)
 [¶](#address-and-prefix-management)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
@@ -6292,6 +6411,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#auto-configuration)
 [¶](#managed-configuration)
 [¶](#routing)
+[¶](#prefix-per-host)
 [¶](#multi-prefix-operation)
 
 [RIPng ¶](#routing)
@@ -6398,6 +6518,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#layer-2-considerations)
 [¶](#network-design)
 [¶](#address-planning)
+[¶](#prefix-per-host)
 [¶](#address-and-prefix-management)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
@@ -6412,7 +6533,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-09-27 14:24:56 UTC+1200
+Generated at 2024-11-16 16:17:13 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6755,6 +6876,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8210 ¶](#filtering)
 
+[RFC8273 ¶](#prefix-per-host)
+
 [RFC8304 ¶](#transport-protocols)
 
 [RFC8305 ¶](#how-an-application-programmer-sees-ipv6)
@@ -6767,6 +6890,7 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8415 ¶](#managed-configuration)
 [¶](#address-planning)
+[¶](#prefix-per-host)
 
 [RFC8475 ¶](#multi-prefix-operation)
 
@@ -6812,6 +6936,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [¶](#auto-configuration)
 [¶](#layer-2-considerations)
 [¶](#topology-obfuscation)
+[¶](#prefix-per-host)
 [¶](#address-and-prefix-management)
 [¶](#multi-prefix-operation)
 
@@ -6849,6 +6974,10 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9592 ¶](#addresses)
 
 [RFC9637 ¶](#addresses)
+
+[RFC9663 ¶](#prefix-per-host)
+
+[RFC9673 ¶](#extension-headers-and-options)
 
 [STD7 ¶](#transport-protocols)
 

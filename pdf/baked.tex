@@ -93,7 +93,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2024-09-28 08:53:16 UTC+1200
+Version captured at 2024-11-16 16:42:43 UTC+1300
 
 \pagebreak
 
@@ -206,6 +206,8 @@ evolves. There is also an \hyperref[book6-main-index]{index}, and a
 \tightlist
 \item
   \hyperref[address-planning]{Address Planning}
+\item
+  \hyperref[prefix-per-host]{Prefix per Host}
 \end{itemize}
 
 \hyperref[management-and-operations]{6. Management and Operations}
@@ -266,6 +268,8 @@ evolves. There is also an \hyperref[book6-main-index]{index}, and a
 \item
   \hyperref[tools]{Tools}
 \end{itemize}
+
+\hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}
 
 \hyperref[further-reading]{20. Further Reading}
 
@@ -2036,7 +2040,9 @@ Here are some notes on the most common ones:
   process it. Indeed, \href{https://www.rfc-editor.org/info/rfc8200}{RFC
   8200} states that "it is now expected that nodes along a
   packet\textquotesingle s delivery path only examine and process the
-  Hop-by-Hop Options header if explicitly configured to do so."
+  Hop-by-Hop Options header if explicitly configured to do so." Some
+  mitigations of this problem are described in
+  \href{https://www.rfc-editor.org/info/rfc9673}{RFC 9673}.
 
   Router Alert types have their own registry at
   \href{https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml}{IANA}.
@@ -3633,6 +3639,8 @@ combined with subnet design.
 
 \hyperref[address-planning]{Address Planning}
 
+\hyperref[prefix-per-host]{Prefix per Host}
+
 \subsubsection{\texorpdfstring{\hyperref[list-of-contents]{Back to main
 Contents}}{Back to main Contents}}\label{back-to-main-contents-4}
 
@@ -3832,8 +3840,39 @@ Although quite old, the following book may be helpful:
 \href{https://www.oreilly.com/library/view/ipv6-address-planning/9781491908211/}{IPv6
 Address Planning} by Tom Coffeen.
 
-\subsubsection{\texorpdfstring{\hyperref[management-and-operations]{Next}
+\subsubsection{\texorpdfstring{\hyperref[prefix-per-host]{Next}
 \hyperref[network-design]{Top}}{Next Top}}\label{next-top-4}
+
+\pagebreak
+
+\subsection{Prefix per Host}\label{prefix-per-host}
+
+IPv6 nodes very often have multiple valid addresses, for example by
+configuring temporary addresses
+{[}\href{https://www.rfc-editor.org/info/rfc8981}{RFC8981}{]}. Since
+IPv6 address space is not a scarce resource, there are scenarios where
+assigning a complete /64 prefix to an individual host may be
+advantageous. Two mechanisms for this have been defined in
+\href{https://www.rfc-editor.org/info/rfc8273}{RFC 8273} and
+\href{https://www.rfc-editor.org/info/rfc9663}{RFC 9663}.
+
+One scenario where such a solution may be useful is a shared-access
+network service where a Layer 2 access network (typically Wi-Fi) is
+shared by multiple visiting subscriber devices. Service providers may
+have a legal or operational requirement to provide isolation between
+connected visitor devices, e.g. to control potential abuse of the shared
+network. Separate prefixes make such isolation much simpler, since there
+is no need to track multiple individual /128 addresses per host.
+
+This approach has other benefits such as better scaling properties for
+neighbor caches, etc., which are discussed in RFC 9663. The latter uses
+standard DHCPv6 Prefix Delegation (DHCPv6-PD)
+{[}\href{https://www.rfc-editor.org/info/rfc8415}{RFC8415}{]}, whereas
+RFC 8273 uses specially crafted Router Advertisement messages.
+
+\subsubsection{\texorpdfstring{\hyperref[address-planning]{Previous}
+\hyperref[management-and-operations]{Next}
+\hyperref[network-design]{Top}}{Previous Next Top}}\label{previous-next-top-25}
 
 \pagebreak
 
@@ -4041,7 +4080,7 @@ Section text goes here
 
 \subsubsection{\texorpdfstring{\hyperref[address-and-prefix-management]{Previous}
 \hyperref[benchmarking-and-monitoring]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-25}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-26}
 
 \pagebreak
 
@@ -4084,7 +4123,7 @@ processes. It may also be an oportunity to implement more automation.
 
 \subsubsection{\texorpdfstring{\hyperref[remote-configuration]{Previous}
 \hyperref[routing-operation]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-26}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-27}
 
 \pagebreak
 
@@ -4094,7 +4133,7 @@ Section text goes here
 
 \subsubsection{\texorpdfstring{\hyperref[benchmarking-and-monitoring]{Previous}
 \hyperref[security-operation]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-27}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-28}
 
 \pagebreak
 
@@ -4105,7 +4144,7 @@ A starting point for this topic is
 
 \subsubsection{\texorpdfstring{\hyperref[routing-operation]{Previous}
 \hyperref[multi-prefix-operation]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-28}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-29}
 
 \pagebreak
 
@@ -4244,7 +4283,7 @@ local split-horizon DNS.
 
 \subsubsection{\texorpdfstring{\hyperref[security-operation]{Previous}
 \hyperref[multihoming]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-29}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-30}
 
 \pagebreak
 
@@ -4423,7 +4462,7 @@ support multipath solutions. Discussion continues in the IETF.
 
 \subsubsection{\texorpdfstring{\hyperref[multi-prefix-operation]{Previous}
 \hyperref[energy-consumption]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-30}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-31}
 
 \pagebreak
 
@@ -4453,7 +4492,7 @@ Header Compression and Fragmentation (SCHC)
 
 \subsubsection{\texorpdfstring{\hyperref[multihoming]{Previous}
 \hyperref[packet-size-and-jumbo-frames]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-31}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-32}
 
 \pagebreak
 
@@ -4497,7 +4536,7 @@ MTU Discovery mechanism ensures that packets fit within the MTU of every
 hop along the route. This mechanism is defined in
 {[}\href{https://www.rfc-editor.org/info/rfc8201}{RFC8201}{]}.
 
-``Jumbo Payload Option'' in IPv6
+The ``Jumbo Payload Option'' in IPv6
 {[}\href{https://www.rfc-editor.org/info/rfc2675}{RFC2675}{]} allows
 packets larger than 65,535 bytes (the maximum payload size for standard
 IPv6 packets) to be transmitted. This option is included in the
@@ -4506,11 +4545,16 @@ efficiently, even when dealing with extremely large packet sizes. This
 mechanism simplifies the handling of large packets without requiring
 them to be split into smaller fragments. If a network supports large
 enough MTUs, IPv6 can use this option to transmit large frames without
-intermediate fragmentation. However, it is very little used.
+intermediate fragmentation. However, it is very little used because it
+needs a layer 2 technology supporting very big packets. An interesting
+use case is for \emph{internal} communication in support of segmentation
+offload, described in
+\href{https://www.sipanda.io/post/segmentation-offload-and-protocols-let-s-be-friends}{this
+blog entry}.
 
 \subsubsection{\texorpdfstring{\hyperref[energy-consumption]{Previous}
 \hyperref[basic-windows-commands]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-32}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-33}
 
 \pagebreak
 
@@ -4522,7 +4566,7 @@ will do that later.
 
 \subsubsection{\texorpdfstring{\hyperref[packet-size-and-jumbo-frames]{Previous}
 \hyperref[case-studies]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-33}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-34}
 
 \pagebreak
 
@@ -4587,6 +4631,17 @@ uses DHCPv6 for IPv6 address assignment.
 \pagebreak
 
 \section{Deployment Status}\label{deployment-status}
+
+This chapter outlines information about IPv6 deployments. The picture
+changes daily, so what follows is very likely to be out of date.
+
+For information about product support for IPv6 features, users might be
+interested by the University of New Hampshire
+\href{https://www.iol.unh.edu/testing/ipv6}{InterOperability
+Laboratory}, the NIST
+\href{https://www.nist.gov/programs-projects/usgv6-program}{USGv6
+Program}, or the \href{https://www.ipv6ready.org/}{IPv6 Ready Logo
+Program}.
 
 \hyperref[status]{Status}
 
@@ -4728,7 +4783,7 @@ UK.
 
 \subsubsection{\texorpdfstring{\hyperref[status]{Previous}
 \hyperref[deployment-in-the-home]{Next}
-\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-34}
+\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-35}
 
 \pagebreak
 
@@ -4771,7 +4826,7 @@ These complex topics are out of scope for this book.
 
 \subsubsection{\texorpdfstring{\hyperref[deployment-by-carriers]{Previous}
 \hyperref[deployment-in-the-enterprise]{Next}
-\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-35}
+\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-36}
 
 \pagebreak
 
@@ -4884,7 +4939,7 @@ space may require more effort and expense, or may not be possible.
 
 \subsubsection{\texorpdfstring{\hyperref[deployment-in-the-home]{Previous}
 \hyperref[troubleshooting]{Next}
-\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-36}
+\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-37}
 
 \pagebreak
 
@@ -4932,8 +4987,121 @@ If you know what else should be written here, please write it!
 to contribute.}
 
 \subsubsection{\texorpdfstring{\hyperref[advanced-troubleshooting]{Previous}
-\hyperref[further-reading]{Next}
-\hyperref[troubleshooting]{Top}}{Previous Next Top}}\label{previous-next-top-37}
+\hyperref[obsolete-features-in-ipv6]{Next}
+\hyperref[troubleshooting]{Top}}{Previous Next Top}}\label{previous-next-top-38}
+
+\pagebreak
+
+\section{Obsolete Features in IPv6}\label{obsolete-features-in-ipv6}
+
+This chapter lists a number of IPv6 features that can be considered
+obsolete or unused, even if in some cases the relevant RFCs have not
+been formally obsoleted. Readers are advised to ignore these techniques
+for new deployments, and to consider removing them from existing
+deployments.
+
+\subsection{Mobile IPv6}\label{mobile-ipv6}
+
+Mobile IPv6 was a technology that was baked into the IPv6 protocol very
+early in its development. However based on zero implementations the
+technology exists only in textbooks and IETF standards. Since there are
+no current implementations and current standards are extremely stale,
+Mobile IPv6 is effectvy obsolete and should not be taught in training or
+mentioned as part of the IPv6 feature set. Below are a listing of those
+IETF standards:
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.rfc-editor.org/rfc/rfc6275.html}{RFC 6275} -
+  Mobility Support in IPv6 was last updated in 2011. It is the primary
+  standard that covers basic operation, security functions, mobility
+  operations, and packet structure.
+\item
+  \href{https://www.rfc-editor.org/rfc/rfc4283.html}{RFC 4283} - Mobile
+  Node Identifier Option for Mobile IPv6 (MIPv6) was last updated in
+  2005. It primarily covers all the functions of the Mobility Header and
+  it was essential to have a mechanism wherein mobility entities can be
+  identified using other identifiers.
+\item
+  \href{https://www.rfc-editor.org/rfc/rfc4285.html}{RFC 4285} -
+  Authentication Protocol for Mobile IPv6 was last updated in 2006. This
+  was the solution for securing the Binding Update and Binding
+  Acknowledgment messages between the Mobile Node and Home Agent using a
+  mobility message authentication option that is included in these
+  messages
+\end{itemize}
+
+\subsection{Site-Local Addressing}\label{site-local-addressing}
+
+Site-Local addressing has an odd place in IPv6. Is was orginally
+proposed to answer the private IPv6 addressing concern similar to
+\href{https://www.rfc-editor.org/rfc/rfc1918.html}{RFC 1918}. Site-local
+addressing was orginally defined for its special use in section 2.5.6 of
+\href{https://www.rfc-editor.org/rfc/rfc3513.html\#section-2.5.6}{RFC
+3513}. Problems arose with their special use based on the following
+reasons:
+
+\begin{itemize}
+\tightlist
+\item
+  ambiguity of addresses meaning an address such as \texttt{fec0::1} can
+  be present in multiple sites, and the address itself does not contain
+  any indication of the site to which it belongs. This creates pain for
+  developers of applications, for the designers of routers and for the
+  network managers.
+\item
+  fuzzy definition of sites because the ambiguity of addressing they can
+  exist accross sites which then creates the requirement to add things
+  like zone identifiers to ID the actual sites. For example,
+  \texttt{fec0::1234:5678:9abc\%1} for a multihomed node. This
+  management of identifiers has proven hard to understand by developers,
+  and also hard to execute by those developers who understand the
+  concept.
+\end{itemize}
+
+\subsubsection{Deprecated but Not Gone}\label{deprecated-but-not-gone}
+
+These addresses weren\textquotesingle t deprecated until
+\href{https://www.rfc-editor.org/rfc/rfc3879}{RFC 3879} about a year
+later. However, even with this deprecation, things remain in standards
+that have caused significant confusion. Since
+\href{https://www.rfc-editor.org/rfc/rfc4291.html\#section-2.5.7}{RFC
+4291} talked to this deprecation, it still exists as an item in RFC
+4291.
+
+\begin{itemize}
+\tightlist
+\item
+  The requirement in RFC 3879 also states that the prefix fec0::/10
+  "MUST NOT be reassigned for other use except by a future IETF
+  standards action." Given that, it can\textquotesingle t be reabsorbed
+  into the IANA Global Unicast address space.
+\item
+  It is also listed as a seperate label in the IPv6 Prefix Policy Table
+  outlined in \href{https://www.rfc-editor.org/rfc/rfc6724.html}{RFC
+  6724} as 11 with a precendence of 1.
+\item
+  RFC 3879 also states that "Existing implementations and deployments
+  MAY continue to use this prefix"
+\end{itemize}
+
+All of this adds to confusion for the usage and supportability of Site
+Local Addressing. Site Local Addressing is effectvy obsolete and should
+not be taught in training or mentioned as part of the IPv6 feature set.
+
+\subsection{Secure Neighbor Discovery
+(SeND)}\label{secure-neighbor-discovery-send}
+
+TBD
+
+\subsection{Coexistence}\label{coexistence}
+
+Older IPv4/IPv6 coexistence mechanisms are described in
+\hyperref[obsolete-techniques]{3. Obsolete techniques}.
+
+\subsubsection{\texorpdfstring{\hyperref[list-of-contents]{Back to main
+Contents}}{Back to main Contents}}\label{back-to-main-contents-9}
 
 \pagebreak
 
@@ -5073,7 +5241,7 @@ deployment options. Here are some starting points:
 \hyperref[rfc-bibliography]{RFC bibliography}
 
 \subsubsection{\texorpdfstring{\hyperref[list-of-contents]{Back to main
-Contents}}{Back to main Contents}}\label{back-to-main-contents-9}
+Contents}}{Back to main Contents}}\label{back-to-main-contents-10}
 
 \pagebreak
 
@@ -5084,9 +5252,10 @@ mention IPv6 or DHCPv6 in their title or come from the major IPv6
 working groups. Obsolete RFCs are not included. There are subsections
 for Standards, BCPs, Informational and Experimental RFCs. Be
 \emph{cautious} about old Informational or Experimental RFCs - they may
-be misleading as well as out of date.
+be misleading as well as out of date. Also see
+\hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}.
 
-RFCbib6 run at 2024-09-18 08:51:16 UTC+1200 (489 RFCs found)
+RFCbib6 run at 2024-11-16 16:14:24 UTC+1300 (491 RFCs found)
 
 \subsubsection{Standards Track (262
 RFCs)}\label{standards-track-262-rfcs}
@@ -6003,7 +6172,7 @@ RFCs)}\label{best-current-practice-15-rfcs}
   the Reaction of Customer Edge Routers to IPv6 Renumbering Events
 \end{itemize}
 
-\subsubsection{Informational (188 RFCs)}\label{informational-188-rfcs}
+\subsubsection{Informational (190 RFCs)}\label{informational-190-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -6617,8 +6786,16 @@ RFCs)}\label{best-current-practice-15-rfcs}
   Applicability and Use Cases for IPv6 over Networks of
   Resource-constrained Nodes (6lo)
 \item
+  \href{https://www.rfc-editor.org/info/rfc9602}{RFC 9602}: Segment
+  Routing over IPv6 (SRv6) Segment Identifiers in the IPv6 Addressing
+  Architecture
+\item
   \href{https://www.rfc-editor.org/info/rfc9637}{RFC 9637}: Expanding
   the IPv6 Documentation Space
+\item
+  \href{https://www.rfc-editor.org/info/rfc9663}{RFC 9663}: Using DHCPv6
+  Prefix Delegation (DHCPv6-PD) to Allocate Unique IPv6 Prefixes per
+  Client in Large Broadcast Networks
 \end{itemize}
 
 \subsubsection{Experimental (24 RFCs)}\label{experimental-24-rfcs}
@@ -6749,16 +6926,26 @@ write. For example, after the introduction, put:
 
 \begin{verbatim}
   ## First Section
-  ## Section Template
+  ## Next Section
   ## Last Section
 \end{verbatim}
 
 Please keep the section names short. They are also used as filenames.
-The text of the section \texttt{Section\ Template} will be in a file
-called \texttt{Section\ Template.md}.
+The text of the section \texttt{Next\ Section} will be in a file called
+\texttt{Next\ Section.md}.
 
 Please do not add text inside or after the list of sections. That will
-confuse everybody.
+confuse things. (However, for a short chapter with short sections, this
+request can be ignored. If you do something like:
+
+\begin{verbatim}
+  ## Section A
+  A sentence or three.
+  ## Section B
+  A few more sentences.
+\end{verbatim}
+
+then separate files for each section are not required.)
 
 Important: Markdown can\textquotesingle t handle file names with spaces
 in them. When creating links, we have to replace spaces with \%20, or
@@ -6767,7 +6954,7 @@ sections after inserting links:
 
 \begin{verbatim}
   ## [First Section](First%20Section.md)
-  ## [Section Template](Section%20Template.md)
+  ## [Next Section](Next%20Section.md)
   ## [Last Section](Last%20Section.md)
 \end{verbatim}
 
@@ -6831,7 +7018,7 @@ instructions}.
 \hyperref[last-section]{Last Section}
 
 \subsubsection{\texorpdfstring{\hyperref[list-of-contents]{Back to main
-Contents}}{Back to main Contents}}\label{back-to-main-contents-10}
+Contents}}{Back to main Contents}}\label{back-to-main-contents-11}
 
 \pagebreak
 
@@ -6852,7 +7039,7 @@ will do that later.
 
 \subsubsection{\texorpdfstring{\hyperref[first-section]{Previous}
 \hyperref[markdown-usage]{Next}
-\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-38}
+\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-39}
 
 \pagebreak
 
@@ -6983,7 +7170,7 @@ Existing diagrams in JPG format can be inserted in the same way.
 
 \subsubsection{\texorpdfstring{\hyperref[section-template]{Previous}
 \hyperref[last-section]{Next}
-\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-39}
+\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-40}
 
 \pagebreak
 
@@ -6993,7 +7180,7 @@ Section text goes here
 
 \subsubsection{\texorpdfstring{\hyperref[markdown-usage]{Previous}
 \hyperref[chapter-template]{Next}
-\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-40}
+\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-41}
 
 \pagebreak
 
@@ -7005,7 +7192,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2024-09-27 14:24:56 UTC+1200
+Generated at 2024-11-16 16:17:13 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7036,6 +7223,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[security]{¶} \hyperref[filtering]{¶}
 \hyperref[layer-2-considerations]{¶} \hyperref[topology-obfuscation]{¶}
 \hyperref[network-design]{¶} \hyperref[address-planning]{¶}
+\hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[energy-consumption]{¶} \hyperref[multi-prefix-operation]{¶}
 \hyperref[multihoming]{¶} \hyperref[cern-and-the-lhc]{¶}
@@ -7063,7 +7251,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[dual-stack-scenarios]{CGN ¶} \hyperref[obsolete-techniques]{¶}
 \hyperref[tunnels]{¶}
 
-\hyperref[coexistence-with-legacy-ipv4]{coexistence ¶}
+\hyperref[obsolete-features-in-ipv6]{coexistence ¶}
+\hyperref[coexistence-with-legacy-ipv4]{¶}
 \hyperref[dual-stack-scenarios]{¶} \hyperref[obsolete-techniques]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
 \hyperref[network-design]{¶} \hyperref[energy-consumption]{¶}
@@ -7079,6 +7268,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶} \hyperref[filtering]{¶}
 \hyperref[layer-2-considerations]{¶} \hyperref[address-planning]{¶}
+\hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[multi-prefix-operation]{¶} \hyperref[cern-and-the-lhc]{¶}
 
@@ -7178,9 +7368,9 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[how-a-network-operations-center-sees-ipv6]{IPv4 ¶}
 \hyperref[how-an-application-programmer-sees-ipv6]{¶}
-\hyperref[why-version-6]{¶} \hyperref[address-resolution]{¶}
-\hyperref[addresses]{¶} \hyperref[dns]{¶}
-\hyperref[extension-headers-and-options]{¶}
+\hyperref[why-version-6]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
+\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
+\hyperref[dns]{¶} \hyperref[extension-headers-and-options]{¶}
 \hyperref[layer-2-functions]{¶} \hyperref[managed-configuration]{¶}
 \hyperref[routing]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
@@ -7289,6 +7479,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[security]{¶} \hyperref[filtering]{¶}
 \hyperref[layer-2-considerations]{¶} \hyperref[topology-obfuscation]{¶}
 \hyperref[network-design]{¶} \hyperref[address-planning]{¶}
+\hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
 
@@ -7296,7 +7487,8 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[address-resolution]{RA messages ¶}
 \hyperref[auto-configuration]{¶} \hyperref[managed-configuration]{¶}
-\hyperref[routing]{¶} \hyperref[multi-prefix-operation]{¶}
+\hyperref[routing]{¶} \hyperref[prefix-per-host]{¶}
+\hyperref[multi-prefix-operation]{¶}
 
 \hyperref[routing]{RIPng ¶}
 
@@ -7370,14 +7562,14 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[managed-configuration]{¶} \hyperref[routing]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
 \hyperref[layer-2-considerations]{¶} \hyperref[network-design]{¶}
-\hyperref[address-planning]{¶}
+\hyperref[address-planning]{¶} \hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
 \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-home]{¶}
 
 \subsubsection{\texorpdfstring{\hyperref[list-of-contents]{Back to main
-Contents}}{Back to main Contents}}\label{back-to-main-contents-11}
+Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 
 \pagebreak
 
@@ -7389,7 +7581,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-11}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2024-09-27 14:24:56 UTC+1200
+Generated at 2024-11-16 16:17:13 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -7713,6 +7905,8 @@ has links to each section that mentions each citation.
 
 \hyperref[filtering]{RFC8210 ¶}
 
+\hyperref[prefix-per-host]{RFC8273 ¶}
+
 \hyperref[transport-protocols]{RFC8304 ¶}
 
 \hyperref[how-an-application-programmer-sees-ipv6]{RFC8305 ¶}
@@ -7722,7 +7916,7 @@ has links to each section that mentions each citation.
 \hyperref[layer-2-functions]{RFC8376 ¶} \hyperref[energy-consumption]{¶}
 
 \hyperref[managed-configuration]{RFC8415 ¶}
-\hyperref[address-planning]{¶}
+\hyperref[address-planning]{¶} \hyperref[prefix-per-host]{¶}
 
 \hyperref[multi-prefix-operation]{RFC8475 ¶}
 
@@ -7764,6 +7958,7 @@ has links to each section that mentions each citation.
 
 \hyperref[addresses]{RFC8981 ¶} \hyperref[auto-configuration]{¶}
 \hyperref[layer-2-considerations]{¶} \hyperref[topology-obfuscation]{¶}
+\hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[multi-prefix-operation]{¶}
 
@@ -7800,6 +7995,10 @@ has links to each section that mentions each citation.
 
 \hyperref[addresses]{RFC9637 ¶}
 
+\hyperref[prefix-per-host]{RFC9663 ¶}
+
+\hyperref[extension-headers-and-options]{RFC9673 ¶}
+
 \hyperref[transport-protocols]{STD7 ¶}
 
 \hyperref[ipv6-basic-technology]{STD86 ¶}
@@ -7808,7 +8007,7 @@ has links to each section that mentions each citation.
 \hyperref[extension-headers-and-options]{STD87 ¶}
 
 \subsubsection{\texorpdfstring{\hyperref[list-of-contents]{Back to main
-Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
+Contents}}{Back to main Contents}}\label{back-to-main-contents-13}
 
 \pagebreak
 

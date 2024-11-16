@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-10-26 09:03:48 UTC+1300
+Generated at 2024-11-16 16:17:13 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -74,7 +74,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
-[coexistence ●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
+[coexistence ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/3.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
@@ -228,6 +229,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [IPv4 ●](./1.%20Introduction%20and%20Foreword/How%20a%20network%20operations%20center%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
+[●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 [●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
