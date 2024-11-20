@@ -55,6 +55,15 @@ they will be shown in a single pair of square brackets with commas:
 \[[RFC4291](https://www.rfc-editor.org/info/rfc4291),
 [RFC 8200](https://www.rfc-editor.org/info/rfc8200)\].
 
+*Note 3:* If you need to refer to a specific section of an RFC
+*and* you know the appropriate hashtag, you can use this format:
+
+```
+  Section 2.5.6 of {{{RFC3513#section-2.5.6}}}
+```
+
+However, makeBook cannot guess the hashtag, so you must get it right.
+
 Diagrams can be ASCII art when applicable, using `~~~` before and after,
 e.g.:
 

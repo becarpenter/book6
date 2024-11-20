@@ -35,6 +35,7 @@ and inter-chapter links as far as possible."""
 #                     - add next chapter links to last sections
 # Version: 2024-09-13 - fix for internal cite of chapter name
 # Version: 2024-11-16 - handle chapter with sections directly embedded
+# Version: 2024-11-21 - allow RFC citations with #section
 
 
 ########################################################
@@ -295,10 +296,11 @@ def expand_cites():
                 newcite = True
                 cite, tail = body.split("}}", maxsplit=1)
                 if cite.startswith("RFC") or cite.startswith("BCP") or cite.startswith("STD"):
+                    citename = cite.split("#")[0] #remove hashtag if any
                     if topic_file != "RFC bibliography":
-                        if not rfc_ok(cite):
-                            logitw(cite+" not found on line")
-                    cite = "["+cite+"](https://www.rfc-editor.org/info/"+cite.lower()+")"
+                        if not rfc_ok(citename):
+                            logitw(citename+" not found on line")
+                    cite = "["+citename+"](https://www.rfc-editor.org/info/"+cite.lower()+")"
                     if not bracketed:
                         #citation in noun form
                         cite = cite.replace("RFC", "RFC ").replace("BCP", "BCP ").replace("STD", "STD ")
