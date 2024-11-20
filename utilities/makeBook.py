@@ -296,11 +296,19 @@ def expand_cites():
                 newcite = True
                 cite, tail = body.split("}}", maxsplit=1)
                 if cite.startswith("RFC") or cite.startswith("BCP") or cite.startswith("STD"):
-                    citename = cite.split("#")[0] #remove hashtag if any
+                    if "#" in cite and cite.startswith("RFC"):
+                        citen, hasht = cite.split("#")  #separate hashtag
+                    else:
+                        citen = cite
+                        hasht = ""
                     if topic_file != "RFC bibliography":
-                        if not rfc_ok(citename):
-                            logitw(citename+" not found on line")
-                    cite = "["+citename+"](https://www.rfc-editor.org/info/"+cite.lower()+")"
+                        if not rfc_ok(citen):
+                            logitw(citen+" not found on line")
+                    if not hasht:
+                        cite = "["+cite+"](https://www.rfc-editor.org/info/"+cite.lower()+")"
+                    else:
+                        #special case for section citation
+                        cite = "["+citen+"](https://www.rfc-editor.org/rfc/"+citen.lower()+".html#"+hasht+")"
                     if not bracketed:
                         #citation in noun form
                         cite = cite.replace("RFC", "RFC ").replace("BCP", "BCP ").replace("STD", "STD ")
