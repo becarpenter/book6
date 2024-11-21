@@ -62,7 +62,7 @@ they will be shown in a single pair of square brackets with commas:
   Section 2.5.6 of {{{RFC3513#section-2.5.6}}}
 ```
 
-However, makeBook cannot guess the hashtag, so you must get it right.
+However, makeBook cannot algorithmically create or check the hashtag, so you must get it right.
 
 Diagrams can be ASCII art when applicable, using `~~~` before and after,
 e.g.:
@@ -111,10 +111,10 @@ Example generated with *dia*:
 
 Please add alternate text to help people with visual difficulties.
 
-*Note 3:* Direct use of *mermaid* in markdown source is not recommended,
+*Note 4:* Direct use of *mermaid* in markdown source is not recommended,
 as it causes difficulty when generating a PDF version of book6.
 
-*Note 4:* Earlier versions of this section recommended SVG format. This
+*Note 5:* Earlier versions of this section recommended SVG format. This
 has been removed since SVG causes difficulty when generating a PDF
 version of book6.
 
