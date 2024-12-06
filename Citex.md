@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-12-06 15:04:12 UTC+1300
+Generated at 2024-12-07 08:56:45 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -269,6 +269,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6950 ●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [RFC7045 ●](./4.%20Security/Filtering.md)
+
+[RFC7050 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [RFC7066 ●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 

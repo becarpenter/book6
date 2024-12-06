@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-12-06 15:04:33 UTC+1300
+Version captured at 2024-12-07 08:57:12 UTC+1300
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -2659,6 +2659,10 @@ preprint [here](https://dataplane.org/jtk/publications/kgkp-pam-21.pdf).
   \[[RFC6264](https://www.rfc-editor.org/info/rfc6264)\].
 
 - 6a44 \[[RFC6751](https://www.rfc-editor.org/info/rfc6751)\].
+
+- In the context of NAT64,
+  [RFC 7050](https://www.rfc-editor.org/info/rfc7050)\] should no longer
+  be used.
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -6089,7 +6093,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-12-06 15:04:12 UTC+1300
+Generated at 2024-12-07 08:56:45 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6423,6 +6427,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [NAT464 ¶](#translation-and-ipv4-as-a-service)
 
 [NAT64 ¶](#dual-stack-scenarios)
+[¶](#obsolete-techniques)
 [¶](#translation-and-ipv4-as-a-service)
 
 [NAT66 ¶](#ipv6-primary-differences-from-ipv4)
@@ -6621,7 +6626,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-12-06 15:04:12 UTC+1300
+Generated at 2024-12-07 08:56:45 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6889,6 +6894,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6950 ¶](#multi-prefix-operation)
 
 [RFC7045 ¶](#filtering)
+
+[RFC7050 ¶](#obsolete-techniques)
 
 [RFC7066 ¶](#managed-configuration)
 

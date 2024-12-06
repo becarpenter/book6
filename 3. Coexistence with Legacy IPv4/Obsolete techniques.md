@@ -46,6 +46,10 @@ preprint [here](https://dataplane.org/jtk/publications/kgkp-pam-21.pdf).
 
 - 6a44 \[[RFC6751](https://www.rfc-editor.org/info/rfc6751)\].
 
+- In the context of NAT64,
+  [RFC 7050](https://www.rfc-editor.org/info/rfc7050)\] should no longer
+  be used.
+
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Previous</ins>](Translation%20and%20IPv4%20as%20a%20service.md) [<ins>Next</ins>](IPv6%20primary%20differences%20from%20IPv4.md) [<ins>Top</ins>](3.%20Coexistence%20with%20Legacy%20IPv4.md)
