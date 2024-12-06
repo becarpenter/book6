@@ -8,9 +8,9 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
-RFCbib6 run at 2024-11-16 16:14:24 UTC+1300 (491 RFCs found)
+RFCbib6 run at 2024-12-06 15:02:51 UTC+1300 (494 RFCs found)
 
-### Standards Track (262 RFCs)
+### Standards Track (265 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -574,6 +574,13 @@ RFCbib6 run at 2024-11-16 16:14:24 UTC+1300 (491 RFCs found)
 - [RFC 9603](https://www.rfc-editor.org/info/rfc9603): Path Computation
   Element Communication Protocol (PCEP) Extensions for IPv6 Segment
   Routing
+- [RFC 9673](https://www.rfc-editor.org/info/rfc9673): IPv6 Hop-by-Hop
+  Options Processing Procedures
+- [RFC 9685](https://www.rfc-editor.org/info/rfc9685): Listener
+  Subscription for IPv6 Neighbor Discovery Multicast and Anycast
+  Addresses
+- [RFC 9686](https://www.rfc-editor.org/info/rfc9686): Registering
+  Self-Generated IPv6 Addresses Using DHCPv6
 
 ### Best Current Practice (15 RFCs)
 

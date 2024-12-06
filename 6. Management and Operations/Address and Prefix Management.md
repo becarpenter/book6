@@ -34,7 +34,8 @@ address, the responder needs to know which computer and which user are
 involved. In some security cases, this may have financial implications
 and may need to meet a forensic evidentiary standard. Therefore,
 ascertaining the correspondence between the address, the device, and the
-user is a hard requirement for many enterprises.
+user is a hard requirement for many enterprises. This is also known as
+_address accountability_.
 
 In the case of SLAAC, the correspondence between IPv6 addresses and the
 MAC addresses of connected devices is embedded in the neighbor discovery
@@ -52,14 +53,16 @@ been observed that monitoring DAD (duplicate address detection) traffic
 will work, as described in
 [this blog](https://weberblog.net/monitoring-mac-ipv6-address-bindings/).
 All these solutions have unpleasant scaling properties for a large
-enterprise.
+enterprise. A new approach is for hosts to actively register
+self-generated IPv6 addresses using DHCPv6
+\[[RFC9686](https://www.rfc-editor.org/info/rfc9686)\].
 
-In the case of DHCPv6, the IPv6-MAC address correspondence is embedded
-in the DHCP server configuration. In the simplest approach, MAC
-addresses are pre-registered and neither temporary IPv6 addresses nor
-variable MAC addresses are supported. However, this exposes the network
-to attack, since it is trivial to forge a MAC address with most modern
-equipment.
+In the case of addresses assigned by DHCPv6, the IPv6-MAC address
+correspondence is embedded in the DHCP server configuration. In the
+simplest approach, MAC addresses are pre-registered and neither
+temporary IPv6 addresses nor variable MAC addresses are supported.
+However, this exposes the network to attack, since it is trivial to
+forge a MAC address with most modern equipment.
 
 With either SLAAC or DHCPv6, the user of an unknown MAC addresses can be
 authenticated by IEEE 802.1X access control, and this would provide a

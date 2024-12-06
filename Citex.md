@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-11-16 16:17:13 UTC+1300
+Generated at 2024-12-06 15:04:12 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -38,7 +38,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC1883 ●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
 
-[RFC1918 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[RFC1918 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [RFC2080 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
@@ -73,6 +74,9 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC3484 ●](./2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 
+[RFC3513 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+[●](./99.%20Chapter%20Template/Markdown%20Usage.md)
+
 [RFC3542 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 
 [RFC3550 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
@@ -93,7 +97,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC3849 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 
-[RFC3879 ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[RFC3879 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+[●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 
 [RFC3971 ●](./4.%20Security/4.%20Security.md)
 [●](./4.%20Security/Layer%202%20considerations.md)
@@ -115,7 +120,12 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC4271 ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
-[RFC4291 ●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[RFC4283 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+
+[RFC4285 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+
+[RFC4291 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+[●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./4.%20Security/Filtering.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
@@ -204,6 +214,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6264 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
+[RFC6275 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+
 [RFC6296 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./4.%20Security/4.%20Security.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
@@ -235,6 +247,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6666 ●](./4.%20Security/Filtering.md)
 
 [RFC6724 ●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
+[●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 [●](./2.%20IPv6%20Basic%20Technology/DNS.md)
 [●](./2.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 [●](./6.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -446,6 +459,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9663 ●](./5.%20Network%20Design/Prefix%20per%20Host.md)
 
 [RFC9673 ●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+
+[RFC9686 ●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
 [STD7 ●](./2.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 

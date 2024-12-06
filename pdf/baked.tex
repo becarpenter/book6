@@ -93,7 +93,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2024-11-16 16:42:43 UTC+1300
+Version captured at 2024-12-06 15:04:33 UTC+1300
 
 \pagebreak
 
@@ -4016,7 +4016,8 @@ address, the responder needs to know which computer and which user are
 involved. In some security cases, this may have financial implications
 and may need to meet a forensic evidentiary standard. Therefore,
 ascertaining the correspondence between the address, the device, and the
-user is a hard requirement for many enterprises.
+user is a hard requirement for many enterprises. This is also known as
+\emph{address accountability}.
 
 In the case of SLAAC, the correspondence between IPv6 addresses and the
 MAC addresses of connected devices is embedded in the neighbor discovery
@@ -4034,14 +4035,16 @@ has also been observed that monitoring DAD (duplicate address detection)
 traffic will work, as described in
 \href{https://weberblog.net/monitoring-mac-ipv6-address-bindings/}{this
 blog}. All these solutions have unpleasant scaling properties for a
-large enterprise.
+large enterprise. A new approach is for hosts to actively register
+self-generated IPv6 addresses using DHCPv6
+{[}\href{https://www.rfc-editor.org/info/rfc9686}{RFC9686}{]}.
 
-In the case of DHCPv6, the IPv6-MAC address correspondence is embedded
-in the DHCP server configuration. In the simplest approach, MAC
-addresses are pre-registered and neither temporary IPv6 addresses nor
-variable MAC addresses are supported. However, this exposes the network
-to attack, since it is trivial to forge a MAC address with most modern
-equipment.
+In the case of addresses assigned by DHCPv6, the IPv6-MAC address
+correspondence is embedded in the DHCP server configuration. In the
+simplest approach, MAC addresses are pre-registered and neither
+temporary IPv6 addresses nor variable MAC addresses are supported.
+However, this exposes the network to attack, since it is trivial to
+forge a MAC address with most modern equipment.
 
 With either SLAAC or DHCPv6, the user of an unknown MAC addresses can be
 authenticated by IEEE 802.1X access control, and this would provide a
@@ -5006,9 +5009,9 @@ Mobile IPv6 was a technology that was baked into the IPv6 protocol very
 early in its development. However based on zero implementations the
 technology exists only in textbooks and IETF standards. Since there are
 no current implementations and current standards are extremely stale,
-Mobile IPv6 is effectvy obsolete and should not be taught in training or
-mentioned as part of the IPv6 feature set. Below are a listing of those
-IETF standards:
+Mobile IPv6 is effectively obsolete and should not be taught in training
+or mentioned as part of the IPv6 feature set. Below are a listing of
+those IETF standards:
 
 \begin{itemize}
 \tightlist
@@ -5024,7 +5027,7 @@ IETF standards:
   it was essential to have a mechanism wherein mobility entities can be
   identified using other identifiers.
 \item
-  \href{https://www.rfc-editor.org/rfc/rfc4285.html}{RFC 4285} -
+  \href{https://www.rfc-editor.org/info/rfc4285}{RFC 4285}
   Authentication Protocol for Mobile IPv6 was last updated in 2006. This
   was the solution for securing the Binding Update and Binding
   Acknowledgment messages between the Mobile Node and Home Agent using a
@@ -5037,7 +5040,7 @@ IETF standards:
 Site-Local addressing has an odd place in IPv6. Is was orginally
 proposed to answer the private IPv6 addressing concern similar to
 \href{https://www.rfc-editor.org/rfc/rfc1918.html}{RFC 1918}. Site-local
-addressing was orginally defined for its special use in section 2.5.6 of
+addressing was orginally defined for its special use in Section 2.5.6 of
 \href{https://www.rfc-editor.org/rfc/rfc3513.html\#section-2.5.6}{RFC
 3513}. Problems arose with their special use based on the following
 reasons:
@@ -5087,8 +5090,14 @@ that have caused significant confusion. Since
 \end{itemize}
 
 All of this adds to confusion for the usage and supportability of Site
-Local Addressing. Site Local Addressing is effectvy obsolete and should
-not be taught in training or mentioned as part of the IPv6 feature set.
+Local Addressing. Site Local Addressing is effectively obsolete and
+should not be taught in training or mentioned as part of the IPv6
+feature set.
+
+\subsection{Other obselete addresses}\label{other-obselete-addresses}
+
+Several obsolete address types are listed at the end of
+\hyperref[addresses]{2. Addresses}.
 
 \subsection{Secure Neighbor Discovery
 (SeND)}\label{secure-neighbor-discovery-send}
@@ -5255,10 +5264,10 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 be misleading as well as out of date. Also see
 \hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}.
 
-RFCbib6 run at 2024-11-16 16:14:24 UTC+1300 (491 RFCs found)
+RFCbib6 run at 2024-12-06 15:02:51 UTC+1300 (494 RFCs found)
 
-\subsubsection{Standards Track (262
-RFCs)}\label{standards-track-262-rfcs}
+\subsubsection{Standards Track (265
+RFCs)}\label{standards-track-265-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -6102,6 +6111,16 @@ RFCs)}\label{standards-track-262-rfcs}
   \href{https://www.rfc-editor.org/info/rfc9603}{RFC 9603}: Path
   Computation Element Communication Protocol (PCEP) Extensions for IPv6
   Segment Routing
+\item
+  \href{https://www.rfc-editor.org/info/rfc9673}{RFC 9673}: IPv6
+  Hop-by-Hop Options Processing Procedures
+\item
+  \href{https://www.rfc-editor.org/info/rfc9685}{RFC 9685}: Listener
+  Subscription for IPv6 Neighbor Discovery Multicast and Anycast
+  Addresses
+\item
+  \href{https://www.rfc-editor.org/info/rfc9686}{RFC 9686}: Registering
+  Self-Generated IPv6 Addresses Using DHCPv6
 \end{itemize}
 
 \subsubsection{Best Current Practice (15
@@ -7102,6 +7121,16 @@ they will be shown in a single pair of square brackets with commas:
 {[}\href{https://www.rfc-editor.org/info/rfc4291}{RFC4291},
 \href{https://www.rfc-editor.org/info/rfc8200}{RFC 8200}{]}.
 
+\emph{Note 3:} If you need to refer to a specific section of an RFC
+\emph{and} you know the appropriate hashtag, you can use this format:
+
+\begin{verbatim}
+  Section 2.5.6 of {{{RFC3513#section-2.5.6}}}
+\end{verbatim}
+
+However, makeBook cannot algorithmically create or check the hashtag, so
+you must get it right.
+
 Diagrams can be ASCII art when applicable, using
 \texttt{\textasciitilde{}\textasciitilde{}\textasciitilde{}} before and
 after, e.g.:
@@ -7158,11 +7187,11 @@ Example generated with \emph{dia}:
 
 Please add alternate text to help people with visual difficulties.
 
-\emph{Note 3:} Direct use of \emph{mermaid} in markdown source is not
+\emph{Note 4:} Direct use of \emph{mermaid} in markdown source is not
 recommended, as it causes difficulty when generating a PDF version of
 book6.
 
-\emph{Note 4:} Earlier versions of this section recommended SVG format.
+\emph{Note 5:} Earlier versions of this section recommended SVG format.
 This has been removed since SVG causes difficulty when generating a PDF
 version of book6.
 
@@ -7192,7 +7221,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2024-11-16 16:17:13 UTC+1300
+Generated at 2024-12-06 15:04:12 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7207,13 +7236,18 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[obsolete-techniques]{6to4 ¶}
 
+\hyperref[address-and-prefix-management]{address accountability ¶}
+
+\hyperref[address-and-prefix-management]{address management ¶}
+
 \hyperref[how-a-user-sees-ipv6]{address ¶}
 \hyperref[how-an-application-programmer-sees-ipv6]{¶}
-\hyperref[why-version-6]{¶} \hyperref[ipv6-basic-technology]{¶}
-\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
-\hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
-\hyperref[layer-2-functions]{¶} \hyperref[managed-configuration]{¶}
-\hyperref[packet-format]{¶} \hyperref[routing]{¶}
+\hyperref[why-version-6]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
+\hyperref[ipv6-basic-technology]{¶} \hyperref[address-resolution]{¶}
+\hyperref[addresses]{¶} \hyperref[auto-configuration]{¶}
+\hyperref[dns]{¶} \hyperref[layer-2-functions]{¶}
+\hyperref[managed-configuration]{¶} \hyperref[packet-format]{¶}
+\hyperref[routing]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[coexistence-with-legacy-ipv4]{¶}
 \hyperref[dual-stack-scenarios]{¶}
@@ -7337,8 +7371,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[how-an-application-programmer-sees-ipv6]{happy eyeballs ¶}
 \hyperref[multihoming]{¶} \hyperref[deployment-in-the-home]{¶}
 
-\hyperref[why-version-6]{IANA ¶} \hyperref[addresses]{¶}
-\hyperref[auto-configuration]{¶}
+\hyperref[why-version-6]{IANA ¶} \hyperref[obsolete-features-in-ipv6]{¶}
+\hyperref[addresses]{¶} \hyperref[auto-configuration]{¶}
 \hyperref[extension-headers-and-options]{¶}
 \hyperref[managed-configuration]{¶} \hyperref[packet-format]{¶}
 \hyperref[filtering]{¶}
@@ -7456,6 +7490,11 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[translation-and-ipv4-as-a-service]{NPTv6 ¶}
 \hyperref[security]{¶} \hyperref[multihoming]{¶}
 
+\hyperref[how-to-keep-up-to-date]{obsolete ¶}
+\hyperref[obsolete-features-in-ipv6]{¶} \hyperref[addresses]{¶}
+\hyperref[dns]{¶} \hyperref[further-reading]{¶}
+\hyperref[obsolete-techniques]{¶} \hyperref[tunnels]{¶}
+
 \hyperref[routing]{OSPF ¶}
 
 \hyperref[dual-stack-scenarios]{performance ¶}
@@ -7470,8 +7509,9 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[layer-2-functions]{PPP ¶}
 
-\hyperref[addresses]{prefix ¶} \hyperref[auto-configuration]{¶}
-\hyperref[managed-configuration]{¶} \hyperref[routing]{¶}
+\hyperref[obsolete-features-in-ipv6]{prefix ¶} \hyperref[addresses]{¶}
+\hyperref[auto-configuration]{¶} \hyperref[managed-configuration]{¶}
+\hyperref[routing]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
@@ -7492,10 +7532,11 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[routing]{RIPng ¶}
 
-\hyperref[why-version-6]{route ¶} \hyperref[ipv6-basic-technology]{¶}
-\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
-\hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
-\hyperref[extension-headers-and-options]{¶}
+\hyperref[why-version-6]{route ¶}
+\hyperref[obsolete-features-in-ipv6]{¶}
+\hyperref[ipv6-basic-technology]{¶} \hyperref[address-resolution]{¶}
+\hyperref[addresses]{¶} \hyperref[auto-configuration]{¶}
+\hyperref[dns]{¶} \hyperref[extension-headers-and-options]{¶}
 \hyperref[layer-2-functions]{¶} \hyperref[managed-configuration]{¶}
 \hyperref[packet-format]{¶} \hyperref[routing]{¶}
 \hyperref[traffic-class-and-flow-label]{¶} \hyperref[further-reading]{¶}
@@ -7581,7 +7622,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2024-11-16 16:17:13 UTC+1300
+Generated at 2024-12-06 15:04:12 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -7617,7 +7658,8 @@ has links to each section that mentions each citation.
 
 \hyperref[why-version-6]{RFC1883 ¶}
 
-\hyperref[dual-stack-scenarios]{RFC1918 ¶} \hyperref[tunnels]{¶}
+\hyperref[obsolete-features-in-ipv6]{RFC1918 ¶}
+\hyperref[dual-stack-scenarios]{¶} \hyperref[tunnels]{¶}
 
 \hyperref[routing]{RFC2080 ¶}
 
@@ -7651,6 +7693,9 @@ has links to each section that mentions each citation.
 
 \hyperref[source-and-destination-address-selection]{RFC3484 ¶}
 
+\hyperref[obsolete-features-in-ipv6]{RFC3513 ¶}
+\hyperref[markdown-usage]{¶}
+
 \hyperref[dual-stack-scenarios]{RFC3542 ¶}
 
 \hyperref[transport-protocols]{RFC3550 ¶}
@@ -7671,7 +7716,7 @@ has links to each section that mentions each citation.
 
 \hyperref[addresses]{RFC3849 ¶}
 
-\hyperref[addresses]{RFC3879 ¶}
+\hyperref[obsolete-features-in-ipv6]{RFC3879 ¶} \hyperref[addresses]{¶}
 
 \hyperref[security]{RFC3971 ¶} \hyperref[layer-2-considerations]{¶}
 
@@ -7689,7 +7734,12 @@ has links to each section that mentions each citation.
 
 \hyperref[routing]{RFC4271 ¶}
 
-\hyperref[address-resolution]{RFC4291 ¶} \hyperref[addresses]{¶}
+\hyperref[obsolete-features-in-ipv6]{RFC4283 ¶}
+
+\hyperref[obsolete-features-in-ipv6]{RFC4285 ¶}
+
+\hyperref[obsolete-features-in-ipv6]{RFC4291 ¶}
+\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
 \hyperref[filtering]{¶} \hyperref[markdown-usage]{¶}
 
 \hyperref[security]{RFC4301 ¶}
@@ -7774,6 +7824,8 @@ has links to each section that mentions each citation.
 
 \hyperref[obsolete-techniques]{RFC6264 ¶} \hyperref[tunnels]{¶}
 
+\hyperref[obsolete-features-in-ipv6]{RFC6275 ¶}
+
 \hyperref[translation-and-ipv4-as-a-service]{RFC6296 ¶}
 \hyperref[security]{¶} \hyperref[multihoming]{¶}
 
@@ -7803,7 +7855,8 @@ has links to each section that mentions each citation.
 \hyperref[filtering]{RFC6666 ¶}
 
 \hyperref[how-an-application-programmer-sees-ipv6]{RFC6724 ¶}
-\hyperref[dns]{¶} \hyperref[source-and-destination-address-selection]{¶}
+\hyperref[obsolete-features-in-ipv6]{¶} \hyperref[dns]{¶}
+\hyperref[source-and-destination-address-selection]{¶}
 \hyperref[multi-prefix-operation]{¶}
 
 \hyperref[obsolete-techniques]{RFC6751 ¶}
@@ -7998,6 +8051,8 @@ has links to each section that mentions each citation.
 \hyperref[prefix-per-host]{RFC9663 ¶}
 
 \hyperref[extension-headers-and-options]{RFC9673 ¶}
+
+\hyperref[address-and-prefix-management]{RFC9686 ¶}
 
 \hyperref[transport-protocols]{STD7 ¶}
 

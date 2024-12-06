@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2024-11-16 16:17:13 UTC+1300
+Generated at 2024-12-06 15:04:12 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -14,9 +14,14 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [6to4 ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
+[address accountability ●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
+
+[address management ●](./6.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
+
 [address ●](./1.%20Introduction%20and%20Foreword/How%20a%20user%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
+[●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 [●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
 [●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -191,6 +196,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./8.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 
 [IANA ●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
+[●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
@@ -350,6 +356,14 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./4.%20Security/4.%20Security.md)
 [●](./6.%20Management%20and%20Operations/Multihoming.md)
 
+[obsolete ●](./1.%20Introduction%20and%20Foreword/How%20to%20keep%20up%20to%20date.md)
+[●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+[●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./2.%20IPv6%20Basic%20Technology/DNS.md)
+[●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[●](./3.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+
 [OSPF ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
 [performance ●](./3.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
@@ -368,7 +382,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [PPP ●](./2.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 
-[prefix ●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
+[prefix ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+[●](./2.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./2.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./2.%20IPv6%20Basic%20Technology/Routing.md)
@@ -401,6 +416,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [RIPng ●](./2.%20IPv6%20Basic%20Technology/Routing.md)
 
 [route ●](./1.%20Introduction%20and%20Foreword/Why%20version%206.md)
+[●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 [●](./2.%20IPv6%20Basic%20Technology/2.%20IPv6%20Basic%20Technology.md)
 [●](./2.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./2.%20IPv6%20Basic%20Technology/Addresses.md)

@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-11-16 16:42:43 UTC+1300
+Version captured at 2024-12-06 15:04:33 UTC+1300
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -3504,7 +3504,8 @@ address, the responder needs to know which computer and which user are
 involved. In some security cases, this may have financial implications
 and may need to meet a forensic evidentiary standard. Therefore,
 ascertaining the correspondence between the address, the device, and the
-user is a hard requirement for many enterprises.
+user is a hard requirement for many enterprises. This is also known as
+_address accountability_.
 
 In the case of SLAAC, the correspondence between IPv6 addresses and the
 MAC addresses of connected devices is embedded in the neighbor discovery
@@ -3522,14 +3523,16 @@ been observed that monitoring DAD (duplicate address detection) traffic
 will work, as described in
 [this blog](https://weberblog.net/monitoring-mac-ipv6-address-bindings/).
 All these solutions have unpleasant scaling properties for a large
-enterprise.
+enterprise. A new approach is for hosts to actively register
+self-generated IPv6 addresses using DHCPv6
+\[[RFC9686](https://www.rfc-editor.org/info/rfc9686)\].
 
-In the case of DHCPv6, the IPv6-MAC address correspondence is embedded
-in the DHCP server configuration. In the simplest approach, MAC
-addresses are pre-registered and neither temporary IPv6 addresses nor
-variable MAC addresses are supported. However, this exposes the network
-to attack, since it is trivial to forge a MAC address with most modern
-equipment.
+In the case of addresses assigned by DHCPv6, the IPv6-MAC address
+correspondence is embedded in the DHCP server configuration. In the
+simplest approach, MAC addresses are pre-registered and neither
+temporary IPv6 addresses nor variable MAC addresses are supported.
+However, this exposes the network to attack, since it is trivial to
+forge a MAC address with most modern equipment.
 
 With either SLAAC or DHCPv6, the user of an unknown MAC addresses can be
 authenticated by IEEE 802.1X access control, and this would provide a
@@ -4437,26 +4440,79 @@ for new deployments, and to consider removing them from existing
 deployments.
 
 ## Mobile IPv6
-Mobile IPv6 was a technology that was baked into the IPv6 protocol very early in its development. However based on zero implementations the technology exists only in textbooks and IETF standards. Since there are no current implementations and current standards are extremely stale, Mobile IPv6 is effectvy obsolete and should not be taught in training or mentioned as part of the IPv6 feature set. Below are a listing of those IETF standards:
 
-* [RFC 6275](https://www.rfc-editor.org/rfc/rfc6275.html) - Mobility Support in IPv6 was last updated in 2011. It is the primary standard that covers basic operation, security functions, mobility operations, and packet structure.
-* [RFC 4283](https://www.rfc-editor.org/rfc/rfc4283.html) - Mobile Node Identifier Option for Mobile IPv6 (MIPv6) was last updated in 2005. It primarily covers all the functions of the Mobility Header and it was essential to have a mechanism wherein mobility entities can be identified using other identifiers.
-* [RFC 4285](https://www.rfc-editor.org/rfc/rfc4285.html) - Authentication Protocol for Mobile IPv6 was last updated in 2006. This was the solution for securing the Binding Update and Binding Acknowledgment messages between the Mobile Node and Home Agent using a mobility message authentication option that is included in these messages
+Mobile IPv6 was a technology that was baked into the IPv6 protocol very
+early in its development. However based on zero implementations the
+technology exists only in textbooks and IETF standards. Since there are
+no current implementations and current standards are extremely stale,
+Mobile IPv6 is effectively obsolete and should not be taught in training
+or mentioned as part of the IPv6 feature set. Below are a listing of
+those IETF standards:
+
+- [RFC 6275](https://www.rfc-editor.org/rfc/rfc6275.html) - Mobility
+  Support in IPv6 was last updated in 2011. It is the primary standard
+  that covers basic operation, security functions, mobility operations,
+  and packet structure.
+- [RFC 4283](https://www.rfc-editor.org/rfc/rfc4283.html) - Mobile Node
+  Identifier Option for Mobile IPv6 (MIPv6) was last updated in 2005. It
+  primarily covers all the functions of the Mobility Header and it was
+  essential to have a mechanism wherein mobility entities can be
+  identified using other identifiers.
+- [RFC 4285](https://www.rfc-editor.org/info/rfc4285) Authentication
+  Protocol for Mobile IPv6 was last updated in 2006. This was the
+  solution for securing the Binding Update and Binding Acknowledgment
+  messages between the Mobile Node and Home Agent using a mobility
+  message authentication option that is included in these messages
 
 ## Site-Local Addressing
-Site-Local addressing has an odd place in IPv6. Is was orginally proposed to answer the private IPv6 addressing concern similar to [RFC 1918](https://www.rfc-editor.org/rfc/rfc1918.html). Site-local addressing was orginally defined for its special use in section 2.5.6 of [RFC 3513](https://www.rfc-editor.org/rfc/rfc3513.html#section-2.5.6). Problems arose with their special use based on the following reasons:
-* ambiguity of addresses meaning an address such as `fec0::1` can be present in multiple sites, and the address itself does not contain any indication of the site to which it   belongs.  This creates pain for developers of applications, for the designers of routers and for the network managers.  
-* fuzzy definition of sites because the ambiguity of addressing they can exist accross sites which then creates the requirement to add things like zone identifiers to ID the actual sites. For example, `fec0::1234:5678:9abc%1` for a multihomed node. This management of identifiers has proven hard to understand by developers, and also hard to execute by those developers who understand the concept.
+
+Site-Local addressing has an odd place in IPv6. Is was orginally
+proposed to answer the private IPv6 addressing concern similar to
+[RFC 1918](https://www.rfc-editor.org/rfc/rfc1918.html). Site-local
+addressing was orginally defined for its special use in Section 2.5.6 of
+[RFC 3513](https://www.rfc-editor.org/rfc/rfc3513.html#section-2.5.6).
+Problems arose with their special use based on the following reasons:
+
+- ambiguity of addresses meaning an address such as `fec0::1` can be
+  present in multiple sites, and the address itself does not contain any
+  indication of the site to which it belongs. This creates pain for
+  developers of applications, for the designers of routers and for the
+  network managers.
+- fuzzy definition of sites because the ambiguity of addressing they can
+  exist accross sites which then creates the requirement to add things
+  like zone identifiers to ID the actual sites. For example,
+  `fec0::1234:5678:9abc%1` for a multihomed node. This management of
+  identifiers has proven hard to understand by developers, and also hard
+  to execute by those developers who understand the concept.
 
 ### Deprecated but Not Gone
-These addresses weren't deprecated until [RFC 3879](https://www.rfc-editor.org/rfc/rfc3879) about a year later. However, even with this deprecation, things remain in standards that have caused significant confusion. Since [RFC 4291](https://www.rfc-editor.org/rfc/rfc4291.html#section-2.5.7) talked to this deprecation, it still exists as an item in RFC 4291. 
-* The requirement in RFC 3879 also states that the prefix fec0::/10 "MUST NOT be reassigned for other use except by a future IETF standards action." Given that, it can't be reabsorbed into the IANA Global Unicast address space.
-* It is also listed as a seperate label in the IPv6 Prefix Policy Table outlined in [RFC 6724](https://www.rfc-editor.org/rfc/rfc6724.html) as 11 with a precendence of 1.
-* RFC 3879 also states that "Existing implementations and deployments MAY continue to use this prefix"
 
-All of this adds to confusion for the usage and supportability of Site Local Addressing. Site Local Addressing is effectvy obsolete and should not be taught in training or mentioned as part of the IPv6 feature set.
+These addresses weren't deprecated until
+[RFC 3879](https://www.rfc-editor.org/rfc/rfc3879) about a year later.
+However, even with this deprecation, things remain in standards that
+have caused significant confusion. Since
+[RFC 4291](https://www.rfc-editor.org/rfc/rfc4291.html#section-2.5.7)
+talked to this deprecation, it still exists as an item in RFC 4291.
 
+- The requirement in RFC 3879 also states that the prefix fec0::/10
+  "MUST NOT be reassigned for other use except by a future IETF
+  standards action." Given that, it can't be reabsorbed into the IANA
+  Global Unicast address space.
+- It is also listed as a seperate label in the IPv6 Prefix Policy Table
+  outlined in [RFC 6724](https://www.rfc-editor.org/rfc/rfc6724.html) as
+  11 with a precendence of 1.
+- RFC 3879 also states that "Existing implementations and deployments
+  MAY continue to use this prefix"
 
+All of this adds to confusion for the usage and supportability of Site
+Local Addressing. Site Local Addressing is effectively obsolete and
+should not be taught in training or mentioned as part of the IPv6
+feature set.
+
+## Other obselete addresses
+
+Several obsolete address types are listed at the end of
+[2. Addresses](#addresses).
 
 ## Secure Neighbor Discovery (SeND)
 
@@ -4635,9 +4691,9 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](#obsolete-features-in-ipv6).
 
-RFCbib6 run at 2024-11-16 16:14:24 UTC+1300 (491 RFCs found)
+RFCbib6 run at 2024-12-06 15:02:51 UTC+1300 (494 RFCs found)
 
-### Standards Track (262 RFCs)
+### Standards Track (265 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -5201,6 +5257,13 @@ RFCbib6 run at 2024-11-16 16:14:24 UTC+1300 (491 RFCs found)
 - [RFC 9603](https://www.rfc-editor.org/info/rfc9603): Path Computation
   Element Communication Protocol (PCEP) Extensions for IPv6 Segment
   Routing
+- [RFC 9673](https://www.rfc-editor.org/info/rfc9673): IPv6 Hop-by-Hop
+  Options Processing Procedures
+- [RFC 9685](https://www.rfc-editor.org/info/rfc9685): Listener
+  Subscription for IPv6 Neighbor Discovery Multicast and Anycast
+  Addresses
+- [RFC 9686](https://www.rfc-editor.org/info/rfc9686): Registering
+  Self-Generated IPv6 Addresses Using DHCPv6
 
 ### Best Current Practice (15 RFCs)
 
@@ -5938,6 +6001,15 @@ they will be shown in a single pair of square brackets with commas:
 \[[RFC4291](https://www.rfc-editor.org/info/rfc4291),
 [RFC 8200](https://www.rfc-editor.org/info/rfc8200)\].
 
+*Note 3:* If you need to refer to a specific section of an RFC
+*and* you know the appropriate hashtag, you can use this format:
+
+```
+  Section 2.5.6 of {{{RFC3513#section-2.5.6}}}
+```
+
+However, makeBook cannot algorithmically create or check the hashtag, so you must get it right.
+
 Diagrams can be ASCII art when applicable, using `~~~` before and after,
 e.g.:
 
@@ -5989,10 +6061,10 @@ Example generated with *dia*:
 
 Please add alternate text to help people with visual difficulties.
 
-*Note 3:* Direct use of *mermaid* in markdown source is not recommended,
+*Note 4:* Direct use of *mermaid* in markdown source is not recommended,
 as it causes difficulty when generating a PDF version of book6.
 
-*Note 4:* Earlier versions of this section recommended SVG format. This
+*Note 5:* Earlier versions of this section recommended SVG format. This
 has been removed since SVG causes difficulty when generating a PDF
 version of book6.
 
@@ -6017,7 +6089,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-11-16 16:17:13 UTC+1300
+Generated at 2024-12-06 15:04:12 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6030,9 +6102,14 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [6to4 ¶](#obsolete-techniques)
 
+[address accountability ¶](#address-and-prefix-management)
+
+[address management ¶](#address-and-prefix-management)
+
 [address ¶](#how-a-user-sees-ipv6)
 [¶](#how-an-application-programmer-sees-ipv6)
 [¶](#why-version-6)
+[¶](#obsolete-features-in-ipv6)
 [¶](#ipv6-basic-technology)
 [¶](#address-resolution)
 [¶](#addresses)
@@ -6207,6 +6284,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-in-the-home)
 
 [IANA ¶](#why-version-6)
+[¶](#obsolete-features-in-ipv6)
 [¶](#addresses)
 [¶](#auto-configuration)
 [¶](#extension-headers-and-options)
@@ -6366,6 +6444,14 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#security)
 [¶](#multihoming)
 
+[obsolete ¶](#how-to-keep-up-to-date)
+[¶](#obsolete-features-in-ipv6)
+[¶](#addresses)
+[¶](#dns)
+[¶](#further-reading)
+[¶](#obsolete-techniques)
+[¶](#tunnels)
+
 [OSPF ¶](#routing)
 
 [performance ¶](#dual-stack-scenarios)
@@ -6384,7 +6470,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [PPP ¶](#layer-2-functions)
 
-[prefix ¶](#addresses)
+[prefix ¶](#obsolete-features-in-ipv6)
+[¶](#addresses)
 [¶](#auto-configuration)
 [¶](#managed-configuration)
 [¶](#routing)
@@ -6417,6 +6504,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [RIPng ¶](#routing)
 
 [route ¶](#why-version-6)
+[¶](#obsolete-features-in-ipv6)
 [¶](#ipv6-basic-technology)
 [¶](#address-resolution)
 [¶](#addresses)
@@ -6533,7 +6621,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-11-16 16:17:13 UTC+1300
+Generated at 2024-12-06 15:04:12 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6570,7 +6658,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC1883 ¶](#why-version-6)
 
-[RFC1918 ¶](#dual-stack-scenarios)
+[RFC1918 ¶](#obsolete-features-in-ipv6)
+[¶](#dual-stack-scenarios)
 [¶](#tunnels)
 
 [RFC2080 ¶](#routing)
@@ -6605,6 +6694,9 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC3484 ¶](#source-and-destination-address-selection)
 
+[RFC3513 ¶](#obsolete-features-in-ipv6)
+[¶](#markdown-usage)
+
 [RFC3542 ¶](#dual-stack-scenarios)
 
 [RFC3550 ¶](#transport-protocols)
@@ -6625,7 +6717,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC3849 ¶](#addresses)
 
-[RFC3879 ¶](#addresses)
+[RFC3879 ¶](#obsolete-features-in-ipv6)
+[¶](#addresses)
 
 [RFC3971 ¶](#security)
 [¶](#layer-2-considerations)
@@ -6647,7 +6740,12 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC4271 ¶](#routing)
 
-[RFC4291 ¶](#address-resolution)
+[RFC4283 ¶](#obsolete-features-in-ipv6)
+
+[RFC4285 ¶](#obsolete-features-in-ipv6)
+
+[RFC4291 ¶](#obsolete-features-in-ipv6)
+[¶](#address-resolution)
 [¶](#addresses)
 [¶](#filtering)
 [¶](#markdown-usage)
@@ -6736,6 +6834,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6264 ¶](#obsolete-techniques)
 [¶](#tunnels)
 
+[RFC6275 ¶](#obsolete-features-in-ipv6)
+
 [RFC6296 ¶](#translation-and-ipv4-as-a-service)
 [¶](#security)
 [¶](#multihoming)
@@ -6767,6 +6867,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6666 ¶](#filtering)
 
 [RFC6724 ¶](#how-an-application-programmer-sees-ipv6)
+[¶](#obsolete-features-in-ipv6)
 [¶](#dns)
 [¶](#source-and-destination-address-selection)
 [¶](#multi-prefix-operation)
@@ -6978,6 +7079,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9663 ¶](#prefix-per-host)
 
 [RFC9673 ¶](#extension-headers-and-options)
+
+[RFC9686 ¶](#address-and-prefix-management)
 
 [STD7 ¶](#transport-protocols)
 
