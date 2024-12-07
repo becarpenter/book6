@@ -36,6 +36,7 @@ and inter-chapter links as far as possible."""
 # Version: 2024-09-13 - fix for internal cite of chapter name
 # Version: 2024-11-16 - handle chapter with sections directly embedded
 # Version: 2024-11-21 - allow RFC citations with #section
+# Version: 2024-12-07 - tweaked handling of malformed citations
 
 
 ########################################################
@@ -281,13 +282,15 @@ def expand_cites():
             if line.startswith("```"):
                 inlit = False   #end of literal text - stop ignoring
             continue
-        try:           
+        try:
+            if line.count("{{{") != line.count("}}}"):
+                logitw("Malformed reference in "+topic_file+"/"+line)
             #convert {{ }} to \[{{ }}\]
             line = line.replace("{{{","{?x{").replace("}}}","}?y}")
             line = line.replace("{{","\[{{").replace("}}","}}\]")
             line = line.replace("{?x{","{{").replace("}?y}","}}")
             if line.count("{{") != line.count("}}"):
-                logitw("Malformed reference in "+topic_file)
+                logitw("Malformed reference in "+topic_file+"/"+line)
             while "{{" in line and "}}" in line:
                 #dprint("Citation  in:", line)
                 #found an expandable citation
@@ -370,7 +373,7 @@ def expand_cites():
                         logitw('"'+cite+'" reference could not be resolved.')
         except:
             #malformed line, do nothing
-            pass
+            logitw("Malformed line in "+topic_file+"/"+line)
         
         #string bracketed citations together
         if newcite and ")\]" in line:
