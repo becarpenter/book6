@@ -6,7 +6,7 @@ working groups. Obsolete RFCs are not included. There are subsections
 for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
-[10. Obsolete Features in IPv6](https://github.com/becarpenter/book6/blob/main/10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
+[10. Obsolete Features in IPv6](../10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
 RFCbib6 run at 2024-12-06 15:02:51 UTC+1300 (494 RFCs found)
 
