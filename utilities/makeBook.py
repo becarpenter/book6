@@ -37,6 +37,7 @@ and inter-chapter links as far as possible."""
 # Version: 2024-11-16 - handle chapter with sections directly embedded
 # Version: 2024-11-21 - allow RFC citations with #section
 # Version: 2024-12-07 - tweaked handling of malformed citations
+# Version: 2024-12-24 - switch to proper xml parser
 
 
 ########################################################
@@ -90,6 +91,7 @@ import urllib.request
 import ssl
 import certifi
 import requests
+import xmltodict
 
 try:
     import mdformat
@@ -228,19 +230,20 @@ def rfc_ok(s):
     global rfcs_checkable
     if not rfcs_checkable:
         return True  #because we can't check on line right now
+    s = s[:3]+s[3:].zfill(4) #zero-fill the doc-id
     dprint("Checking", s)
     if s[:3] == "BCP":
-        found = [i for i in whole if "<bcp-entry><doc-id>BCP"+s[3:].zfill(4)+"</doc-id>" in i]
+        found = [r for r in all_bcps if r['doc-id'] == s]
         #print(found)
-        return(bool(found))
+        return(len(found)==1)
     elif s[:3] == "STD":
-        found = [i for i in whole if "<std-entry><doc-id>STD"+s[3:].zfill(4)+"</doc-id>" in i]
+        found = [r for r in all_stds if r['doc-id'] == s]
         #print(found)
-        return(bool(found))
+        return(len(found)==1)
     elif s[:3] == "RFC":
-        found = [i for i in whole if "<rfc-entry><doc-id>RFC"+s[3:].zfill(4)+"</doc-id>" in i]
+        found = [r for r in all_rfcs if r['doc-id'] == s]
         #print(found)
-        return(bool(found)) 
+        return(len(found)==1) 
     else:
         return(False)  #invalid call
 
@@ -473,13 +476,18 @@ if (not os.path.exists(fp)) or (time.time()-os.path.getmtime(fp) > 60*60*24*30):
         logitw("Cannot get RFC index: "+str(E))
         rfcs_checkable = False
 if rfcs_checkable:
-    whole = rf(fp)
-    for i in range(len(whole)):
-        l = whole[i]
-        # hack to make subsequent search more efficient
-        if "<bcp-entry>" in l or "<rfc-entry>" in l or "<std-entry>" in l:
-            whole[i] = l.strip() + whole[i+1].strip() + "\n"
-            whole[i+1] = "\n"
+    xf = open(fp,"r",encoding='utf-8', errors='replace')
+    index_dict = xmltodict.parse(xf.read())
+    xf.close()
+    all_bcps = index_dict['rfc-index']['bcp-entry']
+    all_rfcs = index_dict['rfc-index']['rfc-entry']
+    all_stds = index_dict['rfc-index']['std-entry']
+##    for i in range(len(whole)):
+##        l = whole[i]
+##        # hack to make subsequent search more efficient
+##        if "<bcp-entry>" in l or "<rfc-entry>" in l or "<std-entry>" in l:
+##            whole[i] = l.strip() + whole[i+1].strip() + "\n"
+##            whole[i+1] = "\n"
 else:
     logitw("Cannot check RFC existence on-line")
 

@@ -14,7 +14,8 @@
 #                       catch DHCPv6
 # Version: 2024-04-28 - tiny bug in crash()
 # Version: 2024-11-16 - add citation of chapter 10
-# Version: 2024-12-24 - corrected citation of chapter 10
+# Version: 2024-11-24 - corrected citation of chapter 10
+# Version: 2024-12-24 - switch to proper xml parser
 
 ########################################################
 # Copyright (C) 2023-24 Brian E. Carpenter.                  
@@ -64,6 +65,7 @@ import time
 import os
 import sys
 import requests
+import xmltodict
 
 def show(msg):
     """Show a message"""
@@ -120,12 +122,10 @@ def wf(f,l):
 
 def field(fname, block):
     """Extract named field from XML block"""
-    if fname in block:
-        _,temp = block.split("<"+fname+">", maxsplit=1)
-        result,_ = temp.split("</"+fname+">", maxsplit=1)
-        return result
-    return ""
-    
+    try:
+        return block[fname]
+    except:
+        return None      
 
 def title(block):
     """Extract title from XML block"""
@@ -138,18 +138,17 @@ def doc_id(block):
 def interesting(block):
     """Save interesting RFC data from XML block"""
     global stds, bcps, infos, exps
-    if "UNKNOWN" in block:
-        return None
-    elif "<current-status>HISTORIC" in block:
+    status = block['current-status']
+    if status in ["UNKNOWN", "HISTORIC"]:
         return False
-    elif "<obsoleted-by>" in block:
+    elif field("obsoleted-by", block):
         return False
-    elif ("IPv6" in title(block) or "IP Version 6" in title(block) or "DHCPv6" in title(block)
+    elif ("IPv6" in block['title'] or "IP Version 6" in block['title'] or "DHCPv6" in block['title']
           or (field("wg_acronym", block) in wgs)):
         #print(block)
-        status = field("current-status", block)
-        if "is-also" in block:
-            also,_ = field("is-also", block).split("<doc-id>")[1].split("</")
+        status = block["current-status"]
+        if field("is-also", block):
+            also = block["is-also"]["doc-id"]
             if also.startswith("BCP0"):
                 also = "BCP"+also[3:].lstrip("0")
             elif also.startswith("STD0"):
@@ -235,24 +234,16 @@ if (not os.path.exists(fp)) or (time.time()-os.path.getmtime(fp) > 60*60*24*30):
     except Exception as E:
         logitw(str(E))
         crash("Cannot run without RFC index")
-whole = rf(fp)
+xf = open(fp,"r",encoding='utf-8', errors='replace')
+index_dict = xmltodict.parse(xf.read())
+xf.close()
+all_rfcs = index_dict['rfc-index']['rfc-entry']
   
 timestamp = time.strftime("%Y-%m-%d %H:%M:%S UTC%z",time.localtime())
 
-for line in whole:
-    #print(line)
-    if (not inrfc) and (not "<rfc-entry>" in line):
-        continue
-    inrfc = True
-    new += line
-    if inrfc and "</rfc-entry>" in line:
-        #end of an rfc entry
-        if interesting(new):         
-            count += 1
-        inrfc = False
-        numberfound = False
-        new = ''
-        continue
+for r in all_rfcs:
+    if interesting(r):         
+        count += 1
     
 logit(str(count)+" IPv6 RFCs found")
 if len(stds)+len(bcps)+len(infos)+len(exps) != count:
