@@ -82,8 +82,9 @@ of Low-Power Wireless Personal Area Networks (6LoWPANs, using the IEEE
 802.15.4 standard). Relevant RFCs include
 [RFC 6775](https://www.rfc-editor.org/info/rfc6775),
 [RFC 8505](https://www.rfc-editor.org/info/rfc8505),
-[RFC 8928](https://www.rfc-editor.org/info/rfc8928) and
-[RFC 8929](https://www.rfc-editor.org/info/rfc8929). These improvements
+[RFC 8928](https://www.rfc-editor.org/info/rfc8928),
+[RFC 8929](https://www.rfc-editor.org/info/rfc8929) and
+[RFC9685](https://www.rfc-editor.org/info/rfc9685). These improvements
 might be applied more generally in future.
 
 <!-- Link lines generated automatically; do not delete -->
