@@ -26,7 +26,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2024-12-07 08:57:12 UTC+1300
+Version captured at 2025-01-06 10:52:50 UTC+1300
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -288,9 +288,9 @@ spreads, availability requirements, etc. Various chapters of this book
 tackle different aspects of NOC operations:
 [5. Network Design](#network-design),
 [6. Management and Operations](#management-and-operations),
-[9. Troubleshooting](#troubleshooting). The
-[7. Case Studies](#case-studies) will also
-be relevant to NOCs.
+[9. Troubleshooting](#troubleshooting).
+The [7. Case Studies](#case-studies) will
+also be relevant to NOCs.
 
 ### [<ins>Previous</ins>](#how-an-application-programmer-sees-ipv6) [<ins>Next</ins>](#how-to-keep-up-to-date) [<ins>Top</ins>](#introduction-and-foreword)
 
@@ -1701,7 +1701,6 @@ Here are some notes on the most common ones:
   do so." Some mitigations of this problem are described in
   [RFC 9673](https://www.rfc-editor.org/info/rfc9673).
 
-
   Router Alert types have their own registry at
   [IANA](https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml).
 
@@ -2661,7 +2660,7 @@ preprint [here](https://dataplane.org/jtk/publications/kgkp-pam-21.pdf).
 - 6a44 \[[RFC6751](https://www.rfc-editor.org/info/rfc6751)\].
 
 - In the context of NAT64,
-  [RFC 7050](https://www.rfc-editor.org/info/rfc7050)\] should no longer
+  [RFC 7050](https://www.rfc-editor.org/info/rfc7050) should no longer
   be used.
 
 <!-- Link lines generated automatically; do not delete -->
@@ -2799,12 +2798,13 @@ succeeds, some enterprises may choose to reduce the role of firewalls in
 future. IPv6 is well positioned for this change.
 
 A good design and policy rule to follow is that in a dual-stacked
-deployment, which is by and large the largest percentage of IPv6 deployments,
-security policy for IPv4 and IPv6 should match in order to ensure consistency
-of operational and user experience. In an IPv6-only deployment, implementation of
-policy should be derived from overall network security policy, taking into account
-protocol specifications that may require adjustments from legacy IP (i.e. differences
-in ICMP handling between IPv4 and IPv6).
+deployment, which is by and large the largest percentage of IPv6
+deployments, security policy for IPv4 and IPv6 should match in order to
+ensure consistency of operational and user experience. In an IPv6-only
+deployment, implementation of policy should be derived from overall
+network security policy, taking into account protocol specifications
+that may require adjustments from legacy IP (i.e. differences in ICMP
+handling between IPv4 and IPv6).
 
 There is a good overview of IPv6 security in
 [RFC 9099](https://www.rfc-editor.org/info/rfc9099). This is a good
@@ -4008,17 +4008,18 @@ route. This mechanism is defined in
 \[[RFC8201](https://www.rfc-editor.org/info/rfc8201)\].
 
 The “Jumbo Payload Option” in IPv6
-\[[RFC2675](https://www.rfc-editor.org/info/rfc2675)\] allows packets larger
-than 65,535 bytes (the maximum payload size for standard IPv6 packets)
-to be transmitted. This option is included in the Hop-by-Hop Options
-header and enables IPv6 to support super jumbo frames efficiently, even
-when dealing with extremely large packet sizes. This mechanism
-simplifies the handling of large packets without requiring them to be
-split into smaller fragments. If a network supports large enough MTUs,
-IPv6 can use this option to transmit large frames without intermediate
-fragmentation. However, it is very little used because it needs a layer
-2 technology supporting very big packets. An interesting use case is for
-_internal_ communication in support of segmentation offload, described in
+\[[RFC2675](https://www.rfc-editor.org/info/rfc2675)\] allows packets
+larger than 65,535 bytes (the maximum payload size for standard IPv6
+packets) to be transmitted. This option is included in the Hop-by-Hop
+Options header and enables IPv6 to support super jumbo frames
+efficiently, even when dealing with extremely large packet sizes. This
+mechanism simplifies the handling of large packets without requiring
+them to be split into smaller fragments. If a network supports large
+enough MTUs, IPv6 can use this option to transmit large frames without
+intermediate fragmentation. However, it is very little used because it
+needs a layer 2 technology supporting very big packets. An interesting
+use case is for _internal_ communication in support of segmentation
+offload, described in
 [this blog entry](https://www.sipanda.io/post/segmentation-offload-and-protocols-let-s-be-friends).
 
 <!-- Link lines generated automatically; do not delete -->
@@ -4502,9 +4503,9 @@ talked to this deprecation, it still exists as an item in RFC 4291.
   "MUST NOT be reassigned for other use except by a future IETF
   standards action." Given that, it can't be reabsorbed into the IANA
   Global Unicast address space.
-- It is also listed as a seperate label in the IPv6 Prefix Policy Table
+- It is also listed as a separate label in the IPv6 Prefix Policy Table
   outlined in [RFC 6724](https://www.rfc-editor.org/rfc/rfc6724.html) as
-  11 with a precendence of 1.
+  11 with a precedence of 1.
 - RFC 3879 also states that "Existing implementations and deployments
   MAY continue to use this prefix"
 
@@ -4513,7 +4514,7 @@ Local Addressing. Site Local Addressing is effectively obsolete and
 should not be taught in training or mentioned as part of the IPv6
 feature set.
 
-## Other obselete addresses
+## Other obsolete addresses
 
 Several obsolete address types are listed at the end of
 [2. Addresses](#addresses).
@@ -4550,7 +4551,10 @@ from the IETF. RFCs are freely available from the
 *Warning:* obsolete RFCs are never modified or deleted. It is essential
 to look at the current status of an RFC before trusting it. For example,
 the current status of the 2017 version of the main IPv6 standard is
-shown at [this info page](https://www.rfc-editor.org/info/rfc8200). If
+shown at [this info page](https://www.rfc-editor.org/info/rfc8200). 
+Every RFC has an info page in the format
+`https://www.rfc-editor.org/info/rfcNNNN`,
+where `NNNN` is the RFC number (without leading zeros). If
 an RFC is marked as "Obsoleted by" it should be ignored - look instead
 at the newer RFC that replaces it. Thus, any reference to RFC 2460
 should be treated as a reference to RFC 8200.
@@ -4590,6 +4594,12 @@ flowchart LR
 
 
 ![Diagram of RFC status](rfc-diagram.png)
+
+When reading an RFC, you might notice an error, or have comments or
+suggestions. It is possible to report a significant error by following
+the *Submit Errata* link on the info page. If you have technical comments
+or suggestions, consider joining the relevant working group by
+[participating in the IETF](https://www.ietf.org/participate/).
 
 An important RFC is the latest version of
 [IPv6 Node Requirements](https://www.rfc-editor.org/info/bcp220), which
@@ -4666,7 +4676,7 @@ deployment options. Here are some starting points:
 
 - Graziani, Rick. IPv6 Fundamentals: A Straightforward Approach to
   Understanding IPv6 (2nd edition), Cisco Press, ISBN 978-1587144776
-  (2017). A very good book, but 5 years' worth of progress has happened
+  (2017). A very good book, but years' worth of progress has happened
   since then!
 
 - Great IPv6 blogging from
@@ -4695,7 +4705,7 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](#obsolete-features-in-ipv6).
 
-RFCbib6 run at 2024-12-06 15:02:51 UTC+1300 (494 RFCs found)
+RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
 
 ### Standards Track (265 RFCs)
 
@@ -5820,7 +5830,13 @@ below, including how to include diagrams.
 
 A chapter lives in its own directory, e.g. this chapter lives in the
 directory `99. Chapter Template`. Of course, the spaces are part of the
-directory name and the name is case-sensitive. The introduction to the
+directory name and the name is case-sensitive. 
+
+The first nine chapters are _numbered_ 1 through 9 but as from
+January 2025, their directories are _named_ "01" through "09" to match
+the way GitHub sorts directories.
+
+The introduction to the
 chapter (like this file) is a markdown file with the same name again,
 e.g. `99. Chapter Template.md`.
 
@@ -6093,7 +6109,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-12-07 08:56:45 UTC+1300
+Generated at 2025-01-06 10:51:58 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6113,7 +6129,6 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [address ¶](#how-a-user-sees-ipv6)
 [¶](#how-an-application-programmer-sees-ipv6)
 [¶](#why-version-6)
-[¶](#obsolete-features-in-ipv6)
 [¶](#ipv6-basic-technology)
 [¶](#address-resolution)
 [¶](#addresses)
@@ -6146,6 +6161,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-in-the-enterprise)
 [¶](#deployment-in-the-home)
 [¶](#tools)
+[¶](#obsolete-features-in-ipv6)
 [¶](#markdown-usage)
 
 [anycast ¶](#addresses)
@@ -6158,10 +6174,10 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [BGP ¶](#addresses)
 [¶](#routing)
-[¶](#further-reading)
 [¶](#filtering)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#further-reading)
 
 [broadcast ¶](#ipv6-primary-differences-from-ipv4)
 
@@ -6171,8 +6187,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#obsolete-techniques)
 [¶](#tunnels)
 
-[coexistence ¶](#obsolete-features-in-ipv6)
-[¶](#coexistence-with-legacy-ipv4)
+[coexistence ¶](#coexistence-with-legacy-ipv4)
 [¶](#dual-stack-scenarios)
 [¶](#obsolete-techniques)
 [¶](#translation-and-ipv4-as-a-service)
@@ -6180,6 +6195,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#network-design)
 [¶](#energy-consumption)
 [¶](#multihoming)
+[¶](#obsolete-features-in-ipv6)
 
 [DAD ¶](#address-resolution)
 [¶](#auto-configuration)
@@ -6288,13 +6304,13 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-in-the-home)
 
 [IANA ¶](#why-version-6)
-[¶](#obsolete-features-in-ipv6)
 [¶](#addresses)
 [¶](#auto-configuration)
 [¶](#extension-headers-and-options)
 [¶](#managed-configuration)
 [¶](#packet-format)
 [¶](#filtering)
+[¶](#obsolete-features-in-ipv6)
 
 [ICMPv6 ¶](#address-resolution)
 [¶](#auto-configuration)
@@ -6327,7 +6343,6 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [IPv4 ¶](#how-a-network-operations-center-sees-ipv6)
 [¶](#how-an-application-programmer-sees-ipv6)
 [¶](#why-version-6)
-[¶](#obsolete-features-in-ipv6)
 [¶](#address-resolution)
 [¶](#addresses)
 [¶](#dns)
@@ -6338,7 +6353,6 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#source-and-destination-address-selection)
 [¶](#traffic-class-and-flow-label)
 [¶](#transport-protocols)
-[¶](#further-reading)
 [¶](#coexistence-with-legacy-ipv4)
 [¶](#dual-stack-scenarios)
 [¶](#ipv6-primary-differences-from-ipv4)
@@ -6362,6 +6376,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-in-the-home)
 [¶](#status)
 [¶](#tools)
+[¶](#obsolete-features-in-ipv6)
+[¶](#further-reading)
 
 [IPv6-mostly ¶](#dual-stack-scenarios)
 
@@ -6450,12 +6466,12 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#multihoming)
 
 [obsolete ¶](#how-to-keep-up-to-date)
-[¶](#obsolete-features-in-ipv6)
 [¶](#addresses)
 [¶](#dns)
-[¶](#further-reading)
 [¶](#obsolete-techniques)
 [¶](#tunnels)
+[¶](#obsolete-features-in-ipv6)
+[¶](#further-reading)
 
 [OSPF ¶](#routing)
 
@@ -6475,8 +6491,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [PPP ¶](#layer-2-functions)
 
-[prefix ¶](#obsolete-features-in-ipv6)
-[¶](#addresses)
+[prefix ¶](#addresses)
 [¶](#auto-configuration)
 [¶](#managed-configuration)
 [¶](#routing)
@@ -6495,6 +6510,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#address-and-prefix-management)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#obsolete-features-in-ipv6)
 
 [QUIC ¶](#transport-protocols)
 [¶](#multihoming)
@@ -6509,7 +6525,6 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [RIPng ¶](#routing)
 
 [route ¶](#why-version-6)
-[¶](#obsolete-features-in-ipv6)
 [¶](#ipv6-basic-technology)
 [¶](#address-resolution)
 [¶](#addresses)
@@ -6521,7 +6536,6 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#packet-format)
 [¶](#routing)
 [¶](#traffic-class-and-flow-label)
-[¶](#further-reading)
 [¶](#coexistence-with-legacy-ipv4)
 [¶](#dual-stack-scenarios)
 [¶](#ipv6-primary-differences-from-ipv4)
@@ -6542,6 +6556,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-enterprise)
 [¶](#deployment-in-the-home)
+[¶](#obsolete-features-in-ipv6)
+[¶](#further-reading)
 
 [RPL ¶](#routing)
 
@@ -6626,7 +6642,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2024-12-07 08:56:45 UTC+1300
+Generated at 2025-01-06 10:51:58 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6663,9 +6679,9 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC1883 ¶](#why-version-6)
 
-[RFC1918 ¶](#obsolete-features-in-ipv6)
-[¶](#dual-stack-scenarios)
+[RFC1918 ¶](#dual-stack-scenarios)
 [¶](#tunnels)
+[¶](#obsolete-features-in-ipv6)
 
 [RFC2080 ¶](#routing)
 
@@ -6722,8 +6738,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC3849 ¶](#addresses)
 
-[RFC3879 ¶](#obsolete-features-in-ipv6)
-[¶](#addresses)
+[RFC3879 ¶](#addresses)
+[¶](#obsolete-features-in-ipv6)
 
 [RFC3971 ¶](#security)
 [¶](#layer-2-considerations)
@@ -6749,10 +6765,10 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC4285 ¶](#obsolete-features-in-ipv6)
 
-[RFC4291 ¶](#obsolete-features-in-ipv6)
-[¶](#address-resolution)
+[RFC4291 ¶](#address-resolution)
 [¶](#addresses)
 [¶](#filtering)
+[¶](#obsolete-features-in-ipv6)
 [¶](#markdown-usage)
 
 [RFC4301 ¶](#security)
@@ -6872,10 +6888,10 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6666 ¶](#filtering)
 
 [RFC6724 ¶](#how-an-application-programmer-sees-ipv6)
-[¶](#obsolete-features-in-ipv6)
 [¶](#dns)
 [¶](#source-and-destination-address-selection)
 [¶](#multi-prefix-operation)
+[¶](#obsolete-features-in-ipv6)
 
 [RFC6751 ¶](#obsolete-techniques)
 
@@ -6976,8 +6992,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [¶](#address-resolution)
 [¶](#extension-headers-and-options)
 [¶](#packet-format)
-[¶](#further-reading)
 [¶](#filtering)
+[¶](#further-reading)
 [¶](#markdown-usage)
 
 [RFC8201 ¶](#packet-size-and-jumbo-frames)

@@ -93,7 +93,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2024-12-07 08:57:12 UTC+1300
+Version captured at 2025-01-06 10:52:50 UTC+1300
 
 \pagebreak
 
@@ -3115,7 +3115,7 @@ the Tunnel - Legacy IPv6 Transition Mechanisms in the Wild}, preprint
   6a44 {[}\href{https://www.rfc-editor.org/info/rfc6751}{RFC6751}{]}.
 \item
   In the context of NAT64,
-  \href{https://www.rfc-editor.org/info/rfc7050}{RFC 7050}{]} should no
+  \href{https://www.rfc-editor.org/info/rfc7050}{RFC 7050} should no
   longer be used.
 \end{itemize}
 
@@ -5085,9 +5085,9 @@ that have caused significant confusion. Since
   standards action." Given that, it can\textquotesingle t be reabsorbed
   into the IANA Global Unicast address space.
 \item
-  It is also listed as a seperate label in the IPv6 Prefix Policy Table
+  It is also listed as a separate label in the IPv6 Prefix Policy Table
   outlined in \href{https://www.rfc-editor.org/rfc/rfc6724.html}{RFC
-  6724} as 11 with a precendence of 1.
+  6724} as 11 with a precedence of 1.
 \item
   RFC 3879 also states that "Existing implementations and deployments
   MAY continue to use this prefix"
@@ -5098,7 +5098,7 @@ Local Addressing. Site Local Addressing is effectively obsolete and
 should not be taught in training or mentioned as part of the IPv6
 feature set.
 
-\subsection{Other obselete addresses}\label{other-obselete-addresses}
+\subsection{Other obsolete addresses}\label{other-obsolete-addresses}
 
 Several obsolete address types are listed at the end of
 \hyperref[addresses]{2. Addresses}.
@@ -5135,9 +5135,12 @@ Comments) from the IETF. RFCs are freely available from the
 essential to look at the current status of an RFC before trusting it.
 For example, the current status of the 2017 version of the main IPv6
 standard is shown at \href{https://www.rfc-editor.org/info/rfc8200}{this
-info page}. If an RFC is marked as "Obsoleted by" it should be ignored -
-look instead at the newer RFC that replaces it. Thus, any reference to
-RFC 2460 should be treated as a reference to RFC 8200.
+info page}. Every RFC has an info page in the format
+\texttt{https://www.rfc-editor.org/info/rfcNNNN}, where \texttt{NNNN} is
+the RFC number (without leading zeros). If an RFC is marked as
+"Obsoleted by" it should be ignored - look instead at the newer RFC that
+replaces it. Thus, any reference to RFC 2460 should be treated as a
+reference to RFC 8200.
 
 Even if not obsoleted, an RFC may be "Updated by" one or more newer
 RFCs. You need to look at those in addition.
@@ -5164,6 +5167,12 @@ Here\textquotesingle s an attempt to explain this with a diagram:
 \includegraphics{rfc-diagram.png}
 \caption{Diagram of RFC status}
 \end{figure}
+
+When reading an RFC, you might notice an error, or have comments or
+suggestions. It is possible to report a significant error by following
+the \emph{Submit Errata} link on the info page. If you have technical
+comments or suggestions, consider joining the relevant working group by
+\href{https://www.ietf.org/participate/}{participating in the IETF}.
 
 An important RFC is the latest version of
 \href{https://www.rfc-editor.org/info/bcp220}{IPv6 Node Requirements},
@@ -5237,7 +5246,7 @@ deployment options. Here are some starting points:
 \item
   Graziani, Rick. IPv6 Fundamentals: A Straightforward Approach to
   Understanding IPv6 (2nd edition), Cisco Press, ISBN 978-1587144776
-  (2017). A very good book, but 5 years\textquotesingle{} worth of
+  (2017). A very good book, but years\textquotesingle{} worth of
   progress has happened since then!
 \item
   Great IPv6 blogging from \href{https://ipv6.iljitsch.com/}{Iljitsch
@@ -5268,7 +5277,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 be misleading as well as out of date. Also see
 \hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}.
 
-RFCbib6 run at 2024-12-06 15:02:51 UTC+1300 (494 RFCs found)
+RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
 
 \subsubsection{Standards Track (265
 RFCs)}\label{standards-track-265-rfcs}
@@ -6928,9 +6937,14 @@ including how to include diagrams.
 
 A chapter lives in its own directory, e.g. this chapter lives in the
 directory \texttt{99.\ Chapter\ Template}. Of course, the spaces are
-part of the directory name and the name is case-sensitive. The
-introduction to the chapter (like this file) is a markdown file with the
-same name again, e.g. \texttt{99.\ Chapter\ Template.md}.
+part of the directory name and the name is case-sensitive.
+
+The first nine chapters are \emph{numbered} 1 through 9 but as from
+January 2025, their directories are \emph{named} "01" through "09" to
+match the way GitHub sorts directories.
+
+The introduction to the chapter (like this file) is a markdown file with
+the same name again, e.g. \texttt{99.\ Chapter\ Template.md}.
 
 The first line in this file is:
 
@@ -7225,7 +7239,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2024-12-07 08:56:45 UTC+1300
+Generated at 2025-01-06 10:51:58 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7246,12 +7260,11 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[how-a-user-sees-ipv6]{address ¶}
 \hyperref[how-an-application-programmer-sees-ipv6]{¶}
-\hyperref[why-version-6]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
-\hyperref[ipv6-basic-technology]{¶} \hyperref[address-resolution]{¶}
-\hyperref[addresses]{¶} \hyperref[auto-configuration]{¶}
-\hyperref[dns]{¶} \hyperref[layer-2-functions]{¶}
-\hyperref[managed-configuration]{¶} \hyperref[packet-format]{¶}
-\hyperref[routing]{¶}
+\hyperref[why-version-6]{¶} \hyperref[ipv6-basic-technology]{¶}
+\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
+\hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
+\hyperref[layer-2-functions]{¶} \hyperref[managed-configuration]{¶}
+\hyperref[packet-format]{¶} \hyperref[routing]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[coexistence-with-legacy-ipv4]{¶}
 \hyperref[dual-stack-scenarios]{¶}
@@ -7268,7 +7281,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-enterprise]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[tools]{¶}
-\hyperref[markdown-usage]{¶}
+\hyperref[obsolete-features-in-ipv6]{¶} \hyperref[markdown-usage]{¶}
 
 \hyperref[addresses]{anycast ¶}
 
@@ -7279,8 +7292,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[routing]{Babel ¶}
 
 \hyperref[addresses]{BGP ¶} \hyperref[routing]{¶}
-\hyperref[further-reading]{¶} \hyperref[filtering]{¶}
-\hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
+\hyperref[filtering]{¶} \hyperref[multi-prefix-operation]{¶}
+\hyperref[multihoming]{¶} \hyperref[further-reading]{¶}
 
 \hyperref[ipv6-primary-differences-from-ipv4]{broadcast ¶}
 
@@ -7289,12 +7302,11 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[dual-stack-scenarios]{CGN ¶} \hyperref[obsolete-techniques]{¶}
 \hyperref[tunnels]{¶}
 
-\hyperref[obsolete-features-in-ipv6]{coexistence ¶}
-\hyperref[coexistence-with-legacy-ipv4]{¶}
+\hyperref[coexistence-with-legacy-ipv4]{coexistence ¶}
 \hyperref[dual-stack-scenarios]{¶} \hyperref[obsolete-techniques]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
 \hyperref[network-design]{¶} \hyperref[energy-consumption]{¶}
-\hyperref[multihoming]{¶}
+\hyperref[multihoming]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[address-resolution]{DAD ¶} \hyperref[auto-configuration]{¶}
 \hyperref[layer-2-considerations]{¶}
@@ -7375,11 +7387,11 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[how-an-application-programmer-sees-ipv6]{happy eyeballs ¶}
 \hyperref[multihoming]{¶} \hyperref[deployment-in-the-home]{¶}
 
-\hyperref[why-version-6]{IANA ¶} \hyperref[obsolete-features-in-ipv6]{¶}
-\hyperref[addresses]{¶} \hyperref[auto-configuration]{¶}
+\hyperref[why-version-6]{IANA ¶} \hyperref[addresses]{¶}
+\hyperref[auto-configuration]{¶}
 \hyperref[extension-headers-and-options]{¶}
 \hyperref[managed-configuration]{¶} \hyperref[packet-format]{¶}
-\hyperref[filtering]{¶}
+\hyperref[filtering]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[address-resolution]{ICMPv6 ¶} \hyperref[auto-configuration]{¶}
 \hyperref[extension-headers-and-options]{¶}
@@ -7406,14 +7418,14 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[how-a-network-operations-center-sees-ipv6]{IPv4 ¶}
 \hyperref[how-an-application-programmer-sees-ipv6]{¶}
-\hyperref[why-version-6]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
-\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
-\hyperref[dns]{¶} \hyperref[extension-headers-and-options]{¶}
+\hyperref[why-version-6]{¶} \hyperref[address-resolution]{¶}
+\hyperref[addresses]{¶} \hyperref[dns]{¶}
+\hyperref[extension-headers-and-options]{¶}
 \hyperref[layer-2-functions]{¶} \hyperref[managed-configuration]{¶}
 \hyperref[routing]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[traffic-class-and-flow-label]{¶}
-\hyperref[transport-protocols]{¶} \hyperref[further-reading]{¶}
+\hyperref[transport-protocols]{¶}
 \hyperref[coexistence-with-legacy-ipv4]{¶}
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
@@ -7428,7 +7440,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[multihoming]{¶} \hyperref[packet-size-and-jumbo-frames]{¶}
 \hyperref[cern-and-the-lhc]{¶} \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[status]{¶}
-\hyperref[tools]{¶}
+\hyperref[tools]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
+\hyperref[further-reading]{¶}
 
 \hyperref[dual-stack-scenarios]{IPv6-mostly ¶}
 
@@ -7495,10 +7508,10 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[translation-and-ipv4-as-a-service]{NPTv6 ¶}
 \hyperref[security]{¶} \hyperref[multihoming]{¶}
 
-\hyperref[how-to-keep-up-to-date]{obsolete ¶}
-\hyperref[obsolete-features-in-ipv6]{¶} \hyperref[addresses]{¶}
-\hyperref[dns]{¶} \hyperref[further-reading]{¶}
-\hyperref[obsolete-techniques]{¶} \hyperref[tunnels]{¶}
+\hyperref[how-to-keep-up-to-date]{obsolete ¶} \hyperref[addresses]{¶}
+\hyperref[dns]{¶} \hyperref[obsolete-techniques]{¶}
+\hyperref[tunnels]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
+\hyperref[further-reading]{¶}
 
 \hyperref[routing]{OSPF ¶}
 
@@ -7514,9 +7527,8 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[layer-2-functions]{PPP ¶}
 
-\hyperref[obsolete-features-in-ipv6]{prefix ¶} \hyperref[addresses]{¶}
-\hyperref[auto-configuration]{¶} \hyperref[managed-configuration]{¶}
-\hyperref[routing]{¶}
+\hyperref[addresses]{prefix ¶} \hyperref[auto-configuration]{¶}
+\hyperref[managed-configuration]{¶} \hyperref[routing]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
@@ -7527,6 +7539,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
+\hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[transport-protocols]{QUIC ¶} \hyperref[multihoming]{¶}
 
@@ -7537,14 +7550,13 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[routing]{RIPng ¶}
 
-\hyperref[why-version-6]{route ¶}
-\hyperref[obsolete-features-in-ipv6]{¶}
-\hyperref[ipv6-basic-technology]{¶} \hyperref[address-resolution]{¶}
-\hyperref[addresses]{¶} \hyperref[auto-configuration]{¶}
-\hyperref[dns]{¶} \hyperref[extension-headers-and-options]{¶}
+\hyperref[why-version-6]{route ¶} \hyperref[ipv6-basic-technology]{¶}
+\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
+\hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
+\hyperref[extension-headers-and-options]{¶}
 \hyperref[layer-2-functions]{¶} \hyperref[managed-configuration]{¶}
 \hyperref[packet-format]{¶} \hyperref[routing]{¶}
-\hyperref[traffic-class-and-flow-label]{¶} \hyperref[further-reading]{¶}
+\hyperref[traffic-class-and-flow-label]{¶}
 \hyperref[coexistence-with-legacy-ipv4]{¶}
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
@@ -7558,6 +7570,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[routing-operation]{¶} \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-enterprise]{¶}
 \hyperref[deployment-in-the-home]{¶}
+\hyperref[obsolete-features-in-ipv6]{¶} \hyperref[further-reading]{¶}
 
 \hyperref[routing]{RPL ¶}
 
@@ -7627,7 +7640,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2024-12-07 08:56:45 UTC+1300
+Generated at 2025-01-06 10:51:58 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -7663,8 +7676,8 @@ has links to each section that mentions each citation.
 
 \hyperref[why-version-6]{RFC1883 ¶}
 
-\hyperref[obsolete-features-in-ipv6]{RFC1918 ¶}
-\hyperref[dual-stack-scenarios]{¶} \hyperref[tunnels]{¶}
+\hyperref[dual-stack-scenarios]{RFC1918 ¶} \hyperref[tunnels]{¶}
+\hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[routing]{RFC2080 ¶}
 
@@ -7721,7 +7734,7 @@ has links to each section that mentions each citation.
 
 \hyperref[addresses]{RFC3849 ¶}
 
-\hyperref[obsolete-features-in-ipv6]{RFC3879 ¶} \hyperref[addresses]{¶}
+\hyperref[addresses]{RFC3879 ¶} \hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[security]{RFC3971 ¶} \hyperref[layer-2-considerations]{¶}
 
@@ -7743,9 +7756,9 @@ has links to each section that mentions each citation.
 
 \hyperref[obsolete-features-in-ipv6]{RFC4285 ¶}
 
-\hyperref[obsolete-features-in-ipv6]{RFC4291 ¶}
-\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
-\hyperref[filtering]{¶} \hyperref[markdown-usage]{¶}
+\hyperref[address-resolution]{RFC4291 ¶} \hyperref[addresses]{¶}
+\hyperref[filtering]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
+\hyperref[markdown-usage]{¶}
 
 \hyperref[security]{RFC4301 ¶}
 
@@ -7860,9 +7873,9 @@ has links to each section that mentions each citation.
 \hyperref[filtering]{RFC6666 ¶}
 
 \hyperref[how-an-application-programmer-sees-ipv6]{RFC6724 ¶}
-\hyperref[obsolete-features-in-ipv6]{¶} \hyperref[dns]{¶}
-\hyperref[source-and-destination-address-selection]{¶}
+\hyperref[dns]{¶} \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[multi-prefix-operation]{¶}
+\hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[obsolete-techniques]{RFC6751 ¶}
 
@@ -7958,7 +7971,7 @@ has links to each section that mentions each citation.
 \hyperref[how-to-keep-up-to-date]{RFC8200 ¶}
 \hyperref[ipv6-basic-technology]{¶} \hyperref[address-resolution]{¶}
 \hyperref[extension-headers-and-options]{¶} \hyperref[packet-format]{¶}
-\hyperref[further-reading]{¶} \hyperref[filtering]{¶}
+\hyperref[filtering]{¶} \hyperref[further-reading]{¶}
 \hyperref[markdown-usage]{¶}
 
 \hyperref[packet-size-and-jumbo-frames]{RFC8201 ¶}

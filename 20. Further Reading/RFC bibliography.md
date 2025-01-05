@@ -8,7 +8,7 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](../10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
-RFCbib6 run at 2024-12-06 15:02:51 UTC+1300 (494 RFCs found)
+RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
 
 ### Standards Track (265 RFCs)
 

@@ -38,10 +38,15 @@ and inter-chapter links as far as possible."""
 # Version: 2024-11-21 - allow RFC citations with #section
 # Version: 2024-12-07 - tweaked handling of malformed citations
 # Version: 2024-12-24 - switch to proper xml parser
+# Version: 2025-01-06 - change sort order for chapter directories
+#                     - and base files(prepend 0)
+#                     - includes one-time fix-up for internal citations and
+#                     - one-time renaming of old directories and base files
+
 
 
 ########################################################
-# Copyright (C) 2022-2024 Brian E. Carpenter.                  
+# Copyright (C) 2022-2025 Brian E. Carpenter.                  
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with
@@ -267,7 +272,29 @@ def file_ok(fn):
         fn = fn.replace("../","")
     fn = fn.replace("%20"," ")
     return os.path.exists(fn)
+
+def fix_a_cite(line):
+    """Fix a citation for change to directory names"""
+
+    # (In theory this code will only ever be needed once
+    #  but is harmless if left in place.)
+    # Any link like ](../2.%20 needs to be changed to ](../02.%20
+    # ](../5.%20title/5.%20title.md needs fixing too
+    # ](1.%20 needs changing to ](01.%20
     
+    for j in range(1,10):
+        new = line.replace("](../"+str(j)+".%20", "](../0"+str(j)+".%20")
+        if new != line:
+            # 2nd occurrence possible
+            line = new.replace("/"+str(j)+".%20", "/0"+str(j)+".%20")
+            dprint("Fixed link in "+line)
+        else:
+            new = line.replace("]("+str(j)+".%20", "](0"+str(j)+".%20")
+            if new != line:
+                # 2nd occurrence possible
+                line = new.replace("/"+str(j)+".%20", "/0"+str(j)+".%20")
+                dprint("Fixed link in "+line)
+    return(line)
 
 def expand_cites():
     """Look for kramdown-style citations and expand them"""
@@ -277,6 +304,13 @@ def expand_cites():
     for i in range(len(section)):
         lchange = False
         line = section[i]
+
+        # Handle changes of directory/file names
+        new_line = fix_a_cite(line)
+        if new_line != line:
+            line = new_line
+            lchange = True 
+        
         newcite = False
         if not inlit and line.startswith("```"):
             inlit = True    #start of literal text - ignore
@@ -544,16 +578,37 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
     contentx += 1                  # explicitly as we go.
     cline = contents[contentx]
     if cline[0] == "[" and cline[1].isdigit():
-        # Found a decorated chapter title - extract directory name
-        dname = cline.split("(")[1].split("/")[0].replace("%20"," ")
+        # Found a decorated chapter title - extract chapter name
+        cname = cline.split("(")[1].split("/")[0].replace("%20"," ")
+
+        if cname[1] == ".":
+            #Single digit chapter name, need to fix it.
+            # (In theory this code will only ever be needed once
+            #  but is harmless if left in place.)
+            logit("Found old chapter name "+cname)        
+            # Set directory name
+            dname = "0"+cname
+            #Need to rename directory and base file
+            if os.path.isdir(cname):
+                #old directory name detected
+                os.rename(cname, dname)
+                logit("Renamed directory as "+dname)
+            if os.path.isfile(dname+"/"+cname+".md"):
+                #old file name detected
+                os.rename(dname+"/"+cname+".md", dname+"/"+dname+".md")
+                logit("Renamed file as "+dname)
+        else:
+            dname = cname
+
         chapters.append(dname)
+        
         #Need to create directory?
         if not os.path.isdir(dname):
             os.mkdir(dname)        #create empty directory
             logit("Created directory "+dname)
             #create base file
             base = []
-            base.append("# "+dname+"\n\n")
+            base.append("# "+cname+"\n\n")
             base.append("General introduction to this chapter.\n\n")
             base.append(default_text+"\n\n")
             base.append("<!-- ## Name (add plain section names like that) -->\n\n")
@@ -748,6 +803,9 @@ while contentx < len(contents)-1:  # dynamically, so we control the loop count
 #ensure there is a blank line before each link or # title
 #and that logo is followed by blank line
 for i in range(1,len(contents)):
+    fixed = fix_a_cite(contents[i])
+    if fixed != contents[i]:
+        contents[i] = fixed
     if contents[i].startswith("[") or contents[i].startswith("#"):
         contents[i] = "\n"+contents[i]
     elif contents[i].startswith("<img src="):
