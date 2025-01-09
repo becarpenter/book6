@@ -13,7 +13,7 @@ TCP/IP. So version 4 was the next number available for use in the final
 design [RFC 791](https://www.rfc-editor.org/info/rfc791). A rather more
 subtle explanation is given by the late Danny Cohen, one of the pioneers
 involved, at 38 minutes and 26 seconds into the video
-[A Brief Prehistory of Voice over IP](http://www.securitytube.net/video/1978).
+[A Brief Prehistory of Voice over IP](https://youtu.be/av4KF1j-wp4).
 
 So why not IPv5? The answer is quite simple. The number 5 in the version
 field of the IP header was already assigned for what was called the
