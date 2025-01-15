@@ -42,7 +42,7 @@ and inter-chapter links as far as possible."""
 #                     - and base files(prepend 0)
 #                     - includes one-time fix-up for internal citations and
 #                     - one-time renaming of old directories and base files
-
+# Version: 2025-01-15 - give warning if cited I-D is replaced or missing
 
 
 ########################################################
@@ -230,6 +230,32 @@ def url_ok(url):
         return False  #URL doesn't work
     return response==200
 
+def draft_current(dr_name):
+    """Check if an I-D is current"""
+    global headers, context
+    if dr_name.endswith("/"):
+        dr_name = dr_name[:-1]
+    if rfcs_checkable:        
+        if dr_name in all_ids:
+            return False  #draft is now an RFC
+    url = "https://datatracker.ietf.org/doc/" + dr_name
+    #print(url)
+    request = urllib.request.Request(url, headers=headers)
+    try:
+        response = urllib.request.urlopen(request, context=context, timeout=30)
+    except Exception as E:
+        #print(str(E))    
+        return False  #URL for draft doesn't work
+    if response.getcode() != 200:
+        #print("Response code", response.getcode())
+        return False  #URL for draft doesn't work
+    html = response.read(30000).decode("utf-8")
+    if "Replaced by" in html:
+        return False  #draft is OBE
+    #print("Not OBE")
+    return True
+    
+
 def rfc_ok(s):
     """Check if an RFC etc. is real"""
     global rfcs_checkable
@@ -309,7 +335,13 @@ def expand_cites():
         new_line = fix_a_cite(line)
         if new_line != line:
             line = new_line
-            lchange = True 
+            lchange = True
+
+        # Check for any OBE drafts
+        if "](https://datatracker.ietf.org/doc/draft-" in line:
+            dr_name = line.split("/doc/",1)[1].split(")",1)[0]
+            if not draft_current(dr_name):
+                logitw("Replaced or missing draft in "+topic_file+"/"+line)
         
         newcite = False
         if not inlit and line.startswith("```"):
@@ -510,18 +542,21 @@ if (not os.path.exists(fp)) or (time.time()-os.path.getmtime(fp) > 60*60*24*30):
         logitw("Cannot get RFC index: "+str(E))
         rfcs_checkable = False
 if rfcs_checkable:
+    # build dictionary from RFC index
     xf = open(fp,"r",encoding='utf-8', errors='replace')
     index_dict = xmltodict.parse(xf.read())
     xf.close()
+    # build lists of BCPs, RFCs and STDs
     all_bcps = index_dict['rfc-index']['bcp-entry']
     all_rfcs = index_dict['rfc-index']['rfc-entry']
     all_stds = index_dict['rfc-index']['std-entry']
-##    for i in range(len(whole)):
-##        l = whole[i]
-##        # hack to make subsequent search more efficient
-##        if "<bcp-entry>" in l or "<rfc-entry>" in l or "<std-entry>" in l:
-##            whole[i] = l.strip() + whole[i+1].strip() + "\n"
-##            whole[i+1] = "\n"
+    # build list of OBE I-Ds
+    all_ids = []
+    for e in all_rfcs:
+        try:
+            all_ids.append(e['draft'][:-3])
+        except:
+            pass        
 else:
     logitw("Cannot check RFC existence on-line")
 
