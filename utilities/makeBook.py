@@ -43,6 +43,7 @@ and inter-chapter links as far as possible."""
 #                     - includes one-time fix-up for internal citations and
 #                     - one-time renaming of old directories and base files
 # Version: 2025-01-15 - give warning if cited I-D is replaced or missing
+# Version: 2025-02-01 - linting
 
 
 ########################################################

@@ -20,6 +20,7 @@
 #                     - added EPUB conversion
 # Version: 2024-08-20 - fixed case error in "Title.md"
 # Version: 2024-09-24 - adapt to Contents.md with embedded links
+# Version: 2025-02-01 - Make epub more readable, linting
 
 
 ########################################################

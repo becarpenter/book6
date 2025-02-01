@@ -14,6 +14,7 @@
 # Version: 2023-05-20 - exclude RFC bibliography from indexing
 # Version: 2023-11-01 - enhance index boilerplate
 # Version: 2024-04-28 - handle directory on command line
+# Version: 2025-02-01 - linting
 
 
 ########################################################
