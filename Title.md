@@ -5,7 +5,9 @@
 
 Editors: Nick Buraglio and Brian E. Carpenter
 
-The PDF edition has ISBN 0-979-8-89269-031-7.
+The PDF edition has ISBN 979-8-89269-031-7.
+
+The EPUB edition has ISBN 979-8-89546-334-5.
 
 © Copyright 2022 through the timestamp below by the editors and contributors.
 
