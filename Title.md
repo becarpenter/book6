@@ -1,7 +1,7 @@
 # book6
 ![](book6logo.png "book6 logo")
 
-<ins>A collaborative IPv6 book.<ins>
+<ins>A collaborative IPv6 book.</ins>
 
 Editors: Nick Buraglio and Brian E. Carpenter
 
