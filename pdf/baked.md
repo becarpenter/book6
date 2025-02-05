@@ -1,11 +1,13 @@
 # book6
 ![](book6logo.png "book6 logo")
 
-<ins>A collaborative IPv6 book.<ins>
+<ins>A collaborative IPv6 book.</ins>
 
 Editors: Nick Buraglio and Brian E. Carpenter
 
-The PDF edition has ISBN 0-979-8-89269-031-7.
+The PDF edition has ISBN 979-8-89269-031-7.
+
+The EPUB edition has ISBN 979-8-89546-334-5.
 
 © Copyright 2022 through the timestamp below by the editors and contributors.
 
@@ -26,7 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2025-01-06 10:52:50 UTC+1300
+Version captured at 2025-02-05 11:58:39 UTC+1300
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -398,7 +400,7 @@ TCP/IP. So version 4 was the next number available for use in the final
 design [RFC 791](https://www.rfc-editor.org/info/rfc791). A rather more
 subtle explanation is given by the late Danny Cohen, one of the pioneers
 involved, at 38 minutes and 26 seconds into the video
-[A Brief Prehistory of Voice over IP](http://www.securitytube.net/video/1978).
+[A Brief Prehistory of Voice over IP](https://youtu.be/av4KF1j-wp4).
 
 So why not IPv5? The answer is quite simple. The number 5 in the version
 field of the IP header was already assigned for what was called the
@@ -1172,8 +1174,9 @@ of Low-Power Wireless Personal Area Networks (6LoWPANs, using the IEEE
 802.15.4 standard). Relevant RFCs include
 [RFC 6775](https://www.rfc-editor.org/info/rfc6775),
 [RFC 8505](https://www.rfc-editor.org/info/rfc8505),
-[RFC 8928](https://www.rfc-editor.org/info/rfc8928) and
-[RFC 8929](https://www.rfc-editor.org/info/rfc8929). These improvements
+[RFC 8928](https://www.rfc-editor.org/info/rfc8928),
+[RFC 8929](https://www.rfc-editor.org/info/rfc8929) and
+[RFC9685](https://www.rfc-editor.org/info/rfc9685). These improvements
 might be applied more generally in future.
 
 <!-- Link lines generated automatically; do not delete -->

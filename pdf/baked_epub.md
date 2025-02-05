@@ -5,7 +5,9 @@
 
 Editors: Nick Buraglio and Brian E. Carpenter
 
-The PDF edition has ISBN 0-979-8-89269-031-7.
+The PDF edition has ISBN 979-8-89269-031-7.
+
+The EPUB edition has ISBN 979-8-89546-334-5.
 
 © Copyright 2022 through the timestamp below by the editors and contributors.
 
@@ -26,9 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2025-02-01 13:32:15 UTC+0100
-
-backslashpagebreak
+Version captured at 2025-02-05 11:58:39 UTC+1300
 # Introduction and Foreword
 
 
@@ -5750,7 +5750,7 @@ Section text goes here
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-01-29 00:03:20 UTC+0100
+Generated at 2025-01-06 10:51:58 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6283,7 +6283,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-01-29 00:03:20 UTC+0100
+Generated at 2025-01-06 10:51:58 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6743,8 +6743,6 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9663 ¶](#prefix-per-host)
 
 [RFC9673 ¶](#extension-headers-and-options)
-
-[RFC9685 ¶](#address-resolution)
 
 [RFC9686 ¶](#address-and-prefix-management)
 

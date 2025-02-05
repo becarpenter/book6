@@ -21,7 +21,7 @@
 # Version: 2024-08-20 - fixed case error in "Title.md"
 # Version: 2024-09-24 - adapt to Contents.md with embedded links
 # Version: 2025-02-01 - Make epub more readable, linting
-
+# Version: 2025-02-05 - Avoid pagebreak on epub title page
 
 ########################################################
 # Copyright (C) 2024 Brian E. Carpenter.
@@ -316,9 +316,9 @@ epub_backed = []
 
 title = rf("Title.md")
 title.append("\nVersion captured at " + timestamp + "\n")
+epub_backed += title
 title.append(page_break)
 baked += title
-epub_backed += title
 del title
 
 ######### Contents
