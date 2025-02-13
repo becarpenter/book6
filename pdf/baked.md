@@ -28,7 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2025-02-05 11:58:39 UTC+1300
+Version captured at 2025-02-13 18:24:03 UTC+0100
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -4557,10 +4557,13 @@ the current status of the 2017 version of the main IPv6 standard is
 shown at [this info page](https://www.rfc-editor.org/info/rfc8200). 
 Every RFC has an info page in the format
 `https://www.rfc-editor.org/info/rfcNNNN`,
-where `NNNN` is the RFC number (without leading zeros). If
-an RFC is marked as "Obsoleted by" it should be ignored - look instead
+where `NNNN` is the RFC number (without leading zeros). If an RFC
+is marked as "Obsoleted by" it should normally be ignored - look instead
 at the newer RFC that replaces it. Thus, any reference to RFC 2460
 should be treated as a reference to RFC 8200.
+
+(Occasionally, an obsoleted RFC may contain useful background information,
+or help to understand an old protocol implementation.)
 
 Even if not obsoleted, an RFC may be "Updated by" one or more newer
 RFCs. You need to look at those in addition.
