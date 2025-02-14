@@ -60,8 +60,6 @@ class SelectFrame(Frame):
         self.printing_button.pack()
         self.start_button.pack()
 
-        self.steps = []
-
     def start_jobs(self):
         # checking that the selected dir exists
         if not os.path.isdir(self.book_dir.get()):
@@ -69,10 +67,12 @@ class SelectFrame(Frame):
                      message="The selected dir doesn't exist !")
             return
 
-        if self.do_bake_book.get():
-            self.steps.append("BakeBookStep")
+        steps = []
 
-        self.controller.start_jobs(self.steps,
+        if self.do_bake_book.get():
+            steps.append("BakeBookStep")
+
+        self.controller.start_jobs(steps,
                                    self.book_dir.get(),
                                    self.printing.get())
 
