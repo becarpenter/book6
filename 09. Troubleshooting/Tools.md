@@ -9,6 +9,18 @@ not support IPv6 but instead have an IPv6 counterpart (e.g., `ping6`,
 Due to IPv6/IPv4 translation, traceroute-like tools and 'what is my IP
 address' tools may show an IPv4 address.
 
+* radvdump
+
+* scapy
+
+* pcap tools
+
+* web based tools
+
+* mtr
+
+* asn
+
 If you know what else should be written here, please write it!
 [How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)
 
