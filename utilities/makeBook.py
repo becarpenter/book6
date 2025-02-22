@@ -44,6 +44,7 @@ and inter-chapter links as far as possible."""
 #                     - one-time renaming of old directories and base files
 # Version: 2025-01-15 - give warning if cited I-D is replaced or missing
 # Version: 2025-02-01 - linting
+# Version: 2025-02-25 - allow for future format of RFC index (no leading zeros)
 
 
 ########################################################
@@ -287,18 +288,19 @@ def rfc_ok(s):
     global rfcs_checkable
     if not rfcs_checkable:
         return True  # because we can't check on line right now
-    s = s[:3] + s[3:].zfill(4)  # zero-fill the doc-id
+    sz = s[:3] + s[3:].zfill(4)  # zero-filled doc-id
     dprint("Checking", s)
+    # This code will work before and after change in RFC-index format
     if s[:3] == "BCP":
-        found = [r for r in all_bcps if r["doc-id"] == s]
+        found = [r for r in all_bcps if r["doc-id"] in (s, sz)]
         # print(found)
         return len(found) == 1
     elif s[:3] == "STD":
-        found = [r for r in all_stds if r["doc-id"] == s]
+        found = [r for r in all_stds if r["doc-id"] in (s, sz)]
         # print(found)
         return len(found) == 1
     elif s[:3] == "RFC":
-        found = [r for r in all_rfcs if r["doc-id"] == s]
+        found = [r for r in all_rfcs if r["doc-id"] in (s, sz)]
         # print(found)
         return len(found) == 1
     else:
