@@ -1,9 +1,9 @@
-import logging
-import utils
-from bakeBook import bake_book_process
 import os
 import time
 import sys
+
+import utils
+from bakeBook import bake_book_process
 
 
 def pandoc_checks(log_instance):
@@ -17,9 +17,9 @@ def bake_book(book_dir, debug=True, gui_instance=None):
     script_location = os.path.dirname(os.path.realpath(__file__))
     log_path = os.path.join(script_location, "bakeBook.log")
 
-    log_instance = logging.Logging(log_path,
-                                   printing=debug,
-                                   gui_instance=gui_instance)
+    log_instance = utils.Logging(log_path,
+                                 printing=debug,
+                                 gui_instance=gui_instance)
     pandoc_checks(log_instance)
 
     utility_instance = utils.Utilities(log_instance, book_dir)
