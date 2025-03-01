@@ -11,3 +11,7 @@ pdf/baked.log
 
 # Ignore RFC index
 rfc-index.xml
+
+# Ignore Python stuff (see github.com/github/gitignore/blob/main/Python.gitignore)
+__pycache__/
+*.py[cod]
