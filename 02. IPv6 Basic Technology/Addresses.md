@@ -52,6 +52,7 @@ In each chunk of 16 bits, leading zeros are dropped, so we write:
 
 ```
 2001:0db8:ef01:0045:6789:abcd:ef01:2345
+
 ```
 
 There is often a run of zero bytes in an IPv6 address. One such run can
@@ -70,7 +71,8 @@ be replaced by a double colon ('::') so that we write:
 The idea is that IPv6 addresses should be cut-and-pasted in almost all
 cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
-RFC9592, and older documentation often uses uppercase hexadecimal.
+RFC9592, and older documentation and some implementations often uses uppercase
+hexadecimal.
 
 The choice of ':' as the separator is annoying in one particular aspect
 \- where a colon has another meaning and works as a separator between
@@ -80,6 +82,8 @@ addresses in URLs are in square brackets like this:
 ```
 https://[2001:db8:4006:80b::200e]:443
 ```
+
+This is defined in [RFC2732](https://www.rfc-editor.org/info/rfc2732)
 
 ### Easy addresses
 
@@ -296,9 +300,10 @@ that every IPv6 router must listen to.
 All the officially assigned multicast addresses may found at
 [IANA](https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml#link-local).
 
-### Literal addresses in web browsers
+### Literal addresses in URLs
 
-Browsers can recognize a literal IPv6 address instead of a host name,
+URLs (Uniform Resource Locator) as they used in Browsers and many other
+tools  can recognize a literal IPv6 address instead of a host name,
 but the address must be enclosed in square brackets, e.g.:
 
 ```
@@ -308,6 +313,8 @@ but the address must be enclosed in square brackets, e.g.:
 Of course, literal addresses should only be used for diagnostic or
 testing purposes, and will normally be cut-and-pasted rather than being
 typed in by hand.
+
+This is defined in [RFC2732](https://www.rfc-editor.org/info/rfc2732)
 
 ### Some addresses are special
 
