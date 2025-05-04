@@ -1,6 +1,6 @@
 ## Tools
 
-## Chapter X: IPv6 Diagnostic Tools
+<!-- ## Chapter X: IPv6 Diagnostic Tools -->
 
 Effective IPv6 management and troubleshooting rely heavily on specialized diagnostic tools. While basic network diagnostic tools such as `ping` and `traceroute` function similarly for IPv4 and IPv6, there are some critical nuances and additional tools tailored specifically for IPv6.
 
