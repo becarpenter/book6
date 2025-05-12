@@ -42,9 +42,8 @@ MAC addresses of connected devices is embedded in the neighbor discovery
 caches of other devices on the same link, including the subnet router.
 This is volatile information, especially if IPv6 temporary addresses
 \[[RFC8981](https://www.rfc-editor.org/info/rfc8981)\] or variable MAC
-addresses
-\[[draft-ietf-madinas-mac-address-randomization](https://datatracker.ietf.org/doc/draft-ietf-madinas-mac-address-randomization/)\]
-are in use. This topic is discussed in section 2.6.1.4 of
+addresses \[[RFC9724](https://www.rfc-editor.org/info/rfc9724)\] are in
+use. This topic is discussed in section 2.6.1.4 of
 [RFC 9099](https://www.rfc-editor.org/info/rfc9099). A supplementary
 mechanism is needed to extract and log this information at a suitable
 frequency. An alternative would be to continuously monitor neighbor

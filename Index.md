@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2025-01-06 10:51:58 UTC+1300
+Generated at 2025-05-13 10:56:44 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -52,6 +52,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./08.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 [●](./09.%20Troubleshooting/Tools.md)
 [●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
@@ -61,6 +63,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [ARP ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./04.%20Security/Layer%202%20considerations.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
 
 [Babel ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 
@@ -69,6 +72,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./04.%20Security/Filtering.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
+[●](./09.%20Troubleshooting/Tools.md)
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
 
 [broadcast ●](./03.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
@@ -108,6 +112,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./07.%20Case%20Studies/CERN%20and%20the%20LHC.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [differentiated services ●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
@@ -116,6 +122,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [DNS64 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Tools.md)
 
 [DNS ●](./01.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -132,6 +140,9 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 [●](./08.%20Deployment%20Status/Status.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Tools.md)
 
 [DS-Lite ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
@@ -149,6 +160,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./07.%20Case%20Studies/CERN%20and%20the%20LHC.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [ECN ●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./02.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
@@ -169,6 +182,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./06.%20Management%20and%20Operations/Benchmarking%20and%20monitoring.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [flow label ●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
@@ -194,6 +208,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [happy eyeballs ●](./01.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [IANA ●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
 [●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -211,6 +227,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./04.%20Security/04.%20Security.md)
 [●](./04.%20Security/Filtering.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [IID ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
@@ -267,6 +285,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./08.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 [●](./08.%20Deployment%20Status/Status.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 [●](./09.%20Troubleshooting/Tools.md)
 [●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
@@ -281,6 +301,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./04.%20Security/04.%20Security.md)
 [●](./08.%20Deployment%20Status/Deployment%20by%20carriers.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [IS-IS ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 
@@ -296,6 +317,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Tools.md)
 
 [Lw6o4 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
@@ -307,6 +330,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [MLD ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./04.%20Security/Layer%202%20considerations.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [MPLS ●](./02.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
@@ -318,6 +343,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./02.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 [●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./06.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [multicast ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -327,6 +353,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./04.%20Security/Filtering.md)
 [●](./04.%20Security/Layer%202%20considerations.md)
 [●](./06.%20Management%20and%20Operations/Energy%20consumption.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [multihoming ●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
@@ -337,6 +365,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [NAT64 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Tools.md)
 
 [NAT66 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
@@ -374,6 +404,9 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/06.%20Management%20and%20Operations.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
 [●](./06.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Tools.md)
 
 [PIO ●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 
@@ -402,6 +435,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 [●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 
 [QUIC ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
@@ -413,6 +447,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./05.%20Network%20Design/Prefix%20per%20Host.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [RIPng ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 
@@ -448,6 +483,9 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./08.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+[●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
+[●](./09.%20Troubleshooting/Tools.md)
 [●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
 
@@ -525,6 +563,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
 [●](./08.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+[●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 
 ### [<ins>Back to main Contents</ins>](Contents.md)

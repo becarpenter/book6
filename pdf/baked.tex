@@ -37,6 +37,44 @@
   \KOMAoptions{parskip=half}}
 \makeatother
 \usepackage{xcolor}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\newenvironment{Shaded}{}{}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\BuiltInTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{#1}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
+\newcommand{\ImportTok}[1]{\textcolor[rgb]{0.00,0.50,0.00}{\textbf{#1}}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
 \usepackage{graphicx}
 \makeatletter
 \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
@@ -95,7 +133,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2025-02-13 18:24:03 UTC+0100
+Version captured at 2025-05-13 11:18:34 UTC+1200
 
 \pagebreak
 
@@ -907,6 +945,13 @@ property of IPv6 unicast routing is that it is
 regardless of any internal structure. In other words, a unicast routing
 prefix is anywhere between 1 and 128 bits long. There is more about
 \hyperref[routing]{routing} below.
+
+\emph{Terminology note}: When comparing two address prefixes, a
+\emph{longer} prefix covers a smaller amount of address space (e.g., a
+52-bit prefix covers a 76-bit address space) and a \emph{shorter} prefix
+covers a larger amount (e.g., a 48-bit prefix covers an 80-bit address
+space). Unfortunately, some documents use the term "larger prefix",
+which is ambiguous.
 
 The enormous amount of IPv6 address space allows a good deal of freedom
 in network design that never existed for IPv4. This is discussed in
@@ -4032,8 +4077,8 @@ caches of other devices on the same link, including the subnet router.
 This is volatile information, especially if IPv6 temporary addresses
 {[}\href{https://www.rfc-editor.org/info/rfc8981}{RFC8981}{]} or
 variable MAC addresses
-{[}\href{https://datatracker.ietf.org/doc/draft-ietf-madinas-mac-address-randomization/}{draft-ietf-madinas-mac-address-randomization}{]}
-are in use. This topic is discussed in section 2.6.1.4 of
+{[}\href{https://www.rfc-editor.org/info/rfc9724}{RFC9724}{]} are in
+use. This topic is discussed in section 2.6.1.4 of
 \href{https://www.rfc-editor.org/info/rfc9099}{RFC 9099}. A
 supplementary mechanism is needed to extract and log this information at
 a suitable frequency. An alternative would be to continuously monitor
@@ -4955,9 +5000,134 @@ space may require more effort and expense, or may not be possible.
 
 \section{Troubleshooting}\label{troubleshooting}
 
-If you know what should be written here, please write it!
-\href{https://github.com/becarpenter/book6/blob/main/1.\%20Introduction\%20and\%20Foreword/How\%20to\%20contribute.md\#how-to-contribute}{How
-to contribute.}
+Troubleshooting IPv6 issues involves following established best
+practices used broadly in network troubleshooting methodologies:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \textbf{Observe Behavior:} Clearly define and document the unexpected
+  or undesirable network behavior.
+\item
+  \textbf{Compare Against Baseline:} If available, compare the current
+  state to a previously established and documented baseline.
+\item
+  \textbf{Document Changes:} Maintain accurate records of network
+  configurations and any modifications.
+\item
+  \textbf{Make Simple, Single Changes:} Implement changes one at a time
+  to isolate variables effectively.
+\item
+  \textbf{Repeat:} Continue iterating the process until the issue is
+  resolved.
+\end{enumerate}
+
+Due to their similarities, IPv4 troubleshooting techniques are highly
+transferable to IPv6, given that both protocols are routed, support
+various services, run on hosts and networking devices, and facilitate
+management traffic.
+
+\subsection{Troubleshooting Layer 2
+Communications}\label{troubleshooting-layer-2-communications}
+
+Layer 2 troubleshooting for IPv6 involves ensuring basic connectivity at
+the data link layer, including:
+
+\begin{itemize}
+\item
+  \textbf{Address Resolution:} Verify the proper functioning of Neighbor
+  Discovery Protocol (NDP), as IPv6 does not use ARP. Common commands
+  include:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Display IPv6 neighbors}
+\ExtensionTok{ip} \AttributeTok{{-}6}\NormalTok{ neigh}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Check Link-Local Connectivity:} Confirm local communication
+  using link-local addresses. This isolates problems to the local
+  segment.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Ping using link{-}local addresses}
+\ExtensionTok{ping6}\NormalTok{ fe80::}\OperatorTok{\textless{}}\NormalTok{interface{-}id}\OperatorTok{\textgreater{}}\NormalTok{\%}\OperatorTok{\textless{}}\NormalTok{interface{-}name}\OperatorTok{\textgreater{}}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Multicast Listener Discovery (MLD):} Ensure multicast
+  listeners are operational, as NDP relies heavily on multicast.
+\end{itemize}
+
+\subsection{Troubleshooting Layer 3
+Communications}\label{troubleshooting-layer-3-communications}
+
+Layer 3 troubleshooting involves validating routing and reachability of
+IPv6 networks:
+
+\begin{itemize}
+\item
+  \textbf{IPv6 Routing Table:} Inspect the routing table for correct and
+  complete entries.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Display IPv6 routing table}
+\ExtensionTok{ip} \AttributeTok{{-}6}\NormalTok{ route}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{ICMPv6 Diagnostics:} Use ICMPv6 tools like ping6 and
+  traceroute6 to verify end-to-end connectivity and path determination.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{ping6}\NormalTok{ 2001:db8::1}
+\ExtensionTok{traceroute6}\NormalTok{ 2001:db8::1}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Service Availability:} Validate that network services (DNS,
+  DHCP, web services) respond correctly for both IPv4 and IPv6 requests.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{dig}\NormalTok{ A example.com}
+\ExtensionTok{dig}\NormalTok{ AAAA example.com}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Performance Baselines:} Continuously monitor dual-stack
+  performance to detect and remediate suboptimal IPv6 connectivity.
+\end{itemize}
+
+\subsection{Happy Eyeballs Algorithm}\label{happy-eyeballs-algorithm}
+
+The "Happy Eyeballs" algorithm (RFC 8305) optimizes dual-stack
+experiences by dynamically choosing the protocol that provides the best
+user experience:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Behavior Analysis:} Observe connections initiated by the
+  application and verify if it appropriately falls back to IPv4 when
+  IPv6 connectivity is poor or fails.
+\item
+  \textbf{Timeout Adjustments:} Tune timers within applications to
+  optimize the balance between IPv4 fallback speed and IPv6 preference.
+\item
+  \textbf{Diagnostic Tools:} Utilize browser developer tools or packet
+  captures (Wireshark, tcpdump) to monitor application behavior in
+  real-time.
+\end{itemize}
+
+Effective IPv6 troubleshooting ensures that modern networks operate
+efficiently, leveraging the advantages of IPv6 while maintaining a
+seamless transition from IPv4.
 
 \hyperref[advanced-troubleshooting]{Advanced Troubleshooting}
 
@@ -4970,9 +5140,156 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-8}
 
 \subsection{Advanced Troubleshooting}\label{advanced-troubleshooting}
 
-If you know what should be written here, please write it!
-\href{https://github.com/becarpenter/book6/blob/main/1.\%20Introduction\%20and\%20Foreword/How\%20to\%20contribute.md\#how-to-contribute}{How
-to contribute.}
+\begin{itemize}
+\item
+  \textbf{Multicast Listener Discovery (MLD):} Ensure multicast
+  listeners are operational, as NDP relies heavily on multicast.
+\item
+  \textbf{Firewall and ACL Verification:} Ensure that firewalls or
+  access control lists (ACLs) permit necessary IPv6 traffic.
+\end{itemize}
+
+Firewall policy should match between protocols wherever possible. ICMPv6
+is a notable exception, due to the significant differences and notable
+reliance on ICMPv6 for normal IPv6 function.
+
+\subsubsection{Troubleshooting Dual-Stack
+Networks}\label{troubleshooting-dual-stack-networks}
+
+In dual-stack environments, it is crucial to address complexities
+stemming from simultaneous IPv4 and IPv6 operation:
+
+\begin{itemize}
+\item
+  \textbf{Protocol Preference Issues:} Identify cases where applications
+  or hosts may incorrectly prefer IPv4 over IPv6, or vice versa.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Check routing preference}
+\FunctionTok{getent}\NormalTok{ ahosts example.com}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Service Availability:} Validate that network services (DNS,
+  DHCP, web services) respond correctly for both IPv4 and IPv6 requests.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{dig}\NormalTok{ A example.com}
+\ExtensionTok{dig}\NormalTok{ AAAA example.com}
+\end{Highlighting}
+\end{Shaded}
+\item
+  \textbf{Performance Baselines:} Continuously monitor dual-stack
+  performance to detect and remediate suboptimal IPv6 connectivity.
+\end{itemize}
+
+\subsubsection{Happy Eyeballs
+Algorithm}\label{happy-eyeballs-algorithm-1}
+
+The "Happy Eyeballs" algorithm (RFC 8305) optimizes dual-stack
+experiences by dynamically choosing the protocol that provides the best
+user experience:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Behavior Analysis:} Observe connections initiated by the
+  application and verify if it appropriately falls back to IPv4 when
+  IPv6 connectivity is poor or fails.
+\item
+  \textbf{Timeout Adjustments:} Tune timers within applications to
+  optimize the balance between IPv4 fallback speed and IPv6 preference.
+\item
+  \textbf{Diagnostic Tools:} Utilize browser developer tools or packet
+  captures (Wireshark, tcpdump) to monitor application behavior in
+  real-time.
+\end{itemize}
+
+\subsubsection{Troubleshooting Translation
+Mechanisms}\label{troubleshooting-translation-mechanisms}
+
+\textbf{DNS64}\\
+Verify DNS64 functionality by ensuring AAAA record synthesis for
+IPv4-only services. Monitor responses with:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{dig}\NormalTok{ AAAA ipv4{-}only{-}domain.example}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{NAT64}\\
+Confirm NAT64 translations with state tables and packet captures to
+verify proper address and port mappings.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Inspect NAT64 mappings}
+\ExtensionTok{show}\NormalTok{ nat64 translations}
+\end{Highlighting}
+\end{Shaded}
+
+\textbf{pref64}\\
+Check prefix discovery mechanisms used by hosts to determine NAT64
+prefix.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{ip} \AttributeTok{{-}6}\NormalTok{ route show}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{IPv6-only Networks}\label{ipv6-only-networks}
+
+Validate services and applications compatibility in IPv6-only
+environments. Test DNS, DHCPv6, and ensure no IPv4 dependencies remain:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{ping6}\NormalTok{ ipv6{-}only{-}host.example}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Multicast Issues}\label{multicast-issues}
+
+\textbf{Wireless and Wireless Controllers}\\
+Ensure multicast traffic is permitted and configured correctly on
+wireless controllers to support IPv6 multicast applications.
+
+\textbf{Router Advertisement Issues}\\
+Check proper Router Advertisement (RA) dissemination, ensuring routers
+advertise correct prefixes and default routes:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{tcpdump} \AttributeTok{{-}i}\NormalTok{ eth0 icmp6 and ip6}\PreprocessorTok{[}\SpecialStringTok{40}\PreprocessorTok{]}\NormalTok{ == 134}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{Host-Based Firewalls}\label{host-based-firewalls}
+
+Inspect host firewall rules to verify they permit essential IPv6 traffic
+(ICMPv6, DHCPv6, and required application ports):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{iptables} \AttributeTok{{-}L} \AttributeTok{{-}n} \AttributeTok{{-}v} \AttributeTok{{-}6}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{ICMPv6 and Filtering}\label{icmpv6-and-filtering}
+
+ICMPv6 is critical for IPv6 functionality, including path MTU discovery,
+neighbor discovery, and diagnostics. Ensure ICMPv6 messages are
+permitted and properly handled:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{tcpdump}\NormalTok{ icmp6}
+\end{Highlighting}
+\end{Shaded}
 
 \subsubsection{\texorpdfstring{\hyperref[tools]{Next}
 \hyperref[troubleshooting]{Top}}{Next Top}}\label{next-top-8}
@@ -4981,20 +5298,163 @@ to contribute.}
 
 \subsection{Tools}\label{tools}
 
-Basic tools like \texttt{ping} and \texttt{traceroute} work for both
-IPv6 and IPv4.
+Effective IPv6 management and troubleshooting rely heavily on
+specialized diagnostic tools. While basic network diagnostic tools such
+as \texttt{ping} and \texttt{traceroute} function similarly for IPv4 and
+IPv6, there are some critical nuances and additional tools tailored
+specifically for IPv6.
 
-For historic reasons, command-line tools on some operating systems do
-not support IPv6 but instead have an IPv6 counterpart (e.g.,
-\texttt{ping6}, \texttt{traceroute6}).
+\subsubsection{Basic IPv6 Tools}\label{basic-ipv6-tools}
 
-Due to IPv6/IPv4 translation, traceroute-like tools and
-\textquotesingle what is my IP address\textquotesingle{} tools may show
-an IPv4 address.
+Common network utilities like \texttt{ping} and \texttt{traceroute}
+typically support both IPv4 and IPv6. However, due to historical
+reasons, some operating systems maintain separate IPv6-specific
+utilities such as \texttt{ping6} and \texttt{traceroute6}.
+It\textquotesingle s essential to know which version applies to your
+system.
 
-If you know what else should be written here, please write it!
-\href{https://github.com/becarpenter/book6/blob/main/1.\%20Introduction\%20and\%20Foreword/How\%20to\%20contribute.md\#how-to-contribute}{How
-to contribute.}
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Basic IPv6 ping}
+\ExtensionTok{ping6}\NormalTok{ 3fff:0:1::1}
+
+\CommentTok{\# IPv6 traceroute}
+\ExtensionTok{traceroute6}\NormalTok{ 3fff:0:1::1}
+\end{Highlighting}
+\end{Shaded}
+
+\subsubsection{IPv6/IPv4 Translation
+Considerations}\label{ipv6ipv4-translation-considerations}
+
+When using translation mechanisms like NAT64 and DNS64, traditional
+tools such as traceroute or online IP checkers may report IPv4 addresses
+even when testing IPv6 connectivity. Ensure proper interpretation of
+these results by confirming translation configurations.
+
+\subsubsection{Specialized IPv6 Tools}\label{specialized-ipv6-tools}
+
+\paragraph{radvdump}\label{radvdump}
+
+\texttt{radvdump} is a utility designed to capture and display IPv6
+Router Advertisement messages, critical for analyzing router
+configurations and detecting advertisement issues.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ radvdump}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{scapy}\label{scapy}
+
+\texttt{scapy} is a powerful Python-based interactive packet
+manipulation program that supports IPv6. It is invaluable for custom
+packet crafting, network testing, and troubleshooting. Use if geared
+more toward tool creation, but it provides a powerful set of features
+for inclusion in custom or discipline specific tasks.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{from}\NormalTok{ scapy.}\BuiltInTok{all} \ImportTok{import} \OperatorTok{*}
+\NormalTok{send(IPv6(dst}\OperatorTok{=}\StringTok{"3fff:0:1::1"}\NormalTok{)}\OperatorTok{/}\NormalTok{ICMPv6EchoRequest())}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{pcap Tools}\label{pcap-tools}
+
+Packet capture tools such as \texttt{tcpdump} and Wireshark are
+essential for diagnosing IPv6 connectivity issues, examining network
+traffic, and verifying protocol behavior.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# Capture IPv6 traffic}
+\FunctionTok{sudo}\NormalTok{ tcpdump }\AttributeTok{{-}i}\NormalTok{ eth0 ip6}
+\end{Highlighting}
+\end{Shaded}
+
+Wireshark provides a graphical interface, offering detailed packet
+decoding and analysis specifically optimized for IPv6.
+
+\paragraph{Web-Based Tools}\label{web-based-tools}
+
+Web-based IPv6 tools provide quick diagnostics, checking IPv6
+connectivity, DNS configurations, and reachability from the global
+Internet.
+
+\begin{itemize}
+\tightlist
+\item
+  Test IPv6 connectivity:
+  {[}\url{https://test-ipv6.com\%5D(https://test-ipv6.com)}
+\item
+  IPv6 DNS lookup and testing:
+  {[}\url{https://ipv6-test.com\%5D(https://ipv6-test.com)}
+\end{itemize}
+
+\paragraph{mtr}\label{mtr}
+
+\texttt{mtr} combines the functionalities of ping and traceroute into a
+single tool, providing real-time statistics about network path quality
+and latency, and is IPv6-aware.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{mtr} \AttributeTok{{-}6}\NormalTok{ 3fff:0:1::1}
+\end{Highlighting}
+\end{Shaded}
+
+\paragraph{IPv6 Addressing and Layer2/Layer3 Mapping
+Tools}\label{ipv6-addressing-and-layer2layer3-mapping-tools}
+
+IPv6Utils is a command-line utility providing several tools including
+subnet generation which is useful address planning, as well as IPv4/IPv6
+address translation using RFC 6052, EUI-64 decoding, Link Local
+decoding. It is also available as an online service with the same
+features.
+
+\begin{itemize}
+\item
+  {[}\url{https://github.com/buraglio/ipv6utils\%5D(https://github.com/buraglio/ipv6utils)}
+\item
+  {[}\url{https://tools.forwardingplane.net\%5D(https://tools.forwardingplane.net)}
+\end{itemize}
+
+\paragraph{ASN Lookup Tools}\label{asn-lookup-tools}
+
+ASN (Autonomous System Number) tools help network administrators trace
+IPv6 addresses back to their originating AS, assisting in
+troubleshooting, identifying routing issues, and validating BGP
+configurations.
+
+\begin{itemize}
+\tightlist
+\item
+  Command-line ASN lookup:
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{whois} \AttributeTok{{-}h}\NormalTok{ whois.cymru.com }\StringTok{"{-}v 3fff:0:1::1"}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{itemize}
+\tightlist
+\item
+  Web-based ASN lookup:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    {[}\url{https://bgp.he.net\%5D(https://bgp.he.net)}
+  \item
+    {[}\url{https://asn.cymru.com\%5D(https://asn.cymru.com)}
+  \end{itemize}
+\end{itemize}
+
+Leveraging these IPv6-specific diagnostic tools ensures robust network
+performance and efficient issue resolution in IPv6-enabled environments.
 
 \subsubsection{\texorpdfstring{\hyperref[advanced-troubleshooting]{Previous}
 \hyperref[obsolete-features-in-ipv6]{Next}
@@ -5178,7 +5638,8 @@ When reading an RFC, you might notice an error, or have comments or
 suggestions. It is possible to report a significant error by following
 the \emph{Submit Errata} link on the info page. If you have technical
 comments or suggestions, consider joining the relevant working group by
-\href{https://www.ietf.org/participate/}{participating in the IETF}.
+\href{https://www.ietf.org/participate/}{participating in the IETF} or
+\href{https://www.irtf.org/}{IRTF}.
 
 An important RFC is the latest version of
 \href{https://www.rfc-editor.org/info/bcp220}{IPv6 Node Requirements},
@@ -5283,7 +5744,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 be misleading as well as out of date. Also see
 \hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}.
 
-RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
+RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
 
 \subsubsection{Standards Track (265
 RFCs)}\label{standards-track-265-rfcs}
@@ -5390,9 +5851,6 @@ RFCs)}\label{standards-track-265-rfcs}
 \item
   \href{https://www.rfc-editor.org/info/rfc3776}{RFC 3776}: Using IPsec
   to Protect Mobile IPv6 Signaling Between Mobile Nodes and Home Agents
-\item
-  \href{https://www.rfc-editor.org/info/rfc3810}{RFC 3810}: Multicast
-  Listener Discovery Version 2 (MLDv2) for IPv6
 \item
   \href{https://www.rfc-editor.org/info/rfc3898}{RFC 3898}: Network
   Information Service (NIS) Configuration Options for Dynamic Host
@@ -5868,10 +6326,6 @@ RFCs)}\label{standards-track-265-rfcs}
   \href{https://www.rfc-editor.org/info/rfc7428}{RFC 7428}: Transmission
   of IPv6 Packets over ITU-T G.9959 Networks
 \item
-  \href{https://www.rfc-editor.org/info/rfc7506}{RFC 7506}: IPv6 Router
-  Alert Option for MPLS Operations, Administration, and Maintenance
-  (OAM)
-\item
   \href{https://www.rfc-editor.org/info/rfc7527}{RFC 7527}: Enhanced
   Duplicate Address Detection
 \item
@@ -6140,6 +6594,13 @@ RFCs)}\label{standards-track-265-rfcs}
 \item
   \href{https://www.rfc-editor.org/info/rfc9686}{RFC 9686}: Registering
   Self-Generated IPv6 Addresses Using DHCPv6
+\item
+  \href{https://www.rfc-editor.org/info/rfc9740}{RFC 9740}: New IPFIX
+  Information Elements for TCP Options and IPv6 Extension Headers
+\item
+  \href{https://www.rfc-editor.org/info/rfc9777}{RFC 9777}
+  (\href{https://www.rfc-editor.org/info/std101}{STD 101}): Multicast
+  Listener Discovery Version 2 (MLDv2) for IPv6
 \end{itemize}
 
 \subsubsection{Best Current Practice (15
@@ -7245,7 +7706,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2025-01-06 10:51:58 UTC+1300
+Generated at 2025-05-13 10:56:44 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7286,20 +7747,22 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[multihoming]{¶} \hyperref[cern-and-the-lhc]{¶}
 \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-enterprise]{¶}
-\hyperref[deployment-in-the-home]{¶} \hyperref[tools]{¶}
+\hyperref[deployment-in-the-home]{¶} \hyperref[troubleshooting]{¶}
+\hyperref[advanced-troubleshooting]{¶} \hyperref[tools]{¶}
 \hyperref[obsolete-features-in-ipv6]{¶} \hyperref[markdown-usage]{¶}
 
 \hyperref[addresses]{anycast ¶}
 
 \hyperref[address-resolution]{ARP ¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
-\hyperref[layer-2-considerations]{¶}
+\hyperref[layer-2-considerations]{¶} \hyperref[troubleshooting]{¶}
 
 \hyperref[routing]{Babel ¶}
 
 \hyperref[addresses]{BGP ¶} \hyperref[routing]{¶}
 \hyperref[filtering]{¶} \hyperref[multi-prefix-operation]{¶}
-\hyperref[multihoming]{¶} \hyperref[further-reading]{¶}
+\hyperref[multihoming]{¶} \hyperref[tools]{¶}
+\hyperref[further-reading]{¶}
 
 \hyperref[ipv6-primary-differences-from-ipv4]{broadcast ¶}
 
@@ -7327,6 +7790,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[multi-prefix-operation]{¶} \hyperref[cern-and-the-lhc]{¶}
+\hyperref[troubleshooting]{¶} \hyperref[advanced-troubleshooting]{¶}
 
 \hyperref[packet-format]{differentiated services ¶}
 \hyperref[routing]{¶} \hyperref[traffic-class-and-flow-label]{¶}
@@ -7334,6 +7798,7 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[dual-stack-scenarios]{DNS64 ¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶}
+\hyperref[advanced-troubleshooting]{¶} \hyperref[tools]{¶}
 
 \hyperref[how-an-application-programmer-sees-ipv6]{DNS ¶}
 \hyperref[addresses]{¶} \hyperref[auto-configuration]{¶}
@@ -7346,6 +7811,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
 \hyperref[deployment-in-the-enterprise]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[status]{¶}
+\hyperref[troubleshooting]{¶} \hyperref[advanced-troubleshooting]{¶}
+\hyperref[tools]{¶}
 
 \hyperref[dual-stack-scenarios]{DS-Lite ¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
@@ -7357,7 +7824,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
 \hyperref[network-design]{¶} \hyperref[address-and-prefix-management]{¶}
 \hyperref[energy-consumption]{¶} \hyperref[cern-and-the-lhc]{¶}
-\hyperref[deployment-in-the-home]{¶}
+\hyperref[deployment-in-the-home]{¶} \hyperref[troubleshooting]{¶}
+\hyperref[advanced-troubleshooting]{¶}
 
 \hyperref[packet-format]{ECN ¶}
 \hyperref[traffic-class-and-flow-label]{¶}
@@ -7374,6 +7842,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[topology-obfuscation]{¶} \hyperref[network-design]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[benchmarking-and-monitoring]{¶} \hyperref[multihoming]{¶}
+\hyperref[advanced-troubleshooting]{¶}
 
 \hyperref[packet-format]{flow label ¶} \hyperref[routing]{¶}
 \hyperref[traffic-class-and-flow-label]{¶} \hyperref[markdown-usage]{¶}
@@ -7392,6 +7861,7 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[how-an-application-programmer-sees-ipv6]{happy eyeballs ¶}
 \hyperref[multihoming]{¶} \hyperref[deployment-in-the-home]{¶}
+\hyperref[troubleshooting]{¶} \hyperref[advanced-troubleshooting]{¶}
 
 \hyperref[why-version-6]{IANA ¶} \hyperref[addresses]{¶}
 \hyperref[auto-configuration]{¶}
@@ -7403,7 +7873,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[extension-headers-and-options]{¶}
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[security]{¶}
-\hyperref[filtering]{¶}
+\hyperref[filtering]{¶} \hyperref[troubleshooting]{¶}
+\hyperref[advanced-troubleshooting]{¶}
 
 \hyperref[addresses]{IID ¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
@@ -7446,6 +7917,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[multihoming]{¶} \hyperref[packet-size-and-jumbo-frames]{¶}
 \hyperref[cern-and-the-lhc]{¶} \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[status]{¶}
+\hyperref[troubleshooting]{¶} \hyperref[advanced-troubleshooting]{¶}
 \hyperref[tools]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
 \hyperref[further-reading]{¶}
 
@@ -7457,6 +7929,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
 \hyperref[security]{¶} \hyperref[deployment-by-carriers]{¶}
+\hyperref[advanced-troubleshooting]{¶}
 
 \hyperref[routing]{IS-IS ¶}
 
@@ -7467,7 +7940,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[filtering]{¶} \hyperref[network-design]{¶}
 \hyperref[energy-consumption]{¶} \hyperref[multi-prefix-operation]{¶}
-\hyperref[deployment-in-the-home]{¶}
+\hyperref[deployment-in-the-home]{¶} \hyperref[troubleshooting]{¶}
+\hyperref[tools]{¶}
 
 \hyperref[translation-and-ipv4-as-a-service]{Lw6o4 ¶}
 
@@ -7477,7 +7951,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[translation-and-ipv4-as-a-service]{MAP ¶}
 
 \hyperref[address-resolution]{MLD ¶}
-\hyperref[layer-2-considerations]{¶}
+\hyperref[layer-2-considerations]{¶} \hyperref[troubleshooting]{¶}
+\hyperref[advanced-troubleshooting]{¶}
 
 \hyperref[layer-2-functions]{MPLS ¶} \hyperref[tunnels]{¶}
 
@@ -7486,11 +7961,13 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[extension-headers-and-options]{MTU ¶}
 \hyperref[layer-2-functions]{¶} \hyperref[packet-format]{¶}
 \hyperref[packet-size-and-jumbo-frames]{¶}
+\hyperref[advanced-troubleshooting]{¶}
 
 \hyperref[address-resolution]{multicast ¶} \hyperref[addresses]{¶}
 \hyperref[auto-configuration]{¶} \hyperref[layer-2-functions]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶} \hyperref[filtering]{¶}
 \hyperref[layer-2-considerations]{¶} \hyperref[energy-consumption]{¶}
+\hyperref[troubleshooting]{¶} \hyperref[advanced-troubleshooting]{¶}
 
 \hyperref[multi-prefix-operation]{multihoming ¶}
 \hyperref[multihoming]{¶} \hyperref[deployment-in-the-enterprise]{¶}
@@ -7500,6 +7977,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[dual-stack-scenarios]{NAT64 ¶}
 \hyperref[obsolete-techniques]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶}
+\hyperref[advanced-troubleshooting]{¶} \hyperref[tools]{¶}
 
 \hyperref[ipv6-primary-differences-from-ipv4]{NAT66 ¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[security]{¶}
@@ -7525,6 +8003,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[ipv6-primary-differences-from-ipv4]{¶} \hyperref[filtering]{¶}
 \hyperref[network-design]{¶} \hyperref[management-and-operations]{¶}
 \hyperref[multihoming]{¶} \hyperref[packet-size-and-jumbo-frames]{¶}
+\hyperref[troubleshooting]{¶} \hyperref[advanced-troubleshooting]{¶}
+\hyperref[tools]{¶}
 
 \hyperref[auto-configuration]{PIO ¶}
 
@@ -7545,6 +8025,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
+\hyperref[advanced-troubleshooting]{¶}
 \hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[transport-protocols]{QUIC ¶} \hyperref[multihoming]{¶}
@@ -7553,6 +8034,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[auto-configuration]{¶} \hyperref[managed-configuration]{¶}
 \hyperref[routing]{¶} \hyperref[prefix-per-host]{¶}
 \hyperref[multi-prefix-operation]{¶}
+\hyperref[advanced-troubleshooting]{¶}
 
 \hyperref[routing]{RIPng ¶}
 
@@ -7575,7 +8057,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[multihoming]{¶} \hyperref[packet-size-and-jumbo-frames]{¶}
 \hyperref[routing-operation]{¶} \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-enterprise]{¶}
-\hyperref[deployment-in-the-home]{¶}
+\hyperref[deployment-in-the-home]{¶} \hyperref[troubleshooting]{¶}
+\hyperref[advanced-troubleshooting]{¶} \hyperref[tools]{¶}
 \hyperref[obsolete-features-in-ipv6]{¶} \hyperref[further-reading]{¶}
 
 \hyperref[routing]{RPL ¶}
@@ -7632,6 +8115,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
 \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-home]{¶}
+\hyperref[advanced-troubleshooting]{¶}
 
 \subsubsection{\texorpdfstring{\hyperref[list-of-contents]{Back to main
 Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
@@ -7646,7 +8130,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2025-01-06 10:51:58 UTC+1300
+Generated at 2025-05-13 10:56:44 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -8078,7 +8562,11 @@ has links to each section that mentions each citation.
 
 \hyperref[extension-headers-and-options]{RFC9673 ¶}
 
+\hyperref[address-resolution]{RFC9685 ¶}
+
 \hyperref[address-and-prefix-management]{RFC9686 ¶}
+
+\hyperref[address-and-prefix-management]{RFC9724 ¶}
 
 \hyperref[transport-protocols]{STD7 ¶}
 

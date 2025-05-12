@@ -11,11 +11,12 @@ regardless of any internal structure. In other words, a unicast routing
 prefix is anywhere between 1 and 128 bits long. There is more about
 [routing](Routing.md) below.
 
-_Terminology note_: When comparing two address prefixes, a _longer_ prefix
-covers a smaller amount of address space (e.g., a 52-bit prefix covers a
-76-bit address space) and a _shorter_ prefix covers a larger amount (e.g., a
-48-bit prefix covers an 80-bit address space). Unfortunately, some documents
-use the term "larger prefix", which is ambiguous.
+_Terminology note_: When comparing two address prefixes, a _longer_
+prefix covers a smaller amount of address space (e.g., a 52-bit prefix
+covers a 76-bit address space) and a _shorter_ prefix covers a larger
+amount (e.g., a 48-bit prefix covers an 80-bit address space).
+Unfortunately, some documents use the term "larger prefix", which is
+ambiguous.
 
 The enormous amount of IPv6 address space allows a good deal of freedom
 in network design that never existed for IPv4. This is discussed in

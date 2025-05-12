@@ -8,7 +8,7 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](../10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
-RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
+RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
 
 ### Standards Track (265 RFCs)
 
@@ -75,8 +75,6 @@ RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
   options for Dynamic Host Configuration Protocol for IPv6 (DHCPv6)
 - [RFC 3776](https://www.rfc-editor.org/info/rfc3776): Using IPsec to
   Protect Mobile IPv6 Signaling Between Mobile Nodes and Home Agents
-- [RFC 3810](https://www.rfc-editor.org/info/rfc3810): Multicast
-  Listener Discovery Version 2 (MLDv2) for IPv6
 - [RFC 3898](https://www.rfc-editor.org/info/rfc3898): Network
   Information Service (NIS) Configuration Options for Dynamic Host
   Configuration Protocol for IPv6 (DHCPv6)
@@ -395,8 +393,6 @@ RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
   Area Networks (6LoWPANs)
 - [RFC 7428](https://www.rfc-editor.org/info/rfc7428): Transmission of
   IPv6 Packets over ITU-T G.9959 Networks
-- [RFC 7506](https://www.rfc-editor.org/info/rfc7506): IPv6 Router Alert
-  Option for MPLS Operations, Administration, and Maintenance (OAM)
 - [RFC 7527](https://www.rfc-editor.org/info/rfc7527): Enhanced
   Duplicate Address Detection
 - [RFC 7552](https://www.rfc-editor.org/info/rfc7552): Updates to LDP
@@ -581,6 +577,11 @@ RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
   Addresses
 - [RFC 9686](https://www.rfc-editor.org/info/rfc9686): Registering
   Self-Generated IPv6 Addresses Using DHCPv6
+- [RFC 9740](https://www.rfc-editor.org/info/rfc9740): New IPFIX
+  Information Elements for TCP Options and IPv6 Extension Headers
+- [RFC 9777](https://www.rfc-editor.org/info/rfc9777)
+  ([STD 101](https://www.rfc-editor.org/info/std101)): Multicast
+  Listener Discovery Version 2 (MLDv2) for IPv6
 
 ### Best Current Practice (15 RFCs)
 

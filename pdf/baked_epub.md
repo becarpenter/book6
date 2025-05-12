@@ -28,7 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2025-02-13 18:24:03 UTC+0100
+Version captured at 2025-05-13 11:18:34 UTC+1200
 # Introduction and Foreword
 
 
@@ -540,6 +540,13 @@ property of IPv6 unicast routing is that it is
 regardless of any internal structure. In other words, a unicast routing
 prefix is anywhere between 1 and 128 bits long. There is more about
 [routing](#routing) below.
+
+_Terminology note_: When comparing two address prefixes, a _longer_
+prefix covers a smaller amount of address space (e.g., a 52-bit prefix
+covers a 76-bit address space) and a _shorter_ prefix covers a larger
+amount (e.g., a 48-bit prefix covers an 80-bit address space).
+Unfortunately, some documents use the term "larger prefix", which is
+ambiguous.
 
 The enormous amount of IPv6 address space allows a good deal of freedom
 in network design that never existed for IPv4. This is discussed in
@@ -1814,15 +1821,15 @@ periods of time. Since 2012, the IETF has therefore required all new or
 updated Internet Protocol implementations to support IPv6
 \[[BCP177](https://www.rfc-editor.org/info/bcp177)\].
 
-Reasoning for coexistence will vary and is typically
-only locally relevant to a given environment. It may be due to the
-requirement for legacy hardware with no IPv6 support that requires
-capital expenditure beyond the budget of an organization, such as a
-specialized piece of operational technology, or it may be due to lagging
-compliance regulations that have not tracked current technology
-standards. It may simply be the conclusion from a cost/benefit analysis.
-Regardless, the reasonings are less important than the details necessary
-to support a dual-stacked environment.
+Reasoning for coexistence will vary and is typically only locally
+relevant to a given environment. It may be due to the requirement for
+legacy hardware with no IPv6 support that requires capital expenditure
+beyond the budget of an organization, such as a specialized piece of
+operational technology, or it may be due to lagging compliance
+regulations that have not tracked current technology standards. It may
+simply be the conclusion from a cost/benefit analysis. Regardless, the
+reasonings are less important than the details necessary to support a
+dual-stacked environment.
 
 Before describing the specific techniques for IPv6/IPv4 coexistence --
 dual stacks, tunnels, and translators -- it is useful to answer a basic
@@ -1835,24 +1842,24 @@ IPv4 implementations. Therefore, __backwards compatibility at the IP
 packet level was impossible, so was not a design goal.__
 
 Given that fundamental incompatibility, the designers of IPv6 decided to
-meet a number of requirements that IPv4 could never satisfy. As a result,
-the IP packet header was redesigned in the light of experience. This has
-no impact except on the low-level code that actually processes
+meet a number of requirements that IPv4 could never satisfy. As a
+result, the IP packet header was redesigned in the light of experience.
+This has no impact except on the low-level code that actually processes
 a raw packet.
 
-Another basic decision was to develop a co-existence model from the start,
-since it was clear that a quick transition to a new version of IP
-was unthinkable. In short, a *dual stack*
-originally meant that hosts and routers were able to handle both IPv4
-and IPv6 at the same time. Recently, this simple view of dual stacks has
-been complicated by the introduction of "IPv4 as a service", as
-discussed below. *Tunnels* means that IPv6 hosts can talk to each other
-over an IPv4 network, by encapsulating their packets, and vice versa.
-*Translation* means that, in a limited way, an IPv6 host can talk to an
-IPv4 host via a translation mechanism. The following sections discuss
-those three methods of co-existence in more detail. Later sections
-list some mechanisms that are no longer recommended, and the main
-differences between IPv4 and IPv6.
+Another basic decision was to develop a co-existence model from the
+start, since it was clear that a quick transition to a new version of IP
+was unthinkable. In short, a *dual stack* originally meant that hosts
+and routers were able to handle both IPv4 and IPv6 at the same time.
+Recently, this simple view of dual stacks has been complicated by the
+introduction of "IPv4 as a service", as discussed below. *Tunnels* means
+that IPv6 hosts can talk to each other over an IPv4 network, by
+encapsulating their packets, and vice versa. *Translation* means that,
+in a limited way, an IPv6 host can talk to an IPv4 host via a
+translation mechanism. The following sections discuss those three
+methods of co-existence in more detail. Later sections list some
+mechanisms that are no longer recommended, and the main differences
+between IPv4 and IPv6.
 
 We first give two quite general references for this complex topic:
 
@@ -1883,15 +1890,15 @@ To summarize the coexistence scenarios, we have:
 
 - IPv4 only enclaves:
 
-  Areas where IPv6 simply is not possible or
-  desirable for compliance, technological, policy, budgetary, or other
-  strategic reasons may operate as an IPv4-only or Legacy IP enclave.
-  This may be the result of migration happening around the enclave, or
-  it may be an intentionally created segment for housing legacy
-  services, devices, or application stacks. It is important to accept
-  that there may be long-lived enclaves where legacy IPv4 is a hard
-  requirement. This fact should inform policy, however, but in an ideal
-  situation will not necessarily define it.
+  Areas where IPv6 simply is not possible or desirable for compliance,
+  technological, policy, budgetary, or other strategic reasons may
+  operate as an IPv4-only or Legacy IP enclave. This may be the result
+  of migration happening around the enclave, or it may be an
+  intentionally created segment for housing legacy services, devices, or
+  application stacks. It is important to accept that there may be
+  long-lived enclaves where legacy IPv4 is a hard requirement. This fact
+  should inform policy, however, but in an ideal situation will not
+  necessarily define it.
 
 - IPv4-IPv6 dual stack "on the wire"
 
@@ -1913,14 +1920,12 @@ Internet will be accessible by IPv6, in which case IPv4 as a service
 could be discontinued, leaving IPv4-only enclaves to fend for
 themselves. However, there is no time scale for when this might occur.
 
-This chapter is about IPv6/IPv4 coexistence, because
-IPv6-only enclaves can only be part of the whole Internet if
-they support at least one coexistence mechanism. Theoretically,
-such an enclave could be connected to the Internet by an
-application layer gateway, but we do not describe this further.
-An IPv6 network where there is no coexistence mechanism whatsoever
-is out of scope.
-
+This chapter is about IPv6/IPv4 coexistence, because IPv6-only enclaves
+can only be part of the whole Internet if they support at least one
+coexistence mechanism. Theoretically, such an enclave could be connected
+to the Internet by an application layer gateway, but we do not describe
+this further. An IPv6 network where there is no coexistence mechanism
+whatsoever is out of scope.
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -3303,9 +3308,8 @@ MAC addresses of connected devices is embedded in the neighbor discovery
 caches of other devices on the same link, including the subnet router.
 This is volatile information, especially if IPv6 temporary addresses
 \[[RFC8981](https://www.rfc-editor.org/info/rfc8981)\] or variable MAC
-addresses
-\[[draft-ietf-madinas-mac-address-randomization](https://datatracker.ietf.org/doc/draft-ietf-madinas-mac-address-randomization/)\]
-are in use. This topic is discussed in section 2.6.1.4 of
+addresses \[[RFC9724](https://www.rfc-editor.org/info/rfc9724)\] are in
+use. This topic is discussed in section 2.6.1.4 of
 [RFC 9099](https://www.rfc-editor.org/info/rfc9099). A supplementary
 mechanism is needed to extract and log this information at a suitable
 frequency. An alternative would be to continuously monitor neighbor
@@ -3827,7 +3831,8 @@ A good set of existing case studies from ARIN members can be found in
 Here is a Malaysian case study via
 [APNIC](https://blog.apnic.net/2023/03/17/telekom-malaysias-ipv6-readiness-journey/).
 
-Here is a deployment case [at a large conference](https://nsrc.org/blog/apricot-ipv6-only).
+Here is a deployment case
+[at a large conference](https://nsrc.org/blog/apricot-ipv6-only).
 
 This is an __open invitation__ to contribute a case study for this
 chapter. If you have deployed an IPv6 network, please write a short
@@ -3869,10 +3874,10 @@ uses DHCPv6 for IPv6 address assignment.
 This chapter outlines information about IPv6 deployments. The picture
 changes daily, so what follows is very likely to be out of date.
 
-For information about product support for IPv6 features, users
-might be interested by the University of New Hampshire
-[InterOperability Laboratory](https://www.iol.unh.edu/testing/ipv6),
-the NIST
+For information about product support for IPv6 features, users might be
+interested by the University of New Hampshire
+[InterOperability Laboratory](https://www.iol.unh.edu/testing/ipv6), the
+NIST
 [USGv6 Program](https://www.nist.gov/programs-projects/usgv6-program),
 or the [IPv6 Ready Logo Program](https://www.ipv6ready.org/).
 
@@ -4154,14 +4159,224 @@ space may require more effort and expense, or may not be possible.
 
 # Troubleshooting
 
-If you know what should be written here, please write it! [How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute) 
+Troubleshooting IPv6 issues involves following established best
+practices used broadly in network troubleshooting methodologies:
+
+1. **Observe Behavior:** Clearly define and document the unexpected or
+   undesirable network behavior.
+1. **Compare Against Baseline:** If available, compare the current state
+   to a previously established and documented baseline.
+1. **Document Changes:** Maintain accurate records of network
+   configurations and any modifications.
+1. **Make Simple, Single Changes:** Implement changes one at a time to
+   isolate variables effectively.
+1. **Repeat:** Continue iterating the process until the issue is
+   resolved.
+
+Due to their similarities, IPv4 troubleshooting techniques are highly
+transferable to IPv6, given that both protocols are routed, support
+various services, run on hosts and networking devices, and facilitate
+management traffic.
+
+## Troubleshooting Layer 2 Communications
+
+Layer 2 troubleshooting for IPv6 involves ensuring basic connectivity at
+the data link layer, including:
+
+- **Address Resolution:** Verify the proper functioning of Neighbor
+  Discovery Protocol (NDP), as IPv6 does not use ARP. Common commands
+  include:
+
+  ```bash
+  # Display IPv6 neighbors
+  ip -6 neigh
+  ```
+
+- **Check Link-Local Connectivity:** Confirm local communication using
+  link-local addresses. This isolates problems to the local segment.
+
+  ```bash
+  # Ping using link-local addresses
+  ping6 fe80::<interface-id>%<interface-name>
+  ```
+
+- **Multicast Listener Discovery (MLD):** Ensure multicast listeners are
+  operational, as NDP relies heavily on multicast.
+
+## Troubleshooting Layer 3 Communications
+
+Layer 3 troubleshooting involves validating routing and reachability of
+IPv6 networks:
+
+- **IPv6 Routing Table:** Inspect the routing table for correct and
+  complete entries.
+
+  ```bash
+  # Display IPv6 routing table
+  ip -6 route
+  ```
+
+- **ICMPv6 Diagnostics:** Use ICMPv6 tools like ping6 and traceroute6 to
+  verify end-to-end connectivity and path determination.
+
+  ```bash
+  ping6 2001:db8::1
+  traceroute6 2001:db8::1
+  ```
+
+- **Service Availability:** Validate that network services (DNS, DHCP,
+  web services) respond correctly for both IPv4 and IPv6 requests.
+
+  ```bash
+  dig A example.com
+  dig AAAA example.com
+  ```
+
+- **Performance Baselines:** Continuously monitor dual-stack performance
+  to detect and remediate suboptimal IPv6 connectivity.
+
+## Happy Eyeballs Algorithm
+
+The "Happy Eyeballs" algorithm (RFC 8305) optimizes dual-stack
+experiences by dynamically choosing the protocol that provides the best
+user experience:
+
+- **Behavior Analysis:** Observe connections initiated by the
+  application and verify if it appropriately falls back to IPv4 when
+  IPv6 connectivity is poor or fails.
+- **Timeout Adjustments:** Tune timers within applications to optimize
+  the balance between IPv4 fallback speed and IPv6 preference.
+- **Diagnostic Tools:** Utilize browser developer tools or packet
+  captures (Wireshark, tcpdump) to monitor application behavior in
+  real-time.
+
+Effective IPv6 troubleshooting ensures that modern networks operate
+efficiently, leveraging the advantages of IPv6 while maintaining a
+seamless transition from IPv4.
 
 
 
 ## Advanced Troubleshooting
 
-If you know what should be written here, please write it!
-[How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)
+- **Multicast Listener Discovery (MLD):** Ensure multicast listeners are
+  operational, as NDP relies heavily on multicast.
+
+- **Firewall and ACL Verification:** Ensure that firewalls or access
+  control lists (ACLs) permit necessary IPv6 traffic.
+
+Firewall policy should match between protocols wherever possible. ICMPv6
+is a notable exception, due to the significant differences and notable
+reliance on ICMPv6 for normal IPv6 function.
+
+### Troubleshooting Dual-Stack Networks
+
+In dual-stack environments, it is crucial to address complexities
+stemming from simultaneous IPv4 and IPv6 operation:
+
+- **Protocol Preference Issues:** Identify cases where applications or
+  hosts may incorrectly prefer IPv4 over IPv6, or vice versa.
+
+  ```bash
+  # Check routing preference
+  getent ahosts example.com
+  ```
+
+- **Service Availability:** Validate that network services (DNS, DHCP,
+  web services) respond correctly for both IPv4 and IPv6 requests.
+
+  ```bash
+  dig A example.com
+  dig AAAA example.com
+  ```
+
+- **Performance Baselines:** Continuously monitor dual-stack performance
+  to detect and remediate suboptimal IPv6 connectivity.
+
+### Happy Eyeballs Algorithm
+
+The "Happy Eyeballs" algorithm (RFC 8305) optimizes dual-stack
+experiences by dynamically choosing the protocol that provides the best
+user experience:
+
+- **Behavior Analysis:** Observe connections initiated by the
+  application and verify if it appropriately falls back to IPv4 when
+  IPv6 connectivity is poor or fails.
+- **Timeout Adjustments:** Tune timers within applications to optimize
+  the balance between IPv4 fallback speed and IPv6 preference.
+- **Diagnostic Tools:** Utilize browser developer tools or packet
+  captures (Wireshark, tcpdump) to monitor application behavior in
+  real-time.
+
+### Troubleshooting Translation Mechanisms
+
+**DNS64**\
+Verify DNS64 functionality by ensuring AAAA record synthesis
+for IPv4-only services. Monitor responses with:
+
+```bash
+dig AAAA ipv4-only-domain.example
+```
+
+**NAT64**\
+Confirm NAT64 translations with state tables and packet
+captures to verify proper address and port mappings.
+
+```bash
+# Inspect NAT64 mappings
+show nat64 translations
+```
+
+**pref64**\
+Check prefix discovery mechanisms used by hosts to determine
+NAT64 prefix.
+
+```bash
+ip -6 route show
+```
+
+### IPv6-only Networks
+
+Validate services and applications compatibility in IPv6-only
+environments. Test DNS, DHCPv6, and ensure no IPv4 dependencies remain:
+
+```bash
+ping6 ipv6-only-host.example
+```
+
+### Multicast Issues
+
+**Wireless and Wireless Controllers**\
+Ensure multicast traffic is
+permitted and configured correctly on wireless controllers to support
+IPv6 multicast applications.
+
+**Router Advertisement Issues**\
+Check proper Router Advertisement (RA)
+dissemination, ensuring routers advertise correct prefixes and default
+routes:
+
+```bash
+tcpdump -i eth0 icmp6 and ip6[40] == 134
+```
+
+### Host-Based Firewalls
+
+Inspect host firewall rules to verify they permit essential IPv6 traffic
+(ICMPv6, DHCPv6, and required application ports):
+
+```bash
+iptables -L -n -v -6
+```
+
+### ICMPv6 and Filtering
+
+ICMPv6 is critical for IPv6 functionality, including path MTU discovery,
+neighbor discovery, and diagnostics. Ensure ICMPv6 messages are
+permitted and properly handled:
+
+```bash
+tcpdump icmp6
+```
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -4169,17 +4384,127 @@ If you know what should be written here, please write it!
 
 ## Tools
 
-Basic tools like `ping` and `traceroute` work for both IPv6 and IPv4.
+<!-- ## Chapter X: IPv6 Diagnostic Tools -->
 
-For historic reasons, command-line tools on some operating systems do
-not support IPv6 but instead have an IPv6 counterpart (e.g., `ping6`,
-`traceroute6`).
+Effective IPv6 management and troubleshooting rely heavily on
+specialized diagnostic tools. While basic network diagnostic tools such
+as `ping` and `traceroute` function similarly for IPv4 and IPv6, there
+are some critical nuances and additional tools tailored specifically for
+IPv6.
 
-Due to IPv6/IPv4 translation, traceroute-like tools and 'what is my IP
-address' tools may show an IPv4 address.
+### Basic IPv6 Tools
 
-If you know what else should be written here, please write it!
-[How to contribute.](https://github.com/becarpenter/book6/blob/main/1.%20Introduction%20and%20Foreword/How%20to%20contribute.md#how-to-contribute)
+Common network utilities like `ping` and `traceroute` typically support
+both IPv4 and IPv6. However, due to historical reasons, some operating
+systems maintain separate IPv6-specific utilities such as `ping6` and
+`traceroute6`. It's essential to know which version applies to your
+system.
+
+```bash
+# Basic IPv6 ping
+ping6 3fff:0:1::1
+
+# IPv6 traceroute
+traceroute6 3fff:0:1::1
+```
+
+### IPv6/IPv4 Translation Considerations
+
+When using translation mechanisms like NAT64 and DNS64, traditional
+tools such as traceroute or online IP checkers may report IPv4 addresses
+even when testing IPv6 connectivity. Ensure proper interpretation of
+these results by confirming translation configurations.
+
+### Specialized IPv6 Tools
+
+#### radvdump
+
+`radvdump` is a utility designed to capture and display IPv6 Router
+Advertisement messages, critical for analyzing router configurations and
+detecting advertisement issues.
+
+```bash
+sudo radvdump
+```
+
+#### scapy
+
+`scapy` is a powerful Python-based interactive packet manipulation
+program that supports IPv6. It is invaluable for custom packet crafting,
+network testing, and troubleshooting. Use if geared more toward tool
+creation, but it provides a powerful set of features for inclusion in
+custom or discipline specific tasks.
+
+```python
+from scapy.all import *
+send(IPv6(dst="3fff:0:1::1")/ICMPv6EchoRequest())
+```
+
+#### pcap Tools
+
+Packet capture tools such as `tcpdump` and Wireshark are essential for
+diagnosing IPv6 connectivity issues, examining network traffic, and
+verifying protocol behavior.
+
+```bash
+# Capture IPv6 traffic
+sudo tcpdump -i eth0 ip6
+```
+
+Wireshark provides a graphical interface, offering detailed packet
+decoding and analysis specifically optimized for IPv6.
+
+#### Web-Based Tools
+
+Web-based IPv6 tools provide quick diagnostics, checking IPv6
+connectivity, DNS configurations, and reachability from the global
+Internet.
+
+- Test IPv6 connectivity: [https://test-ipv6.com](https://test-ipv6.com)
+- IPv6 DNS lookup and testing:
+  [https://ipv6-test.com](https://ipv6-test.com)
+
+#### mtr
+
+`mtr` combines the functionalities of ping and traceroute into a single
+tool, providing real-time statistics about network path quality and
+latency, and is IPv6-aware.
+
+```bash
+mtr -6 3fff:0:1::1
+```
+
+#### IPv6 Addressing and Layer2/Layer3 Mapping Tools
+
+IPv6Utils is a command-line utility providing several tools including
+subnet generation which is useful address planning, as well as IPv4/IPv6
+address translation using RFC 6052, EUI-64 decoding, Link Local
+decoding. It is also available as an online service with the same
+features.
+
+- [https://github.com/buraglio/ipv6utils](https://github.com/buraglio/ipv6utils)
+
+- [https://tools.forwardingplane.net](https://tools.forwardingplane.net)
+
+#### ASN Lookup Tools
+
+ASN (Autonomous System Number) tools help network administrators trace
+IPv6 addresses back to their originating AS, assisting in
+troubleshooting, identifying routing issues, and validating BGP
+configurations.
+
+- Command-line ASN lookup:
+
+```bash
+whois -h whois.cymru.com "-v 3fff:0:1::1"
+```
+
+- Web-based ASN lookup:
+  - [https://bgp.he.net](https://bgp.he.net)
+  - [https://asn.cymru.com](https://asn.cymru.com)
+
+Leveraging these IPv6-specific diagnostic tools ensures robust network
+performance and efficient issue resolution in IPv6-enabled environments.
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -4193,6 +4518,95 @@ been formally obsoleted. Readers are advised to ignore these techniques
 for new deployments, and to consider removing them from existing
 deployments.
 
+## Mobile IPv6
+
+Mobile IPv6 was a technology that was baked into the IPv6 protocol very
+early in its development. However based on zero implementations the
+technology exists only in textbooks and IETF standards. Since there are
+no current implementations and current standards are extremely stale,
+Mobile IPv6 is effectively obsolete and should not be taught in training
+or mentioned as part of the IPv6 feature set. Below are a listing of
+those IETF standards:
+
+- [RFC 6275](https://www.rfc-editor.org/rfc/rfc6275.html) - Mobility
+  Support in IPv6 was last updated in 2011. It is the primary standard
+  that covers basic operation, security functions, mobility operations,
+  and packet structure.
+- [RFC 4283](https://www.rfc-editor.org/rfc/rfc4283.html) - Mobile Node
+  Identifier Option for Mobile IPv6 (MIPv6) was last updated in 2005. It
+  primarily covers all the functions of the Mobility Header and it was
+  essential to have a mechanism wherein mobility entities can be
+  identified using other identifiers.
+- [RFC 4285](https://www.rfc-editor.org/info/rfc4285) Authentication
+  Protocol for Mobile IPv6 was last updated in 2006. This was the
+  solution for securing the Binding Update and Binding Acknowledgment
+  messages between the Mobile Node and Home Agent using a mobility
+  message authentication option that is included in these messages
+
+## Site-Local Addressing
+
+Site-Local addressing has an odd place in IPv6. Is was orginally
+proposed to answer the private IPv6 addressing concern similar to
+[RFC 1918](https://www.rfc-editor.org/rfc/rfc1918.html). Site-local
+addressing was orginally defined for its special use in Section 2.5.6 of
+[RFC 3513](https://www.rfc-editor.org/rfc/rfc3513.html#section-2.5.6).
+Problems arose with their special use based on the following reasons:
+
+- ambiguity of addresses meaning an address such as `fec0::1` can be
+  present in multiple sites, and the address itself does not contain any
+  indication of the site to which it belongs. This creates pain for
+  developers of applications, for the designers of routers and for the
+  network managers.
+- fuzzy definition of sites because the ambiguity of addressing they can
+  exist accross sites which then creates the requirement to add things
+  like zone identifiers to ID the actual sites. For example,
+  `fec0::1234:5678:9abc%1` for a multihomed node. This management of
+  identifiers has proven hard to understand by developers, and also hard
+  to execute by those developers who understand the concept.
+
+### Deprecated but Not Gone
+
+These addresses weren't deprecated until
+[RFC 3879](https://www.rfc-editor.org/rfc/rfc3879) about a year later.
+However, even with this deprecation, things remain in standards that
+have caused significant confusion. Since
+[RFC 4291](https://www.rfc-editor.org/rfc/rfc4291.html#section-2.5.7)
+talked to this deprecation, it still exists as an item in RFC 4291.
+
+- The requirement in RFC 3879 also states that the prefix fec0::/10
+  "MUST NOT be reassigned for other use except by a future IETF
+  standards action." Given that, it can't be reabsorbed into the IANA
+  Global Unicast address space.
+- It is also listed as a separate label in the IPv6 Prefix Policy Table
+  outlined in [RFC 6724](https://www.rfc-editor.org/rfc/rfc6724.html) as
+  11 with a precedence of 1.
+- RFC 3879 also states that "Existing implementations and deployments
+  MAY continue to use this prefix"
+
+All of this adds to confusion for the usage and supportability of Site
+Local Addressing. Site Local Addressing is effectively obsolete and
+should not be taught in training or mentioned as part of the IPv6
+feature set.
+
+## Other obsolete addresses
+
+Several obsolete address types are listed at the end of
+[2. Addresses](#addresses).
+
+## Secure Neighbor Discovery (SeND)
+
+TBD
+
+## Coexistence
+
+Older IPv4/IPv6 coexistence mechanisms are described in
+[3. Obsolete techniques](#obsolete-techniques).
+
+<!-- ## Name (add plain section names like that) -->
+
+<!-- Link lines generated automatically; do not delete -->
+
+### [<ins>Back to main Contents</ins>](#list-of-contents)
 
 
 # Further Reading
@@ -4211,16 +4625,16 @@ from the IETF. RFCs are freely available from the
 *Warning:* obsolete RFCs are never modified or deleted. It is essential
 to look at the current status of an RFC before trusting it. For example,
 the current status of the 2017 version of the main IPv6 standard is
-shown at [this info page](https://www.rfc-editor.org/info/rfc8200). 
+shown at [this info page](https://www.rfc-editor.org/info/rfc8200).
 Every RFC has an info page in the format
-`https://www.rfc-editor.org/info/rfcNNNN`,
-where `NNNN` is the RFC number (without leading zeros). If an RFC
-is marked as "Obsoleted by" it should normally be ignored - look instead
-at the newer RFC that replaces it. Thus, any reference to RFC 2460
-should be treated as a reference to RFC 8200.
+`https://www.rfc-editor.org/info/rfcNNNN`, where `NNNN` is the RFC
+number (without leading zeros). If an RFC is marked as "Obsoleted by" it
+should normally be ignored - look instead at the newer RFC that replaces
+it. Thus, any reference to RFC 2460 should be treated as a reference to
+RFC 8200.
 
-(Occasionally, an obsoleted RFC may contain useful background information,
-or help to understand an old protocol implementation.)
+(Occasionally, an obsoleted RFC may contain useful background
+information, or help to understand an old protocol implementation.)
 
 Even if not obsoleted, an RFC may be "Updated by" one or more newer
 RFCs. You need to look at those in addition.
@@ -4260,9 +4674,10 @@ flowchart LR
 
 When reading an RFC, you might notice an error, or have comments or
 suggestions. It is possible to report a significant error by following
-the *Submit Errata* link on the info page. If you have technical comments
-or suggestions, consider joining the relevant working group by
-[participating in the IETF](https://www.ietf.org/participate/).
+the *Submit Errata* link on the info page. If you have technical
+comments or suggestions, consider joining the relevant working group by
+[participating in the IETF](https://www.ietf.org/participate/) or
+[IRTF](https://www.irtf.org/).
 
 An important RFC is the latest version of
 [IPv6 Node Requirements](https://www.rfc-editor.org/info/bcp220), which
@@ -4363,7 +4778,7 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](#obsolete-features-in-ipv6).
 
-RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
+RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
 
 ### Standards Track (265 RFCs)
 
@@ -4430,8 +4845,6 @@ RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
   options for Dynamic Host Configuration Protocol for IPv6 (DHCPv6)
 - [RFC 3776](https://www.rfc-editor.org/info/rfc3776): Using IPsec to
   Protect Mobile IPv6 Signaling Between Mobile Nodes and Home Agents
-- [RFC 3810](https://www.rfc-editor.org/info/rfc3810): Multicast
-  Listener Discovery Version 2 (MLDv2) for IPv6
 - [RFC 3898](https://www.rfc-editor.org/info/rfc3898): Network
   Information Service (NIS) Configuration Options for Dynamic Host
   Configuration Protocol for IPv6 (DHCPv6)
@@ -4750,8 +5163,6 @@ RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
   Area Networks (6LoWPANs)
 - [RFC 7428](https://www.rfc-editor.org/info/rfc7428): Transmission of
   IPv6 Packets over ITU-T G.9959 Networks
-- [RFC 7506](https://www.rfc-editor.org/info/rfc7506): IPv6 Router Alert
-  Option for MPLS Operations, Administration, and Maintenance (OAM)
 - [RFC 7527](https://www.rfc-editor.org/info/rfc7527): Enhanced
   Duplicate Address Detection
 - [RFC 7552](https://www.rfc-editor.org/info/rfc7552): Updates to LDP
@@ -4936,6 +5347,11 @@ RFCbib6 run at 2025-01-06 10:50:32 UTC+1300 (494 RFCs found)
   Addresses
 - [RFC 9686](https://www.rfc-editor.org/info/rfc9686): Registering
   Self-Generated IPv6 Addresses Using DHCPv6
+- [RFC 9740](https://www.rfc-editor.org/info/rfc9740): New IPFIX
+  Information Elements for TCP Options and IPv6 Extension Headers
+- [RFC 9777](https://www.rfc-editor.org/info/rfc9777)
+  ([STD 101](https://www.rfc-editor.org/info/std101)): Multicast
+  Listener Discovery Version 2 (MLDv2) for IPv6
 
 ### Best Current Practice (15 RFCs)
 
@@ -5487,15 +5903,14 @@ below, including how to include diagrams.
 
 A chapter lives in its own directory, e.g. this chapter lives in the
 directory `99. Chapter Template`. Of course, the spaces are part of the
-directory name and the name is case-sensitive. 
+directory name and the name is case-sensitive.
 
-The first nine chapters are _numbered_ 1 through 9 but as from
-January 2025, their directories are _named_ "01" through "09" to match
-the way GitHub sorts directories.
+The first nine chapters are _numbered_ 1 through 9 but as from January
+2025, their directories are _named_ "01" through "09" to match the way
+GitHub sorts directories.
 
-The introduction to the
-chapter (like this file) is a markdown file with the same name again,
-e.g. `99. Chapter Template.md`.
+The introduction to the chapter (like this file) is a markdown file with
+the same name again, e.g. `99. Chapter Template.md`.
 
 The first line in this file is:
 
@@ -5523,8 +5938,8 @@ The text of the section `Next Section` will be in a file called
 `Next Section.md`.
 
 Please do not add text inside or after the list of sections. That will
-confuse things. (However, for a short chapter with short sections,
-this request can be ignored. If you do something like:
+confuse things. (However, for a short chapter with short sections, this
+request can be ignored. If you do something like:
 
 ```
   ## Section A
@@ -5667,14 +6082,15 @@ they will be shown in a single pair of square brackets with commas:
 \[[RFC4291](https://www.rfc-editor.org/info/rfc4291),
 [RFC 8200](https://www.rfc-editor.org/info/rfc8200)\].
 
-*Note 3:* If you need to refer to a specific section of an RFC
-*and* you know the appropriate hashtag, you can use this format:
+*Note 3:* If you need to refer to a specific section of an RFC *and* you
+know the appropriate hashtag, you can use this format:
 
 ```
   Section 2.5.6 of {{{RFC3513#section-2.5.6}}}
 ```
 
-However, makeBook cannot algorithmically create or check the hashtag, so you must get it right.
+However, makeBook cannot algorithmically create or check the hashtag, so
+you must get it right.
 
 Diagrams can be ASCII art when applicable, using `~~~` before and after,
 e.g.:
@@ -5753,7 +6169,7 @@ Section text goes here
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-01-06 10:51:58 UTC+1300
+Generated at 2025-05-13 10:56:44 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -5804,6 +6220,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-enterprise)
 [¶](#deployment-in-the-home)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
 [¶](#tools)
 [¶](#obsolete-features-in-ipv6)
 [¶](#markdown-usage)
@@ -5813,6 +6231,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [ARP ¶](#address-resolution)
 [¶](#ipv6-primary-differences-from-ipv4)
 [¶](#layer-2-considerations)
+[¶](#troubleshooting)
 
 [Babel ¶](#routing)
 
@@ -5821,6 +6240,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#filtering)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#tools)
 [¶](#further-reading)
 
 [broadcast ¶](#ipv6-primary-differences-from-ipv4)
@@ -5860,6 +6280,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#address-and-prefix-management)
 [¶](#multi-prefix-operation)
 [¶](#cern-and-the-lhc)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
 
 [differentiated services ¶](#packet-format)
 [¶](#routing)
@@ -5868,6 +6290,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [DNS64 ¶](#dual-stack-scenarios)
 [¶](#translation-and-ipv4-as-a-service)
+[¶](#advanced-troubleshooting)
+[¶](#tools)
 
 [DNS ¶](#how-an-application-programmer-sees-ipv6)
 [¶](#addresses)
@@ -5884,6 +6308,9 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-in-the-enterprise)
 [¶](#deployment-in-the-home)
 [¶](#status)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
+[¶](#tools)
 
 [DS-Lite ¶](#dual-stack-scenarios)
 [¶](#translation-and-ipv4-as-a-service)
@@ -5901,6 +6328,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#energy-consumption)
 [¶](#cern-and-the-lhc)
 [¶](#deployment-in-the-home)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
 
 [ECN ¶](#packet-format)
 [¶](#traffic-class-and-flow-label)
@@ -5921,6 +6350,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#address-and-prefix-management)
 [¶](#benchmarking-and-monitoring)
 [¶](#multihoming)
+[¶](#advanced-troubleshooting)
 
 [flow label ¶](#packet-format)
 [¶](#routing)
@@ -5946,6 +6376,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [happy eyeballs ¶](#how-an-application-programmer-sees-ipv6)
 [¶](#multihoming)
 [¶](#deployment-in-the-home)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
 
 [IANA ¶](#why-version-6)
 [¶](#addresses)
@@ -5963,6 +6395,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#translation-and-ipv4-as-a-service)
 [¶](#security)
 [¶](#filtering)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
 
 [IID ¶](#addresses)
 [¶](#ipv6-primary-differences-from-ipv4)
@@ -6019,6 +6453,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-home)
 [¶](#status)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
 [¶](#tools)
 [¶](#obsolete-features-in-ipv6)
 [¶](#further-reading)
@@ -6033,6 +6469,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#tunnels)
 [¶](#security)
 [¶](#deployment-by-carriers)
+[¶](#advanced-troubleshooting)
 
 [IS-IS ¶](#routing)
 
@@ -6048,6 +6485,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#energy-consumption)
 [¶](#multi-prefix-operation)
 [¶](#deployment-in-the-home)
+[¶](#troubleshooting)
+[¶](#tools)
 
 [Lw6o4 ¶](#translation-and-ipv4-as-a-service)
 
@@ -6059,6 +6498,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [MLD ¶](#address-resolution)
 [¶](#layer-2-considerations)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
 
 [MPLS ¶](#layer-2-functions)
 [¶](#tunnels)
@@ -6070,6 +6511,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#layer-2-functions)
 [¶](#packet-format)
 [¶](#packet-size-and-jumbo-frames)
+[¶](#advanced-troubleshooting)
 
 [multicast ¶](#address-resolution)
 [¶](#addresses)
@@ -6079,6 +6521,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#filtering)
 [¶](#layer-2-considerations)
 [¶](#energy-consumption)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
 
 [multihoming ¶](#multi-prefix-operation)
 [¶](#multihoming)
@@ -6089,6 +6533,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [NAT64 ¶](#dual-stack-scenarios)
 [¶](#obsolete-techniques)
 [¶](#translation-and-ipv4-as-a-service)
+[¶](#advanced-troubleshooting)
+[¶](#tools)
 
 [NAT66 ¶](#ipv6-primary-differences-from-ipv4)
 [¶](#translation-and-ipv4-as-a-service)
@@ -6126,6 +6572,9 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#management-and-operations)
 [¶](#multihoming)
 [¶](#packet-size-and-jumbo-frames)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
+[¶](#tools)
 
 [PIO ¶](#auto-configuration)
 
@@ -6154,6 +6603,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#address-and-prefix-management)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#advanced-troubleshooting)
 [¶](#obsolete-features-in-ipv6)
 
 [QUIC ¶](#transport-protocols)
@@ -6165,6 +6615,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#routing)
 [¶](#prefix-per-host)
 [¶](#multi-prefix-operation)
+[¶](#advanced-troubleshooting)
 
 [RIPng ¶](#routing)
 
@@ -6200,6 +6651,9 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-enterprise)
 [¶](#deployment-in-the-home)
+[¶](#troubleshooting)
+[¶](#advanced-troubleshooting)
+[¶](#tools)
 [¶](#obsolete-features-in-ipv6)
 [¶](#further-reading)
 
@@ -6277,16 +6731,17 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#multihoming)
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-home)
+[¶](#advanced-troubleshooting)
 
 
-
+### [<ins>Back to main Contents</ins>](#list-of-contents)
 
 # book6 Citation Index
 
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-01-06 10:51:58 UTC+1300
+Generated at 2025-05-13 10:56:44 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -6747,7 +7202,11 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC9673 ¶](#extension-headers-and-options)
 
+[RFC9685 ¶](#address-resolution)
+
 [RFC9686 ¶](#address-and-prefix-management)
+
+[RFC9724 ¶](#address-and-prefix-management)
 
 [STD7 ¶](#transport-protocols)
 
@@ -6758,5 +7217,5 @@ This index was created automatically, so it's dumb. It has links to each section
 [STD87 ¶](#extension-headers-and-options)
 
 
-
+### [<ins>Back to main Contents</ins>](#list-of-contents)
 

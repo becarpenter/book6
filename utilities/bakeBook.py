@@ -22,9 +22,10 @@
 # Version: 2024-09-24 - adapt to Contents.md with embedded links
 # Version: 2025-02-01 - Make epub more readable, linting
 # Version: 2025-02-05 - Avoid pagebreak on epub title page
+# Version: 2025-05-13 - Allow for non-ToC ## sections in epub 
 
 ########################################################
-# Copyright (C) 2024 Brian E. Carpenter.
+# Copyright (C) 2024-25 Brian E. Carpenter and others
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with
@@ -162,7 +163,7 @@ def fix_section(raw, epub=False):
     first_line = True
     is_toc = False
     for line in raw:
-        if epub and is_toc and line.startswith("##"):  # TOC
+        if epub and is_toc and line.startswith("## ["):  # TOC
             new.append("\n\n")
             return new
         if epub and first_line:
