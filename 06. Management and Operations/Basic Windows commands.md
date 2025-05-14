@@ -8,7 +8,7 @@ so `ping fe80::1234` will automatically use the default interface. On a host wit
 than one network interface, the interface may be specified, e.g. `ping fe80::1234%7`.
 The interfaces in use can be found in the output from `ipconfig /all`.
 
-To check or change basic IPv6 configuration, use
+To check basic IPv6 configuration, use
 `Control Panel/All Control Panel Items/Network and Sharing Center/Change Adapter Settings`.
 Select the network adapter of interest, then `Properties/Internet Protocol Version 6`
 and basic properties will be available. Normally, nothing will need to be changed.
