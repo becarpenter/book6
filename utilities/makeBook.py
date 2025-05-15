@@ -45,6 +45,7 @@ and inter-chapter links as far as possible."""
 # Version: 2025-01-15 - give warning if cited I-D is replaced or missing
 # Version: 2025-02-01 - linting
 # Version: 2025-02-25 - allow for future format of RFC index (no leading zeros)
+# Version: 2025-05-15 - double check request to run mdformat
 
 
 ########################################################
@@ -595,6 +596,8 @@ else:
             message="Rarely needed option!\nRun md formatter on all files?",
             default="no",
         )
+        if formatting:
+            formatting = askyesno(title=T, message="Really?", default="no")
 if formatting:
     logit("User requested mdformat on all files.")
 
