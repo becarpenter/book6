@@ -28,7 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2025-05-13 11:18:34 UTC+1200
+Version captured at 2025-05-15 15:55:32 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -3636,7 +3636,28 @@ backslashpagebreak
 ## Security operation
 
 A starting point for this topic is
-[RFC 9099](https://www.rfc-editor.org/info/rfc9099).
+[RFC 9099](https://www.rfc-editor.org/info/rfc9099). It discusses the
+security and privacy implications of addressing mechanisms, such as
+allowing (or forbidding) temporary addresses
+\[[RFC8981](https://www.rfc-editor.org/info/rfc8981)\] and pseudo-random
+interface identifiers
+\[[RFC7217](https://www.rfc-editor.org/info/rfc7217),
+[RFC7943](https://www.rfc-editor.org/info/rfc7943)\]. Address privacy is
+considered further in
+\[[RFC7721](https://www.rfc-editor.org/info/rfc7721)\].
+
+[RFC 9099](https://www.rfc-editor.org/info/rfc9099) also discusses
+security aspects of extension headers, the link layer, the control
+plane, routing, logging, monitoring, and transition and coexistence
+technologies. It covers specific considerations for enterprises, service
+providers (including lawful intercept) and residential users.
+
+A related document is
+[RFC 9288](https://www.rfc-editor.org/info/rfc9288) "Recommendations on
+the Filtering of IPv6 Packets Containing IPv6 Extension Headers at
+Transit Routers." It is important that service providers follow these
+recommendations in order to provide satisfactory end-to-end IPv6
+service.
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -4036,9 +4057,27 @@ offload, described in
 backslashpagebreak
 ## Basic Windows commands
 
-The section text goes here, all in Markdown. Don't try to insert or
-correct the following links by hand; the makeBook program will do that
-later.
+To determine current IPv6 configuration, type `ipconfig /all` at the Windows command prompt.
+
+Both `ping` and `tracert` work normally for IPv6. In the case of link-local addresses,
+Windows supports the default zone identifier (also known as the default interface),
+so `ping fe80::1234` will automatically use the default interface. On a host with more
+than one network interface, the interface may be specified, e.g. `ping fe80::1234%7`.
+The interfaces in use can be found in the output from `ipconfig /all`.
+
+To check basic IPv6 configuration, use
+`Control Panel/All Control Panel Items/Network and Sharing Center/Change Adapter Settings`.
+Select the network adapter of interest, then `Properties/Internet Protocol Version 6`
+and basic properties will be available. Normally, nothing will need to be changed.
+
+More advanced properties can be checked or changed from the command prompt with `netsh`, e.g.,
+`netsh interface ipv6 show privacy` to show whether temporary addresses are active.
+Since `netsh` is a very complex tool, we do not fully describe it here, but it includes
+on-line help at every level, by adding `?` to a command, e.g., `netsh interface ipv6 show interfaces ?`.
+
+The same functionality (and more) is also available using PowerShell,
+for which we suggest seeking Microsoft documentation.
+
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -6442,7 +6481,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-05-13 10:56:44 UTC+1200
+Generated at 2025-05-15 15:55:01 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6486,9 +6525,11 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#address-planning)
 [¶](#prefix-per-host)
 [¶](#address-and-prefix-management)
+[¶](#basic-windows-commands)
 [¶](#energy-consumption)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#security-operation)
 [¶](#cern-and-the-lhc)
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-enterprise)
@@ -6532,6 +6573,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#network-design)
 [¶](#energy-consumption)
 [¶](#multihoming)
+[¶](#security-operation)
 [¶](#obsolete-features-in-ipv6)
 
 [DAD ¶](#address-resolution)
@@ -6755,6 +6797,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#source-and-destination-address-selection)
 [¶](#filtering)
 [¶](#network-design)
+[¶](#basic-windows-commands)
 [¶](#energy-consumption)
 [¶](#multi-prefix-operation)
 [¶](#deployment-in-the-home)
@@ -6879,6 +6922,16 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#advanced-troubleshooting)
 [¶](#obsolete-features-in-ipv6)
 
+[privacy ¶](#addresses)
+[¶](#auto-configuration)
+[¶](#source-and-destination-address-selection)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#security)
+[¶](#layer-2-considerations)
+[¶](#basic-windows-commands)
+[¶](#multi-prefix-operation)
+[¶](#security-operation)
+
 [QUIC ¶](#transport-protocols)
 [¶](#multihoming)
 
@@ -6889,6 +6942,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#prefix-per-host)
 [¶](#multi-prefix-operation)
 [¶](#advanced-troubleshooting)
+
+[reverse DNS ¶](#dns)
 
 [RIPng ¶](#routing)
 
@@ -6921,6 +6976,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#multihoming)
 [¶](#packet-size-and-jumbo-frames)
 [¶](#routing-operation)
+[¶](#security-operation)
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-enterprise)
 [¶](#deployment-in-the-home)
@@ -6935,6 +6991,26 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [RTP ¶](#transport-protocols)
 
 [SCTP ¶](#transport-protocols)
+
+[security ¶](#dns)
+[¶](#extension-headers-and-options)
+[¶](#managed-configuration)
+[¶](#packet-format)
+[¶](#source-and-destination-address-selection)
+[¶](#dual-stack-scenarios)
+[¶](#ipv6-primary-differences-from-ipv4)
+[¶](#obsolete-techniques)
+[¶](#translation-and-ipv4-as-a-service)
+[¶](#security)
+[¶](#filtering)
+[¶](#layer-2-considerations)
+[¶](#topology-obfuscation)
+[¶](#address-and-prefix-management)
+[¶](#multi-prefix-operation)
+[¶](#security-operation)
+[¶](#deployment-in-the-enterprise)
+[¶](#obsolete-features-in-ipv6)
+[¶](#further-reading)
 
 [SIP ¶](#why-version-6)
 [¶](#transport-protocols)
@@ -7014,7 +7090,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-05-13 10:56:44 UTC+1200
+Generated at 2025-05-15 15:55:01 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -7304,6 +7380,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC7157 ¶](#multihoming)
 
+[RFC7217 ¶](#security-operation)
+
 [RFC7439 ¶](#tunnels)
 
 [RFC7454 ¶](#filtering)
@@ -7337,6 +7415,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC7690 ¶](#extension-headers-and-options)
 [¶](#packet-size-and-jumbo-frames)
 
+[RFC7721 ¶](#security-operation)
+
 [RFC7775 ¶](#routing)
 
 [RFC7849 ¶](#layer-2-considerations)
@@ -7347,6 +7427,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC791 ¶](#why-version-6)
 [¶](#traffic-class-and-flow-label)
+
+[RFC7943 ¶](#security-operation)
 
 [RFC8028 ¶](#auto-configuration)
 [¶](#multi-prefix-operation)
@@ -7435,6 +7517,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [¶](#prefix-per-host)
 [¶](#address-and-prefix-management)
 [¶](#multi-prefix-operation)
+[¶](#security-operation)
 
 [RFC9000 ¶](#transport-protocols)
 
@@ -7457,6 +7540,7 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC9288 ¶](#extension-headers-and-options)
 [¶](#filtering)
+[¶](#security-operation)
 
 [RFC9313 ¶](#coexistence-with-legacy-ipv4)
 [¶](#dual-stack-scenarios)

@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2025-05-13 10:56:44 UTC+1200
+Generated at 2025-05-15 15:55:01 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -291,6 +291,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC7157 ●](./06.%20Management%20and%20Operations/Multihoming.md)
 
+[RFC7217 ●](./06.%20Management%20and%20Operations/Security%20operation.md)
+
 [RFC7439 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [RFC7454 ●](./04.%20Security/Filtering.md)
@@ -324,6 +326,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC7690 ●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./06.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
+[RFC7721 ●](./06.%20Management%20and%20Operations/Security%20operation.md)
+
 [RFC7775 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 
 [RFC7849 ●](./04.%20Security/Layer%202%20considerations.md)
@@ -334,6 +338,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC791 ●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
 [●](./02.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
+
+[RFC7943 ●](./06.%20Management%20and%20Operations/Security%20operation.md)
 
 [RFC8028 ●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -422,6 +428,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./05.%20Network%20Design/Prefix%20per%20Host.md)
 [●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./06.%20Management%20and%20Operations/Security%20operation.md)
 
 [RFC9000 ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
@@ -444,6 +451,7 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC9288 ●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./04.%20Security/Filtering.md)
+[●](./06.%20Management%20and%20Operations/Security%20operation.md)
 
 [RFC9313 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/03.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)

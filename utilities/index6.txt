@@ -49,6 +49,7 @@ ICMPv6 ICMP
 'RA messages' 'RA message' 'router advertisement' 'router advertisements'
 DNS
 DNS64
+'reverse DNS'
 UDP
 TCP
 RTP
@@ -90,3 +91,5 @@ IPsec
 PMTUD
 'Jumbo frames'
 prefix prefixes
+security
+privacy

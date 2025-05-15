@@ -133,7 +133,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2025-05-13 11:18:34 UTC+1200
+Version captured at 2025-05-15 15:55:32 UTC+1200
 
 \pagebreak
 
@@ -4195,7 +4195,27 @@ Section text goes here
 \subsection{Security operation}\label{security-operation}
 
 A starting point for this topic is
-\href{https://www.rfc-editor.org/info/rfc9099}{RFC 9099}.
+\href{https://www.rfc-editor.org/info/rfc9099}{RFC 9099}. It discusses
+the security and privacy implications of addressing mechanisms, such as
+allowing (or forbidding) temporary addresses
+{[}\href{https://www.rfc-editor.org/info/rfc8981}{RFC8981}{]} and
+pseudo-random interface identifiers
+{[}\href{https://www.rfc-editor.org/info/rfc7217}{RFC7217},
+\href{https://www.rfc-editor.org/info/rfc7943}{RFC7943}{]}. Address
+privacy is considered further in
+{[}\href{https://www.rfc-editor.org/info/rfc7721}{RFC7721}{]}.
+
+\href{https://www.rfc-editor.org/info/rfc9099}{RFC 9099} also discusses
+security aspects of extension headers, the link layer, the control
+plane, routing, logging, monitoring, and transition and coexistence
+technologies. It covers specific considerations for enterprises, service
+providers (including lawful intercept) and residential users.
+
+A related document is \href{https://www.rfc-editor.org/info/rfc9288}{RFC
+9288} "Recommendations on the Filtering of IPv6 Packets Containing IPv6
+Extension Headers at Transit Routers." It is important that service
+providers follow these recommendations in order to provide satisfactory
+end-to-end IPv6 service.
 
 \subsubsection{\texorpdfstring{\hyperref[routing-operation]{Previous}
 \hyperref[multi-prefix-operation]{Next}
@@ -4615,9 +4635,33 @@ blog entry}.
 
 \subsection{Basic Windows commands}\label{basic-windows-commands}
 
-The section text goes here, all in Markdown. Don\textquotesingle t try
-to insert or correct the following links by hand; the makeBook program
-will do that later.
+To determine current IPv6 configuration, type \texttt{ipconfig\ /all} at
+the Windows command prompt.
+
+Both \texttt{ping} and \texttt{tracert} work normally for IPv6. In the
+case of link-local addresses, Windows supports the default zone
+identifier (also known as the default interface), so
+\texttt{ping\ fe80::1234} will automatically use the default interface.
+On a host with more than one network interface, the interface may be
+specified, e.g. \texttt{ping\ fe80::1234\%7}. The interfaces in use can
+be found in the output from \texttt{ipconfig\ /all}.
+
+To check basic IPv6 configuration, use
+\texttt{Control\ Panel/All\ Control\ Panel\ Items/Network\ and\ Sharing\ Center/Change\ Adapter\ Settings}.
+Select the network adapter of interest, then
+\texttt{Properties/Internet\ Protocol\ Version\ 6} and basic properties
+will be available. Normally, nothing will need to be changed.
+
+More advanced properties can be checked or changed from the command
+prompt with \texttt{netsh}, e.g.,
+\texttt{netsh\ interface\ ipv6\ show\ privacy} to show whether temporary
+addresses are active. Since \texttt{netsh} is a very complex tool, we do
+not fully describe it here, but it includes on-line help at every level,
+by adding \texttt{?} to a command, e.g.,
+\texttt{netsh\ interface\ ipv6\ show\ interfaces\ ?}.
+
+The same functionality (and more) is also available using PowerShell,
+for which we suggest seeking Microsoft documentation.
 
 \subsubsection{\texorpdfstring{\hyperref[packet-size-and-jumbo-frames]{Previous}
 \hyperref[case-studies]{Next}
@@ -7706,7 +7750,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2025-05-13 10:56:44 UTC+1200
+Generated at 2025-05-15 15:55:01 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7743,8 +7787,9 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[network-design]{¶} \hyperref[address-planning]{¶}
 \hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
-\hyperref[energy-consumption]{¶} \hyperref[multi-prefix-operation]{¶}
-\hyperref[multihoming]{¶} \hyperref[cern-and-the-lhc]{¶}
+\hyperref[basic-windows-commands]{¶} \hyperref[energy-consumption]{¶}
+\hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
+\hyperref[security-operation]{¶} \hyperref[cern-and-the-lhc]{¶}
 \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-enterprise]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[troubleshooting]{¶}
@@ -7775,7 +7820,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[dual-stack-scenarios]{¶} \hyperref[obsolete-techniques]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
 \hyperref[network-design]{¶} \hyperref[energy-consumption]{¶}
-\hyperref[multihoming]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
+\hyperref[multihoming]{¶} \hyperref[security-operation]{¶}
+\hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[address-resolution]{DAD ¶} \hyperref[auto-configuration]{¶}
 \hyperref[layer-2-considerations]{¶}
@@ -7939,7 +7985,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[filtering]{¶} \hyperref[network-design]{¶}
-\hyperref[energy-consumption]{¶} \hyperref[multi-prefix-operation]{¶}
+\hyperref[basic-windows-commands]{¶} \hyperref[energy-consumption]{¶}
+\hyperref[multi-prefix-operation]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[troubleshooting]{¶}
 \hyperref[tools]{¶}
 
@@ -8028,6 +8075,13 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[advanced-troubleshooting]{¶}
 \hyperref[obsolete-features-in-ipv6]{¶}
 
+\hyperref[addresses]{privacy ¶} \hyperref[auto-configuration]{¶}
+\hyperref[source-and-destination-address-selection]{¶}
+\hyperref[ipv6-primary-differences-from-ipv4]{¶} \hyperref[security]{¶}
+\hyperref[layer-2-considerations]{¶}
+\hyperref[basic-windows-commands]{¶}
+\hyperref[multi-prefix-operation]{¶} \hyperref[security-operation]{¶}
+
 \hyperref[transport-protocols]{QUIC ¶} \hyperref[multihoming]{¶}
 
 \hyperref[address-resolution]{RA messages ¶}
@@ -8035,6 +8089,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[routing]{¶} \hyperref[prefix-per-host]{¶}
 \hyperref[multi-prefix-operation]{¶}
 \hyperref[advanced-troubleshooting]{¶}
+
+\hyperref[dns]{reverse DNS ¶}
 
 \hyperref[routing]{RIPng ¶}
 
@@ -8055,7 +8111,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[energy-consumption]{¶} \hyperref[multi-prefix-operation]{¶}
 \hyperref[multihoming]{¶} \hyperref[packet-size-and-jumbo-frames]{¶}
-\hyperref[routing-operation]{¶} \hyperref[deployment-by-carriers]{¶}
+\hyperref[routing-operation]{¶} \hyperref[security-operation]{¶}
+\hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-enterprise]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[troubleshooting]{¶}
 \hyperref[advanced-troubleshooting]{¶} \hyperref[tools]{¶}
@@ -8066,6 +8123,20 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[transport-protocols]{RTP ¶}
 
 \hyperref[transport-protocols]{SCTP ¶}
+
+\hyperref[dns]{security ¶} \hyperref[extension-headers-and-options]{¶}
+\hyperref[managed-configuration]{¶} \hyperref[packet-format]{¶}
+\hyperref[source-and-destination-address-selection]{¶}
+\hyperref[dual-stack-scenarios]{¶}
+\hyperref[ipv6-primary-differences-from-ipv4]{¶}
+\hyperref[obsolete-techniques]{¶}
+\hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[security]{¶}
+\hyperref[filtering]{¶} \hyperref[layer-2-considerations]{¶}
+\hyperref[topology-obfuscation]{¶}
+\hyperref[address-and-prefix-management]{¶}
+\hyperref[multi-prefix-operation]{¶} \hyperref[security-operation]{¶}
+\hyperref[deployment-in-the-enterprise]{¶}
+\hyperref[obsolete-features-in-ipv6]{¶} \hyperref[further-reading]{¶}
 
 \hyperref[why-version-6]{SIP ¶} \hyperref[transport-protocols]{¶}
 \hyperref[dual-stack-scenarios]{¶}
@@ -8130,7 +8201,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2025-05-13 10:56:44 UTC+1200
+Generated at 2025-05-15 15:55:01 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -8405,6 +8476,8 @@ has links to each section that mentions each citation.
 
 \hyperref[multihoming]{RFC7157 ¶}
 
+\hyperref[security-operation]{RFC7217 ¶}
+
 \hyperref[tunnels]{RFC7439 ¶}
 
 \hyperref[filtering]{RFC7454 ¶}
@@ -8437,6 +8510,8 @@ has links to each section that mentions each citation.
 \hyperref[extension-headers-and-options]{RFC7690 ¶}
 \hyperref[packet-size-and-jumbo-frames]{¶}
 
+\hyperref[security-operation]{RFC7721 ¶}
+
 \hyperref[routing]{RFC7775 ¶}
 
 \hyperref[layer-2-considerations]{RFC7849 ¶}
@@ -8447,6 +8522,8 @@ has links to each section that mentions each citation.
 
 \hyperref[why-version-6]{RFC791 ¶}
 \hyperref[traffic-class-and-flow-label]{¶}
+
+\hyperref[security-operation]{RFC7943 ¶}
 
 \hyperref[auto-configuration]{RFC8028 ¶}
 \hyperref[multi-prefix-operation]{¶}
@@ -8523,7 +8600,7 @@ has links to each section that mentions each citation.
 \hyperref[layer-2-considerations]{¶} \hyperref[topology-obfuscation]{¶}
 \hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
-\hyperref[multi-prefix-operation]{¶}
+\hyperref[multi-prefix-operation]{¶} \hyperref[security-operation]{¶}
 
 \hyperref[transport-protocols]{RFC9000 ¶}
 
@@ -8544,7 +8621,7 @@ has links to each section that mentions each citation.
 \hyperref[address-resolution]{RFC9131 ¶}
 
 \hyperref[extension-headers-and-options]{RFC9288 ¶}
-\hyperref[filtering]{¶}
+\hyperref[filtering]{¶} \hyperref[security-operation]{¶}
 
 \hyperref[coexistence-with-legacy-ipv4]{RFC9313 ¶}
 \hyperref[dual-stack-scenarios]{¶}
