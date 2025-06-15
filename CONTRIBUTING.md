@@ -23,6 +23,6 @@ If we use direct quotations from RFCs they **MUST** be small extracts that can b
 
 We will appoint two or three people as top-level editors who can declare consensus and approve PRs.
 
-The language is English, preferably US spelling. Please keep sentences reasonably short and simple. Avoid language that might be unclear for someone whose first language is not English. Avoid terminology that is inappropriate in professional writing. In case of doubt, please consider the [NIST guidance on inclusive language](https://doi.org/10.6028/NIST.IR.8366). If adding diagrams, please consider accessibility by the visually impaired and ensure that alternative text is provided.
+The language is English, preferably US spelling. Please keep sentences reasonably short and simple. Avoid language that might be unclear for someone whose first language is not English. Avoid terminology that is inappropriate in professional writing. In case of doubt, please consider the archived [NIST guidance on inclusive language](https://web.archive.org/web/20250203031433/https://nvlpubs.nist.gov/nistpubs/ir/2021/NIST.IR.8366.pdf). If adding diagrams, please consider accessibility by the visually impaired and ensure that alternative text is provided.
 
 Any translation into other languages must be under the same open source license as the original version and must be available free of charge.
