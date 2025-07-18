@@ -43,7 +43,13 @@ on and its router doesn't have an IPv6 prefix, an infrastructure router
 the `OPTION_IA_PD` and `OPTION_IAPREFIX` DHCPv6 options (previously
 defined by RFC3633, but now covered by
 [Section 6.3 of RFC8415](https://www.rfc-editor.org/rfc/rfc8415.html#section-6.3).
-This process is known as DHCPv6-PD (for "prefix delegation").
+This process is known as DHCPv6-PD (for "prefix delegation"). Further,
+it is possible to signal the availability of DHCPv6-PD in SLAAC Router
+Advertisements \[[RFC9762](https://www.rfc-editor.org/info/rfc9762)\],
+which allows client devices in large broadcast networks to benefit from
+an IPv6 prefix per device
+\[[RFC9663](https://www.rfc-editor.org/info/rfc9663)\],
+\[[5. Prefix per Host](../05.%20Network%20Design/Prefix%20per%20Host.md)\].
 
 However, the 3GPP specifications for IPv6 usage over cellular mobile
 systems make both DHCPv6 and DHCPv6-PD optional

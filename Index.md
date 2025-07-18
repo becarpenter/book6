@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2025-05-15 15:55:01 UTC+1200
+Generated at 2025-07-19 08:33:25 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -49,6 +49,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Energy%20consumption.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 [●](./06.%20Management%20and%20Operations/Security%20operation.md)
 [●](./07.%20Case%20Studies/CERN%20and%20the%20LHC.md)
 [●](./08.%20Deployment%20Status/Deployment%20by%20carriers.md)
@@ -74,10 +75,12 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./04.%20Security/Filtering.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 [●](./09.%20Troubleshooting/Tools.md)
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
 
-[broadcast ●](./03.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
+[broadcast ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 
 [BYOD ●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
@@ -284,6 +287,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
 [●](./06.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 [●](./07.%20Case%20Studies/CERN%20and%20the%20LHC.md)
 [●](./08.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
@@ -307,6 +311,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
 [IS-IS ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
 [Jumbo frames ●](./06.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
@@ -400,6 +405,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
 
 [OSPF ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
 [performance ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)

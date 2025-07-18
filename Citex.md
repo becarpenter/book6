@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2025-05-15 15:55:01 UTC+1200
+Generated at 2025-07-19 08:33:25 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -55,6 +55,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC2529 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [RFC2545 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
 [RFC2675 ●](./06.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
@@ -119,6 +120,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [RFC4271 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
 [RFC4283 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 
@@ -138,6 +140,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC4380 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [RFC4456 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
 [RFC4541 ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./04.%20Security/Layer%202%20considerations.md)
@@ -147,6 +150,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC4641 ●](./04.%20Security/Filtering.md)
 
 [RFC4760 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
 [RFC4798 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
@@ -173,8 +177,10 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC5214 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [RFC5308 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
 [RFC5340 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
 [RFC5533 ●](./06.%20Management%20and%20Operations/Multihoming.md)
 
@@ -329,6 +335,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC7721 ●](./06.%20Management%20and%20Operations/Security%20operation.md)
 
 [RFC7775 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
 [RFC7849 ●](./04.%20Security/Layer%202%20considerations.md)
 
@@ -466,7 +473,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC9637 ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 
-[RFC9663 ●](./05.%20Network%20Design/Prefix%20per%20Host.md)
+[RFC9663 ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+[●](./05.%20Network%20Design/Prefix%20per%20Host.md)
 
 [RFC9673 ●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 
@@ -475,6 +483,9 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9686 ●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
 [RFC9724 ●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
+
+[RFC9762 ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+[●](./05.%20Network%20Design/Prefix%20per%20Host.md)
 
 [STD7 ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 

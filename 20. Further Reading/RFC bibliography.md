@@ -8,9 +8,9 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](../10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
-RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
+RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
 
-### Standards Track (265 RFCs)
+### Standards Track (267 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -579,9 +579,14 @@ RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
   Self-Generated IPv6 Addresses Using DHCPv6
 - [RFC 9740](https://www.rfc-editor.org/info/rfc9740): New IPFIX
   Information Elements for TCP Options and IPv6 Extension Headers
+- [RFC 9762](https://www.rfc-editor.org/info/rfc9762): Using Router
+  Advertisements to Signal the Availability of DHCPv6 Prefix Delegation
+  to Clients
 - [RFC 9777](https://www.rfc-editor.org/info/rfc9777)
   ([STD 101](https://www.rfc-editor.org/info/std101)): Multicast
   Listener Discovery Version 2 (MLDv2) for IPv6
+- [RFC 9805](https://www.rfc-editor.org/info/rfc9805): Deprecation of
+  the IPv6 Router Alert Option for New Protocols
 
 ### Best Current Practice (15 RFCs)
 
@@ -632,7 +637,7 @@ RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
   ([BCP 234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
-### Informational (190 RFCs)
+### Informational (191 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -1054,6 +1059,9 @@ RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
 - [RFC 9663](https://www.rfc-editor.org/info/rfc9663): Using DHCPv6
   Prefix Delegation (DHCPv6-PD) to Allocate Unique IPv6 Prefixes per
   Client in Large Broadcast Networks
+- [RFC 9723](https://www.rfc-editor.org/info/rfc9723): BGP Colored
+  Prefix Routing (CPR) for Services Based on Segment Routing over IPv6
+  (SRv6)
 
 ### Experimental (24 RFCs)
 
