@@ -22,7 +22,8 @@
 # Version: 2024-09-24 - adapt to Contents.md with embedded links
 # Version: 2025-02-01 - Make epub more readable, linting
 # Version: 2025-02-05 - Avoid pagebreak on epub title page
-# Version: 2025-05-13 - Allow for non-ToC ## sections in epub 
+# Version: 2025-05-13 - Allow for non-ToC ## sections in epub
+# Version: 2025-07-19 - Remove tricky image
 
 ########################################################
 # Copyright (C) 2024-25 Brian E. Carpenter and others
@@ -217,6 +218,10 @@ def fix_section(raw, epub=False):
                     target = "book6-citation-index"
                 outline += head + "](#" + target + ")"
             outline += line
+        elif '<img src="./download.png"' in line:
+            #remove tricky image
+            tricky = '<img src="./download.png" width="24px" height="auto">'
+            outline = line.replace(tricky, '')            
         elif "<img src=" in line:
             # need to munge image reference for pandoc
             # (lazy, only handles the first one)

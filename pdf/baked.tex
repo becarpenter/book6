@@ -133,7 +133,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2025-05-15 15:55:32 UTC+1200
+Version captured at 2025-07-19 12:07:53 UTC+1200
 
 \pagebreak
 
@@ -399,6 +399,12 @@ browser tab or window, so clicking on links will always take you away
 from the current page. To avoid this, with most browsers you can use
 CTRL+click (on Windows and Linux) or CMD+click (on MacOS) to open a new
 tab.
+
+You can download a pre-release PDF of the whole book
+\href{https://github.com/becarpenter/book6/blob/main/pdf/baked.pdf}{here},
+and a pre-release ePub version
+\href{https://github.com/becarpenter/book6/blob/main/pdf/baked.epub}{here}.
+(On those pages, use the little "download" button at the top right.)
 
 \subsubsection{\texorpdfstring{\hyperref[foreword]{Previous}
 \hyperref[how-a-user-sees-ipv6]{Next}
@@ -1699,7 +1705,13 @@ it one (e.g. a /64 prefix), using the \texttt{OPTION\_IA\_PD} and
 but now covered by
 \href{https://www.rfc-editor.org/rfc/rfc8415.html\#section-6.3}{Section
 6.3 of RFC8415}. This process is known as DHCPv6-PD (for "prefix
-delegation").
+delegation"). Further, it is possible to signal the availability of
+DHCPv6-PD in SLAAC Router Advertisements
+{[}\href{https://www.rfc-editor.org/info/rfc9762}{RFC9762}{]}, which
+allows client devices in large broadcast networks to benefit from an
+IPv6 prefix per device
+{[}\href{https://www.rfc-editor.org/info/rfc9663}{RFC9663}{]},
+{[}\hyperref[prefix-per-host]{5. Prefix per Host}{]}.
 
 However, the 3GPP specifications for IPv6 usage over cellular mobile
 systems make both DHCPv6 and DHCPv6-PD optional
@@ -3904,9 +3916,10 @@ configuring temporary addresses
 {[}\href{https://www.rfc-editor.org/info/rfc8981}{RFC8981}{]}. Since
 IPv6 address space is not a scarce resource, there are scenarios where
 assigning a complete /64 prefix to an individual host may be
-advantageous. Two mechanisms for this have been defined in
-\href{https://www.rfc-editor.org/info/rfc8273}{RFC 8273} and
-\href{https://www.rfc-editor.org/info/rfc9663}{RFC 9663}.
+advantageous. Mechanisms for this have been defined in
+\href{https://www.rfc-editor.org/info/rfc8273}{RFC 8273},
+\href{https://www.rfc-editor.org/info/rfc9663}{RFC 9663} and
+\href{https://www.rfc-editor.org/info/rfc9762}{RFC 9762}.
 
 One scenario where such a solution may be useful is a shared-access
 network service where a Layer 2 access network (typically Wi-Fi) is
@@ -4184,7 +4197,46 @@ processes. It may also be an oportunity to implement more automation.
 
 \subsection{Routing operation}\label{routing-operation}
 
-Section text goes here
+\subsubsection{Global Routing}\label{global-routing}
+
+Global routing between service providers using multiprotocol BGP-4
+{[}\href{https://www.rfc-editor.org/info/rfc2545}{RFC2545},
+\href{https://www.rfc-editor.org/info/rfc4271}{RFC 4271},
+\href{https://www.rfc-editor.org/info/rfc4760}{RFC 4760}{]} is a highly
+specialized topic, not for amateurs, that will not be summarized here.
+An excellent source is Iljitsch van Beijnum\textquotesingle s book
+\href{https://www.iljitsch.com/2022/11-18-new-e-book-internet-routing-with-bgp.html}{Internet
+Routing with BGP} (2022). For relevant RFCs and upcoming drafts, see
+\href{https://datatracker.ietf.org/wg/grow/documents/}{the IETF GROW
+working group}, which covers both IPv6 and IPv4 BGP operations.
+
+\subsubsection{Carrier, Enterprise and Campus
+Networks}\label{carrier-enterprise-and-campus-networks}
+
+Carriers (Internet service providers) and very large enterprises
+typically operate iBGP
+{[}\href{https://www.rfc-editor.org/info/rfc4456}{RFC4456}{]}, IS-IS
+{[}\href{https://www.rfc-editor.org/info/rfc5308}{RFC5308},
+\href{https://www.rfc-editor.org/info/rfc7775}{RFC 7775}{]}, or OSPFv3
+{[}\href{https://www.rfc-editor.org/info/rfc5340}{RFC5340}{]} for IPv6.
+
+Most enterprise networks or campus networks typically operate OSPFv3
+{[}\href{https://www.rfc-editor.org/info/rfc5340}{RFC5340}{]} or IS-IS
+{[}\href{https://www.rfc-editor.org/info/rfc5308}{RFC5308},
+\href{https://www.rfc-editor.org/info/rfc7775}{RFC 7775}{]} for IPv6.
+
+A brief introduction to OSPFv3 usage is at the
+\href{https://www.blueally.com/ipv6-deployment-series-part-3-ospfv3/}{Blueally
+blog}.
+
+Not everyone can attend the RIPE NCC \emph{Advanced IPv6} training
+course, but everyone can download their excellent 264 slides, which
+cover OSPF and BGP configuration and many other things:
+\href{https://www.ripe.net/documents/3822/AdvancedIPv6-Slides_xDUF4U9.pdf}{download
+37MB}.
+
+A video introduction to IS-IS (for all address families) from Cisco is
+\href{https://youtu.be/jWdD8SCwzHk}{on Youtube}.
 
 \subsubsection{\texorpdfstring{\hyperref[benchmarking-and-monitoring]{Previous}
 \hyperref[security-operation]{Next}
@@ -5743,6 +5795,11 @@ deployment options. Here are some starting points:
   \href{https://academy.apnic.net/en/course/ipv6-fundamentals}{The APNIC
   IPv6 Fundamentals Course}
 \item
+  The RIPE NCC \emph{Advanced IPv6} training course. Everyone can
+  download their excellent 264 slides, which cover very many topics:
+  \href{https://www.ripe.net/documents/3822/AdvancedIPv6-Slides_xDUF4U9.pdf}{download
+  37MB}.
+\item
   Olivier Bonaventure\textquotesingle s
   \href{https://beta.computer-networking.info/syllabus/default/protocols/ipv6.html\#ip-version-6}{Computer
   Networking : Principles, Protocols and Practice} (2019)
@@ -5768,7 +5825,7 @@ deployment options. Here are some starting points:
   Routing with BGP} (2022). This contains a lot about IPv6 inter-domain
   routing.
 \item
-  more TBD
+  more suggestions welcome!
 \end{itemize}
 
 \hyperref[rfc-bibliography]{RFC bibliography}
@@ -5788,10 +5845,10 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 be misleading as well as out of date. Also see
 \hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}.
 
-RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
+RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
 
-\subsubsection{Standards Track (265
-RFCs)}\label{standards-track-265-rfcs}
+\subsubsection{Standards Track (267
+RFCs)}\label{standards-track-267-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -6642,9 +6699,16 @@ RFCs)}\label{standards-track-265-rfcs}
   \href{https://www.rfc-editor.org/info/rfc9740}{RFC 9740}: New IPFIX
   Information Elements for TCP Options and IPv6 Extension Headers
 \item
+  \href{https://www.rfc-editor.org/info/rfc9762}{RFC 9762}: Using Router
+  Advertisements to Signal the Availability of DHCPv6 Prefix Delegation
+  to Clients
+\item
   \href{https://www.rfc-editor.org/info/rfc9777}{RFC 9777}
   (\href{https://www.rfc-editor.org/info/std101}{STD 101}): Multicast
   Listener Discovery Version 2 (MLDv2) for IPv6
+\item
+  \href{https://www.rfc-editor.org/info/rfc9805}{RFC 9805}: Deprecation
+  of the IPv6 Router Alert Option for New Protocols
 \end{itemize}
 
 \subsubsection{Best Current Practice (15
@@ -6715,7 +6779,7 @@ RFCs)}\label{best-current-practice-15-rfcs}
   the Reaction of Customer Edge Routers to IPv6 Renumbering Events
 \end{itemize}
 
-\subsubsection{Informational (190 RFCs)}\label{informational-190-rfcs}
+\subsubsection{Informational (191 RFCs)}\label{informational-191-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -7339,6 +7403,10 @@ RFCs)}\label{best-current-practice-15-rfcs}
   \href{https://www.rfc-editor.org/info/rfc9663}{RFC 9663}: Using DHCPv6
   Prefix Delegation (DHCPv6-PD) to Allocate Unique IPv6 Prefixes per
   Client in Large Broadcast Networks
+\item
+  \href{https://www.rfc-editor.org/info/rfc9723}{RFC 9723}: BGP Colored
+  Prefix Routing (CPR) for Services Based on Segment Routing over IPv6
+  (SRv6)
 \end{itemize}
 
 \subsubsection{Experimental (24 RFCs)}\label{experimental-24-rfcs}
@@ -7750,7 +7818,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2025-05-15 15:55:01 UTC+1200
+Generated at 2025-07-19 08:33:25 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7789,8 +7857,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[basic-windows-commands]{¶} \hyperref[energy-consumption]{¶}
 \hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
-\hyperref[security-operation]{¶} \hyperref[cern-and-the-lhc]{¶}
-\hyperref[deployment-by-carriers]{¶}
+\hyperref[routing-operation]{¶} \hyperref[security-operation]{¶}
+\hyperref[cern-and-the-lhc]{¶} \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-enterprise]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[troubleshooting]{¶}
 \hyperref[advanced-troubleshooting]{¶} \hyperref[tools]{¶}
@@ -7806,10 +7874,11 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[addresses]{BGP ¶} \hyperref[routing]{¶}
 \hyperref[filtering]{¶} \hyperref[multi-prefix-operation]{¶}
-\hyperref[multihoming]{¶} \hyperref[tools]{¶}
-\hyperref[further-reading]{¶}
+\hyperref[multihoming]{¶} \hyperref[routing-operation]{¶}
+\hyperref[tools]{¶} \hyperref[further-reading]{¶}
 
-\hyperref[ipv6-primary-differences-from-ipv4]{broadcast ¶}
+\hyperref[managed-configuration]{broadcast ¶}
+\hyperref[ipv6-primary-differences-from-ipv4]{¶}
 
 \hyperref[address-and-prefix-management]{BYOD ¶}
 
@@ -7961,7 +8030,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[benchmarking-and-monitoring]{¶}
 \hyperref[energy-consumption]{¶} \hyperref[multi-prefix-operation]{¶}
 \hyperref[multihoming]{¶} \hyperref[packet-size-and-jumbo-frames]{¶}
-\hyperref[cern-and-the-lhc]{¶} \hyperref[deployment-by-carriers]{¶}
+\hyperref[routing-operation]{¶} \hyperref[cern-and-the-lhc]{¶}
+\hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[status]{¶}
 \hyperref[troubleshooting]{¶} \hyperref[advanced-troubleshooting]{¶}
 \hyperref[tools]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
@@ -7977,7 +8047,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[security]{¶} \hyperref[deployment-by-carriers]{¶}
 \hyperref[advanced-troubleshooting]{¶}
 
-\hyperref[routing]{IS-IS ¶}
+\hyperref[routing]{IS-IS ¶} \hyperref[routing-operation]{¶}
 
 \hyperref[packet-size-and-jumbo-frames]{Jumbo frames ¶}
 
@@ -8044,7 +8114,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[tunnels]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
 \hyperref[further-reading]{¶}
 
-\hyperref[routing]{OSPF ¶}
+\hyperref[routing]{OSPF ¶} \hyperref[routing-operation]{¶}
 
 \hyperref[dual-stack-scenarios]{performance ¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶} \hyperref[filtering]{¶}
@@ -8201,7 +8271,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2025-05-15 15:55:01 UTC+1200
+Generated at 2025-07-19 08:33:25 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -8252,7 +8322,7 @@ has links to each section that mentions each citation.
 
 \hyperref[obsolete-techniques]{RFC2529 ¶}
 
-\hyperref[routing]{RFC2545 ¶}
+\hyperref[routing]{RFC2545 ¶} \hyperref[routing-operation]{¶}
 
 \hyperref[packet-size-and-jumbo-frames]{RFC2675 ¶}
 
@@ -8311,7 +8381,7 @@ has links to each section that mentions each citation.
 
 \hyperref[dual-stack-scenarios]{RFC4213 ¶} \hyperref[tunnels]{¶}
 
-\hyperref[routing]{RFC4271 ¶}
+\hyperref[routing]{RFC4271 ¶} \hyperref[routing-operation]{¶}
 
 \hyperref[obsolete-features-in-ipv6]{RFC4283 ¶}
 
@@ -8328,7 +8398,7 @@ has links to each section that mentions each citation.
 
 \hyperref[obsolete-techniques]{RFC4380 ¶}
 
-\hyperref[routing]{RFC4456 ¶}
+\hyperref[routing]{RFC4456 ¶} \hyperref[routing-operation]{¶}
 
 \hyperref[address-resolution]{RFC4541 ¶}
 \hyperref[layer-2-considerations]{¶}
@@ -8337,7 +8407,7 @@ has links to each section that mentions each citation.
 
 \hyperref[filtering]{RFC4641 ¶}
 
-\hyperref[routing]{RFC4760 ¶}
+\hyperref[routing]{RFC4760 ¶} \hyperref[routing-operation]{¶}
 
 \hyperref[tunnels]{RFC4798 ¶}
 
@@ -8363,9 +8433,9 @@ has links to each section that mentions each citation.
 
 \hyperref[obsolete-techniques]{RFC5214 ¶}
 
-\hyperref[routing]{RFC5308 ¶}
+\hyperref[routing]{RFC5308 ¶} \hyperref[routing-operation]{¶}
 
-\hyperref[routing]{RFC5340 ¶}
+\hyperref[routing]{RFC5340 ¶} \hyperref[routing-operation]{¶}
 
 \hyperref[multihoming]{RFC5533 ¶}
 
@@ -8512,7 +8582,7 @@ has links to each section that mentions each citation.
 
 \hyperref[security-operation]{RFC7721 ¶}
 
-\hyperref[routing]{RFC7775 ¶}
+\hyperref[routing]{RFC7775 ¶} \hyperref[routing-operation]{¶}
 
 \hyperref[layer-2-considerations]{RFC7849 ¶}
 
@@ -8635,7 +8705,8 @@ has links to each section that mentions each citation.
 
 \hyperref[addresses]{RFC9637 ¶}
 
-\hyperref[prefix-per-host]{RFC9663 ¶}
+\hyperref[managed-configuration]{RFC9663 ¶}
+\hyperref[prefix-per-host]{¶}
 
 \hyperref[extension-headers-and-options]{RFC9673 ¶}
 
@@ -8644,6 +8715,9 @@ has links to each section that mentions each citation.
 \hyperref[address-and-prefix-management]{RFC9686 ¶}
 
 \hyperref[address-and-prefix-management]{RFC9724 ¶}
+
+\hyperref[managed-configuration]{RFC9762 ¶}
+\hyperref[prefix-per-host]{¶}
 
 \hyperref[transport-protocols]{STD7 ¶}
 

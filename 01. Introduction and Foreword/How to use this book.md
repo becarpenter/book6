@@ -24,6 +24,6 @@ page. To avoid this, with most browsers you can use CTRL+click (on
 Windows and Linux) or CMD+click (on MacOS) to open a new tab.
 
 You can download a pre-release PDF of the whole book [here](https://github.com/becarpenter/book6/blob/main/pdf/baked.pdf), and a pre-release ePub version [here](https://github.com/becarpenter/book6/blob/main/pdf/baked.epub).
-(On those pages, use the little "download" button <img src="../download.png" width="24px" height="auto"> at the top right.)
+(On those pages, use the little "download" button <img src="./download.png" width="24px" height="auto"> at the top right.)
 
 ### [<ins>Previous</ins>](Foreword.md) [<ins>Next</ins>](How%20a%20user%20sees%20IPv6.md) [<ins>Top</ins>](01.%20Introduction%20and%20Foreword.md)

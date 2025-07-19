@@ -28,7 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2025-05-15 15:55:32 UTC+1200
+Version captured at 2025-07-19 12:07:53 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -177,6 +177,9 @@ doesn't support automatically opening a link in a new browser tab or
 window, so clicking on links will always take you away from the current
 page. To avoid this, with most browsers you can use CTRL+click (on
 Windows and Linux) or CMD+click (on MacOS) to open a new tab.
+
+You can download a pre-release PDF of the whole book [here](https://github.com/becarpenter/book6/blob/main/pdf/baked.pdf), and a pre-release ePub version [here](https://github.com/becarpenter/book6/blob/main/pdf/baked.epub).
+(On those pages, use the little "download" button  at the top right.)
 
 ### [<ins>Previous</ins>](#foreword) [<ins>Next</ins>](#how-a-user-sees-ipv6) [<ins>Top</ins>](#introduction-and-foreword)
 
@@ -1378,7 +1381,13 @@ on and its router doesn't have an IPv6 prefix, an infrastructure router
 the `OPTION_IA_PD` and `OPTION_IAPREFIX` DHCPv6 options (previously
 defined by RFC3633, but now covered by
 [Section 6.3 of RFC8415](https://www.rfc-editor.org/rfc/rfc8415.html#section-6.3).
-This process is known as DHCPv6-PD (for "prefix delegation").
+This process is known as DHCPv6-PD (for "prefix delegation"). Further,
+it is possible to signal the availability of DHCPv6-PD in SLAAC Router
+Advertisements \[[RFC9762](https://www.rfc-editor.org/info/rfc9762)\],
+which allows client devices in large broadcast networks to benefit from
+an IPv6 prefix per device
+\[[RFC9663](https://www.rfc-editor.org/info/rfc9663)\],
+\[[5. Prefix per Host](#prefix-per-host)\].
 
 However, the 3GPP specifications for IPv6 usage over cellular mobile
 systems make both DHCPv6 and DHCPv6-PD optional
@@ -3356,9 +3365,10 @@ configuring temporary addresses
 \[[RFC8981](https://www.rfc-editor.org/info/rfc8981)\]. Since IPv6
 address space is not a scarce resource, there are scenarios where
 assigning a complete /64 prefix to an individual host may be
-advantageous. Two mechanisms for this have been defined in
-[RFC 8273](https://www.rfc-editor.org/info/rfc8273) and
-[RFC 9663](https://www.rfc-editor.org/info/rfc9663).
+advantageous. Mechanisms for this have been defined in
+[RFC 8273](https://www.rfc-editor.org/info/rfc8273),
+[RFC 9663](https://www.rfc-editor.org/info/rfc9663) and
+[RFC 9762](https://www.rfc-editor.org/info/rfc9762).
 
 One scenario where such a solution may be useful is a shared-access
 network service where a Layer 2 access network (typically Wi-Fi) is
@@ -3626,7 +3636,45 @@ processes. It may also be an oportunity to implement more automation.
 backslashpagebreak
 ## Routing operation
 
-Section text goes here
+### Global Routing
+
+Global routing between service providers using multiprotocol BGP-4
+\[[RFC2545](https://www.rfc-editor.org/info/rfc2545),
+[RFC 4271](https://www.rfc-editor.org/info/rfc4271),
+[RFC 4760](https://www.rfc-editor.org/info/rfc4760)\]
+is a highly specialized topic,
+not for amateurs, that will not be summarized here.
+An excellent source is Iljitsch van Beijnum's book
+[Internet Routing with BGP](https://www.iljitsch.com/2022/11-18-new-e-book-internet-routing-with-bgp.html)
+(2022). For relevant RFCs and upcoming drafts, see 
+[the IETF GROW working group](https://datatracker.ietf.org/wg/grow/documents/),
+which covers both IPv6 and IPv4 BGP operations.
+
+### Carrier, Enterprise and Campus Networks
+
+Carriers (Internet service providers) and very large enterprises
+typically operate iBGP
+\[[RFC4456](https://www.rfc-editor.org/info/rfc4456)\],
+IS-IS \[[RFC5308](https://www.rfc-editor.org/info/rfc5308),
+[RFC 7775](https://www.rfc-editor.org/info/rfc7775)\],
+or OSPFv3 \[[RFC5340](https://www.rfc-editor.org/info/rfc5340)\]
+for IPv6. 
+
+Most enterprise networks or campus networks typically operate
+OSPFv3 \[[RFC5340](https://www.rfc-editor.org/info/rfc5340)\]
+or IS-IS \[[RFC5308](https://www.rfc-editor.org/info/rfc5308),
+[RFC 7775](https://www.rfc-editor.org/info/rfc7775)\] for IPv6.
+
+A brief introduction to OSPFv3 usage is at the
+[Blueally blog](https://www.blueally.com/ipv6-deployment-series-part-3-ospfv3/).
+
+Not everyone can attend the RIPE NCC _Advanced IPv6_ training course,
+but everyone can download their excellent 264 slides, which cover
+OSPF and BGP configuration and many other things:
+[download 37MB](https://www.ripe.net/documents/3822/AdvancedIPv6-Slides_xDUF4U9.pdf).
+
+A video introduction to IS-IS (for all address families) from Cisco is
+[on Youtube](https://youtu.be/jWdD8SCwzHk).
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -5032,6 +5080,11 @@ deployment options. Here are some starting points:
   (2021)
 
 - [The APNIC IPv6 Fundamentals Course](https://academy.apnic.net/en/course/ipv6-fundamentals)
+  
+- The RIPE NCC _Advanced IPv6_ training course.
+Everyone can download their excellent 264 slides, which cover
+very many topics:
+[download 37MB](https://www.ripe.net/documents/3822/AdvancedIPv6-Slides_xDUF4U9.pdf).
 
 - Olivier Bonaventure's
   [Computer Networking : Principles, Protocols and Practice](https://beta.computer-networking.info/syllabus/default/protocols/ipv6.html#ip-version-6)
@@ -5057,7 +5110,7 @@ deployment options. Here are some starting points:
   [Internet Routing with BGP](https://www.iljitsch.com/2022/11-18-new-e-book-internet-routing-with-bgp.html)
   (2022). This contains a lot about IPv6 inter-domain routing.
 
-- more TBD
+- more suggestions welcome!
 
 [RFC bibliography](#rfc-bibliography)
 
@@ -5076,9 +5129,9 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](#obsolete-features-in-ipv6).
 
-RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
+RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
 
-### Standards Track (265 RFCs)
+### Standards Track (267 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -5647,9 +5700,14 @@ RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
   Self-Generated IPv6 Addresses Using DHCPv6
 - [RFC 9740](https://www.rfc-editor.org/info/rfc9740): New IPFIX
   Information Elements for TCP Options and IPv6 Extension Headers
+- [RFC 9762](https://www.rfc-editor.org/info/rfc9762): Using Router
+  Advertisements to Signal the Availability of DHCPv6 Prefix Delegation
+  to Clients
 - [RFC 9777](https://www.rfc-editor.org/info/rfc9777)
   ([STD 101](https://www.rfc-editor.org/info/std101)): Multicast
   Listener Discovery Version 2 (MLDv2) for IPv6
+- [RFC 9805](https://www.rfc-editor.org/info/rfc9805): Deprecation of
+  the IPv6 Router Alert Option for New Protocols
 
 ### Best Current Practice (15 RFCs)
 
@@ -5700,7 +5758,7 @@ RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
   ([BCP 234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
-### Informational (190 RFCs)
+### Informational (191 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -6122,6 +6180,9 @@ RFCbib6 run at 2025-05-13 10:23:00 UTC+1200 (494 RFCs found)
 - [RFC 9663](https://www.rfc-editor.org/info/rfc9663): Using DHCPv6
   Prefix Delegation (DHCPv6-PD) to Allocate Unique IPv6 Prefixes per
   Client in Large Broadcast Networks
+- [RFC 9723](https://www.rfc-editor.org/info/rfc9723): BGP Colored
+  Prefix Routing (CPR) for Services Based on Segment Routing over IPv6
+  (SRv6)
 
 ### Experimental (24 RFCs)
 
@@ -6481,7 +6542,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-05-15 15:55:01 UTC+1200
+Generated at 2025-07-19 08:33:25 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6529,6 +6590,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#energy-consumption)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#routing-operation)
 [¶](#security-operation)
 [¶](#cern-and-the-lhc)
 [¶](#deployment-by-carriers)
@@ -6554,10 +6616,12 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#filtering)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
+[¶](#routing-operation)
 [¶](#tools)
 [¶](#further-reading)
 
-[broadcast ¶](#ipv6-primary-differences-from-ipv4)
+[broadcast ¶](#managed-configuration)
+[¶](#ipv6-primary-differences-from-ipv4)
 
 [BYOD ¶](#address-and-prefix-management)
 
@@ -6764,6 +6828,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
 [¶](#packet-size-and-jumbo-frames)
+[¶](#routing-operation)
 [¶](#cern-and-the-lhc)
 [¶](#deployment-by-carriers)
 [¶](#deployment-in-the-home)
@@ -6787,6 +6852,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#advanced-troubleshooting)
 
 [IS-IS ¶](#routing)
+[¶](#routing-operation)
 
 [Jumbo frames ¶](#packet-size-and-jumbo-frames)
 
@@ -6880,6 +6946,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#further-reading)
 
 [OSPF ¶](#routing)
+[¶](#routing-operation)
 
 [performance ¶](#dual-stack-scenarios)
 [¶](#ipv6-primary-differences-from-ipv4)
@@ -7090,7 +7157,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-05-15 15:55:01 UTC+1200
+Generated at 2025-07-19 08:33:25 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -7144,6 +7211,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC2529 ¶](#obsolete-techniques)
 
 [RFC2545 ¶](#routing)
+[¶](#routing-operation)
 
 [RFC2675 ¶](#packet-size-and-jumbo-frames)
 
@@ -7208,6 +7276,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [¶](#tunnels)
 
 [RFC4271 ¶](#routing)
+[¶](#routing-operation)
 
 [RFC4283 ¶](#obsolete-features-in-ipv6)
 
@@ -7227,6 +7296,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC4380 ¶](#obsolete-techniques)
 
 [RFC4456 ¶](#routing)
+[¶](#routing-operation)
 
 [RFC4541 ¶](#address-resolution)
 [¶](#layer-2-considerations)
@@ -7236,6 +7306,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC4641 ¶](#filtering)
 
 [RFC4760 ¶](#routing)
+[¶](#routing-operation)
 
 [RFC4798 ¶](#tunnels)
 
@@ -7262,8 +7333,10 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC5214 ¶](#obsolete-techniques)
 
 [RFC5308 ¶](#routing)
+[¶](#routing-operation)
 
 [RFC5340 ¶](#routing)
+[¶](#routing-operation)
 
 [RFC5533 ¶](#multihoming)
 
@@ -7418,6 +7491,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC7721 ¶](#security-operation)
 
 [RFC7775 ¶](#routing)
+[¶](#routing-operation)
 
 [RFC7849 ¶](#layer-2-considerations)
 
@@ -7555,7 +7629,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC9637 ¶](#addresses)
 
-[RFC9663 ¶](#prefix-per-host)
+[RFC9663 ¶](#managed-configuration)
+[¶](#prefix-per-host)
 
 [RFC9673 ¶](#extension-headers-and-options)
 
@@ -7564,6 +7639,9 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9686 ¶](#address-and-prefix-management)
 
 [RFC9724 ¶](#address-and-prefix-management)
+
+[RFC9762 ¶](#managed-configuration)
+[¶](#prefix-per-host)
 
 [STD7 ¶](#transport-protocols)
 
