@@ -1,9 +1,9 @@
 ## CERN and the LHC
 
 The [CERN laboratory](https://www.cern.ch) and the
-[Worldwide LHC Computing Grid (WLCG)](https://home.cern/science/computing/grid)
-are large users of IPv6 for massive data transfers. Some recent
-statistics are shown here:
+[Worldwide Large Hadron Collide Computing Grid (WLCG)](https://home.cern/science/computing/grid)
+are large users of IPv6 for massive data transfers. Some
+statistics from early 2024 are shown here:
 
 <img src="./CERN-IPv6-Feb24.png" alt="Graph showing 644 Gb/s"> 
 
@@ -11,6 +11,9 @@ statistics are shown here:
 
 The CERN site itself operates a classical IPv4 and IPv6 dual stack, and
 uses DHCPv6 for IPv6 address assignment.
+
+A detailed report on progess towards IPv6-only in the WLCG can be found
+[here](https://docs.google.com/presentation/d/1riTdi7zgoJ3ig31Hp-gy4Z089PeKaoRJHALOcvjGn5E/).
 
 <!-- Link lines generated automatically; do not delete -->
 
