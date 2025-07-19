@@ -1,6 +1,8 @@
 ## Remote configuration
 
-Section text goes here
+This section remains to be written. If you have expertise in this field, please feel free to write it!
+
+[Information on how to contribute.](https://github.com/becarpenter/book6/tree/main/99.%20Chapter%20Template/99.%20Chapter%20Template.md)
 
 <!-- Link lines generated automatically; do not delete -->
 
