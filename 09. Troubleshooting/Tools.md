@@ -103,7 +103,7 @@ features.
 - [https://tools.forwardingplane.net](https://tools.forwardingplane.net)
 
 `ndisc6` is a Linux package that includes useful tools for understanding and
-troubleshooting NDP. In particular, the binaries `ndisc6` and `rdisc6` are used
+troubleshooting NDP (neighbor discovery protocol). In particular, the binaries `ndisc6` and `rdisc6` are used
 to generate Neighbor Solicitation and Router Solicitation packets respectively
 that target a specific address via a specific interface. This is useful for
 forcing a Linux system to arbitrarily attempt address resolution for an IPv6
