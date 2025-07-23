@@ -15,7 +15,8 @@ here.
 
 When A has determined that B's address is on-link, and in the process
 determined which interface that link is connected to, it starts address
-resolution, also known as neighbor discovery (ND). It multicasts a
+resolution, also known as neighbor discovery (ND) or neighbor discovery
+protocol (NDP). It multicasts a
 Neighbor Solicitation message via that interface to the relevant link
 local multicast address, which is known as the solicited-node multicast
 address. This is defined in

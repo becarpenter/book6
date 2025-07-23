@@ -93,3 +93,4 @@ PMTUD
 prefix prefixes
 security
 privacy
+'neighbor discovery' 'neighbour discovery' NDP ND
