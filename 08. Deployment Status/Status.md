@@ -60,6 +60,10 @@ between the two statistics to the global count, we end up with a Ratio
 of 43.68% in September 2022, not that far from the "psychological"
 threshold of 50%.
 
+In August 2025, China’s Cyberspace Administration announced that by June,
+China had 834 million active IPv6 users, i.e., __75.29%__ of Chinese Internet users.
+66% of traffic on mobile networks ran over IPv6, vs 28.32% on fixed networks.
+
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Next</ins>](Deployment%20by%20carriers.md) [<ins>Top</ins>](08.%20Deployment%20Status.md)
