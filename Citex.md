@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2025-07-24 11:40:42 UTC+1200
+Generated at 2025-09-01 14:56:31 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -212,6 +212,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC6157 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
+
+[RFC6177 ●](./05.%20Network%20Design/Address%20Planning.md)
 
 [RFC6180 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/03.%20Coexistence%20with%20Legacy%20IPv4.md)
 
@@ -486,6 +488,10 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC9762 ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./05.%20Network%20Design/Prefix%20per%20Host.md)
+
+[RFC9818 ●](./05.%20Network%20Design/Prefix%20per%20Host.md)
+
+[RFC9844 ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 
 [STD7 ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 

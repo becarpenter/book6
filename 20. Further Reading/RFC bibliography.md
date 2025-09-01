@@ -8,9 +8,9 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](../10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
-RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
+RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
 
-### Standards Track (267 RFCs)
+### Standards Track (268 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -323,8 +323,6 @@ RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
   Line-Identification Option
 - [RFC 6791](https://www.rfc-editor.org/info/rfc6791): Stateless Source
   Address Mapping for ICMPv6 Packets
-- [RFC 6874](https://www.rfc-editor.org/info/rfc6874): Representing IPv6
-  Zone Identifiers in Address Literals and Uniform Resource Identifiers
 - [RFC 6909](https://www.rfc-editor.org/info/rfc6909): IPv4 Traffic
   Offload Selector Option for Proxy Mobile IPv6
 - [RFC 6911](https://www.rfc-editor.org/info/rfc6911): RADIUS Attributes
@@ -587,6 +585,10 @@ RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
   Listener Discovery Version 2 (MLDv2) for IPv6
 - [RFC 9805](https://www.rfc-editor.org/info/rfc9805): Deprecation of
   the IPv6 Router Alert Option for New Protocols
+- [RFC 9819](https://www.rfc-editor.org/info/rfc9819): Argument
+  Signaling for BGP Services in Segment Routing over IPv6 (SRv6)
+- [RFC 9844](https://www.rfc-editor.org/info/rfc9844): Entering IPv6
+  Zone Identifiers in User Interfaces
 
 ### Best Current Practice (15 RFCs)
 
@@ -637,7 +639,7 @@ RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
   ([BCP 234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
-### Informational (191 RFCs)
+### Informational (192 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -1062,8 +1064,10 @@ RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
 - [RFC 9723](https://www.rfc-editor.org/info/rfc9723): BGP Colored
   Prefix Routing (CPR) for Services Based on Segment Routing over IPv6
   (SRv6)
+- [RFC 9818](https://www.rfc-editor.org/info/rfc9818): DHCPv6 Prefix
+  Delegation on IPv6 Customer Edge (CE) Routers in LANs
 
-### Experimental (24 RFCs)
+### Experimental (25 RFCs)
 
 - [RFC 4620](https://www.rfc-editor.org/info/rfc4620): IPv6 Node
   Information Queries
@@ -1119,6 +1123,8 @@ RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
   MTU Hop-by-Hop Option
 - [RFC 9631](https://www.rfc-editor.org/info/rfc9631): The IPv6 Compact
   Routing Header (CRH)
+- [RFC 9837](https://www.rfc-editor.org/info/rfc9837): The IPv6 VPN
+  Service Destination Option
 
 <!-- Link lines generated automatically; do not delete -->
 

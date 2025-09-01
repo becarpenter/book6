@@ -7,8 +7,9 @@ address space is not a scarce resource, there are scenarios where
 assigning a complete /64 prefix to an individual host may be
 advantageous. Mechanisms for this have been defined in
 [RFC 8273](https://www.rfc-editor.org/info/rfc8273),
-[RFC 9663](https://www.rfc-editor.org/info/rfc9663) and
-[RFC 9762](https://www.rfc-editor.org/info/rfc9762).
+[RFC 9663](https://www.rfc-editor.org/info/rfc9663), and
+[RFC 9762](https://www.rfc-editor.org/info/rfc9762) and
+\[[RFC9818](https://www.rfc-editor.org/info/rfc9818)\].
 
 One scenario where such a solution may be useful is a shared-access
 network service where a Layer 2 access network (typically Wi-Fi) is

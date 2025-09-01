@@ -28,7 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2025-07-24 11:41:30 UTC+1200
+Version captured at 2025-09-01 14:57:10 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -941,7 +941,10 @@ a Windows host; the character(s) after the '%' sign are the Layer 2
 interface's locally defined identifier. Unfortunately, that makes two
 'identifiers' in one address. Technically, the second one can be
 referred to as the 'Zone ID' according to
-[RFC 4007](https://www.rfc-editor.org/info/rfc4007).
+[RFC 4007](https://www.rfc-editor.org/info/rfc4007). User interfaces
+need to accept the Zone ID in some use cases
+\[[RFC9844](https://www.rfc-editor.org/info/rfc9844)\]. Unfortunately,
+current web browsers do not.
 
 ### Embedded IPv4 addresses
 
@@ -3183,12 +3186,13 @@ backslashpagebreak
 As you would expect, in IPv6 networks all nodes may have globally unique
 addresses. All networks will be given at least a /64 global prefix to
 operate. Carriers should deliver a shorter prefix to their subscribers
-(typically in the range /48 through /56), which allows multiple /64
-subnets within subscriber organizations or home environments. Even a
-home customer can have a public network prefix to be split into smaller
-networks, which is a paradigm shift from “hiding behind NAT” on a few
-public IPv4 addresses (or even inside `100.64.0.0/10`
-\[[RFC6598](https://www.rfc-editor.org/info/rfc6598)\]).
+(typically in the range /48 through /56)
+\[[RFC6177](https://www.rfc-editor.org/info/rfc6177)\], which allows
+multiple /64 subnets within subscriber organizations or home
+environments. Even a home customer can have a public network prefix to
+be split into smaller networks, which is a paradigm shift from “hiding
+behind NAT” on a few public IPv4 addresses (or even inside
+`100.64.0.0/10` \[[RFC6598](https://www.rfc-editor.org/info/rfc6598)\]).
 
 In IPv6 networks, it is often necessary to manage received prefixes,
 even if it is done automatically by a CE router. Likewise, network
@@ -3368,8 +3372,9 @@ address space is not a scarce resource, there are scenarios where
 assigning a complete /64 prefix to an individual host may be
 advantageous. Mechanisms for this have been defined in
 [RFC 8273](https://www.rfc-editor.org/info/rfc8273),
-[RFC 9663](https://www.rfc-editor.org/info/rfc9663) and
-[RFC 9762](https://www.rfc-editor.org/info/rfc9762).
+[RFC 9663](https://www.rfc-editor.org/info/rfc9663), and
+[RFC 9762](https://www.rfc-editor.org/info/rfc9762) and
+\[[RFC9818](https://www.rfc-editor.org/info/rfc9818)\].
 
 One scenario where such a solution may be useful is a shared-access
 network service where a Layer 2 access network (typically Wi-Fi) is
@@ -4283,6 +4288,10 @@ between the two statistics to the global count, we end up with a Ratio
 of 43.68% in September 2022, not that far from the "psychological"
 threshold of 50%.
 
+In August 2025, China’s Cyberspace Administration announced that by June,
+China had 834 million active IPv6 users, i.e., __75.29%__ of Chinese Internet users.
+66% of traffic on mobile networks ran over IPv6, vs 28.32% on fixed networks.
+
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Next</ins>](#deployment-by-carriers) [<ins>Top</ins>](#deployment-status)
@@ -4833,7 +4842,7 @@ features.
 - [https://tools.forwardingplane.net](https://tools.forwardingplane.net)
 
 `ndisc6` is a Linux package that includes useful tools for understanding and
-troubleshooting NDP. In particular, the binaries `ndisc6` and `rdisc6` are used
+troubleshooting NDP (neighbor discovery protocol). In particular, the binaries `ndisc6` and `rdisc6` are used
 to generate Neighbor Solicitation and Router Solicitation packets respectively
 that target a specific address via a specific interface. This is useful for
 forcing a Linux system to arbitrarily attempt address resolution for an IPv6
@@ -5152,9 +5161,9 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](#obsolete-features-in-ipv6).
 
-RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
+RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
 
-### Standards Track (267 RFCs)
+### Standards Track (268 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -5467,8 +5476,6 @@ RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
   Line-Identification Option
 - [RFC 6791](https://www.rfc-editor.org/info/rfc6791): Stateless Source
   Address Mapping for ICMPv6 Packets
-- [RFC 6874](https://www.rfc-editor.org/info/rfc6874): Representing IPv6
-  Zone Identifiers in Address Literals and Uniform Resource Identifiers
 - [RFC 6909](https://www.rfc-editor.org/info/rfc6909): IPv4 Traffic
   Offload Selector Option for Proxy Mobile IPv6
 - [RFC 6911](https://www.rfc-editor.org/info/rfc6911): RADIUS Attributes
@@ -5731,6 +5738,10 @@ RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
   Listener Discovery Version 2 (MLDv2) for IPv6
 - [RFC 9805](https://www.rfc-editor.org/info/rfc9805): Deprecation of
   the IPv6 Router Alert Option for New Protocols
+- [RFC 9819](https://www.rfc-editor.org/info/rfc9819): Argument
+  Signaling for BGP Services in Segment Routing over IPv6 (SRv6)
+- [RFC 9844](https://www.rfc-editor.org/info/rfc9844): Entering IPv6
+  Zone Identifiers in User Interfaces
 
 ### Best Current Practice (15 RFCs)
 
@@ -5781,7 +5792,7 @@ RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
   ([BCP 234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
 
-### Informational (191 RFCs)
+### Informational (192 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -6206,8 +6217,10 @@ RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
 - [RFC 9723](https://www.rfc-editor.org/info/rfc9723): BGP Colored
   Prefix Routing (CPR) for Services Based on Segment Routing over IPv6
   (SRv6)
+- [RFC 9818](https://www.rfc-editor.org/info/rfc9818): DHCPv6 Prefix
+  Delegation on IPv6 Customer Edge (CE) Routers in LANs
 
-### Experimental (24 RFCs)
+### Experimental (25 RFCs)
 
 - [RFC 4620](https://www.rfc-editor.org/info/rfc4620): IPv6 Node
   Information Queries
@@ -6263,6 +6276,8 @@ RFCbib6 run at 2025-07-19 08:32:00 UTC+1200 (497 RFCs found)
   MTU Hop-by-Hop Option
 - [RFC 9631](https://www.rfc-editor.org/info/rfc9631): The IPv6 Compact
   Routing Header (CRH)
+- [RFC 9837](https://www.rfc-editor.org/info/rfc9837): The IPv6 VPN
+  Service Destination Option
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -6565,7 +6580,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-07-24 11:40:42 UTC+1200
+Generated at 2025-09-01 14:56:31 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -7001,6 +7016,10 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [PPP ¶](#layer-2-functions)
 
+[prefix delegation ¶](#managed-configuration)
+[¶](#prefix-per-host)
+[¶](#address-and-prefix-management)
+
 [prefix ¶](#addresses)
 [¶](#auto-configuration)
 [¶](#managed-configuration)
@@ -7192,7 +7211,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-07-24 11:40:42 UTC+1200
+Generated at 2025-09-01 14:56:31 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -7403,6 +7422,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC6157 ¶](#dual-stack-scenarios)
 [¶](#multihoming)
+
+[RFC6177 ¶](#address-planning)
 
 [RFC6180 ¶](#coexistence-with-legacy-ipv4)
 
@@ -7677,6 +7698,10 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC9762 ¶](#managed-configuration)
 [¶](#prefix-per-host)
+
+[RFC9818 ¶](#prefix-per-host)
+
+[RFC9844 ¶](#addresses)
 
 [STD7 ¶](#transport-protocols)
 

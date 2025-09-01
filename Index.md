@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2025-07-24 11:40:42 UTC+1200
+Generated at 2025-09-01 14:56:31 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -436,6 +436,10 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
 [PPP ●](./02.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
+
+[prefix delegation ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+[●](./05.%20Network%20Design/Prefix%20per%20Host.md)
+[●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
 [prefix ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)

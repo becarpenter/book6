@@ -30,6 +30,7 @@ Babel
 SLAAC
 DHCP DHCPv6
 prefix DHCPv6-PD
+'prefix delegation' DHCPv6-PD
 IANA
 ARP
 broadcast

@@ -261,7 +261,10 @@ a Windows host; the character(s) after the '%' sign are the Layer 2
 interface's locally defined identifier. Unfortunately, that makes two
 'identifiers' in one address. Technically, the second one can be
 referred to as the 'Zone ID' according to
-[RFC 4007](https://www.rfc-editor.org/info/rfc4007).
+[RFC 4007](https://www.rfc-editor.org/info/rfc4007). User interfaces
+need to accept the Zone ID in some use cases
+\[[RFC9844](https://www.rfc-editor.org/info/rfc9844)\]. Unfortunately,
+current web browsers do not.
 
 ### Embedded IPv4 addresses
 

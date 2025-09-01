@@ -3,12 +3,13 @@
 As you would expect, in IPv6 networks all nodes may have globally unique
 addresses. All networks will be given at least a /64 global prefix to
 operate. Carriers should deliver a shorter prefix to their subscribers
-(typically in the range /48 through /56), which allows multiple /64
-subnets within subscriber organizations or home environments. Even a
-home customer can have a public network prefix to be split into smaller
-networks, which is a paradigm shift from “hiding behind NAT” on a few
-public IPv4 addresses (or even inside `100.64.0.0/10`
-\[[RFC6598](https://www.rfc-editor.org/info/rfc6598)\]).
+(typically in the range /48 through /56)
+\[[RFC6177](https://www.rfc-editor.org/info/rfc6177)\], which allows
+multiple /64 subnets within subscriber organizations or home
+environments. Even a home customer can have a public network prefix to
+be split into smaller networks, which is a paradigm shift from “hiding
+behind NAT” on a few public IPv4 addresses (or even inside
+`100.64.0.0/10` \[[RFC6598](https://www.rfc-editor.org/info/rfc6598)\]).
 
 In IPv6 networks, it is often necessary to manage received prefixes,
 even if it is done automatically by a CE router. Likewise, network
