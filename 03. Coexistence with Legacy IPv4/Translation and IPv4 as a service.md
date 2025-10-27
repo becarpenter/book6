@@ -46,6 +46,9 @@ of translation techniques from the discussion of IPv4 as a service.
     translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781) and
     [RFC 8880](https://www.rfc-editor.org/info/rfc8880) are mechanisms
     by which a host can learn the PREF64 in use.
+    [RFC 9872](https://www.rfc-editor.org/info/rfc9872) recommends all
+    operators to support RFC 8781, i.e. announce PREF64 via Router
+    Advertisements, if possible.
 
 - 464XLAT (Combination of Stateful and Stateless Translation)
   \[[RFC6877](https://www.rfc-editor.org/info/rfc6877)\] is SIIT plus
