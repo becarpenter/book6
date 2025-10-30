@@ -88,13 +88,24 @@ addresses in URLs are in square brackets like this:
 https://[2001:db8:4006:80b::200e]:443
 ```
 
+### Address registries
+
+The top-level address registries are maintained by IANA
+(the Internet Assigned Numbers Authority) in the
+[IPv6 Address Space registry](https://www.iana.org/assignments/ipv6-address-space/ipv6-address-space.xhtml)
+and several subsdidiary registries linked from that page.
+
+Regional address assignments are maintained by the RIRs (Regional Internet Registries) as described on the [IANA web site](https://www.iana.org/numbers). RIRs in turn assign address space to Internet service providers, national registries, or local registries.
+
 ### Easy addresses
 
 The unspecified IPv6 address is simply zero, represented as `::`.
 
 The loopback IPv6 address is 1, represented as `::1`. Note that IPv6
 only has one loopback address whereas IPv4 has `127.0.0.0/8` reserved
-for loopback addressing.
+for loopback addressing. It seems that some operators have misused
+address such as `::2` or `::3` as if they were loopback addresses; this
+is a misconfiguration.
 
 ### Routeable unicast addresses
 
@@ -330,6 +341,10 @@ never appear on the real Internet
 \[[RFC3849](https://www.rfc-editor.org/info/rfc3849)\]. For documenting
 examples that need a prefix shorter than /32, the prefix `3fff::/20` has
 been reserved \[[RFC9637](https://www.rfc-editor.org/info/rfc9637)\].
+
+Another special case worth mentioning is the _discard prefix_
+`0100::/64`; a packet sent to any address in this prefix will be dropped
+\[[RFC6666](https://www.rfc-editor.org/info/rfc6666)\].
 
 ### Obsolete address types
 

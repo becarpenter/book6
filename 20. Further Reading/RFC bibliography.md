@@ -8,7 +8,7 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](../10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
-RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
+RFCbib6 run at 2025-10-30 14:14:22 UTC+1300 (502 RFCs found)
 
 ### Standards Track (268 RFCs)
 
@@ -590,7 +590,7 @@ RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
 - [RFC 9844](https://www.rfc-editor.org/info/rfc9844): Entering IPv6
   Zone Identifiers in User Interfaces
 
-### Best Current Practice (15 RFCs)
+### Best Current Practice (16 RFCs)
 
 - [RFC 3901](https://www.rfc-editor.org/info/rfc3901)
   ([BCP 91](https://www.rfc-editor.org/info/bcp91)): DNS IPv6 Transport
@@ -638,8 +638,11 @@ RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
 - [RFC 9096](https://www.rfc-editor.org/info/rfc9096)
   ([BCP 234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
+- [RFC 9812](https://www.rfc-editor.org/info/rfc9812)
+  ([BCP 242](https://www.rfc-editor.org/info/bcp242)): Clarification of
+  IPv6 Address Allocation Policy
 
-### Informational (192 RFCs)
+### Informational (193 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -1066,6 +1069,8 @@ RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
   (SRv6)
 - [RFC 9818](https://www.rfc-editor.org/info/rfc9818): DHCPv6 Prefix
   Delegation on IPv6 Customer Edge (CE) Routers in LANs
+- [RFC 9872](https://www.rfc-editor.org/info/rfc9872): Recommendations
+  for Discovering IPv6 Prefix Used for IPv6 Address Synthesis
 
 ### Experimental (25 RFCs)
 

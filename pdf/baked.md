@@ -28,7 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2025-09-01 14:57:10 UTC+1200
+Version captured at 2025-10-30 14:36:46 UTC+1300
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -768,13 +768,24 @@ addresses in URLs are in square brackets like this:
 https://[2001:db8:4006:80b::200e]:443
 ```
 
+### Address registries
+
+The top-level address registries are maintained by IANA
+(the Internet Assigned Numbers Authority) in the
+[IPv6 Address Space registry](https://www.iana.org/assignments/ipv6-address-space/ipv6-address-space.xhtml)
+and several subsdidiary registries linked from that page.
+
+Regional address assignments are maintained by the RIRs (Regional Internet Registries) as described on the [IANA web site](https://www.iana.org/numbers). RIRs in turn assign address space to Internet service providers, national registries, or local registries.
+
 ### Easy addresses
 
 The unspecified IPv6 address is simply zero, represented as `::`.
 
 The loopback IPv6 address is 1, represented as `::1`. Note that IPv6
 only has one loopback address whereas IPv4 has `127.0.0.0/8` reserved
-for loopback addressing.
+for loopback addressing. It seems that some operators have misused
+address such as `::2` or `::3` as if they were loopback addresses; this
+is a misconfiguration.
 
 ### Routeable unicast addresses
 
@@ -1010,6 +1021,10 @@ never appear on the real Internet
 \[[RFC3849](https://www.rfc-editor.org/info/rfc3849)\]. For documenting
 examples that need a prefix shorter than /32, the prefix `3fff::/20` has
 been reserved \[[RFC9637](https://www.rfc-editor.org/info/rfc9637)\].
+
+Another special case worth mentioning is the _discard prefix_
+`0100::/64`; a packet sent to any address in this prefix will be dropped
+\[[RFC6666](https://www.rfc-editor.org/info/rfc6666)\].
 
 ### Obsolete address types
 
@@ -2442,6 +2457,9 @@ of translation techniques from the discussion of IPv4 as a service.
     translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781) and
     [RFC 8880](https://www.rfc-editor.org/info/rfc8880) are mechanisms
     by which a host can learn the PREF64 in use.
+    [RFC 9872](https://www.rfc-editor.org/info/rfc9872) recommends all
+    operators to support RFC 8781, i.e. announce PREF64 via Router
+    Advertisements, if possible.
 
 - 464XLAT (Combination of Stateful and Stateless Translation)
   \[[RFC6877](https://www.rfc-editor.org/info/rfc6877)\] is SIIT plus
@@ -3372,7 +3390,7 @@ address space is not a scarce resource, there are scenarios where
 assigning a complete /64 prefix to an individual host may be
 advantageous. Mechanisms for this have been defined in
 [RFC 8273](https://www.rfc-editor.org/info/rfc8273),
-[RFC 9663](https://www.rfc-editor.org/info/rfc9663), and
+[RFC 9663](https://www.rfc-editor.org/info/rfc9663),
 [RFC 9762](https://www.rfc-editor.org/info/rfc9762) and
 \[[RFC9818](https://www.rfc-editor.org/info/rfc9818)\].
 
@@ -5161,7 +5179,7 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](#obsolete-features-in-ipv6).
 
-RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
+RFCbib6 run at 2025-10-30 14:14:22 UTC+1300 (502 RFCs found)
 
 ### Standards Track (268 RFCs)
 
@@ -5743,7 +5761,7 @@ RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
 - [RFC 9844](https://www.rfc-editor.org/info/rfc9844): Entering IPv6
   Zone Identifiers in User Interfaces
 
-### Best Current Practice (15 RFCs)
+### Best Current Practice (16 RFCs)
 
 - [RFC 3901](https://www.rfc-editor.org/info/rfc3901)
   ([BCP 91](https://www.rfc-editor.org/info/bcp91)): DNS IPv6 Transport
@@ -5791,8 +5809,11 @@ RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
 - [RFC 9096](https://www.rfc-editor.org/info/rfc9096)
   ([BCP 234](https://www.rfc-editor.org/info/bcp234)): Improving the
   Reaction of Customer Edge Routers to IPv6 Renumbering Events
+- [RFC 9812](https://www.rfc-editor.org/info/rfc9812)
+  ([BCP 242](https://www.rfc-editor.org/info/bcp242)): Clarification of
+  IPv6 Address Allocation Policy
 
-### Informational (192 RFCs)
+### Informational (193 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -6219,6 +6240,8 @@ RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
   (SRv6)
 - [RFC 9818](https://www.rfc-editor.org/info/rfc9818): DHCPv6 Prefix
   Delegation on IPv6 Customer Edge (CE) Routers in LANs
+- [RFC 9872](https://www.rfc-editor.org/info/rfc9872): Recommendations
+  for Discovering IPv6 Prefix Used for IPv6 Address Synthesis
 
 ### Experimental (25 RFCs)
 
@@ -6580,7 +6603,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-09-01 14:56:31 UTC+1200
+Generated at 2025-10-30 14:16:24 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -7211,7 +7234,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2025-09-01 14:56:31 UTC+1200
+Generated at 2025-10-30 14:16:24 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -7462,7 +7485,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC6636 ¶](#address-resolution)
 
-[RFC6666 ¶](#filtering)
+[RFC6666 ¶](#addresses)
+[¶](#filtering)
 
 [RFC6724 ¶](#how-an-application-programmer-sees-ipv6)
 [¶](#dns)
@@ -7702,6 +7726,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9818 ¶](#prefix-per-host)
 
 [RFC9844 ¶](#addresses)
+
+[RFC9872 ¶](#translation-and-ipv4-as-a-service)
 
 [STD7 ¶](#transport-protocols)
 

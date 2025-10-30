@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2025-09-01 14:56:31 UTC+1200
+Generated at 2025-10-30 14:16:24 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -252,7 +252,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC6636 ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 
-[RFC6666 ●](./04.%20Security/Filtering.md)
+[RFC6666 ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./04.%20Security/Filtering.md)
 
 [RFC6724 ●](./01.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
 [●](./02.%20IPv6%20Basic%20Technology/DNS.md)
@@ -492,6 +493,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9818 ●](./05.%20Network%20Design/Prefix%20per%20Host.md)
 
 [RFC9844 ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
+
+[RFC9872 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [STD7 ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 

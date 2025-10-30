@@ -133,7 +133,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2025-09-01 14:57:10 UTC+1200
+Version captured at 2025-10-30 14:36:46 UTC+1300
 
 \pagebreak
 
@@ -1031,13 +1031,29 @@ square brackets like this:
 https://[2001:db8:4006:80b::200e]:443
 \end{verbatim}
 
+\subsubsection{Address registries}\label{address-registries}
+
+The top-level address registries are maintained by IANA (the Internet
+Assigned Numbers Authority) in the
+\href{https://www.iana.org/assignments/ipv6-address-space/ipv6-address-space.xhtml}{IPv6
+Address Space registry} and several subsdidiary registries linked from
+that page.
+
+Regional address assignments are maintained by the RIRs (Regional
+Internet Registries) as described on the
+\href{https://www.iana.org/numbers}{IANA web site}. RIRs in turn assign
+address space to Internet service providers, national registries, or
+local registries.
+
 \subsubsection{Easy addresses}\label{easy-addresses}
 
 The unspecified IPv6 address is simply zero, represented as \texttt{::}.
 
 The loopback IPv6 address is 1, represented as \texttt{::1}. Note that
 IPv6 only has one loopback address whereas IPv4 has \texttt{127.0.0.0/8}
-reserved for loopback addressing.
+reserved for loopback addressing. It seems that some operators have
+misused address such as \texttt{::2} or \texttt{::3} as if they were
+loopback addresses; this is a misconfiguration.
 
 \subsubsection{Routeable unicast
 addresses}\label{routeable-unicast-addresses}
@@ -1307,6 +1323,10 @@ should never appear on the real Internet
 documenting examples that need a prefix shorter than /32, the prefix
 \texttt{3fff::/20} has been reserved
 {[}\href{https://www.rfc-editor.org/info/rfc9637}{RFC9637}{]}.
+
+Another special case worth mentioning is the \emph{discard prefix}
+\texttt{0100::/64}; a packet sent to any address in this prefix will be
+dropped {[}\href{https://www.rfc-editor.org/info/rfc6666}{RFC6666}{]}.
 
 \subsubsection{Obsolete address types}\label{obsolete-address-types}
 
@@ -2906,6 +2926,9 @@ of translation techniques from the discussion of IPv4 as a service.
     translator. \href{https://www.rfc-editor.org/info/rfc8781}{RFC 8781}
     and \href{https://www.rfc-editor.org/info/rfc8880}{RFC 8880} are
     mechanisms by which a host can learn the PREF64 in use.
+    \href{https://www.rfc-editor.org/info/rfc9872}{RFC 9872} recommends
+    all operators to support RFC 8781, i.e. announce PREF64 via Router
+    Advertisements, if possible.
   \end{itemize}
 \item
   464XLAT (Combination of Stateful and Stateless Translation)
@@ -3924,7 +3947,7 @@ IPv6 address space is not a scarce resource, there are scenarios where
 assigning a complete /64 prefix to an individual host may be
 advantageous. Mechanisms for this have been defined in
 \href{https://www.rfc-editor.org/info/rfc8273}{RFC 8273},
-\href{https://www.rfc-editor.org/info/rfc9663}{RFC 9663}, and
+\href{https://www.rfc-editor.org/info/rfc9663}{RFC 9663},
 \href{https://www.rfc-editor.org/info/rfc9762}{RFC 9762} and
 {[}\href{https://www.rfc-editor.org/info/rfc9818}{RFC9818}{]}.
 
@@ -5888,7 +5911,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 be misleading as well as out of date. Also see
 \hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}.
 
-RFCbib6 run at 2025-09-01 14:54:40 UTC+1200 (500 RFCs found)
+RFCbib6 run at 2025-10-30 14:14:22 UTC+1300 (502 RFCs found)
 
 \subsubsection{Standards Track (268
 RFCs)}\label{standards-track-268-rfcs}
@@ -6756,8 +6779,8 @@ RFCs)}\label{standards-track-268-rfcs}
   IPv6 Zone Identifiers in User Interfaces
 \end{itemize}
 
-\subsubsection{Best Current Practice (15
-RFCs)}\label{best-current-practice-15-rfcs}
+\subsubsection{Best Current Practice (16
+RFCs)}\label{best-current-practice-16-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -6822,9 +6845,13 @@ RFCs)}\label{best-current-practice-15-rfcs}
   \href{https://www.rfc-editor.org/info/rfc9096}{RFC 9096}
   (\href{https://www.rfc-editor.org/info/bcp234}{BCP 234}): Improving
   the Reaction of Customer Edge Routers to IPv6 Renumbering Events
+\item
+  \href{https://www.rfc-editor.org/info/rfc9812}{RFC 9812}
+  (\href{https://www.rfc-editor.org/info/bcp242}{BCP 242}):
+  Clarification of IPv6 Address Allocation Policy
 \end{itemize}
 
-\subsubsection{Informational (192 RFCs)}\label{informational-192-rfcs}
+\subsubsection{Informational (193 RFCs)}\label{informational-193-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -7455,6 +7482,10 @@ RFCs)}\label{best-current-practice-15-rfcs}
 \item
   \href{https://www.rfc-editor.org/info/rfc9818}{RFC 9818}: DHCPv6
   Prefix Delegation on IPv6 Customer Edge (CE) Routers in LANs
+\item
+  \href{https://www.rfc-editor.org/info/rfc9872}{RFC 9872}:
+  Recommendations for Discovering IPv6 Prefix Used for IPv6 Address
+  Synthesis
 \end{itemize}
 
 \subsubsection{Experimental (25 RFCs)}\label{experimental-25-rfcs}
@@ -7869,7 +7900,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2025-09-01 14:56:31 UTC+1200
+Generated at 2025-10-30 14:16:24 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -8334,7 +8365,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2025-09-01 14:56:31 UTC+1200
+Generated at 2025-10-30 14:16:24 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -8566,7 +8597,7 @@ has links to each section that mentions each citation.
 
 \hyperref[address-resolution]{RFC6636 ¶}
 
-\hyperref[filtering]{RFC6666 ¶}
+\hyperref[addresses]{RFC6666 ¶} \hyperref[filtering]{¶}
 
 \hyperref[how-an-application-programmer-sees-ipv6]{RFC6724 ¶}
 \hyperref[dns]{¶} \hyperref[source-and-destination-address-selection]{¶}
@@ -8787,6 +8818,8 @@ has links to each section that mentions each citation.
 \hyperref[prefix-per-host]{RFC9818 ¶}
 
 \hyperref[addresses]{RFC9844 ¶}
+
+\hyperref[translation-and-ipv4-as-a-service]{RFC9872 ¶}
 
 \hyperref[transport-protocols]{STD7 ¶}
 
