@@ -16,17 +16,19 @@ Here are some notes on the most common ones:
   [IANA](https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml#ipv6-parameters-2).
   Option 0x05 "Router Alert" is perhaps the most interesting; it is
   intended to warn every router on the path that the packet may need
-  special handling. Unfortunately, experience shows that this extension
-  header can be problematic, and that many routers do not in fact
-  process it. Indeed,
+  special handling. Router Alert types have their own registry at
+  [IANA](https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml).
+  Unfortunately, experience shows that the HBH header can be problematic,
+  and that many routers do not in fact process it. As a result, Router
+  Alert has been deprecated for future protocols
+  \[[RFC 9805](https://www.rfc-editor.org/info/rfc9805)\].
+
+  More generally,
   [RFC 8200](https://www.rfc-editor.org/info/rfc8200) states that "it is
   now expected that nodes along a packet's delivery path only examine
   and process the Hop-by-Hop Options header if explicitly configured to
   do so." Some mitigations of this problem are described in
-  [RFC 9673](https://www.rfc-editor.org/info/rfc9673).
-
-  Router Alert types have their own registry at
-  [IANA](https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml).
+  [RFC 9673](https://www.rfc-editor.org/info/rfc9673).  
 
 - Fragment header, when a packet has been fragmented (which happens only
   at the source, if the raw packet exceeds the known MTU of the
