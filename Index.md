@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2025-10-30 14:16:24 UTC+1300
+Generated at 2026-02-12 16:00:42 UTC+1300
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -314,6 +314,18 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [IS-IS ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
+[ISP ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
+[●](./05.%20Network%20Design/Address%20Planning.md)
+[●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
+[●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./06.%20Management%20and%20Operations/Multihoming.md)
+[●](./08.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
+[●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
+
 [Jumbo frames ●](./06.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
 [link-local ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
@@ -329,6 +341,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 [●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
 [●](./09.%20Troubleshooting/Tools.md)
+
+[loopback ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 
 [Lw6o4 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
@@ -484,6 +498,17 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 [●](./09.%20Troubleshooting/Tools.md)
+[●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+
+[registry ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
+[●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[●](./04.%20Security/Filtering.md)
+[●](./05.%20Network%20Design/Address%20Planning.md)
+[●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
+[●](./06.%20Management%20and%20Operations/Multihoming.md)
+[●](./08.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
+[●](./08.%20Deployment%20Status/Status.md)
 
 [reverse DNS ●](./02.%20IPv6%20Basic%20Technology/DNS.md)
 

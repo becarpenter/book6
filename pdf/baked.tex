@@ -2,10 +2,11 @@
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{hyphens}{url}
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
-%
 \documentclass[
 ]{article}
+\usepackage{xcolor}
 \usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
 \usepackage{iftex}
 \ifPDFTeX
   \usepackage[T1]{fontenc}
@@ -36,7 +37,6 @@
 }{% if KOMA class
   \KOMAoptions{parskip=half}}
 \makeatother
-\usepackage{xcolor}
 \usepackage{color}
 \usepackage{fancyvrb}
 \newcommand{\VerbBar}{|}
@@ -77,24 +77,22 @@
 \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
 \usepackage{graphicx}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
 % Set default figure placement to htbp
-\makeatletter
 \def\fps@figure{htbp}
 \makeatother
 \setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-\ifLuaTeX
-  \usepackage{selnolig}  % disable illegal ligatures
-\fi
 \usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
@@ -113,11 +111,7 @@
 
 \section{book6}\label{book6}
 
-\begin{figure}
-\centering
-\includegraphics{book6logo.png}
-\caption{}
-\end{figure}
+\pandocbounded{\includegraphics[keepaspectratio]{book6logo.png}}
 
 A collaborative IPv6 book.
 
@@ -133,7 +127,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2025-10-30 14:36:46 UTC+1300
+Version captured at 2026-02-12 16:01:23 UTC+1300
 
 \pagebreak
 
@@ -142,7 +136,7 @@ Book.}\label{book6-a-collaborative-ipv6-book}
 
 \begin{figure}
 \centering
-\includegraphics{book6logo.png}
+\pandocbounded{\includegraphics[keepaspectratio,alt={book6 logo}]{book6logo.png}}
 \caption{book6 logo}
 \end{figure}
 
@@ -2119,17 +2113,19 @@ Here are some notes on the most common ones:
   \href{https://www.iana.org/assignments/ipv6-parameters/ipv6-parameters.xhtml\#ipv6-parameters-2}{IANA}.
   Option 0x05 "Router Alert" is perhaps the most interesting; it is
   intended to warn every router on the path that the packet may need
-  special handling. Unfortunately, experience shows that this extension
-  header can be problematic, and that many routers do not in fact
-  process it. Indeed, \href{https://www.rfc-editor.org/info/rfc8200}{RFC
+  special handling. Router Alert types have their own registry at
+  \href{https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml}{IANA}.
+  Unfortunately, experience shows that the HBH header can be
+  problematic, and that many routers do not in fact process it. As a
+  result, Router Alert has been deprecated for future protocols
+  {[}\href{https://www.rfc-editor.org/info/rfc9805}{RFC 9805}{]}.
+
+  More generally, \href{https://www.rfc-editor.org/info/rfc8200}{RFC
   8200} states that "it is now expected that nodes along a
   packet\textquotesingle s delivery path only examine and process the
   Hop-by-Hop Options header if explicitly configured to do so." Some
   mitigations of this problem are described in
   \href{https://www.rfc-editor.org/info/rfc9673}{RFC 9673}.
-
-  Router Alert types have their own registry at
-  \href{https://www.iana.org/assignments/ipv6-routeralert-values/ipv6-routeralert-values.xhtml}{IANA}.
 \item
   Fragment header, when a packet has been fragmented (which happens only
   at the source, if the raw packet exceeds the known MTU of the
@@ -3015,7 +3011,7 @@ The following figure illustrates such a scenario.
 
 \begin{figure}
 \centering
-\includegraphics{vasilenko-IPv4aaS.png}
+\pandocbounded{\includegraphics[keepaspectratio,alt={User devices connected to Internet via IPv6 infrastructure}]{vasilenko-IPv4aaS.png}}
 \caption{User devices connected to Internet via IPv6 infrastructure}
 \end{figure}
 
@@ -4358,7 +4354,7 @@ The following diagram shows the example:
 
 \begin{figure}
 \centering
-\includegraphics{multiPrefix.png}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Routers and routing clouds as described above}]{multiPrefix.png}}
 \caption{Routers and routing clouds as described above}
 \end{figure}
 
@@ -4801,7 +4797,7 @@ transfers. Some statistics from early 2024 are shown here:
 
 \begin{figure}
 \centering
-\includegraphics{CERN-IPv6-Feb24.png}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Graph showing 644 Gb/s}]{CERN-IPv6-Feb24.png}}
 \caption{Graph showing 644 Gb/s}
 \end{figure}
 
@@ -4847,73 +4843,89 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-7}
 \subsection{Status}\label{status}
 
 When speaking of IPv6, a question immediately comes up: "How many people
-do use IPv6 on the Internet?". Answering this question is fundamental to
-get an immediate understanding of the real adoption of IPv6. A recent
-overview is presented in
+currently use IPv6 on the Internet?". Answering this question is
+fundamental to gain an understanding of the real adoption of IPv6. A
+2023 overview is presented in
 \href{https://www.rfc-editor.org/info/rfc9386}{RFC 9386}.
 
 A count of IPv6 users is monitored by various organizations. For
 example, both
 \href{https://www.facebook.com/ipv6/?tab=ipv6_total_adoption}{Facebook}
 and \href{https://www.google.com/intl/en/ipv6/statistics.html}{Google}
-provide statistics on the users that access their services over IPv6. A
-very informative blog was posted in 2023 by
+provide statistics on the users that access their services over IPv6.
+The results are different, due to different methods being used. Google
+generally sees more IPv6 usage than Facebook, but Google has a blind
+spot in China where adoption is significant.
+
+A trusted source from a Regional Internet Registry (RIR) is
+\href{https://stats.labs.apnic.net/ipv6/}{APNIC Labs}. This site
+measures \emph{capability} rather than traffic or active users, so the
+data should not be directly compared with Google or Facebook. APNIC
+quantifies the availability of IPv6 by means of a script that runs on
+Internet browsers.
+
+A very informative blog was posted in 2023 by
 \href{https://blog.cloudflare.com/ipv6-from-dns-pov}{Cloudflare},
 showing that humans use IPv6 a lot more than bots, which seem to prefer
-IPv4. At the end of 2023, Google and Cloudflare roughly agreed on 46\%
-adoption by worldwide users.
+IPv4. Cloudflare\textquotesingle s current protocol usage data is
+summarized by \href{https://radar.cloudflare.com/}{Cloudflare radar}.
 
-\href{https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization}{Akamai}
-provides data measuring the number of hits to their content delivery
-platform. For example, they showed 72\% adoption in India in early 2024.
+\href{https://web.archive.org/web/20250324111641/https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization}{Akamai}
+formerly provided data measuring the number of hits to their content
+delivery platform. For example, they showed 72\% adoption in India in
+early 2024.
 
-\href{https://stats.labs.apnic.net/ipv6}{APNIC} quantifies the use of
-IPv6 by means of a script that runs on Internet browsers.
+In late 2025, Google, Facebook and Cloudflare roughly agreed on 40 to
+50\% worldwide adoption by users, with APNIC Labs showing 42\% IPv6
+capability.
 
 Some statistics on DNS records and reachability for top web sites may be
 found at \href{https://www.employees.org/~dwing/aaaa-stats/}{Dan
-Wing\textquotesingle s site}. These data suggest 29\% IPv6 penetration
-by July 2023.
+Wing\textquotesingle s site}. These data suggest that only 30\% of sites
+had IPv6 DNS entries by November 2025. So while major sites are seeing
+up to 50\% IPv6 usage, most smaller sites are not even in the game.
 
-At the time of writing, there are large discrepancies between data from
-these and other sources. In fact there is no well-defined metric for
-"how many IPv6 users exist" or "how much IPv6 traffic exists". To take
-one example, Google estimates the fraction of Google "hits" that use
-IPv6, yet Google is very little used in China so these data cannot
+At the time of writing, there are significant discrepancies between data
+from these and other sources. In fact there is no well-defined metric
+for "how many IPv6 users exist" or "how much IPv6 traffic exists". To
+take one example, Google estimates the fraction of Google "hits" that
+use IPv6, yet Google is very little used in China so these data cannot
 represent the true world-wide situation. Estimates posted to the IETF by
-Geoff Huston in July 2023 suggest that Google observes a 7\% adoption
-rate in China, while the APNIC measurement reports 30\%.
+Geoff Huston in July 2023 suggested that Google then observed a 7\%
+adoption rate in China, while the APNIC measurement reported 30\%
+capability.
 
-We show here the APNIC presentation of results, as it comes from a
-Regional Internet Registry (RIR) to show the number of the Internet IPv6
-users compared with the total Internet population (in million, see next
-table).
+We show here an older APNIC presentation of results to show the number
+of the Internet IPv6 users some years ago, compared with the total
+Internet population (in millions, see next table).
 
 \begin{figure}
 \centering
-\includegraphics{Section5_Table1.jpg}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Table shows 25\% annual IPv6 growth 2018 to 2022}]{Section5_Table1.jpg}}
 \caption{Table shows 25\% annual IPv6 growth 2018 to 2022}
 \end{figure}
 
-A third of the Internet population apparently employs IPv6. It is also
-interesting to look at the growth curve. The main indicator here is the
-Compound Annual Growth Rate (CAGR), which shows a two-digit growth
+A third of the Internet population apparently employed IPv6 then. It is
+also interesting to look at the growth curve. The main indicator here is
+the Compound Annual Growth Rate (CAGR), which shows a two-digit growth
 across the 5-year period 2018-2022.
 
-There is a caveat, though, we may want to consider. The method used by
-APNIC cannot be fully employed in China, due to local policy filtering
-traffic from abroad. An independent
+There is a caveat, however. The method used by APNIC cannot be fully
+employed in China, due to local policy filtering traffic from abroad. An
+independent
 \href{https://www.china-ipv6.cn/\#/activeconnect/simpleInfo}{Chinese
-research} reports 713 million measured IPv6 customers as of September
-2022, against the 220 million reported by APNIC. If we add the
-difference between the two statistics to the global count, we end up
-with a Ratio of 43.68\% in September 2022, not that far from the
-"psychological" threshold of 50\%.
+research} reported 713 million measured IPv6 customers as of September
+2022, against the 220 million reported by APNIC. If we added the
+difference between the two statistics to the global count, we would end
+up with a usage of 43\% in September 2022. (As it happened, the Google
+worldwide measurement in that month peaked at 41\%.)
 
 In August 2025, China's Cyberspace Administration announced that by
-June, China had 834 million active IPv6 users, i.e., \textbf{75.29\%} of
-Chinese Internet users. 66\% of traffic on mobile networks ran over
-IPv6, vs 28.32\% on fixed networks.
+June, China had 834 million active IPv6 users, i.e., 75\% of Chinese
+Internet users. 66\% of traffic on mobile networks ran over IPv6, vs
+28\% on fixed networks. By October 2025,
+\href{https://www.chinadaily.com.cn/a/202510/31/WS690473f6a310f735438b8167.html}{Chinese
+media claimed 77\% adoption}.
 
 \subsubsection{\texorpdfstring{\hyperref[deployment-by-carriers]{Next}
 \hyperref[deployment-status]{Top}}{Next Top}}\label{next-top-7}
@@ -4930,7 +4942,7 @@ the world, as observed in the Internet routing tables.
 
 \begin{figure}
 \centering
-\includegraphics{Section5_Table2.jpg}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Table shows 18\% annual IPv6 growth 2018 to 2022}]{Section5_Table2.jpg}}
 \caption{Table shows 18\% annual IPv6 growth 2018 to 2022}
 \end{figure}
 
@@ -5524,10 +5536,10 @@ Internet.
 \tightlist
 \item
   Test IPv6 connectivity:
-  {[}\url{https://test-ipv6.com\%5D(https://test-ipv6.com)}
+  \href{https://test-ipv6.com}{\url{https://test-ipv6.com}}
 \item
   IPv6 DNS lookup and testing:
-  {[}\url{https://ipv6-test.com\%5D(https://ipv6-test.com)}
+  \href{https://ipv6-test.com}{\url{https://ipv6-test.com}}
 \end{itemize}
 
 \paragraph{mtr}\label{mtr}
@@ -5553,9 +5565,9 @@ features.
 
 \begin{itemize}
 \item
-  {[}\url{https://github.com/buraglio/ipv6utils\%5D(https://github.com/buraglio/ipv6utils)}
+  \href{https://github.com/buraglio/ipv6utils}{\url{https://github.com/buraglio/ipv6utils}}
 \item
-  {[}\url{https://tools.forwardingplane.net\%5D(https://tools.forwardingplane.net)}
+  \href{https://tools.forwardingplane.net}{\url{https://tools.forwardingplane.net}}
 \end{itemize}
 
 \texttt{ndisc6} is a Linux package that includes useful tools for
@@ -5579,7 +5591,7 @@ view using another tool like \texttt{tcpdump} or \texttt{wireshark}.
 \begin{itemize}
 \tightlist
 \item
-  {[}\url{https://github.com/nomis/ndisc6\%5D(https://github.com/nomis/ndisc6)}
+  \href{https://github.com/nomis/ndisc6}{\url{https://github.com/nomis/ndisc6}}
 \end{itemize}
 
 \paragraph{ASN Lookup Tools}\label{asn-lookup-tools}
@@ -5609,9 +5621,9 @@ configurations.
   \begin{itemize}
   \tightlist
   \item
-    {[}\url{https://bgp.he.net\%5D(https://bgp.he.net)}
+    \href{https://bgp.he.net}{\url{https://bgp.he.net}}
   \item
-    {[}\url{https://asn.cymru.com\%5D(https://asn.cymru.com)}
+    \href{https://asn.cymru.com}{\url{https://asn.cymru.com}}
   \end{itemize}
 \end{itemize}
 
@@ -5664,62 +5676,66 @@ those IETF standards:
   messages
 \end{itemize}
 
-\subsection{Site-Local Addressing}\label{site-local-addressing}
+\subsection{Site-Local Unicast
+Addressing}\label{site-local-unicast-addressing}
 
-Site-Local addressing has an odd place in IPv6. Is was orginally
-proposed to answer the private IPv6 addressing concern similar to
+Site-local unicast addressing has an odd place in IPv6. It was
+originally proposed to provide private IPv6 addressing, similar to
 \href{https://www.rfc-editor.org/rfc/rfc1918.html}{RFC 1918}. Site-local
-addressing was orginally defined for its special use in Section 2.5.6 of
-\href{https://www.rfc-editor.org/rfc/rfc3513.html\#section-2.5.6}{RFC
-3513}. Problems arose with their special use based on the following
-reasons:
+addressing was orginally defined for this special use in Section 2.5.6
+of \href{https://www.rfc-editor.org/rfc/rfc3513.html\#section-2.5.6}{RFC
+3513}. Problems quickly arose for the following reasons:
 
 \begin{itemize}
 \tightlist
 \item
-  ambiguity of addresses meaning an address such as \texttt{fec0::1} can
-  be present in multiple sites, and the address itself does not contain
-  any indication of the site to which it belongs. This creates pain for
-  developers of applications, for the designers of routers and for the
-  network managers.
+  ambiguity of addresses, meaning an address such as \texttt{fec0::1}
+  can be present in multiple sites, and the address itself does not
+  contain any indication of the site to which it belongs. This creates
+  pain for developers of applications, for the designers of routers and
+  for the network managers.
 \item
-  fuzzy definition of sites because the ambiguity of addressing they can
-  exist accross sites which then creates the requirement to add things
-  like zone identifiers to ID the actual sites. For example,
-  \texttt{fec0::1234:5678:9abc\%1} for a multihomed node. This
-  management of identifiers has proven hard to understand by developers,
-  and also hard to execute by those developers who understand the
-  concept.
+  fuzzy definition of sites combined with the ambiguity of addressing
+  means that if sites are merged (e.g., when two companies merge) or
+  otherwise cross-routed, either
+
+  \begin{enumerate}
+  \def\labelenumi{\arabic{enumi}.}
+  \tightlist
+  \item
+    hosts must be renumbered, or
+  \item
+    a zone identifier must be added to distinguish the nodes, e.g.,
+    \texttt{fec0::1234:5678:9abc\%1}. This would require non-existent
+    software and operational support.
+  \end{enumerate}
 \end{itemize}
 
 \subsubsection{Deprecated but Not Gone}\label{deprecated-but-not-gone}
 
-These addresses weren\textquotesingle t deprecated until
-\href{https://www.rfc-editor.org/rfc/rfc3879}{RFC 3879} about a year
-later. However, even with this deprecation, things remain in standards
-that have caused significant confusion. Since
+Site-local addresses were soon deprecated by
+\href{https://www.rfc-editor.org/rfc/rfc3879}{RFC 3879}. However, even
+with this deprecation, traces remain in documents and have caused
+significant confusion.
 \href{https://www.rfc-editor.org/rfc/rfc4291.html\#section-2.5.7}{RFC
-4291} talked to this deprecation, it still exists as an item in RFC
-4291.
+4291} mentions this deprecation.
 
 \begin{itemize}
 \tightlist
 \item
-  The requirement in RFC 3879 also states that the prefix fec0::/10
-  "MUST NOT be reassigned for other use except by a future IETF
-  standards action." Given that, it can\textquotesingle t be reabsorbed
-  into the IANA Global Unicast address space.
+  RFC 3879 also states that the prefix fec0::/10 "MUST NOT be reassigned
+  for other use except by a future IETF standards action." Given that,
+  it cannot be reabsorbed into the IANA Global Unicast address space.
 \item
-  It is also listed as a separate label in the IPv6 Prefix Policy Table
+  It is also listed as a separate prefix in the IPv6 Prefix Policy Table
   outlined in \href{https://www.rfc-editor.org/rfc/rfc6724.html}{RFC
-  6724} as 11 with a precedence of 1.
+  6724} with label 11 and precedence 1.
 \item
-  RFC 3879 also states that "Existing implementations and deployments
-  MAY continue to use this prefix"
+  RFC 3879 and RFC 4291 both state that existing implementations and
+  deployments may continue to use the site-local prefix.
 \end{itemize}
 
-All of this adds to confusion for the usage and supportability of Site
-Local Addressing. Site Local Addressing is effectively obsolete and
+Despite this, site-local unicast addressing is effectively obsolete and
 should not be taught in training or mentioned as part of the IPv6
 feature set.
 
@@ -5728,10 +5744,31 @@ feature set.
 Several obsolete address types are listed at the end of
 \hyperref[addresses]{2. Addresses}.
 
+\subsection{The problem of extension
+headers}\label{the-problem-of-extension-headers}
+
+Adding new extension headers, including new hop-by-hop options, has
+proved very hard in practice, since security and denial-of-service
+concerns mean that they are often blocked at network boundaries. They
+also make it difficult for technologies such as load balancers to
+rapidly identify the transport header in a packet. (More details at the
+end of \hyperref[extension-headers-and-options]{2. Extension headers and
+options}.)
+
+In particular, Router Alert has been deprecated for future protocols
+{[}\href{https://www.rfc-editor.org/info/rfc9805}{RFC9805}{]}.
+
 \subsection{Secure Neighbor Discovery
 (SeND)}\label{secure-neighbor-discovery-send}
 
-TBD
+SeND {[}\href{https://www.rfc-editor.org/info/rfc3971}{RFC3971}{]}
+{[}\href{https://www.rfc-editor.org/info/rfc6494}{RFC6494}{]}
+{[}\href{https://www.rfc-editor.org/info/rfc6495}{RFC6495}{]}
+{[}\href{https://www.rfc-editor.org/info/rfc6980}{RFC6980}{]} is hardly
+deployed because of its complexity and lack of adequate implementations.
+Instead, operators tend to deploy Router Advertisement Guard
+{[}\href{https://www.rfc-editor.org/info/rfc6105}{RFC6105}{]}
+{[}\href{https://www.rfc-editor.org/info/rfc7113}{RFC7113}{]}.
 
 \subsection{Coexistence}\label{coexistence}
 
@@ -5792,7 +5829,7 @@ Here\textquotesingle s an attempt to explain this with a diagram:
 
 \begin{figure}
 \centering
-\includegraphics{rfc-diagram.png}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Diagram of RFC status}]{rfc-diagram.png}}
 \caption{Diagram of RFC status}
 \end{figure}
 
@@ -5840,7 +5877,7 @@ an overview:
 
 \begin{figure}
 \centering
-\includegraphics{id-diagram.png}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Diagram of I-D status}]{id-diagram.png}}
 \caption{Diagram of I-D status}
 \end{figure}
 
@@ -5911,10 +5948,10 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 be misleading as well as out of date. Also see
 \hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}.
 
-RFCbib6 run at 2025-10-30 14:14:22 UTC+1300 (502 RFCs found)
+RFCbib6 run at 2026-02-12 15:56:16 UTC+1300 (504 RFCs found)
 
-\subsubsection{Standards Track (268
-RFCs)}\label{standards-track-268-rfcs}
+\subsubsection{Standards Track (271
+RFCs)}\label{standards-track-271-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -6517,7 +6554,15 @@ RFCs)}\label{standards-track-268-rfcs}
   Attribute-Value Pairs for Provisioning Customer Equipment Supporting
   IPv4-Over-IPv6 Transitional Solutions
 \item
-  \href{https://www.rfc-editor.org/info/rfc7757}{RFC 7757}: Explicit
+  \href{https://www.rfc-editor.org/info/rfc7755}{RFC 7755}: SIIT-DC:
+  Stateless IP/ICMP Translation for IPv6 Data Center Environments
+\item
+  \href{https://www.rfc-editor.org/info/rfc7756}{RFC 7756}: Stateless
+  IP/ICMP Translation for IPv6 Internet Data Center Environments
+  (SIIT-DC): Dual Translation Mode
+\item
+  \href{https://www.rfc-editor.org/info/rfc7757}{RFC 7757}
+  (\href{https://www.rfc-editor.org/info/std103}{STD 103}): Explicit
   Address Mappings for Stateless IP/ICMP Translation
 \item
   \href{https://www.rfc-editor.org/info/rfc7774}{RFC 7774}: Multicast
@@ -6609,9 +6654,6 @@ RFCs)}\label{standards-track-268-rfcs}
 \item
   \href{https://www.rfc-editor.org/info/rfc8371}{RFC 8371}: Mobile Node
   Identifier Types for MIPv6
-\item
-  \href{https://www.rfc-editor.org/info/rfc8415}{RFC 8415}: Dynamic Host
-  Configuration Protocol for IPv6 (DHCPv6)
 \item
   \href{https://www.rfc-editor.org/info/rfc8425}{RFC 8425}: IANA
   Considerations for IPv6 Neighbor Discovery Prefix Information Option
@@ -6777,6 +6819,13 @@ RFCs)}\label{standards-track-268-rfcs}
 \item
   \href{https://www.rfc-editor.org/info/rfc9844}{RFC 9844}: Entering
   IPv6 Zone Identifiers in User Interfaces
+\item
+  \href{https://www.rfc-editor.org/info/rfc9915}{RFC 9915}
+  (\href{https://www.rfc-editor.org/info/std102}{STD 102}): Dynamic Host
+  Configuration Protocol for IPv6 (DHCPv6)
+\item
+  \href{https://www.rfc-editor.org/info/rfc9926}{RFC 9926}: Prefix
+  Registration for IPv6 Neighbor Discovery
 \end{itemize}
 
 \subsubsection{Best Current Practice (16
@@ -6851,7 +6900,7 @@ RFCs)}\label{best-current-practice-16-rfcs}
   Clarification of IPv6 Address Allocation Policy
 \end{itemize}
 
-\subsubsection{Informational (193 RFCs)}\label{informational-193-rfcs}
+\subsubsection{Informational (192 RFCs)}\label{informational-192-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -7353,13 +7402,6 @@ RFCs)}\label{best-current-practice-16-rfcs}
   \href{https://www.rfc-editor.org/info/rfc7739}{RFC 7739}: Security
   Implications of Predictable Fragment Identification Values
 \item
-  \href{https://www.rfc-editor.org/info/rfc7755}{RFC 7755}: SIIT-DC:
-  Stateless IP/ICMP Translation for IPv6 Data Center Environments
-\item
-  \href{https://www.rfc-editor.org/info/rfc7756}{RFC 7756}: Stateless
-  IP/ICMP Translation for IPv6 Internet Data Center Environments
-  (SIIT-DC): Dual Translation Mode
-\item
   \href{https://www.rfc-editor.org/info/rfc7824}{RFC 7824}: Privacy
   Considerations for DHCPv6
 \item
@@ -7486,6 +7528,9 @@ RFCs)}\label{best-current-practice-16-rfcs}
   \href{https://www.rfc-editor.org/info/rfc9872}{RFC 9872}:
   Recommendations for Discovering IPv6 Prefix Used for IPv6 Address
   Synthesis
+\item
+  \href{https://www.rfc-editor.org/info/rfc9898}{RFC 9898}: Neighbor
+  Discovery Considerations in IPv6 Deployments
 \end{itemize}
 
 \subsubsection{Experimental (25 RFCs)}\label{experimental-25-rfcs}
@@ -7848,7 +7893,7 @@ Displayed thus:
 
 \begin{figure}
 \centering
-\includegraphics{example1.png}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Start here, end here}]{example1.png}}
 \caption{Start here, end here}
 \end{figure}
 
@@ -7860,7 +7905,7 @@ Example generated with \emph{dia}:
 
 \begin{figure}
 \centering
-\includegraphics{diag.png}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Disk feeding tape}]{diag.png}}
 \caption{Disk feeding tape}
 \end{figure}
 
@@ -7896,11 +7941,11 @@ Section text goes here
 
 \begin{figure}
 \centering
-\includegraphics{book6logo.png}
+\pandocbounded{\includegraphics[keepaspectratio,alt={book6 logo}]{book6logo.png}}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2025-10-30 14:16:24 UTC+1300
+Generated at 2026-02-12 16:00:42 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -8132,6 +8177,15 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[routing]{IS-IS ¶} \hyperref[routing-operation]{¶}
 
+\hyperref[addresses]{ISP ¶} \hyperref[routing]{¶}
+\hyperref[dual-stack-scenarios]{¶}
+\hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
+\hyperref[address-planning]{¶}
+\hyperref[address-and-prefix-management]{¶}
+\hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
+\hyperref[deployment-in-the-enterprise]{¶}
+\hyperref[deployment-in-the-home]{¶}
+
 \hyperref[packet-size-and-jumbo-frames]{Jumbo frames ¶}
 
 \hyperref[address-resolution]{link-local ¶} \hyperref[addresses]{¶}
@@ -8142,6 +8196,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[multi-prefix-operation]{¶}
 \hyperref[deployment-in-the-home]{¶} \hyperref[troubleshooting]{¶}
 \hyperref[tools]{¶}
+
+\hyperref[addresses]{loopback ¶}
 
 \hyperref[translation-and-ipv4-as-a-service]{Lw6o4 ¶}
 
@@ -8253,6 +8309,13 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[routing]{¶} \hyperref[prefix-per-host]{¶}
 \hyperref[multi-prefix-operation]{¶}
 \hyperref[advanced-troubleshooting]{¶} \hyperref[tools]{¶}
+\hyperref[obsolete-features-in-ipv6]{¶}
+
+\hyperref[addresses]{registry ¶} \hyperref[auto-configuration]{¶}
+\hyperref[extension-headers-and-options]{¶} \hyperref[filtering]{¶}
+\hyperref[address-planning]{¶} \hyperref[multi-prefix-operation]{¶}
+\hyperref[multihoming]{¶} \hyperref[deployment-in-the-enterprise]{¶}
+\hyperref[status]{¶}
 
 \hyperref[dns]{reverse DNS ¶}
 
@@ -8361,11 +8424,11 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 
 \begin{figure}
 \centering
-\includegraphics{book6logo.png}
+\pandocbounded{\includegraphics[keepaspectratio,alt={book6 logo}]{book6logo.png}}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2025-10-30 14:16:24 UTC+1300
+Generated at 2026-02-12 16:00:42 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -8462,6 +8525,7 @@ has links to each section that mentions each citation.
 \hyperref[addresses]{RFC3879 ¶} \hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[security]{RFC3971 ¶} \hyperref[layer-2-considerations]{¶}
+\hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[addresses]{RFC4007 ¶}
 
@@ -8552,6 +8616,7 @@ has links to each section that mentions each citation.
 \hyperref[layer-2-functions]{RFC6085 ¶}
 
 \hyperref[layer-2-considerations]{RFC6105 ¶}
+\hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[translation-and-ipv4-as-a-service]{RFC6144 ¶}
 
@@ -8586,6 +8651,10 @@ has links to each section that mentions each citation.
 
 \hyperref[traffic-class-and-flow-label]{RFC6438 ¶}
 
+\hyperref[obsolete-features-in-ipv6]{RFC6494 ¶}
+
+\hyperref[obsolete-features-in-ipv6]{RFC6495 ¶}
+
 \hyperref[routing]{RFC6550 ¶}
 
 \hyperref[address-resolution]{RFC6583 ¶}
@@ -8619,6 +8688,8 @@ has links to each section that mentions each citation.
 
 \hyperref[multi-prefix-operation]{RFC6950 ¶}
 
+\hyperref[obsolete-features-in-ipv6]{RFC6980 ¶}
+
 \hyperref[filtering]{RFC7045 ¶}
 
 \hyperref[obsolete-techniques]{RFC7050 ¶}
@@ -8637,6 +8708,7 @@ has links to each section that mentions each citation.
 \hyperref[layer-2-considerations]{RFC7112 ¶}
 
 \hyperref[layer-2-considerations]{RFC7113 ¶}
+\hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[filtering]{RFC7123 ¶}
 
@@ -8814,6 +8886,9 @@ has links to each section that mentions each citation.
 
 \hyperref[managed-configuration]{RFC9762 ¶}
 \hyperref[prefix-per-host]{¶}
+
+\hyperref[extension-headers-and-options]{RFC9805 ¶}
+\hyperref[obsolete-features-in-ipv6]{¶}
 
 \hyperref[prefix-per-host]{RFC9818 ¶}
 
