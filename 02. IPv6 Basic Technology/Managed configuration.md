@@ -27,7 +27,7 @@ applicability for DHCPv6 is mainly enterprise networks. They tend to
 prefer managed addresses because of security compliance requirements.
 
 DHCPv6 is defined by
-[RFC 8415](https://www.rfc-editor.org/info/rfc8415). It is conceptually
+[RFC 9915](https://www.rfc-editor.org/info/rfc9915). It is conceptually
 similar to DHCP for IPv4, but different in detail. When it is in use,
 each host must contain a DHCPv6 client and either a DHCPv6 server or a
 DHCPv6 relay must be available on the subnet. DHCPv6 can provide
@@ -42,7 +42,7 @@ on and its router doesn't have an IPv6 prefix, an infrastructure router
 "above" it in the topology can assign it one (e.g. a /64 prefix), using
 the `OPTION_IA_PD` and `OPTION_IAPREFIX` DHCPv6 options (previously
 defined by RFC3633, but now covered by
-[Section 6.3 of RFC8415](https://www.rfc-editor.org/rfc/rfc8415.html#section-6.3).
+[Section 6.3 of RFC9915](https://www.rfc-editor.org/rfc/rfc9915.html#section-6.3).
 This process is known as DHCPv6-PD (for "prefix delegation"). Further,
 it is possible to signal the availability of DHCPv6-PD in SLAAC Router
 Advertisements \[[RFC9762](https://www.rfc-editor.org/info/rfc9762)\],
@@ -82,7 +82,7 @@ DHCPv6 options include:
 - IA Prefix Option
 
 Readers who want more details should consult
-[RFC 8415](https://www.rfc-editor.org/info/rfc8415) directly. Be warned,
+[RFC 9915](https://www.rfc-editor.org/info/rfc9915) directly. Be warned,
 this is a very complex RFC of about 150 pages. Also, the full lists of
 defined messages and options may be found at
 [IANA](https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml),

@@ -46,10 +46,11 @@ and inter-chapter links as far as possible."""
 # Version: 2025-02-01 - linting
 # Version: 2025-02-25 - allow for future format of RFC index (no leading zeros)
 # Version: 2025-05-15 - double check request to run mdformat
+# Version: 2026-03-05 - use raw string literals containing \
 
 
 ########################################################
-# Copyright (C) 2022-2025 Brian E. Carpenter.
+# Copyright (C) 2022-2026 Brian E. Carpenter.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with
@@ -387,7 +388,7 @@ def expand_cites():
                 logitw("Malformed reference in " + topic_file + "/" + line)
             # convert {{ }} to \[{{ }}\]
             line = line.replace("{{{", "{?x{").replace("}}}", "}?y}")
-            line = line.replace("{{", "\[{{").replace("}}", "}}\]")
+            line = line.replace("{{", r"\[{{").replace("}}", r"}}\]")
             line = line.replace("{?x{", "{{").replace("}?y}", "}}")
             if line.count("{{") != line.count("}}"):
                 logitw("Malformed reference in " + topic_file + "/" + line)
@@ -395,7 +396,7 @@ def expand_cites():
                 # dprint("Citation  in:", line)
                 # found an expandable citation
                 head, body = line.split("{{", maxsplit=1)
-                bracketed = head.endswith("\[")
+                bracketed = head.endswith(r"\[")
                 newcite = True
                 cite, tail = body.split("}}", maxsplit=1)
                 if (
@@ -518,11 +519,11 @@ def expand_cites():
             logitw("Malformed line in " + topic_file + "/" + line)
 
         # string bracketed citations together
-        if newcite and ")\]" in line:
-            line = line.replace(")\]\[", "), ")
-            line = line.replace(")\] \[", "), ")
-            line = line.replace(")\], \[", "), ")
-            line = line.replace(")\],\[", "), ")
+        if newcite and r")\]" in line:
+            line = line.replace(r")\]\[", "), ")
+            line = line.replace(r")\] \[", "), ")
+            line = line.replace(r")\], \[", "), ")
+            line = line.replace(r")\],\[", "), ")
             lchange = True
 
         if lchange:

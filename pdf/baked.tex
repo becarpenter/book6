@@ -127,7 +127,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2026-02-12 16:01:23 UTC+1300
+Version captured at 2026-03-05 16:19:47 UTC+1300
 
 \pagebreak
 
@@ -1703,8 +1703,8 @@ hotels, if they support IPv6 at all, do so via SLAAC. So the domain of
 applicability for DHCPv6 is mainly enterprise networks. They tend to
 prefer managed addresses because of security compliance requirements.
 
-DHCPv6 is defined by \href{https://www.rfc-editor.org/info/rfc8415}{RFC
-8415}. It is conceptually similar to DHCP for IPv4, but different in
+DHCPv6 is defined by \href{https://www.rfc-editor.org/info/rfc9915}{RFC
+9915}. It is conceptually similar to DHCP for IPv4, but different in
 detail. When it is in use, each host must contain a DHCPv6 client and
 either a DHCPv6 server or a DHCPv6 relay must be available on the
 subnet. DHCPv6 can provide assigned IPv6 addresses and other parameters,
@@ -1721,8 +1721,8 @@ prefix, an infrastructure router "above" it in the topology can assign
 it one (e.g. a /64 prefix), using the \texttt{OPTION\_IA\_PD} and
 \texttt{OPTION\_IAPREFIX} DHCPv6 options (previously defined by RFC3633,
 but now covered by
-\href{https://www.rfc-editor.org/rfc/rfc8415.html\#section-6.3}{Section
-6.3 of RFC8415}. This process is known as DHCPv6-PD (for "prefix
+\href{https://www.rfc-editor.org/rfc/rfc9915.html\#section-6.3}{Section
+6.3 of RFC9915}. This process is known as DHCPv6-PD (for "prefix
 delegation"). Further, it is possible to signal the availability of
 DHCPv6-PD in SLAAC Router Advertisements
 {[}\href{https://www.rfc-editor.org/info/rfc9762}{RFC9762}{]}, which
@@ -1787,7 +1787,7 @@ DHCPv6 options include:
 \end{itemize}
 
 Readers who want more details should consult
-\href{https://www.rfc-editor.org/info/rfc8415}{RFC 8415} directly. Be
+\href{https://www.rfc-editor.org/info/rfc9915}{RFC 9915} directly. Be
 warned, this is a very complex RFC of about 150 pages. Also, the full
 lists of defined messages and options may be found at
 \href{https://www.iana.org/assignments/dhcpv6-parameters/dhcpv6-parameters.xhtml}{IANA},
@@ -3911,7 +3911,7 @@ what we can do:
 
 ISP customers typically lease address blocks through \textbf{DHCPv6
 prefix delegation}
-{[}\href{https://www.rfc-editor.org/info/rfc8415}{RFC8415}{]}. Instead
+{[}\href{https://www.rfc-editor.org/info/rfc9915}{RFC9915}{]}. Instead
 of acquiring only one Internet facing address, the customer premises
 router requests an entire GUA block. Once it has it, the smaller /64
 blocks are typically handled as a prefix pool, where each is assigned to
@@ -3958,7 +3958,7 @@ is no need to track multiple individual /128 addresses per host.
 This approach has other benefits such as better scaling properties for
 neighbor caches, etc., which are discussed in RFC 9663. The latter uses
 standard DHCPv6 Prefix Delegation (DHCPv6-PD)
-{[}\href{https://www.rfc-editor.org/info/rfc8415}{RFC8415}{]}, whereas
+{[}\href{https://www.rfc-editor.org/info/rfc9915}{RFC9915}{]}, whereas
 RFC 8273 uses specially crafted Router Advertisement messages.
 
 \subsubsection{\texorpdfstring{\hyperref[address-planning]{Previous}
@@ -5948,7 +5948,7 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 be misleading as well as out of date. Also see
 \hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}.
 
-RFCbib6 run at 2026-02-12 15:56:16 UTC+1300 (504 RFCs found)
+RFCbib6 run at 2026-03-05 16:18:59 UTC+1300 (504 RFCs found)
 
 \subsubsection{Standards Track (271
 RFCs)}\label{standards-track-271-rfcs}
@@ -7945,7 +7945,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2026-02-12 16:00:42 UTC+1300
+Generated at 2026-03-05 16:18:17 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -8428,7 +8428,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2026-02-12 16:00:42 UTC+1300
+Generated at 2026-03-05 16:18:17 UTC+1300
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -8793,9 +8793,6 @@ has links to each section that mentions each citation.
 
 \hyperref[layer-2-functions]{RFC8376 ¶} \hyperref[energy-consumption]{¶}
 
-\hyperref[managed-configuration]{RFC8415 ¶}
-\hyperref[address-planning]{¶} \hyperref[prefix-per-host]{¶}
-
 \hyperref[multi-prefix-operation]{RFC8475 ¶}
 
 \hyperref[dns]{RFC8501 ¶}
@@ -8895,6 +8892,9 @@ has links to each section that mentions each citation.
 \hyperref[addresses]{RFC9844 ¶}
 
 \hyperref[translation-and-ipv4-as-a-service]{RFC9872 ¶}
+
+\hyperref[managed-configuration]{RFC9915 ¶}
+\hyperref[address-planning]{¶} \hyperref[prefix-per-host]{¶}
 
 \hyperref[transport-protocols]{STD7 ¶}
 

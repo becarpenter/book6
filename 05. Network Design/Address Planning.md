@@ -158,7 +158,7 @@ with the `2001:0db8:ABDD:DD00::/56` prefix and see what we can do:
 ```
 
 ISP customers typically lease address blocks through **DHCPv6 prefix
-delegation** \[[RFC8415](https://www.rfc-editor.org/info/rfc8415)\].
+delegation** \[[RFC9915](https://www.rfc-editor.org/info/rfc9915)\].
 Instead of acquiring only one Internet facing address, the customer
 premises router requests an entire GUA block. Once it has it, the
 smaller /64 blocks are typically handled as a prefix pool, where each is

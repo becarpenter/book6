@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2026-02-12 16:00:42 UTC+1300
+Generated at 2026-03-05 16:18:17 UTC+1300
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -396,10 +396,6 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC8376 ●](./02.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 [●](./06.%20Management%20and%20Operations/Energy%20consumption.md)
 
-[RFC8415 ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
-[●](./05.%20Network%20Design/Address%20Planning.md)
-[●](./05.%20Network%20Design/Prefix%20per%20Host.md)
-
 [RFC8475 ●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 
 [RFC8501 ●](./02.%20IPv6%20Basic%20Technology/DNS.md)
@@ -507,6 +503,10 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9844 ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 
 [RFC9872 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+
+[RFC9915 ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
+[●](./05.%20Network%20Design/Address%20Planning.md)
+[●](./05.%20Network%20Design/Prefix%20per%20Host.md)
 
 [STD7 ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
