@@ -64,9 +64,9 @@ further standards work is needed in this area.
 
 Operational issues with neighbor discovery and wireless multicast have
 been analyzed in the past
-([RFC 6583](https://www.rfc-editor.org/info/rfc6583),
-[RFC 6636](https://www.rfc-editor.org/info/rfc6636),
-[RFC 9119](https://www.rfc-editor.org/info/rfc9119)), but it remains the
+\[[RFC6583](https://www.rfc-editor.org/info/rfc6583),
+[RFC6636](https://www.rfc-editor.org/info/rfc6636),
+[RFC9119](https://www.rfc-editor.org/info/rfc9119)\] but it remains the
 case that very large WiFi networks (such as the IETF builds several
 times a year for its plenary meetings) are subject to significant
 multicast overloads. In practice, this causes the WiFi switches to
@@ -77,6 +77,8 @@ of wireless subnets as much as practicable.
 A summary of the issues and complications of neighbor discovery on
 wireless networks in general (not just WiFi) can be found in
 [this draft](https://datatracker.ietf.org/doc/draft-ietf-6man-ipv6-over-wireless/).
+More generally, [RFC 9898](https://www.rfc-editor.org/info/rfc9898) summarizes
+known issues with ND and describes mitigations.
 
 Considerable work has been done to alleviate these problems in the case
 of Low-Power Wireless Personal Area Networks (6LoWPANs, using the IEEE
@@ -85,7 +87,7 @@ of Low-Power Wireless Personal Area Networks (6LoWPANs, using the IEEE
 [RFC 8505](https://www.rfc-editor.org/info/rfc8505),
 [RFC 8928](https://www.rfc-editor.org/info/rfc8928),
 [RFC 8929](https://www.rfc-editor.org/info/rfc8929) and
-[RFC9685](https://www.rfc-editor.org/info/rfc9685). These improvements
+[RFC 9685](https://www.rfc-editor.org/info/rfc9685). These improvements
 might be applied more generally in future.
 
 <!-- Link lines generated automatically; do not delete -->
