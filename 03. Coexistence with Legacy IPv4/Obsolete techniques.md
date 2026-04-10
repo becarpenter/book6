@@ -50,6 +50,11 @@ preprint [here](https://dataplane.org/jtk/publications/kgkp-pam-21.pdf).
   [RFC 7050](https://www.rfc-editor.org/info/rfc7050) should no longer
   be used.
 
+- "Bump-In-the-Stack" (BIS) \[[RFC 2767](https://www.rfc-editor.org/info/rfc2767)\],
+  "Bump-in-the-API" (BIA) \[[RFC 3338](https://www.rfc-editor.org/info/rfc3338)\]
+  and "Bump-in-the-Host" (BIH) \[[RFC 6535](https://www.rfc-editor.org/info/rfc6535)\]
+  are no longer useful, since [464XLAT](Translation%20and%20IPv4%20as%20a%20service.md) provides a better solution.
+
 <!-- Link lines generated automatically; do not delete -->
 
 ### [<ins>Previous</ins>](Translation%20and%20IPv4%20as%20a%20service.md) [<ins>Next</ins>](IPv6%20primary%20differences%20from%20IPv4.md) [<ins>Top</ins>](03.%20Coexistence%20with%20Legacy%20IPv4.md)
