@@ -47,8 +47,9 @@ preprint [here](https://dataplane.org/jtk/publications/kgkp-pam-21.pdf).
 - 6a44 \[[RFC6751](https://www.rfc-editor.org/info/rfc6751)\].
 
 - In the context of NAT64,
-  [RFC 7050](https://www.rfc-editor.org/info/rfc7050) should no longer
-  be used.
+  DNS64 \[[RFC 6147](https://www.rfc-editor.org/info/rfc6147)\] is incompatible with DNSSEC, and 
+  [RFC 8781](https://www.rfc-editor.org/info/rfc8781) is now preferable to 
+  [RFC 7050](https://www.rfc-editor.org/info/rfc7050) plus [RFC 8880](https://www.rfc-editor.org/info/rfc8880).
 
 - "Bump-In-the-Stack" (BIS) \[[RFC 2767](https://www.rfc-editor.org/info/rfc2767)\],
   "Bump-in-the-API" (BIA) \[[RFC 3338](https://www.rfc-editor.org/info/rfc3338)\]
