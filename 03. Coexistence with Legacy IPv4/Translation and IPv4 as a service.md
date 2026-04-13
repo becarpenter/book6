@@ -42,8 +42,12 @@ of translation techniques from the discussion of IPv4 as a service.
     and supports two-way transport sessions.
   - DNS64 \[[RFC6147](https://www.rfc-editor.org/info/rfc6147)\]
     supports DNS extensions for clients of stateful NAT64.
+    However, it is problematic because of incompatibility with
+    DNS security (DNSSEC). DNS64 synthesizes AAAA records from A records,
+    breaking cryptographic signatures.
   - PREF64 refers to the IPv6 prefix used "outside" the NAT64
     translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781) and
+    [RFC 7050](https://www.rfc-editor.org/info/rfc7050) plus
     [RFC 8880](https://www.rfc-editor.org/info/rfc8880) are mechanisms
     by which a host can learn the PREF64 in use.
     [RFC 9872](https://www.rfc-editor.org/info/rfc9872) recommends all
