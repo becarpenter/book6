@@ -37,14 +37,22 @@ of translation techniques from the discussion of IPv4 as a service.
 - NAT64 refers to address translation between IPv6 clients and IPv4
   servers, using the SIIT mechanism.
 
+  - [RFC 6052](https://www.rfc-editor.org/info/rfc6052) describes
+    algorithmic translation (mapping) between an IPv6 address
+    and a corresponding IPv4 address. A Well-Known Prefix (WKP),
+    64:ff9b::/96, is used for translation.
+  - [RFC 8215](https://www.rfc-editor.org/info/rfc8215) adds
+    64:ff9b:1::/48 as the Network-Specific Prefix (NSP) for
+    translation between an IPv6 address and a local (private)
+    IPv4 address.
   - [RFC 6146](https://www.rfc-editor.org/info/rfc6146) defines
     _stateful_ NAT64, which (like IPv4 NAT) includes port translation
     and supports two-way transport sessions.
   - DNS64 \[[RFC6147](https://www.rfc-editor.org/info/rfc6147)\]
     supports DNS extensions for clients of stateful NAT64.
-    However, it is problematic because of incompatibility with
-    DNS security (DNSSEC). DNS64 synthesizes AAAA records from A records,
-    breaking cryptographic signatures.
+    It is problematic in some deployments because of incompatibility
+    with DNS security (DNSSEC). DNS64 synthesizes AAAA records from
+    A records, breaking cryptographic signatures.
   - PREF64 refers to the IPv6 prefix used "outside" the NAT64
     translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781) (or
     [RFC 7050](https://www.rfc-editor.org/info/rfc7050) plus
@@ -64,7 +72,7 @@ of translation techniques from the discussion of IPv4 as a service.
     stateless NAT46 (SIIT) translation.
   - PLAT is the provider side translator in 464XLAT. It is nothing else
     than a stateful NAT64 gateway.
-  - This is the only well-defined model for NAT464 translation.
+  - This is the only well-defined model for NAT464 double translation.
 
 - The final two items have nothing to do with IPv6/IPv4 co-existence but
   are included here for completeness:
