@@ -65,6 +65,8 @@ getaddrinfo
 tunnel tunnels
 encapsulation
 NAT64
+WKP 'well-known prefix' 'well known prefix'
+NSP 'Network-Specific Prefix' 'Network Specific Prefix'
 NAT66
 NPTv6
 NAT464
