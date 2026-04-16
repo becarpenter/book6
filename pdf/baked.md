@@ -28,7 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2026-03-05 16:19:47 UTC+1300
+Version captured at 2026-04-16 11:53:56 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -757,7 +757,7 @@ be replaced by a double colon ('::') so that we write:
 The idea is that IPv6 addresses should be cut-and-pasted in almost all
 cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
-RFC9592, and older documentation often uses uppercase hexadecimal.
+RFC5952, and older documentation often uses uppercase hexadecimal.
 
 The choice of ':' as the separator is annoying in one particular aspect
 \- where a colon has another meaning and works as a separator between
@@ -1184,9 +1184,9 @@ further standards work is needed in this area.
 
 Operational issues with neighbor discovery and wireless multicast have
 been analyzed in the past
-([RFC 6583](https://www.rfc-editor.org/info/rfc6583),
-[RFC 6636](https://www.rfc-editor.org/info/rfc6636),
-[RFC 9119](https://www.rfc-editor.org/info/rfc9119)), but it remains the
+\[[RFC6583](https://www.rfc-editor.org/info/rfc6583),
+[RFC6636](https://www.rfc-editor.org/info/rfc6636),
+[RFC9119](https://www.rfc-editor.org/info/rfc9119)\] but it remains the
 case that very large WiFi networks (such as the IETF builds several
 times a year for its plenary meetings) are subject to significant
 multicast overloads. In practice, this causes the WiFi switches to
@@ -1197,6 +1197,8 @@ of wireless subnets as much as practicable.
 A summary of the issues and complications of neighbor discovery on
 wireless networks in general (not just WiFi) can be found in
 [this draft](https://datatracker.ietf.org/doc/draft-ietf-6man-ipv6-over-wireless/).
+More generally, [RFC 9898](https://www.rfc-editor.org/info/rfc9898) summarizes
+known issues with ND and describes mitigations.
 
 Considerable work has been done to alleviate these problems in the case
 of Low-Power Wireless Personal Area Networks (6LoWPANs, using the IEEE
@@ -1205,7 +1207,7 @@ of Low-Power Wireless Personal Area Networks (6LoWPANs, using the IEEE
 [RFC 8505](https://www.rfc-editor.org/info/rfc8505),
 [RFC 8928](https://www.rfc-editor.org/info/rfc8928),
 [RFC 8929](https://www.rfc-editor.org/info/rfc8929) and
-[RFC9685](https://www.rfc-editor.org/info/rfc9685). These improvements
+[RFC 9685](https://www.rfc-editor.org/info/rfc9685). These improvements
 might be applied more generally in future.
 
 <!-- Link lines generated automatically; do not delete -->
@@ -2450,14 +2452,26 @@ of translation techniques from the discussion of IPv4 as a service.
 - NAT64 refers to address translation between IPv6 clients and IPv4
   servers, using the SIIT mechanism.
 
+  - [RFC 6052](https://www.rfc-editor.org/info/rfc6052) describes
+    algorithmic translation (mapping) between an IPv6 address
+    and a corresponding IPv4 address. A Well-Known Prefix (WKP),
+    64:ff9b::/96, is used for translation.
+  - [RFC 8215](https://www.rfc-editor.org/info/rfc8215) adds
+    64:ff9b:1::/48 as the Network-Specific Prefix (NSP) for
+    translation between an IPv6 address and a local (private)
+    IPv4 address.
   - [RFC 6146](https://www.rfc-editor.org/info/rfc6146) defines
     _stateful_ NAT64, which (like IPv4 NAT) includes port translation
     and supports two-way transport sessions.
   - DNS64 \[[RFC6147](https://www.rfc-editor.org/info/rfc6147)\]
     supports DNS extensions for clients of stateful NAT64.
+    It is problematic in some deployments because of incompatibility
+    with DNS security (DNSSEC). DNS64 synthesizes AAAA records from
+    A records, breaking cryptographic signatures.
   - PREF64 refers to the IPv6 prefix used "outside" the NAT64
-    translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781) and
-    [RFC 8880](https://www.rfc-editor.org/info/rfc8880) are mechanisms
+    translator. [RFC 8781](https://www.rfc-editor.org/info/rfc8781) (or
+    [RFC 7050](https://www.rfc-editor.org/info/rfc7050) plus
+    [RFC 8880](https://www.rfc-editor.org/info/rfc8880)) are mechanisms
     by which a host can learn the PREF64 in use.
     [RFC 9872](https://www.rfc-editor.org/info/rfc9872) recommends all
     operators to support RFC 8781, i.e. announce PREF64 via Router
@@ -2473,7 +2487,7 @@ of translation techniques from the discussion of IPv4 as a service.
     stateless NAT46 (SIIT) translation.
   - PLAT is the provider side translator in 464XLAT. It is nothing else
     than a stateful NAT64 gateway.
-  - This is the only well-defined model for NAT464 translation.
+  - This is the only well-defined model for NAT464 double translation.
 
 - The final two items have nothing to do with IPv6/IPv4 co-existence but
   are included here for completeness:
@@ -2701,8 +2715,14 @@ preprint [here](https://dataplane.org/jtk/publications/kgkp-pam-21.pdf).
 - 6a44 \[[RFC6751](https://www.rfc-editor.org/info/rfc6751)\].
 
 - In the context of NAT64,
-  [RFC 7050](https://www.rfc-editor.org/info/rfc7050) should no longer
-  be used.
+  DNS64 \[[RFC 6147](https://www.rfc-editor.org/info/rfc6147)\] is incompatible with DNSSEC, and 
+  [RFC 8781](https://www.rfc-editor.org/info/rfc8781) is now preferable to 
+  [RFC 7050](https://www.rfc-editor.org/info/rfc7050) plus [RFC 8880](https://www.rfc-editor.org/info/rfc8880).
+
+- "Bump-In-the-Stack" (BIS) \[[RFC 2767](https://www.rfc-editor.org/info/rfc2767)\],
+  "Bump-in-the-API" (BIA) \[[RFC 3338](https://www.rfc-editor.org/info/rfc3338)\]
+  and "Bump-in-the-Host" (BIH) \[[RFC 6535](https://www.rfc-editor.org/info/rfc6535)\]
+  are no longer useful, since [464XLAT](#translation-and-ipv4-as-a-service) provides a better solution.
 
 <!-- Link lines generated automatically; do not delete -->
 
@@ -5220,9 +5240,9 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](#obsolete-features-in-ipv6).
 
-RFCbib6 run at 2026-03-05 16:18:59 UTC+1300 (504 RFCs found)
+RFCbib6 run at 2026-04-16 11:52:44 UTC+1200 (505 RFCs found)
 
-### Standards Track (271 RFCs)
+### Standards Track (272 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -5810,6 +5830,8 @@ RFCbib6 run at 2026-03-05 16:18:59 UTC+1300 (504 RFCs found)
   Configuration Protocol for IPv6 (DHCPv6)
 - [RFC 9926](https://www.rfc-editor.org/info/rfc9926): Prefix
   Registration for IPv6 Neighbor Discovery
+- [RFC 9928](https://www.rfc-editor.org/info/rfc9928): DHCPv4 over
+  DHCPv6 with Relay Agent Support
 
 ### Best Current Practice (16 RFCs)
 
@@ -6650,12 +6672,13 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2026-03-05 16:18:17 UTC+1300
+Generated at 2026-04-16 11:51:58 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
 <!-- Link lines generated automatically; do not delete -->
 [464XLAT ¶](#dual-stack-scenarios)
+[¶](#obsolete-techniques)
 [¶](#translation-and-ipv4-as-a-service)
 [¶](#deployment-by-carriers)
 
@@ -6737,6 +6760,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#obsolete-techniques)
 [¶](#tunnels)
 
+[CLAT ¶](#translation-and-ipv4-as-a-service)
+
 [coexistence ¶](#coexistence-with-legacy-ipv4)
 [¶](#dual-stack-scenarios)
 [¶](#obsolete-techniques)
@@ -6776,6 +6801,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#transport-protocols)
 
 [DNS64 ¶](#dual-stack-scenarios)
+[¶](#obsolete-techniques)
 [¶](#translation-and-ipv4-as-a-service)
 [¶](#advanced-troubleshooting)
 [¶](#tools)
@@ -7070,6 +7096,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#security)
 [¶](#multihoming)
 
+[NSP ¶](#translation-and-ipv4-as-a-service)
+
 [obsolete ¶](#how-to-keep-up-to-date)
 [¶](#addresses)
 [¶](#dns)
@@ -7093,6 +7121,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#tools)
 
 [PIO ¶](#auto-configuration)
+
+[PLAT ¶](#translation-and-ipv4-as-a-service)
 
 [PMTUD ¶](#extension-headers-and-options)
 [¶](#filtering)
@@ -7298,6 +7328,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#deployment-in-the-home)
 [¶](#advanced-troubleshooting)
 
+[WKP ¶](#translation-and-ipv4-as-a-service)
+
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
 backslashpagebreak
@@ -7306,7 +7338,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2026-03-05 16:18:17 UTC+1300
+Generated at 2026-04-16 11:51:58 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -7364,6 +7396,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC2675 ¶](#packet-size-and-jumbo-frames)
 
+[RFC2767 ¶](#obsolete-techniques)
+
 [RFC3053 ¶](#obsolete-techniques)
 
 [RFC3056 ¶](#obsolete-techniques)
@@ -7377,6 +7411,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [¶](#transport-protocols)
 
 [RFC3261 ¶](#transport-protocols)
+
+[RFC3338 ¶](#obsolete-techniques)
 
 [RFC3484 ¶](#source-and-destination-address-selection)
 
@@ -7506,6 +7542,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC5969 ¶](#tunnels)
 
+[RFC6052 ¶](#translation-and-ipv4-as-a-service)
+
 [RFC6085 ¶](#layer-2-functions)
 
 [RFC6105 ¶](#layer-2-considerations)
@@ -7515,7 +7553,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC6146 ¶](#translation-and-ipv4-as-a-service)
 
-[RFC6147 ¶](#translation-and-ipv4-as-a-service)
+[RFC6147 ¶](#obsolete-techniques)
+[¶](#translation-and-ipv4-as-a-service)
 
 [RFC6157 ¶](#dual-stack-scenarios)
 [¶](#multihoming)
@@ -7551,6 +7590,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6494 ¶](#obsolete-features-in-ipv6)
 
 [RFC6495 ¶](#obsolete-features-in-ipv6)
+
+[RFC6535 ¶](#obsolete-techniques)
 
 [RFC6550 ¶](#routing)
 
@@ -7593,6 +7634,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC7045 ¶](#filtering)
 
 [RFC7050 ¶](#obsolete-techniques)
+[¶](#translation-and-ipv4-as-a-service)
 
 [RFC7066 ¶](#managed-configuration)
 
@@ -7689,6 +7731,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8210 ¶](#filtering)
 
+[RFC8215 ¶](#translation-and-ipv4-as-a-service)
+
 [RFC8273 ¶](#prefix-per-host)
 
 [RFC8304 ¶](#transport-protocols)
@@ -7723,11 +7767,13 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8754 ¶](#extension-headers-and-options)
 
-[RFC8781 ¶](#translation-and-ipv4-as-a-service)
+[RFC8781 ¶](#obsolete-techniques)
+[¶](#translation-and-ipv4-as-a-service)
 
 [RFC8837 ¶](#traffic-class-and-flow-label)
 
-[RFC8880 ¶](#translation-and-ipv4-as-a-service)
+[RFC8880 ¶](#obsolete-techniques)
+[¶](#translation-and-ipv4-as-a-service)
 
 [RFC8899 ¶](#extension-headers-and-options)
 
@@ -7782,8 +7828,6 @@ This index was created automatically, so it's dumb. It has links to each section
 [¶](#deployment-in-the-enterprise)
 [¶](#status)
 
-[RFC9592 ¶](#addresses)
-
 [RFC9637 ¶](#addresses)
 
 [RFC9663 ¶](#managed-configuration)
@@ -7808,6 +7852,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9844 ¶](#addresses)
 
 [RFC9872 ¶](#translation-and-ipv4-as-a-service)
+
+[RFC9898 ¶](#address-resolution)
 
 [RFC9915 ¶](#managed-configuration)
 [¶](#address-planning)

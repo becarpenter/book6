@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2026-03-05 16:18:17 UTC+1300
+Generated at 2026-04-16 11:51:58 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -59,6 +59,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC2675 ●](./06.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
+[RFC2767 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+
 [RFC3053 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [RFC3056 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
@@ -72,6 +74,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
 [RFC3261 ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+
+[RFC3338 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [RFC3484 ●](./02.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 
@@ -201,6 +205,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC5969 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
+[RFC6052 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+
 [RFC6085 ●](./02.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 
 [RFC6105 ●](./04.%20Security/Layer%202%20considerations.md)
@@ -210,7 +216,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC6146 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
-[RFC6147 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+[RFC6147 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC6157 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
@@ -246,6 +253,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC6494 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 
 [RFC6495 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+
+[RFC6535 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [RFC6550 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 
@@ -288,6 +297,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC7045 ●](./04.%20Security/Filtering.md)
 
 [RFC7050 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC7066 ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 
@@ -384,6 +394,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8210 ●](./04.%20Security/Filtering.md)
 
+[RFC8215 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+
 [RFC8273 ●](./05.%20Network%20Design/Prefix%20per%20Host.md)
 
 [RFC8304 ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
@@ -418,11 +430,13 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC8754 ●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 
-[RFC8781 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+[RFC8781 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC8837 ●](./02.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 
-[RFC8880 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+[RFC8880 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [RFC8899 ●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 
@@ -477,8 +491,6 @@ This index was created automatically, so it's dumb. It has links to each section
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20enterprise.md)
 [●](./08.%20Deployment%20Status/Status.md)
 
-[RFC9592 ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
-
 [RFC9637 ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 
 [RFC9663 ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
@@ -503,6 +515,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9844 ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 
 [RFC9872 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+
+[RFC9898 ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 
 [RFC9915 ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./05.%20Network%20Design/Address%20Planning.md)

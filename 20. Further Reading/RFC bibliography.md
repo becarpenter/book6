@@ -8,9 +8,9 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](../10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
-RFCbib6 run at 2026-03-05 16:18:59 UTC+1300 (504 RFCs found)
+RFCbib6 run at 2026-04-16 11:52:44 UTC+1200 (505 RFCs found)
 
-### Standards Track (271 RFCs)
+### Standards Track (272 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -598,6 +598,8 @@ RFCbib6 run at 2026-03-05 16:18:59 UTC+1300 (504 RFCs found)
   Configuration Protocol for IPv6 (DHCPv6)
 - [RFC 9926](https://www.rfc-editor.org/info/rfc9926): Prefix
   Registration for IPv6 Neighbor Discovery
+- [RFC 9928](https://www.rfc-editor.org/info/rfc9928): DHCPv4 over
+  DHCPv6 with Relay Agent Support
 
 ### Best Current Practice (16 RFCs)
 

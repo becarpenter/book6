@@ -127,7 +127,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2026-03-05 16:19:47 UTC+1300
+Version captured at 2026-04-16 11:53:56 UTC+1200
 
 \pagebreak
 
@@ -1013,7 +1013,7 @@ that we write:
 The idea is that IPv6 addresses should be cut-and-pasted in almost all
 cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
-RFC9592, and older documentation often uses uppercase hexadecimal.
+RFC5952, and older documentation often uses uppercase hexadecimal.
 
 The choice of \textquotesingle:\textquotesingle{} as the separator is
 annoying in one particular aspect - where a colon has another meaning
@@ -1491,9 +1491,9 @@ but further standards work is needed in this area.
 
 Operational issues with neighbor discovery and wireless multicast have
 been analyzed in the past
-(\href{https://www.rfc-editor.org/info/rfc6583}{RFC 6583},
-\href{https://www.rfc-editor.org/info/rfc6636}{RFC 6636},
-\href{https://www.rfc-editor.org/info/rfc9119}{RFC 9119}), but it
+{[}\href{https://www.rfc-editor.org/info/rfc6583}{RFC6583},
+\href{https://www.rfc-editor.org/info/rfc6636}{RFC6636},
+\href{https://www.rfc-editor.org/info/rfc9119}{RFC9119}{]} but it
 remains the case that very large WiFi networks (such as the IETF builds
 several times a year for its plenary meetings) are subject to
 significant multicast overloads. In practice, this causes the WiFi
@@ -1504,7 +1504,9 @@ limit the size of wireless subnets as much as practicable.
 A summary of the issues and complications of neighbor discovery on
 wireless networks in general (not just WiFi) can be found in
 \href{https://datatracker.ietf.org/doc/draft-ietf-6man-ipv6-over-wireless/}{this
-draft}.
+draft}. More generally,
+\href{https://www.rfc-editor.org/info/rfc9898}{RFC 9898} summarizes
+known issues with ND and describes mitigations.
 
 Considerable work has been done to alleviate these problems in the case
 of Low-Power Wireless Personal Area Networks (6LoWPANs, using the IEEE
@@ -1513,7 +1515,7 @@ of Low-Power Wireless Personal Area Networks (6LoWPANs, using the IEEE
 \href{https://www.rfc-editor.org/info/rfc8505}{RFC 8505},
 \href{https://www.rfc-editor.org/info/rfc8928}{RFC 8928},
 \href{https://www.rfc-editor.org/info/rfc8929}{RFC 8929} and
-\href{https://www.rfc-editor.org/info/rfc9685}{RFC9685}. These
+\href{https://www.rfc-editor.org/info/rfc9685}{RFC 9685}. These
 improvements might be applied more generally in future.
 
 \subsubsection{\texorpdfstring{\hyperref[layer-2-functions]{Previous}
@@ -2911,16 +2913,29 @@ of translation techniques from the discussion of IPv4 as a service.
   \begin{itemize}
   \tightlist
   \item
+    \href{https://www.rfc-editor.org/info/rfc6052}{RFC 6052} describes
+    algorithmic translation (mapping) between an IPv6 address and a
+    corresponding IPv4 address. A Well-Known Prefix (WKP), 64:ff9b::/96,
+    is used for translation.
+  \item
+    \href{https://www.rfc-editor.org/info/rfc8215}{RFC 8215} adds
+    64:ff9b:1::/48 as the Network-Specific Prefix (NSP) for translation
+    between an IPv6 address and a local (private) IPv4 address.
+  \item
     \href{https://www.rfc-editor.org/info/rfc6146}{RFC 6146} defines
     \emph{stateful} NAT64, which (like IPv4 NAT) includes port
     translation and supports two-way transport sessions.
   \item
     DNS64 {[}\href{https://www.rfc-editor.org/info/rfc6147}{RFC6147}{]}
-    supports DNS extensions for clients of stateful NAT64.
+    supports DNS extensions for clients of stateful NAT64. It is
+    problematic in some deployments because of incompatibility with DNS
+    security (DNSSEC). DNS64 synthesizes AAAA records from A records,
+    breaking cryptographic signatures.
   \item
     PREF64 refers to the IPv6 prefix used "outside" the NAT64
     translator. \href{https://www.rfc-editor.org/info/rfc8781}{RFC 8781}
-    and \href{https://www.rfc-editor.org/info/rfc8880}{RFC 8880} are
+    (or \href{https://www.rfc-editor.org/info/rfc7050}{RFC 7050} plus
+    \href{https://www.rfc-editor.org/info/rfc8880}{RFC 8880}) are
     mechanisms by which a host can learn the PREF64 in use.
     \href{https://www.rfc-editor.org/info/rfc9872}{RFC 9872} recommends
     all operators to support RFC 8781, i.e. announce PREF64 via Router
@@ -2942,7 +2957,7 @@ of translation techniques from the discussion of IPv4 as a service.
     PLAT is the provider side translator in 464XLAT. It is nothing else
     than a stateful NAT64 gateway.
   \item
-    This is the only well-defined model for NAT464 translation.
+    This is the only well-defined model for NAT464 double translation.
   \end{itemize}
 \item
   The final two items have nothing to do with IPv6/IPv4 co-existence but
@@ -3197,9 +3212,22 @@ the Tunnel - Legacy IPv6 Transition Mechanisms in the Wild}, preprint
 \item
   6a44 {[}\href{https://www.rfc-editor.org/info/rfc6751}{RFC6751}{]}.
 \item
-  In the context of NAT64,
-  \href{https://www.rfc-editor.org/info/rfc7050}{RFC 7050} should no
-  longer be used.
+  In the context of NAT64, DNS64
+  {[}\href{https://www.rfc-editor.org/info/rfc6147}{RFC 6147}{]} is
+  incompatible with DNSSEC, and
+  \href{https://www.rfc-editor.org/info/rfc8781}{RFC 8781} is now
+  preferable to \href{https://www.rfc-editor.org/info/rfc7050}{RFC 7050}
+  plus \href{https://www.rfc-editor.org/info/rfc8880}{RFC 8880}.
+\item
+  "Bump-In-the-Stack" (BIS)
+  {[}\href{https://www.rfc-editor.org/info/rfc2767}{RFC 2767}{]},
+  "Bump-in-the-API" (BIA)
+  {[}\href{https://www.rfc-editor.org/info/rfc3338}{RFC 3338}{]} and
+  "Bump-in-the-Host" (BIH)
+  {[}\href{https://www.rfc-editor.org/info/rfc6535}{RFC 6535}{]} are no
+  longer useful, since
+  \hyperref[translation-and-ipv4-as-a-service]{464XLAT} provides a
+  better solution.
 \end{itemize}
 
 \subsubsection{\texorpdfstring{\hyperref[translation-and-ipv4-as-a-service]{Previous}
@@ -5948,10 +5976,10 @@ for Standards, BCPs, Informational and Experimental RFCs. Be
 be misleading as well as out of date. Also see
 \hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}.
 
-RFCbib6 run at 2026-03-05 16:18:59 UTC+1300 (504 RFCs found)
+RFCbib6 run at 2026-04-16 11:52:44 UTC+1200 (505 RFCs found)
 
-\subsubsection{Standards Track (271
-RFCs)}\label{standards-track-271-rfcs}
+\subsubsection{Standards Track (272
+RFCs)}\label{standards-track-272-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -6826,6 +6854,9 @@ RFCs)}\label{standards-track-271-rfcs}
 \item
   \href{https://www.rfc-editor.org/info/rfc9926}{RFC 9926}: Prefix
   Registration for IPv6 Neighbor Discovery
+\item
+  \href{https://www.rfc-editor.org/info/rfc9928}{RFC 9928}: DHCPv4 over
+  DHCPv6 with Relay Agent Support
 \end{itemize}
 
 \subsubsection{Best Current Practice (16
@@ -7945,7 +7976,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2026-03-05 16:18:17 UTC+1300
+Generated at 2026-04-16 11:51:58 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7953,6 +7984,7 @@ keyword. If you think any keywords are missing, please raise an issue
 (use link on GitHub toolbar).
 
 \hyperref[dual-stack-scenarios]{464XLAT ¶}
+\hyperref[obsolete-techniques]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶}
 \hyperref[deployment-by-carriers]{¶}
 
@@ -8012,6 +8044,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[dual-stack-scenarios]{CGN ¶} \hyperref[obsolete-techniques]{¶}
 \hyperref[tunnels]{¶}
 
+\hyperref[translation-and-ipv4-as-a-service]{CLAT ¶}
+
 \hyperref[coexistence-with-legacy-ipv4]{coexistence ¶}
 \hyperref[dual-stack-scenarios]{¶} \hyperref[obsolete-techniques]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
@@ -8039,6 +8073,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[transport-protocols]{¶}
 
 \hyperref[dual-stack-scenarios]{DNS64 ¶}
+\hyperref[obsolete-techniques]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶}
 \hyperref[advanced-troubleshooting]{¶} \hyperref[tools]{¶}
 
@@ -8255,6 +8290,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[translation-and-ipv4-as-a-service]{NPTv6 ¶}
 \hyperref[security]{¶} \hyperref[multihoming]{¶}
 
+\hyperref[translation-and-ipv4-as-a-service]{NSP ¶}
+
 \hyperref[how-to-keep-up-to-date]{obsolete ¶} \hyperref[addresses]{¶}
 \hyperref[dns]{¶} \hyperref[obsolete-techniques]{¶}
 \hyperref[tunnels]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
@@ -8270,6 +8307,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[tools]{¶}
 
 \hyperref[auto-configuration]{PIO ¶}
+
+\hyperref[translation-and-ipv4-as-a-service]{PLAT ¶}
 
 \hyperref[extension-headers-and-options]{PMTUD ¶}
 \hyperref[filtering]{¶} \hyperref[packet-size-and-jumbo-frames]{¶}
@@ -8415,6 +8454,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[deployment-in-the-home]{¶}
 \hyperref[advanced-troubleshooting]{¶}
 
+\hyperref[translation-and-ipv4-as-a-service]{WKP ¶}
+
 \subsubsection{\texorpdfstring{\hyperref[list-of-contents]{Back to main
 Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 
@@ -8428,7 +8469,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2026-03-05 16:18:17 UTC+1300
+Generated at 2026-04-16 11:51:58 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -8483,6 +8524,8 @@ has links to each section that mentions each citation.
 
 \hyperref[packet-size-and-jumbo-frames]{RFC2675 ¶}
 
+\hyperref[obsolete-techniques]{RFC2767 ¶}
+
 \hyperref[obsolete-techniques]{RFC3053 ¶}
 
 \hyperref[obsolete-techniques]{RFC3056 ¶}
@@ -8496,6 +8539,8 @@ has links to each section that mentions each citation.
 \hyperref[transport-protocols]{¶}
 
 \hyperref[transport-protocols]{RFC3261 ¶}
+
+\hyperref[obsolete-techniques]{RFC3338 ¶}
 
 \hyperref[source-and-destination-address-selection]{RFC3484 ¶}
 
@@ -8613,6 +8658,8 @@ has links to each section that mentions each citation.
 
 \hyperref[tunnels]{RFC5969 ¶}
 
+\hyperref[translation-and-ipv4-as-a-service]{RFC6052 ¶}
+
 \hyperref[layer-2-functions]{RFC6085 ¶}
 
 \hyperref[layer-2-considerations]{RFC6105 ¶}
@@ -8622,7 +8669,8 @@ has links to each section that mentions each citation.
 
 \hyperref[translation-and-ipv4-as-a-service]{RFC6146 ¶}
 
-\hyperref[translation-and-ipv4-as-a-service]{RFC6147 ¶}
+\hyperref[obsolete-techniques]{RFC6147 ¶}
+\hyperref[translation-and-ipv4-as-a-service]{¶}
 
 \hyperref[dual-stack-scenarios]{RFC6157 ¶} \hyperref[multihoming]{¶}
 
@@ -8654,6 +8702,8 @@ has links to each section that mentions each citation.
 \hyperref[obsolete-features-in-ipv6]{RFC6494 ¶}
 
 \hyperref[obsolete-features-in-ipv6]{RFC6495 ¶}
+
+\hyperref[obsolete-techniques]{RFC6535 ¶}
 
 \hyperref[routing]{RFC6550 ¶}
 
@@ -8693,6 +8743,7 @@ has links to each section that mentions each citation.
 \hyperref[filtering]{RFC7045 ¶}
 
 \hyperref[obsolete-techniques]{RFC7050 ¶}
+\hyperref[translation-and-ipv4-as-a-service]{¶}
 
 \hyperref[managed-configuration]{RFC7066 ¶}
 
@@ -8783,6 +8834,8 @@ has links to each section that mentions each citation.
 
 \hyperref[filtering]{RFC8210 ¶}
 
+\hyperref[translation-and-ipv4-as-a-service]{RFC8215 ¶}
+
 \hyperref[prefix-per-host]{RFC8273 ¶}
 
 \hyperref[transport-protocols]{RFC8304 ¶}
@@ -8813,11 +8866,13 @@ has links to each section that mentions each citation.
 
 \hyperref[extension-headers-and-options]{RFC8754 ¶}
 
-\hyperref[translation-and-ipv4-as-a-service]{RFC8781 ¶}
+\hyperref[obsolete-techniques]{RFC8781 ¶}
+\hyperref[translation-and-ipv4-as-a-service]{¶}
 
 \hyperref[traffic-class-and-flow-label]{RFC8837 ¶}
 
-\hyperref[translation-and-ipv4-as-a-service]{RFC8880 ¶}
+\hyperref[obsolete-techniques]{RFC8880 ¶}
+\hyperref[translation-and-ipv4-as-a-service]{¶}
 
 \hyperref[extension-headers-and-options]{RFC8899 ¶}
 
@@ -8866,8 +8921,6 @@ has links to each section that mentions each citation.
 \hyperref[deployment-by-carriers]{¶}
 \hyperref[deployment-in-the-enterprise]{¶} \hyperref[status]{¶}
 
-\hyperref[addresses]{RFC9592 ¶}
-
 \hyperref[addresses]{RFC9637 ¶}
 
 \hyperref[managed-configuration]{RFC9663 ¶}
@@ -8892,6 +8945,8 @@ has links to each section that mentions each citation.
 \hyperref[addresses]{RFC9844 ¶}
 
 \hyperref[translation-and-ipv4-as-a-service]{RFC9872 ¶}
+
+\hyperref[address-resolution]{RFC9898 ¶}
 
 \hyperref[managed-configuration]{RFC9915 ¶}
 \hyperref[address-planning]{¶} \hyperref[prefix-per-host]{¶}

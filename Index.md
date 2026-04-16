@@ -1,12 +1,13 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2026-03-05 16:18:17 UTC+1300
+Generated at 2026-04-16 11:51:58 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
 <!-- Link lines generated automatically; do not delete -->
 [464XLAT ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./08.%20Deployment%20Status/Deployment%20by%20carriers.md)
 
@@ -88,6 +89,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
+[CLAT ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+
 [coexistence ●](./03.%20Coexistence%20with%20Legacy%20IPv4/03.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
@@ -127,6 +130,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
 [DNS64 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 [●](./09.%20Troubleshooting/Tools.md)
@@ -421,6 +425,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./04.%20Security/04.%20Security.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
 
+[NSP ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+
 [obsolete ●](./01.%20Introduction%20and%20Foreword/How%20to%20keep%20up%20to%20date.md)
 [●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./02.%20IPv6%20Basic%20Technology/DNS.md)
@@ -444,6 +450,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./09.%20Troubleshooting/Tools.md)
 
 [PIO ●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+
+[PLAT ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [PMTUD ●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./04.%20Security/Filtering.md)
@@ -648,6 +656,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./08.%20Deployment%20Status/Deployment%20by%20carriers.md)
 [●](./08.%20Deployment%20Status/Deployment%20in%20the%20home.md)
 [●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
+
+[WKP ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 
 ### [<ins>Back to main Contents</ins>](Contents.md)
