@@ -13,7 +13,8 @@ example, both
 statistics on the users that access their services over IPv6. The 
 results are different, due to different methods being used.
 Google generally sees more IPv6 usage than Facebook, but Google
-has a blind spot in China where adoption is significant.
+has a blind spot in China where adoption is significant. The
+Google statistic first touched 50% in March 2026.
 
 A trusted source from a Regional Internet Registry (RIR)
 is [APNIC Labs](https://stats.labs.apnic.net/ipv6/).
@@ -26,7 +27,7 @@ A very informative blog was posted in 2023 by
 [Cloudflare](https://blog.cloudflare.com/ipv6-from-dns-pov), showing
 that humans use IPv6 a lot more than bots, which seem to prefer IPv4.
 Cloudflare's current protocol usage data is summarized by
-[Cloudflare radar](https://radar.cloudflare.com/).
+[Cloudflare radar](https://radar.cloudflare.com/adoption-and-usage).
 
 [Akamai](https://web.archive.org/web/20250324111641/https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization)
 formerly provided data measuring the number of hits to their content delivery
