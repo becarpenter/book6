@@ -127,7 +127,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2026-04-16 11:53:56 UTC+1200
+Version captured at 2026-04-22 17:27:24 UTC+1200
 
 \pagebreak
 
@@ -170,6 +170,8 @@ evolves. There is also an \hyperref[book6-main-index]{index}, and a
   \hyperref[acknowledgments]{Acknowledgments}
 \item
   \hyperref[why-version-6]{Why version 6}
+\item
+  \hyperref[why-ipv6-is-so-complicated]{Why IPv6 is so complicated}
 \end{itemize}
 
 \hyperref[ipv6-basic-technology]{2. IPv6 Basic Technology}
@@ -350,6 +352,8 @@ operations center sees IPv6}
 \hyperref[acknowledgments]{Acknowledgments}
 
 \hyperref[why-version-6]{Why version 6}
+
+\hyperref[why-ipv6-is-so-complicated]{Why IPv6 is so complicated}
 
 \subsubsection{\texorpdfstring{\hyperref[list-of-contents]{Back to main
 Contents}}{Back to main Contents}}\label{back-to-main-contents}
@@ -754,8 +758,342 @@ belongs to an April fool\textquotesingle s day joke
 {[}\href{https://www.rfc-editor.org/info/rfc1606}{RFC1606}{]}.
 
 \subsubsection{\texorpdfstring{\hyperref[acknowledgments]{Previous}
-\hyperref[ipv6-basic-technology]{Next}
+\hyperref[why-ipv6-is-so-complicated]{Next}
 \hyperref[introduction-and-foreword]{Top}}{Previous Next Top}}\label{previous-next-top-7}
+
+\pagebreak
+
+\subsection{Why IPv6 is so
+complicated}\label{why-ipv6-is-so-complicated}
+
+There\textquotesingle s no question that IPv6 is more complicated than
+IPv4, and people sometimes ask why that is. Surely it would have been
+much simpler to just add an extra 32 bits to the IPv4 address, and
+change nothing else? In fact, every year or two people propose
+alternatives to IPv6 ("IPv8" is a generic name for such proposals, which
+mainly involve 8-byte addresses) because they have asked themselves that
+question. This note attempts to answer the question, and to show why
+such proposals are a waste of everybody\textquotesingle s time,
+especially for the people who propose them.
+
+There are at least three possible answers:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Just adding bits to the address isn\textquotesingle t as simple as it
+  seems.
+\item
+  IPv4 was not the only network layer protocol in the world in 1994, and
+  the others had good features that IPv4 lacked.
+\item
+  The IPv6 designers went mad.
+\end{enumerate}
+
+We will discuss each of these points in turn. To set the context, note
+that the decision to develop IPv6 rather than one of the other possible
+options was announced at the July 1994 IETF meeting in Toronto, Canada.
+This followed a long process that formally started at an IAB workshop in
+1991 {[}\href{https://www.rfc-editor.org/info/rfc1287}{RFC1287}{]} and
+led to an IESG report on future routing and addressing in late 1992
+{[}\href{https://www.rfc-editor.org/info/rfc1380}{RFC1380}{]}. Concerns
+about routing led to classless addressing and BGP4 routing; concerns
+about address exhaustion led to agreement that a new version of IP was
+needed. But scaling up the routing and addressing systems were not the
+only concerns in RFC 1380 (see point 2 above):
+
+\begin{verbatim}
+   Although the catalog of problems above is pretty complete as far as
+   the scaling problems of the Internet are concerned, there are other
+   Internet layer issues that will need to be addressed over the coming
+   years.  These are issues regarding advanced functionality and service
+   guarantees in the Internet layer.
+ 
+   In any attempt to resolve the Internet scaling problems, it is
+   important to consider how these other issues might affect the future
+   evolution of Internet layer protocols.
+\end{verbatim}
+
+In any case, various proposals for the new version were drafted in
+1991/93 and the IETF had no clear direction. A BOF named "IPDECIDE" was
+held at the July 1993 IETF meeting in Amsterdam, The Netherlands. Its
+goal was to pick a direction, but the result was, um, indecisive. Next,
+the IESG decided to set up an IP Next Generation (IPng) Directorate
+under two Area Directors (Scott Bradner and Allison Mankin) to support
+the decision process. This led to the July 1994 choice, guided by
+{[}\href{https://www.rfc-editor.org/info/rfc1726}{RFC1726}{]}, and
+explained in detail by
+{[}\href{https://www.rfc-editor.org/info/rfc1752}{RFC1752}{]} and by the
+book \emph{IPng: Internet Protocol Next Generation}, S. Bradner and A.
+Mankin (editors), Addison-Wesley, 1995.
+
+\subsubsection{Why adding bits isn\textquotesingle t
+simple}\label{why-adding-bits-isnt-simple}
+
+IPv4 implementations, in 1994 and still today, have the 32-bit address
+format built into their code. Whether you expand the address size to 33,
+64 or 128 bits, all IPv4 implementations will discard the packets. So
+it\textquotesingle s a matter of mathematical and physical fact that to
+expand the address size, you must change the protocol, and that means
+two things immediately:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  You have to change the version number.
+\item
+  You have to add new code to handle the new version.
+\end{enumerate}
+
+Furthermore, you don\textquotesingle t want to split the Internet in
+two, so you must design a method of interworking between the old version
+and the new version. Annoyingly, you need to do that in a way that can
+be done completely in machines that know about the new version, because
+other machines don\textquotesingle t know anything at all about the new
+version, by definition. So,
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\tightlist
+\item
+  You need a coexistence technique so that updated systems, with the new
+  protocol, can connect to old systems that know nothing of the new
+  protocol.
+\end{enumerate}
+
+Two minutes of thought show that this third requirement has only two
+solutions:
+
+(3A) Dual stack, in which the new machines speak both the old (IPv4) and
+new (IPng) protocol.
+
+(3B) Translation, in which something translates addresses between the
+old and new protocols.
+
+This has been known for more than 30 years
+{[}\href{https://www.rfc-editor.org/info/rfc1671}{RFC1671}{]}, although
+people still sometimes try to deny it.
+
+To state this in graphical form, here\textquotesingle s a diagram,
+showing who can talk to who, assuming the simplistic model of IPng with
+64 bit addresses:
+
+\begin{verbatim}
+              OLD    DUAL   NEW     
+            ----------------------
+        OLD |  32  |  32  |  XX  |      
+            |------|------|------|
+       DUAL |  32  |  64  |  64  |
+            |------|------|------|
+        NEW |  XX  |  64  |  64  |
+            ----------------------
+\end{verbatim}
+
+Protocol details, and the exact address length, don\textquotesingle t
+matter. The XX cases can only work with protocol and address
+translation. All the complexities (and that really means all) of
+IPv4-IPng coexistence and transition are a result of this diagram, and
+the details of IPng design do not change this fact of nature.
+
+Any purported design of a "better" or "simpler" IPng than IPv6 does not
+change this, however hard its authors try. In other words, the basic
+difficulties of IPv6 transition and coexistence have nothing to do with
+the design of IPv6.
+
+Incidentally, "IPv8" proponents often ask why IPv6
+didn\textquotesingle t simply stick some extra bits on the front of IPv4
+addresses, instead of inventing a whole new format. Actually, we tried
+that: the "IPv4-Compatible IPv6 address" format was defined in
+{[}\href{https://www.rfc-editor.org/info/rfc3513}{RFC3513}{]} but
+deprecated by
+{[}\href{https://www.rfc-editor.org/info/rfc4291}{RFC4291}{]} because it
+turned out to be of no practical use for coexistence or transition. The
+related "IPv4-Mapped IPv6 address" format is still valid and has a role
+in the POSIX socket API. Mappings of this kind also figured in the
+moderately successful coexistence technologies known as 6to4
+{[}\href{https://www.rfc-editor.org/info/rfc3056}{RFC3056},
+\href{https://www.rfc-editor.org/info/rfc3068}{RFC3068}{]} and Teredo
+{[}\href{https://www.rfc-editor.org/info/rfc4380}{RFC4380}{]}, which
+have now been overtaken by events.
+
+Finally, it\textquotesingle s worth remembering that IPv4 is itself no
+longer simple. Compared with 1994, we now have a whole lot of
+complications: subscriber-side NAT, carrier-grade NAT, firewalls, IPsec,
+VPNs, Differentiated Services, link-local addresses, content
+distribution networks, etc.
+
+\subsubsection{The protocol zoo}\label{the-protocol-zoo}
+
+In the early 1990s, the Internet had not yet conquered the world (after
+all, the World Wide Web hardly existed before 1993) and there were many
+alternatives to IPv4 in use. Also, one of the most growly protocols in
+the zoo was wearing a smart business suit and lived in Switzerland with
+its rich friends - most governments and big businesses believed that the
+future network was certain to use the official international standard
+Open Systems Interconnection protocol suite. To many people it seemed
+inevitable that an OSI network layer would replace IPv4. At the same
+time, there were numerous proprietary network layer protocols in use.
+All the IETF had to offer were various competing IPng proposals, not
+even running code! All these other existing protocols had juicy features
+that IPv4 did not provide. Whatever IPng would be, it was expected to
+have at least some new features; plain IPv4 with bigger addresses was
+not what people expected or wanted.
+
+Looking back, this was probably unfortunate, but it was a fact. IPng had
+to be better than IPv4, DECNET, Novell Netware, etc., and above all
+\emph{better than OSI}.
+
+\subsubsection{Did the IPv6 designers go
+mad?}\label{did-the-ipv6-designers-go-mad}
+
+That might be going a bit far, so the question should probably be: Did
+the IPv6 design suffer from Second System Syndrome,
+\href{https://en.wikipedia.org/wiki/Second-system_effect}{"the tendency
+for a successful first system (often small and relatively elegant) to be
+followed by a second system that becomes over-engineered or bloated"}?
+Did we add stuff for its own sake?
+
+The objective answer is "not much." First of all, IPv6 really is a
+conservative design - it doesn\textquotesingle t change the basic IP
+model of connectionless packet switching with topological addresses. We
+added the flow label (harmless if unused, as it was for many years). We
+tweaked the fragmentation mechanism. We replaced IPv4 "options" with
+IPv6 "extension headers". (Just as IPv4 options are largely unused, so
+are IPv6 extension headers, except within limited domains.) Most
+important, we \emph{added} Stateless Address Autoconfiguration (SLAAC)
+and the closely linked router advertisement (RA) mechanism, and the
+linked idea of an interface identifier (IID) as part of the address.
+SLAAC was inspired by DECNET, Netware and Appletalk, none of which
+required manual address configuration. SLAAC is partly redundant with
+DHCPv6, and the reason for that is that DHCP was new and unproven when
+SLAAC and RA were designed; DHCPv6 was actually a retrofit.
+
+The author was too closely involved to say whether these changes and
+additions amounted to Second System Syndrome, but they were certainly
+not gratuitous changes. They have not caused most of the problems during
+IPv6 deployment; those almost all come from the area of IPv4/IPv6
+coexistence.
+
+There was also unnecessary confusion caused by a rather political
+decision to make IPv6 \emph{require} support for IP Security (IPsec),
+which was an immature technology at the time. This was a definite brake
+on IPv6 deployment until it was dropped after some years.
+
+\subsubsection{Do not make things worse}\label{do-not-make-things-worse}
+
+It\textquotesingle s worth adding that some of the "IPv8" proposals over
+the years have included ideas that would make things worse rather than
+better - things like geographic addressing, address prefixes based on
+Autonomous System numbers, addresses with semantics encoded in their
+bits, and the list goes on. All these things would break Internet
+routing, make site renumbering even harder, risk running out of
+addresses yet again, simplify pervasive surveillance, or cause other
+forms of operational harm. (To take one example, although geographic
+addressing has some obvious advantages when geolocation is wanted, it is
+incompatible with the way Internet interdomain routing works.)
+
+\subsubsection{It would take 25 years
+anyway}\label{it-would-take-25-years-anyway}
+
+Getting IPv6 to about 50\% deployment has taken more than 25 years. Any
+alternative or new proposal would be the same. Setting aside IPv6,
+consider that all of the following examples have taken decades, not
+years, to deploy Internet-wide:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Retiring frame relay
+\item
+  Replacing ATM
+\item
+  Deploying DNSSEC
+\item
+  Deploying RPKI
+\end{enumerate}
+
+\subsubsection{Conclusion}\label{conclusion}
+
+The main reason for IPv6, and its only real reason for existence, was
+bigger addresses. The problems of coexistence were inevitable, and it
+was hard to find the best (or rather, least bad) solutions. Most of the
+difficulties of IPv6 implementation and deployment are not the result of
+the details of IPv6 design. Any address length greater than 32 would
+create all the coexistence and transition problems we have experienced
+since 1994. Both dual stack deployment and translation (of protocol plus
+addresses) were mathematically inevitable. No alternative choice can
+possibly avoid these issues.
+
+The community should think carefully before investing time and resources
+in such proposals.
+
+\subsubsection{Postscriptum}\label{postscriptum}
+
+For the record, here are some of the proposals made over the years.
+
+Steve Deering, 1992, "The Simple Internet Protocol" (SIP), an early IPng
+candidate, had 8-byte addresses. SIP was assigned version number 6. It
+was only fully documented in 2018
+{[}\href{https://www.rfc-editor.org/info/rfc8507}{RFC8507}{]}.
+
+Paul Francis, 1992, "The \textquotesingle P\textquotesingle{} Internet
+Protocol" (PIP), an IPng candidate
+{[}\href{https://www.rfc-editor.org/info/rfc1621}{RFC1621},
+\href{https://www.rfc-editor.org/info/rfc1622}{RFC1622}{]} was
+\emph{officially} IPv8 for a while. It had variable length addresses.
+
+Bob Hinden and Steve Deering 1993/4, "Simple Internet Protocol Plus"
+(SIPP), an IPng candidate
+{[}\href{https://www.rfc-editor.org/info/rfc1710}{RFC1710}{]}, had
+8-byte addresses. It inherited SIP\textquotesingle s use of version
+number 6. At the end of the IPng decision process, it mutated to 16-byte
+addresses and was the immediate precursor of IPv6.
+
+{[}\href{https://datatracker.ietf.org/doc/draft-carpenter-aeiou/}{draft-carpenter-aeiou}{]}
+(1994)
+
+Jim Fleming touted "IPv8" and "IPv16" starting in 1996, but we have not
+found a coherent technical description of them. The best we have found
+is a cryptic statement at
+\href{https://afnog.org/archives/archives/msg01304.html}{AFNOG}:
+
+\begin{verbatim}
+IPv8 and IPv16 addresses are encoded in the **right-most 64-bits** of the 128-bit DNS.  The left-most 64-bits
+are used for transition mechanisms.
+\end{verbatim}
+
+and some
+\href{https://web.archive.org/web/20000412004245/http://www.unir.com/images/headers.gif}{archived
+diagrams}.
+
+{[}\href{https://datatracker.ietf.org/doc/draft-terrell-ip-spec-ipv7-ipv8-addr-cls/}{draft-terrell-ip-spec-ipv7-ipv8-addr-cls}{]},
+{[}\href{https://datatracker.ietf.org/doc/draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8/}{draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8}{]}
+(1999)
+
+{[}\href{https://datatracker.ietf.org/doc/draft-shyam-real-ip-framework/}{draft-shyam-real-ip-framework}{]}
+(2014)
+
+{[}\href{https://datatracker.ietf.org/doc/draft-omar-ipv10/}{draft-omar-ipv10}{]}
+(2016)
+
+{[}\href{https://datatracker.ietf.org/doc/draft-sambana-irtf-internet-protocol-sixteen/}{draft-sambana-irtf-internet-protocol-sixteen}{]}
+(2022)
+
+{[}\href{https://datatracker.ietf.org/doc/draft-thain-ipv8/}{draft-thain-ipv8}{]}
+(2026)
+
+{[}\href{https://datatracker.ietf.org/doc/draft-hause-asip/}{draft-hause-asip}{]}
+(2026)
+
+Here\textquotesingle s an
+\href{https://www.ip.network/blog/what-is-ipv8-protocol}{interesting
+blog}.
+
+\subsubsection{\texorpdfstring{\hyperref[why-version-6]{Previous}
+\hyperref[ipv6-basic-technology]{Next}
+\hyperref[introduction-and-foreword]{Top}}{Previous Next Top}}\label{previous-next-top-8}
 
 \pagebreak
 
@@ -1347,7 +1685,7 @@ dropped {[}\href{https://www.rfc-editor.org/info/rfc6666}{RFC6666}{]}.
 
 \subsubsection{\texorpdfstring{\hyperref[packet-format]{Previous}
 \hyperref[layer-2-functions]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-8}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-9}
 
 \pagebreak
 
@@ -1420,7 +1758,7 @@ limited today and best practices are not yet established.
 
 \subsubsection{\texorpdfstring{\hyperref[addresses]{Previous}
 \hyperref[address-resolution]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-9}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-10}
 
 \pagebreak
 
@@ -1520,7 +1858,7 @@ improvements might be applied more generally in future.
 
 \subsubsection{\texorpdfstring{\hyperref[layer-2-functions]{Previous}
 \hyperref[auto-configuration]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-10}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-11}
 
 \pagebreak
 
@@ -1673,7 +2011,7 @@ section.
 
 \subsubsection{\texorpdfstring{\hyperref[address-resolution]{Previous}
 \hyperref[managed-configuration]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-11}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-12}
 
 \pagebreak
 
@@ -1806,7 +2144,7 @@ information to communicate with other on-link hosts.
 
 \subsubsection{\texorpdfstring{\hyperref[auto-configuration]{Previous}
 \hyperref[dns]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-12}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-13}
 
 \pagebreak
 
@@ -1888,7 +2226,7 @@ Wing\textquotesingle s site}.
 
 \subsubsection{\texorpdfstring{\hyperref[managed-configuration]{Previous}
 \hyperref[routing]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-13}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-14}
 
 \pagebreak
 
@@ -2039,7 +2377,7 @@ along a packet\textquotesingle s path. These are briefly explained in
 
 \subsubsection{\texorpdfstring{\hyperref[dns]{Previous}
 \hyperref[transport-protocols]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-14}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-15}
 
 \pagebreak
 
@@ -2091,7 +2429,7 @@ same applies to ECN (Explicit Congestion Notification
 
 \subsubsection{\texorpdfstring{\hyperref[routing]{Previous}
 \hyperref[extension-headers-and-options]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-15}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-16}
 
 \pagebreak
 
@@ -2182,7 +2520,7 @@ filtering recommendations are in
 
 \subsubsection{\texorpdfstring{\hyperref[transport-protocols]{Previous}
 \hyperref[traffic-class-and-flow-label]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-16}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-17}
 
 \pagebreak
 
@@ -2225,7 +2563,7 @@ IPv6 Flow Label for Load Balancing in Server Farms}.
 
 \subsubsection{\texorpdfstring{\hyperref[extension-headers-and-options]{Previous}
 \hyperref[source-and-destination-address-selection]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-17}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-18}
 
 \pagebreak
 
@@ -2404,7 +2742,7 @@ using the IPv6 address label mechanisms, however.
 
 \subsubsection{\texorpdfstring{\hyperref[traffic-class-and-flow-label]{Previous}
 \hyperref[coexistence-with-legacy-ipv4]{Next}
-\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-18}
+\hyperref[ipv6-basic-technology]{Top}}{Previous Next Top}}\label{previous-next-top-19}
 
 \pagebreak
 
@@ -2857,7 +3195,7 @@ tutorial}.
 
 \subsubsection{\texorpdfstring{\hyperref[dual-stack-scenarios]{Previous}
 \hyperref[translation-and-ipv4-as-a-service]{Next}
-\hyperref[coexistence-with-legacy-ipv4]{Top}}{Previous Next Top}}\label{previous-next-top-19}
+\hyperref[coexistence-with-legacy-ipv4]{Top}}{Previous Next Top}}\label{previous-next-top-20}
 
 \pagebreak
 
@@ -3156,7 +3494,7 @@ security tool.
 
 \subsubsection{\texorpdfstring{\hyperref[tunnels]{Previous}
 \hyperref[obsolete-techniques]{Next}
-\hyperref[coexistence-with-legacy-ipv4]{Top}}{Previous Next Top}}\label{previous-next-top-20}
+\hyperref[coexistence-with-legacy-ipv4]{Top}}{Previous Next Top}}\label{previous-next-top-21}
 
 \pagebreak
 
@@ -3232,7 +3570,7 @@ the Tunnel - Legacy IPv6 Transition Mechanisms in the Wild}, preprint
 
 \subsubsection{\texorpdfstring{\hyperref[translation-and-ipv4-as-a-service]{Previous}
 \hyperref[ipv6-primary-differences-from-ipv4]{Next}
-\hyperref[coexistence-with-legacy-ipv4]{Top}}{Previous Next Top}}\label{previous-next-top-21}
+\hyperref[coexistence-with-legacy-ipv4]{Top}}{Previous Next Top}}\label{previous-next-top-22}
 
 \pagebreak
 
@@ -3327,7 +3665,7 @@ summary is that there is no significant performance difference.
 
 \subsubsection{\texorpdfstring{\hyperref[obsolete-techniques]{Previous}
 \hyperref[security]{Next}
-\hyperref[coexistence-with-legacy-ipv4]{Top}}{Previous Next Top}}\label{previous-next-top-22}
+\hyperref[coexistence-with-legacy-ipv4]{Top}}{Previous Next Top}}\label{previous-next-top-23}
 
 \pagebreak
 
@@ -3613,7 +3951,7 @@ man-in-the-middle attack.
 
 \subsubsection{\texorpdfstring{\hyperref[layer-2-considerations]{Previous}
 \hyperref[topology-obfuscation]{Next}
-\hyperref[security]{Top}}{Previous Next Top}}\label{previous-next-top-23}
+\hyperref[security]{Top}}{Previous Next Top}}\label{previous-next-top-24}
 
 \pagebreak
 
@@ -3684,7 +4022,7 @@ access control lists preventing prefix use is frequently employed.
 
 \subsubsection{\texorpdfstring{\hyperref[filtering]{Previous}
 \hyperref[network-design]{Next}
-\hyperref[security]{Top}}{Previous Next Top}}\label{previous-next-top-24}
+\hyperref[security]{Top}}{Previous Next Top}}\label{previous-next-top-25}
 
 \pagebreak
 
@@ -3991,7 +4329,7 @@ RFC 8273 uses specially crafted Router Advertisement messages.
 
 \subsubsection{\texorpdfstring{\hyperref[address-planning]{Previous}
 \hyperref[management-and-operations]{Next}
-\hyperref[network-design]{Top}}{Previous Next Top}}\label{previous-next-top-25}
+\hyperref[network-design]{Top}}{Previous Next Top}}\label{previous-next-top-26}
 
 \pagebreak
 
@@ -4206,7 +4544,7 @@ on how to contribute.}
 
 \subsubsection{\texorpdfstring{\hyperref[address-and-prefix-management]{Previous}
 \hyperref[benchmarking-and-monitoring]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-26}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-27}
 
 \pagebreak
 
@@ -4249,7 +4587,7 @@ processes. It may also be an oportunity to implement more automation.
 
 \subsubsection{\texorpdfstring{\hyperref[remote-configuration]{Previous}
 \hyperref[routing-operation]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-27}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-28}
 
 \pagebreak
 
@@ -4298,7 +4636,7 @@ A video introduction to IS-IS (for all address families) from Cisco is
 
 \subsubsection{\texorpdfstring{\hyperref[benchmarking-and-monitoring]{Previous}
 \hyperref[security-operation]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-28}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-29}
 
 \pagebreak
 
@@ -4329,7 +4667,7 @@ end-to-end IPv6 service.
 
 \subsubsection{\texorpdfstring{\hyperref[routing-operation]{Previous}
 \hyperref[multi-prefix-operation]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-29}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-30}
 
 \pagebreak
 
@@ -4468,7 +4806,7 @@ local split-horizon DNS.
 
 \subsubsection{\texorpdfstring{\hyperref[security-operation]{Previous}
 \hyperref[multihoming]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-30}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-31}
 
 \pagebreak
 
@@ -4647,7 +4985,7 @@ support multipath solutions. Discussion continues in the IETF.
 
 \subsubsection{\texorpdfstring{\hyperref[multi-prefix-operation]{Previous}
 \hyperref[energy-consumption]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-31}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-32}
 
 \pagebreak
 
@@ -4677,7 +5015,7 @@ Header Compression and Fragmentation (SCHC)
 
 \subsubsection{\texorpdfstring{\hyperref[multihoming]{Previous}
 \hyperref[packet-size-and-jumbo-frames]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-32}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-33}
 
 \pagebreak
 
@@ -4739,7 +5077,7 @@ blog entry}.
 
 \subsubsection{\texorpdfstring{\hyperref[energy-consumption]{Previous}
 \hyperref[basic-windows-commands]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-33}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-34}
 
 \pagebreak
 
@@ -4775,7 +5113,7 @@ for which we suggest seeking Microsoft documentation.
 
 \subsubsection{\texorpdfstring{\hyperref[packet-size-and-jumbo-frames]{Previous}
 \hyperref[case-studies]{Next}
-\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-34}
+\hyperref[management-and-operations]{Top}}{Previous Next Top}}\label{previous-next-top-35}
 
 \pagebreak
 
@@ -4855,6 +5193,12 @@ Laboratory}, the NIST
 Program}, or the \href{https://www.ipv6ready.org/}{IPv6 Ready Logo
 Program}.
 
+You can check your own status immediately
+\href{https://test-ipv6.com/}{here}.
+
+You can check any web site you want
+\href{https://webres6.dev.sap/}{here}.
+
 \hyperref[status]{Status}
 
 \hyperref[deployment-by-carriers]{Deployment by carriers}
@@ -4883,7 +5227,8 @@ and \href{https://www.google.com/intl/en/ipv6/statistics.html}{Google}
 provide statistics on the users that access their services over IPv6.
 The results are different, due to different methods being used. Google
 generally sees more IPv6 usage than Facebook, but Google has a blind
-spot in China where adoption is significant.
+spot in China where adoption is significant. The Google statistic first
+touched 50\% in March 2026.
 
 A trusted source from a Regional Internet Registry (RIR) is
 \href{https://stats.labs.apnic.net/ipv6/}{APNIC Labs}. This site
@@ -4896,7 +5241,9 @@ A very informative blog was posted in 2023 by
 \href{https://blog.cloudflare.com/ipv6-from-dns-pov}{Cloudflare},
 showing that humans use IPv6 a lot more than bots, which seem to prefer
 IPv4. Cloudflare\textquotesingle s current protocol usage data is
-summarized by \href{https://radar.cloudflare.com/}{Cloudflare radar}.
+summarized by
+\href{https://radar.cloudflare.com/adoption-and-usage}{Cloudflare
+radar}.
 
 \href{https://web.archive.org/web/20250324111641/https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization}{Akamai}
 formerly provided data measuring the number of hits to their content
@@ -5016,7 +5363,7 @@ UK.
 
 \subsubsection{\texorpdfstring{\hyperref[status]{Previous}
 \hyperref[deployment-in-the-home]{Next}
-\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-35}
+\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-36}
 
 \pagebreak
 
@@ -5059,7 +5406,7 @@ These complex topics are out of scope for this book.
 
 \subsubsection{\texorpdfstring{\hyperref[deployment-by-carriers]{Previous}
 \hyperref[deployment-in-the-enterprise]{Next}
-\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-36}
+\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-37}
 
 \pagebreak
 
@@ -5172,7 +5519,7 @@ space may require more effort and expense, or may not be possible.
 
 \subsubsection{\texorpdfstring{\hyperref[deployment-in-the-home]{Previous}
 \hyperref[troubleshooting]{Next}
-\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-37}
+\hyperref[deployment-status]{Top}}{Previous Next Top}}\label{previous-next-top-38}
 
 \pagebreak
 
@@ -5660,7 +6007,7 @@ performance and efficient issue resolution in IPv6-enabled environments.
 
 \subsubsection{\texorpdfstring{\hyperref[advanced-troubleshooting]{Previous}
 \hyperref[obsolete-features-in-ipv6]{Next}
-\hyperref[troubleshooting]{Top}}{Previous Next Top}}\label{previous-next-top-38}
+\hyperref[troubleshooting]{Top}}{Previous Next Top}}\label{previous-next-top-39}
 
 \pagebreak
 
@@ -7813,7 +8160,7 @@ will do that later.
 
 \subsubsection{\texorpdfstring{\hyperref[first-section]{Previous}
 \hyperref[markdown-usage]{Next}
-\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-39}
+\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-40}
 
 \pagebreak
 
@@ -7954,7 +8301,7 @@ Existing diagrams in JPG format can be inserted in the same way.
 
 \subsubsection{\texorpdfstring{\hyperref[section-template]{Previous}
 \hyperref[last-section]{Next}
-\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-40}
+\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-41}
 
 \pagebreak
 
@@ -7964,7 +8311,7 @@ Section text goes here
 
 \subsubsection{\texorpdfstring{\hyperref[markdown-usage]{Previous}
 \hyperref[chapter-template]{Next}
-\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-41}
+\hyperref[chapter-template]{Top}}{Previous Next Top}}\label{previous-next-top-42}
 
 \pagebreak
 
@@ -7976,7 +8323,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2026-04-16 11:51:58 UTC+1200
+Generated at 2026-04-22 16:51:17 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -7990,7 +8337,8 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[tunnels]{6PE ¶}
 
-\hyperref[obsolete-techniques]{6to4 ¶}
+\hyperref[why-ipv6-is-so-complicated]{6to4 ¶}
+\hyperref[obsolete-techniques]{¶}
 
 \hyperref[address-and-prefix-management]{address accountability ¶}
 
@@ -7998,11 +8346,12 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[how-a-user-sees-ipv6]{address ¶}
 \hyperref[how-an-application-programmer-sees-ipv6]{¶}
-\hyperref[why-version-6]{¶} \hyperref[ipv6-basic-technology]{¶}
-\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
-\hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
-\hyperref[layer-2-functions]{¶} \hyperref[managed-configuration]{¶}
-\hyperref[packet-format]{¶} \hyperref[routing]{¶}
+\hyperref[why-ipv6-is-so-complicated]{¶} \hyperref[why-version-6]{¶}
+\hyperref[ipv6-basic-technology]{¶} \hyperref[address-resolution]{¶}
+\hyperref[addresses]{¶} \hyperref[auto-configuration]{¶}
+\hyperref[dns]{¶} \hyperref[layer-2-functions]{¶}
+\hyperref[managed-configuration]{¶} \hyperref[packet-format]{¶}
+\hyperref[routing]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[coexistence-with-legacy-ipv4]{¶}
 \hyperref[dual-stack-scenarios]{¶}
@@ -8031,10 +8380,11 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[routing]{Babel ¶}
 
-\hyperref[addresses]{BGP ¶} \hyperref[routing]{¶}
-\hyperref[filtering]{¶} \hyperref[multi-prefix-operation]{¶}
-\hyperref[multihoming]{¶} \hyperref[routing-operation]{¶}
-\hyperref[tools]{¶} \hyperref[further-reading]{¶}
+\hyperref[why-ipv6-is-so-complicated]{BGP ¶} \hyperref[addresses]{¶}
+\hyperref[routing]{¶} \hyperref[filtering]{¶}
+\hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
+\hyperref[routing-operation]{¶} \hyperref[tools]{¶}
+\hyperref[further-reading]{¶}
 
 \hyperref[managed-configuration]{broadcast ¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
@@ -8046,7 +8396,8 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[translation-and-ipv4-as-a-service]{CLAT ¶}
 
-\hyperref[coexistence-with-legacy-ipv4]{coexistence ¶}
+\hyperref[why-ipv6-is-so-complicated]{coexistence ¶}
+\hyperref[coexistence-with-legacy-ipv4]{¶}
 \hyperref[dual-stack-scenarios]{¶} \hyperref[obsolete-techniques]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
 \hyperref[network-design]{¶} \hyperref[energy-consumption]{¶}
@@ -8057,7 +8408,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[layer-2-considerations]{¶}
 \hyperref[address-and-prefix-management]{¶}
 
-\hyperref[auto-configuration]{DHCP ¶} \hyperref[dns]{¶}
+\hyperref[why-ipv6-is-so-complicated]{DHCP ¶}
+\hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
 \hyperref[managed-configuration]{¶} \hyperref[routing]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[dual-stack-scenarios]{¶}
@@ -8068,8 +8420,9 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[multi-prefix-operation]{¶} \hyperref[cern-and-the-lhc]{¶}
 \hyperref[troubleshooting]{¶} \hyperref[advanced-troubleshooting]{¶}
 
-\hyperref[packet-format]{differentiated services ¶}
-\hyperref[routing]{¶} \hyperref[traffic-class-and-flow-label]{¶}
+\hyperref[why-ipv6-is-so-complicated]{differentiated services ¶}
+\hyperref[packet-format]{¶} \hyperref[routing]{¶}
+\hyperref[traffic-class-and-flow-label]{¶}
 \hyperref[transport-protocols]{¶}
 
 \hyperref[dual-stack-scenarios]{DNS64 ¶}
@@ -8078,9 +8431,9 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[advanced-troubleshooting]{¶} \hyperref[tools]{¶}
 
 \hyperref[how-an-application-programmer-sees-ipv6]{DNS ¶}
-\hyperref[addresses]{¶} \hyperref[auto-configuration]{¶}
-\hyperref[dns]{¶} \hyperref[managed-configuration]{¶}
-\hyperref[dual-stack-scenarios]{¶}
+\hyperref[why-ipv6-is-so-complicated]{¶} \hyperref[addresses]{¶}
+\hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
+\hyperref[managed-configuration]{¶} \hyperref[dual-stack-scenarios]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶}
 \hyperref[management-and-operations]{¶}
 \hyperref[address-and-prefix-management]{¶}
@@ -8095,7 +8448,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
 
 \hyperref[how-an-application-programmer-sees-ipv6]{dual stack ¶}
-\hyperref[routing]{¶} \hyperref[transport-protocols]{¶}
+\hyperref[why-ipv6-is-so-complicated]{¶} \hyperref[routing]{¶}
+\hyperref[transport-protocols]{¶}
 \hyperref[coexistence-with-legacy-ipv4]{¶}
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
@@ -8114,14 +8468,16 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[layer-2-functions]{Ethertype ¶}
 
-\hyperref[extension-headers-and-options]{firewall ¶}
+\hyperref[why-ipv6-is-so-complicated]{firewall ¶}
+\hyperref[extension-headers-and-options]{¶}
 \hyperref[dual-stack-scenarios]{¶} \hyperref[security]{¶}
 \hyperref[topology-obfuscation]{¶} \hyperref[network-design]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[benchmarking-and-monitoring]{¶} \hyperref[multihoming]{¶}
 \hyperref[advanced-troubleshooting]{¶}
 
-\hyperref[packet-format]{flow label ¶} \hyperref[routing]{¶}
+\hyperref[why-ipv6-is-so-complicated]{flow label ¶}
+\hyperref[packet-format]{¶} \hyperref[routing]{¶}
 \hyperref[traffic-class-and-flow-label]{¶} \hyperref[markdown-usage]{¶}
 
 \hyperref[how-an-application-programmer-sees-ipv6]{getaddrinfo ¶}
@@ -8153,7 +8509,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[filtering]{¶} \hyperref[troubleshooting]{¶}
 \hyperref[advanced-troubleshooting]{¶}
 
-\hyperref[addresses]{IID ¶}
+\hyperref[why-ipv6-is-so-complicated]{IID ¶} \hyperref[addresses]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶}
 \hyperref[layer-2-considerations]{¶}
@@ -8161,8 +8517,9 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[address-and-prefix-management]{IPAM ¶}
 
-\hyperref[extension-headers-and-options]{IPsec ¶}
-\hyperref[packet-format]{¶} \hyperref[security]{¶}
+\hyperref[why-ipv6-is-so-complicated]{IPsec ¶}
+\hyperref[extension-headers-and-options]{¶} \hyperref[packet-format]{¶}
+\hyperref[security]{¶}
 
 \hyperref[coexistence-with-legacy-ipv4]{IPv4 as a Service ¶}
 \hyperref[dual-stack-scenarios]{¶}
@@ -8172,9 +8529,9 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[how-a-network-operations-center-sees-ipv6]{IPv4 ¶}
 \hyperref[how-an-application-programmer-sees-ipv6]{¶}
-\hyperref[why-version-6]{¶} \hyperref[address-resolution]{¶}
-\hyperref[addresses]{¶} \hyperref[dns]{¶}
-\hyperref[extension-headers-and-options]{¶}
+\hyperref[why-ipv6-is-so-complicated]{¶} \hyperref[why-version-6]{¶}
+\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
+\hyperref[dns]{¶} \hyperref[extension-headers-and-options]{¶}
 \hyperref[layer-2-functions]{¶} \hyperref[managed-configuration]{¶}
 \hyperref[routing]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
@@ -8223,7 +8580,8 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[packet-size-and-jumbo-frames]{Jumbo frames ¶}
 
-\hyperref[address-resolution]{link-local ¶} \hyperref[addresses]{¶}
+\hyperref[why-ipv6-is-so-complicated]{link-local ¶}
+\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
 \hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[filtering]{¶} \hyperref[network-design]{¶}
@@ -8273,7 +8631,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[ipv6-primary-differences-from-ipv4]{NAT66 ¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[security]{¶}
 
-\hyperref[transport-protocols]{NAT ¶} \hyperref[dual-stack-scenarios]{¶}
+\hyperref[why-ipv6-is-so-complicated]{NAT ¶}
+\hyperref[transport-protocols]{¶} \hyperref[dual-stack-scenarios]{¶}
 \hyperref[obsolete-techniques]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
 \hyperref[security]{¶} \hyperref[topology-obfuscation]{¶}
@@ -8319,8 +8678,9 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[prefix-per-host]{¶}
 \hyperref[address-and-prefix-management]{¶}
 
-\hyperref[addresses]{prefix ¶} \hyperref[auto-configuration]{¶}
-\hyperref[managed-configuration]{¶} \hyperref[routing]{¶}
+\hyperref[why-ipv6-is-so-complicated]{prefix ¶} \hyperref[addresses]{¶}
+\hyperref[auto-configuration]{¶} \hyperref[managed-configuration]{¶}
+\hyperref[routing]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[dual-stack-scenarios]{¶}
 \hyperref[ipv6-primary-differences-from-ipv4]{¶}
@@ -8343,10 +8703,10 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[transport-protocols]{QUIC ¶} \hyperref[multihoming]{¶}
 
-\hyperref[address-resolution]{RA messages ¶}
-\hyperref[auto-configuration]{¶} \hyperref[managed-configuration]{¶}
-\hyperref[routing]{¶} \hyperref[prefix-per-host]{¶}
-\hyperref[multi-prefix-operation]{¶}
+\hyperref[why-ipv6-is-so-complicated]{RA messages ¶}
+\hyperref[address-resolution]{¶} \hyperref[auto-configuration]{¶}
+\hyperref[managed-configuration]{¶} \hyperref[routing]{¶}
+\hyperref[prefix-per-host]{¶} \hyperref[multi-prefix-operation]{¶}
 \hyperref[advanced-troubleshooting]{¶} \hyperref[tools]{¶}
 \hyperref[obsolete-features-in-ipv6]{¶}
 
@@ -8360,7 +8720,8 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[routing]{RIPng ¶}
 
-\hyperref[why-version-6]{route ¶} \hyperref[ipv6-basic-technology]{¶}
+\hyperref[why-ipv6-is-so-complicated]{route ¶}
+\hyperref[why-version-6]{¶} \hyperref[ipv6-basic-technology]{¶}
 \hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
 \hyperref[auto-configuration]{¶} \hyperref[dns]{¶}
 \hyperref[extension-headers-and-options]{¶}
@@ -8390,7 +8751,8 @@ keyword. If you think any keywords are missing, please raise an issue
 
 \hyperref[transport-protocols]{SCTP ¶}
 
-\hyperref[dns]{security ¶} \hyperref[extension-headers-and-options]{¶}
+\hyperref[why-ipv6-is-so-complicated]{security ¶} \hyperref[dns]{¶}
+\hyperref[extension-headers-and-options]{¶}
 \hyperref[managed-configuration]{¶} \hyperref[packet-format]{¶}
 \hyperref[source-and-destination-address-selection]{¶}
 \hyperref[dual-stack-scenarios]{¶}
@@ -8404,15 +8766,16 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[deployment-in-the-enterprise]{¶}
 \hyperref[obsolete-features-in-ipv6]{¶} \hyperref[further-reading]{¶}
 
-\hyperref[why-version-6]{SIP ¶} \hyperref[transport-protocols]{¶}
-\hyperref[dual-stack-scenarios]{¶}
+\hyperref[why-ipv6-is-so-complicated]{SIP ¶} \hyperref[why-version-6]{¶}
+\hyperref[transport-protocols]{¶} \hyperref[dual-stack-scenarios]{¶}
 \hyperref[translation-and-ipv4-as-a-service]{¶}
 \hyperref[multihoming]{¶}
 
-\hyperref[auto-configuration]{SLAAC ¶}
-\hyperref[managed-configuration]{¶} \hyperref[routing]{¶}
-\hyperref[ipv6-primary-differences-from-ipv4]{¶} \hyperref[security]{¶}
-\hyperref[filtering]{¶} \hyperref[layer-2-considerations]{¶}
+\hyperref[why-ipv6-is-so-complicated]{SLAAC ¶}
+\hyperref[auto-configuration]{¶} \hyperref[managed-configuration]{¶}
+\hyperref[routing]{¶} \hyperref[ipv6-primary-differences-from-ipv4]{¶}
+\hyperref[security]{¶} \hyperref[filtering]{¶}
+\hyperref[layer-2-considerations]{¶}
 \hyperref[address-and-prefix-management]{¶}
 \hyperref[multi-prefix-operation]{¶}
 
@@ -8423,7 +8786,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[traffic-class-and-flow-label]{¶}
 \hyperref[transport-protocols]{¶} \hyperref[multihoming]{¶}
 
-\hyperref[obsolete-techniques]{Teredo ¶}
+\hyperref[why-ipv6-is-so-complicated]{Teredo ¶}
+\hyperref[obsolete-techniques]{¶}
 
 \hyperref[layer-2-functions]{tunnel ¶}
 \hyperref[traffic-class-and-flow-label]{¶}
@@ -8469,7 +8833,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2026-04-16 11:51:58 UTC+1200
+Generated at 2026-04-22 16:51:17 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -8495,11 +8859,27 @@ has links to each section that mentions each citation.
 
 \hyperref[why-version-6]{RFC1190 ¶}
 
+\hyperref[why-ipv6-is-so-complicated]{RFC1287 ¶}
+
+\hyperref[why-ipv6-is-so-complicated]{RFC1380 ¶}
+
 \hyperref[why-version-6]{RFC1475 ¶}
 
 \hyperref[why-version-6]{RFC1606 ¶}
 
+\hyperref[why-ipv6-is-so-complicated]{RFC1621 ¶}
+
+\hyperref[why-ipv6-is-so-complicated]{RFC1622 ¶}
+
+\hyperref[why-ipv6-is-so-complicated]{RFC1671 ¶}
+
 \hyperref[why-version-6]{RFC1700 ¶}
+
+\hyperref[why-ipv6-is-so-complicated]{RFC1710 ¶}
+
+\hyperref[why-ipv6-is-so-complicated]{RFC1726 ¶}
+
+\hyperref[why-ipv6-is-so-complicated]{RFC1752 ¶}
 
 \hyperref[why-version-6]{RFC1819 ¶}
 
@@ -8528,9 +8908,11 @@ has links to each section that mentions each citation.
 
 \hyperref[obsolete-techniques]{RFC3053 ¶}
 
-\hyperref[obsolete-techniques]{RFC3056 ¶}
+\hyperref[why-ipv6-is-so-complicated]{RFC3056 ¶}
+\hyperref[obsolete-techniques]{¶}
 
-\hyperref[obsolete-techniques]{RFC3068 ¶}
+\hyperref[why-ipv6-is-so-complicated]{RFC3068 ¶}
+\hyperref[obsolete-techniques]{¶}
 
 \hyperref[obsolete-techniques]{RFC3089 ¶}
 
@@ -8544,8 +8926,8 @@ has links to each section that mentions each citation.
 
 \hyperref[source-and-destination-address-selection]{RFC3484 ¶}
 
-\hyperref[obsolete-features-in-ipv6]{RFC3513 ¶}
-\hyperref[markdown-usage]{¶}
+\hyperref[why-ipv6-is-so-complicated]{RFC3513 ¶}
+\hyperref[obsolete-features-in-ipv6]{¶} \hyperref[markdown-usage]{¶}
 
 \hyperref[dual-stack-scenarios]{RFC3542 ¶}
 
@@ -8590,7 +8972,8 @@ has links to each section that mentions each citation.
 
 \hyperref[obsolete-features-in-ipv6]{RFC4285 ¶}
 
-\hyperref[address-resolution]{RFC4291 ¶} \hyperref[addresses]{¶}
+\hyperref[why-ipv6-is-so-complicated]{RFC4291 ¶}
+\hyperref[address-resolution]{¶} \hyperref[addresses]{¶}
 \hyperref[filtering]{¶} \hyperref[obsolete-features-in-ipv6]{¶}
 \hyperref[markdown-usage]{¶}
 
@@ -8599,7 +8982,8 @@ has links to each section that mentions each citation.
 \hyperref[extension-headers-and-options]{RFC4303 ¶}
 \hyperref[packet-format]{¶}
 
-\hyperref[obsolete-techniques]{RFC4380 ¶}
+\hyperref[why-ipv6-is-so-complicated]{RFC4380 ¶}
+\hyperref[obsolete-techniques]{¶}
 
 \hyperref[routing]{RFC4456 ¶} \hyperref[routing-operation]{¶}
 
@@ -8851,6 +9235,8 @@ has links to each section that mentions each citation.
 \hyperref[dns]{RFC8501 ¶}
 
 \hyperref[address-resolution]{RFC8505 ¶}
+
+\hyperref[why-ipv6-is-so-complicated]{RFC8507 ¶}
 
 \hyperref[routing]{RFC8585 ¶} \hyperref[dual-stack-scenarios]{¶}
 

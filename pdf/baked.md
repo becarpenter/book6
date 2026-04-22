@@ -28,7 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2026-04-16 11:53:56 UTC+1200
+Version captured at 2026-04-22 17:27:24 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -52,6 +52,7 @@ and a [citation index](#book6-citation-index).
 * [How to contribute](#how-to-contribute)
 * [Acknowledgments](#acknowledgments)
 * [Why version 6](#why-version-6)
+* [Why IPv6 is so complicated](#why-ipv6-is-so-complicated)
 
 [2. IPv6 Basic Technology](#ipv6-basic-technology)
 * [Packet Format](#packet-format)
@@ -139,6 +140,8 @@ backslashpagebreak
 [Acknowledgments](#acknowledgments)
 
 [Why version 6](#why-version-6)
+
+[Why IPv6 is so complicated](#why-ipv6-is-so-complicated)
 
 ### [<ins>Back to main Contents</ins>](#list-of-contents)
 
@@ -511,7 +514,302 @@ an April fool's day joke
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](#acknowledgments) [<ins>Next</ins>](#ipv6-basic-technology) [<ins>Top</ins>](#introduction-and-foreword)
+### [<ins>Previous</ins>](#acknowledgments) [<ins>Next</ins>](#why-ipv6-is-so-complicated) [<ins>Top</ins>](#introduction-and-foreword)
+
+backslashpagebreak
+## Why IPv6 is so complicated
+
+There's no question that IPv6 is more complicated than IPv4, and people
+sometimes ask why that is. Surely it would have been much simpler to
+just add an extra 32 bits to the IPv4 address, and change nothing else?
+In fact, every year or two people propose alternatives to IPv6 ("IPv8"
+is a generic name for such proposals, which mainly involve 8-byte
+addresses) because they have asked themselves that question. This note
+attempts to answer the question, and to show why such proposals are a
+waste of everybody's time, especially for the people who propose them.
+
+There are at least three possible answers:
+
+1. Just adding bits to the address isn't as simple as it seems.
+
+1. IPv4 was not the only network layer protocol in the world in 1994,
+   and the others had good features that IPv4 lacked.
+
+1. The IPv6 designers went mad.
+
+We will discuss each of these points in turn. To set the context, note
+that the decision to develop IPv6 rather than one of the other possible
+options was announced at the July 1994 IETF meeting in Toronto, Canada.
+This followed a long process that formally started at an IAB workshop in
+1991 \[[RFC1287](https://www.rfc-editor.org/info/rfc1287)\] and led to
+an IESG report on future routing and addressing in late 1992
+\[[RFC1380](https://www.rfc-editor.org/info/rfc1380)\]. Concerns about
+routing led to classless addressing and BGP4 routing; concerns about
+address exhaustion led to agreement that a new version of IP was needed.
+But scaling up the routing and addressing systems were not the only
+concerns in RFC 1380 (see point 2 above):
+
+```
+   Although the catalog of problems above is pretty complete as far as
+   the scaling problems of the Internet are concerned, there are other
+   Internet layer issues that will need to be addressed over the coming
+   years.  These are issues regarding advanced functionality and service
+   guarantees in the Internet layer.
+ 
+   In any attempt to resolve the Internet scaling problems, it is
+   important to consider how these other issues might affect the future
+   evolution of Internet layer protocols.
+```
+
+In any case, various proposals for the new version were drafted in
+1991/93 and the IETF had no clear direction. A BOF named "IPDECIDE" was
+held at the July 1993 IETF meeting in Amsterdam, The Netherlands. Its
+goal was to pick a direction, but the result was, um, indecisive. Next,
+the IESG decided to set up an IP Next Generation (IPng) Directorate
+under two Area Directors (Scott Bradner and Allison Mankin) to support
+the decision process. This led to the July 1994 choice, guided by
+\[[RFC1726](https://www.rfc-editor.org/info/rfc1726)\], and explained in
+detail by \[[RFC1752](https://www.rfc-editor.org/info/rfc1752)\] and by
+the book _IPng: Internet Protocol Next Generation_, S. Bradner and A.
+Mankin (editors), Addison-Wesley, 1995.
+
+### Why adding bits isn't simple
+
+IPv4 implementations, in 1994 and still today, have the 32-bit address
+format built into their code. Whether you expand the address size to 33,
+64 or 128 bits, all IPv4 implementations will discard the packets. So
+it's a matter of mathematical and physical fact that to expand the
+address size, you must change the protocol, and that means two things
+immediately:
+
+1. You have to change the version number.
+
+1. You have to add new code to handle the new version.
+
+Furthermore, you don't want to split the Internet in two, so you must
+design a method of interworking between the old version and the new
+version. Annoyingly, you need to do that in a way that can be done
+completely in machines that know about the new version, because other
+machines don't know anything at all about the new version, by
+definition. So,
+
+3. You need a coexistence technique so that updated systems, with the
+   new protocol, can connect to old systems that know nothing of the new
+   protocol.
+
+Two minutes of thought show that this third requirement has only two
+solutions:
+
+(3A) Dual stack, in which the new machines speak both the old (IPv4) and
+new (IPng) protocol.
+
+(3B) Translation, in which something translates addresses between the
+old and new protocols.
+
+This has been known for more than 30 years
+\[[RFC1671](https://www.rfc-editor.org/info/rfc1671)\], although people
+still sometimes try to deny it.
+
+To state this in graphical form, here's a diagram, showing who can talk
+to who, assuming the simplistic model of IPng with 64 bit addresses:
+
+```
+              OLD    DUAL   NEW     
+            ----------------------
+        OLD |  32  |  32  |  XX  |      
+            |------|------|------|
+       DUAL |  32  |  64  |  64  |
+            |------|------|------|
+        NEW |  XX  |  64  |  64  |
+            ----------------------
+```
+
+Protocol details, and the exact address length, don't matter. The XX
+cases can only work with protocol and address translation. All the
+complexities (and that really means all) of IPv4-IPng coexistence and
+transition are a result of this diagram, and the details of IPng design
+do not change this fact of nature.
+
+Any purported design of a "better" or "simpler" IPng than IPv6 does not
+change this, however hard its authors try. In other words, the basic
+difficulties of IPv6 transition and coexistence have nothing to do with
+the design of IPv6.
+
+Incidentally, "IPv8" proponents often ask why IPv6 didn't simply stick
+some extra bits on the front of IPv4 addresses, instead of inventing a
+whole new format. Actually, we tried that: the "IPv4-Compatible IPv6
+address" format was defined in
+\[[RFC3513](https://www.rfc-editor.org/info/rfc3513)\] but deprecated by
+\[[RFC4291](https://www.rfc-editor.org/info/rfc4291)\] because it turned
+out to be of no practical use for coexistence or transition. The related
+"IPv4-Mapped IPv6 address" format is still valid and has a role in the
+POSIX socket API. Mappings of this kind also figured in the moderately
+successful coexistence technologies known as 6to4
+\[[RFC3056](https://www.rfc-editor.org/info/rfc3056),
+[RFC3068](https://www.rfc-editor.org/info/rfc3068)\] and Teredo
+\[[RFC4380](https://www.rfc-editor.org/info/rfc4380)\], which have now
+been overtaken by events.
+
+Finally, it's worth remembering that IPv4 is itself no longer simple.
+Compared with 1994, we now have a whole lot of complications:
+subscriber-side NAT, carrier-grade NAT, firewalls, IPsec, VPNs,
+Differentiated Services, link-local addresses, content distribution
+networks, etc.
+
+### The protocol zoo
+
+In the early 1990s, the Internet had not yet conquered the world (after
+all, the World Wide Web hardly existed before 1993) and there were many
+alternatives to IPv4 in use. Also, one of the most growly protocols in
+the zoo was wearing a smart business suit and lived in Switzerland with
+its rich friends - most governments and big businesses believed that the
+future network was certain to use the official international standard
+Open Systems Interconnection protocol suite. To many people it seemed
+inevitable that an OSI network layer would replace IPv4. At the same
+time, there were numerous proprietary network layer protocols in use.
+All the IETF had to offer were various competing IPng proposals, not
+even running code! All these other existing protocols had juicy features
+that IPv4 did not provide. Whatever IPng would be, it was expected to
+have at least some new features; plain IPv4 with bigger addresses was
+not what people expected or wanted.
+
+Looking back, this was probably unfortunate, but it was a fact. IPng had
+to be better than IPv4, DECNET, Novell Netware, etc., and above all
+_better than OSI_.
+
+### Did the IPv6 designers go mad?
+
+That might be going a bit far, so the question should probably be: Did
+the IPv6 design suffer from Second System Syndrome,
+["the tendency for a successful first system (often small and relatively elegant) to be followed by a second system that becomes over-engineered or bloated"](https://en.wikipedia.org/wiki/Second-system_effect)?
+Did we add stuff for its own sake?
+
+The objective answer is "not much." First of all, IPv6 really is a
+conservative design - it doesn't change the basic IP model of
+connectionless packet switching with topological addresses. We added the
+flow label (harmless if unused, as it was for many years). We tweaked
+the fragmentation mechanism. We replaced IPv4 "options" with IPv6
+"extension headers". (Just as IPv4 options are largely unused, so are
+IPv6 extension headers, except within limited domains.) Most important,
+we _added_ Stateless Address Autoconfiguration (SLAAC) and the closely
+linked router advertisement (RA) mechanism, and the linked idea of an
+interface identifier (IID) as part of the address. SLAAC was inspired by
+DECNET, Netware and Appletalk, none of which required manual address
+configuration. SLAAC is partly redundant with DHCPv6, and the reason for
+that is that DHCP was new and unproven when SLAAC and RA were designed;
+DHCPv6 was actually a retrofit.
+
+The author was too closely involved to say whether these changes and
+additions amounted to Second System Syndrome, but they were certainly
+not gratuitous changes. They have not caused most of the problems during
+IPv6 deployment; those almost all come from the area of IPv4/IPv6
+coexistence.
+
+There was also unnecessary confusion caused by a rather political
+decision to make IPv6 _require_ support for IP Security (IPsec), which
+was an immature technology at the time. This was a definite brake on
+IPv6 deployment until it was dropped after some years.
+
+### Do not make things worse
+
+It's worth adding that some of the "IPv8" proposals over the years have
+included ideas that would make things worse rather than better - things
+like geographic addressing, address prefixes based on Autonomous System
+numbers, addresses with semantics encoded in their bits, and the list
+goes on. All these things would break Internet routing, make site
+renumbering even harder, risk running out of addresses yet again,
+simplify pervasive surveillance, or cause other forms of operational
+harm. (To take one example, although geographic addressing has some
+obvious advantages when geolocation is wanted, it is incompatible with
+the way Internet interdomain routing works.)
+
+### It would take 25 years anyway
+
+Getting IPv6 to about 50% deployment has taken more than 25 years. Any
+alternative or new proposal would be the same. Setting aside IPv6,
+consider that all of the following examples have taken decades, not
+years, to deploy Internet-wide:
+
+1. Retiring frame relay
+1. Replacing ATM
+1. Deploying DNSSEC
+1. Deploying RPKI
+
+### Conclusion
+
+The main reason for IPv6, and its only real reason for existence, was
+bigger addresses. The problems of coexistence were inevitable, and it
+was hard to find the best (or rather, least bad) solutions. Most of the
+difficulties of IPv6 implementation and deployment are not the result of
+the details of IPv6 design. Any address length greater than 32 would
+create all the coexistence and transition problems we have experienced
+since 1994. Both dual stack deployment and translation (of protocol plus
+addresses) were mathematically inevitable. No alternative choice can
+possibly avoid these issues.
+
+The community should think carefully before investing time and resources
+in such proposals.
+
+### Postscriptum
+
+For the record, here are some of the proposals made over the years.
+
+Steve Deering, 1992, "The Simple Internet Protocol" (SIP), an early IPng
+candidate, had 8-byte addresses. SIP was assigned version number 6. It
+was only fully documented in 2018
+\[[RFC8507](https://www.rfc-editor.org/info/rfc8507)\].
+
+Paul Francis, 1992, "The 'P' Internet Protocol" (PIP), an IPng candidate
+\[[RFC1621](https://www.rfc-editor.org/info/rfc1621),
+[RFC1622](https://www.rfc-editor.org/info/rfc1622)\] was _officially_
+IPv8 for a while. It had variable length addresses.
+
+Bob Hinden and Steve Deering 1993/4, "Simple Internet Protocol Plus"
+(SIPP), an IPng candidate
+\[[RFC1710](https://www.rfc-editor.org/info/rfc1710)\], had 8-byte
+addresses. It inherited SIP's use of version number 6. At the end of the
+IPng decision process, it mutated to 16-byte addresses and was the
+immediate precursor of IPv6.
+
+\[[draft-carpenter-aeiou](https://datatracker.ietf.org/doc/draft-carpenter-aeiou/)\]
+(1994)
+
+Jim Fleming touted "IPv8" and "IPv16" starting in 1996, but we have not
+found a coherent technical description of them. The best we have found
+is a cryptic statement at
+[AFNOG](https://afnog.org/archives/archives/msg01304.html):
+
+```
+IPv8 and IPv16 addresses are encoded in the **right-most 64-bits** of the 128-bit DNS.  The left-most 64-bits
+are used for transition mechanisms.
+```
+and some [archived diagrams](https://web.archive.org/web/20000412004245/http://www.unir.com/images/headers.gif).
+
+\[[draft-terrell-ip-spec-ipv7-ipv8-addr-cls](https://datatracker.ietf.org/doc/draft-terrell-ip-spec-ipv7-ipv8-addr-cls/)\],
+\[[draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8](https://datatracker.ietf.org/doc/draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8/)\]
+(1999)
+
+\[[draft-shyam-real-ip-framework](https://datatracker.ietf.org/doc/draft-shyam-real-ip-framework/)\]
+(2014)
+
+\[[draft-omar-ipv10](https://datatracker.ietf.org/doc/draft-omar-ipv10/)\]
+(2016)
+
+\[[draft-sambana-irtf-internet-protocol-sixteen](https://datatracker.ietf.org/doc/draft-sambana-irtf-internet-protocol-sixteen/)\]
+(2022)
+
+\[[draft-thain-ipv8](https://datatracker.ietf.org/doc/draft-thain-ipv8/)\]
+(2026)
+
+\[[draft-hause-asip](https://datatracker.ietf.org/doc/draft-hause-asip/)\]
+(2026)
+
+Here's an
+[interesting blog](https://www.ip.network/blog/what-is-ipv8-protocol).
+
+<!-- Link lines generated automatically; do not delete -->
+
+### [<ins>Previous</ins>](#why-version-6) [<ins>Next</ins>](#ipv6-basic-technology) [<ins>Top</ins>](#introduction-and-foreword)
 
 backslashpagebreak
 # IPv6 Basic Technology
@@ -4251,6 +4549,10 @@ NIST
 [USGv6 Program](https://www.nist.gov/programs-projects/usgv6-program),
 or the [IPv6 Ready Logo Program](https://www.ipv6ready.org/).
 
+You can check your own status immediately [here](https://test-ipv6.com/). 
+
+You can check any web site you want [here](https://webres6.dev.sap/).
+
 <!-- Link lines generated automatically; do not delete -->
 
 [Status](#status)
@@ -4279,7 +4581,8 @@ example, both
 statistics on the users that access their services over IPv6. The 
 results are different, due to different methods being used.
 Google generally sees more IPv6 usage than Facebook, but Google
-has a blind spot in China where adoption is significant.
+has a blind spot in China where adoption is significant. The
+Google statistic first touched 50% in March 2026.
 
 A trusted source from a Regional Internet Registry (RIR)
 is [APNIC Labs](https://stats.labs.apnic.net/ipv6/).
@@ -4292,7 +4595,7 @@ A very informative blog was posted in 2023 by
 [Cloudflare](https://blog.cloudflare.com/ipv6-from-dns-pov), showing
 that humans use IPv6 a lot more than bots, which seem to prefer IPv4.
 Cloudflare's current protocol usage data is summarized by
-[Cloudflare radar](https://radar.cloudflare.com/).
+[Cloudflare radar](https://radar.cloudflare.com/adoption-and-usage).
 
 [Akamai](https://web.archive.org/web/20250324111641/https://www.akamai.com/internet-station/cyber-attacks/state-of-the-internet-report/ipv6-adoption-visualization)
 formerly provided data measuring the number of hits to their content delivery
@@ -6672,7 +6975,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2026-04-16 11:51:58 UTC+1200
+Generated at 2026-04-22 16:51:17 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -6684,7 +6987,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [6PE ¶](#tunnels)
 
-[6to4 ¶](#obsolete-techniques)
+[6to4 ¶](#why-ipv6-is-so-complicated)
+[¶](#obsolete-techniques)
 
 [address accountability ¶](#address-and-prefix-management)
 
@@ -6692,6 +6996,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [address ¶](#how-a-user-sees-ipv6)
 [¶](#how-an-application-programmer-sees-ipv6)
+[¶](#why-ipv6-is-so-complicated)
 [¶](#why-version-6)
 [¶](#ipv6-basic-technology)
 [¶](#address-resolution)
@@ -6742,7 +7047,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [Babel ¶](#routing)
 
-[BGP ¶](#addresses)
+[BGP ¶](#why-ipv6-is-so-complicated)
+[¶](#addresses)
 [¶](#routing)
 [¶](#filtering)
 [¶](#multi-prefix-operation)
@@ -6762,7 +7068,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [CLAT ¶](#translation-and-ipv4-as-a-service)
 
-[coexistence ¶](#coexistence-with-legacy-ipv4)
+[coexistence ¶](#why-ipv6-is-so-complicated)
+[¶](#coexistence-with-legacy-ipv4)
 [¶](#dual-stack-scenarios)
 [¶](#obsolete-techniques)
 [¶](#translation-and-ipv4-as-a-service)
@@ -6778,7 +7085,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#layer-2-considerations)
 [¶](#address-and-prefix-management)
 
-[DHCP ¶](#auto-configuration)
+[DHCP ¶](#why-ipv6-is-so-complicated)
+[¶](#auto-configuration)
 [¶](#dns)
 [¶](#managed-configuration)
 [¶](#routing)
@@ -6795,7 +7103,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#troubleshooting)
 [¶](#advanced-troubleshooting)
 
-[differentiated services ¶](#packet-format)
+[differentiated services ¶](#why-ipv6-is-so-complicated)
+[¶](#packet-format)
 [¶](#routing)
 [¶](#traffic-class-and-flow-label)
 [¶](#transport-protocols)
@@ -6807,6 +7116,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#tools)
 
 [DNS ¶](#how-an-application-programmer-sees-ipv6)
+[¶](#why-ipv6-is-so-complicated)
 [¶](#addresses)
 [¶](#auto-configuration)
 [¶](#dns)
@@ -6830,6 +7140,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#tunnels)
 
 [dual stack ¶](#how-an-application-programmer-sees-ipv6)
+[¶](#why-ipv6-is-so-complicated)
 [¶](#routing)
 [¶](#transport-protocols)
 [¶](#coexistence-with-legacy-ipv4)
@@ -6855,7 +7166,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [Ethertype ¶](#layer-2-functions)
 
-[firewall ¶](#extension-headers-and-options)
+[firewall ¶](#why-ipv6-is-so-complicated)
+[¶](#extension-headers-and-options)
 [¶](#dual-stack-scenarios)
 [¶](#security)
 [¶](#topology-obfuscation)
@@ -6865,7 +7177,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#multihoming)
 [¶](#advanced-troubleshooting)
 
-[flow label ¶](#packet-format)
+[flow label ¶](#why-ipv6-is-so-complicated)
+[¶](#packet-format)
 [¶](#routing)
 [¶](#traffic-class-and-flow-label)
 [¶](#markdown-usage)
@@ -6911,7 +7224,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#troubleshooting)
 [¶](#advanced-troubleshooting)
 
-[IID ¶](#addresses)
+[IID ¶](#why-ipv6-is-so-complicated)
+[¶](#addresses)
 [¶](#ipv6-primary-differences-from-ipv4)
 [¶](#translation-and-ipv4-as-a-service)
 [¶](#layer-2-considerations)
@@ -6920,7 +7234,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [IPAM ¶](#address-and-prefix-management)
 
-[IPsec ¶](#extension-headers-and-options)
+[IPsec ¶](#why-ipv6-is-so-complicated)
+[¶](#extension-headers-and-options)
 [¶](#packet-format)
 [¶](#security)
 
@@ -6933,6 +7248,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [IPv4 ¶](#how-a-network-operations-center-sees-ipv6)
 [¶](#how-an-application-programmer-sees-ipv6)
+[¶](#why-ipv6-is-so-complicated)
 [¶](#why-version-6)
 [¶](#address-resolution)
 [¶](#addresses)
@@ -7003,7 +7319,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [Jumbo frames ¶](#packet-size-and-jumbo-frames)
 
-[link-local ¶](#address-resolution)
+[link-local ¶](#why-ipv6-is-so-complicated)
+[¶](#address-resolution)
 [¶](#addresses)
 [¶](#auto-configuration)
 [¶](#dns)
@@ -7071,7 +7388,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#translation-and-ipv4-as-a-service)
 [¶](#security)
 
-[NAT ¶](#transport-protocols)
+[NAT ¶](#why-ipv6-is-so-complicated)
+[¶](#transport-protocols)
 [¶](#dual-stack-scenarios)
 [¶](#obsolete-techniques)
 [¶](#translation-and-ipv4-as-a-service)
@@ -7134,7 +7452,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#prefix-per-host)
 [¶](#address-and-prefix-management)
 
-[prefix ¶](#addresses)
+[prefix ¶](#why-ipv6-is-so-complicated)
+[¶](#addresses)
 [¶](#auto-configuration)
 [¶](#managed-configuration)
 [¶](#routing)
@@ -7169,7 +7488,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [QUIC ¶](#transport-protocols)
 [¶](#multihoming)
 
-[RA messages ¶](#address-resolution)
+[RA messages ¶](#why-ipv6-is-so-complicated)
+[¶](#address-resolution)
 [¶](#auto-configuration)
 [¶](#managed-configuration)
 [¶](#routing)
@@ -7193,7 +7513,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [RIPng ¶](#routing)
 
-[route ¶](#why-version-6)
+[route ¶](#why-ipv6-is-so-complicated)
+[¶](#why-version-6)
 [¶](#ipv6-basic-technology)
 [¶](#address-resolution)
 [¶](#addresses)
@@ -7238,7 +7559,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [SCTP ¶](#transport-protocols)
 
-[security ¶](#dns)
+[security ¶](#why-ipv6-is-so-complicated)
+[¶](#dns)
 [¶](#extension-headers-and-options)
 [¶](#managed-configuration)
 [¶](#packet-format)
@@ -7258,13 +7580,15 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#obsolete-features-in-ipv6)
 [¶](#further-reading)
 
-[SIP ¶](#why-version-6)
+[SIP ¶](#why-ipv6-is-so-complicated)
+[¶](#why-version-6)
 [¶](#transport-protocols)
 [¶](#dual-stack-scenarios)
 [¶](#translation-and-ipv4-as-a-service)
 [¶](#multihoming)
 
-[SLAAC ¶](#auto-configuration)
+[SLAAC ¶](#why-ipv6-is-so-complicated)
+[¶](#auto-configuration)
 [¶](#managed-configuration)
 [¶](#routing)
 [¶](#ipv6-primary-differences-from-ipv4)
@@ -7284,7 +7608,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#transport-protocols)
 [¶](#multihoming)
 
-[Teredo ¶](#obsolete-techniques)
+[Teredo ¶](#why-ipv6-is-so-complicated)
+[¶](#obsolete-techniques)
 
 [tunnel ¶](#layer-2-functions)
 [¶](#traffic-class-and-flow-label)
@@ -7338,7 +7663,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2026-04-16 11:51:58 UTC+1200
+Generated at 2026-04-22 16:51:17 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -7365,11 +7690,27 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC1190 ¶](#why-version-6)
 
+[RFC1287 ¶](#why-ipv6-is-so-complicated)
+
+[RFC1380 ¶](#why-ipv6-is-so-complicated)
+
 [RFC1475 ¶](#why-version-6)
 
 [RFC1606 ¶](#why-version-6)
 
+[RFC1621 ¶](#why-ipv6-is-so-complicated)
+
+[RFC1622 ¶](#why-ipv6-is-so-complicated)
+
+[RFC1671 ¶](#why-ipv6-is-so-complicated)
+
 [RFC1700 ¶](#why-version-6)
+
+[RFC1710 ¶](#why-ipv6-is-so-complicated)
+
+[RFC1726 ¶](#why-ipv6-is-so-complicated)
+
+[RFC1752 ¶](#why-ipv6-is-so-complicated)
 
 [RFC1819 ¶](#why-version-6)
 
@@ -7400,9 +7741,11 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC3053 ¶](#obsolete-techniques)
 
-[RFC3056 ¶](#obsolete-techniques)
+[RFC3056 ¶](#why-ipv6-is-so-complicated)
+[¶](#obsolete-techniques)
 
-[RFC3068 ¶](#obsolete-techniques)
+[RFC3068 ¶](#why-ipv6-is-so-complicated)
+[¶](#obsolete-techniques)
 
 [RFC3089 ¶](#obsolete-techniques)
 
@@ -7416,7 +7759,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC3484 ¶](#source-and-destination-address-selection)
 
-[RFC3513 ¶](#obsolete-features-in-ipv6)
+[RFC3513 ¶](#why-ipv6-is-so-complicated)
+[¶](#obsolete-features-in-ipv6)
 [¶](#markdown-usage)
 
 [RFC3542 ¶](#dual-stack-scenarios)
@@ -7468,7 +7812,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC4285 ¶](#obsolete-features-in-ipv6)
 
-[RFC4291 ¶](#address-resolution)
+[RFC4291 ¶](#why-ipv6-is-so-complicated)
+[¶](#address-resolution)
 [¶](#addresses)
 [¶](#filtering)
 [¶](#obsolete-features-in-ipv6)
@@ -7479,7 +7824,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC4303 ¶](#extension-headers-and-options)
 [¶](#packet-format)
 
-[RFC4380 ¶](#obsolete-techniques)
+[RFC4380 ¶](#why-ipv6-is-so-complicated)
+[¶](#obsolete-techniques)
 
 [RFC4456 ¶](#routing)
 [¶](#routing-operation)
@@ -7750,6 +8096,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC8501 ¶](#dns)
 
 [RFC8505 ¶](#address-resolution)
+
+[RFC8507 ¶](#why-ipv6-is-so-complicated)
 
 [RFC8585 ¶](#routing)
 [¶](#dual-stack-scenarios)

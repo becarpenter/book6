@@ -81,10 +81,10 @@ definition. So,
 Two minutes of thought show that this third requirement has only two
 solutions:
 
-&#8195;3A. Dual stack, in which the new machines speak both the old (IPv4) and
+(3A) Dual stack, in which the new machines speak both the old (IPv4) and
 new (IPng) protocol.
 
-&#8195;3B. Translation, in which something translates addresses between the
+(3B) Translation, in which something translates addresses between the
 old and new protocols.
 
 This has been known for more than 30 years
