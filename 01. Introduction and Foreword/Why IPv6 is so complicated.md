@@ -264,6 +264,7 @@ is a cryptic statement at
 IPv8 and IPv16 addresses are encoded in the **right-most 64-bits** of the 128-bit DNS.  The left-most 64-bits
 are used for transition mechanisms.
 ```
+and some [archived diagrams](https://web.archive.org/web/20000412004245/http://www.unir.com/images/headers.gif).
 
 \[[draft-terrell-ip-spec-ipv7-ipv8-addr-cls](https://datatracker.ietf.org/doc/draft-terrell-ip-spec-ipv7-ipv8-addr-cls/)\],
 \[[draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8](https://datatracker.ietf.org/doc/draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8/)\]
