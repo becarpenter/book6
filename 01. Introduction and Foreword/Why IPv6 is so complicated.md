@@ -125,8 +125,9 @@ address" format was defined in
 out to be of no practical use for coexistence or transition. The related
 "IPv4-Mapped IPv6 address" format is still valid and has a role in the
 POSIX socket API. Mappings of this kind also figured in the moderately
-successful coexistence technologies known as 6to4 \[\[RFC3056,
-RFC3068\](https://www.rfc-editor.org/info/rfc3056, rfc3068)\] and Teredo
+successful coexistence technologies known as 6to4
+\[[RFC3056](https://www.rfc-editor.org/info/rfc3056),
+[RFC3068](https://www.rfc-editor.org/info/rfc3068)\] and Teredo
 \[[RFC4380](https://www.rfc-editor.org/info/rfc4380)\], which have now
 been overtaken by events.
 
@@ -240,9 +241,9 @@ was only fully documented in 2018
 \[[RFC8507](https://www.rfc-editor.org/info/rfc8507)\].
 
 Paul Francis, 1992, "The 'P' Internet Protocol" (PIP), an IPng candidate
-\[\[RFC1621, RFC1622\](https://www.rfc-editor.org/info/rfc1621,
-rfc1622)\], was _officially_ IPv8 for a while. It had variable length
-addresses.
+\[[RFC1621](https://www.rfc-editor.org/info/rfc1621),
+[RFC1622](https://www.rfc-editor.org/info/rfc1622)\] was _officially_
+IPv8 for a while. It had variable length addresses.
 
 Bob Hinden and Steve Deering 1993/4, "Simple Internet Protocol Plus"
 (SIPP), an IPng candidate
@@ -264,9 +265,9 @@ IPv8 and IPv16 addresses are encoded in the **right-most 64-bits** of the 128-bi
 are used for transition mechanisms.
 ```
 
-\[\[draft-terrell-ip-spec-ipv7-ipv8-addr-cls,
-draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8\](https://datatracker.ietf.org/doc/draft-terrell-ip-spec-ipv7-ipv8-addr-cls,
-draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8/)\] (1999)
+\[[draft-terrell-ip-spec-ipv7-ipv8-addr-cls](https://datatracker.ietf.org/doc/draft-terrell-ip-spec-ipv7-ipv8-addr-cls/)\],
+\[[draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8](https://datatracker.ietf.org/doc/draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8/)\]
+(1999)
 
 \[[draft-shyam-real-ip-framework](https://datatracker.ietf.org/doc/draft-shyam-real-ip-framework/)\]
 (2014)
