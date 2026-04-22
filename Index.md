@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2026-04-16 11:51:58 UTC+1200
+Generated at 2026-04-22 16:39:54 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -13,7 +13,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [6PE ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
-[6to4 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[6to4 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [address accountability ●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
@@ -21,6 +22,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [address ●](./01.%20Introduction%20and%20Foreword/How%20a%20user%20sees%20IPv6.md)
 [●](./01.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
+[●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
 [●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
 [●](./02.%20IPv6%20Basic%20Technology/02.%20IPv6%20Basic%20Technology.md)
 [●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
@@ -71,7 +73,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [Babel ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 
-[BGP ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
+[BGP ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./04.%20Security/Filtering.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
@@ -91,7 +94,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [CLAT ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
-[coexistence ●](./03.%20Coexistence%20with%20Legacy%20IPv4/03.%20Coexistence%20with%20Legacy%20IPv4.md)
+[coexistence ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/03.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
@@ -107,7 +111,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./04.%20Security/Layer%202%20considerations.md)
 [●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
-[DHCP ●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[DHCP ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/DNS.md)
 [●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
@@ -124,7 +129,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
 [●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
-[differentiated services ●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
+[differentiated services ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./02.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 [●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
@@ -136,6 +142,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./09.%20Troubleshooting/Tools.md)
 
 [DNS ●](./01.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
+[●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
 [●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/DNS.md)
@@ -159,6 +166,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [dual stack ●](./01.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
+[●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/03.%20Coexistence%20with%20Legacy%20IPv4.md)
@@ -184,7 +192,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [Ethertype ●](./02.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 
-[firewall ●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[firewall ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./04.%20Security/04.%20Security.md)
 [●](./04.%20Security/Topology%20obfuscation.md)
@@ -194,7 +203,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
 [●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
-[flow label ●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
+[flow label ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./02.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
@@ -240,7 +250,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./09.%20Troubleshooting/09.%20Troubleshooting.md)
 [●](./09.%20Troubleshooting/Advanced%20Troubleshooting.md)
 
-[IID ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
+[IID ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./04.%20Security/Layer%202%20considerations.md)
@@ -249,7 +260,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [IPAM ●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
-[IPsec ●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
+[IPsec ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 [●](./04.%20Security/04.%20Security.md)
 
@@ -262,6 +274,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [IPv4 ●](./01.%20Introduction%20and%20Foreword/How%20a%20network%20operations%20center%20sees%20IPv6.md)
 [●](./01.%20Introduction%20and%20Foreword/How%20an%20application%20programmer%20sees%20IPv6.md)
+[●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
 [●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
 [●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -332,7 +345,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [Jumbo frames ●](./06.%20Management%20and%20Operations/Packet%20size%20and%20Jumbo%20Frames.md)
 
-[link-local ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[link-local ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/DNS.md)
@@ -400,7 +414,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./04.%20Security/04.%20Security.md)
 
-[NAT ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
+[NAT ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
@@ -463,7 +478,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./05.%20Network%20Design/Prefix%20per%20Host.md)
 [●](./06.%20Management%20and%20Operations/Address%20and%20Prefix%20Management.md)
 
-[prefix ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
+[prefix ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
@@ -498,7 +514,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [QUIC ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
 
-[RA messages ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[RA messages ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
@@ -522,7 +539,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [RIPng ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 
-[route ●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
+[route ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
 [●](./02.%20IPv6%20Basic%20Technology/02.%20IPv6%20Basic%20Technology.md)
 [●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
@@ -567,7 +585,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 
 [SCTP ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
-[security ●](./02.%20IPv6%20Basic%20Technology/DNS.md)
+[security ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/DNS.md)
 [●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
@@ -587,13 +606,15 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 [●](./20.%20Further%20Reading/20.%20Further%20Reading.md)
 
-[SIP ●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
+[SIP ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
 [●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
 
-[SLAAC ●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
+[SLAAC ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Auto-configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/IPv6%20primary%20differences%20from%20IPv4.md)
@@ -613,7 +634,8 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
 
-[Teredo ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[Teredo ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [tunnel ●](./02.%20IPv6%20Basic%20Technology/Layer%202%20functions.md)
 [●](./02.%20IPv6%20Basic%20Technology/Traffic%20class%20and%20flow%20label.md)

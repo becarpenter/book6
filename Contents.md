@@ -17,6 +17,7 @@ and a [citation index](./Citex.md).
 * [How to contribute](01.%20Introduction%20and%20Foreword/How%20to%20contribute.md)
 * [Acknowledgments](01.%20Introduction%20and%20Foreword/Acknowledgments.md)
 * [Why version 6](01.%20Introduction%20and%20Foreword/Why%20version%206.md)
+* [Why IPv6 is so complicated](01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
 
 [2. IPv6 Basic Technology](02.%20IPv6%20Basic%20Technology/02.%20IPv6%20Basic%20Technology.md)
 * [Packet Format](02.%20IPv6%20Basic%20Technology/Packet%20Format.md)

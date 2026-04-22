@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2026-04-16 11:51:58 UTC+1200
+Generated at 2026-04-22 16:39:54 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -28,11 +28,27 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC1190 ●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
 
+[RFC1287 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+
+[RFC1380 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+
 [RFC1475 ●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
 
 [RFC1606 ●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
 
+[RFC1621 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+
+[RFC1622 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+
+[RFC1671 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+
 [RFC1700 ●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
+
+[RFC1710 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+
+[RFC1726 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+
+[RFC1752 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
 
 [RFC1819 ●](./01.%20Introduction%20and%20Foreword/Why%20version%206.md)
 
@@ -63,9 +79,11 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC3053 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
-[RFC3056 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[RFC3056 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
-[RFC3068 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[RFC3068 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [RFC3089 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
@@ -79,7 +97,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC3484 ●](./02.%20IPv6%20Basic%20Technology/Source%20and%20Destination%20Address%20Selection.md)
 
-[RFC3513 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+[RFC3513 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 [●](./99.%20Chapter%20Template/Markdown%20Usage.md)
 
 [RFC3542 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
@@ -131,7 +150,8 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC4285 ●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
 
-[RFC4291 ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+[RFC4291 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 [●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./04.%20Security/Filtering.md)
 [●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
@@ -142,7 +162,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC4303 ●](./02.%20IPv6%20Basic%20Technology/Extension%20headers%20and%20options.md)
 [●](./02.%20IPv6%20Basic%20Technology/Packet%20Format.md)
 
-[RFC4380 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[RFC4380 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
 
 [RFC4456 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./06.%20Management%20and%20Operations/Routing%20operation.md)
@@ -413,6 +434,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC8501 ●](./02.%20IPv6%20Basic%20Technology/DNS.md)
 
 [RFC8505 ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
+
+[RFC8507 ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
 
 [RFC8585 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)

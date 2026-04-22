@@ -121,4 +121,4 @@ an April fool's day joke
 
 <!-- Link lines generated automatically; do not delete -->
 
-### [<ins>Previous</ins>](Acknowledgments.md) [<ins>Next</ins>](../02.%20IPv6%20Basic%20Technology/02.%20IPv6%20Basic%20Technology.md) [<ins>Top</ins>](01.%20Introduction%20and%20Foreword.md)
+### [<ins>Previous</ins>](Acknowledgments.md) [<ins>Next</ins>](Why%20IPv6%20is%20so%20complicated.md) [<ins>Top</ins>](01.%20Introduction%20and%20Foreword.md)
