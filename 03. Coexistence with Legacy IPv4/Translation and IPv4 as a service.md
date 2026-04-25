@@ -6,9 +6,9 @@ is to minimize IPv4 presence in the network. Unfortunately, some
 resources are available only on IPv4 and some client applications may
 *require* IPv4. Hence, a pure IPv6-only environment is unrealistic for
 the foreseeable future. In some situations, tunneling (as described
-above) is sufficient, but typically translation between IPv6 and IPv4 is
+[above](Tunnels.md)) is sufficient, but typically translation between IPv6 and IPv4 is
 unavoidable. Especially, when providing IPv4 as a Service (IPv4aaS), a
-typical scenario will:
+typical scenario will be:
 
 1. Let IPv6 native traffic flow directly between the client and the
    server.
