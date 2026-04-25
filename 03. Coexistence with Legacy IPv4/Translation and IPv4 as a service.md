@@ -12,10 +12,10 @@ typical scenario will:
 
 1. Let IPv6 native traffic flow directly between the client and the
    server.
-1. Translate the traffic of local IPv6 clients to remote IPv4-only
-   servers, using a centralized NAT64 device.
+1. Translate the traffic of local IPv6 clients to and from remote IPv4-only
+   servers, often using a centralized NAT64 device.
 1. Encapsulate literal IPv4 address requests into IPv6 on the client
-   then decapsulate and translate it on the centralized NAT to access
+   then decapsulate and translate it on the NAT64 to access
    the IPv4 server.
 
 Because of this, it is essentially impossible to separate the discussion
@@ -34,9 +34,16 @@ of translation techniques from the discussion of IPv4 as a service.
   information) but in practice it is used as part of stateful
   mechanisms.
 
+- For SIIT in the context of data centers, see
+  \[[RFC7755](https://www.rfc-editor.org/info/rfc7755),
+  [RFC 7756](https://www.rfc-editor.org/info/rfc7756)\]
+
 - NAT64 refers to address translation between IPv6 clients and IPv4
   servers, using the SIIT mechanism.
 
+  - [RFC 7757](https://www.rfc-editor.org/info/rfc7757) (also
+    [STD 103](https://www.rfc-editor.org/info/std103)) defines
+    an explicit address mapping algorithm.   
   - [RFC 6052](https://www.rfc-editor.org/info/rfc6052) describes
     algorithmic translation (mapping) between an IPv6 address
     and a corresponding IPv4 address. A Well-Known Prefix (WKP),
