@@ -285,6 +285,9 @@ and some [archived diagrams](https://web.archive.org/web/20000412004245/http://w
 \[[draft-hause-asip](https://datatracker.ietf.org/doc/draft-hause-asip/)\]
 (2026)
 
+\[[draft-subbiah-ipv7](https://datatracker.ietf.org/doc/draft-subbiah-ipv7/)\]
+(2026)
+
 Here's an
 [interesting blog](https://www.ip.network/blog/what-is-ipv8-protocol).
 
