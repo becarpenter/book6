@@ -1,14 +1,14 @@
 ## RFC bibliography
 
 This section is a machine-generated list of all current RFCs that
-mention IPv6 or DHCPv6 in their title or come from the major IPv6
+mention IPv6 or related terms in their title or come from the major IPv6
 working groups. Obsolete RFCs are not included. There are subsections
 for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](../10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
-RFCbib6 run at 2026-04-16 11:52:44 UTC+1200 (505 RFCs found)
+RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
 
 ### Standards Track (272 RFCs)
 
@@ -653,7 +653,7 @@ RFCbib6 run at 2026-04-16 11:52:44 UTC+1200 (505 RFCs found)
   ([BCP 242](https://www.rfc-editor.org/info/bcp242)): Clarification of
   IPv6 Address Allocation Policy
 
-### Informational (192 RFCs)
+### Informational (193 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -947,6 +947,8 @@ RFCbib6 run at 2026-04-16 11:52:44 UTC+1200 (505 RFCs found)
   Requirements
 - [RFC 7040](https://www.rfc-editor.org/info/rfc7040): Public
   IPv4-over-IPv6 Access Network
+- [RFC 7051](https://www.rfc-editor.org/info/rfc7051): Analysis of
+  Solution Proposals for Hosts to Learn NAT64 Prefix
 - [RFC 7059](https://www.rfc-editor.org/info/rfc7059): A Comparison of
   IPv6-over-IPv4 Tunnel Mechanisms
 - [RFC 7066](https://www.rfc-editor.org/info/rfc7066): IPv6 for Third

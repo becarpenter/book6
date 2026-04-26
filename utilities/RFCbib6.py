@@ -16,6 +16,7 @@
 # Version: 2024-11-16 - add citation of chapter 10
 # Version: 2024-11-24 - corrected citation of chapter 10
 # Version: 2024-12-24 - switch to proper xml parser
+# Version: 2026-04-26 - catch NAT64, DNS64, 464XLAT
 
 ########################################################
 # Copyright (C) 2023-24 Brian E. Carpenter.                  
@@ -144,6 +145,7 @@ def interesting(block):
     elif field("obsoleted-by", block):
         return False
     elif ("IPv6" in block['title'] or "IP Version 6" in block['title'] or "DHCPv6" in block['title']
+          or "NAT64" in block['title'] or "DNS64" in block['title'] or "464XLAT" in block['title']
           or (field("wg_acronym", block) in wgs)):
         #print(block)
         status = block["current-status"]
@@ -251,7 +253,7 @@ if len(stds)+len(bcps)+len(infos)+len(exps) != count:
 
 md = ["## RFC bibliography","",
       """This section is a machine-generated list of all current RFCs that
-mention IPv6 or DHCPv6 in their title or come from the major IPv6 working groups.
+mention IPv6 or related terms in their title or come from the major IPv6 working groups.
 Obsolete RFCs are not included. There are subsections for Standards, BCPs, 
 Informational and Experimental RFCs. Be *cautious* about old Informational
 or Experimental RFCs - they may be misleading as well as out of date. Also see
