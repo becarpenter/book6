@@ -36,6 +36,10 @@ IPv6 can be tunneled using GRE (Generic Routing Encapsulation,
 IPv6 can be carried over IPv4-only ISP infrastructure using 6rd
 \[[RFC5969](https://www.rfc-editor.org/info/rfc5969)\] (but see
 \[[Obsolete techniques](Obsolete%20techniques.md)\]).
+Conversely, IPv4 can be carried as a service over IPV6-only infrastructure
+with BGP-4 support \[[RFC8950](https://www.rfc-editor.org/info/rfc8950)\],
+as mentioned in 
+[2. Routing](https://github.com/becarpenter/book6/blob/main/02.%20IPv6%20Basic%20Technology/Routing.md).
 
 IPv6 can be tunneled over MPLS
 \[[RFC4029](https://www.rfc-editor.org/info/rfc4029)\]; for example, see
