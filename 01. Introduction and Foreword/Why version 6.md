@@ -111,7 +111,7 @@ the new protocol, and some IAB members proposed using ISO/OSI's CLNP -
 designating it as IPv7 without a formal IANA assignment. This caused
 some discomfort in the Internet community and became known in technical
 circles as the “Kobe incident”. Numbers 8 and 9 were used by proposals
-that came to be merged into IPv6's ultimate design. As the lowest number
+that were considered before IPv6's ultimate design. As the lowest number
 available after 4, and already used by the same author's SIP, number 6
 was kept for the first official specification in
 [RFC 1883](https://www.rfc-editor.org/info/rfc1883). Therefore, do not
