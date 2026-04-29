@@ -18,6 +18,7 @@ comments (mainly via email), include:
 - John Klensin
 
 - Gábor Lencse
+- Jordi Palet Martinez
 
 - Jyrki Soini
 
