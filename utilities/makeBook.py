@@ -47,6 +47,7 @@ and inter-chapter links as far as possible."""
 # Version: 2025-02-25 - allow for future format of RFC index (no leading zeros)
 # Version: 2025-05-15 - double check request to run mdformat
 # Version: 2026-03-05 - use raw string literals containing \
+# Version: 2026-05-02 - give warning if cited I-D is now an RFC
 
 
 ########################################################
@@ -279,7 +280,7 @@ def draft_current(dr_name):
         # print("Response code", response.getcode())
         return False  # URL for draft doesn't work
     html = response.read(30000).decode("utf-8")
-    if "Replaced by" in html:
+    if "Replaced by" in html or '<span class="text-success">RFC' in html:
         return False  # draft is OBE
     # print("Not OBE")
     return True
