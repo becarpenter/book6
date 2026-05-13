@@ -270,7 +270,7 @@ and some [archived diagrams](https://web.archive.org/web/20000412004245/http://w
 \[[draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8](https://datatracker.ietf.org/doc/draft-terrell-logic-analy-bin-ip-spec-ipv7-ipv8/)\]
 (1999)
 
-\[[IPxl](https://bill.herrin.us/network/ipxl.html/)\] (2007?)
+\[[IPxl](https://bill.herrin.us/network/ipxl.html)\] (2007?)
 
 \[[draft-shyam-real-ip-framework](https://datatracker.ietf.org/doc/draft-shyam-real-ip-framework/)\]
 (2014)
