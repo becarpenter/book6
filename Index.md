@@ -1,7 +1,7 @@
 # book6 Main Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2026-04-22 16:51:17 UTC+1200
+Generated at 2026-05-14 10:21:31 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -76,6 +76,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [BGP ●](./01.%20Introduction%20and%20Foreword/Why%20IPv6%20is%20so%20complicated.md)
 [●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 [●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./04.%20Security/Filtering.md)
 [●](./06.%20Management%20and%20Operations/Multi-prefix%20operation.md)
 [●](./06.%20Management%20and%20Operations/Multihoming.md)
@@ -642,6 +643,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/03.%20Coexistence%20with%20Legacy%20IPv4.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Dual%20stack%20scenarios.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Obsolete%20techniques.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 [●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 [●](./04.%20Security/Layer%202%20considerations.md)
 

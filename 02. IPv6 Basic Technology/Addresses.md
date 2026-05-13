@@ -77,11 +77,13 @@ be replaced by a double colon ('::') so that we write:
 The idea is that IPv6 addresses should be cut-and-pasted in almost all
 cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
-RFC5952, and older documentation and implementations often use uppercase hexadecimal.
+RFC5952, and older documentation and implementations often use uppercase
+hexadecimal.
 
 The choice of ':' as the separator is annoying in one particular aspect
 \- where a colon has another meaning and works as a separator between
-address and port. This is quite common in (Web) URLs {{RFC3986}}, so IPv6
+address and port. This is quite common in (Web) URLs
+\[[RFC3986](https://www.rfc-editor.org/info/rfc3986)\], so IPv6
 addresses in URLs are in square brackets like this:
 
 ```
@@ -90,12 +92,16 @@ https://[2001:db8:4006:80b::200e]:443
 
 ### Address registries
 
-The top-level address registries are maintained by IANA
-(the Internet Assigned Numbers Authority) in the
+The top-level address registries are maintained by IANA (the Internet
+Assigned Numbers Authority) in the
 [IPv6 Address Space registry](https://www.iana.org/assignments/ipv6-address-space/ipv6-address-space.xhtml)
 and several subsdidiary registries linked from that page.
 
-Regional address assignments are maintained by the RIRs (Regional Internet Registries) as described on the [IANA web site](https://www.iana.org/numbers). RIRs in turn assign address space to Internet service providers, national registries, or local registries.
+Regional address assignments are maintained by the RIRs (Regional
+Internet Registries) as described on the
+[IANA web site](https://www.iana.org/numbers). RIRs in turn assign
+address space to Internet service providers, national registries, or
+local registries.
 
 ### Easy addresses
 
@@ -319,8 +325,10 @@ All the officially assigned multicast addresses may found at
 
 ### Literal addresses in web browsers and URLs
 
-Browsers and other software processing URLs (Uniform Resource Locators) can recognize a literal IPv6 address instead of a host name,
-but the address must be enclosed in square brackets {{RFC3986}}, e.g.:
+Browsers and other software processing URLs (Uniform Resource Locators)
+can recognize a literal IPv6 address instead of a host name, but the
+address must be enclosed in square brackets
+\[[RFC3986](https://www.rfc-editor.org/info/rfc3986)\], e.g.:
 
 ```
    https://[2001:db8:4006:80b:a1b3:6d7a:3f65:dd13]

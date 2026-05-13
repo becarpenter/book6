@@ -28,7 +28,7 @@ Released under the Creative Commons Attribution 4.0 license, known as CC BY 4.0.
 
 
 
-Version captured at 2026-04-22 17:27:24 UTC+1200
+Version captured at 2026-05-14 10:22:08 UTC+1200
 
 backslashpagebreak
 # book6: A Collaborative IPv6 Book.
@@ -381,6 +381,7 @@ comments (mainly via email), include:
 - John Klensin
 
 - Gábor Lencse
+- Jordi Palet Martinez
 
 - Jyrki Soini
 
@@ -504,7 +505,7 @@ the new protocol, and some IAB members proposed using ISO/OSI's CLNP -
 designating it as IPv7 without a formal IANA assignment. This caused
 some discomfort in the Internet community and became known in technical
 circles as the “Kobe incident”. Numbers 8 and 9 were used by proposals
-that came to be merged into IPv6's ultimate design. As the lowest number
+that were considered before IPv6's ultimate design. As the lowest number
 available after 4, and already used by the same author's SIP, number 6
 was kept for the first official specification in
 [RFC 1883](https://www.rfc-editor.org/info/rfc1883). Therefore, do not
@@ -804,6 +805,9 @@ and some [archived diagrams](https://web.archive.org/web/20000412004245/http://w
 \[[draft-hause-asip](https://datatracker.ietf.org/doc/draft-hause-asip/)\]
 (2026)
 
+\[[draft-subbiah-ipv7](https://datatracker.ietf.org/doc/draft-subbiah-ipv7/)\]
+(2026)
+
 Here's an
 [interesting blog](https://www.ip.network/blog/what-is-ipv8-protocol).
 
@@ -1014,7 +1018,7 @@ The only feasible way to write down 128 bit addresses is in hexadecimal.
 There's no doubt this is less convenient than the decimal notation used
 for IPv4, but that's unavoidable. Despite what you may see in older
 RFCs,
-[the recommendation by RFC5952 today](https://www.rfc-editor.org/info/rfc5952)
+[the recommendation by RFC 5952 today](https://www.rfc-editor.org/info/rfc5952)
 is to use lower-case letters for hexadecimal. Thus a basic example of
 the notation is:
 
@@ -1055,11 +1059,13 @@ be replaced by a double colon ('::') so that we write:
 The idea is that IPv6 addresses should be cut-and-pasted in almost all
 cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
-RFC5952, and older documentation often uses uppercase hexadecimal.
+RFC5952, and older documentation and implementations often use uppercase
+hexadecimal.
 
 The choice of ':' as the separator is annoying in one particular aspect
 \- where a colon has another meaning and works as a separator between
-address and port. This is quite common in (Web) URLs, that's why IPv6
+address and port. This is quite common in (Web) URLs
+\[[RFC3986](https://www.rfc-editor.org/info/rfc3986)\], so IPv6
 addresses in URLs are in square brackets like this:
 
 ```
@@ -1068,12 +1074,16 @@ https://[2001:db8:4006:80b::200e]:443
 
 ### Address registries
 
-The top-level address registries are maintained by IANA
-(the Internet Assigned Numbers Authority) in the
+The top-level address registries are maintained by IANA (the Internet
+Assigned Numbers Authority) in the
 [IPv6 Address Space registry](https://www.iana.org/assignments/ipv6-address-space/ipv6-address-space.xhtml)
 and several subsdidiary registries linked from that page.
 
-Regional address assignments are maintained by the RIRs (Regional Internet Registries) as described on the [IANA web site](https://www.iana.org/numbers). RIRs in turn assign address space to Internet service providers, national registries, or local registries.
+Regional address assignments are maintained by the RIRs (Regional
+Internet Registries) as described on the
+[IANA web site](https://www.iana.org/numbers). RIRs in turn assign
+address space to Internet service providers, national registries, or
+local registries.
 
 ### Easy addresses
 
@@ -1295,10 +1305,12 @@ that every IPv6 router must listen to.
 All the officially assigned multicast addresses may found at
 [IANA](https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml#link-local).
 
-### Literal addresses in web browsers
+### Literal addresses in web browsers and URLs
 
-Browsers can recognize a literal IPv6 address instead of a host name,
-but the address must be enclosed in square brackets, e.g.:
+Browsers and other software processing URLs (Uniform Resource Locators)
+can recognize a literal IPv6 address instead of a host name, but the
+address must be enclosed in square brackets
+\[[RFC3986](https://www.rfc-editor.org/info/rfc3986)\], e.g.:
 
 ```
    https://[2001:db8:4006:80b:a1b3:6d7a:3f65:dd13]
@@ -2692,6 +2704,10 @@ IPv6 can be tunneled using GRE (Generic Routing Encapsulation,
 IPv6 can be carried over IPv4-only ISP infrastructure using 6rd
 \[[RFC5969](https://www.rfc-editor.org/info/rfc5969)\] (but see
 \[[Obsolete techniques](#obsolete-techniques)\]).
+Conversely, IPv4 can be carried as a service over IPV6-only infrastructure
+with BGP-4 support \[[RFC8950](https://www.rfc-editor.org/info/rfc8950)\],
+as mentioned in 
+[2. Routing](https://github.com/becarpenter/book6/blob/main/02.%20IPv6%20Basic%20Technology/Routing.md).
 
 IPv6 can be tunneled over MPLS
 \[[RFC4029](https://www.rfc-editor.org/info/rfc4029)\]; for example, see
@@ -2719,16 +2735,16 @@ is to minimize IPv4 presence in the network. Unfortunately, some
 resources are available only on IPv4 and some client applications may
 *require* IPv4. Hence, a pure IPv6-only environment is unrealistic for
 the foreseeable future. In some situations, tunneling (as described
-above) is sufficient, but typically translation between IPv6 and IPv4 is
+[above](#tunnels)) is sufficient, but typically translation between IPv6 and IPv4 is
 unavoidable. Especially, when providing IPv4 as a Service (IPv4aaS), a
-typical scenario will:
+typical scenario will be:
 
 1. Let IPv6 native traffic flow directly between the client and the
    server.
-1. Translate the traffic of local IPv6 clients to remote IPv4-only
-   servers, using a centralized NAT64 device.
+1. Translate the traffic of local IPv6 clients to and from remote IPv4-only
+   servers, often using a centralized NAT64 device.
 1. Encapsulate literal IPv4 address requests into IPv6 on the client
-   then decapsulate and translate it on the centralized NAT to access
+   then decapsulate and translate it on the NAT64 to access
    the IPv4 server.
 
 Because of this, it is essentially impossible to separate the discussion
@@ -2747,9 +2763,16 @@ of translation techniques from the discussion of IPv4 as a service.
   information) but in practice it is used as part of stateful
   mechanisms.
 
+- For SIIT in the context of data centers, see
+  \[[RFC7755](https://www.rfc-editor.org/info/rfc7755),
+  [RFC 7756](https://www.rfc-editor.org/info/rfc7756)\]
+
 - NAT64 refers to address translation between IPv6 clients and IPv4
   servers, using the SIIT mechanism.
 
+  - [RFC 7757](https://www.rfc-editor.org/info/rfc7757) (also
+    [STD 103](https://www.rfc-editor.org/info/std103)) defines
+    an explicit address mapping algorithm.   
   - [RFC 6052](https://www.rfc-editor.org/info/rfc6052) describes
     algorithmic translation (mapping) between an IPv6 address
     and a corresponding IPv4 address. A Well-Known Prefix (WKP),
@@ -3365,7 +3388,7 @@ additional actions are recommended in addition to the basic rule of
 the transmission of all extension headers in transit.
 
 Limiting ND messages on the link is discussed in
-[<ins>Address resolution<ins>](#address-resolution).
+[<ins>Address resolution</ins>](#address-resolution).
 
 There is a risk for IPv4-only networks caused by IPv6 preference
 programmed into hosts. The activation of IPv6 by a malicious node could
@@ -5536,14 +5559,14 @@ backslashpagebreak
 ## RFC bibliography
 
 This section is a machine-generated list of all current RFCs that
-mention IPv6 or DHCPv6 in their title or come from the major IPv6
+mention IPv6 or related terms in their title or come from the major IPv6
 working groups. Obsolete RFCs are not included. There are subsections
 for Standards, BCPs, Informational and Experimental RFCs. Be *cautious*
 about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](#obsolete-features-in-ipv6).
 
-RFCbib6 run at 2026-04-16 11:52:44 UTC+1200 (505 RFCs found)
+RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
 
 ### Standards Track (272 RFCs)
 
@@ -6188,7 +6211,7 @@ RFCbib6 run at 2026-04-16 11:52:44 UTC+1200 (505 RFCs found)
   ([BCP 242](https://www.rfc-editor.org/info/bcp242)): Clarification of
   IPv6 Address Allocation Policy
 
-### Informational (192 RFCs)
+### Informational (193 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -6482,6 +6505,8 @@ RFCbib6 run at 2026-04-16 11:52:44 UTC+1200 (505 RFCs found)
   Requirements
 - [RFC 7040](https://www.rfc-editor.org/info/rfc7040): Public
   IPv4-over-IPv6 Access Network
+- [RFC 7051](https://www.rfc-editor.org/info/rfc7051): Analysis of
+  Solution Proposals for Hosts to Learn NAT64 Prefix
 - [RFC 7059](https://www.rfc-editor.org/info/rfc7059): A Comparison of
   IPv6-over-IPv4 Tunnel Mechanisms
 - [RFC 7066](https://www.rfc-editor.org/info/rfc7066): IPv6 for Third
@@ -6975,7 +7000,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2026-04-22 16:51:17 UTC+1200
+Generated at 2026-05-14 10:21:31 UTC+1200
 
 This index was created automatically, so it's dumb. It is not case-sensitive. It has links to each section that mentions each keyword.
 If you think any keywords are missing, please raise an issue (use link on GitHub toolbar).
@@ -7050,6 +7075,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [BGP ¶](#why-ipv6-is-so-complicated)
 [¶](#addresses)
 [¶](#routing)
+[¶](#tunnels)
 [¶](#filtering)
 [¶](#multi-prefix-operation)
 [¶](#multihoming)
@@ -7616,6 +7642,7 @@ If you think any keywords are missing, please raise an issue (use link on GitHub
 [¶](#coexistence-with-legacy-ipv4)
 [¶](#dual-stack-scenarios)
 [¶](#obsolete-techniques)
+[¶](#translation-and-ipv4-as-a-service)
 [¶](#tunnels)
 [¶](#layer-2-considerations)
 
@@ -7663,7 +7690,7 @@ backslashpagebreak
 
 ![book6 logo](book6logo.png)
 
-Generated at 2026-04-22 16:51:17 UTC+1200
+Generated at 2026-05-14 10:21:31 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -7789,6 +7816,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC3971 ¶](#security)
 [¶](#layer-2-considerations)
 [¶](#obsolete-features-in-ipv6)
+
+[RFC3986 ¶](#addresses)
 
 [RFC4007 ¶](#addresses)
 
@@ -8039,6 +8068,12 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC7721 ¶](#security-operation)
 
+[RFC7755 ¶](#translation-and-ipv4-as-a-service)
+
+[RFC7756 ¶](#translation-and-ipv4-as-a-service)
+
+[RFC7757 ¶](#translation-and-ipv4-as-a-service)
+
 [RFC7775 ¶](#routing)
 [¶](#routing-operation)
 
@@ -8132,6 +8167,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC8929 ¶](#address-resolution)
 
 [RFC8950 ¶](#routing)
+[¶](#tunnels)
 
 [RFC8966 ¶](#routing)
 
@@ -8206,6 +8242,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9915 ¶](#managed-configuration)
 [¶](#address-planning)
 [¶](#prefix-per-host)
+
+[STD103 ¶](#translation-and-ipv4-as-a-service)
 
 [STD7 ¶](#transport-protocols)
 

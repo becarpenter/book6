@@ -127,7 +127,7 @@ contributors.
 Released under the Creative Commons Attribution 4.0 license, known as CC
 BY 4.0.
 
-Version captured at 2026-04-22 17:27:24 UTC+1200
+Version captured at 2026-05-14 10:22:08 UTC+1200
 
 \pagebreak
 
@@ -620,6 +620,8 @@ comments (mainly via email), include:
 \item
   Gábor Lencse
 \item
+  Jordi Palet Martinez
+\item
   Jyrki Soini
 \end{itemize}
 
@@ -748,7 +750,7 @@ at that time about the new protocol, and some IAB members proposed using
 ISO/OSI\textquotesingle s CLNP - designating it as IPv7 without a formal
 IANA assignment. This caused some discomfort in the Internet community
 and became known in technical circles as the ``Kobe incident''. Numbers
-8 and 9 were used by proposals that came to be merged into
+8 and 9 were used by proposals that were considered before
 IPv6\textquotesingle s ultimate design. As the lowest number available
 after 4, and already used by the same author\textquotesingle s SIP,
 number 6 was kept for the first official specification in
@@ -1087,6 +1089,9 @@ diagrams}.
 {[}\href{https://datatracker.ietf.org/doc/draft-hause-asip/}{draft-hause-asip}{]}
 (2026)
 
+{[}\href{https://datatracker.ietf.org/doc/draft-subbiah-ipv7/}{draft-subbiah-ipv7}{]}
+(2026)
+
 Here\textquotesingle s an
 \href{https://www.ip.network/blog/what-is-ipv8-protocol}{interesting
 blog}.
@@ -1309,9 +1314,9 @@ The only feasible way to write down 128 bit addresses is in hexadecimal.
 There\textquotesingle s no doubt this is less convenient than the
 decimal notation used for IPv4, but that\textquotesingle s unavoidable.
 Despite what you may see in older RFCs,
-\href{https://www.rfc-editor.org/info/rfc5952}{the recommendation by
-RFC5952 today} is to use lower-case letters for hexadecimal. Thus a
-basic example of the notation is:
+\href{https://www.rfc-editor.org/info/rfc5952}{the recommendation by RFC
+5952 today} is to use lower-case letters for hexadecimal. Thus a basic
+example of the notation is:
 
 \begin{verbatim}
 2001:0db8:ef01:2345:6789:abcd:ef01:2345
@@ -1351,13 +1356,15 @@ that we write:
 The idea is that IPv6 addresses should be cut-and-pasted in almost all
 cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
-RFC5952, and older documentation often uses uppercase hexadecimal.
+RFC5952, and older documentation and implementations often use uppercase
+hexadecimal.
 
 The choice of \textquotesingle:\textquotesingle{} as the separator is
 annoying in one particular aspect - where a colon has another meaning
 and works as a separator between address and port. This is quite common
-in (Web) URLs, that\textquotesingle s why IPv6 addresses in URLs are in
-square brackets like this:
+in (Web) URLs
+{[}\href{https://www.rfc-editor.org/info/rfc3986}{RFC3986}{]}, so IPv6
+addresses in URLs are in square brackets like this:
 
 \begin{verbatim}
 https://[2001:db8:4006:80b::200e]:443
@@ -1628,11 +1635,13 @@ routers" address that every IPv6 router must listen to.
 All the officially assigned multicast addresses may found at
 \href{https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml\#link-local}{IANA}.
 
-\subsubsection{Literal addresses in web
-browsers}\label{literal-addresses-in-web-browsers}
+\subsubsection{Literal addresses in web browsers and
+URLs}\label{literal-addresses-in-web-browsers-and-urls}
 
-Browsers can recognize a literal IPv6 address instead of a host name,
-but the address must be enclosed in square brackets, e.g.:
+Browsers and other software processing URLs (Uniform Resource Locators)
+can recognize a literal IPv6 address instead of a host name, but the
+address must be enclosed in square brackets
+{[}\href{https://www.rfc-editor.org/info/rfc3986}{RFC3986}{]}, e.g.:
 
 \begin{verbatim}
    https://[2001:db8:4006:80b:a1b3:6d7a:3f65:dd13]
@@ -3176,7 +3185,13 @@ IPv6 can be tunneled using GRE (Generic Routing Encapsulation,
 
 IPv6 can be carried over IPv4-only ISP infrastructure using 6rd
 {[}\href{https://www.rfc-editor.org/info/rfc5969}{RFC5969}{]} (but see
-{[}\hyperref[obsolete-techniques]{Obsolete techniques}{]}).
+{[}\hyperref[obsolete-techniques]{Obsolete techniques}{]}). Conversely,
+IPv4 can be carried as a service over IPV6-only infrastructure with
+BGP-4 support
+{[}\href{https://www.rfc-editor.org/info/rfc8950}{RFC8950}{]}, as
+mentioned in
+\href{https://github.com/becarpenter/book6/blob/main/02.\%20IPv6\%20Basic\%20Technology/Routing.md}{2.
+Routing}.
 
 IPv6 can be tunneled over MPLS
 {[}\href{https://www.rfc-editor.org/info/rfc4029}{RFC4029}{]}; for
@@ -3208,9 +3223,9 @@ is to minimize IPv4 presence in the network. Unfortunately, some
 resources are available only on IPv4 and some client applications may
 \emph{require} IPv4. Hence, a pure IPv6-only environment is unrealistic
 for the foreseeable future. In some situations, tunneling (as described
-above) is sufficient, but typically translation between IPv6 and IPv4 is
-unavoidable. Especially, when providing IPv4 as a Service (IPv4aaS), a
-typical scenario will:
+\hyperref[tunnels]{above}) is sufficient, but typically translation
+between IPv6 and IPv4 is unavoidable. Especially, when providing IPv4 as
+a Service (IPv4aaS), a typical scenario will be:
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -3219,12 +3234,11 @@ typical scenario will:
   Let IPv6 native traffic flow directly between the client and the
   server.
 \item
-  Translate the traffic of local IPv6 clients to remote IPv4-only
-  servers, using a centralized NAT64 device.
+  Translate the traffic of local IPv6 clients to and from remote
+  IPv4-only servers, often using a centralized NAT64 device.
 \item
   Encapsulate literal IPv4 address requests into IPv6 on the client then
-  decapsulate and translate it on the centralized NAT to access the IPv4
-  server.
+  decapsulate and translate it on the NAT64 to access the IPv4 server.
 \end{enumerate}
 
 Because of this, it is essentially impossible to separate the discussion
@@ -3245,11 +3259,19 @@ of translation techniques from the discussion of IPv4 as a service.
   stored information) but in practice it is used as part of stateful
   mechanisms.
 \item
+  For SIIT in the context of data centers, see
+  {[}\href{https://www.rfc-editor.org/info/rfc7755}{RFC7755},
+  \href{https://www.rfc-editor.org/info/rfc7756}{RFC 7756}{]}
+\item
   NAT64 refers to address translation between IPv6 clients and IPv4
   servers, using the SIIT mechanism.
 
   \begin{itemize}
   \tightlist
+  \item
+    \href{https://www.rfc-editor.org/info/rfc7757}{RFC 7757} (also
+    \href{https://www.rfc-editor.org/info/std103}{STD 103}) defines an
+    explicit address mapping algorithm.
   \item
     \href{https://www.rfc-editor.org/info/rfc6052}{RFC 6052} describes
     algorithmic translation (mapping) between an IPv6 address and a
@@ -6316,14 +6338,14 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-10}
 \subsection{RFC bibliography}\label{rfc-bibliography}
 
 This section is a machine-generated list of all current RFCs that
-mention IPv6 or DHCPv6 in their title or come from the major IPv6
+mention IPv6 or related terms in their title or come from the major IPv6
 working groups. Obsolete RFCs are not included. There are subsections
 for Standards, BCPs, Informational and Experimental RFCs. Be
 \emph{cautious} about old Informational or Experimental RFCs - they may
 be misleading as well as out of date. Also see
 \hyperref[obsolete-features-in-ipv6]{10. Obsolete Features in IPv6}.
 
-RFCbib6 run at 2026-04-16 11:52:44 UTC+1200 (505 RFCs found)
+RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
 
 \subsubsection{Standards Track (272
 RFCs)}\label{standards-track-272-rfcs}
@@ -7278,7 +7300,7 @@ RFCs)}\label{best-current-practice-16-rfcs}
   Clarification of IPv6 Address Allocation Policy
 \end{itemize}
 
-\subsubsection{Informational (192 RFCs)}\label{informational-192-rfcs}
+\subsubsection{Informational (193 RFCs)}\label{informational-193-rfcs}
 
 \begin{itemize}
 \tightlist
@@ -7713,6 +7735,9 @@ RFCs)}\label{best-current-practice-16-rfcs}
 \item
   \href{https://www.rfc-editor.org/info/rfc7040}{RFC 7040}: Public
   IPv4-over-IPv6 Access Network
+\item
+  \href{https://www.rfc-editor.org/info/rfc7051}{RFC 7051}: Analysis of
+  Solution Proposals for Hosts to Learn NAT64 Prefix
 \item
   \href{https://www.rfc-editor.org/info/rfc7059}{RFC 7059}: A Comparison
   of IPv6-over-IPv4 Tunnel Mechanisms
@@ -8323,7 +8348,7 @@ Section text goes here
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2026-04-22 16:51:17 UTC+1200
+Generated at 2026-05-14 10:21:31 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 is not case-sensitive. It has links to each section that mentions each
@@ -8381,7 +8406,7 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[routing]{Babel ¶}
 
 \hyperref[why-ipv6-is-so-complicated]{BGP ¶} \hyperref[addresses]{¶}
-\hyperref[routing]{¶} \hyperref[filtering]{¶}
+\hyperref[routing]{¶} \hyperref[tunnels]{¶} \hyperref[filtering]{¶}
 \hyperref[multi-prefix-operation]{¶} \hyperref[multihoming]{¶}
 \hyperref[routing-operation]{¶} \hyperref[tools]{¶}
 \hyperref[further-reading]{¶}
@@ -8793,7 +8818,8 @@ keyword. If you think any keywords are missing, please raise an issue
 \hyperref[traffic-class-and-flow-label]{¶}
 \hyperref[coexistence-with-legacy-ipv4]{¶}
 \hyperref[dual-stack-scenarios]{¶} \hyperref[obsolete-techniques]{¶}
-\hyperref[tunnels]{¶} \hyperref[layer-2-considerations]{¶}
+\hyperref[translation-and-ipv4-as-a-service]{¶} \hyperref[tunnels]{¶}
+\hyperref[layer-2-considerations]{¶}
 
 \hyperref[extension-headers-and-options]{UDP ¶}
 \hyperref[managed-configuration]{¶} \hyperref[packet-format]{¶}
@@ -8833,7 +8859,7 @@ Contents}}{Back to main Contents}}\label{back-to-main-contents-12}
 \caption{book6 logo}
 \end{figure}
 
-Generated at 2026-04-22 16:51:17 UTC+1200
+Generated at 2026-05-14 10:21:31 UTC+1200
 
 This index was created automatically, so it\textquotesingle s dumb. It
 has links to each section that mentions each citation.
@@ -8953,6 +8979,8 @@ has links to each section that mentions each citation.
 
 \hyperref[security]{RFC3971 ¶} \hyperref[layer-2-considerations]{¶}
 \hyperref[obsolete-features-in-ipv6]{¶}
+
+\hyperref[addresses]{RFC3986 ¶}
 
 \hyperref[addresses]{RFC4007 ¶}
 
@@ -9185,6 +9213,12 @@ has links to each section that mentions each citation.
 
 \hyperref[security-operation]{RFC7721 ¶}
 
+\hyperref[translation-and-ipv4-as-a-service]{RFC7755 ¶}
+
+\hyperref[translation-and-ipv4-as-a-service]{RFC7756 ¶}
+
+\hyperref[translation-and-ipv4-as-a-service]{RFC7757 ¶}
+
 \hyperref[routing]{RFC7775 ¶} \hyperref[routing-operation]{¶}
 
 \hyperref[layer-2-considerations]{RFC7849 ¶}
@@ -9268,7 +9302,7 @@ has links to each section that mentions each citation.
 
 \hyperref[address-resolution]{RFC8929 ¶}
 
-\hyperref[routing]{RFC8950 ¶}
+\hyperref[routing]{RFC8950 ¶} \hyperref[tunnels]{¶}
 
 \hyperref[routing]{RFC8966 ¶}
 
@@ -9336,6 +9370,8 @@ has links to each section that mentions each citation.
 
 \hyperref[managed-configuration]{RFC9915 ¶}
 \hyperref[address-planning]{¶} \hyperref[prefix-per-host]{¶}
+
+\hyperref[translation-and-ipv4-as-a-service]{STD103 ¶}
 
 \hyperref[transport-protocols]{STD7 ¶}
 

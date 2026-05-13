@@ -1,7 +1,7 @@
 # book6 Citation Index
 <img src="./book6logo.png" alt="book6 logo" width="200px" height="auto"/>
 
-Generated at 2026-04-22 16:51:17 UTC+1200
+Generated at 2026-05-14 10:21:31 UTC+1200
 
 This index was created automatically, so it's dumb. It has links to each section that mentions each citation.
 <!-- Link lines generated automatically; do not delete -->
@@ -127,6 +127,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC3971 ●](./04.%20Security/04.%20Security.md)
 [●](./04.%20Security/Layer%202%20considerations.md)
 [●](./10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md)
+
+[RFC3986 ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 
 [RFC4007 ●](./02.%20IPv6%20Basic%20Technology/Addresses.md)
 
@@ -377,6 +379,12 @@ This index was created automatically, so it's dumb. It has links to each section
 
 [RFC7721 ●](./06.%20Management%20and%20Operations/Security%20operation.md)
 
+[RFC7755 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+
+[RFC7756 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+
+[RFC7757 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
+
 [RFC7775 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 [●](./06.%20Management%20and%20Operations/Routing%20operation.md)
 
@@ -470,6 +478,7 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC8929 ●](./02.%20IPv6%20Basic%20Technology/Address%20resolution.md)
 
 [RFC8950 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
+[●](./03.%20Coexistence%20with%20Legacy%20IPv4/Tunnels.md)
 
 [RFC8966 ●](./02.%20IPv6%20Basic%20Technology/Routing.md)
 
@@ -544,6 +553,8 @@ This index was created automatically, so it's dumb. It has links to each section
 [RFC9915 ●](./02.%20IPv6%20Basic%20Technology/Managed%20configuration.md)
 [●](./05.%20Network%20Design/Address%20Planning.md)
 [●](./05.%20Network%20Design/Prefix%20per%20Host.md)
+
+[STD103 ●](./03.%20Coexistence%20with%20Legacy%20IPv4/Translation%20and%20IPv4%20as%20a%20service.md)
 
 [STD7 ●](./02.%20IPv6%20Basic%20Technology/Transport%20protocols.md)
 
