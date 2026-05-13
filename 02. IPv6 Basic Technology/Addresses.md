@@ -36,7 +36,7 @@ The only feasible way to write down 128 bit addresses is in hexadecimal.
 There's no doubt this is less convenient than the decimal notation used
 for IPv4, but that's unavoidable. Despite what you may see in older
 RFCs,
-[the recommendation by RFC5952 today](https://www.rfc-editor.org/info/rfc5952)
+[the recommendation by RFC 5952 today](https://www.rfc-editor.org/info/rfc5952)
 is to use lower-case letters for hexadecimal. Thus a basic example of
 the notation is:
 
@@ -77,11 +77,11 @@ be replaced by a double colon ('::') so that we write:
 The idea is that IPv6 addresses should be cut-and-pasted in almost all
 cases. If you ever do have to enter one manually, a great deal of care
 is needed. Note that not all implementations will strictly follow
-RFC5952, and older documentation often uses uppercase hexadecimal.
+RFC5952, and older documentation and implementations often use uppercase hexadecimal.
 
 The choice of ':' as the separator is annoying in one particular aspect
 \- where a colon has another meaning and works as a separator between
-address and port. This is quite common in (Web) URLs, that's why IPv6
+address and port. This is quite common in (Web) URLs {{RFC3986}}, so IPv6
 addresses in URLs are in square brackets like this:
 
 ```
@@ -317,10 +317,10 @@ that every IPv6 router must listen to.
 All the officially assigned multicast addresses may found at
 [IANA](https://www.iana.org/assignments/ipv6-multicast-addresses/ipv6-multicast-addresses.xhtml#link-local).
 
-### Literal addresses in web browsers
+### Literal addresses in web browsers and URLs
 
-Browsers can recognize a literal IPv6 address instead of a host name,
-but the address must be enclosed in square brackets, e.g.:
+Browsers and other software processing URLs (Uniform Resource Locators) can recognize a literal IPv6 address instead of a host name,
+but the address must be enclosed in square brackets {{RFC3986}}, e.g.:
 
 ```
    https://[2001:db8:4006:80b:a1b3:6d7a:3f65:dd13]
