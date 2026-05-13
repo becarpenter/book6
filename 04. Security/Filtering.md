@@ -88,7 +88,7 @@ additional actions are recommended in addition to the basic rule of
 the transmission of all extension headers in transit.
 
 Limiting ND messages on the link is discussed in
-[<ins>Address resolution<ins>](../02.%20IPv6%20Basic%20Technology/Address%20resolution.md).
+[<ins>Address resolution</ins>](../02.%20IPv6%20Basic%20Technology/Address%20resolution.md).
 
 There is a risk for IPv4-only networks caused by IPv6 preference
 programmed into hosts. The activation of IPv6 by a malicious node could
