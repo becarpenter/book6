@@ -10,16 +10,12 @@ Other direct and indirect contributors, either of text or very helpful
 comments (mainly via email), include:
 
 - Tim Chown
-
 - Gert Doering
-
 - David Farmer
-
 - John Klensin
-
 - Gábor Lencse
 - Jordi Palet Martinez
-
+- Hugo Slabbert
 - Jyrki Soini
 
 (with apologies to those forgotten)
