@@ -12,3 +12,5 @@ You can start reading the book [here](Contents.md). It is a work in progress, an
 
 You can download a pre-release PDF of the whole book [here](https://github.com/becarpenter/book6/blob/main/pdf/baked.pdf), and a pre-release ePub version [here](https://github.com/becarpenter/book6/blob/main/pdf/baked.epub).
 (On those pages, use the little "download" button <img src="./download.png" width="24px" height="auto"> at the top right.)
+
+The latest stable versions are at [https://ipv6textbook.com/](https://ipv6textbook.com/).
