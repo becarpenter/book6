@@ -102,3 +102,4 @@ privacy
 ISP 'Internet Service Provider'
 registry registries
 loopback
+SHIM6
