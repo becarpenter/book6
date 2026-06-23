@@ -92,7 +92,8 @@ https://[2001:db8:4006:80b::200e]:443
 
 ### Address registries
 
-The top-level address registries are maintained by IANA (the Internet
+In accordance with [RFC 1881](https://www.rfc-editor.org/info/rfc1881),
+the top-level address registries are maintained by IANA (the Internet
 Assigned Numbers Authority) in the
 [IPv6 Address Space registry](https://www.iana.org/assignments/ipv6-address-space/ipv6-address-space.xhtml)
 and several subsdidiary registries linked from that page.
@@ -341,7 +342,9 @@ typed in by hand.
 ### Some addresses are special
 
 Special-purpose IPv6 addresses and their registry are described in
-[RFC 6890](https://www.rfc-editor.org/info/rfc6890).
+[RFC 6890](https://www.rfc-editor.org/info/rfc6890). The rather
+boring issue of policy for special-purpose address allocation
+is covered by [RFC 9812](https://www.rfc-editor.org/info/rfc9812).
 
 You may have noticed that many examples above use the prefix
 `2001:db8::/32`. That prefix is reserved for documentation and should
