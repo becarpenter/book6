@@ -1,5 +1,8 @@
 # .gitignore
 
+# Python stuff
+*.pyc
+
 # Ignore log files etc
 makeBook.log
 bakeBook.log
