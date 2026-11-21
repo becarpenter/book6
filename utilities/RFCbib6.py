@@ -17,6 +17,7 @@
 # Version: 2024-11-24 - corrected citation of chapter 10
 # Version: 2024-12-24 - switch to proper xml parser
 # Version: 2026-04-26 - catch NAT64, DNS64, 464XLAT
+# Version: 2026-11-21 - catch old WG names
 
 ########################################################
 # Copyright (C) 2023-24 Brian E. Carpenter.                  
@@ -186,7 +187,7 @@ infos= []
 exps = []
 printing = False # True for extra diagnostic prints
 warnings = 0
-wgs = ["6man","v6ops"]
+wgs = ["6man","v6ops", "ngtrans", "ipv6"]
 
 #Has the user supplied a directory on the command line?
 

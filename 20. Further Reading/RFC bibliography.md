@@ -8,9 +8,9 @@ about old Informational or Experimental RFCs - they may be misleading as
 well as out of date. Also see
 [10. Obsolete Features in IPv6](../10.%20Obsolete%20Features%20in%20IPv6/10.%20Obsolete%20Features%20in%20IPv6.md).
 
-RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
+RFCbib6 run at 2026-11-21 19:41:53 UTC+1300 (520 RFCs found)
 
-### Standards Track (272 RFCs)
+### Standards Track (283 RFCs)
 
 - [RFC 2080](https://www.rfc-editor.org/info/rfc2080): RIPng for IPv6
 - [RFC 2428](https://www.rfc-editor.org/info/rfc2428): FTP Extensions
@@ -75,6 +75,8 @@ RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
   options for Dynamic Host Configuration Protocol for IPv6 (DHCPv6)
 - [RFC 3776](https://www.rfc-editor.org/info/rfc3776): Using IPsec to
   Protect Mobile IPv6 Signaling Between Mobile Nodes and Home Agents
+- [RFC 3879](https://www.rfc-editor.org/info/rfc3879): Deprecating Site
+  Local Addresses
 - [RFC 3898](https://www.rfc-editor.org/info/rfc3898): Network
   Information Service (NIS) Configuration Options for Dynamic Host
   Configuration Protocol for IPv6 (DHCPv6)
@@ -82,8 +84,15 @@ RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
   Rendezvous Point (RP) Address in an IPv6 Multicast Address
 - [RFC 4007](https://www.rfc-editor.org/info/rfc4007): IPv6 Scoped
   Address Architecture
+- [RFC 4022](https://www.rfc-editor.org/info/rfc4022): Management
+  Information Base for the Transmission Control Protocol (TCP)
 - [RFC 4075](https://www.rfc-editor.org/info/rfc4075): Simple Network
   Time Protocol (SNTP) Configuration Option for DHCPv6
+- [RFC 4087](https://www.rfc-editor.org/info/rfc4087): IP Tunnel MIB
+- [RFC 4113](https://www.rfc-editor.org/info/rfc4113): Management
+  Information Base for the User Datagram Protocol (UDP)
+- [RFC 4191](https://www.rfc-editor.org/info/rfc4191): Default Router
+  Preferences and More-Specific Routes
 - [RFC 4193](https://www.rfc-editor.org/info/rfc4193): Unique Local IPv6
   Unicast Addresses
 - [RFC 4213](https://www.rfc-editor.org/info/rfc4213): Basic Transition
@@ -92,6 +101,10 @@ RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
   Identifier Option for Mobile IPv6 (MIPv6)
 - [RFC 4291](https://www.rfc-editor.org/info/rfc4291): IP Version 6
   Addressing Architecture
+- [RFC 4292](https://www.rfc-editor.org/info/rfc4292): IP Forwarding
+  Table MIB
+- [RFC 4293](https://www.rfc-editor.org/info/rfc4293): Management
+  Information Base for the Internet Protocol (IP)
 - [RFC 4295](https://www.rfc-editor.org/info/rfc4295): Mobile IPv6
   Management Information Base
 - [RFC 4311](https://www.rfc-editor.org/info/rfc4311): IPv6
@@ -600,12 +613,18 @@ RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
   Registration for IPv6 Neighbor Discovery
 - [RFC 9928](https://www.rfc-editor.org/info/rfc9928): DHCPv4 over
   DHCPv6 with Relay Agent Support
+- [RFC 10028](https://www.rfc-editor.org/info/rfc10028): Updates to
+  Dynamic IPv6 Multicast Address Group IDs
+- [RFC 10038](https://www.rfc-editor.org/info/rfc10038): Distributing
+  the Segment Routing over IPv6 (SRv6) Locator Using DHCPv6
+- [RFC 10075](https://www.rfc-editor.org/info/rfc10075): The SNAC Router
+  Flag in ICMPv6 Router Advertisement Messages
+- [RFC 10094](https://www.rfc-editor.org/info/rfc10094): Clarifying
+  Segment Routing over IPv6 (SRv6) Segment Identifier (SID) List
+  Processing
 
 ### Best Current Practice (16 RFCs)
 
-- [RFC 3901](https://www.rfc-editor.org/info/rfc3901)
-  ([BCP 91](https://www.rfc-editor.org/info/bcp91)): DNS IPv6 Transport
-  Operational Guidelines
 - [RFC 5855](https://www.rfc-editor.org/info/rfc5855)
   ([BCP 155](https://www.rfc-editor.org/info/bcp155)): Nameservers for
   IPv4 and IPv6 Reverse Zones
@@ -652,8 +671,11 @@ RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
 - [RFC 9812](https://www.rfc-editor.org/info/rfc9812)
   ([BCP 242](https://www.rfc-editor.org/info/bcp242)): Clarification of
   IPv6 Address Allocation Policy
+- [RFC 10001](https://www.rfc-editor.org/info/rfc10001)
+  ([BCP 91](https://www.rfc-editor.org/info/bcp91)): Operational
+  Guidelines for DNS Transport in Mixed IPv4/IPv6 Environments
 
-### Informational (193 RFCs)
+### Informational (195 RFCs)
 
 - [RFC 1809](https://www.rfc-editor.org/info/rfc1809): Using the Flow
   Label Field in IPv6
@@ -667,6 +689,10 @@ RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
   of IPv6 Transition
 - [RFC 2375](https://www.rfc-editor.org/info/rfc2375): IPv6 Multicast
   Address Assignments
+- [RFC 2772](https://www.rfc-editor.org/info/rfc2772): 6Bone Backbone
+  Routing Guidelines
+- [RFC 2921](https://www.rfc-editor.org/info/rfc2921): 6BONE pTLA and
+  pNLA Formats (pTLA)
 - [RFC 2928](https://www.rfc-editor.org/info/rfc2928): Initial IPv6
   Sub-TLA ID Assignments
 - [RFC 3053](https://www.rfc-editor.org/info/rfc3053): IPv6 Tunnel
@@ -1082,8 +1108,10 @@ RFCbib6 run at 2026-04-26 15:11:32 UTC+1200 (506 RFCs found)
 - [RFC 9898](https://www.rfc-editor.org/info/rfc9898): Neighbor
   Discovery Considerations in IPv6 Deployments
 
-### Experimental (25 RFCs)
+### Experimental (26 RFCs)
 
+- [RFC 4389](https://www.rfc-editor.org/info/rfc4389): Neighbor
+  Discovery Proxies (ND Proxy)
 - [RFC 4620](https://www.rfc-editor.org/info/rfc4620): IPv6 Node
   Information Queries
 - [RFC 5514](https://www.rfc-editor.org/info/rfc5514): IPv6 over Social
