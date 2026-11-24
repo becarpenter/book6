@@ -23,7 +23,7 @@ on ISP infrastructure which is primarily IPv6.
 
 DS-Lite (Dual-Stack Lite Broadband Deployments Following IPv4
 Exhaustion) \[[RFC6333](https://www.rfc-editor.org/info/rfc6333)\] uses
-an IPv4-in-IPv6 tunnel between the the ISP's carrier-grade NAT (CGN) and
+an IPv4-in-IPv6 tunnel between the ISP's carrier-grade NAT (CGN) and
 the customer's Customer Edge (CE) router. The customer is given a
 private IPv4 prefix
 \[[RFC1918](https://www.rfc-editor.org/info/rfc1918)\] and the CGN
