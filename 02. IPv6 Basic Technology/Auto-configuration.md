@@ -52,7 +52,7 @@ A PIO with A=L=0 signifies only that the router can act as the first hop
 router for the prefix concerned
 \[[RFC8028](https://www.rfc-editor.org/info/rfc8028)\]. For
 auto-configuration, when a node receives a typical RA/PIO with A=L=1, it
-configures an address for itself, and also records the fact the the
+configures an address for itself, and also records the fact the
 announced prefix is on-link. For example, if the prefix announced in the
 PIO is `2001:db8:4006:80b::/64`, and the pre-defined interface
 identifier for the interface concerned is `a1b3:6d7a:3f65:dd13`, the
