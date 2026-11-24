@@ -242,7 +242,7 @@ IPv4 NAT), the term NAPT66 may also be used.
 
 It goes without saying that NAT66 is _never_ justified by a general
 shortage of IPv6 addresses. Like NPTv6, NAT66 should be used only when
-necessary or required. Moreover, is is also very important to understand
+necessary or required. Moreover, it is also very important to understand
 that the intent of these tools is to translate, hence the names. They
 may play a part in compliance requirements, but they are - at their core
 \- translation tools and not security mechanisms. Address translation is
